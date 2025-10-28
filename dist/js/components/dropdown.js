@@ -7,16 +7,16 @@ export default class Dropdown {
         if (!buttons.length)
             return;
         buttons.forEach((button) => {
-            const dropdown = button.closest('.dropdown');
-            if (!dropdown)
+            const target = button.getAttribute('data-target');
+            if (!target)
                 return;
-            const content = dropdown.querySelector('.dropdown-content');
+            const content = document.querySelector(target);
             if (!content)
                 return;
-            this.actionEvent(button, dropdown, content);
+            this.actionEvent(button, content);
         });
     }
-    actionEvent(button, dropdown, content) {
+    actionEvent(button, content) {
         button.addEventListener('click', (event) => {
             event.stopPropagation();
             const isOpen = content.classList.contains('show');

@@ -9,17 +9,16 @@ export default class Dropdown {
         if (!buttons.length) return;
 
         buttons.forEach((button: HTMLElement) => {
-            const dropdown = button.closest('.dropdown') as HTMLElement | null;
-            if (!dropdown) return;
-
-            const content = dropdown.querySelector('.dropdown-content') as HTMLElement | null;
+            const target = button.getAttribute('data-target') as string;
+            if (!target) return;
+            const content = document.querySelector(target) as HTMLElement | null;
             if (!content) return;
 
-            this.actionEvent(button, dropdown, content);
+            this.actionEvent(button, content);
         });
     }
 
-    private actionEvent(button: HTMLElement, dropdown: HTMLElement, content: HTMLElement): void {
+    private actionEvent(button: HTMLElement, content: HTMLElement): void {
         button.addEventListener('click', (event: MouseEvent) => {
             event.stopPropagation();
 

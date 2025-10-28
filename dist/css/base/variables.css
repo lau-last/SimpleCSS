@@ -203,7 +203,9 @@
   --card-border-color: var(--gray-100);
   --card-box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
   /* List */
-  --list-padding: .75rem 1.5rem;
+  --list-padding: .75rem 0;
+  /* Navbar */
+  --navbar-padding: 1rem;
   /* Breakpoints cannot be variable with @media queries */
   /* Change manually in the code in (grid, col, display, flex, spacing, typography, text) */
 }

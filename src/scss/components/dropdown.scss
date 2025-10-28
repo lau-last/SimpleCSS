@@ -1,16 +1,15 @@
-.dropdown {
+.dropdown-wrapper {
   position: relative;
-  width: fit-content;
   display: flex;
   flex-direction: column;
+}
 
-  .dropdown-content {
-    height: 0;
-    overflow: hidden;
+.dropdown-content {
+  height: 0;
+  overflow: hidden;
 
-    &.show {
-      height: auto;
-    }
+  &.show {
+    height: auto;
   }
 }
 

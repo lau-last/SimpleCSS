@@ -12,6 +12,35 @@
 <body>
 <h1 class="text-center">Framework</h1>
 
+<!-- Section navbar -->
+<section>
+    <nav class="navbar bg-primary">
+        <div class="d-flex jc-between ai-center">
+            <div>logo</div>
+
+            <!-- Menu Desktop -->
+            <ul class="ul d-flex-md d-none gap-2">
+                <li class="li"><a href="#" class="link-white">Home</a></li>
+                <li class="li"><a href="#" class="link-white">About</a></li>
+                <li class="li"><a href="#" class="link-white">Contact</a></li>
+            </ul>
+
+            <!-- Menu Mobile (dropdown button) -->
+            <button class="d-block d-none-md btn btn-white fit-width" data-js="dropdown" data-target="#menu">
+                Menu
+            </button>
+        </div>
+
+        <!-- Dropdown content -->
+        <div class="dropdown-content d-block d-none-md" id="menu">
+            <ul class="ul">
+                <li class="li"><a href="#" class="link-white">Home</a></li>
+                <li class="li"><a href="#" class="link-white">About</a></li>
+                <li class="li"><a href="#" class="link-white">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
 <!-- Section layouts -->
 <section>
     <h2 class="text-center">Layouts</h2>
@@ -1200,32 +1229,42 @@
     </div>
 </section>
 <!-- Section Dropdown -->
-<section class="text-center d-flex fd-column">
-    <div class="container">
-        <div class="dropdown">
-            <button class="btn btn-primary fit-width" data-js="dropdown">Menu</button>
-            <div class="dropdown-content">
-                <ul class="ul border-all border-radius text-start">
-                    <li class="li"><a href="#" class="link-danger">Profil</a></li>
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, delectus dicta ea error, illo impedit,
-            modi quia quo sapiente tempore tenetur vero! Accusamus ad amet deleniti et eum, fuga fugit minima
-            necessitatibus nisi nulla numquam obcaecati quasi qui, quibusdam sunt suscipit unde, voluptatem. Aliquam
-            aliquid asperiores consectetur distinctio dolor doloribus explicabo facilis hic minus, nam nihil non odio
-            odit officia officiis optio, perferendis praesentium quisquam quo repudiandae sapiente suscipit tenetur unde
-            voluptas voluptates voluptatibus voluptatum! A adipisci, aut dolore dolorem eos explicabo id modi non omnis
-            perspiciatis repudiandae sapiente sint soluta sunt suscipit temporibus ullam? Aut dolorem magnam unde.</p>
-    </div>
+<section>
+    <div class="text-center d-flex fd-column">
+        <div class="container">
 
+            <div class="dropdown-wrapper fit-size">
+                <button class="btn btn-primary fit-width"
+                        data-js="dropdown"
+                        data-target="#dropdownButton">Menu
+                </button>
+
+                <div class="dropdown-content show" id="dropdownButton">
+                    <ul class="ul border-all border-radius text-start py-1 px-2">
+                        <li class="li"><a href="#" class="link">Paramètres</a></li>
+                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, delectus dicta ea error, illo
+                impedit,
+                modi quia quo sapiente tempore tenetur vero! Accusamus ad amet deleniti et eum, fuga fugit minima
+                necessitatibus nisi nulla numquam obcaecati quasi qui, quibusdam sunt suscipit unde, voluptatem. Aliquam
+                aliquid asperiores consectetur distinctio dolor doloribus explicabo facilis hic minus, nam nihil non
+                odio
+                odit officia officiis optio, perferendis praesentium quisquam quo repudiandae sapiente suscipit tenetur
+                unde
+                voluptas voluptates voluptatibus voluptatum! A adipisci, aut dolore dolorem eos explicabo id modi non
+                omnis
+                perspiciatis repudiandae sapiente sint soluta sunt suscipit temporibus ullam? Aut dolorem magnam
+                unde.</p>
+        </div>
+    </div>
 </section>
 </body>
 </html>

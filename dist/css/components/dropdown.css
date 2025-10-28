@@ -1,13 +1,13 @@
-.dropdown {
+.dropdown-wrapper {
   position: relative;
-  width: fit-content;
   display: flex;
   flex-direction: column;
 }
-.dropdown .dropdown-content {
+
+.dropdown-content {
   height: 0;
   overflow: hidden;
 }
-.dropdown .dropdown-content.show {
+.dropdown-content.show {
   height: auto;
 }

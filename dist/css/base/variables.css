@@ -1,0 +1,209 @@
+:root {
+  /* Shades of gray */
+  --gray-0: #ffffff;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-150: #efefef;
+  --gray-200: #e5e5e5;
+  --gray-250: #d9d9d9;
+  --gray-300: #d4d4d4;
+  --gray-350: #bbbbbb;
+  --gray-400: #a3a3a3;
+  --gray-450: #8b8b8b;
+  --gray-500: #737373;
+  --gray-550: #636363;
+  --gray-600: #525252;
+  --gray-650: #494949;
+  --gray-700: #404040;
+  --gray-750: #333333;
+  --gray-800: #262626;
+  --gray-850: #1e1e1e;
+  --gray-900: #171717;
+  --gray-950: #0b0b0b;
+  --gray-1000: #000000;
+  /* Color palette */
+  --primary-color: #6E5FAF;
+  --secondary-color: #C07A2D;
+  --tertiary-color: #4F7C9E;
+  --success-color: #7bae7f;
+  --info-color: #6baacd;
+  --warning-color: #d9b74a;
+  --danger-color: #c96a6a;
+  --neutral-color: #bbbbbb;
+  --light-color: #dddddd;
+  --dark-color: #383737;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --bg-color: var(--gray-0);
+  --border-color: var(--gray-300);
+  /* Text and contrast colors */
+  --text-color: #262626;
+  --text-on-primary: var(--white-color);
+  --text-on-secondary: var(--white-color);
+  --text-on-tertiary: var(--white-color);
+  --text-on-success: var(--white-color);
+  --text-on-info: var(--black-color);
+  --text-on-warning: var(--white-color);
+  --text-on-danger: var(--black-color);
+  --text-on-neutral: var(--white-color);
+  --text-on-dark: var(--white-color);
+  --text-on-light: var(--black-color);
+  --text-on-white: var(--black-color);
+  --text-on-black: var(--white-color);
+  /* Color mixing references */
+  --color-mix-dark: var(--black-color);
+  --color-mix-light: var(--white-color);
+  /* Table background colors */
+  --table-primary-color: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
+  --table-secondary-color: color-mix(in srgb, var(--secondary-color) 50%, var(--color-mix-light));
+  --table-tertiary-color: color-mix(in srgb, var(--tertiary-color) 50%, var(--color-mix-light));
+  --table-success-color: color-mix(in srgb, var(--success-color) 50%, var(--color-mix-light));
+  --table-info-color: color-mix(in srgb, var(--info-color) 50%, var(--color-mix-light));
+  --table-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
+  --table-danger-color: color-mix(in srgb, var(--danger-color) 50%, var(--color-mix-light));
+  --table-neutral-color: color-mix(in srgb, var(--neutral-color) 50%, var(--color-mix-light));
+  --table-dark-color: color-mix(in srgb, var(--dark-color) 50%, var(--color-mix-light));
+  --table-light-color: color-mix(in srgb, var(--light-color) 50%, var(--color-mix-light));
+  --table-black-color: color-mix(in srgb, var(--black-color) 50%, var(--color-mix-light));
+  --table-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-dark));
+  /* Text on table colors */
+  --table-text-on-primary: var(--black-color);
+  --table-text-on-secondary: var(--black-color);
+  --table-text-on-tertiary: var(--black-color);
+  --table-text-on-success: var(--black-color);
+  --table-text-on-info: var(--black-color);
+  --table-text-on-warning: var(--black-color);
+  --table-text-on-danger: var(--black-color);
+  --table-text-on-neutral: var(--black-color);
+  --table-text-on-dark: var(--white-color);
+  --table-text-on-light: var(--black-color);
+  --table-text-on-white: var(--black-color);
+  --table-text-on-black: var(--white-color);
+  /* Table colors specific */
+  --table-striped-bg-color: rgba(128, 128, 128, 0.2);
+  --table-border-color: var(--gray-100);
+  --table-border-divider-color: var(--gray-1000);
+  --table-hover-bg-color: rgba(0, 0, 0, 0.2);
+  --table-padding: .8rem;
+  --table-padding-sm: .6rem;
+  --table-padding-md: .8rem;
+  --table-padding-lg: 1rem;
+  /* Border radius */
+  --border-radius: .3rem;
+  --border-radius-sm: 0.2rem;
+  --border-radius-md: 0.4rem;
+  --border-radius-lg: 0.6rem;
+  --border-radius-pill: 10rem;
+  --border-radius-circle: 50%;
+  /* Grid gap */
+  --gap-grid: 0.2rem;
+  --gap-grid-xs: 0.1rem;
+  --gap-grid-sm: 0.2rem;
+  --gap-grid-md: 0.9rem;
+  --gap-grid-lg: 0.4rem;
+  --gap-grid-xl: 0.5rem;
+  --gap-grid-xxl: 0.6rem;
+  /* Font weights */
+  --font-weight: 200;
+  --font-weight-lighter: 100;
+  --font-weight-lightest: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 800;
+  /* Line heights */
+  --line-height: 1;
+  --line-height-sm: 1.25;
+  --line-height-md: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-xl: 2;
+  /* Letter spacing */
+  --letter-spacing: 0;
+  --letter-spacing-tight: -0.05em;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  /* Font sizes (titles) */
+  --font-size-h1: 4rem;
+  --font-size-h2: 3.5rem;
+  --font-size-h3: 3rem;
+  --font-size-h4: 2.5rem;
+  --font-size-h5: 2rem;
+  --font-size-h6: 1.5rem;
+  /* Font sizes (text) */
+  --font-size: 1.2rem;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.2rem;
+  --font-size-lg: 1.4rem;
+  --font-size-xl: 1.6rem;
+  --font-size-xxl: 1.8rem;
+  /* Font families */
+  --font-family-title: "Montserrat", sans-serif;
+  --font-family-text: "Open Sans", sans-serif;
+  /* Containers */
+  --container-width: 1200px;
+  --container-width-sm: 1000px;
+  --container-width-md: 1200px;
+  --container-width-lg: 1400px;
+  --container-fluid-width: 80%;
+  --container-fluid-width-sm: 70%;
+  --container-fluid-width-md: 80%;
+  --container-fluid-width-lg: 90%;
+  /* Input */
+  --input-height: 3rem;
+  --input-height-sm: 2.5rem;
+  --input-height-md: 3rem;
+  --input-height-lg: 3.5rem;
+  /* Input size */
+  --input-size: 1.4rem;
+  --input-size-sm: 1.2rem;
+  --input-size-md: 1.4rem;
+  --input-size-lg: 1.6rem;
+  /* Input colors and else */
+  --input-bg-color: var(--gray-100);
+  --input-text-color: var(--gray-900);
+  --input-border-color: var(--gray-300);
+  --input-placeholder-color: var(--gray-400);
+  --input-box-shadow-focus: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--primary-color) 50%, transparent);
+  --input-border-width: .1rem;
+  --input-padding: 0 1.5rem;
+  --input-margin: .5rem 0;
+  /* Switch */
+  --switch-bg-color: var(--bg-color);
+  --switch-btn-color: var(--gray-300);
+  --switch-border-color: var(--gray-300);
+  --switch-size: 1.4rem;
+  --switch-size-sm: 1.2rem;
+  --switch-size-md: 1.4rem;
+  --switch-size-lg: 1.6rem;
+  /* Range */
+  --range-size: .6rem;
+  --range-size-sm: .5rem;
+  --range-size-md: .6rem;
+  --range-size-lg: .7rem;
+  /* Form */
+  --gap-form: 1rem;
+  /* Badge */
+  --badge-padding: .4rem 1.2rem;
+  --badge-padding-sm: .3rem .9rem;
+  --badge-padding-md: .4rem 1.2rem;
+  --badge-padding-lg: .5rem 1.5rem;
+  /* Button */
+  --button-padding: .5rem 1rem;
+  --button-padding-sm: .5rem 1rem;
+  --button-padding-md: .75rem 1.5rem;
+  --button-padding-lg: 1rem 2rem;
+  /* Card */
+  --card-gap: 1.5rem;
+  --card-header-padding: .5rem 1rem;
+  --card-body-padding: 1rem;
+  --card-footer-padding: .5rem 1rem;
+  --card-border-color: var(--gray-100);
+  --card-box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+  /* List */
+  --list-padding: .75rem 1.5rem;
+  /* Breakpoints cannot be variable with @media queries */
+  /* Change manually in the code in (grid, col, display, flex, spacing, typography, text) */
+}

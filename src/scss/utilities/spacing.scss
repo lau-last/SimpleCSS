@@ -1,0 +1,68 @@
+/* Breakpoints */
+$breakpoints: (
+        "xs": 425px,
+        "sm": 576px,
+        "md": 768px,
+        "lg": 992px,
+        "xl": 1200px,
+        "xxl": 1400px
+);
+
+/* Spacing scale */
+$spacings: (
+        0: 0,
+        "half": 0.5rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        "auto": auto
+);
+
+/* Gap helpers (no auto) */
+@each $key, $value in $spacings {
+    @if $key != "auto" {
+        .gap-#{$key} { gap: $value; }
+    }
+}
+
+/* Utility mixin: generate spacing classes
+   $allow-auto: set to false to skip "auto" (e.g., for padding) */
+@mixin generate-spacing($property, $prefix, $allow-auto: true) {
+    // Base
+    @each $key, $value in $spacings {
+        @if $allow-auto or $key != "auto" {
+            .#{$prefix}-#{$key}  { #{$property}: $value; }
+            .#{$prefix}t-#{$key} { #{$property}-top: $value; }
+            .#{$prefix}b-#{$key} { #{$property}-bottom: $value; }
+            .#{$prefix}s-#{$key} { #{$property}-left: $value; }
+            .#{$prefix}e-#{$key} { #{$property}-right: $value; }
+            .#{$prefix}x-#{$key} { #{$property}-left: $value; #{$property}-right: $value; }
+            .#{$prefix}y-#{$key} { #{$property}-top: $value;  #{$property}-bottom: $value; }
+        }
+    }
+
+    // Responsive
+    @each $bp, $size in $breakpoints {
+        @media (min-width: #{$size}) {
+            @each $key, $value in $spacings {
+                @if $allow-auto or $key != "auto" {
+                    .#{$prefix}-#{$bp}-#{$key}  { #{$property}: $value; }
+                    .#{$prefix}t-#{$bp}-#{$key} { #{$property}-top: $value; }
+                    .#{$prefix}b-#{$bp}-#{$key} { #{$property}-bottom: $value; }
+                    .#{$prefix}s-#{$bp}-#{$key} { #{$property}-left: $value; }
+                    .#{$prefix}e-#{$bp}-#{$key} { #{$property}-right: $value; }
+                    .#{$prefix}x-#{$bp}-#{$key} { #{$property}-left: $value; #{$property}-right: $value; }
+                    .#{$prefix}y-#{$bp}-#{$key} { #{$property}-top: $value;  #{$property}-bottom: $value; }
+                }
+            }
+        }
+    }
+}
+
+/* Generate:
+   - margins keep "auto"
+   - paddings exclude "auto" */
+@include generate-spacing(margin, m, true);
+@include generate-spacing(padding, p, false);

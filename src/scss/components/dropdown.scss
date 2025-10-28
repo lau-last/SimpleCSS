@@ -1,0 +1,18 @@
+.dropdown {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  .dropdown-content {
+    height: 0;
+    overflow: hidden;
+
+    &.show {
+      height: auto;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,35 @@
+/* Visibility utilities */
+.visible   { visibility: visible; }
+.hidden { visibility: hidden; }
+
+/* Overflow control */
+.overflow-hidden  { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+.overflow-auto    { overflow: auto; }
+
+/* cursor */
+.cursor-none { cursor: none; }
+.cursor-auto { cursor: auto; }
+.cursor-pointer { cursor: pointer; }
+.cursor-not-allowed { cursor: not-allowed; }
+.cursor-help { cursor: help; }
+.cursor-progress { cursor: progress; }
+.cursor-wait { cursor: wait; }
+.cursor-grab { cursor: grab; }
+.cursor-grabbing { cursor: grabbing; }
+.cursor-text { cursor: text; }
+.cursor-copy { cursor: copy; }
+.cursor-alias { cursor: alias; }
+
+/* Opacity levels */
+.opacity-0   { opacity: 0; }
+.opacity-10  { opacity: 10; }
+.opacity-20  { opacity: 20; }
+.opacity-30  { opacity: 30; }
+.opacity-40  { opacity: 40; }
+.opacity-50  { opacity: 50; }
+.opacity-60  { opacity: 60; }
+.opacity-70  { opacity: 70; }
+.opacity-80  { opacity: 80; }
+.opacity-90  { opacity: 90; }
+.opacity-100 { opacity: 100; }

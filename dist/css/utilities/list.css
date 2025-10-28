@@ -1,0 +1,7 @@
+ul.ul {
+  list-style: none;
+}
+
+li.li {
+  padding: var(--list-padding);
+}

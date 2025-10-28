@@ -1,0 +1,23 @@
+.badge {
+  padding: var(--badge-padding);
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+
+
+  &-sm {
+    @extend .badge;
+    padding: var(--badge-padding-sm);
+  }
+
+  &-md {
+    @extend .badge;
+    padding: var(--badge-padding-md);
+  }
+
+  &-lg {
+    @extend .badge;
+    padding: var(--badge-padding-lg);
+  }
+
+  &.rounded-pill {border-radius: var(--border-radius-pill);}
+}

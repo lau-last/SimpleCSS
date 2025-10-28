@@ -1,0 +1,171 @@
+/* Gray shades */
+$grays: (0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000);
+
+/* Gray classes */
+@each $shade in $grays {
+  .bg-gray-#{$shade} {
+    background-color: var(--gray-#{$shade});
+  }
+  .border-gray-#{$shade} {
+    border-color: var(--gray-#{$shade});
+  }
+  .text-gray-#{$shade} {
+    color: var(--gray-#{$shade});
+  }
+}
+
+/* Main colors */
+$colors: (
+        "primary": var(--primary-color),
+        "secondary": var(--secondary-color),
+        "tertiary": var(--tertiary-color),
+        "success": var(--success-color),
+        "info": var(--info-color),
+        "warning": var(--warning-color),
+        "danger": var(--danger-color),
+        "neutral": var(--neutral-color),
+        "light": var(--light-color),
+        "dark": var(--dark-color),
+        "white": var(--white-color),
+        "black": var(--black-color)
+);
+
+$table-colors: (
+        "primary": var(--table-primary-color),
+        "secondary": var(--table-secondary-color),
+        "tertiary": var(--table-tertiary-color),
+        "success": var(--table-success-color),
+        "info": var(--table-info-color),
+        "warning": var(--table-warning-color),
+        "danger": var(--table-danger-color),
+        "neutral": var(--table-neutral-color),
+        "light": var(--table-light-color),
+        "dark": var(--table-dark-color),
+        "white": var(--table-white-color),
+        "black": var(--table-black-color)
+);
+
+/* Background */
+.bg {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      background-color: #{$value};
+      color: var(--text-on-#{$name});
+    }
+  }
+}
+
+/* Borders */
+.border {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      border-color: #{$value} !important;
+    }
+  }
+}
+
+/* Text */
+.text {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      color: #{$value};
+    }
+  }
+}
+
+/* Badges and buttons */
+.badge, .btn {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      background-color: #{$value};
+      color: var(--text-on-#{$name});
+    }
+  }
+}
+
+/* Outline versions */
+.outline {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      background-color: transparent;
+      border: 1px solid #{$value};
+      color: #{$value};
+    }
+  }
+}
+
+/* Button hover */
+
+.btn {
+  @each $name, $value in $colors {
+    &-#{$name}:hover {
+      background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+      color: var(--text-on-#{$name});
+    }
+  }
+}
+
+
+/* Outline hover */
+.btn,
+.btn-sm,
+.btn-md,
+.btn-lg {
+  &.outline {
+    @each $name, $value in $colors {
+      border: 1px solid #{$value};
+      &-#{$name}:hover {
+        background-color: #{$value};
+        color: var(--text-on-#{$name});
+      }
+    }
+  }
+}
+
+/* Tables */
+table {
+  &.table {
+    @each $name, $value in $table-colors {
+      &-#{$name} {
+        background-color: #{$value};
+        & * {
+          color: var(--table-text-on-#{$name});
+        }
+      }
+    }
+  }
+
+  .table {
+    @each $name, $value in $table-colors {
+      &-#{$name} {
+        background-color: #{$value};
+        & * {
+          color: var(--table-text-on-#{$name});
+        }
+      }
+    }
+  }
+}
+
+/* Links */
+.link {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      color: #{$value};
+
+      &:hover {
+        color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+      }
+    }
+  }
+}
+
+/* Alerts */
+.alert {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      background: #{$value};
+      color: var(--text-on-#{$name});
+    }
+  }
+}

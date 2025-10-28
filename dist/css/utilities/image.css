@@ -1,0 +1,20 @@
+/* Image display helpers */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Image fluid */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image thumbnail */
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}

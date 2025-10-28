@@ -1,0 +1,52 @@
+/* Base styles for all containers */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-fluid,
+.container-fluid-sm,
+.container-fluid-md,
+.container-fluid-lg {
+  width: 100%;
+  padding: 1rem;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Fixed containers (centered) */
+.container {
+  max-width: var(--container-width);
+}
+
+.container-sm {
+  max-width: var(--container-width-sm);
+}
+
+.container-md {
+  max-width: var(--container-width-md);
+}
+
+.container-lg {
+  max-width: var(--container-width-lg);
+}
+
+/* Fluid containers (centered but limited) */
+.container-fluid {
+  width: var(--container-fluid-width);
+  max-width: 100%;
+}
+
+.container-fluid-sm {
+  width: var(--container-fluid-width-sm);
+  max-width: 100%;
+}
+
+.container-fluid-md {
+  width: var(--container-fluid-width-md);
+  max-width: 100%;
+}
+
+.container-fluid-lg {
+  width: var(--container-fluid-width-lg);
+  max-width: 100%;
+}

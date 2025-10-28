@@ -1,0 +1,374 @@
+/* Required field marker */
+label.required::after {
+  content: " *";
+  color: var(--danger-color);
+}
+
+/* Textarea width constraints */
+textarea.textarea {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+/* Base text controls: input, select, textarea */
+input.input,
+select.select,
+textarea.textarea {
+  border: var(--input-border-width) solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--input-bg-color);
+  color: var(--input-color);
+  padding: var(--input-padding);
+  margin: var(--input-margin);
+  /* All text-like controls fill width except color/checkbox/radio */
+}
+input.input:not(input[type=color]):not(input[type=checkbox]):not(input[type=radio]),
+select.select:not(input[type=color]):not(input[type=checkbox]):not(input[type=radio]),
+textarea.textarea:not(input[type=color]):not(input[type=checkbox]):not(input[type=radio]) {
+  width: 100%;
+}
+input.input,
+select.select,
+textarea.textarea {
+  /* Fixed height for non-textarea text inputs */
+}
+input.input:not(textarea),
+select.select:not(textarea),
+textarea.textarea:not(textarea) {
+  height: var(--input-height);
+}
+input.input::placeholder,
+select.select::placeholder,
+textarea.textarea::placeholder {
+  color: var(--input-placeholder-color);
+}
+input.input,
+select.select,
+textarea.textarea {
+  /* Focus ring */
+}
+input.input:focus,
+select.select:focus,
+textarea.textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: var(--input-box-shadow-focus);
+  outline: none;
+}
+input.input,
+select.select,
+textarea.textarea {
+  /* Size modifiers for non-range inputs (small/medium/large) */
+}
+input.input.input-sm:not(input[type=range]):not(select):not(textarea),
+select.select.input-sm:not(input[type=range]):not(select):not(textarea),
+textarea.textarea.input-sm:not(input[type=range]):not(select):not(textarea) {
+  height: var(--input-height-sm);
+}
+input.input.input-md:not(input[type=range]):not(select):not(textarea),
+select.select.input-md:not(input[type=range]):not(select):not(textarea),
+textarea.textarea.input-md:not(input[type=range]):not(select):not(textarea) {
+  height: var(--input-height-md);
+}
+input.input.input-lg:not(input[type=range]):not(select):not(textarea),
+select.select.input-lg:not(input[type=range]):not(select):not(textarea),
+textarea.textarea.input-lg:not(input[type=range]):not(select):not(textarea) {
+  height: var(--input-height-lg);
+}
+input.input.select-sm:not(input):not(textarea),
+select.select.select-sm:not(input):not(textarea),
+textarea.textarea.select-sm:not(input):not(textarea) {
+  height: var(--input-height-sm);
+}
+input.input.select-md:not(input):not(textarea),
+select.select.select-md:not(input):not(textarea),
+textarea.textarea.select-md:not(input):not(textarea) {
+  height: var(--input-height-md);
+}
+input.input.select-lg:not(input):not(textarea),
+select.select.select-lg:not(input):not(textarea),
+textarea.textarea.select-lg:not(input):not(textarea) {
+  height: var(--input-height-lg);
+}
+
+/* Color input */
+input.input[type=color] {
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+input.input[type=color]::-webkit-color-swatch {
+  border-radius: var(--border-radius);
+  border: none;
+}
+input.input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0.4rem;
+}
+
+/* File input (native button styling)*/
+input.input[type=file] {
+  padding-left: 0;
+}
+input.input[type=file]::-webkit-file-upload-button, input.input[type=file]::file-selector-button {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  color: var(--text-on-primary);
+  border: none;
+  height: 100%;
+  align-items: self-start;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* Radio / Checkbox */
+input.input[type=radio],
+input.input[type=checkbox]:not(.switch input[type=checkbox]) {
+  width: var(--input-size);
+}
+input.input[type=radio].input-sm,
+input.input[type=checkbox]:not(.switch input[type=checkbox]).input-sm {
+  width: var(--input-size-sm);
+}
+input.input[type=radio].input-md,
+input.input[type=checkbox]:not(.switch input[type=checkbox]).input-md {
+  width: var(--input-size-md);
+}
+input.input[type=radio].input-lg,
+input.input[type=checkbox]:not(.switch input[type=checkbox]).input-lg {
+  width: var(--input-size-lg);
+}
+
+/* Radio / Checkbox */
+input.input[type=checkbox],
+input.input[type=radio] {
+  display: block;
+  width: fit-content;
+}
+
+/* Change accent color */
+input.input[type=checkbox],
+input.input[type=radio],
+input.input[type=range] {
+  accent-color: var(--primary-color);
+  /* Remove focus outline artifacts on range */
+}
+input.input[type=checkbox]:focus,
+input.input[type=radio]:focus,
+input.input[type=range]:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+input.input[type=range] {
+  -webkit-appearance: none;
+  padding: 0;
+  appearance: none;
+  width: 100%;
+  height: var(--input-height);
+  background: transparent;
+  border: none;
+  /* Pour Chrome, Safari, Opera, Edge */
+}
+input.input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: var(--range-size);
+  cursor: pointer;
+  background: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
+  border-radius: var(--border-radius);
+}
+input.input[type=range] {
+  /* Pour Firefox */
+}
+input.input[type=range]::-moz-range-track {
+  width: 100%;
+  height: var(--range-size);
+  cursor: pointer;
+  background: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
+  border-radius: var(--border-radius);
+}
+input.input[type=range] {
+  /* Pour Chrome, Safari, Opera, Edge */
+}
+input.input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: calc(var(--range-size) * 2);
+  width: calc(var(--range-size) * 2);
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  margin-top: calc((var(--range-size) - var(--range-size) * 2) / 2);
+}
+input.input[type=range] {
+  /* Pour Firefox */
+}
+input.input[type=range]::-moz-range-thumb {
+  height: calc(var(--range-size) * 2);
+  width: calc(var(--range-size) * 2);
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  margin-top: calc((var(--range-size) - var(--range-size) * 2) / 2);
+}
+input.input[type=range].input-sm {
+  height: var(--input-height-sm);
+}
+input.input[type=range].input-sm::-webkit-slider-runnable-track {
+  height: var(--range-size-sm);
+}
+input.input[type=range].input-sm::-moz-range-track {
+  height: var(--range-size-sm);
+}
+input.input[type=range].input-sm::-webkit-slider-thumb {
+  height: calc(var(--range-size-sm) * 2);
+  width: calc(var(--range-size-sm) * 2);
+  margin-top: calc((var(--range-size-sm) - var(--range-size-sm) * 2) / 2);
+}
+input.input[type=range].input-sm::-moz-range-thumb {
+  height: calc(var(--range-size-sm) * 2);
+  width: calc(var(--range-size-sm) * 2);
+  margin-top: calc((var(--range-size-sm) - var(--range-size-sm) * 2) / 2);
+}
+input.input[type=range].input-md {
+  height: var(--input-height-md);
+}
+input.input[type=range].input-md::-webkit-slider-runnable-track {
+  height: var(--range-size-md);
+}
+input.input[type=range].input-md::-moz-range-track {
+  height: var(--range-size-md);
+}
+input.input[type=range].input-md::-webkit-slider-thumb {
+  height: calc(var(--range-size-md) * 2);
+  width: calc(var(--range-size-md) * 2);
+  margin-top: calc((var(--range-size-md) - var(--range-size-md) * 2) / 2);
+}
+input.input[type=range].input-md::-moz-range-thumb {
+  height: calc(var(--range-size-md) * 2);
+  width: calc(var(--range-size-md) * 2);
+  margin-top: calc((var(--range-size-md) - var(--range-size-md) * 2) / 2);
+}
+input.input[type=range].input-lg {
+  height: var(--input-height-lg);
+}
+input.input[type=range].input-lg::-webkit-slider-runnable-track {
+  height: var(--range-size-lg);
+}
+input.input[type=range].input-lg::-moz-range-track {
+  height: var(--range-size-lg);
+}
+input.input[type=range].input-lg::-webkit-slider-thumb {
+  height: calc(var(--range-size-lg) * 2);
+  width: calc(var(--range-size-lg) * 2);
+  margin-top: calc((var(--range-size-lg) - var(--range-size-lg) * 2) / 2);
+}
+input.input[type=range].input-lg::-moz-range-thumb {
+  height: calc(var(--range-size-lg) * 2);
+  width: calc(var(--range-size-lg) * 2);
+  margin-top: calc((var(--range-size-lg) - var(--range-size-lg) * 2) / 2);
+}
+
+/* Switch */
+.wrapper-switch, .wrapper-switch-lg, .wrapper-switch-md, .wrapper-switch-sm {
+  align-content: center;
+  margin-block: 0.5rem;
+  height: var(--input-height);
+}
+.wrapper-switch .switch, .wrapper-switch-lg .switch, .wrapper-switch-md .switch, .wrapper-switch-sm .switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+}
+.wrapper-switch .switch input, .wrapper-switch-lg .switch input, .wrapper-switch-md .switch input, .wrapper-switch-sm .switch input {
+  display: none;
+}
+.wrapper-switch .switch .slider, .wrapper-switch-lg .switch .slider, .wrapper-switch-md .switch .slider, .wrapper-switch-sm .switch .slider {
+  background-color: var(--switch-bg-color);
+  border: 1px solid var(--switch-border-color);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.wrapper-switch .switch .slider:before, .wrapper-switch-lg .switch .slider:before, .wrapper-switch-md .switch .slider:before, .wrapper-switch-sm .switch .slider:before {
+  background-color: var(--switch-btn-color);
+  position: absolute;
+  content: "";
+  height: 1.1rem;
+  width: 1.1rem;
+  left: 0.1rem;
+  bottom: 0.1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.wrapper-switch .switch .slider.rounded-pill, .wrapper-switch-lg .switch .slider.rounded-pill, .wrapper-switch-md .switch .slider.rounded-pill, .wrapper-switch-sm .switch .slider.rounded-pill {
+  border-radius: 10rem;
+}
+.wrapper-switch .switch .slider.rounded-pill:before, .wrapper-switch-lg .switch .slider.rounded-pill:before, .wrapper-switch-md .switch .slider.rounded-pill:before, .wrapper-switch-sm .switch .slider.rounded-pill:before {
+  border-radius: 50%;
+}
+.wrapper-switch .switch input:checked + .slider:before, .wrapper-switch-lg .switch input:checked + .slider:before, .wrapper-switch-md .switch input:checked + .slider:before, .wrapper-switch-sm .switch input:checked + .slider:before {
+  -ms-transform: translateX(1.5rem);
+  transform: translateX(1.5rem);
+}
+.wrapper-switch .switch input:checked + .slider, .wrapper-switch-lg .switch input:checked + .slider, .wrapper-switch-md .switch input:checked + .slider, .wrapper-switch-sm .switch input:checked + .slider {
+  background-color: var(--primary-color);
+}
+.wrapper-switch-sm {
+  height: var(--input-height-sm);
+}
+.wrapper-switch-sm .switch {
+  width: calc(var(--switch-size-sm) * 2);
+  height: var(--switch-size-sm);
+}
+.wrapper-switch-sm .switch .slider:before {
+  width: calc(var(--switch-size-sm) - 0.4rem);
+  height: calc(var(--switch-size-sm) - 0.4rem);
+}
+.wrapper-switch-sm .switch input:checked + .slider:before {
+  -ms-transform: translateX(var(--switch-size-sm));
+  transform: translateX(var(--switch-size-sm));
+}
+.wrapper-switch-md {
+  height: var(--input-height-md);
+}
+.wrapper-switch-md .switch {
+  width: calc(var(--switch-size-md) * 2);
+  height: var(--switch-size-md);
+}
+.wrapper-switch-md .switch .slider:before {
+  width: calc(var(--switch-size-md) - 0.4rem);
+  height: calc(var(--switch-size-md) - 0.4rem);
+}
+.wrapper-switch-md .switch input:checked + .slider:before {
+  -ms-transform: translateX(var(--switch-size-md));
+  transform: translateX(var(--switch-size-md));
+}
+.wrapper-switch-lg {
+  height: var(--input-height-lg);
+}
+.wrapper-switch-lg .switch {
+  width: calc(var(--switch-size-lg) * 2);
+  height: var(--switch-size-lg);
+}
+.wrapper-switch-lg .switch .slider:before {
+  width: calc(var(--switch-size-lg) - 0.4rem);
+  height: calc(var(--switch-size-lg) - 0.4rem);
+}
+.wrapper-switch-lg .switch input:checked + .slider:before {
+  -ms-transform: translateX(var(--switch-size-lg));
+  transform: translateX(var(--switch-size-lg));
+}
+
+.form-inline {
+  gap: var(--gap-form);
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+.form-inline label {
+  text-wrap: nowrap;
+}

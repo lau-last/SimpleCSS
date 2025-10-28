@@ -1,0 +1,34 @@
+.btn {
+  border-radius: var(--border-radius);
+  padding: var(--button-padding);
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:not([class*="outline-"]) {
+    border: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &-sm {
+    @extend .btn;
+    padding: var(--button-padding-sm);
+  }
+
+  &-md {
+    @extend .btn;
+    padding: var(--button-padding-md);
+  }
+
+  &-lg {
+    @extend .btn;
+    padding: var(--button-padding-lg);
+  }
+
+  &.rounded-pill {
+    border-radius: 10rem;
+  }
+}

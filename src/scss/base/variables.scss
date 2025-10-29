@@ -223,11 +223,8 @@
   --card-box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
 
   /* List */
-  --list-padding: .75rem 0;
-
-  /* Navbar */
-  --navbar-padding: 1rem;
-
+  --list-container-padding: 1rem;
+  --list-padding: 1rem;
 
 
   /* Breakpoints cannot be variable with @media queries */

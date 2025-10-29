@@ -1,5 +1,8 @@
-ul.ul {
+ul.ul,
+ol.ol {
   list-style: none;
+  padding: var(--list-container-padding);
+  border-radius: var(--border-radius);
 }
 
 li.li {

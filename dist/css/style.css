@@ -211,9 +211,8 @@
   --card-border-color: var(--gray-100);
   --card-box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
   /* List */
-  --list-padding: .75rem 0;
-  /* Navbar */
-  --navbar-padding: 1rem;
+  --list-container-padding: 1rem;
+  --list-padding: 1rem;
   /* Breakpoints cannot be variable with @media queries */
   /* Change manually in the code in (grid, col, display, flex, spacing, typography, text) */
 }
@@ -2890,12 +2889,26 @@ body ::selection {
   flex-direction: column;
 }
 
-.dropdown-content {
+.dropdown {
   height: 0;
   overflow: hidden;
 }
-.dropdown-content.show {
+.dropdown.dropdown-overlay, .dropdown.dropdown-overlay-right, .dropdown.dropdown-overlay-left {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+}
+.dropdown.dropdown-overlay, .dropdown.dropdown-overlay-left {
+  left: 0;
+}
+.dropdown.dropdown-overlay-right {
+  right: 0;
+}
+.dropdown.show {
   height: auto;
+  overflow: visible;
 }
 
 /* Required field marker */
@@ -3271,10 +3284,6 @@ input.input[type=range].input-lg::-moz-range-thumb {
 }
 .form-inline label {
   text-wrap: nowrap;
-}
-
-.navbar {
-  padding: var(--navbar-padding);
 }
 
 table.table,
@@ -5439,8 +5448,11 @@ table .table-black * {
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-ul.ul {
+ul.ul,
+ol.ol {
   list-style: none;
+  padding: var(--list-container-padding);
+  border-radius: var(--border-radius);
 }
 
 li.li {
@@ -10820,41 +10832,41 @@ li.li {
 }
 
 .opacity-10 {
-  opacity: 10;
+  opacity: 0.1;
 }
 
 .opacity-20 {
-  opacity: 20;
+  opacity: 0.2;
 }
 
 .opacity-30 {
-  opacity: 30;
+  opacity: 0.3;
 }
 
 .opacity-40 {
-  opacity: 40;
+  opacity: 0.4;
 }
 
 .opacity-50 {
-  opacity: 50;
+  opacity: 0.5;
 }
 
 .opacity-60 {
-  opacity: 60;
+  opacity: 0.6;
 }
 
 .opacity-70 {
-  opacity: 70;
+  opacity: 0.7;
 }
 
 .opacity-80 {
-  opacity: 80;
+  opacity: 0.8;
 }
 
 .opacity-90 {
-  opacity: 90;
+  opacity: 0.9;
 }
 
 .opacity-100 {
-  opacity: 100;
+  opacity: 1;
 }

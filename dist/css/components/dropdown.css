@@ -4,10 +4,24 @@
   flex-direction: column;
 }
 
-.dropdown-content {
+.dropdown {
   height: 0;
   overflow: hidden;
 }
-.dropdown-content.show {
+.dropdown.dropdown-overlay, .dropdown.dropdown-overlay-right, .dropdown.dropdown-overlay-left {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+}
+.dropdown.dropdown-overlay, .dropdown.dropdown-overlay-left {
+  left: 0;
+}
+.dropdown.dropdown-overlay-right {
+  right: 0;
+}
+.dropdown.show {
   height: auto;
+  overflow: visible;
 }

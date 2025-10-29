@@ -2,16 +2,33 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  //align-self: center;
 }
-
-.dropdown-content {
+.dropdown {
   height: 0;
   overflow: hidden;
 
+  &.dropdown-overlay,
+  &.dropdown-overlay-right,
+  &.dropdown-overlay-left {
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+  }
+
+  &.dropdown-overlay,
+  &.dropdown-overlay-left {
+    left: 0;
+  }
+
+  &.dropdown-overlay-right {
+    right: 0;
+  }
+
   &.show {
     height: auto;
+    overflow: visible;
   }
 }
-
-
-

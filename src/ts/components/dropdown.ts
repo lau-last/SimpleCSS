@@ -14,14 +14,16 @@ export default class Dropdown {
             const content = document.querySelector(target) as HTMLElement | null;
             if (!content) return;
 
-            this.actionEvent(button, content);
+            Dropdown.actionEvent(button, content);
         });
     }
 
-    private actionEvent(button: HTMLElement, content: HTMLElement): void {
+    static actionEvent(button: HTMLElement, content: HTMLElement): void {
         button.addEventListener('click', (event: MouseEvent) => {
             event.stopPropagation();
 
+            Dropdown.closeAllDropdownsOverlay(content);
+            
             const isOpen =  content.classList.contains('show');
             button.dispatchEvent(new Event('dropdown:beforeToggle'));
 
@@ -35,6 +37,8 @@ export default class Dropdown {
 
             button.dispatchEvent(new Event('dropdown:afterToggle'));
         });
+
+
     }
 
     private static slideDown(element: HTMLElement): void {
@@ -50,6 +54,7 @@ export default class Dropdown {
 
         animation.onfinish = (): void => {
             element.style.height = "auto";
+            element.style.overflow = "visible";
         };
     }
 
@@ -67,5 +72,21 @@ export default class Dropdown {
         animation.onfinish = (): void => {
             element.style.height = "0px";
         };
+    }
+
+    private static closeAllDropdownsOverlay(except?: HTMLElement): void {
+        const dropdownsOverlay = document.querySelectorAll<HTMLElement>([
+            '.dropdown-overlay.show',
+            '.dropdown-overlay-right.show',
+            '.dropdown-overlay-left.show'
+        ].join(','));
+
+        if (!dropdownsOverlay.length) return;
+
+        dropdownsOverlay.forEach((dropdown) => {
+            if (dropdown === except) return;
+            Dropdown.slideUp(dropdown);
+            dropdown.classList.remove('show');
+        });
     }
 }

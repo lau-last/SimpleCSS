@@ -13,12 +13,13 @@ export default class Dropdown {
             const content = document.querySelector(target);
             if (!content)
                 return;
-            this.actionEvent(button, content);
+            Dropdown.actionEvent(button, content);
         });
     }
-    actionEvent(button, content) {
+    static actionEvent(button, content) {
         button.addEventListener('click', (event) => {
             event.stopPropagation();
+            Dropdown.closeAllDropdownsOverlay(content);
             const isOpen = content.classList.contains('show');
             button.dispatchEvent(new Event('dropdown:beforeToggle'));
             if (isOpen) {
@@ -39,6 +40,7 @@ export default class Dropdown {
         const animation = element.animate([{ height: "0px" }, { height: `${height}px` }], { duration: 300, easing: "ease" });
         animation.onfinish = () => {
             element.style.height = "auto";
+            element.style.overflow = "visible";
         };
     }
     static slideUp(element) {
@@ -49,5 +51,20 @@ export default class Dropdown {
         animation.onfinish = () => {
             element.style.height = "0px";
         };
+    }
+    static closeAllDropdownsOverlay(except) {
+        const dropdownsOverlay = document.querySelectorAll([
+            '.dropdown-overlay.show',
+            '.dropdown-overlay-right.show',
+            '.dropdown-overlay-left.show'
+        ].join(','));
+        if (!dropdownsOverlay.length)
+            return;
+        dropdownsOverlay.forEach((dropdown) => {
+            if (dropdown === except)
+                return;
+            Dropdown.slideUp(dropdown);
+            dropdown.classList.remove('show');
+        });
     }
 }

@@ -14,32 +14,150 @@
 
 <!-- Section navbar -->
 <section>
-    <nav class="navbar bg-primary">
+    <nav class="bg-primary p-2">
+        <!-- Container Desktop -->
         <div class="d-flex jc-between ai-center">
             <div>logo</div>
-
             <!-- Menu Desktop -->
-            <ul class="ul d-flex-md d-none gap-2">
-                <li class="li"><a href="#" class="link-white">Home</a></li>
-                <li class="li"><a href="#" class="link-white">About</a></li>
-                <li class="li"><a href="#" class="link-white">Contact</a></li>
-            </ul>
-
-            <!-- Menu Mobile (dropdown button) -->
-            <button class="d-block d-none-md btn btn-white fit-width" data-js="dropdown" data-target="#menu">
+            <div class="d-flex-md d-none gap-2">
+                <ul class="ul d-flex gap-2">
+                    <li class="li"><a href="#" class="link-white">Home</a></li>
+                    <li class="li"><a href="#" class="link-white">About</a></li>
+                    <li class="li"><a href="#" class="link-white">Contact</a></li>
+                </ul>
+                <!-- Dropdown -->
+                <div class="dropdown-wrapper as-center">
+                    <button class="btn btn-white" data-js="dropdown" data-target="#nav1">Menu</button>
+                    <div class="dropdown dropdown-overlay-right" id="nav1">
+                        <ul class="ul border-all border-radius">
+                            <li class="li"><a href="#" class="link">Paramètres</a></li>
+                            <li class="li"><a href="#" class="link">DéconnexionDéconnexion</a></li>
+                            <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- dropdown button for mobile -->
+            <button class="d-block d-none-md btn btn-white" data-js="dropdown" data-target="#menu">
                 Menu
             </button>
         </div>
+        <!-- Dropdown content (mobile) -->
+        <div class="dropdown d-none-md" id="menu">
 
-        <!-- Dropdown content -->
-        <div class="dropdown-content d-block d-none-md" id="menu">
-            <ul class="ul">
-                <li class="li"><a href="#" class="link-white">Home</a></li>
-                <li class="li"><a href="#" class="link-white">About</a></li>
-                <li class="li"><a href="#" class="link-white">Contact</a></li>
-            </ul>
+            <div class="d-flex fd-column gap-2 mt-2">
+                <a href="#" class="link-white">Home</a>
+                <a href="#" class="link-white">About</a>
+                <a href="#" class="link-white">Contact</a>
+
+                <!-- dropdown in mobile -->
+                <div class="dropdown-wrapper">
+                    <button class="btn btn-white fit-width" data-js="dropdown" data-target="#nav">Menu</button>
+                    <div class="dropdown dropdown-overlay" id="nav">
+                        <ul class="ul border-all">
+                            <li class="li"><a href="#" class="link">Paramètres</a></li>
+                            <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                            <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
+</section>
+<!-- Section Dropdown -->
+<section>
+    <div class="my-5 text-center container d-flex fd-column gap-half">
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper">
+            <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu1">Menu</button>
+            <div class="dropdown dropdown-overlay" id="menu1">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper">
+            <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu2">Menu</button>
+            <div class="dropdown dropdown-overlay w-100" id="menu2">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper">
+            <button class="btn btn-primary" data-js="dropdown" data-target="#menu4">Menu</button>
+            <div class="dropdown dropdown-overlay fit-width" id="menu4">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper">
+            <button class="btn btn-primary" data-js="dropdown" data-target="#menu5">Menu</button>
+            <div class="dropdown dropdown-overlay-right" id="menu5">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper">
+            <button class="btn btn-primary" data-js="dropdown" data-target="#menu6">Menu</button>
+            <div class="dropdown dropdown-overlay w-100" id="menu6">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper">
+            <button class="btn btn-primary" data-js="dropdown" data-target="#menu7">Menu</button>
+            <div class="dropdown" id="menu7">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper fit-width">
+            <button class="btn btn-primary" data-js="dropdown" data-target="#menu3">Menu</button>
+            <div class="dropdown" id="menu3">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dropdown wrapper -->
+        <div class="dropdown-wrapper">
+            <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu8">Menu</button>
+            <div class="dropdown fit-width jc-center" id="menu8">
+                <ul class="ul border-all">
+                    <li class="li"><a href="#" class="link">Paramètres</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </section>
 <!-- Section layouts -->
 <section>
@@ -1226,44 +1344,6 @@
             </div>
         </div>
 
-    </div>
-</section>
-<!-- Section Dropdown -->
-<section>
-    <div class="text-center d-flex fd-column">
-        <div class="container">
-
-            <div class="dropdown-wrapper fit-size">
-                <button class="btn btn-primary fit-width"
-                        data-js="dropdown"
-                        data-target="#dropdownButton">Menu
-                </button>
-
-                <div class="dropdown-content show" id="dropdownButton">
-                    <ul class="ul border-all border-radius text-start py-1 px-2">
-                        <li class="li"><a href="#" class="link">Paramètres</a></li>
-                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                        <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    </ul>
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, delectus dicta ea error, illo
-                impedit,
-                modi quia quo sapiente tempore tenetur vero! Accusamus ad amet deleniti et eum, fuga fugit minima
-                necessitatibus nisi nulla numquam obcaecati quasi qui, quibusdam sunt suscipit unde, voluptatem. Aliquam
-                aliquid asperiores consectetur distinctio dolor doloribus explicabo facilis hic minus, nam nihil non
-                odio
-                odit officia officiis optio, perferendis praesentium quisquam quo repudiandae sapiente suscipit tenetur
-                unde
-                voluptas voluptates voluptatibus voluptatum! A adipisci, aut dolore dolorem eos explicabo id modi non
-                omnis
-                perspiciatis repudiandae sapiente sint soluta sunt suscipit temporibus ullam? Aut dolorem magnam
-                unde.</p>
-        </div>
     </div>
 </section>
 </body>

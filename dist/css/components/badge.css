@@ -12,6 +12,3 @@
 .badge-lg {
   padding: var(--badge-padding-lg);
 }
-.badge.rounded-pill, .rounded-pill.badge-sm, .rounded-pill.badge-md, .rounded-pill.badge-lg {
-  border-radius: var(--border-radius-pill);
-}

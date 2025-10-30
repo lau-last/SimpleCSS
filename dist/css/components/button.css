@@ -2,7 +2,6 @@
   border-radius: var(--border-radius);
   padding: var(--button-padding);
   cursor: pointer;
-  white-space: nowrap;
 }
 .btn:not([class*=outline-]), .btn-lg:not([class*=outline-]), .btn-md:not([class*=outline-]), .btn-sm:not([class*=outline-]) {
   border: none;
@@ -19,7 +18,4 @@
 }
 .btn-lg {
   padding: var(--button-padding-lg);
-}
-.btn.rounded-pill, .rounded-pill.btn-sm, .rounded-pill.btn-md, .rounded-pill.btn-lg {
-  border-radius: 10rem;
 }

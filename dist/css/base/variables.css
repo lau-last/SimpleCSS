@@ -205,6 +205,16 @@
   /* List */
   --list-container-padding: 1rem;
   --list-padding: 1rem;
+  /* Dialog */
+  --dialog-padding: 0;
+  --dialog-header-padding: 1rem;
+  --dialog-body-padding: 1rem;
+  --dialog-footer-padding: 1rem;
+  --dialog-width: 50%;
+  --dialog-width-sm: 50%;
+  --dialog-width-md: 75%;
+  --dialog-width-lg: 90%;
+  --dialog-backdrop-color: rgba(0, 0, 0, 0.8);
   /* Breakpoints cannot be variable with @media queries */
   /* Change manually in the code in (grid, col, display, flex, spacing, typography, text) */
 }

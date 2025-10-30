@@ -2,11 +2,8 @@
   border-radius: var(--border-radius);
   padding: var(--button-padding);
   cursor: pointer;
-  white-space: nowrap;
 
-  &:not([class*="outline-"]) {
-    border: none;
-  }
+  &:not([class*="outline-"]) {border: none;}
 
   &:focus {
     outline: none;
@@ -26,9 +23,5 @@
   &-lg {
     @extend .btn;
     padding: var(--button-padding-lg);
-  }
-
-  &.rounded-pill {
-    border-radius: 10rem;
   }
 }

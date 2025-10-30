@@ -1,0 +1,40 @@
+dialog.dialog {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: var(--dialog-width);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+dialog.dialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.25s ease;
+}
+dialog.dialog.dialog-sm {
+  width: var(--dialog-width-sm);
+}
+dialog.dialog.dialog-md {
+  width: var(--dialog-width-md);
+}
+dialog.dialog.dialog-lg {
+  width: var(--dialog-width-lg);
+}
+dialog.dialog .dialog-header {
+  padding: var(--dialog-header-padding);
+}
+dialog.dialog .dialog-body {
+  padding: var(--dialog-body-padding);
+}
+dialog.dialog .dialog-footer {
+  padding: var(--dialog-footer-padding);
+}
+dialog.dialog[open].show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+dialog.dialog.show::backdrop {
+  background: var(--dialog-backdrop-color);
+}

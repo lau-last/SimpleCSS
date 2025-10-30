@@ -18,6 +18,4 @@
     @extend .badge;
     padding: var(--badge-padding-lg);
   }
-
-  &.rounded-pill {border-radius: var(--border-radius-pill);}
 }

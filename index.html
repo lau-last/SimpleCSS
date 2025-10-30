@@ -65,6 +65,91 @@
         </div>
     </nav>
 </section>
+<!-- Section Dialog -->
+<section>
+    <div class="my-5 container">
+        <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-sm">Ouvrir la modale sm</button>
+        <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-lg">Ouvrir la modale lg</button>
+
+        <dialog class="dialog dialog-sm" id="modal-sm">
+            <div class="dialog-header">
+                <h2>Bonjour !</h2>
+            </div>
+            <div class="dialog-body border-y">
+                <p>Ceci est une modale native HTML.</p>
+            </div>
+            <div class="dialog-footer">
+                <button class="btn btn-primary close" data-js="dialog" data-target="#modal-md">ouvrir la modale md</button>
+            </div>
+        </dialog>
+
+        <dialog class="dialog dialog-md" id="modal-md">
+            <div class="dialog-header">
+                <h2>Re bonjour !</h2>
+            </div>
+            <div class="dialog-body border-y">
+                <p>Ceci est une deuxieme modale native HTML.</p>
+            </div>
+            <div class="dialog-footer">
+                <button class="btn btn-primary close">Fermer</button>
+            </div>
+        </dialog>
+
+        <dialog class="dialog dialog-lg" id="modal-lg">
+            <div class="dialog-header">
+                <h2>Re bonjour !</h2>
+            </div>
+            <div class="dialog-body border-y">
+                <p>Ceci est une troisième modale native HTML.</p>
+            </div>
+            <div class="dialog-footer">
+                <button class="btn btn-primary close">Fermer</button>
+            </div>
+        </dialog>
+    </div>
+
+    <script type="module">
+        document.body.addEventListener('dropdown:beforeOpen', (e) => {
+            console.log('👉 La dropdown va s’ouvrir !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+
+        document.body.addEventListener('dropdown:afterOpen', (e) => {
+            console.log('✅ La dropdown est ouverte !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+
+        document.body.addEventListener('dropdown:beforeClose', (e) => {
+            console.log('👉 La dropdown va se fermer !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+
+        document.body.addEventListener('dropdown:afterClose', (e) => {
+            console.log('✅ La dropdown est ferme !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+
+        document.body.addEventListener('dialog:beforeOpen', (e) => {
+            console.log('👉 La dialog va s ouvrir !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+
+        document.body.addEventListener('dialog:afterOpen', (e) => {
+            console.log('✅ La dialog est ouvert !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+
+        document.body.addEventListener('dialog:beforeClose', (e) => {
+            console.log('👉 La dialog va se fermer !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+
+        document.body.addEventListener('dialog:afterClose', (e) => {
+            console.log('✅ La dialog est ferme !');
+            console.log('Détail complet :', e.detail.element.id);
+        });
+    </script>
+</section>
 <!-- Section Dropdown -->
 <section>
     <div class="my-5 text-center container d-flex fd-column gap-half">
@@ -1247,11 +1332,11 @@
                 </div>
             </div>
             <!--Card-->
-            <div class="card card-bordered border-danger" style="width: 25rem;">
+            <div class="card border-danger" style="width: 25rem;">
                 <div class="card-header p-5">
                     <h5>Card 4</h5>
                 </div>
-                <div class="card-body border-danger">
+                <div class="card-body border-y border-danger">
                     <p>Some quick example text to build on the card title and make up the bulk of the card's
                         content.</p>
                 </div>

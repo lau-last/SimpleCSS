@@ -1,77 +1,92 @@
 export default class Dropdown {
 
     constructor() {
-        this.init();
+        Dropdown.init();
     }
 
-    private init(): void {
+    private static init(): void {
         const buttons = document.querySelectorAll('[data-js="dropdown"]') as NodeListOf<HTMLElement>;
         if (!buttons.length) return;
 
         buttons.forEach((button: HTMLElement) => {
             const target = button.getAttribute('data-target') as string;
             if (!target) return;
-            const content = document.querySelector(target) as HTMLElement | null;
-            if (!content) return;
+            const dropdown = document.querySelector(target) as HTMLElement | null;
+            if (!dropdown) return;
 
-            Dropdown.actionEvent(button, content);
+            Dropdown.actionEvent(button, dropdown);
         });
     }
 
-    static actionEvent(button: HTMLElement, content: HTMLElement): void {
+    private static actionEvent(button: HTMLElement, dropdown: HTMLElement): void {
         button.addEventListener('click', (event: MouseEvent) => {
             event.stopPropagation();
 
-            Dropdown.closeAllDropdownsOverlay(content);
-            
-            const isOpen =  content.classList.contains('show');
-            button.dispatchEvent(new Event('dropdown:beforeToggle'));
+            Dropdown.closeAllDropdownsOverlay(dropdown);
+
+            const isOpen = dropdown.classList.contains('show');
 
             if (isOpen) {
-                Dropdown.slideUp(content);
-                content.classList.remove('show');
+                Dropdown.slideUp(dropdown);
+                dropdown.classList.remove('show');
             } else {
-                Dropdown.slideDown(content);
-                content.classList.add('show');
+                Dropdown.slideDown(dropdown);
+                dropdown.classList.add('show');
             }
-
-            button.dispatchEvent(new Event('dropdown:afterToggle'));
         });
-
-
     }
 
-    private static slideDown(element: HTMLElement): void {
-        const height = element.scrollHeight as number;
+    private static slideDown(dropdown: HTMLElement): void {
+        dropdown.dispatchEvent(new CustomEvent('dropdown:beforeOpen', {
+            detail: {element: dropdown},
+            bubbles: true,
+        }));
 
-        element.style.overflow = "hidden";
-        element.style.height = "0px";
+        const height = dropdown.scrollHeight as number;
 
-        const animation = element.animate(
+        dropdown.style.overflow = "hidden";
+        dropdown.style.height = "0px";
+
+        const animation = dropdown.animate(
             [{height: "0px"}, {height: `${height}px`}],
             {duration: 300, easing: "ease"}
         );
 
         animation.onfinish = (): void => {
-            element.style.height = "auto";
-            element.style.overflow = "visible";
+            dropdown.style.height = "auto";
+            dropdown.style.overflow = "visible";
         };
+
+        dropdown.dispatchEvent(new CustomEvent('dropdown:afterOpen', {
+            detail: {element: dropdown},
+            bubbles: true,
+        }));
     }
 
-    private static slideUp(element: HTMLElement): void {
-        const height = element.scrollHeight as number;
+    private static slideUp(dropdown: HTMLElement): void {
+        dropdown.dispatchEvent(new CustomEvent('dropdown:beforeClose', {
+            detail: {element: dropdown},
+            bubbles: true,
+        }));
 
-        element.style.overflow = "hidden";
-        element.style.height = `${height}px`;
+        const height = dropdown.scrollHeight as number;
 
-        const animation = element.animate(
+        dropdown.style.overflow = "hidden";
+        dropdown.style.height = `${height}px`;
+
+        const animation = dropdown.animate(
             [{height: `${height}px`}, {height: "0px"}],
             {duration: 300, easing: "ease"}
         );
 
         animation.onfinish = (): void => {
-            element.style.height = "0px";
+            dropdown.style.height = "0px";
         };
+
+        dropdown.dispatchEvent(new CustomEvent('dropdown:afterClose', {
+            detail: {element: dropdown},
+            bubbles: true,
+        }));
     }
 
     private static closeAllDropdownsOverlay(except?: HTMLElement): void {

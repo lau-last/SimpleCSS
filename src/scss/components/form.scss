@@ -289,7 +289,6 @@ input.input[type="range"] {
     }
 
     input:checked + .slider:before {
-      //-webkit-transform: translateX(1.5rem);
       -ms-transform: translateX(1.5rem);
       transform: translateX(1.5rem);
     }
@@ -314,7 +313,6 @@ input.input[type="range"] {
       }
 
       input:checked + .slider:before {
-        //-webkit-transform: translateX(var(--switch-size-sm));
         -ms-transform: translateX(var(--switch-size-sm));
         transform: translateX(var(--switch-size-sm));
       }
@@ -335,7 +333,6 @@ input.input[type="range"] {
       }
 
       input:checked + .slider:before {
-        //-webkit-transform: translateX(var(--switch-size-md));
         -ms-transform: translateX(var(--switch-size-md));
         transform: translateX(var(--switch-size-md));
       }
@@ -356,7 +353,6 @@ input.input[type="range"] {
       }
 
       input:checked + .slider:before {
-        //-webkit-transform: translateX(var(--switch-size-lg));
         -ms-transform: translateX(var(--switch-size-lg));
         transform: translateX(var(--switch-size-lg));
       }

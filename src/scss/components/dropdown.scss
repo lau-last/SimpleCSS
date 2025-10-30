@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  //align-self: center;
 }
 .dropdown {
   height: 0;
@@ -19,13 +18,8 @@
   }
 
   &.dropdown-overlay,
-  &.dropdown-overlay-left {
-    left: 0;
-  }
-
-  &.dropdown-overlay-right {
-    right: 0;
-  }
+  &.dropdown-overlay-left {left: 0;}
+  &.dropdown-overlay-right {right: 0;}
 
   &.show {
     height: auto;

@@ -1,8 +1,8 @@
 export default class Dropdown {
     constructor() {
-        this.init();
+        Dropdown.init();
     }
-    init() {
+    static init() {
         const buttons = document.querySelectorAll('[data-js="dropdown"]');
         if (!buttons.length)
             return;
@@ -10,47 +10,61 @@ export default class Dropdown {
             const target = button.getAttribute('data-target');
             if (!target)
                 return;
-            const content = document.querySelector(target);
-            if (!content)
+            const dropdown = document.querySelector(target);
+            if (!dropdown)
                 return;
-            Dropdown.actionEvent(button, content);
+            Dropdown.actionEvent(button, dropdown);
         });
     }
-    static actionEvent(button, content) {
+    static actionEvent(button, dropdown) {
         button.addEventListener('click', (event) => {
             event.stopPropagation();
-            Dropdown.closeAllDropdownsOverlay(content);
-            const isOpen = content.classList.contains('show');
-            button.dispatchEvent(new Event('dropdown:beforeToggle'));
+            Dropdown.closeAllDropdownsOverlay(dropdown);
+            const isOpen = dropdown.classList.contains('show');
             if (isOpen) {
-                Dropdown.slideUp(content);
-                content.classList.remove('show');
+                Dropdown.slideUp(dropdown);
+                dropdown.classList.remove('show');
             }
             else {
-                Dropdown.slideDown(content);
-                content.classList.add('show');
+                Dropdown.slideDown(dropdown);
+                dropdown.classList.add('show');
             }
-            button.dispatchEvent(new Event('dropdown:afterToggle'));
         });
     }
-    static slideDown(element) {
-        const height = element.scrollHeight;
-        element.style.overflow = "hidden";
-        element.style.height = "0px";
-        const animation = element.animate([{ height: "0px" }, { height: `${height}px` }], { duration: 300, easing: "ease" });
+    static slideDown(dropdown) {
+        dropdown.dispatchEvent(new CustomEvent('dropdown:beforeOpen', {
+            detail: { element: dropdown },
+            bubbles: true,
+        }));
+        const height = dropdown.scrollHeight;
+        dropdown.style.overflow = "hidden";
+        dropdown.style.height = "0px";
+        const animation = dropdown.animate([{ height: "0px" }, { height: `${height}px` }], { duration: 300, easing: "ease" });
         animation.onfinish = () => {
-            element.style.height = "auto";
-            element.style.overflow = "visible";
+            dropdown.style.height = "auto";
+            dropdown.style.overflow = "visible";
         };
+        dropdown.dispatchEvent(new CustomEvent('dropdown:afterOpen', {
+            detail: { element: dropdown },
+            bubbles: true,
+        }));
     }
-    static slideUp(element) {
-        const height = element.scrollHeight;
-        element.style.overflow = "hidden";
-        element.style.height = `${height}px`;
-        const animation = element.animate([{ height: `${height}px` }, { height: "0px" }], { duration: 300, easing: "ease" });
+    static slideUp(dropdown) {
+        dropdown.dispatchEvent(new CustomEvent('dropdown:beforeClose', {
+            detail: { element: dropdown },
+            bubbles: true,
+        }));
+        const height = dropdown.scrollHeight;
+        dropdown.style.overflow = "hidden";
+        dropdown.style.height = `${height}px`;
+        const animation = dropdown.animate([{ height: `${height}px` }, { height: "0px" }], { duration: 300, easing: "ease" });
         animation.onfinish = () => {
-            element.style.height = "0px";
+            dropdown.style.height = "0px";
         };
+        dropdown.dispatchEvent(new CustomEvent('dropdown:afterClose', {
+            detail: { element: dropdown },
+            bubbles: true,
+        }));
     }
     static closeAllDropdownsOverlay(except) {
         const dropdownsOverlay = document.querySelectorAll([

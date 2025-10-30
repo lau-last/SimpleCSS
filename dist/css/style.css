@@ -213,6 +213,16 @@
   /* List */
   --list-container-padding: 1rem;
   --list-padding: 1rem;
+  /* Dialog */
+  --dialog-padding: 0;
+  --dialog-header-padding: 1rem;
+  --dialog-body-padding: 1rem;
+  --dialog-footer-padding: 1rem;
+  --dialog-width: 50%;
+  --dialog-width-sm: 50%;
+  --dialog-width-md: 75%;
+  --dialog-width-lg: 90%;
+  --dialog-backdrop-color: rgba(0, 0, 0, 0.8);
   /* Breakpoints cannot be variable with @media queries */
   /* Change manually in the code in (grid, col, display, flex, spacing, typography, text) */
 }
@@ -2824,15 +2834,11 @@ body ::selection {
 .badge-lg {
   padding: var(--badge-padding-lg);
 }
-.badge.rounded-pill, .rounded-pill.badge-sm, .rounded-pill.badge-md, .rounded-pill.badge-lg {
-  border-radius: var(--border-radius-pill);
-}
 
 .btn, .btn-lg, .btn-md, .btn-sm {
   border-radius: var(--border-radius);
   padding: var(--button-padding);
   cursor: pointer;
-  white-space: nowrap;
 }
 .btn:not([class*=outline-]), .btn-lg:not([class*=outline-]), .btn-md:not([class*=outline-]), .btn-sm:not([class*=outline-]) {
   border: none;
@@ -2850,37 +2856,67 @@ body ::selection {
 .btn-lg {
   padding: var(--button-padding-lg);
 }
-.btn.rounded-pill, .rounded-pill.btn-sm, .rounded-pill.btn-md, .rounded-pill.btn-lg {
-  border-radius: 10rem;
-}
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   border-radius: var(--border-radius);
   border: 1px solid var(--card-border-color);
 }
 .card.box-shadow {
   box-shadow: var(--card-box-shadow);
 }
-.card.card-bordered .card-header, .card.card-bordered .card-footer {
-  border: none;
-}
-.card.card-bordered .card-body {
-  border-top: 1px solid var(--card-border-color);
-  border-bottom: 1px solid var(--card-border-color);
-}
 .card .card-header {
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
   padding: var(--card-header-padding);
 }
 .card .card-body {
   padding: var(--card-body-padding);
 }
 .card .card-footer {
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
   padding: var(--card-footer-padding);
+}
+
+dialog.dialog {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: var(--dialog-width);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+dialog.dialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.25s ease;
+}
+dialog.dialog.dialog-sm {
+  width: var(--dialog-width-sm);
+}
+dialog.dialog.dialog-md {
+  width: var(--dialog-width-md);
+}
+dialog.dialog.dialog-lg {
+  width: var(--dialog-width-lg);
+}
+dialog.dialog .dialog-header {
+  padding: var(--dialog-header-padding);
+}
+dialog.dialog .dialog-body {
+  padding: var(--dialog-body-padding);
+}
+dialog.dialog .dialog-footer {
+  padding: var(--dialog-footer-padding);
+}
+dialog.dialog[open].show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+dialog.dialog.show::backdrop {
+  background: var(--dialog-backdrop-color);
 }
 
 .dropdown-wrapper {

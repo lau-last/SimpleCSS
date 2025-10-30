@@ -19,6 +19,12 @@ export default class Dialog {
 
     private static actionEvent(button: HTMLElement, dialog: HTMLDialogElement): void {
         button.addEventListener('click', () => {
+
+            if (button.classList.contains('close')) {
+                const current = button.closest('dialog') as HTMLDialogElement | null;
+                if (current) {Dialog.closeDialog(current);}
+            }
+            
             Dialog.showDialog(dialog);
         });
 

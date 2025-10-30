@@ -18,6 +18,12 @@ export default class Dialog {
     }
     static actionEvent(button, dialog) {
         button.addEventListener('click', () => {
+            if (button.classList.contains('close')) {
+                const current = button.closest('dialog');
+                if (current) {
+                    Dialog.closeDialog(current);
+                }
+            }
             Dialog.showDialog(dialog);
         });
         const buttonsClose = dialog.querySelectorAll('.close');

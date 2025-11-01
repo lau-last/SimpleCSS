@@ -603,79 +603,79 @@
 
 /* Responsive per breakpoint */
 .fit-width-xs {
-  width: 425px;
+  width: 42.5rem;
 }
 
 .fit-height-xs {
-  height: 425px;
+  height: 42.5rem;
 }
 
 .fit-size-xs {
-  width: 425px;
-  height: 425px;
+  width: 42.5rem;
+  height: 42.5rem;
 }
 
 .fit-width-sm {
-  width: 576px;
+  width: 57.6rem;
 }
 
 .fit-height-sm {
-  height: 576px;
+  height: 57.6rem;
 }
 
 .fit-size-sm {
-  width: 576px;
-  height: 576px;
+  width: 57.6rem;
+  height: 57.6rem;
 }
 
 .fit-width-md {
-  width: 768px;
+  width: 76.8rem;
 }
 
 .fit-height-md {
-  height: 768px;
+  height: 76.8rem;
 }
 
 .fit-size-md {
-  width: 768px;
-  height: 768px;
+  width: 76.8rem;
+  height: 76.8rem;
 }
 
 .fit-width-lg {
-  width: 992px;
+  width: 99.2rem;
 }
 
 .fit-height-lg {
-  height: 992px;
+  height: 99.2rem;
 }
 
 .fit-size-lg {
-  width: 992px;
-  height: 992px;
+  width: 99.2rem;
+  height: 99.2rem;
 }
 
 .fit-width-xl {
-  width: 1200px;
+  width: 120rem;
 }
 
 .fit-height-xl {
-  height: 1200px;
+  height: 120rem;
 }
 
 .fit-size-xl {
-  width: 1200px;
-  height: 1200px;
+  width: 120rem;
+  height: 120rem;
 }
 
 .fit-width-xxl {
-  width: 1400px;
+  width: 140rem;
 }
 
 .fit-height-xxl {
-  height: 1400px;
+  height: 140rem;
 }
 
 .fit-size-xxl {
-  width: 1400px;
-  height: 1400px;
+  width: 140rem;
+  height: 140rem;
 }

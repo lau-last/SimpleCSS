@@ -64,15 +64,6 @@ $table-colors: (
   }
 }
 
-/* Text */
-.text {
-  @each $name, $value in $colors {
-    &-#{$name} {
-      color: #{$value};
-    }
-  }
-}
-
 /* Badges and buttons */
 .badge, .btn {
   @each $name, $value in $colors {
@@ -88,7 +79,7 @@ $table-colors: (
   @each $name, $value in $colors {
     &-#{$name} {
       background-color: transparent;
-      border: 1px solid #{$value};
+      border: .1rem solid #{$value};
       color: #{$value};
     }
   }
@@ -99,6 +90,10 @@ $table-colors: (
 .btn {
   @each $name, $value in $colors {
     &-#{$name}:hover {
+      background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+      color: var(--text-on-#{$name});
+    }
+    &-#{$name}.active {
       background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
       color: var(--text-on-#{$name});
     }
@@ -113,8 +108,12 @@ $table-colors: (
 .btn-lg {
   &.outline {
     @each $name, $value in $colors {
-      border: 1px solid #{$value};
+      border: .1rem solid #{$value};
       &-#{$name}:hover {
+        background-color: #{$value};
+        color: var(--text-on-#{$name});
+      }
+      &-#{$name}.active {
         background-color: #{$value};
         color: var(--text-on-#{$name});
       }
@@ -152,7 +151,6 @@ table {
   @each $name, $value in $colors {
     &-#{$name} {
       color: #{$value};
-
       &:hover {
         color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
       }
@@ -169,3 +167,14 @@ table {
     }
   }
 }
+
+/* Text */
+.text {
+  @each $name, $value in $colors {
+    &-#{$name} {
+      color: #{$value};
+    }
+  }
+}
+
+.box-shadow {box-shadow: var(--card-box-shadow);}

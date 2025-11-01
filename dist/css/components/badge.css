@@ -1,3 +1,9 @@
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--badge-group-gap);
+}
+
 .badge, .badge-lg, .badge-md, .badge-sm {
   padding: var(--badge-padding);
   border-radius: var(--border-radius);

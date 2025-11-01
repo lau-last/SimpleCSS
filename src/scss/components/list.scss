@@ -1,0 +1,38 @@
+ul.ul,
+ol.ol{
+  list-style: none;
+  border-radius: var(--border-radius);
+  padding: var(--list-container-padding);
+
+  &-sm{
+    @extend .ul;
+    padding: var(--list-container-padding-sm);
+  }
+  &-md{
+    @extend .ul;
+    padding: var(--list-container-padding-md);
+  }
+  &-lg{
+    @extend .ul;
+    padding: var(--list-container-padding-lg);
+  }
+}
+
+li.li{
+  padding:  var(--list-padding);
+
+  &-sm{
+    @extend .li;
+    padding: var(--list-padding-sm);
+  }
+  &-md{
+    @extend .li;
+    padding: var(--list-padding-md);
+  }
+  &-lg{
+    @extend .li;
+    padding: var(--list-padding-lg);
+  }
+}
+
+

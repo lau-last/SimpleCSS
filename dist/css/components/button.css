@@ -1,3 +1,9 @@
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--button-group-gap);
+}
+
 .btn, .btn-lg, .btn-md, .btn-sm {
   border-radius: var(--border-radius);
   padding: var(--button-padding);

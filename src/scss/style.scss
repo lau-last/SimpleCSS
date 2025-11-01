@@ -4,6 +4,7 @@
 
 @use 'layout/col';
 @use 'layout/container';
+@use 'layout/flex';
 @use 'layout/grid';
 
 @use 'components/badge';
@@ -12,14 +13,15 @@
 @use 'components/dialog';
 @use 'components/dropdown';
 @use 'components/form';
+@use 'components/list';
+@use 'components/nav';
+@use 'components/tab';
 @use 'components/table';
 
 @use 'utilities/border';
 @use 'utilities/color';
 @use 'utilities/display';
-@use 'utilities/flex';
 @use 'utilities/image';
-@use 'utilities/list';
 @use 'utilities/position';
 @use 'utilities/sizing';
 @use 'utilities/spacing';

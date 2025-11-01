@@ -1,0 +1,31 @@
+ul.ul, ul.ul-lg, ul.ul-md, ul.ul-sm,
+ol.ol {
+  list-style: none;
+  border-radius: var(--border-radius);
+  padding: var(--list-container-padding);
+}
+ul.ul-sm,
+ol.ol-sm {
+  padding: var(--list-container-padding-sm);
+}
+ul.ul-md,
+ol.ol-md {
+  padding: var(--list-container-padding-md);
+}
+ul.ul-lg,
+ol.ol-lg {
+  padding: var(--list-container-padding-lg);
+}
+
+li.li, li.li-lg, li.li-md, li.li-sm {
+  padding: var(--list-padding);
+}
+li.li-sm {
+  padding: var(--list-padding-sm);
+}
+li.li-md {
+  padding: var(--list-padding-md);
+}
+li.li-lg {
+  padding: var(--list-padding-lg);
+}

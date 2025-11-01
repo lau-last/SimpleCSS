@@ -10,29 +10,29 @@
     <title>Framework</title>
 </head>
 <body>
-<h1 class="text-center">Framework</h1>
+
 
 <!-- Section navbar -->
 <section>
-    <nav class="bg-primary p-2">
+    <nav class="bg-primary p-1">
         <!-- Container Desktop -->
         <div class="d-flex jc-between ai-center">
             <div>logo</div>
             <!-- Menu Desktop -->
             <div class="d-flex-md d-none gap-2">
-                <ul class="ul d-flex gap-2">
-                    <li class="li"><a href="#" class="link-white">Home</a></li>
-                    <li class="li"><a href="#" class="link-white">About</a></li>
-                    <li class="li"><a href="#" class="link-white">Contact</a></li>
+                <ul class="ul d-flex ai-center gap-2">
+                    <li><a href="#" class="link-white">Home</a></li>
+                    <li><a href="#" class="link-white">About</a></li>
+                    <li><a href="#" class="link-white">Contact</a></li>
                 </ul>
                 <!-- Dropdown -->
                 <div class="dropdown-wrapper as-center">
                     <button class="btn btn-white" data-js="dropdown" data-target="#nav1">Menu</button>
                     <div class="dropdown dropdown-overlay-right" id="nav1">
-                        <ul class="ul border-all border-radius">
-                            <li class="li"><a href="#" class="link">Paramètres</a></li>
-                            <li class="li"><a href="#" class="link">DéconnexionDéconnexion</a></li>
-                            <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                        <ul class="ul border-all">
+                            <li class="li-md"><a href="#" class="link">Paramètres</a></li>
+                            <li class="li-md"><a href="#" class="link">DéconnexionDéconnexion</a></li>
+                            <li class="li-md"><a href="#" class="link">Déconnexion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <a href="#" class="link-white">About</a>
                 <a href="#" class="link-white">Contact</a>
 
-                <!-- dropdown in mobile -->
+                <!-- dropdown (mobile) -->
                 <div class="dropdown-wrapper">
                     <button class="btn btn-white fit-width" data-js="dropdown" data-target="#nav">Menu</button>
                     <div class="dropdown dropdown-overlay" id="nav">
@@ -65,13 +65,136 @@
         </div>
     </nav>
 </section>
+<!-- Title -->
+<h1 class="text-center">Framework</h1>
+<!-- Section aside -->
+<section>
+    <div class="mx-auto my-5 container">
+        <!-- button open -->
+        <button class="btn btn-primary" data-js="aside" data-target="#aside">Open</button>
+
+        <!-- aside -->
+        <aside class="nav-aside" id="aside">
+
+            <!-- button close -->
+            <div class="d-flex jc-end m-3">
+                <button class="btn btn-primary text-end close">Fermer</button>
+            </div>
+
+            <!-- aside content -->
+            <nav>
+                <ul class="ul">
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+                <ul class="ul">
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <script>
+        document.body.addEventListener('aside:beforeOpen', function () {console.log('aside::beforeOpen')})
+        document.body.addEventListener('aside:afterOpen', function () {console.log('aside::afterOpen')})
+        document.body.addEventListener('aside:beforeClose', function () {console.log('aside::beforeClose')})
+        document.body.addEventListener('aside:afterClose', function () {console.log('aside::afterClose')})
+    </script>
+</section>
+<!-- Section tabs -->
+<section>
+    <div class="mx-auto my-5 container">
+        <!--Tab-button-->
+        <div class="tab" data-js="tab">
+            <button class="btn btn-primary active" type="button" data-target="#tab-1">London</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-2">Paris</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-3">Tokyo</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-1">London</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-2">Paris</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-3">Tokyo</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-1">London</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-2">Paris</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-3">Tokyo</button>
+        </div>
+
+        <!--Tab-content-->
+        <div class="tab-content show" id="tab-1" data-active="true">
+            <h3>Tab 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+        </div>
+
+        <!--Tab-content-->
+        <div class="tab-content" id="tab-2">
+            <h3>Tab 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+        </div>
+
+        <!--Tab-content-->
+        <div class="tab-content" id="tab-3">
+            <h3>Tab 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+        </div>
+    </div>
+    <div class="mx-auto my-5 container">
+        <!--Tab-button-->
+        <div class="tab" data-js="tab">
+            <button class="btn btn-primary active" type="button" data-target="#tab-4">London</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-5">Paris</button>
+            <button class="btn btn-primary" type="button" data-target="#tab-6">Tokyo</button>
+        </div>
+
+        <!--Tab-content-->
+        <div class="tab-content show" id="tab-4" data-active="true">
+            <h3>Tab 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+        </div>
+
+        <!--Tab-content-->
+        <div class="tab-content" id="tab-5">
+            <h3>Tab 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+        </div>
+
+        <!--Tab-content-->
+        <div class="tab-content" id="tab-6">
+            <h3>Tab 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
+        </div>
+    </div>
+    <script>
+        document.body.addEventListener('tab:beforeShow', (event) => {
+            console.log("Avant de montrer tab");
+        });
+        document.body.addEventListener('tab:afterShow', (event) => {
+            console.log("Après avoir montré tab");
+        });
+    </script>
+</section>
 <!-- Section Dialog -->
 <section>
     <div class="my-5 container">
         <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-sm">Ouvrir la modale sm</button>
         <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-lg">Ouvrir la modale lg</button>
 
-        <dialog class="dialog dialog-sm" id="modal-sm">
+        <dialog class="dialog" id="modal-sm">
             <div class="dialog-header">
                 <h2>Bonjour !</h2>
             </div>
@@ -79,11 +202,12 @@
                 <p>Ceci est une modale native HTML.</p>
             </div>
             <div class="dialog-footer">
-                <button class="btn btn-primary close" data-js="dialog" data-target="#modal-md">ouvrir la modale md</button>
+                <button class="btn btn-primary close" data-js="dialog" data-target="#modal-md">ouvrir la modale md
+                </button>
             </div>
         </dialog>
 
-        <dialog class="dialog dialog-md" id="modal-md">
+        <dialog class="dialog-md" id="modal-md">
             <div class="dialog-header">
                 <h2>Re bonjour !</h2>
             </div>
@@ -95,7 +219,7 @@
             </div>
         </dialog>
 
-        <dialog class="dialog dialog-lg" id="modal-lg">
+        <dialog class="dialog-lg" id="modal-lg">
             <div class="dialog-header">
                 <h2>Re bonjour !</h2>
             </div>
@@ -107,7 +231,6 @@
             </div>
         </dialog>
     </div>
-
     <script type="module">
         document.body.addEventListener('dropdown:beforeOpen', (e) => {
             console.log('👉 La dropdown va s’ouvrir !');
@@ -384,7 +507,8 @@
 
         <!-- 3 responsive columns: stack on small, 4/4/4 on large, 6/3/3 on xl -->
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-6 mt-1 bg-primary rounded-lg">col-sm-12 col-md-12 col-lg-4
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-6 mt-1 bg-primary rounded-lg">col-sm-12 col-md-12
+                col-lg-4
                 col-xl-6
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-1 bg-primary rounded-lg">col-sm-12 col-md-6 col-lg-4
@@ -694,46 +818,46 @@
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                     <!-- Input text sm -->
                     <label for="text-sm">Text sm</label>
-                    <input class="input input-sm" type="text" id="text-sm" name="text" placeholder="Entrez du texte">
+                    <input class="input-sm" type="text" id="text-sm" name="text" placeholder="Entrez du texte">
                     <!-- Default input text md -->
                     <label for="text-md">Text md</label>
-                    <input class="input input-md" type="text" id="text-md" name="text" placeholder="Entrez du texte">
+                    <input class="input-md" type="text" id="text-md" name="text" placeholder="Entrez du texte">
                     <!-- Input text lg -->
                     <label for="text-lg">Text lg</label>
-                    <input class="input input-lg" type="text" id="text-lg" name="text" placeholder="Entrez du texte">
+                    <input class="input-lg" type="text" id="text-lg" name="text" placeholder="Entrez du texte">
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
                     <!-- Input color sm -->
                     <label for="color-sm">Color sm</label>
-                    <input class="input input-sm" type="color" id="color-sm" name="color">
+                    <input class="input-sm" type="color" id="color-sm" name="color">
                     <!-- Default input color md -->
                     <label for="color-md">Color md</label>
-                    <input class="input input-md" type="color" id="color-md" name="color">
+                    <input class="input-md" type="color" id="color-md" name="color">
                     <!-- Input color lg -->
                     <label for="color-lg">Color lg</label>
-                    <input class="input input-lg" type="color" id="color-lg" name="color">
+                    <input class="input-lg" type="color" id="color-lg" name="color">
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
                     <!-- Form radio sm -->
                     <label for="radio-sm">Radio</label>
-                    <input class="input input-sm" type="radio" id="radio-sm" name="choice" value="yes">
+                    <input class="input-sm" type="radio" id="radio-sm" name="choice" value="yes">
                     <!-- Form radio md -->
                     <label for="radio-md">Radio</label>
-                    <input class="input input-md" type="radio" id="radio-md" name="choice" value="yes">
+                    <input class="input-md" type="radio" id="radio-md" name="choice" value="yes">
                     <!-- Form radio lg -->
                     <label for="radio-lg">Radio</label>
-                    <input class="input input-lg" type="radio" id="radio-lg" name="choice" value="yes">
+                    <input class="input-lg" type="radio" id="radio-lg" name="choice" value="yes">
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
                     <!-- Form checkbox sm -->
                     <label for="checkbox-sm">Checkbox</label>
-                    <input class="input input-sm" type="checkbox" id="checkbox-sm" name="checkbox" value="1">
+                    <input class="input-sm" type="checkbox" id="checkbox-sm" name="checkbox" value="1">
                     <!-- Form checkbox md -->
                     <label for="checkbox-md">Checkbox</label>
-                    <input class="input input-md" type="checkbox" id="checkbox-md" name="checkbox" value="1">
+                    <input class="input-md" type="checkbox" id="checkbox-md" name="checkbox" value="1">
                     <!-- Form checkbox lg -->
                     <label for="checkbox-lg">Checkbox</label>
-                    <input class="input input-lg" type="checkbox" id="checkbox-lg" name="checkbox" value="1">
+                    <input class="input-lg" type="checkbox" id="checkbox-lg" name="checkbox" value="1">
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
                     <!-- Form switch sm -->
@@ -1431,5 +1555,6 @@
 
     </div>
 </section>
+
 </body>
 </html>

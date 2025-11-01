@@ -1,36 +1,17 @@
-/* Required field marker */
-label.required::after {
-  content: ' *';
-  color: var(--danger-color);
-}
+//.input[type="image"]
+//.input[type="hidden"]
+//.input[type="submit"]
+//.input[type="reset"]
+//.input[type="button"]
 
-/* Textarea width constraints */
-textarea.textarea {
-  max-width: 100%;
-  min-width: 100%;
-}
-
-/* Base text controls: input, select, textarea */
-input.input,
-select.select,
-textarea.textarea {
-  border: var(--input-border-width) solid var(--input-border-color);
+@mixin input-base {
+  border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
   color: var(--input-color);
-  padding: var(--input-padding);
   margin: var(--input-margin);
 
-  /* All text-like controls fill width except color/checkbox/radio */
-  &:not(input[type="color"]):not(input[type="checkbox"]):not(input[type="radio"]) {
-    width: 100%;
-  }
-
-  /* Fixed height for non-textarea text inputs */
-  &:not(textarea) {
-    height: var(--input-height);
-  }
-
+  /* Placeholder */
   &::placeholder {
     color: var(--input-placeholder-color);
   }
@@ -41,19 +22,10 @@ textarea.textarea {
     box-shadow: var(--input-box-shadow-focus);
     outline: none;
   }
-
-  /* Size modifiers for non-range inputs (small/medium/large) */
-  &.input-sm:not(input[type="range"]):not(select):not(textarea) {height: var(--input-height-sm);}
-  &.input-md:not(input[type="range"]):not(select):not(textarea) {height: var(--input-height-md);}
-  &.input-lg:not(input[type="range"]):not(select):not(textarea) {height: var(--input-height-lg);}
-
-  &.select-sm:not(input):not(textarea) {height: var(--input-height-sm);}
-  &.select-md:not(input):not(textarea) {height: var(--input-height-md);}
-  &.select-lg:not(input):not(textarea) {height: var(--input-height-lg);}
 }
 
-/* Color input */
-input.input[type="color"] {
+@mixin input-color-base {
+  @include input-base;
   padding: 0;
   cursor: pointer;
   display: block;
@@ -68,65 +40,16 @@ input.input[type="color"] {
   }
 }
 
-/* File input (native button styling)*/
-input.input[type="file"] {
-  padding-left: 0;
-
-  &::-webkit-file-upload-button,
-  &::file-selector-button {
-    background-color: var(--primary-color);
-    border-radius: var(--border-radius);
-    color: var(--text-on-primary);
-    border: none;
-    height: 100%;
-    align-items: self-start;
-    cursor: pointer;
-    margin-right: 1rem;
-  }
-}
-
-/* Radio / Checkbox */
-input.input[type="radio"],
-input.input[type="checkbox"]:not(.switch input[type="checkbox"]) {
-
-  width: var(--input-size);
-
-  &.input-sm {width: var(--input-size-sm);}
-  &.input-md {width: var(--input-size-md);}
-  &.input-lg {width: var(--input-size-lg);}
-}
-
-/* Radio / Checkbox */
-input.input[type="checkbox"],
-input.input[type="radio"] {
-  display: block;
-  width: fit-content;
-}
-
-/* Change accent color */
-input.input[type="checkbox"],
-input.input[type="radio"],
-input.input[type="range"] {
-  accent-color: var(--primary-color);
-
-  /* Remove focus outline artifacts on range */
-  &:focus {
-    border-color: transparent;
-    box-shadow: none;
-  }
-}
-
-
-input.input[type="range"] {
-  -webkit-appearance: none;
-  //-moz-appearance: none;
-  padding: 0;
+@mixin input-range-base {
+  @include input-base;
+  @include accent-color;
   appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
   width: 100%;
   height: var(--input-height);
   background: transparent;
   border: none;
-
   /* Pour Chrome, Safari, Opera, Edge */
   &::-webkit-slider-runnable-track {
     width: 100%;
@@ -165,79 +88,261 @@ input.input[type="range"] {
     cursor: pointer;
     margin-top: calc((var(--range-size) - (var(--range-size) * 2)) / 2);
   }
+}
 
-  &.input-sm {
+@mixin accent-color {
+    accent-color: var(--primary-color);
+    /* Remove focus outline artifacts on range */
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+}
+
+.form-inline {
+  gap: var(--gap-form);
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+
+  label {
+    text-wrap: nowrap;
+  }
+}
+
+/* Required field marker */
+label.required::after {
+  content: ' *';
+  color: var(--danger-color);
+}
+
+/* Base text controls: select */
+select.select {
+  @include input-base;
+  height: var(--input-height);
+  padding: var(--select-padding);
+  width: 100%;
+
+  &-sm {
+    @extend .select;
     height: var(--input-height-sm);
-
-    &::-webkit-slider-runnable-track {
-      height: var(--range-size-sm);
-    }
-
-    &::-moz-range-track {
-      height: var(--range-size-sm);
-    }
-
-    &::-webkit-slider-thumb {
-      height: calc(var(--range-size-sm) * 2);
-      width: calc(var(--range-size-sm) * 2);
-      margin-top: calc((var(--range-size-sm) - (var(--range-size-sm) * 2)) / 2);
-    }
-
-    &::-moz-range-thumb {
-      height: calc(var(--range-size-sm) * 2);
-      width: calc(var(--range-size-sm) * 2);
-      margin-top: calc((var(--range-size-sm) - (var(--range-size-sm) * 2)) / 2);
-    }
   }
 
-  &.input-md {
+  &-md {
+    @extend .select;
     height: var(--input-height-md);
-
-    &::-webkit-slider-runnable-track {
-      height: var(--range-size-md);
-    }
-
-    &::-moz-range-track {
-      height: var(--range-size-md);
-    }
-
-    &::-webkit-slider-thumb {
-      height: calc(var(--range-size-md) * 2);
-      width: calc(var(--range-size-md) * 2);
-      margin-top: calc((var(--range-size-md) - (var(--range-size-md) * 2)) / 2);
-    }
-
-    &::-moz-range-thumb {
-      height: calc(var(--range-size-md) * 2);
-      width: calc(var(--range-size-md) * 2);
-      margin-top: calc((var(--range-size-md) - (var(--range-size-md) * 2)) / 2);
-    }
   }
 
-  &.input-lg {
+  &-lg {
+    @extend .select;
     height: var(--input-height-lg);
+  }
+}
 
-    &::-webkit-slider-runnable-track {
-      height: var(--range-size-lg);
+/* Base text controls: textarea */
+textarea.textarea {
+  @include input-base;
+  padding: var(--textarea-padding);
+  width: 100%;
+}
+
+/* Base text controls: input*/
+input[type="datetime"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+input[type="text"],
+input[type="password"],
+input[type="file"] {
+  &.input {
+    @include input-base;
+    height: var(--input-height);
+    padding: var(--input-padding);
+    width:  100%;
+
+    &-sm {
+      @include input-base;
+      padding: var(--input-padding);
+      height: var(--input-height-sm);
+      width:  100%;
     }
-
-    &::-moz-range-track {
-      height: var(--range-size-lg);
+    &-md {
+      @include input-base;
+      padding: var(--input-padding);
+      height: var(--input-height-md);
+      width:  100%;
     }
-
-    &::-webkit-slider-thumb {
-      height: calc(var(--range-size-lg) * 2);
-      width: calc(var(--range-size-lg) * 2);
-      margin-top: calc((var(--range-size-lg) - (var(--range-size-lg) * 2)) / 2);
-    }
-
-    &::-moz-range-thumb {
-      height: calc(var(--range-size-lg) * 2);
-      width: calc(var(--range-size-lg) * 2);
-      margin-top: calc((var(--range-size-lg) - (var(--range-size-lg) * 2)) / 2);
+    &-lg {
+      @include input-base;
+      padding: var(--input-padding);
+      height: var(--input-height-lg);
+      width:  100%;
     }
   }
 }
+
+/* File input (native button styling)*/
+input[type="file"]{
+  &.input,
+  &.input-sm,
+  &.input-md,
+  &.input-lg {
+    padding-left: 0;
+
+    &::-webkit-file-upload-button,
+    &::file-selector-button {
+      background-color: var(--primary-color);
+      border-radius: var(--border-radius);
+      color: var(--text-on-primary);
+      border: none;
+      height: 100%;
+      align-items: self-start;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+  }
+}
+
+/* Color input */
+input[type="color"] {
+  &.input{
+    @include input-color-base;
+    height: var(--input-height);
+    &-sm {
+      @include input-color-base;
+      height: var(--input-height-sm);
+    }
+    &-md {
+      @include input-color-base;
+      height: var(--input-height-md);
+    }
+    &-lg {
+      @include input-color-base;
+      height: var(--input-height-lg);
+    }
+  }
+}
+
+/* Range input */
+input[type="range"] {
+  &.input {
+    @include input-range-base;
+    &-sm {
+      @include input-range-base;
+      height: var(--input-height-sm);
+
+      &::-webkit-slider-runnable-track {
+        height: var(--range-size-sm);
+      }
+
+      &::-moz-range-track {
+        height: var(--range-size-sm);
+      }
+
+      &::-webkit-slider-thumb {
+        height: calc(var(--range-size-sm) * 2);
+        width: calc(var(--range-size-sm) * 2);
+        margin-top: calc((var(--range-size-sm) - (var(--range-size-sm) * 2)) / 2);
+      }
+
+      &::-moz-range-thumb {
+        height: calc(var(--range-size-sm) * 2);
+        width: calc(var(--range-size-sm) * 2);
+        margin-top: calc((var(--range-size-sm) - (var(--range-size-sm) * 2)) / 2);
+      }
+    }
+    &-md {
+      @include input-range-base;
+      height: var(--input-height-md);
+
+      &::-webkit-slider-runnable-track {
+        height: var(--range-size-md);
+      }
+
+      &::-moz-range-track {
+        height: var(--range-size-md);
+      }
+
+      &::-webkit-slider-thumb {
+        height: calc(var(--range-size-md) * 2);
+        width: calc(var(--range-size-md) * 2);
+        margin-top: calc((var(--range-size-md) - (var(--range-size-md) * 2)) / 2);
+      }
+
+      &::-moz-range-thumb {
+        height: calc(var(--range-size-md) * 2);
+        width: calc(var(--range-size-md) * 2);
+        margin-top: calc((var(--range-size-md) - (var(--range-size-md) * 2)) / 2);
+      }
+    }
+    &-lg {
+      @include input-range-base;
+      height: var(--input-height-lg);
+
+      &::-webkit-slider-runnable-track {
+        height: var(--range-size-lg);
+      }
+
+      &::-moz-range-track {
+        height: var(--range-size-lg);
+      }
+
+      &::-webkit-slider-thumb {
+        height: calc(var(--range-size-lg) * 2);
+        width: calc(var(--range-size-lg) * 2);
+        margin-top: calc((var(--range-size-lg) - (var(--range-size-lg) * 2)) / 2);
+      }
+
+      &::-moz-range-thumb {
+        height: calc(var(--range-size-lg) * 2);
+        width: calc(var(--range-size-lg) * 2);
+        margin-top: calc((var(--range-size-lg) - (var(--range-size-lg) * 2)) / 2);
+      }
+    }
+  }
+}
+
+/* Radio and Checkbox */
+input[type="radio"],
+input[type="checkbox"]{
+  &.input{
+    @include input-base;
+    @include accent-color;
+    display: block;
+    width: var(--input-size);
+    height: var(--input-height);
+
+    &-sm {
+      @include input-base;
+      @include accent-color;
+      display: block;
+      height: var(--input-height-sm);
+      width: var(--input-size-sm);
+    }
+    &-md {
+      @include input-base;
+      @include accent-color;
+      display: block;
+      height: var(--input-height-md);
+      width: var(--input-size-md);
+    }
+    &-lg {
+      @include input-base;
+      @include accent-color;
+      display: block;
+      height: var(--input-height-lg);
+      width: var(--input-size-lg);
+    }
+  }
+}
+
 
 /* Switch */
 .wrapper-switch {
@@ -257,7 +362,7 @@ input.input[type="range"] {
 
     .slider {
       background-color: var(--switch-bg-color);
-      border: 1px solid var(--switch-border-color);
+      border: .1rem solid var(--switch-border-color);
       position: absolute;
       cursor: pointer;
       top: 0;
@@ -359,20 +464,6 @@ input.input[type="range"] {
     }
   }
 }
-
-.form-inline {
-  gap: var(--gap-form);
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-
-  label {
-    text-wrap: nowrap;
-  }
-}
-
-
-
 
 
 

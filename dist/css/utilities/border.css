@@ -46,33 +46,33 @@
 
 /* Border sides */
 .border-top {
-  border-top: 1px solid var(--border-color);
+  border-top: 0.1rem solid var(--border-color);
 }
 
 .border-bottom {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 0.1rem solid var(--border-color);
 }
 
 .border-left {
-  border-left: 1px solid var(--border-color);
+  border-left: 0.1rem solid var(--border-color);
 }
 
 .border-right {
-  border-right: 1px solid var(--border-color);
+  border-right: 0.1rem solid var(--border-color);
 }
 
 .border-y {
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  border-top: 0.1rem solid var(--border-color);
+  border-bottom: 0.1rem solid var(--border-color);
 }
 
 .border-x {
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
+  border-left: 0.1rem solid var(--border-color);
+  border-right: 0.1rem solid var(--border-color);
 }
 
 .border-all {
-  border: 1px solid var(--border-color);
+  border: 0.1rem solid var(--border-color);
 }
 
 /* Border radius */

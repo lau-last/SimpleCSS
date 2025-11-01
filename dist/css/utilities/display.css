@@ -29,7 +29,7 @@
 }
 
 /* Responsive per breakpoint */
-@media (min-width: 425px) {
+@media (min-width: 42.5rem) {
   .d-none-xs {
     display: none;
   }
@@ -52,7 +52,7 @@
     display: inline-flex;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 57.6rem) {
   .d-none-sm {
     display: none;
   }
@@ -75,7 +75,7 @@
     display: inline-flex;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 76.8rem) {
   .d-none-md {
     display: none;
   }
@@ -98,7 +98,7 @@
     display: inline-flex;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 99.2rem) {
   .d-none-lg {
     display: none;
   }
@@ -121,7 +121,7 @@
     display: inline-flex;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 120rem) {
   .d-none-xl {
     display: none;
   }
@@ -144,7 +144,7 @@
     display: inline-flex;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 140rem) {
   .d-none-xxl {
     display: none;
   }

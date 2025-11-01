@@ -86,7 +86,7 @@
 }
 
 /* ==== Responsive variants ==== */
-@media (min-width: 425px) {
+@media (min-width: 42.5rem) {
   /* Font weights */
   .fw-100-xs {
     font-weight: 100;
@@ -154,7 +154,7 @@
     font-size: var(--font-size-xxl);
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 57.6rem) {
   /* Font weights */
   .fw-100-sm {
     font-weight: 100;
@@ -222,7 +222,7 @@
     font-size: var(--font-size-xxl);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 76.8rem) {
   /* Font weights */
   .fw-100-md {
     font-weight: 100;
@@ -290,7 +290,7 @@
     font-size: var(--font-size-xxl);
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 99.2rem) {
   /* Font weights */
   .fw-100-lg {
     font-weight: 100;
@@ -358,7 +358,7 @@
     font-size: var(--font-size-xxl);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 120rem) {
   /* Font weights */
   .fw-100-xl {
     font-weight: 100;
@@ -426,7 +426,7 @@
     font-size: var(--font-size-xxl);
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 140rem) {
   /* Font weights */
   .fw-100-xxl {
     font-weight: 100;

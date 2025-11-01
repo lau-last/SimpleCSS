@@ -2,14 +2,14 @@ table.table,
 table.table-sm,
 table.table-md,
 table.table-lg {
-    border: 1px solid var(--table-border-color);
+    border: .1rem solid var(--table-border-color);
     border-collapse: collapse;
     width: 100%;
 
     thead {
         tr {
             th, td {
-                border-top: 1px solid var(--table-border-color);
+                border-top: .1rem solid var(--table-border-color);
                 padding: var(--table-padding);
                 text-wrap: nowrap;
             }
@@ -19,7 +19,7 @@ table.table-lg {
     tbody {
         tr {
             th, td {
-                border-top: 1px solid var(--table-border-color);
+                border-top: .1rem solid var(--table-border-color);
                 padding: var(--table-padding);
                 text-wrap: nowrap;
             }
@@ -29,7 +29,7 @@ table.table-lg {
     tfoot {
         tr {
             th, td {
-                border-top: 1px solid var(--table-border-color);
+                border-top: .1rem solid var(--table-border-color);
                 padding: var(--table-padding);
                 text-wrap: nowrap;
             }
@@ -77,10 +77,10 @@ table.table-lg {
         tfoot {
             tr {
                 th, td {
-                    border-top: 1px solid var(--table-border-color) ;
-                    border-bottom: 1px solid var(--table-border-color) ;
-                    border-left: 1px solid var(--table-border-color) ;
-                    border-right: 1px solid var(--table-border-color) ;
+                    border-top: .1rem solid var(--table-border-color) ;
+                    border-bottom: .1rem solid var(--table-border-color) ;
+                    border-left: .1rem solid var(--table-border-color) ;
+                    border-right: .1rem solid var(--table-border-color) ;
                 }
             }
         }
@@ -93,16 +93,16 @@ table.table-lg {
                 background-color: var(--table-hover-bg-color) !important;
 
                 th:first-child, td:first-child {
-                    border-left: 1px solid var(--table-border-color) ;
+                    border-left: .1rem solid var(--table-border-color) ;
                 }
 
                 th:last-child, td:last-child {
-                    border-right: 1px solid var(--table-border-color) ;
+                    border-right: .1rem solid var(--table-border-color) ;
                 }
 
                 th, td {
-                    border-top: 1px solid var(--table-border-color) ;
-                    border-bottom: 1px solid var(--table-border-color) ;
+                    border-top: .1rem solid var(--table-border-color) ;
+                    border-bottom: .1rem solid var(--table-border-color) ;
                 }
             }
         }
@@ -180,9 +180,8 @@ table.table-lg {
 }
 
 .table-group-divider > tr:first-child {
-    border-top: 2px solid var(--table-border-divider-color);
+    border-top: .2rem solid var(--table-border-divider-color);
 }
-
 
 .table-responsive {
     overflow-x: auto;

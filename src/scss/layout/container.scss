@@ -1,26 +1,52 @@
-/* Base styles for all containers */
-.container,
-.container-sm,
-.container-md,
-.container-lg,
-.container-fluid,
-.container-fluid-sm,
-.container-fluid-md,
-.container-fluid-lg {
+.container {
     width: 100%;
-    padding: 1rem;
     margin-inline: auto;
     box-sizing: border-box;
+    max-width: var(--container-width);
+    padding: var(--container-padding);
+
+
+    &-sm {
+        @extend .container;
+        max-width: var(--container-width-sm);
+        padding: var(--container-padding-sm);
+    }
+
+    &-md {
+        @extend .container;
+        max-width: var(--container-width-md);
+        padding:  var(--container-padding-md);
+    }
+
+    &-lg {
+        @extend .container;
+        max-width: var(--container-width-lg);
+        padding: var(--container-padding-lg);
+    }
 }
 
-/* Fixed containers (centered) */
-.container     { max-width: var(--container-width); }
-.container-sm  { max-width: var(--container-width-sm); }
-.container-md  { max-width: var(--container-width-md); }
-.container-lg  { max-width: var(--container-width-lg); }
+.container-fluid {
+    margin-inline: auto;
+    box-sizing: border-box;
+    width: var(--container-fluid-width);
+    max-width: 100%;
+    padding: var(--container-fluid-padding);
 
-/* Fluid containers (centered but limited) */
-.container-fluid     { width: var(--container-fluid-width); max-width: 100%; }
-.container-fluid-sm  { width: var(--container-fluid-width-sm); max-width: 100%; }
-.container-fluid-md  { width: var(--container-fluid-width-md); max-width: 100%; }
-.container-fluid-lg  { width: var(--container-fluid-width-lg); max-width: 100%; }
+    &-sm {
+        @extend .container-fluid;
+        width: var(--container-fluid-width-sm);
+        padding: var(--container-fluid-padding-sm);
+    }
+
+    &-md {
+        @extend .container-fluid;
+        width: var(--container-fluid-width-md);
+        padding: var(--container-fluid-padding-md);
+    }
+
+    &-lg {
+        @extend .container-fluid;
+        width: var(--container-fluid-width-lg);
+        padding: var(--container-fluid-padding-lg);
+    }
+}

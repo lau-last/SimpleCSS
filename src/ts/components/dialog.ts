@@ -3,7 +3,7 @@ export default class Dialog {
         Dialog.init();
     }
 
-    private static init() {
+    private static init(): void {
         const buttons = document.querySelectorAll('[data-js="dialog"]') as NodeListOf<HTMLElement>;
         if (!buttons.length) return;
 
@@ -24,7 +24,7 @@ export default class Dialog {
                 const current = button.closest('dialog') as HTMLDialogElement | null;
                 if (current) {Dialog.closeDialog(current);}
             }
-            
+
             Dialog.showDialog(dialog);
         });
 

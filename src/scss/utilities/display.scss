@@ -1,12 +1,13 @@
 /* Breakpoints */
 $breakpoints: (
-        "xs": 425px,
-        "sm": 576px,
-        "md": 768px,
-        "lg": 992px,
-        "xl": 1200px,
-        "xxl": 1400px
+        "xs": 42.5rem,
+        "sm": 57.6rem,
+        "md": 76.8rem,
+        "lg": 99.2rem,
+        "xl": 120rem,
+        "xxl": 140rem
 );
+
 
 /* Base (no breakpoint) */
 .d-none { display: none; }

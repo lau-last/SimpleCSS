@@ -1,9 +1,17 @@
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--button-group-gap);
+}
+
 .btn {
   border-radius: var(--border-radius);
   padding: var(--button-padding);
   cursor: pointer;
 
-  &:not([class*="outline-"]) {border: none;}
+  &:not([class*="outline-"]) {
+    border: none;
+  }
 
   &:focus {
     outline: none;

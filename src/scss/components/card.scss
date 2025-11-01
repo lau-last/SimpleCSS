@@ -4,11 +4,36 @@
     justify-content: space-between;
     overflow:  hidden;
     border-radius: var(--border-radius);
-    border: 1px solid var(--card-border-color);
+    border: .1rem solid var(--card-border-color);
+    padding:  var(--card-padding);
 
     &.box-shadow {box-shadow: var(--card-box-shadow);}
 
     .card-header {padding: var(--card-header-padding);}
+    .card-header-sm {padding: var(--card-header-padding-sm);}
+    .card-header-md {padding: var(--card-header-padding-md);}
+    .card-header-lg {padding: var(--card-header-padding-lg);}
+
     .card-body {padding: var(--card-body-padding);}
+    .card-body-sm {padding: var(--card-body-padding-sm);}
+    .card-body-md {padding: var(--card-body-padding-md);}
+    .card-body-lg {padding: var(--card-body-padding-lg);}
+
     .card-footer {padding: var(--card-footer-padding);}
+    .card-footer-sm {padding: var(--card-footer-padding-sm);}
+    .card-footer-md {padding: var(--card-footer-padding-md);}
+    .card-footer-lg {padding: var(--card-footer-padding-lg);}
+
+    &-sm {
+        @extend .card;
+        padding: var(--card-padding-sm);
+    }
+    &-md {
+        @extend .card;
+        padding: var(--card-padding-md);
+    }
+    &-lg {
+        @extend .card;
+        padding: var(--card-padding-lg);
+    }
 }

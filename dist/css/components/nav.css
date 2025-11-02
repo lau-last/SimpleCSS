@@ -17,7 +17,7 @@
 }
 .nav-side.show,
 .nav-side-left.show {
-  width: var(--nav-aside-width);
+  width: var(--nav-side-width);
   transform: translateX(0);
 }
 

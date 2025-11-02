@@ -3601,6 +3601,7 @@ body ::selection {
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
   border-radius: var(--card-border-radius);
   border: var(--card-border);
@@ -4964,7 +4965,7 @@ input[type=checkbox].input-lg {
 }
 .nav-side.show,
 .nav-side-left.show {
-  width: var(--nav-aside-width);
+  width: var(--nav-side-width);
   transform: translateX(0);
 }
 

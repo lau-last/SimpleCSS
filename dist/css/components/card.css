@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
   border-radius: var(--card-border-radius);
   border: var(--card-border);

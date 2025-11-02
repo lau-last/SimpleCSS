@@ -1,14 +1,15 @@
 .dialog {
-  border-radius: var(--border-radius);
-  border: .1rem solid var(--border-color);
-  width: var(--dialog-width);
-  padding:  var(--dialog-padding);
-  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
   opacity: 0;
+  position: fixed;
+  border: var(--dialog-border);
+  width: var(--dialog-width);
+  padding:  var(--dialog-padding);
+  border-radius: var(--dialog-border-radius);
+  transform: translate(-50%, -50%) scale(0);
   transition: opacity .25s ease, transform .25s ease;
+
 
 
   &::backdrop {
@@ -17,19 +18,8 @@
   }
 
   .dialog-header {padding: var(--dialog-header-padding);}
-  .dialog-header-sm{padding: var(--dialog-header-padding-sm);}
-  .dialog-header-md{padding: var(--dialog-header-padding-md);}
-  .dialog-header-lg{padding: var(--dialog-header-padding-lg);}
-
   .dialog-body {padding:  var(--dialog-body-padding);}
-  .dialog-body-sm{padding: var(--dialog-body-padding-sm);}
-  .dialog-body-md{padding: var(--dialog-body-padding-md);}
-  .dialog-body-lg{padding: var(--dialog-body-padding-lg);}
-
   .dialog-footer {padding: var(--dialog-footer-padding);}
-  .dialog-footer-sm{padding: var(--dialog-footer-padding-sm);}
-  .dialog-footer-md{padding: var(--dialog-footer-padding-md);}
-  .dialog-footer-lg{padding: var(--dialog-footer-padding-lg);}
 
 
   &[open] {
@@ -40,20 +30,6 @@
   }
 
   &.show::backdrop {background: var(--dialog-backdrop-color);}
-
-  &-sm{
-    @extend .dialog;
-    width: var(--dialog-width-sm);
-  }
-  &-md{
-    @extend .dialog;
-    width:  var(--dialog-width-md);
-  }
-  &-lg{
-    @extend .dialog;
-    width: var(--dialog-width-lg);
-  }
-
 }
 
 

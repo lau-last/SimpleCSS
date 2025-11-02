@@ -1,20 +1,27 @@
+.img {
+  border-radius: var(--img-border-radius);
+}
+
 /* Image display helpers */
 .img-responsive {
-  max-width: 100%;
   height: auto;
   display: block;
+  max-width: 100%;
   object-fit: cover;
+  border-radius: var(--img-border-radius);
 }
 
 /* Image fluid */
 .img-fluid {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+  border-radius: var(--img-border-radius);
 }
 
 /* Image thumbnail */
 .img-thumbnail {
-  padding: 0.25rem;
-  background-color: #fff;
-  border: 0.1rem solid rgba(0, 0, 0, 0.125);
+  padding: var(--img-thumbnail-padding);
+  background-color: var(--img-thumbnail-bg-color);
+  border: var(--img-thumbnail-border);
+  border-radius: var(--img-border-radius);
 }

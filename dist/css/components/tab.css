@@ -1,14 +1,14 @@
 .tab {
   display: flex;
+  overflow-x: auto;
   gap: var(--tab-gap);
-  overflow-x: scroll;
 }
 
 .tab-content {
   display: none;
-  border-radius: var(--border-radius);
-  padding: var(--tab-padding);
   border: var(--tab-border);
+  padding: var(--tab-padding);
+  border-radius: var(--tab-border-radius);
 }
 .tab-content.show {
   display: block;

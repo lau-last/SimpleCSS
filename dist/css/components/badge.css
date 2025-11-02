@@ -6,7 +6,7 @@
 
 .badge, .badge-lg, .badge-md, .badge-sm {
   padding: var(--badge-padding);
-  border-radius: var(--border-radius);
+  border-radius: var(--badge-border-radius);
   white-space: nowrap;
 }
 .badge-sm {

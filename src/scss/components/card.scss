@@ -1,13 +1,12 @@
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow:  hidden;
-    border-radius: var(--border-radius);
-    border: .1rem solid var(--card-border-color);
+    border-radius: var(--card-border-radius);
+    border: var(--card-border);
     padding:  var(--card-padding);
+    box-shadow: var(--card-box-shadow);
 
-    &.box-shadow {box-shadow: var(--card-box-shadow);}
 
     .card-header {padding: var(--card-header-padding);}
     .card-body {padding: var(--card-body-padding);}

@@ -8,7 +8,7 @@ export default class Alert {
         if (!alerts.length) return;
 
         for (const alert of alerts) {
-            if (alert.classList.contains('alert-keep') as boolean) {
+            if (alert.classList.contains('alert-keep')) {
                 Alert.closeAlert(alert);
                 continue;
             }
@@ -31,7 +31,8 @@ export default class Alert {
                 detail: {element: alert},
                 bubbles: true,
             }));
-        });
+
+        }, { once: true } );
     }
 
     private static closeAlert(alert: HTMLElement): void {
@@ -47,15 +48,31 @@ export default class Alert {
                     bubbles: true,
                 }));
 
-                alert.remove();
-
-                document.body.dispatchEvent(new CustomEvent('alert:afterRemove', {
-                    detail: {element: alert},
-                    bubbles: true,
-                }));
+                Alert.handleAnimationForKeepAlert(alert);
             });
         })
     }
 
+    private static handleAnimationForKeepAlert(alert: HTMLElement): void {
+
+        const animationName = getComputedStyle(alert).getPropertyValue('--alert-keep-animation-out').trim();
+        if (animationName) {
+            alert.style.animation = animationName;
+            alert.addEventListener('animationend', () => {
+                alert.remove();
+                document.body.dispatchEvent(new CustomEvent('alert:afterRemove', {
+                    detail: { element: alert },
+                    bubbles: true,
+                }));
+            }, { once: true });
+        }
+        else  {
+            alert.remove();
+            document.body.dispatchEvent(new CustomEvent('alert:afterRemove', {
+                detail: { element: alert },
+                bubbles: true,
+            }));
+        }
+    }
 
 }

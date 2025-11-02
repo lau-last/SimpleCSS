@@ -163,7 +163,7 @@ table {
   @each $name, $value in $colors {
     &-#{$name} {
       background: #{$value};
-      color: var(--alert-text-on-#{$name});
+      color: var(--text-on-#{$name});
     }
   }
 }

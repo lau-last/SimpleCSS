@@ -4,16 +4,16 @@
 }
 
 @mixin dropdown-overlay {
-  position: absolute;
   top: 100%;
   z-index: 10;
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
+  position: absolute;
+  background:  var(--bg-color);
+  border-radius: var(--dropdown-border-radius);
 }
 
 .dropdown-wrapper {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 

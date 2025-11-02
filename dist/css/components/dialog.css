@@ -1,68 +1,32 @@
-.dialog, .dialog-lg, .dialog-md, .dialog-sm {
-  border-radius: var(--border-radius);
-  border: 0.1rem solid var(--border-color);
-  width: var(--dialog-width);
-  padding: var(--dialog-padding);
-  position: fixed;
+.dialog {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
   opacity: 0;
+  position: fixed;
+  border: var(--dialog-border);
+  width: var(--dialog-width);
+  padding: var(--dialog-padding);
+  border-radius: var(--dialog-border-radius);
+  transform: translate(-50%, -50%) scale(0);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
-.dialog::backdrop, .dialog-lg::backdrop, .dialog-md::backdrop, .dialog-sm::backdrop {
+.dialog::backdrop {
   background: rgba(0, 0, 0, 0);
   transition: background 0.25s ease;
 }
-.dialog .dialog-header, .dialog-lg .dialog-header, .dialog-md .dialog-header, .dialog-sm .dialog-header {
+.dialog .dialog-header {
   padding: var(--dialog-header-padding);
 }
-.dialog .dialog-header-sm, .dialog-lg .dialog-header-sm, .dialog-md .dialog-header-sm, .dialog-sm .dialog-header-sm {
-  padding: var(--dialog-header-padding-sm);
-}
-.dialog .dialog-header-md, .dialog-lg .dialog-header-md, .dialog-md .dialog-header-md, .dialog-sm .dialog-header-md {
-  padding: var(--dialog-header-padding-md);
-}
-.dialog .dialog-header-lg, .dialog-lg .dialog-header-lg, .dialog-md .dialog-header-lg, .dialog-sm .dialog-header-lg {
-  padding: var(--dialog-header-padding-lg);
-}
-.dialog .dialog-body, .dialog-lg .dialog-body, .dialog-md .dialog-body, .dialog-sm .dialog-body {
+.dialog .dialog-body {
   padding: var(--dialog-body-padding);
 }
-.dialog .dialog-body-sm, .dialog-lg .dialog-body-sm, .dialog-md .dialog-body-sm, .dialog-sm .dialog-body-sm {
-  padding: var(--dialog-body-padding-sm);
-}
-.dialog .dialog-body-md, .dialog-lg .dialog-body-md, .dialog-md .dialog-body-md, .dialog-sm .dialog-body-md {
-  padding: var(--dialog-body-padding-md);
-}
-.dialog .dialog-body-lg, .dialog-lg .dialog-body-lg, .dialog-md .dialog-body-lg, .dialog-sm .dialog-body-lg {
-  padding: var(--dialog-body-padding-lg);
-}
-.dialog .dialog-footer, .dialog-lg .dialog-footer, .dialog-md .dialog-footer, .dialog-sm .dialog-footer {
+.dialog .dialog-footer {
   padding: var(--dialog-footer-padding);
 }
-.dialog .dialog-footer-sm, .dialog-lg .dialog-footer-sm, .dialog-md .dialog-footer-sm, .dialog-sm .dialog-footer-sm {
-  padding: var(--dialog-footer-padding-sm);
-}
-.dialog .dialog-footer-md, .dialog-lg .dialog-footer-md, .dialog-md .dialog-footer-md, .dialog-sm .dialog-footer-md {
-  padding: var(--dialog-footer-padding-md);
-}
-.dialog .dialog-footer-lg, .dialog-lg .dialog-footer-lg, .dialog-md .dialog-footer-lg, .dialog-sm .dialog-footer-lg {
-  padding: var(--dialog-footer-padding-lg);
-}
-.dialog[open].show, [open].show.dialog-lg, [open].show.dialog-md, [open].show.dialog-sm {
+.dialog[open].show {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
-.dialog.show::backdrop, .show.dialog-lg::backdrop, .show.dialog-md::backdrop, .show.dialog-sm::backdrop {
+.dialog.show::backdrop {
   background: var(--dialog-backdrop-color);
-}
-.dialog-sm {
-  width: var(--dialog-width-sm);
-}
-.dialog-md {
-  width: var(--dialog-width-md);
-}
-.dialog-lg {
-  width: var(--dialog-width-lg);
 }

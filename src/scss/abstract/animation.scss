@@ -3,18 +3,18 @@
 .anim-rotate {animation-name: rotate;}
 
 .anim-fade-out {animation-name: fade-out;}
-.anim-slide-top-out {animation-name: fade-out, slide-top;}
-.anim-slide-bottom-out {animation-name: fade-out, slide-bottom;}
-.anim-slide-left-out {animation-name: fade-out, slide-left;}
-.anim-slide-right-out {animation-name: fade-out, slide-right;}
+.anim-slide-top-out {animation-name: fade-out, slide-top-out;}
+.anim-slide-bottom-out {animation-name: fade-out, slide-bottom-out;}
+.anim-slide-left-out {animation-name: fade-out, slide-left-out;}
+.anim-slide-right-out {animation-name: fade-out, slide-right-out;}
 
 .anim-fade-in {animation-name: fade-in;}
 .anim-grow-in {animation-name: fade-in, grow;}
 .anim-shrink-in {animation-name: fade-in, shrink;}
-.anim-slide-top-in {animation-name: fade-in, slide-from-top;}
-.anim-slide-bottom-in {animation-name: fade-in, slide-from-bottom;}
-.anim-slide-left-in {animation-name: fade-in, slide-from-left;}
-.anim-slide-right-in {animation-name: fade-in, slide-from-right;}
+.anim-slide-top-in {animation-name: fade-in, slide-top-in;}
+.anim-slide-bottom-in {animation-name: fade-in, slide-bottom-in;}
+.anim-slide-left-in {animation-name: fade-in, slide-left-in;}
+.anim-slide-right-in {animation-name: fade-in, slide-right-in;}
 
 .anim-reverse {animation-direction: reverse;}
 .anim-infinite {animation-iteration-count: infinite;}

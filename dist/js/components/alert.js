@@ -25,7 +25,7 @@ export default class Alert {
                 detail: { element: alert },
                 bubbles: true,
             }));
-        });
+        }, { once: true });
     }
     static closeAlert(alert) {
         const buttonClose = alert.querySelectorAll('.close');
@@ -37,12 +37,28 @@ export default class Alert {
                     detail: { element: alert },
                     bubbles: true,
                 }));
+                Alert.handleAnimationForKeepAlert(alert);
+            });
+        });
+    }
+    static handleAnimationForKeepAlert(alert) {
+        const animationName = getComputedStyle(alert).getPropertyValue('--alert-keep-animation-out').trim();
+        if (animationName) {
+            alert.style.animation = animationName;
+            alert.addEventListener('animationend', () => {
                 alert.remove();
                 document.body.dispatchEvent(new CustomEvent('alert:afterRemove', {
                     detail: { element: alert },
                     bubbles: true,
                 }));
-            });
-        });
+            }, { once: true });
+        }
+        else {
+            alert.remove();
+            document.body.dispatchEvent(new CustomEvent('alert:afterRemove', {
+                detail: { element: alert },
+                bubbles: true,
+            }));
+        }
     }
 }

@@ -1016,51 +1016,51 @@ table .table-black * {
 /* Alerts */
 .alert-primary {
   background: var(--primary-color);
-  color: var(--alert-text-on-primary);
+  color: var(--text-on-primary);
 }
 .alert-secondary {
   background: var(--secondary-color);
-  color: var(--alert-text-on-secondary);
+  color: var(--text-on-secondary);
 }
 .alert-tertiary {
   background: var(--tertiary-color);
-  color: var(--alert-text-on-tertiary);
+  color: var(--text-on-tertiary);
 }
 .alert-success {
   background: var(--success-color);
-  color: var(--alert-text-on-success);
+  color: var(--text-on-success);
 }
 .alert-info {
   background: var(--info-color);
-  color: var(--alert-text-on-info);
+  color: var(--text-on-info);
 }
 .alert-warning {
   background: var(--warning-color);
-  color: var(--alert-text-on-warning);
+  color: var(--text-on-warning);
 }
 .alert-danger {
   background: var(--danger-color);
-  color: var(--alert-text-on-danger);
+  color: var(--text-on-danger);
 }
 .alert-neutral {
   background: var(--neutral-color);
-  color: var(--alert-text-on-neutral);
+  color: var(--text-on-neutral);
 }
 .alert-light {
   background: var(--light-color);
-  color: var(--alert-text-on-light);
+  color: var(--text-on-light);
 }
 .alert-dark {
   background: var(--dark-color);
-  color: var(--alert-text-on-dark);
+  color: var(--text-on-dark);
 }
 .alert-white {
   background: var(--white-color);
-  color: var(--alert-text-on-white);
+  color: var(--text-on-white);
 }
 .alert-black {
   background: var(--black-color);
-  color: var(--alert-text-on-black);
+  color: var(--text-on-black);
 }
 
 /* Text */

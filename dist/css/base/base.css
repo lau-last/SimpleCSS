@@ -40,12 +40,6 @@ body h6 {
   font-size: var(--font-size-h6);
 }
 body {
-  /* Images */
-}
-body img {
-  border-radius: var(--border-radius);
-}
-body {
   /* Text selection */
 }
 body ::selection {

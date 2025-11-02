@@ -1,6 +1,10 @@
 .ul{
   list-style: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--ul-border-radius);
+}
+.ol{
+  list-style-type: decimal;
+  border-radius: var(--ol-border-radius);
 }
 
 .li{
@@ -12,9 +16,9 @@
 }
 
 .li-nav{
-  padding: var(--list-padding);
   width: 100%;
   cursor: pointer;
+  padding: var(--list-padding);
 
   &:hover{
     background: var(--list-nav-hover-bg-color);

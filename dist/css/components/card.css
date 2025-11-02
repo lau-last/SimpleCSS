@@ -1,13 +1,10 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
-  border-radius: var(--border-radius);
-  border: 0.1rem solid var(--card-border-color);
+  border-radius: var(--card-border-radius);
+  border: var(--card-border);
   padding: var(--card-padding);
-}
-.card.box-shadow {
   box-shadow: var(--card-box-shadow);
 }
 .card .card-header {

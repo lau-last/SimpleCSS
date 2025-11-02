@@ -1,13 +1,13 @@
 @mixin nav-side-base {
-  position: fixed;
   top: 0;
   bottom: 0;
   z-index: 20;
-  width: var(--nav-aside-width);
-  background: var(--bg-color);
+  position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
-  transition: width .25s ease, transform .25s ease;
+  transition: width .25s ease, transform .25s ease;;
+  background: var(--bg-color);
+  width: var(--nav-side-width);
 }
 
 .nav-side,
@@ -15,9 +15,9 @@
   @include nav-side-base;
   left: 0;
   transform: translateX(-100%);
-  border-top-right-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
   border-right: .1rem solid var(--border-color);
+  border-top-right-radius: var(--nav-border-radius);
+  border-bottom-right-radius: var(--nav-border-radius);
 
   &.show {
     width: var(--nav-aside-width);
@@ -29,12 +29,12 @@
   @include nav-side-base;
   right: 0;
   transform: translateX(100%);
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
   border-left: .1rem solid var(--border-color);
+  border-top-left-radius: var(--nav-border-radius);
+  border-bottom-left-radius: var(--nav-border-radius);
 
   &.show {
-    width: var(--nav-aside-width);
+    width: var(--nav-side-width);
     transform: translateX(0);
   }
 }

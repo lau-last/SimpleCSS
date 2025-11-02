@@ -30,5 +30,6 @@
 
   &-keep {
     @include alert-base;
+    animation: var(--alert-ke98ep-animation-in);
   }
 }

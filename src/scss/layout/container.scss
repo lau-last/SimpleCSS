@@ -9,44 +9,38 @@
     &-sm {
         @extend .container;
         max-width: var(--container-width-sm);
-        padding: var(--container-padding-sm);
     }
 
     &-md {
         @extend .container;
         max-width: var(--container-width-md);
-        padding:  var(--container-padding-md);
     }
 
     &-lg {
         @extend .container;
         max-width: var(--container-width-lg);
-        padding: var(--container-padding-lg);
     }
 }
 
 .container-fluid {
+    max-width: 100%;
     margin-inline: auto;
     box-sizing: border-box;
     width: var(--container-fluid-width);
-    max-width: 100%;
     padding: var(--container-fluid-padding);
 
     &-sm {
         @extend .container-fluid;
         width: var(--container-fluid-width-sm);
-        padding: var(--container-fluid-padding-sm);
     }
 
     &-md {
         @extend .container-fluid;
         width: var(--container-fluid-width-md);
-        padding: var(--container-fluid-padding-md);
     }
 
     &-lg {
         @extend .container-fluid;
         width: var(--container-fluid-width-lg);
-        padding: var(--container-fluid-padding-lg);
     }
 }

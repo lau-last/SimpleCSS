@@ -54,3 +54,6 @@
 .alert-keep .alert-footer {
   padding: var(--alert-footer-padding);
 }
+.alert-keep {
+  animation: var(--alert-ke98ep-animation-in);
+}

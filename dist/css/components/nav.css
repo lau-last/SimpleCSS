@@ -1,19 +1,19 @@
 .nav-side,
 .nav-side-left {
-  position: fixed;
   top: 0;
   bottom: 0;
   z-index: 20;
-  width: var(--nav-aside-width);
-  background: var(--bg-color);
+  position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
   transition: width 0.25s ease, transform 0.25s ease;
+  background: var(--bg-color);
+  width: var(--nav-side-width);
   left: 0;
   transform: translateX(-100%);
-  border-top-right-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
   border-right: 0.1rem solid var(--border-color);
+  border-top-right-radius: var(--nav-border-radius);
+  border-bottom-right-radius: var(--nav-border-radius);
 }
 .nav-side.show,
 .nav-side-left.show {
@@ -22,22 +22,22 @@
 }
 
 .nav-side-right {
-  position: fixed;
   top: 0;
   bottom: 0;
   z-index: 20;
-  width: var(--nav-aside-width);
-  background: var(--bg-color);
+  position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
   transition: width 0.25s ease, transform 0.25s ease;
+  background: var(--bg-color);
+  width: var(--nav-side-width);
   right: 0;
   transform: translateX(100%);
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
   border-left: 0.1rem solid var(--border-color);
+  border-top-left-radius: var(--nav-border-radius);
+  border-bottom-left-radius: var(--nav-border-radius);
 }
 .nav-side-right.show {
-  width: var(--nav-aside-width);
+  width: var(--nav-side-width);
   transform: translateX(0);
 }

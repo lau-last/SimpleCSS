@@ -3,10 +3,9 @@
 //.input[type="submit"]
 //.input[type="reset"]
 //.input[type="button"]
-
 @mixin input-base {
   border: var(--input-border);
-  border-radius: var(--border-radius);
+  border-radius: var(--input-border-radius);
   background-color: var(--input-bg-color);
   color: var(--input-text-color);
   margin: var(--input-margin);
@@ -18,21 +17,21 @@
 
   /* Focus ring */
   &:focus {
+    outline: none;
     border-color: var(--primary-color);
     box-shadow: var(--input-box-shadow-focus);
-    outline: none;
   }
 }
 
 @mixin input-color-base {
   @include input-base;
   padding: 0;
-  cursor: pointer;
   display: block;
+  cursor: pointer;
 
   &::-webkit-color-swatch {
-    border-radius: var(--border-radius);
     border: none;
+    border-radius: var(--input-border-radius);
   }
 
   &::-webkit-color-swatch-wrapper {
@@ -43,49 +42,49 @@
 @mixin input-range-base {
   @include input-base;
   @include accent-color;
-  appearance: none;
-  -webkit-appearance: none;
   padding: 0;
   width: 100%;
-  height: var(--input-height);
-  background: transparent;
   border: none;
+  appearance: none;
+  background: transparent;
+  -webkit-appearance: none;
+  height: var(--input-height);
   /* Pour Chrome, Safari, Opera, Edge */
   &::-webkit-slider-runnable-track {
     width: 100%;
-    height: var(--range-size);
     cursor: pointer;
+    height: var(--range-size);
     background: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
-    border-radius: var(--border-radius);
+    border-radius: var(--input-border-radius);
   }
 
   /* Pour Firefox */
   &::-moz-range-track {
     width: 100%;
-    height: var(--range-size);
     cursor: pointer;
+    height: var(--range-size);
+    border-radius: var(--input-border-radius);
     background: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
-    border-radius: var(--border-radius);
   }
 
   /* Pour Chrome, Safari, Opera, Edge */
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: calc(var(--range-size) * 2);
-    width: calc(var(--range-size) * 2);
-    border-radius: 50%;
-    background: var(--primary-color);
     cursor: pointer;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    background: var(--primary-color);
+    width: calc(var(--range-size) * 2);
+    height: calc(var(--range-size) * 2);
     margin-top: calc((var(--range-size) - (var(--range-size) * 2)) / 2);
   }
 
   /* Pour Firefox */
   &::-moz-range-thumb {
-    height: calc(var(--range-size) * 2);
-    width: calc(var(--range-size) * 2);
+    cursor: pointer;
     border-radius: 50%;
     background: var(--primary-color);
-    cursor: pointer;
+    width: calc(var(--range-size) * 2);
+    height: calc(var(--range-size) * 2);
     margin-top: calc((var(--range-size) - (var(--range-size) * 2)) / 2);
   }
 }
@@ -94,16 +93,16 @@
     accent-color: var(--primary-color);
     /* Remove focus outline artifacts on range */
     &:focus {
-      border-color: transparent;
       box-shadow: none;
+      border-color: transparent;
     }
 }
 
 .form-inline {
-  gap: var(--gap-form);
   display: flex;
-  align-items: center;
   max-width: 100%;
+  align-items: center;
+  gap: var(--gap-form-inline);
 
   label {
     text-wrap: nowrap;
@@ -119,9 +118,9 @@ label.required::after {
 /* Base text controls: select */
 select.select {
   @include input-base;
+  width: 100%;
   height: var(--input-height);
   padding: var(--select-padding);
-  width: 100%;
 
   &-sm {
     @extend .select;
@@ -198,14 +197,14 @@ input[type="file"]{
 
     &::-webkit-file-upload-button,
     &::file-selector-button {
-      background-color: var(--primary-color);
-      border-radius: var(--border-radius);
-      color: var(--text-on-primary);
       border: none;
       height: 100%;
-      align-items: self-start;
       cursor: pointer;
       margin-right: 1rem;
+      align-items: self-start;
+      color: var(--text-on-primary);
+      border-radius: var(--input-border-radius);
+      background-color: var(--primary-color);
     }
   }
 }
@@ -323,22 +322,22 @@ input[type="checkbox"]{
       @include input-base;
       @include accent-color;
       display: block;
-      height: var(--input-height-sm);
       width: var(--input-size-sm);
+      height: var(--input-height-sm);
     }
     &-md {
       @include input-base;
       @include accent-color;
       display: block;
-      height: var(--input-height-md);
       width: var(--input-size-md);
+      height: var(--input-height-md);
     }
     &-lg {
       @include input-base;
       @include accent-color;
       display: block;
-      height: var(--input-height-lg);
       width: var(--input-size-lg);
+      height: var(--input-height-lg);
     }
   }
 }
@@ -346,42 +345,42 @@ input[type="checkbox"]{
 
 /* Switch */
 .wrapper-switch {
-  align-content: center;
   margin-block: .5rem;
+  align-content: center;
   height: var(--input-height);
 
   .switch {
-    position: relative;
-    display: inline-block;
     width: 3rem;
     height: 1.5rem;
+    position: relative;
+    display: inline-block;
 
     input {
       display: none;
     }
 
     .slider {
-      background-color: var(--switch-bg-color);
-      border: .1rem solid var(--switch-border-color);
-      position: absolute;
-      cursor: pointer;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      -webkit-transition: .3s;
+      cursor: pointer;
       transition: .3s;
+      position: absolute;
+      -webkit-transition: .3s;
+      background-color: var(--switch-bg-color);
+      border: .1rem solid var(--switch-border-color);
 
       &:before {
-        background-color: var(--switch-btn-color);
-        position: absolute;
         content: "";
-        height: 1.1rem;
-        width: 1.1rem;
         left: .1rem;
+        width: 1.1rem;
         bottom: .1rem;
-        -webkit-transition: .3s;
+        height: 1.1rem;
         transition: .3s;
+        position: absolute;
+        -webkit-transition: .3s;
+        background-color: var(--switch-btn-color);
       }
 
       &.rounded-pill {

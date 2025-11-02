@@ -15,19 +15,19 @@
 }
 
 .anim-slide-top-out {
-  animation-name: fade-out, slide-top;
+  animation-name: fade-out, slide-top-out;
 }
 
 .anim-slide-bottom-out {
-  animation-name: fade-out, slide-bottom;
+  animation-name: fade-out, slide-bottom-out;
 }
 
 .anim-slide-left-out {
-  animation-name: fade-out, slide-left;
+  animation-name: fade-out, slide-left-out;
 }
 
 .anim-slide-right-out {
-  animation-name: fade-out, slide-right;
+  animation-name: fade-out, slide-right-out;
 }
 
 .anim-fade-in {
@@ -43,19 +43,19 @@
 }
 
 .anim-slide-top-in {
-  animation-name: fade-in, slide-from-top;
+  animation-name: fade-in, slide-top-in;
 }
 
 .anim-slide-bottom-in {
-  animation-name: fade-in, slide-from-bottom;
+  animation-name: fade-in, slide-bottom-in;
 }
 
 .anim-slide-left-in {
-  animation-name: fade-in, slide-from-left;
+  animation-name: fade-in, slide-left-in;
 }
 
 .anim-slide-right-in {
-  animation-name: fade-in, slide-from-right;
+  animation-name: fade-in, slide-right-in;
 }
 
 .anim-reverse {

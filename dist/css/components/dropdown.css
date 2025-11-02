@@ -1,6 +1,6 @@
 .dropdown-wrapper {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 
@@ -11,31 +11,31 @@
 .dropdown-overlay {
   height: 0;
   overflow: hidden;
-  position: absolute;
   top: 100%;
   z-index: 10;
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: var(--dropdown-border-radius);
   left: 0;
 }
 .dropdown-overlay-right {
   height: 0;
   overflow: hidden;
-  position: absolute;
   top: 100%;
   z-index: 10;
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: var(--dropdown-border-radius);
   right: 0;
 }
 .dropdown-overlay-left {
   height: 0;
   overflow: hidden;
-  position: absolute;
   top: 100%;
   z-index: 10;
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: var(--dropdown-border-radius);
   left: 0;
 }
 .dropdown.show {

@@ -8,18 +8,35 @@
   height: 0;
   overflow: hidden;
 }
-.dropdown.dropdown-overlay, .dropdown.dropdown-overlay-right, .dropdown.dropdown-overlay-left {
+.dropdown-overlay {
+  height: 0;
+  overflow: hidden;
   position: absolute;
   top: 100%;
   z-index: 10;
   background-color: var(--bg-color);
   border-radius: var(--border-radius);
-}
-.dropdown.dropdown-overlay, .dropdown.dropdown-overlay-left {
   left: 0;
 }
-.dropdown.dropdown-overlay-right {
+.dropdown-overlay-right {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
   right: 0;
+}
+.dropdown-overlay-left {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  left: 0;
 }
 .dropdown.show {
   height: auto;

@@ -34,9 +34,28 @@
   --dark-color: #383737;
   --white-color: #ffffff;
   --black-color: #000000;
+  /* Global */
   --box-shadow: 0 .05rem 1.5rem rgba(0, 0, 0, .08);
   --bg-color: var(--gray-0);
   --border-color: var(--gray-300);
+  /* Alert */
+  --alert-padding: 1rem;
+  --alert-margin: .25rem 0;
+  --alert-header-padding: .5rem 1rem;
+  --alert-body-padding: 1rem;
+  --alert-footer-padding: .5rem 1rem;
+  --alert-border: .1rem solid var(--border-color);
+  --alert-box-shadow: var(--box-shadow);
+  --alert-border-radius: var(--border-radius);
+  --alert-container-padding-inline: 1rem;
+  --alert-animation: fade-slide 5s ease forwards;
+  --alert-width: 100%;
+  /* Button */
+  --button-group-gap: .5rem;
+  --button-padding: .5rem 1rem;
+  --button-padding-sm: .5rem 1rem;
+  --button-padding-md: .75rem 1.5rem;
+  --button-padding-lg: 1rem 2rem;
   /* Text and contrast colors */
   --text-color: #262626;
   --text-on-primary: var(--white-color);
@@ -194,12 +213,6 @@
   --badge-padding-sm: .3rem .9rem;
   --badge-padding-md: .4rem 1.2rem;
   --badge-padding-lg: .5rem 1.5rem;
-  /* Button */
-  --button-group-gap: .5rem;
-  --button-padding: .5rem 1rem;
-  --button-padding-sm: .5rem 1rem;
-  --button-padding-md: .75rem 1.5rem;
-  --button-padding-lg: 1rem 2rem;
   /* Card */
   --card-padding: 0;
   --card-padding-sm: .5rem;
@@ -220,14 +233,11 @@
   --card-border-color: var(--gray-100);
   --card-box-shadow: var(--box-shadow);
   /* List */
-  --list-container-padding: 0;
-  --list-container-padding-sm: .5rem;
-  --list-container-padding-md: 1rem;
-  --list-container-padding-lg: 1.5rem;
   --list-padding: 1rem;
   --list-padding-sm: .5rem;
   --list-padding-md: 1rem;
   --list-padding-lg: 1.5rem;
+  --list-nav-hover-bg-color: var(--gray-100);
   /* Dialog */
   --dialog-padding: 0;
   --dialog-padding-sm: .5rem;
@@ -256,6 +266,8 @@
   --tab-border: .1rem solid var(--border-color);
   /* Nav */
   --nav-aside-width: 30rem;
+  --g-col-padding: .5rem 1rem;
+  --col-padding: .5rem 1rem;
   /* Breakpoints cannot be variable with @media queries */
   /* Change manually in the code in (grid, col, display, flex, spacing, typography, text) */
 }

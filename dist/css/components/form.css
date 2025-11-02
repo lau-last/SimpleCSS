@@ -19,7 +19,7 @@ select.select, select.select-lg, select.select-md, select.select-sm {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -54,7 +54,7 @@ textarea.textarea {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -92,7 +92,7 @@ input[type=file].input {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -181,7 +181,7 @@ input[type=file].input-sm {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -270,7 +270,7 @@ input[type=file].input-md {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -359,7 +359,7 @@ input[type=file].input-lg {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -452,7 +452,7 @@ input[type=color].input {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -486,7 +486,7 @@ input[type=color].input-sm {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -520,7 +520,7 @@ input[type=color].input-md {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -554,7 +554,7 @@ input[type=color].input-lg {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -590,7 +590,7 @@ input[type=range].input {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -667,7 +667,7 @@ input[type=range].input-sm {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -763,7 +763,7 @@ input[type=range].input-md {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -859,7 +859,7 @@ input[type=range].input-lg {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -958,7 +958,7 @@ input[type=checkbox].input {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -997,7 +997,7 @@ input[type=checkbox].input-sm {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -1036,7 +1036,7 @@ input[type=checkbox].input-md {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }
@@ -1075,7 +1075,7 @@ input[type=checkbox].input-lg {
   border: var(--input-border);
   border-radius: var(--border-radius);
   background-color: var(--input-bg-color);
-  color: var(--input-color);
+  color: var(--input-text-color);
   margin: var(--input-margin);
   /* Placeholder */
 }

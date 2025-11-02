@@ -19,7 +19,7 @@
 }
 /* Common column style */
 [class^="g-col"] {
-  padding: .5rem 1rem;
+  padding: var(--g-col-padding);
 }
 
 /* Grid container */

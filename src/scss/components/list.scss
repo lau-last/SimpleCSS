@@ -1,38 +1,40 @@
-ul.ul,
-ol.ol{
+.ul{
   list-style: none;
   border-radius: var(--border-radius);
-  padding: var(--list-container-padding);
-
-  &-sm{
-    @extend .ul;
-    padding: var(--list-container-padding-sm);
-  }
-  &-md{
-    @extend .ul;
-    padding: var(--list-container-padding-md);
-  }
-  &-lg{
-    @extend .ul;
-    padding: var(--list-container-padding-lg);
-  }
 }
 
-li.li{
+.li{
   padding:  var(--list-padding);
 
+  &-sm{padding: var(--list-padding-sm);}
+  &-md{padding: var(--list-padding-md);}
+  &-lg{padding: var(--list-padding-lg);}
+}
+
+.li-nav{
+  padding: var(--list-padding);
+  width: 100%;
+  cursor: pointer;
+
+  &:hover{
+    background: var(--list-nav-hover-bg-color);
+  }
+
   &-sm{
-    @extend .li;
+    @extend .li-nav;
     padding: var(--list-padding-sm);
   }
   &-md{
-    @extend .li;
+    @extend .li-nav;
     padding: var(--list-padding-md);
   }
   &-lg{
-    @extend .li;
+    @extend .li-nav;
     padding: var(--list-padding-lg);
   }
+
 }
+
+
 
 

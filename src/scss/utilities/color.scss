@@ -163,7 +163,7 @@ table {
   @each $name, $value in $colors {
     &-#{$name} {
       background: #{$value};
-      color: var(--text-on-#{$name});
+      color: var(--alert-text-on-#{$name});
     }
   }
 }
@@ -176,5 +176,3 @@ table {
     }
   }
 }
-
-.box-shadow {box-shadow: var(--card-box-shadow);}

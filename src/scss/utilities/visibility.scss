@@ -6,6 +6,10 @@
 .overflow-hidden  { overflow: hidden; }
 .overflow-visible { overflow: visible; }
 .overflow-auto    { overflow: auto; }
+.overflow-y-auto    { overflow-y: auto; }
+.overflow-x-auto    { overflow-x: auto; }
+.overflow-y-hidden    { overflow-y: hidden; }
+.overflow-x-hidden    { overflow-x: hidden; }
 
 /* cursor */
 .cursor-none { cursor: none; }

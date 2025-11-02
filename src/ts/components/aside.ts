@@ -4,7 +4,7 @@ export default class Aside {
     }
 
     private static init(): void {
-        const buttons = document.querySelectorAll('[data-js="aside"]');
+        const buttons = document.querySelectorAll('[data-js="aside"]') as NodeListOf<HTMLElement>;
         if (!buttons.length) return;
 
         buttons.forEach((button: HTMLElement) => {
@@ -17,7 +17,7 @@ export default class Aside {
     }
 
 
-    private static actionEvent(button: HTMLElement, aside: HTMLElement) {
+    private static actionEvent(button: HTMLElement, aside: HTMLElement): void {
         const isOpen = () => aside.classList.contains('show');
 
         button.addEventListener('click', () => {

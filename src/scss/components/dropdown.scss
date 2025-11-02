@@ -1,25 +1,42 @@
+@mixin dropdown-base {
+  height: 0;
+  overflow: hidden;
+}
+
+@mixin dropdown-overlay {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+}
+
 .dropdown-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
 }
+
 .dropdown {
-  height: 0;
-  overflow: hidden;
+  @include dropdown-base;
 
-  &.dropdown-overlay,
-  &.dropdown-overlay-right,
-  &.dropdown-overlay-left {
-    position: absolute;
-    top: 100%;
-    z-index: 10;
-    background-color: var(--bg-color);
-    border-radius: var(--border-radius);
+  &-overlay {
+    @include dropdown-base;
+    @include dropdown-overlay;
+    left: 0;
+
+    &-right {
+      @include dropdown-base;
+      @include dropdown-overlay;
+      right: 0;
+    }
+
+    &-left {
+      @include dropdown-base;
+      @include dropdown-overlay;
+      left: 0;
+    }
   }
-
-  &.dropdown-overlay,
-  &.dropdown-overlay-left {left: 0;}
-  &.dropdown-overlay-right {right: 0;}
 
   &.show {
     height: auto;

@@ -299,15 +299,15 @@
 
 /* Viewport height (vh) */
 .vh-0 {
-  height: 0vh;
+  height: 0;
 }
 
 .min-vh-0 {
-  min-height: 0vh;
+  min-height: 0;
 }
 
 .max-vh-0 {
-  max-height: 0vh;
+  max-height: 0;
 }
 
 .vh-10 {
@@ -444,15 +444,15 @@
 
 /* Viewport width (vw) */
 .vw-0 {
-  width: 0vw;
+  width: 0;
 }
 
 .min-vw-0 {
-  min-width: 0vw;
+  min-width: 0;
 }
 
 .max-vw-0 {
-  max-width: 0vw;
+  max-width: 0;
 }
 
 .vw-10 {

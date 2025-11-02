@@ -11,8 +11,49 @@
 </head>
 <body>
 
+<!-- Section alert -->
+<section>
+    <div class="alert-container jc-end ai-end">
 
-<!-- Section navbar -->
+        <div class="alert-keep alert-primary" data-js="alert">
+            <div class="alert-header as-end">
+                <button class="btn btn-primary close">×</button>
+            </div>
+            <div class="alert-body">
+                <p>Une erreur est survenue.</p>
+            </div>
+            <div class="alert-footer">
+                <p>Footer de l'alert</p>
+            </div>
+        </div>
+        <div class="alert alert-primary" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-secondary" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-tertiary" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-success" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-info" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-warning" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-danger" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-neutral" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-light" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-dark" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-white" data-js="alert">Une erreur est survenue.</div>
+        <div class="alert alert-black" data-js="alert">Une erreur est survenue.</div>
+    </div>
+    <script>
+        document.body.addEventListener('alert:beforeRemove', function (event) {
+            console.log('alert:beforeRemove');
+        })
+        document.body.addEventListener('alert:afterRemove', function (event) {
+            console.log('alert:afterRemove');
+        })
+    </script>
+</section>
+
+
+
+
+
+<!-- Section navbarx -->
 <section>
     <nav class="bg-primary p-1">
         <!-- Container Desktop -->
@@ -28,11 +69,11 @@
                 <!-- Dropdown -->
                 <div class="dropdown-wrapper as-center">
                     <button class="btn btn-white" data-js="dropdown" data-target="#nav1">Menu</button>
-                    <div class="dropdown dropdown-overlay-right" id="nav1">
+                    <div class="dropdown-overlay-right" id="nav1">
                         <ul class="ul border-all">
-                            <li class="li-md"><a href="#" class="link">Paramètres</a></li>
-                            <li class="li-md"><a href="#" class="link">DéconnexionDéconnexion</a></li>
-                            <li class="li-md"><a href="#" class="link">Déconnexion</a></li>
+                            <li class="li"><a href="#" class="link">Paramètres</a></li>
+                            <li class="li"><a href="#" class="link">Déconnexion</a></li>
+                            <li class="li"><a href="#" class="link">Déconnexion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,7 +94,7 @@
                 <!-- dropdown (mobile) -->
                 <div class="dropdown-wrapper">
                     <button class="btn btn-white fit-width" data-js="dropdown" data-target="#nav">Menu</button>
-                    <div class="dropdown dropdown-overlay" id="nav">
+                    <div class="dropdown-overlay" id="nav">
                         <ul class="ul border-all">
                             <li class="li"><a href="#" class="link">Paramètres</a></li>
                             <li class="li"><a href="#" class="link">Déconnexion</a></li>
@@ -67,6 +108,7 @@
 </section>
 <!-- Title -->
 <h1 class="text-center">Framework</h1>
+
 <!-- Section aside -->
 <section>
     <div class="mx-auto my-5 container">
@@ -74,49 +116,61 @@
         <button class="btn btn-primary" data-js="aside" data-target="#aside">Open</button>
 
         <!-- aside -->
-        <aside class="nav-aside" id="aside">
+        <aside class="nav-side show" id="aside">
 
             <!-- button close -->
-            <div class="d-flex jc-end m-3">
+            <div class="d-flex jc-end m-1">
                 <button class="btn btn-primary text-end close">Fermer</button>
             </div>
 
             <!-- aside content -->
-            <nav>
-                <ul class="ul">
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                </ul>
-                <ul class="ul">
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                    <li>menu</li>
-                </ul>
+            <nav class="p-1">
+                <button class="btn btn-primary w-100" data-js="dropdown" data-target="#menu-side-1">Menu</button>
+                <div class="dropdown mb-1" id="menu-side-1">
+                    <ul class="ul border-all">
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary w-100" data-js="dropdown" data-target="#menu-side-2">Menu</button>
+                <div class="dropdown show mb-1" id="menu-side-2">
+                    <ul class="ul border-all">
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary w-100" data-js="dropdown" data-target="#menu-side-3">Menu</button>
+                <div class="dropdown show mb-1" id="menu-side-3">
+                    <ul class="ul border-all">
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                        <li class="li-nav">menu</li>
+                    </ul>
+                </div>
             </nav>
         </aside>
     </div>
     <script>
-        document.body.addEventListener('aside:beforeOpen', function () {console.log('aside::beforeOpen')})
-        document.body.addEventListener('aside:afterOpen', function () {console.log('aside::afterOpen')})
-        document.body.addEventListener('aside:beforeClose', function () {console.log('aside::beforeClose')})
-        document.body.addEventListener('aside:afterClose', function () {console.log('aside::afterClose')})
+        document.body.addEventListener('aside:beforeOpen', function () {
+            console.log('aside::beforeOpen')
+        })
+        document.body.addEventListener('aside:afterOpen', function () {
+            console.log('aside::afterOpen')
+        })
+        document.body.addEventListener('aside:beforeClose', function () {
+            console.log('aside::beforeClose')
+        })
+        document.body.addEventListener('aside:afterClose', function () {
+            console.log('aside::afterClose')
+        })
     </script>
 </section>
 <!-- Section tabs -->
@@ -125,12 +179,6 @@
         <!--Tab-button-->
         <div class="tab" data-js="tab">
             <button class="btn btn-primary active" type="button" data-target="#tab-1">London</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-2">Paris</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-3">Tokyo</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-1">London</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-2">Paris</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-3">Tokyo</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-1">London</button>
             <button class="btn btn-primary" type="button" data-target="#tab-2">Paris</button>
             <button class="btn btn-primary" type="button" data-target="#tab-3">Tokyo</button>
         </div>
@@ -279,7 +327,7 @@
         <!-- Dropdown wrapper -->
         <div class="dropdown-wrapper">
             <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu1">Menu</button>
-            <div class="dropdown dropdown-overlay" id="menu1">
+            <div class="dropdown-overlay" id="menu1">
                 <ul class="ul border-all">
                     <li class="li"><a href="#" class="link">Paramètres</a></li>
                     <li class="li"><a href="#" class="link">Déconnexion</a></li>
@@ -290,7 +338,7 @@
         <!-- Dropdown wrapper -->
         <div class="dropdown-wrapper">
             <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu2">Menu</button>
-            <div class="dropdown dropdown-overlay w-100" id="menu2">
+            <div class="dropdown-overlay w-100" id="menu2">
                 <ul class="ul border-all">
                     <li class="li"><a href="#" class="link">Paramètres</a></li>
                     <li class="li"><a href="#" class="link">Déconnexion</a></li>
@@ -301,7 +349,7 @@
         <!-- Dropdown wrapper -->
         <div class="dropdown-wrapper">
             <button class="btn btn-primary" data-js="dropdown" data-target="#menu4">Menu</button>
-            <div class="dropdown dropdown-overlay fit-width" id="menu4">
+            <div class="dropdown-overlay fit-width" id="menu4">
                 <ul class="ul border-all">
                     <li class="li"><a href="#" class="link">Paramètres</a></li>
                     <li class="li"><a href="#" class="link">Déconnexion</a></li>
@@ -312,7 +360,7 @@
         <!-- Dropdown wrapper -->
         <div class="dropdown-wrapper">
             <button class="btn btn-primary" data-js="dropdown" data-target="#menu5">Menu</button>
-            <div class="dropdown dropdown-overlay-right" id="menu5">
+            <div class="dropdown-overlay-right" id="menu5">
                 <ul class="ul border-all">
                     <li class="li"><a href="#" class="link">Paramètres</a></li>
                     <li class="li"><a href="#" class="link">Déconnexion</a></li>
@@ -323,7 +371,7 @@
         <!-- Dropdown wrapper -->
         <div class="dropdown-wrapper">
             <button class="btn btn-primary" data-js="dropdown" data-target="#menu6">Menu</button>
-            <div class="dropdown dropdown-overlay w-100" id="menu6">
+            <div class="dropdown-overlay w-100" id="menu6">
                 <ul class="ul border-all">
                     <li class="li"><a href="#" class="link">Paramètres</a></li>
                     <li class="li"><a href="#" class="link">Déconnexion</a></li>
@@ -365,7 +413,6 @@
             </div>
         </div>
     </div>
-
 </section>
 <!-- Section layouts -->
 <section>

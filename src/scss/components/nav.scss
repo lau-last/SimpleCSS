@@ -1,17 +1,18 @@
-@mixin nav-aside-base {
+@mixin nav-side-base {
   position: fixed;
   top: 0;
   bottom: 0;
   z-index: 20;
   width: var(--nav-aside-width);
   background: var(--bg-color);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   transition: width .25s ease, transform .25s ease;
 }
 
-.nav-aside,
-.nav-aside-left {
-  @include nav-aside-base;
+.nav-side,
+.nav-side-left {
+  @include nav-side-base;
   left: 0;
   transform: translateX(-100%);
   border-top-right-radius: var(--border-radius);
@@ -24,8 +25,8 @@
   }
 }
 
-.nav-aside-right {
-  @include nav-aside-base;
+.nav-side-right {
+  @include nav-side-base;
   right: 0;
   transform: translateX(100%);
   border-top-left-radius: var(--border-radius);

@@ -1,31 +1,35 @@
-ul.ul, ul.ul-lg, ul.ul-md, ul.ul-sm,
-ol.ol {
+.ul {
   list-style: none;
   border-radius: var(--border-radius);
-  padding: var(--list-container-padding);
-}
-ul.ul-sm,
-ol.ol-sm {
-  padding: var(--list-container-padding-sm);
-}
-ul.ul-md,
-ol.ol-md {
-  padding: var(--list-container-padding-md);
-}
-ul.ul-lg,
-ol.ol-lg {
-  padding: var(--list-container-padding-lg);
 }
 
-li.li, li.li-lg, li.li-md, li.li-sm {
+.li {
   padding: var(--list-padding);
 }
-li.li-sm {
+.li-sm {
   padding: var(--list-padding-sm);
 }
-li.li-md {
+.li-md {
   padding: var(--list-padding-md);
 }
-li.li-lg {
+.li-lg {
+  padding: var(--list-padding-lg);
+}
+
+.li-nav, .li-nav-lg, .li-nav-md, .li-nav-sm {
+  padding: var(--list-padding);
+  width: 100%;
+  cursor: pointer;
+}
+.li-nav:hover, .li-nav-lg:hover, .li-nav-md:hover, .li-nav-sm:hover {
+  background: var(--list-nav-hover-bg-color);
+}
+.li-nav-sm {
+  padding: var(--list-padding-sm);
+}
+.li-nav-md {
+  padding: var(--list-padding-md);
+}
+.li-nav-lg {
   padding: var(--list-padding-lg);
 }

@@ -6,14 +6,14 @@
   /* Base style for any .col-* */
   [class^="col-"] {
     width: 100%;
-    padding: .5rem 1rem;
+    padding: var(--col-padding);
   }
 
   /* Fluid column: fills remaining space */
   .col {
     flex: 1 1 0;
     max-width: 100%;
-    padding: .5rem 1rem;
+    padding: var(--col-padding);
   }
 
   /* Fixed column widths (12-grid) */

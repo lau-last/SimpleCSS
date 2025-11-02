@@ -7,6 +7,7 @@
 @use 'layout/flex';
 @use 'layout/grid';
 
+@use 'components/alert';
 @use 'components/badge';
 @use 'components/button';
 @use 'components/card';
@@ -28,4 +29,7 @@
 @use 'utilities/text';
 @use 'utilities/typography';
 @use 'utilities/visibility';
+
+@use 'abstract/animation';
+@use 'abstract/keyframe';
 

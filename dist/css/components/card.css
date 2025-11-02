@@ -1,4 +1,4 @@
-.card, .card-lg, .card-md, .card-sm {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,51 +7,15 @@
   border: 0.1rem solid var(--card-border-color);
   padding: var(--card-padding);
 }
-.card.box-shadow, .box-shadow.card-lg, .box-shadow.card-md, .box-shadow.card-sm {
+.card.box-shadow {
   box-shadow: var(--card-box-shadow);
 }
-.card .card-header, .card-lg .card-header, .card-md .card-header, .card-sm .card-header {
+.card .card-header {
   padding: var(--card-header-padding);
 }
-.card .card-header-sm, .card-lg .card-header-sm, .card-md .card-header-sm, .card-sm .card-header-sm {
-  padding: var(--card-header-padding-sm);
-}
-.card .card-header-md, .card-lg .card-header-md, .card-md .card-header-md, .card-sm .card-header-md {
-  padding: var(--card-header-padding-md);
-}
-.card .card-header-lg, .card-lg .card-header-lg, .card-md .card-header-lg, .card-sm .card-header-lg {
-  padding: var(--card-header-padding-lg);
-}
-.card .card-body, .card-lg .card-body, .card-md .card-body, .card-sm .card-body {
+.card .card-body {
   padding: var(--card-body-padding);
 }
-.card .card-body-sm, .card-lg .card-body-sm, .card-md .card-body-sm, .card-sm .card-body-sm {
-  padding: var(--card-body-padding-sm);
-}
-.card .card-body-md, .card-lg .card-body-md, .card-md .card-body-md, .card-sm .card-body-md {
-  padding: var(--card-body-padding-md);
-}
-.card .card-body-lg, .card-lg .card-body-lg, .card-md .card-body-lg, .card-sm .card-body-lg {
-  padding: var(--card-body-padding-lg);
-}
-.card .card-footer, .card-lg .card-footer, .card-md .card-footer, .card-sm .card-footer {
+.card .card-footer {
   padding: var(--card-footer-padding);
-}
-.card .card-footer-sm, .card-lg .card-footer-sm, .card-md .card-footer-sm, .card-sm .card-footer-sm {
-  padding: var(--card-footer-padding-sm);
-}
-.card .card-footer-md, .card-lg .card-footer-md, .card-md .card-footer-md, .card-sm .card-footer-md {
-  padding: var(--card-footer-padding-md);
-}
-.card .card-footer-lg, .card-lg .card-footer-lg, .card-md .card-footer-lg, .card-sm .card-footer-lg {
-  padding: var(--card-footer-padding-lg);
-}
-.card-sm {
-  padding: var(--card-padding-sm);
-}
-.card-md {
-  padding: var(--card-padding-md);
-}
-.card-lg {
-  padding: var(--card-padding-lg);
 }

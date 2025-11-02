@@ -7,7 +7,7 @@
 }
 .row [class^=col-] {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: var(--col-padding);
 }
 .row {
   /* Fluid column: fills remaining space */
@@ -15,7 +15,7 @@
 .row .col {
   flex: 1 1 0;
   max-width: 100%;
-  padding: 0.5rem 1rem;
+  padding: var(--col-padding);
 }
 .row {
   /* Fixed column widths (12-grid) */

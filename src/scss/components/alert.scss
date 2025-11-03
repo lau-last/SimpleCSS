@@ -1,3 +1,4 @@
+// Alert base
 @mixin alert-base {
   display: flex;
   flex-direction: column;
@@ -14,6 +15,8 @@
   .alert-body {padding: var(--alert-body-padding);}
   .alert-footer {padding: var(--alert-footer-padding);}
 }
+
+// Alert container
 .alert-container {
   position:  fixed;
   top: 0;
@@ -24,6 +27,8 @@
   flex-direction:  column;
   padding-inline: var(--alert-container-padding-inline);
 }
+
+// Alert
 .alert {
   @include alert-base;
   animation: var(--alert-animation);

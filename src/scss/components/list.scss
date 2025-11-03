@@ -1,12 +1,16 @@
+// List ul
 .ul{
   list-style: none;
   border-radius: var(--ul-border-radius);
 }
+
+// List ol
 .ol{
   list-style-type: decimal;
   border-radius: var(--ol-border-radius);
 }
 
+// List li
 .li{
   padding:  var(--list-padding);
 
@@ -15,6 +19,7 @@
   &-lg{padding: var(--list-padding-lg);}
 }
 
+// List li nav
 .li-nav{
   width: 100%;
   cursor: pointer;

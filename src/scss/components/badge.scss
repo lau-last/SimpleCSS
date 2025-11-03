@@ -1,9 +1,11 @@
+// Badge group
 .badge-group{
   display: flex;
   flex-wrap: wrap;
   gap: var(--badge-group-gap);
 }
 
+// Badge
 .badge {
   padding: var(--badge-padding);
   border-radius: var(--badge-border-radius);

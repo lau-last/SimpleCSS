@@ -1,3 +1,4 @@
+// Nav side base
 @mixin nav-side-base {
   top: 0;
   bottom: 0;
@@ -10,6 +11,7 @@
   width: var(--nav-side-width);
 }
 
+// Nav side left
 .nav-side,
 .nav-side-left {
   @include nav-side-base;
@@ -25,6 +27,7 @@
   }
 }
 
+// Nav side right
 .nav-side-right {
   @include nav-side-base;
   right: 0;

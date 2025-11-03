@@ -1,3 +1,4 @@
+// Table
 table.table,
 table.table-sm,
 table.table-md,
@@ -143,6 +144,7 @@ table.table-lg {
     }
 }
 
+// Table sizes
 table.table-sm {
     thead,
     tbody,
@@ -154,7 +156,6 @@ table.table-sm {
         }
     }
 }
-
 table.table-md {
     thead,
     tbody,
@@ -166,7 +167,6 @@ table.table-md {
         }
     }
 }
-
 table.table-lg {
     thead,
     tbody,
@@ -179,10 +179,12 @@ table.table-lg {
     }
 }
 
+// Table group divider
 .table-group-divider > tr:first-child {
     border-top: .2rem solid var(--table-border-divider-color);
 }
 
+// Table responsive
 .table-responsive {
     overflow-x: auto;
 }

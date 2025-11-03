@@ -1,8 +1,10 @@
+// Dropdown base
 @mixin dropdown-base {
   height: 0;
   overflow: hidden;
 }
 
+// Dropdown overlay
 @mixin dropdown-overlay {
   top: 100%;
   z-index: 10;
@@ -11,12 +13,14 @@
   border-radius: var(--dropdown-border-radius);
 }
 
+// Dropdown wrapper
 .dropdown-wrapper {
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
+// Dropdown
 .dropdown {
   @include dropdown-base;
 

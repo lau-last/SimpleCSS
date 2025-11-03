@@ -1,13 +1,16 @@
+// Animation
 .anim-shake-x {animation-name: shake-x;}
 .anim-shake-y {animation-name: shake-y;}
 .anim-rotate {animation-name: rotate;}
 
+// Animation out
 .anim-fade-out {animation-name: fade-out;}
 .anim-slide-top-out {animation-name: fade-out, slide-top-out;}
 .anim-slide-bottom-out {animation-name: fade-out, slide-bottom-out;}
 .anim-slide-left-out {animation-name: fade-out, slide-left-out;}
 .anim-slide-right-out {animation-name: fade-out, slide-right-out;}
 
+// Animation in
 .anim-fade-in {animation-name: fade-in;}
 .anim-grow-in {animation-name: fade-in, grow;}
 .anim-shrink-in {animation-name: fade-in, shrink;}
@@ -16,9 +19,11 @@
 .anim-slide-left-in {animation-name: fade-in, slide-left-in;}
 .anim-slide-right-in {animation-name: fade-in, slide-right-in;}
 
+// Animation options
 .anim-reverse {animation-direction: reverse;}
 .anim-infinite {animation-iteration-count: infinite;}
 
+// Animation speed
 .anim-fast {animation-duration: 0.25s;}
 .anim-medium {animation-duration: 0.5s;}
 .anim-slow {animation-duration: 0.75s;}

@@ -7,8 +7,8 @@ export default class Alert {
     private static init(): void {
         document.querySelectorAll('[data-js="alert"]').forEach((alert: Element) =>
             (alert as HTMLElement).classList.contains('alert-keep')
-                ? this.bindCloseButton(alert as HTMLElement)
-                : this.removeAfterAnimation(alert as HTMLElement)
+                ? Alert.bindCloseButton(alert as HTMLElement)
+                : Alert.removeAfterAnimation(alert as HTMLElement)
         );
     }
 
@@ -17,16 +17,12 @@ export default class Alert {
         target.dispatchEvent(new CustomEvent(eventName, {detail: {element: alert}, bubbles: true}));
     }
 
-    // Check if alert has the 'alert-keep' class
-    private static isKeepAlert(alert: HTMLElement): boolean {
-        return alert.classList.contains('alert-keep');
-    }
 
     // Remove alert automatically after its animation ends
     private static removeAfterAnimation(alert: HTMLElement): void {
         alert.addEventListener('animationend', () => {
-            this.emitEvent(alert, 'alert:beforeRemove', alert);
-            this.finishRemove(alert);
+            Alert.emitEvent(alert, 'alert:beforeRemove', alert);
+            Alert.finishRemove(alert);
         }, {once: true});
     }
 
@@ -35,8 +31,8 @@ export default class Alert {
         const closeButtons = alert.querySelectorAll('.close') as NodeListOf<HTMLElement>;
         if (!closeButtons.length) return;
         closeButtons.forEach(button => button.addEventListener('click', () => {
-            this.emitEvent(alert, 'alert:beforeRemove', alert);
-            this.handleKeepAnimation(alert);
+            Alert.emitEvent(alert, 'alert:beforeRemove', alert);
+            Alert.handleKeepAnimation(alert);
         }, {once: true}));
     }
 
@@ -45,15 +41,15 @@ export default class Alert {
         const name = getComputedStyle(alert).getPropertyValue('--alert-keep-animation-out').trim();
         if (name) {
             alert.style.animation = name;
-            alert.addEventListener('animationend', () => this.finishRemove(alert), {once: true});
+            alert.addEventListener('animationend', () => Alert.finishRemove(alert), {once: true});
         } else {
-            this.finishRemove(alert);
+            Alert.finishRemove(alert);
         }
     }
 
     // Remove alert element from DOM and emit afterRemove event
     private static finishRemove(alert: HTMLElement): void {
         alert.remove();
-        this.emitEvent(document.body, 'alert:afterRemove', alert);
+        Alert.emitEvent(document.body, 'alert:afterRemove', alert);
     }
 }

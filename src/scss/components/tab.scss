@@ -1,9 +1,11 @@
+// Tab
 .tab {
   display: flex;
   overflow-x: auto;
   gap: var(--tab-gap);
 }
 
+// Tab content
 .tab-content {
   display: none;
   border: var(--tab-border);

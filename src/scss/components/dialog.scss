@@ -1,3 +1,4 @@
+// Dialog
 .dialog {
   top: 50%;
   left: 50%;
@@ -9,7 +10,6 @@
   border-radius: var(--dialog-border-radius);
   transform: translate(-50%, -50%) scale(0);
   transition: opacity .25s ease, transform .25s ease;
-
 
 
   &::backdrop {

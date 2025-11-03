@@ -27,17 +27,17 @@
             </div>
         </div>
         <div class="alert alert-primary" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-secondary" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-tertiary" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-success" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-info" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-warning" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-danger" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-neutral" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-light" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-dark" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-white" data-js="alert">Une erreur est survenue.</div>
-        <div class="alert alert-black" data-js="alert">Une erreur est survenue.</div>
+<!--        <div class="alert alert-secondary" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-tertiary" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-success" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-info" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-warning" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-danger" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-neutral" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-light" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-dark" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-white" data-js="alert">Une erreur est survenue.</div>-->
+<!--        <div class="alert alert-black" data-js="alert">Une erreur est survenue.</div>-->
     </div>
     <script>
         document.body.addEventListener('alert:beforeRemove', function (event) {
@@ -275,44 +275,20 @@
         </dialog>
     </div>
     <script type="module">
-        document.body.addEventListener('dropdown:beforeOpen', (e) => {
-            console.log('👉 La dropdown va s’ouvrir !');
-            console.log('Détail complet :', e.detail.element.id);
-        });
-
-        document.body.addEventListener('dropdown:afterOpen', (e) => {
-            console.log('✅ La dropdown est ouverte !');
-            console.log('Détail complet :', e.detail.element.id);
-        });
-
-        document.body.addEventListener('dropdown:beforeClose', (e) => {
-            console.log('👉 La dropdown va se fermer !');
-            console.log('Détail complet :', e.detail.element.id);
-        });
-
-        document.body.addEventListener('dropdown:afterClose', (e) => {
-            console.log('✅ La dropdown est ferme !');
-            console.log('Détail complet :', e.detail.element.id);
-        });
-
         document.body.addEventListener('dialog:beforeOpen', (e) => {
-            console.log('👉 La dialog va s ouvrir !');
-            console.log('Détail complet :', e.detail.element.id);
+            console.log('👉 La dropdown va s’ouvrir !');
         });
 
         document.body.addEventListener('dialog:afterOpen', (e) => {
-            console.log('✅ La dialog est ouvert !');
-            console.log('Détail complet :', e.detail.element.id);
+            console.log('✅ La dropdown est ouverte !');
         });
 
         document.body.addEventListener('dialog:beforeClose', (e) => {
-            console.log('👉 La dialog va se fermer !');
-            console.log('Détail complet :', e.detail.element.id);
+            console.log('👉 La dropdown va se fermer !');
         });
 
         document.body.addEventListener('dialog:afterClose', (e) => {
-            console.log('✅ La dialog est ferme !');
-            console.log('Détail complet :', e.detail.element.id);
+            console.log('✅ La dropdown est ferme !');
         });
     </script>
 </section>
@@ -408,6 +384,20 @@
             </div>
         </div>
     </div>
+    <script>
+        document.body.addEventListener('dropdown:beforeOpen', function () {
+            console.log('dropdown::beforeOpen')
+        })
+        document.body.addEventListener('dropdown:afterOpen', function () {
+            console.log('dropdown::afterOpen')
+        })
+        document.body.addEventListener('dropdown:beforeClose', function () {
+            console.log('dropdown::beforeClose')
+        })
+        document.body.addEventListener('dropdown:afterClose', function () {
+            console.log('dropdown::afterClose')
+        })
+    </script>
 </section>
 <!-- Section layouts -->
 <section>

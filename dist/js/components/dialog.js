@@ -2,63 +2,68 @@ export default class Dialog {
     constructor() {
         Dialog.init();
     }
+    // Initialize all buttons that control dialogs
     static init() {
-        const buttons = document.querySelectorAll('[data-js="dialog"]');
-        if (!buttons.length)
-            return;
-        buttons.forEach((button) => {
-            const target = button.getAttribute('data-target');
-            if (!target)
-                return;
-            const dialog = document.querySelector(target);
-            if (!(dialog instanceof HTMLDialogElement))
-                return;
-            Dialog.actionEvent(button, dialog);
-        });
+        document.querySelectorAll('[data-js="dialog"]').forEach(button => Dialog.setupButton(button));
     }
-    static actionEvent(button, dialog) {
-        button.addEventListener('click', () => {
-            if (button.classList.contains('close')) {
-                const current = button.closest('dialog');
-                if (current) {
-                    Dialog.closeDialog(current);
-                }
+    // Setup the target dialog for each button
+    static setupButton(button) {
+        const target = button.getAttribute('data-target');
+        if (!target)
+            return;
+        const dialog = document.querySelector(target);
+        if (!(dialog instanceof HTMLDialogElement))
+            return;
+        Dialog.bindOpen(button, dialog);
+        Dialog.bindClose(dialog);
+    }
+    // Close current first, then open target after transition (simple & sûr)
+    static bindOpen(button, dialog) {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const current = button.classList.contains('close') ? button.closest('dialog') : null;
+            if (current && current !== dialog) {
+                current.addEventListener('transitionend', () => Dialog.open(dialog), { once: true });
+                Dialog.close(current);
+                return;
             }
-            Dialog.showDialog(dialog);
-        });
-        const buttonsClose = dialog.querySelectorAll('.close');
-        if (!buttonsClose.length)
-            return;
-        buttonsClose.forEach((buttonClose) => {
-            buttonClose.addEventListener('click', () => {
-                Dialog.closeDialog(dialog);
-            });
+            if (!dialog.open)
+                Dialog.open(dialog);
         });
     }
-    static showDialog(dialog) {
-        dialog.dispatchEvent(new CustomEvent('dialog:beforeOpen', {
-            detail: { element: dialog },
-            bubbles: true,
-        }));
+    // Attach click events to all .close buttons inside the dialog (excluding triggers)
+    static bindClose(dialog) {
+        // Skip buttons that also have data-js="dialog" (managed by bindOpen)
+        const closeButtons = dialog.querySelectorAll('.close:not([data-js="dialog"])');
+        if (!closeButtons.length)
+            return;
+        // Prevent binding the same listeners multiple times
+        if (dialog.closeBound)
+            return;
+        dialog.closeBound = true;
+        // Add click listener to each close button
+        closeButtons.forEach((button) => {
+            button.addEventListener('click', () => Dialog.close(dialog));
+        });
+    }
+    // Open the dialog and emit lifecycle events
+    static open(dialog) {
+        Dialog.emitEvent(dialog, 'dialog:beforeOpen', dialog);
         dialog.showModal();
         dialog.classList.add('show');
-        dialog.dispatchEvent(new CustomEvent('dialog:afterOpen', {
-            detail: { element: dialog },
-            bubbles: true,
-        }));
+        Dialog.emitEvent(dialog, 'dialog:afterOpen', dialog);
     }
-    static closeDialog(dialog) {
-        dialog.dispatchEvent(new CustomEvent('dialog:beforeClose', {
-            detail: { element: dialog },
-            bubbles: true,
-        }));
+    // Close the dialog and emit lifecycle events
+    static close(dialog) {
+        Dialog.emitEvent(dialog, 'dialog:beforeClose', dialog);
         dialog.classList.remove('show');
         dialog.addEventListener('transitionend', () => {
             dialog.close();
         }, { once: true });
-        dialog.dispatchEvent(new CustomEvent('dialog:afterClose', {
-            detail: { element: dialog },
-            bubbles: true,
-        }));
+        Dialog.emitEvent(dialog, 'dialog:afterClose', dialog);
+    }
+    // Emit a custom event carrying the dialog element
+    static emitEvent(target, name, dialog) {
+        target.dispatchEvent(new CustomEvent(name, { detail: { element: dialog }, bubbles: true }));
     }
 }

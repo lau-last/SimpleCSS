@@ -27,6 +27,8 @@ body {
   h5 { font-size: var(--font-size-h5); }
   h6 { font-size: var(--font-size-h6); }
 
+  button, a {font-family: var(--font-family-text), sans-serif;}
+
 
   /* Text selection */
   ::selection {

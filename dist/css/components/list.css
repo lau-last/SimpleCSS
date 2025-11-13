@@ -23,18 +23,30 @@
 
 .li-nav, .li-nav-lg, .li-nav-md, .li-nav-sm {
   width: 100%;
+  display: flex;
   cursor: pointer;
-  padding: var(--list-padding);
+  align-items: center;
+  height: var(--list-nav-height);
+  padding: var(--list-nav-padding);
+}
+.li-nav *, .li-nav-lg *, .li-nav-md *, .li-nav-sm * {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .li-nav:hover, .li-nav-lg:hover, .li-nav-md:hover, .li-nav-sm:hover {
   background: var(--list-nav-hover-bg-color);
 }
 .li-nav-sm {
-  padding: var(--list-padding-sm);
+  height: var(--list-nav-height-sm);
+  padding: var(--list-nav-padding-sm);
 }
 .li-nav-md {
-  padding: var(--list-padding-md);
+  height: var(--list-nav-height-md);
+  padding: var(--list-nav-padding-md);
 }
 .li-nav-lg {
-  padding: var(--list-padding-lg);
+  height: var(--list-nav-height-lg);
+  padding: var(--list-nav-padding-lg);
 }

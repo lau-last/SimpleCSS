@@ -36,7 +36,9 @@ $spacings: (
             .#{$prefix}-#{$key}  { #{$property}: $value; }
             .#{$prefix}t-#{$key} { #{$property}-top: $value; }
             .#{$prefix}b-#{$key} { #{$property}-bottom: $value; }
+            .#{$prefix}l-#{$key} { #{$property}-left: $value; }
             .#{$prefix}s-#{$key} { #{$property}-left: $value; }
+            .#{$prefix}r-#{$key} { #{$property}-right: $value; }
             .#{$prefix}e-#{$key} { #{$property}-right: $value; }
             .#{$prefix}x-#{$key} { #{$property}-left: $value; #{$property}-right: $value; }
             .#{$prefix}y-#{$key} { #{$property}-top: $value;  #{$property}-bottom: $value; }
@@ -48,13 +50,15 @@ $spacings: (
         @media (min-width: #{$size}) {
             @each $key, $value in $spacings {
                 @if $allow-auto or $key != "auto" {
-                    .#{$prefix}-#{$bp}-#{$key}  { #{$property}: $value; }
-                    .#{$prefix}t-#{$bp}-#{$key} { #{$property}-top: $value; }
-                    .#{$prefix}b-#{$bp}-#{$key} { #{$property}-bottom: $value; }
-                    .#{$prefix}s-#{$bp}-#{$key} { #{$property}-left: $value; }
-                    .#{$prefix}e-#{$bp}-#{$key} { #{$property}-right: $value; }
-                    .#{$prefix}x-#{$bp}-#{$key} { #{$property}-left: $value; #{$property}-right: $value; }
-                    .#{$prefix}y-#{$bp}-#{$key} { #{$property}-top: $value;  #{$property}-bottom: $value; }
+                    .#{$prefix}-#{$key}-#{$bp}  { #{$property}: $value; }
+                    .#{$prefix}t-#{$key}-#{$bp} { #{$property}-top: $value; }
+                    .#{$prefix}b-#{$key}-#{$bp} { #{$property}-bottom: $value; }
+                    .#{$prefix}l-#{$key}-#{$bp} { #{$property}-left: $value; }
+                    .#{$prefix}s-#{$key}-#{$bp} { #{$property}-left: $value; }
+                    .#{$prefix}r-#{$key}-#{$bp} { #{$property}-right: $value; }
+                    .#{$prefix}e-#{$key}-#{$bp} { #{$property}-right: $value; }
+                    .#{$prefix}x-#{$key}-#{$bp} { #{$property}-left: $value; #{$property}-right: $value; }
+                    .#{$prefix}y-#{$key}-#{$bp} { #{$property}-top: $value;  #{$property}-bottom: $value; }
                 }
             }
         }

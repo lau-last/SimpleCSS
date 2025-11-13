@@ -1,58 +1,87 @@
+import EventManager from './event_manager.js';
+
 export default class Dialog {
     constructor() {
         Dialog.init();
     }
 
-    // Initialize all buttons that control dialogs
     private static init(): void {
-        document.querySelectorAll<HTMLElement>('[data-js="dialog"]').forEach(button => Dialog.setupButton(button));
+        EventManager.addEventToDocument('click', Dialog.onClick);
     }
 
-    // Setup the target dialog for each button
-    private static setupButton(button: HTMLElement): void {
-        const target = button.getAttribute('data-target') as string;
+    private static onClick(event: Event): void {
+        if (!(event instanceof MouseEvent)) return;
+
+        const target = event.target as HTMLElement | null;
         if (!target) return;
-        const dialog = document.querySelector(target) as HTMLElement | null;
-        if (!(dialog instanceof HTMLDialogElement)) return;
-        Dialog.bindOpen(button, dialog);
-        Dialog.bindClose(dialog);
+
+        if (Dialog.handleSwitch(target)) return;
+        if (Dialog.handleClose(target)) return;
+        Dialog.handleOpen(target);
+    }
+
+    private static handleSwitch(target: HTMLElement): boolean {
+
+        if (!target.matches('.close[data-js="dialog"][data-target]')) {
+            return false;
+        }
+
+        const selector = target.getAttribute('data-target');
+        if (!selector) return true;
+
+        const nextDialog = document.querySelector(selector) as HTMLDialogElement | null;
+        if (!(nextDialog instanceof HTMLDialogElement)) return true;
+
+        const currentDialog = target.closest('dialog') as HTMLDialogElement | null;
+
+        if (currentDialog && currentDialog !== nextDialog) {
+            currentDialog.addEventListener(
+                'transitionend',
+                () => Dialog.open(nextDialog),
+                {once: true}
+            );
+            Dialog.close(currentDialog);
+            return true;
+        }
+
+        if (!nextDialog.open) {
+            Dialog.open(nextDialog);
+        }
+        return true;
+    }
+
+    private static handleClose(target: HTMLElement): boolean {
+        if (!target.matches('.close') || target.matches('[data-js="dialog"]')) {
+            return false;
+        }
+
+        const dialog = target.closest('dialog') as HTMLDialogElement | null;
+        if (!dialog) return true;
+
+        Dialog.close(dialog);
+        return true;
     }
 
 
-    // Close current first, then open target after transition (simple & sûr)
-    private static bindOpen(button: HTMLElement, dialog: HTMLDialogElement): void {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const current = button.classList.contains('close') ? button.closest('dialog') as HTMLDialogElement | null : null;
+    private static handleOpen(target: HTMLElement): boolean {
 
-            if (current && current !== dialog) {
-                current.addEventListener('transitionend', () => Dialog.open(dialog), {once: true});
-                Dialog.close(current);
-                return;
-            }
+        if (!target.matches('[data-js="dialog"][data-target]') || target.matches('.close')) {
+            return false;
+        }
 
-            if (!dialog.open) Dialog.open(dialog);
-        });
+        const selector = target.getAttribute('data-target');
+        if (!selector) return true;
+
+        const dialog = document.querySelector(selector) as HTMLDialogElement | null;
+        if (!(dialog instanceof HTMLDialogElement)) return true;
+
+        if (!dialog.open) {
+            Dialog.open(dialog);
+        }
+        return true;
     }
 
 
-    // Attach click events to all .close buttons inside the dialog (excluding triggers)
-    private static bindClose(dialog: HTMLDialogElement): void {
-        // Skip buttons that also have data-js="dialog" (managed by bindOpen)
-        const closeButtons = dialog.querySelectorAll<HTMLElement>('.close:not([data-js="dialog"])');
-        if (!closeButtons.length) return;
-
-        // Prevent binding the same listeners multiple times
-        if ((dialog as any).closeBound) return;
-        (dialog as any).closeBound = true;
-
-        // Add click listener to each close button
-        closeButtons.forEach((button) => {
-            button.addEventListener('click', () => Dialog.close(dialog));
-        });
-    }
-
-    // Open the dialog and emit lifecycle events
     private static open(dialog: HTMLDialogElement): void {
         Dialog.emitEvent(dialog, 'dialog:beforeOpen', dialog);
         dialog.showModal();
@@ -60,18 +89,29 @@ export default class Dialog {
         Dialog.emitEvent(dialog, 'dialog:afterOpen', dialog);
     }
 
-    // Close the dialog and emit lifecycle events
+
     private static close(dialog: HTMLDialogElement): void {
         Dialog.emitEvent(dialog, 'dialog:beforeClose', dialog);
         dialog.classList.remove('show');
-        dialog.addEventListener('transitionend', () => {
-            dialog.close();
-        }, {once: true});
+
+        dialog.addEventListener(
+            'transitionend',
+            () => {
+                dialog.close();
+            },
+            {once: true}
+        );
+
         Dialog.emitEvent(dialog, 'dialog:afterClose', dialog);
     }
 
-    // Emit a custom event carrying the dialog element
+
     private static emitEvent(target: EventTarget, name: string, dialog: HTMLDialogElement): void {
-        target.dispatchEvent(new CustomEvent(name, {detail: {element: dialog}, bubbles: true}));
+        target.dispatchEvent(
+            new CustomEvent(name, {
+                detail: {element: dialog},
+                bubbles: true,
+            })
+        );
     }
 }

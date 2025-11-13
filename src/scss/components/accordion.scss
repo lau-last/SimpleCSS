@@ -1,0 +1,80 @@
+.accordion {
+  display: inline-block;
+  position: relative;
+  border-width: var(--accordion-border-width);
+  border-style: var(--accordion-border-style);
+  border-color: var(--accordion-border-color);
+  border-radius: var(--accordion-border-radius);
+
+  .accordion-item {
+    border: none;
+
+
+    &:first-child {
+      .accordion-btn {
+        border-top-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+        border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+      }
+    }
+    
+    &:last-child {
+      .accordion-btn {
+        border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+        border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+        border-bottom: none; 
+      }
+
+
+      &:has(.accordion-body.show) {
+        .accordion-btn {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+
+    .accordion-btn {
+      cursor: pointer;
+      width: 100%;
+      padding: var(--accordion-button-padding);
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+
+      &:after {
+        content: '\FE62'; 
+        margin-left: .5rem;
+      }
+    }
+
+ 
+    &:has(.accordion-body.show) {
+      .accordion-btn {
+        &:after {
+          content: '\FE63'; 
+        }
+      }
+    }
+    
+    .accordion-body {
+      height: 0;
+      overflow: hidden;
+
+      &.show {
+        height: auto;
+        overflow: visible;
+        border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+      }
+    }
+    
+    &:last-child {
+      .accordion-body.show {
+        border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+        border-bottom: none;
+      }
+    }
+  }
+}

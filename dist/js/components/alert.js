@@ -1,48 +1,31 @@
+import EventManager from './event_manager.js';
 export default class Alert {
     constructor() {
         Alert.init();
     }
-    // Initialize all alerts on the page
     static init() {
-        document.querySelectorAll('[data-js="alert"]').forEach((alert) => alert.classList.contains('alert-keep')
-            ? Alert.bindCloseButton(alert)
-            : Alert.removeAfterAnimation(alert));
+        EventManager.addEventToDocument('animationend', Alert.onAnimationEnd);
+        EventManager.addEventToDocument('click', Alert.onClick);
     }
-    // Dispatch a custom event with the alert element as detail
-    static emitEvent(target, eventName, alert) {
-        target.dispatchEvent(new CustomEvent(eventName, { detail: { element: alert }, bubbles: true }));
-    }
-    // Remove alert automatically after its animation ends
-    static removeAfterAnimation(alert) {
-        alert.addEventListener('animationend', () => {
-            Alert.emitEvent(alert, 'alert:beforeRemove', alert);
-            Alert.finishRemove(alert);
-        }, { once: true });
-    }
-    // Bind close button event for keep alerts
-    static bindCloseButton(alert) {
-        const closeButtons = alert.querySelectorAll('.close');
-        if (!closeButtons.length)
+    static onAnimationEnd(event) {
+        const target = event.target;
+        if (!target)
             return;
-        closeButtons.forEach(button => button.addEventListener('click', () => {
-            Alert.emitEvent(alert, 'alert:beforeRemove', alert);
-            Alert.handleKeepAnimation(alert);
-        }, { once: true }));
+        if (!target.matches('[data-js="alert"]'))
+            return;
+        target.remove();
     }
-    // Handle the animation when closing a keep alert
-    static handleKeepAnimation(alert) {
-        const name = getComputedStyle(alert).getPropertyValue('--alert-keep-animation-out').trim();
-        if (name) {
-            alert.style.animation = name;
-            alert.addEventListener('animationend', () => Alert.finishRemove(alert), { once: true });
-        }
-        else {
-            Alert.finishRemove(alert);
-        }
-    }
-    // Remove alert element from DOM and emit afterRemove event
-    static finishRemove(alert) {
+    static onClick(event) {
+        if (!(event instanceof MouseEvent))
+            return;
+        const target = event.target;
+        if (!target)
+            return;
+        if (!target.matches('.close'))
+            return;
+        const alert = target.closest('[data-js="alert"]');
+        if (!alert)
+            return;
         alert.remove();
-        Alert.emitEvent(document.body, 'alert:afterRemove', alert);
     }
 }

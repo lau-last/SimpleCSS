@@ -1,97 +1,95 @@
+import EventManager from './event_manager.js';
 export default class Dropdown {
     constructor() {
         Dropdown.init();
     }
-    // Initialize all dropdown trigger buttons
     static init() {
-        const buttons = document.querySelectorAll('[data-js="dropdown"]');
-        if (!buttons.length)
+        EventManager.addEventToDocument('click', Dropdown.onClick);
+    }
+    static onClick(event) {
+        if (!(event instanceof MouseEvent))
             return;
-        buttons.forEach((button) => {
-            const target = button.getAttribute('data-target');
-            if (!target)
-                return;
-            const dropdown = document.querySelector(target);
-            if (!dropdown)
-                return;
-            Dropdown.bindToggle(button, dropdown);
-        });
+        const target = event.target;
+        if (!target)
+            return;
+        if (Dropdown.handleToggle(target))
+            return;
+        Dropdown.handleOutsideClick(target);
     }
-    // Bind click to toggle the target dropdown
-    static bindToggle(button, dropdown) {
-        button.addEventListener('click', (event) => {
-            event.stopPropagation();
-            Dropdown.closeAllDropdownsOverlay(dropdown);
-            const isOpen = dropdown.classList.contains('show');
-            if (isOpen) {
-                Dropdown.close(dropdown);
-                dropdown.classList.remove('show');
-            }
-            else {
-                Dropdown.open(dropdown);
-                dropdown.classList.add('show');
-            }
-        });
+    static handleToggle(target) {
+        if (!target.matches('[data-js="dropdown"][data-target]')) {
+            return false;
+        }
+        const selector = target.getAttribute('data-target');
+        if (!selector)
+            return true;
+        const dropdown = document.querySelector(selector);
+        if (!dropdown)
+            return true;
+        Dropdown.toggle(dropdown);
+        return true;
     }
-    // Open dropdown with animated expand
+    static handleOutsideClick(target) {
+        const insideOpen = target.closest('.dropdown.show, .dropdown-overlay.show');
+        if (!insideOpen) {
+            Dropdown.closeAllDropdownsOverlay();
+        }
+    }
+    static toggle(dropdown) {
+        if (Dropdown.isAnimating(dropdown))
+            return;
+        const isOpen = dropdown.classList.contains('show');
+        Dropdown.closeAllDropdownsOverlay(dropdown);
+        isOpen ? Dropdown.close(dropdown) : Dropdown.open(dropdown);
+    }
+    static isAnimating(dropdown) {
+        return dropdown.dataset.animating === 'true';
+    }
     static open(dropdown) {
-        Dropdown.emit(dropdown, 'dropdown:beforeOpen');
+        dropdown.dataset.animating = 'true';
+        dropdown.classList.add('show');
         const height = dropdown.scrollHeight;
         Dropdown.prepareOpenStyles(dropdown);
-        Dropdown.playOpenAnimation(dropdown, height);
-        Dropdown.emit(dropdown, 'dropdown:afterOpen');
+        const animation = Dropdown.playOpenAnimation(dropdown, height);
+        animation.onfinish = () => {
+            dropdown.style.height = 'auto';
+            dropdown.style.overflow = 'visible';
+            delete dropdown.dataset.animating;
+        };
     }
-    // Close dropdown with animated collapse
     static close(dropdown) {
-        Dropdown.emit(dropdown, 'dropdown:beforeClose');
+        dropdown.dataset.animating = 'true';
         const height = dropdown.scrollHeight;
         Dropdown.prepareCloseStyles(dropdown, height);
-        Dropdown.playCloseAnimation(dropdown, height);
-        Dropdown.emit(dropdown, 'dropdown:afterClose');
+        const animation = Dropdown.playCloseAnimation(dropdown, height);
+        animation.onfinish = () => {
+            dropdown.style.height = '0px';
+            dropdown.classList.remove('show');
+            delete dropdown.dataset.animating;
+        };
     }
-    // Emit a custom dropdown event with the element in detail
-    static emit(target, name) {
-        target.dispatchEvent(new CustomEvent(name, { detail: { element: target }, bubbles: true }));
-    }
-    // Set initial styles before opening animation
     static prepareOpenStyles(dropdown) {
         dropdown.style.overflow = 'hidden';
         dropdown.style.height = '0px';
     }
-    // Set initial styles before closing animation
     static prepareCloseStyles(dropdown, height) {
         dropdown.style.overflow = 'hidden';
         dropdown.style.height = `${height}px`;
     }
-    // Play the opening height animation and finalize styles on finish
     static playOpenAnimation(dropdown, height) {
-        const animation = dropdown.animate([{ height: '0px' }, { height: `${height}px` }], { duration: 300, easing: 'ease' });
-        animation.onfinish = () => {
-            dropdown.style.height = 'auto';
-            dropdown.style.overflow = 'visible';
-        };
+        return dropdown.animate([{ height: '0px' }, { height: `${height}px` }], { duration: 300, easing: 'ease' });
     }
-    // Play the closing height animation and finalize styles on finish
     static playCloseAnimation(dropdown, height) {
-        const animation = dropdown.animate([{ height: `${height}px` }, { height: '0px' }], { duration: 300, easing: 'ease' });
-        animation.onfinish = () => {
-            dropdown.style.height = '0px';
-        };
+        return dropdown.animate([{ height: `${height}px` }, { height: '0px' }], { duration: 300, easing: 'ease' });
     }
-    // Close all overlays except the one provided
     static closeAllDropdownsOverlay(except) {
-        const dropdownsOverlay = document.querySelectorAll([
-            '.dropdown-overlay.show',
-            '.dropdown-overlay-right.show',
-            '.dropdown-overlay-left.show'
-        ].join(','));
+        const dropdownsOverlay = document.querySelectorAll('.dropdown-overlay.show');
         if (!dropdownsOverlay.length)
             return;
         dropdownsOverlay.forEach((dropdown) => {
             if (dropdown === except)
                 return;
             Dropdown.close(dropdown);
-            dropdown.classList.remove('show');
         });
     }
 }

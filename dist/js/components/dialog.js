@@ -1,59 +1,75 @@
+import EventManager from './event_manager.js';
 export default class Dialog {
     constructor() {
         Dialog.init();
     }
-    // Initialize all buttons that control dialogs
     static init() {
-        document.querySelectorAll('[data-js="dialog"]').forEach(button => Dialog.setupButton(button));
+        EventManager.addEventToDocument('click', Dialog.onClick);
     }
-    // Setup the target dialog for each button
-    static setupButton(button) {
-        const target = button.getAttribute('data-target');
+    static onClick(event) {
+        if (!(event instanceof MouseEvent))
+            return;
+        const target = event.target;
         if (!target)
             return;
-        const dialog = document.querySelector(target);
+        if (Dialog.handleSwitch(target))
+            return;
+        if (Dialog.handleClose(target))
+            return;
+        Dialog.handleOpen(target);
+    }
+    static handleSwitch(target) {
+        if (!target.matches('.close[data-js="dialog"][data-target]')) {
+            return false;
+        }
+        const selector = target.getAttribute('data-target');
+        if (!selector)
+            return true;
+        const nextDialog = document.querySelector(selector);
+        if (!(nextDialog instanceof HTMLDialogElement))
+            return true;
+        const currentDialog = target.closest('dialog');
+        if (currentDialog && currentDialog !== nextDialog) {
+            currentDialog.addEventListener('transitionend', () => Dialog.open(nextDialog), { once: true });
+            Dialog.close(currentDialog);
+            return true;
+        }
+        if (!nextDialog.open) {
+            Dialog.open(nextDialog);
+        }
+        return true;
+    }
+    static handleClose(target) {
+        if (!target.matches('.close') || target.matches('[data-js="dialog"]')) {
+            return false;
+        }
+        const dialog = target.closest('dialog');
+        if (!dialog)
+            return true;
+        Dialog.close(dialog);
+        return true;
+    }
+    static handleOpen(target) {
+        if (!target.matches('[data-js="dialog"][data-target]') || target.matches('.close')) {
+            return false;
+        }
+        const selector = target.getAttribute('data-target');
+        if (!selector)
+            return true;
+        const dialog = document.querySelector(selector);
         if (!(dialog instanceof HTMLDialogElement))
-            return;
-        Dialog.bindOpen(button, dialog);
-        Dialog.bindClose(dialog);
+            return true;
+        if (!dialog.open) {
+            Dialog.open(dialog);
+        }
+        return true;
     }
-    // Close current first, then open target after transition (simple & sûr)
-    static bindOpen(button, dialog) {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const current = button.classList.contains('close') ? button.closest('dialog') : null;
-            if (current && current !== dialog) {
-                current.addEventListener('transitionend', () => Dialog.open(dialog), { once: true });
-                Dialog.close(current);
-                return;
-            }
-            if (!dialog.open)
-                Dialog.open(dialog);
-        });
-    }
-    // Attach click events to all .close buttons inside the dialog (excluding triggers)
-    static bindClose(dialog) {
-        // Skip buttons that also have data-js="dialog" (managed by bindOpen)
-        const closeButtons = dialog.querySelectorAll('.close:not([data-js="dialog"])');
-        if (!closeButtons.length)
-            return;
-        // Prevent binding the same listeners multiple times
-        if (dialog.closeBound)
-            return;
-        dialog.closeBound = true;
-        // Add click listener to each close button
-        closeButtons.forEach((button) => {
-            button.addEventListener('click', () => Dialog.close(dialog));
-        });
-    }
-    // Open the dialog and emit lifecycle events
     static open(dialog) {
         Dialog.emitEvent(dialog, 'dialog:beforeOpen', dialog);
         dialog.showModal();
         dialog.classList.add('show');
         Dialog.emitEvent(dialog, 'dialog:afterOpen', dialog);
     }
-    // Close the dialog and emit lifecycle events
     static close(dialog) {
         Dialog.emitEvent(dialog, 'dialog:beforeClose', dialog);
         dialog.classList.remove('show');
@@ -62,8 +78,10 @@ export default class Dialog {
         }, { once: true });
         Dialog.emitEvent(dialog, 'dialog:afterClose', dialog);
     }
-    // Emit a custom event carrying the dialog element
     static emitEvent(target, name, dialog) {
-        target.dispatchEvent(new CustomEvent(name, { detail: { element: dialog }, bubbles: true }));
+        target.dispatchEvent(new CustomEvent(name, {
+            detail: { element: dialog },
+            bubbles: true,
+        }));
     }
 }

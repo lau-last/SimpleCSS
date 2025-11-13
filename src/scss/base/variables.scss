@@ -130,6 +130,13 @@
   ***
   */
 
+  /* Accordion */
+  --accordion-border-color: var(--border-color);
+  --accordion-border-radius: var(--border-radius);
+  --accordion-border-style: solid;
+  --accordion-border-width: .1rem;
+  --accordion-button-padding: 1rem;
+
   /* Alert */
   --alert-body-padding: 1rem;
   --alert-footer-padding: .5rem 1rem;
@@ -142,8 +149,6 @@
   --alert-container-padding-inline: 1rem;
   --alert-margin: .25rem 0;
   --alert-padding: 1rem;
-  --alert-keep-animation-in: alert-keep-in .5s ease forwards;
-  --alert-keep-animation-out: alert-keep-out .5s ease forwards;
   --alert-width: 100%;
 
   /* Badge */
@@ -170,7 +175,7 @@
   --card-border: .1rem solid var(--gray-100);
   --card-border-radius: var(--border-radius);
   --card-box-shadow: var(--box-shadow);
-  --card-padding: 0;
+  --card-group-gap: 1rem;
 
   /* Dialog */
   --dialog-body-padding: 1rem;
@@ -183,7 +188,7 @@
   --dialog-padding: 0;
   --dialog-width: 50%;
 
-  /* Dropdown */
+  /* Collapse */
   --dropdown-border-radius: var(--border-radius);
 
   /* Form */
@@ -226,6 +231,14 @@
 
   /* List */
   --list-nav-hover-bg-color: var(--gray-100);
+  --list-nav-height: 3rem;
+  --list-nav-height-sm: 2.5rem;
+  --list-nav-height-md: 3rem;
+  --list-nav-height-lg: 3.5rem;
+  --list-nav-padding: 0 0 0 1rem;
+  --list-nav-padding-sm: 0 0 0 1rem;;
+  --list-nav-padding-md: 0 0 0 1rem;;
+  --list-nav-padding-lg: 0 0 0 1rem;
   --list-padding: 1rem;
   --list-padding-sm: .5rem;
   --list-padding-md: 1rem;

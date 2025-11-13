@@ -1,40 +1,59 @@
 // Alert base
 @mixin alert-base {
   display: flex;
-  flex-direction: column;
-  position:  relative;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
   padding: var(--alert-padding);
   margin: var(--alert-margin);
   border-radius: var(--alert-border-radius);
   border: var(--alert-border);
-  background:  var(--bg-color);
+  background: var(--bg-color);
   width: var(--alert-width);
   box-shadow: var(--alert-box-shadow);
-
-  .alert-header {padding: var(--alert-header-padding);}
-  .alert-body {padding: var(--alert-body-padding);}
-  .alert-footer {padding: var(--alert-footer-padding);}
+  animation: var(--alert-animation);
 }
 
-// Alert container
-.alert-container {
-  position:  fixed;
-  top: 0;
+
+@mixin alert-container-base {
+  position: fixed;
   left: 0;
   right: 0;
   z-index: 1000;
   display: flex;
-  flex-direction:  column;
+  flex-direction: column;
   padding-inline: var(--alert-container-padding-inline);
+}
+
+.alert-container {
+  @include alert-container-base;
+  top: 0;
+  align-items: center;
+
+  &.top-left,
+  &.bottom-left { align-items: start; }
+
+  &.top-center,
+  &.bottom-center { align-items: center; }
+
+  &.top-right,
+  &.bottom-right { align-items: end; }
+
+  &.top-left,
+  &.top-center,
+  &.top-right { top: 0; }
+
+  &.bottom-left,
+  &.bottom-center,
+  &.bottom-right { bottom: 0; top: auto; }
 }
 
 // Alert
 .alert {
   @include alert-base;
-  animation: var(--alert-animation);
-
-  &-keep {
-    @include alert-base;
-    animation: var(--alert-ke98ep-animation-in);
+  .close {
+    align-self: start;
+    cursor: pointer;
   }
 }
+

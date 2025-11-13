@@ -1,45 +1,69 @@
 // List ul
-.ul{
+.ul {
   list-style: none;
   border-radius: var(--ul-border-radius);
 }
 
 // List ol
-.ol{
+.ol {
   list-style-type: decimal;
   border-radius: var(--ol-border-radius);
 }
 
 // List li
-.li{
-  padding:  var(--list-padding);
+.li {
+  padding: var(--list-padding);
 
-  &-sm{padding: var(--list-padding-sm);}
-  &-md{padding: var(--list-padding-md);}
-  &-lg{padding: var(--list-padding-lg);}
+
+  &-sm {
+    padding: var(--list-padding-sm);
+  }
+
+  &-md {
+    padding: var(--list-padding-md);
+  }
+
+  &-lg {
+    padding: var(--list-padding-lg);
+  }
 }
 
 // List li nav
-.li-nav{
+.li-nav {
   width: 100%;
+  display: flex;
   cursor: pointer;
-  padding: var(--list-padding);
+  align-items: center;
+  height: var(--list-nav-height);
+  padding: var(--list-nav-padding);
 
-  &:hover{
+  & * {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
     background: var(--list-nav-hover-bg-color);
   }
 
-  &-sm{
+  &-sm {
     @extend .li-nav;
-    padding: var(--list-padding-sm);
+    height: var(--list-nav-height-sm);
+    padding: var(--list-nav-padding-sm);
   }
-  &-md{
+
+  &-md {
     @extend .li-nav;
-    padding: var(--list-padding-md);
+    height: var(--list-nav-height-md);
+    padding:  var(--list-nav-padding-md);
   }
-  &-lg{
+
+  &-lg {
     @extend .li-nav;
-    padding: var(--list-padding-lg);
+    height: var(--list-nav-height-lg);
+    padding: var(--list-nav-padding-lg);
   }
 
 }

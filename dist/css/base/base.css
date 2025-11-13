@@ -39,6 +39,9 @@ body h5 {
 body h6 {
   font-size: var(--font-size-h6);
 }
+body button, body a {
+  font-family: var(--font-family-text), sans-serif;
+}
 body {
   /* Text selection */
 }

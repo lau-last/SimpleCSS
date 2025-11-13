@@ -2,6 +2,7 @@
 .btn-group {
   display: flex;
   flex-wrap: wrap;
+  align-items: end;
   gap: var(--button-group-gap);
 }
 
@@ -10,6 +11,9 @@
   border-radius: var(--button-border-radius);
   padding: var(--button-padding);
   cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 
   &:not([class*="outline-"]) {
     border: none;

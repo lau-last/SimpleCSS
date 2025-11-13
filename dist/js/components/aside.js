@@ -1,58 +1,48 @@
+import EventManager from './event_manager.js';
 export default class Aside {
     constructor() {
         Aside.init();
     }
-    // Initialize all buttons that control asides
     static init() {
-        document.querySelectorAll('[data-js="aside"]').forEach(button => Aside.setupButton(button));
+        EventManager.addEventToDocument('click', Aside.onClick);
     }
-    // Wire a single button with its target aside
-    static setupButton(button) {
-        const selector = button.getAttribute('data-target');
+    static onClick(event) {
+        if (!(event instanceof MouseEvent))
+            return;
+        const target = event.target;
+        if (!target)
+            return;
+        Aside.handleClose(target);
+        Aside.handleOpen(target);
+    }
+    static handleOpen(target) {
+        if (!target.matches('[data-js="aside"][data-target]'))
+            return;
+        const selector = target.getAttribute('data-target');
         if (!selector)
             return;
         const aside = document.querySelector(selector);
         if (!aside)
             return;
-        Aside.bindOpen(button, aside);
-        Aside.bindClose(aside);
+        Aside.isOpen(aside) ? Aside.hide(aside) : Aside.show(aside);
     }
-    // Emit a custom event carrying the aside element
-    static emitEvent(target, name, aside) {
-        target.dispatchEvent(new CustomEvent(name, { detail: { element: aside }, bubbles: true }));
+    static handleClose(target) {
+        if (!target.matches('.close'))
+            return;
+        const aside = target.closest('aside');
+        if (!aside)
+            return;
+        if (!Aside.isOpen(aside))
+            return;
+        Aside.hide(aside);
+        return;
     }
-    // Return whether the aside is currently shown
     static isOpen(aside) {
         return aside.classList.contains('show');
     }
-    // Bind the open behavior to the controller button
-    static bindOpen(button, aside) {
-        button.addEventListener('click', () => {
-            if (Aside.isOpen(aside))
-                return;
-            Aside.emitEvent(button, 'aside:beforeOpen', aside);
-            Aside.show(aside);
-            Aside.emitEvent(button, 'aside:afterOpen', aside);
-        });
-    }
-    // Bind close behavior to all .close elements inside the aside
-    static bindClose(aside) {
-        const closeButtons = aside.querySelectorAll('.close');
-        if (!closeButtons.length)
-            return;
-        closeButtons.forEach(btn => btn.addEventListener('click', () => {
-            if (!Aside.isOpen(aside))
-                return;
-            Aside.emitEvent(btn, 'aside:beforeClose', aside);
-            Aside.hide(aside);
-            Aside.emitEvent(btn, 'aside:afterClose', aside);
-        }));
-    }
-    // Show the aside (state change only)
     static show(aside) {
         aside.classList.add('show');
     }
-    // Hide the aside (state change only)
     static hide(aside) {
         aside.classList.remove('show');
     }

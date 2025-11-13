@@ -2,6 +2,7 @@
 .badge-group{
   display: flex;
   flex-wrap: wrap;
+  align-items: end;
   gap: var(--badge-group-gap);
 }
 
@@ -10,6 +11,8 @@
   padding: var(--badge-padding);
   border-radius: var(--badge-border-radius);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 
 
   &-sm {

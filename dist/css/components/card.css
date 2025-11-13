@@ -1,11 +1,15 @@
+.card-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-group-gap);
+}
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
   border-radius: var(--card-border-radius);
   border: var(--card-border);
-  padding: var(--card-padding);
   box-shadow: var(--card-box-shadow);
 }
 .card .card-header {

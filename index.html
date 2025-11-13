@@ -5,50 +5,32 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/css/style.min.css">
-    <script type="module" src="dist/js/app.min.js"></script>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script type="module" src="dist/js/main.js"></script>
     <title>Framework</title>
 </head>
 <body>
 
-<!-- Section alert -->
-<section>
-    <div class="alert-container jc-end ai-end">
 
-        <div class="alert-keep alert-primary" data-js="alert">
-            <div class="alert-header as-end">
-                <button class="btn btn-primary close">×</button>
-            </div>
-            <div class="alert-body">
-                <p>Une erreur est survenue.</p>
-            </div>
-            <div class="alert-footer">
-                <p>Footer de l'alert</p>
-            </div>
-        </div>
-        <div class="alert alert-primary" data-js="alert">Une erreur est survenue.</div>
-<!--        <div class="alert alert-secondary" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-tertiary" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-success" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-info" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-warning" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-danger" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-neutral" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-light" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-dark" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-white" data-js="alert">Une erreur est survenue.</div>-->
-<!--        <div class="alert alert-black" data-js="alert">Une erreur est survenue.</div>-->
-    </div>
-    <script>
-        document.body.addEventListener('alert:beforeRemove', function (event) {
-            console.log('alert:beforeRemove');
-        })
-        document.body.addEventListener('alert:afterRemove', function (event) {
-            console.log('alert:afterRemove');
-        })
-    </script>
-</section>
-<!-- Section navbarx -->
+<!-- Section alert -->
+<!--<section>-->
+
+<!--    <div class="alert-container">-->
+<!--        <div class="alert alert-primary" data-js="alert">Une erreur est survenue. <span class="close">X</span></div>-->
+<!--        <div class="alert alert-secondary" data-js="alert">Une erreur est survenue. <span class="close">X</span></div>-->
+<!--        <div class="alert alert-tertiary" data-js="alert">Une erreur est survenue. <span class="close">X</span></div>-->
+<!--        <div class="alert alert-black" data-js="alert">Une erreur est survenue. <span class="close">X</span></div>-->
+<!--    </div>-->
+<!--    <script>-->
+<!--        document.body.addEventListener('alert:beforeRemove', function (event) {-->
+<!--            console.log('alert:beforeRemove');-->
+<!--        })-->
+<!--        document.body.addEventListener('alert:afterRemove', function (event) {-->
+<!--            console.log('alert:afterRemove');-->
+<!--        })-->
+<!--    </script>-->
+<!--</section>-->
+<!-- Section navbar -->
 <section>
     <nav class="bg-primary p-1">
         <!-- Container Desktop -->
@@ -61,7 +43,7 @@
                     <li><a href="#" class="link-white">About</a></li>
                     <li><a href="#" class="link-white">Contact</a></li>
                 </ul>
-                <!-- Dropdown -->
+                <!-- Collapse -->
                 <div class="dropdown-wrapper as-center">
                     <button class="btn btn-white" data-js="dropdown" data-target="#nav1">Menu</button>
                     <div class="dropdown-overlay-right" id="nav1">
@@ -78,7 +60,7 @@
                 Menu
             </button>
         </div>
-        <!-- Dropdown content (mobile) -->
+        <!-- Collapse content (mobile) -->
         <div class="dropdown d-none-md" id="menu">
 
             <div class="d-flex fd-column gap-2 mt-2">
@@ -103,11 +85,71 @@
 </section>
 <!-- Title -->
 <h1 class="text-center">Framework</h1>
+<!-- Section accordion -->
+<section>
+    <div class="row mt-5">
+        <div class="col-6" style="margin: 0 auto">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-btn" data-js="collapse" data-target="#item1">Menu</button>
+                    <div class="accordion-body" id="item1">
+                        <p class="p-3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda error expedita quaerat
+                            rerum sit? Consequatur dolorem esse facilis mollitia nam natus nesciunt, nihil nisi nobis
+                            odio pariatur perspiciatis provident quasi quibusdam ratione reprehenderit sed, tempora,
+                            tempore ullam ut? Accusamus assumenda dolorem earum enim et eum, id inventore ipsam, iste
+                            neque porro praesentium ratione sed tempora voluptatibus. Animi architecto cum ducimus
+                            eligendi ipsa magnam, necessitatibus recusandae? Accusantium architecto beatae commodi
+                            consequuntur dolores ex harum, ipsam nemo nulla repellat. Alias cumque, doloremque ducimus
+                            eos maxime nam nisi velit! Aliquam fugit iste laboriosam nam quibusdam? Aspernatur commodi
+                            ducimus id impedit laboriosam nam rem.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn" data-js="collapse" data-target="#item2">Menu</button>
+                    <div class="accordion-body" id="item2">
+                        <p class="p-3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda error expedita quaerat
+                            rerum sit? Consequatur dolorem esse facilis mollitia nam natus nesciunt, nihil nisi nobis
+                            odio pariatur perspiciatis provident quasi quibusdam ratione reprehenderit sed, tempora,
+                            tempore ullam ut? Accusamus assumenda dolorem earum enim et eum, id inventore ipsam, iste
+                            neque porro praesentium ratione sed tempora voluptatibus. Animi architecto cum ducimus
+                            eligendi ipsa magnam, necessitatibus recusandae? Accusantium architecto beatae commodi
+                            consequuntur dolores ex harum, ipsam nemo nulla repellat. Alias cumque, doloremque ducimus
+                            eos maxime nam nisi velit! Aliquam fugit iste laboriosam nam quibusdam? Aspernatur commodi
+                            ducimus id impedit laboriosam nam rem.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn" data-js="collapse" data-target="#item3">Menu</button>
+                    <div class="accordion-body" id="item3">
+                        <p class="p-3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda error expedita quaerat
+                            rerum sit? Consequatur dolorem esse facilis mollitia nam natus nesciunt, nihil nisi nobis
+                            odio pariatur perspiciatis provident quasi quibusdam ratione reprehenderit sed, tempora,
+                            tempore ullam ut? Accusamus assumenda dolorem earum enim et eum, id inventore ipsam, iste
+                            neque porro praesentium ratione sed tempora voluptatibus. Animi architecto cum ducimus
+                            eligendi ipsa magnam, necessitatibus recusandae? Accusantium architecto beatae commodi
+                            consequuntur dolores ex harum, ipsam nemo nulla repellat. Alias cumque, doloremque ducimus
+                            eos maxime nam nisi velit! Aliquam fugit iste laboriosam nam quibusdam? Aspernatur commodi
+                            ducimus id impedit laboriosam nam rem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 <!-- Section aside -->
 <section>
     <div class="mx-auto my-5 container">
         <!-- button open -->
-        <button class="btn btn-primary" data-js="aside" data-target="#aside">Open</button>
+        <div class="d-flex jc-end">
+            <button class="btn btn-primary" data-js="aside" data-target="#aside">Open</button>
+        </div>
 
         <!-- aside -->
         <aside class="nav-side" id="aside">
@@ -171,10 +213,10 @@
 <section>
     <div class="mx-auto my-5 container">
         <!--Tab-button-->
-        <div class="tab" data-js="tab">
-            <button class="btn btn-primary active" type="button" data-target="#tab-1">London</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-2">Paris</button>
-            <button class="btn btn-primary" type="button" data-target="#tab-3">Tokyo</button>
+        <div class="tab">
+            <button class="btn btn-primary active" type="button" data-js="tab" data-target="#tab-1">London</button>
+            <button class="btn btn-primary" type="button" data-js="tab" data-target="#tab-2">Paris</button>
+            <button class="btn btn-primary" type="button" data-js="tab" data-target="#tab-3">Tokyo</button>
         </div>
 
         <!--Tab-content-->
@@ -237,6 +279,7 @@
         <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-sm">Ouvrir la modale sm</button>
         <button class="btn btn-tertiary" data-js="dialog" data-target="#modal-lg">Ouvrir la modale lg</button>
 
+
         <dialog class="dialog" id="modal-sm">
             <div class="dialog-header">
                 <h2>Bonjour !</h2>
@@ -294,109 +337,33 @@
 </section>
 <!-- Section Dropdown -->
 <section>
-    <div class="my-5 text-center container d-flex fd-column gap-half">
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper">
-            <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu1">Menu</button>
-            <div class="dropdown-overlay" id="menu1">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
+    <div class="m-5 text-center container d-flex">
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown()">
+                Cliquez ici ▼
+            </button>
+            <div class="dropdown-menu side-left" id="dropdown">
+                <div class="dropdown-item">Option 1</div>
+                <div class="dropdown-item">Option 2</div>
+                <div class="dropdown-item">Option 3</div>
             </div>
         </div>
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper">
-            <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu2">Menu</button>
-            <div class="dropdown-overlay w-100" id="menu2">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper">
-            <button class="btn btn-primary" data-js="dropdown" data-target="#menu4">Menu</button>
-            <div class="dropdown-overlay fit-width" id="menu4">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper">
-            <button class="btn btn-primary" data-js="dropdown" data-target="#menu5">Menu</button>
-            <div class="dropdown-overlay-right" id="menu5">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper">
-            <button class="btn btn-primary" data-js="dropdown" data-target="#menu6">Menu</button>
-            <div class="dropdown-overlay w-100" id="menu6">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper">
-            <button class="btn btn-primary" data-js="dropdown" data-target="#menu7">Menu</button>
-            <div class="dropdown" id="menu7">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper fit-width">
-            <button class="btn btn-primary" data-js="dropdown" data-target="#menu3">Menu</button>
-            <div class="dropdown" id="menu3">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- Dropdown wrapper -->
-        <div class="dropdown-wrapper">
-            <button class="btn btn-primary fit-width" data-js="dropdown" data-target="#menu8">Menu</button>
-            <div class="dropdown fit-width jc-center" id="menu8">
-                <ul class="ul border-all">
-                    <li class="li"><a href="#" class="link">Paramètres</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                    <li class="li"><a href="#" class="link">Déconnexion</a></li>
-                </ul>
-            </div>
-        </div>
+
     </div>
     <script>
-        document.body.addEventListener('dropdown:beforeOpen', function () {
-            console.log('dropdown::beforeOpen')
-        })
-        document.body.addEventListener('dropdown:afterOpen', function () {
-            console.log('dropdown::afterOpen')
-        })
-        document.body.addEventListener('dropdown:beforeClose', function () {
-            console.log('dropdown::beforeClose')
-        })
-        document.body.addEventListener('dropdown:afterClose', function () {
-            console.log('dropdown::afterClose')
-        })
+        function toggleDropdown() {
+            const menu = document.getElementById('dropdown');
+            menu.classList.toggle('show');
+        }
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropdown-btn')) {
+                const menu = document.getElementById('menu');
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+            }
+        }
+
     </script>
 </section>
 <!-- Section layouts -->

@@ -1,81 +1,60 @@
+import EventManager from './event_manager.js';
+
 export default class Tab {
     constructor() {
         Tab.init();
     }
 
-    // Initialize all tab containers and wire their buttons
     private static init(): void {
-        document.querySelectorAll<HTMLElement>('[data-js="tab"]').forEach(tab => Tab.bindTab(tab));
+        EventManager.addEventToDocument('click', Tab.onClick);
     }
 
-    // Bind all buttons within a tab container
-    private static bindTab(tab: HTMLElement): void {
-        const buttons = tab.querySelectorAll<HTMLElement>('[data-target]');
-        if (!buttons.length) return;
-        buttons.forEach(button => Tab.bindButton(tab, button));
+    private static onClick(event: Event): void {
+        if (!(event instanceof MouseEvent)) return;
+
+        const target = event.target as HTMLElement | null;
+        if (!target) return;
+
+        Tab.handleTabClick(target);
     }
 
-    // Bind a single tab button to its content
-    private static bindButton(tab: HTMLElement, button: HTMLElement): void {
-        const content = Tab.resolveContent(button);
+    private static handleTabClick(target: HTMLElement): void {
+        if (!target.matches('[data-js="tab"][data-target]')) return;
+
+        const container = target.parentElement;
+        if (!container) return;
+
+        const content = Tab.resolveContent(target);
         if (!content) return;
-        Tab.bindShow(tab, button, content);
+
+        Tab.hideAll(container);
+        Tab.clearActive(container);
+        Tab.showOne(target, content);
     }
 
-    // Resolve target content element for a button
     private static resolveContent(button: HTMLElement): HTMLElement | null {
-        const targetId = button.getAttribute('data-target');
-        if (!targetId) return null;
-        const element = document.querySelector(targetId);
-        return element instanceof HTMLElement ? element : null;
+        const selector = button.getAttribute('data-target');
+        if (!selector) return null;
+
+        const el = document.querySelector(selector);
+        return el instanceof HTMLElement ? el : null;
     }
 
-    // Bind click to show the target tab content
-    private static bindShow(tab: HTMLElement, button: HTMLElement, content: HTMLElement): void {
-        button.addEventListener('click', () => {
-            Tab.emitEvent(button, 'tab:beforeShow', content);
-            Tab.hideAll(tab);
-            Tab.clearActive(tab);
-            Tab.showOne(button, content);
-            Tab.emitEvent(button, 'tab:afterShow', content);
+    private static hideAll(container: HTMLElement): void {
+        const buttons = container.querySelectorAll<HTMLElement>('[data-js="tab"][data-target]');
+        buttons.forEach(button => {
+            const content = Tab.resolveContent(button);
+            if (content) content.classList.remove('show');
         });
     }
 
-    // Hide all tab panels within the current tab container
-    private static hideAll(tab: HTMLElement): void {
-        tab.querySelectorAll<HTMLElement>('[data-target]').forEach(button => Tab.hideContentByButton(button));
+    private static clearActive(container: HTMLElement): void {
+        const buttons = container.querySelectorAll<HTMLElement>('[data-js="tab"][data-target]');
+        buttons.forEach(button => button.classList.remove('active'));
     }
 
-    // Hide content associated with a given button
-    private static hideContentByButton(button: HTMLElement): void {
-        const content = Tab.resolveContent(button);
-        if (!content) return;
-        content.classList.remove('show');
-    }
-
-    // Remove the 'active' class from all buttons within the container
-    private static clearActive(tab: HTMLElement): void {
-        tab.querySelectorAll<HTMLElement>('[data-target]').forEach(button => Tab.deactivateButton(button));
-    }
-
-    // Deactivate a single button
-    private static deactivateButton(button: HTMLElement): void {
-        button.classList.remove('active');
-    }
-
-    // Activate the clicked button and display its target panel
     private static showOne(button: HTMLElement, content: HTMLElement): void {
-        Tab.activateButton(button);
-        content.classList.add('show');
-    }
-
-    // Activate a single button
-    private static activateButton(button: HTMLElement): void {
         button.classList.add('active');
-    }
-
-    // Emit a custom tab event with the content element in detail
-    private static emitEvent(target: EventTarget, name: string, content: HTMLElement): void {
-        target.dispatchEvent(new CustomEvent(name, {detail: {element: content}, bubbles: true}));
+        content.classList.add('show');
     }
 }

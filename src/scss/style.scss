@@ -1,5 +1,5 @@
 @use 'base/reset';
-@use 'base/variables';
+@use 'base/variable';
 @use 'base/base';
 
 @use 'layout/col';
@@ -7,30 +7,31 @@
 @use 'layout/flex';
 @use 'layout/grid';
 
-@use 'components/accordion';
-@use 'components/alert';
-@use 'components/badge';
-@use 'components/button';
-@use 'components/card';
-@use 'components/dialog';
-@use 'components/dropdown';
-@use 'components/form';
-@use 'components/list';
-@use 'components/link';
-@use 'components/nav';
-@use 'components/tab';
-@use 'components/table';
+@use 'component/accordion';
+@use 'component/alert';
+@use 'component/badge';
+@use 'component/button';
+@use 'component/card';
+@use 'component/collapse';
+@use 'component/dialog';
+@use 'component/dropdown';
+@use 'component/form';
+@use 'component/list';
+@use 'component/nav';
+@use 'component/tab';
+@use 'component/table';
 
-@use 'utilities/border';
-@use 'utilities/color';
-@use 'utilities/display';
-@use 'utilities/image';
-@use 'utilities/position';
-@use 'utilities/sizing';
-@use 'utilities/spacing';
-@use 'utilities/text';
-@use 'utilities/typography';
-@use 'utilities/visibility';
+@use 'utility/border';
+@use 'utility/color';
+@use 'utility/display';
+@use 'utility/helper';
+@use 'utility/image';
+@use 'utility/position';
+@use 'utility/sizing';
+@use 'utility/spacing';
+@use 'utility/text';
+@use 'utility/typography';
+@use 'utility/visibility';
 
 @use 'abstract/animation';
 @use 'abstract/keyframe';

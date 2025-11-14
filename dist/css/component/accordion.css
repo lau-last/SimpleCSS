@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.accordion {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-width: var(--accordion-border-width);
+  border-style: var(--accordion-border-style);
+  border-color: var(--accordion-border-color);
+  border-radius: var(--accordion-border-radius);
+  background-color: var(--accordion-bg-color);
+}
+.accordion .accordion-item {
+  border: none;
+}
+.accordion .accordion-item:first-child .accordion-btn {
+  border-top-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+  border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+}
+.accordion .accordion-item:last-child .accordion-btn {
+  border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+  border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
+  border-bottom: none;
+}
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.accordion .accordion-item .accordion-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: var(--accordion-button-padding);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+}
+.accordion .accordion-item .accordion-btn:after {
+  content: "﹢";
+  margin-left: 0.5rem;
+}
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after {
+  content: "﹣";
+}
+.accordion .accordion-item .accordion-body {
+  height: 0;
+  overflow: hidden;
+}
+.accordion .accordion-item .accordion-body.show {
+  height: auto;
+  overflow: visible;
+  border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+}
+.accordion .accordion-item:last-child .accordion-body.show {
+  border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+  border-bottom: none;
+}

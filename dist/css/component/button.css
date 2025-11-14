@@ -1,0 +1,33 @@
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--button-group-gap);
+}
+
+.btn, .btn-lg, .btn-md, .btn-sm {
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:not([class*=outline-]), .btn-lg:not([class*=outline-]), .btn-md:not([class*=outline-]), .btn-sm:not([class*=outline-]) {
+  border: none;
+}
+.btn:focus, .btn-lg:focus, .btn-md:focus, .btn-sm:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-sm {
+  padding: var(--button-padding-sm);
+}
+
+.btn-md {
+  padding: var(--button-padding-md);
+}
+
+.btn-lg {
+  padding: var(--button-padding-lg);
+}

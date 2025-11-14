@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.collapse {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-style: var(--collapse-border-style);
+  border-width: var(--collapse-border-width);
+  border-color: var(--collapse-border-color);
+  border-radius: var(--collapse-border-radius);
+  background-color: var(--collapse-bg-color);
+}
+.collapse .collapse-btn {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--collapse-button-padding);
+  border-radius: calc(var(--collapse-border-radius) - var(--collapse-border-width));
+}
+.collapse .collapse-btn:after {
+  content: "﹢";
+  margin-left: 0.5rem;
+}
+.collapse:has(.collapse-body.show) > .collapse-btn {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.collapse:has(.collapse-body.show) > .collapse-btn:after {
+  content: "﹣";
+}
+.collapse .collapse-body .nav-list {
+  border: none;
+}
+
+.collapse-body {
+  height: 0;
+  overflow: hidden;
+}
+.collapse-body.show {
+  height: auto;
+  overflow: visible;
+}

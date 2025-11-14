@@ -1,0 +1,31 @@
+// Badge group
+.badge-group{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--badge-group-gap);
+}
+
+// Badge
+.badge {
+  padding: var(--badge-padding);
+  border-radius: var(--badge-border-radius);
+  white-space: nowrap;
+  display: inline-block;
+
+}
+
+.badge-sm {
+  @extend .badge;
+  padding: var(--badge-padding-sm);
+}
+
+.badge-md {
+  @extend .badge;
+  padding: var(--badge-padding-md);
+}
+
+.badge-lg {
+  @extend .badge;
+  padding: var(--badge-padding-lg);
+}

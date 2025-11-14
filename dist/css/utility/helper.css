@@ -1,0 +1,27 @@
+/* Link */
+.no-underline {
+  text-decoration: none;
+}
+.no-underline a {
+  text-decoration: none;
+}
+
+/* List */
+.list-unstyled {
+  list-style: none;
+}
+
+.list-inline {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--list-inline-gap);
+}
+
+.list-column {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--list-column-gap);
+}

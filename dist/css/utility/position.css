@@ -1,0 +1,210 @@
+/* Base positions */
+.position-static {
+  position: static;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+/* Z-index utility */
+.z-0 {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-60 {
+  z-index: 60;
+}
+
+.z-70 {
+  z-index: 70;
+}
+
+.z-80 {
+  z-index: 80;
+}
+
+.z-90 {
+  z-index: 90;
+}
+
+.z-100 {
+  z-index: 100;
+}
+
+.z-200 {
+  z-index: 200;
+}
+
+.z-300 {
+  z-index: 300;
+}
+
+.z-400 {
+  z-index: 400;
+}
+
+.z-500 {
+  z-index: 500;
+}
+
+.z-600 {
+  z-index: 600;
+}
+
+.z-700 {
+  z-index: 700;
+}
+
+.z-800 {
+  z-index: 800;
+}
+
+.z-900 {
+  z-index: 900;
+}
+
+.z-1000 {
+  z-index: 1000;
+}
+
+.z-auto {
+  z-index: auto;
+}
+
+/* Center utility */
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position-x-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.position-y-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Corner shortcuts */
+.position-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.position-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.position-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.position-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Sticky variants */
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+
+.sticky-left {
+  position: sticky;
+  left: 0;
+}
+
+.sticky-right {
+  position: sticky;
+  right: 0;
+}
+
+/* Fixed viewport shortcuts */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fixed-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Full coverage (fill parent or viewport) */
+.position-fill {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+}

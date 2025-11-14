@@ -1,0 +1,37 @@
+.nav-list {
+  list-style: none;
+  border-radius: var(--nav-list-border-radius);
+  border: var(--nav-list-border);
+  background-color: var(--nav-list-bg-color);
+}
+.nav-list > li:not(:last-child) {
+  border-bottom: var(--nav-list-li-border-bottom);
+}
+.nav-list .nav-item, .nav-list .nav-item-lg, .nav-list .nav-item-md, .nav-list .nav-item-sm {
+  line-height: var(--nav-item-height);
+  color: var(--nav-item-text-color);
+  padding: var(--nav-item-padding);
+  height: var(--nav-item-height);
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}
+.nav-list .nav-item:hover, .nav-list .nav-item-lg:hover, .nav-list .nav-item-md:hover, .nav-list .nav-item-sm:hover {
+  background: var(--nav-item-hover-bg-color);
+}
+.nav-list .nav-item-sm {
+  height: var(--nav-item-height-sm);
+  padding: var(--nav-item-padding-sm);
+  line-height: var(--nav-item-height-sm);
+}
+.nav-list .nav-item-md {
+  height: var(--nav-item-height-md);
+  padding: var(--nav-item-padding-md);
+  line-height: var(--nav-item-height-md);
+}
+.nav-list .nav-item-lg {
+  height: var(--nav-item-height-lg);
+  padding: var(--nav-item-padding-lg);
+  line-height: var(--nav-item-height-lg);
+}

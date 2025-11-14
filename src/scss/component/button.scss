@@ -1,0 +1,40 @@
+// Button group
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--button-group-gap);
+}
+
+// Button
+.btn {
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+
+  &:not([class*="outline-"]) {
+    border: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn-sm {
+  @extend .btn;
+  padding: var(--button-padding-sm);
+}
+
+.btn-md {
+  @extend .btn;
+  padding: var(--button-padding-md);
+}
+
+.btn-lg {
+  @extend .btn;
+  padding: var(--button-padding-lg);
+}

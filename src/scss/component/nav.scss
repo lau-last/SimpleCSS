@@ -1,0 +1,46 @@
+// Nav side base
+@mixin nav-side-base {
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width .25s ease, transform .25s ease;;
+  background: var(--bg-color);
+  width: var(--nav-side-width);
+}
+
+// Nav side left
+.nav-side,
+.nav-side-left {
+  @include nav-side-base;
+  left: 0;
+  transform: translateX(-100%);
+  border-right: .1rem solid var(--border-color);
+  border-top-right-radius: var(--nav-border-radius);
+  border-bottom-right-radius: var(--nav-border-radius);
+
+  &.show {
+    width: var(--nav-side-width);
+    transform: translateX(0);
+  }
+}
+
+// Nav side right
+.nav-side-right {
+  @include nav-side-base;
+  right: 0;
+  transform: translateX(100%);
+  border-left: .1rem solid var(--border-color);
+  border-top-left-radius: var(--nav-border-radius);
+  border-bottom-left-radius: var(--nav-border-radius);
+
+  &.show {
+    width: var(--nav-side-width);
+    transform: translateX(0);
+  }
+}
+
+
+

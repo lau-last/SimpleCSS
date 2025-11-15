@@ -10,6 +10,15 @@
     <title>Framework</title>
 </head>
 <body>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+        <label class="switch">
+            label switch
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+</div>
 <!-- Section alert -->
 <section>
     <!--    <div class="alert-container">-->
@@ -134,7 +143,7 @@
         </div>
 
         <!-- aside -->
-        <aside class="nav-side show" id="aside">
+        <aside class="nav-side" id="aside">
 
             <!-- button close -->
             <div class="d-flex jc-end m-1">
@@ -799,31 +808,35 @@
                     <label for="checkbox-lg">Checkbox</label>
                     <input class="input-lg" type="checkbox" id="checkbox-lg" name="checkbox" value="1">
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                <div class="col-3">
                     <!-- Form switch sm -->
-                    <span>Switch round sm</span>
-                    <div class="wrapper-switch-sm">
-                        <label class="switch">
-                            <input id="switch-round-sm" name="switch" type="checkbox">
-                            <span class="slider rounded-pill"></span>
-                        </label>
-                    </div>
-                    <!-- Form default switch md -->
-                    <span>Switch round md</span>
-                    <div class="wrapper-switch-md">
-                        <label class="switch">
-                            <input id="switch-round-md" name="switch" type="checkbox">
-                            <span class="slider rounded-pill"></span>
-                        </label>
-                    </div>
-                    <!-- Form switch lg -->
-                    <span>Switch round lg</span>
-                    <div class="wrapper-switch-lg">
-                        <label class="switch">
-                            <input id="switch-round-lg" name="switch" type="checkbox">
-                            <span class="slider rounded-pill"></span>
-                        </label>
-                    </div>
+                    <label class="switch">
+                        Wi-Fi
+                        <span class="slide">
+                            <input type="checkbox">
+                        </span>
+                    </label>
+
+                    <label class="switch-sm">
+                        Wi-Fi
+                        <span class="slide">
+                            <input type="checkbox">
+                        </span>
+                    </label>
+
+                    <label class="switch-md">
+                        Wi-Fi
+                        <span class="slide">
+                            <input type="checkbox">
+                        </span>
+                    </label>
+
+                    <label class="switch-lg">
+                        Wi-Fi
+                        <span class="slide">
+                            <input type="checkbox">
+                        </span>
+                    </label>
                 </div>
             </div>
         </form>
@@ -863,15 +876,16 @@
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-2">
                     <!-- Form switch inline -->
                     <div class="form-inline">
-                        <span>Switch round</span>
+                        <label for="switch-round-inline">Switch round</label>
                         <div class="wrapper-switch">
-                            <label class="switch">
-                                <input id="switch-round-inline" name="switch" type="checkbox" class="input">
+                            <div class="switch">
+                                <input id="switch-round-inline" name="switch-inline" type="checkbox">
                                 <span class="slider rounded-pill"></span>
-                            </label>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </form>
     </div>

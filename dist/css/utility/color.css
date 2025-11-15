@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Gray shades */
 /* Gray classes */
 .bg-gray-0 {
@@ -794,10 +795,6 @@
 }
 
 /* List */
-.list.list-hover .list-item:hover {
-  background-color: var(--list-item-hover-bg-color);
-}
-
 .list-primary {
   background-color: var(--list-primary-color);
   color: var(--list-text-on-primary);
@@ -805,10 +802,6 @@
 }
 .list-primary .list-item {
   border-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark)) !important;
-}
-.list.list-hover .list-item.list-primary:hover {
-  background-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-primary);
 }
 .list-secondary {
   background-color: var(--list-secondary-color);
@@ -818,10 +811,6 @@
 .list-secondary .list-item {
   border-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark)) !important;
 }
-.list.list-hover .list-item.list-secondary:hover {
-  background-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-secondary);
-}
 .list-tertiary {
   background-color: var(--list-tertiary-color);
   color: var(--list-text-on-tertiary);
@@ -829,10 +818,6 @@
 }
 .list-tertiary .list-item {
   border-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark)) !important;
-}
-.list.list-hover .list-item.list-tertiary:hover {
-  background-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-tertiary);
 }
 .list-success {
   background-color: var(--list-success-color);
@@ -842,10 +827,6 @@
 .list-success .list-item {
   border-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark)) !important;
 }
-.list.list-hover .list-item.list-success:hover {
-  background-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-success);
-}
 .list-info {
   background-color: var(--list-info-color);
   color: var(--list-text-on-info);
@@ -853,10 +834,6 @@
 }
 .list-info .list-item {
   border-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark)) !important;
-}
-.list.list-hover .list-item.list-info:hover {
-  background-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-info);
 }
 .list-warning {
   background-color: var(--list-warning-color);
@@ -866,10 +843,6 @@
 .list-warning .list-item {
   border-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark)) !important;
 }
-.list.list-hover .list-item.list-warning:hover {
-  background-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-warning);
-}
 .list-danger {
   background-color: var(--list-danger-color);
   color: var(--list-text-on-danger);
@@ -877,10 +850,6 @@
 }
 .list-danger .list-item {
   border-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark)) !important;
-}
-.list.list-hover .list-item.list-danger:hover {
-  background-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-danger);
 }
 .list-neutral {
   background-color: var(--list-neutral-color);
@@ -890,10 +859,6 @@
 .list-neutral .list-item {
   border-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark)) !important;
 }
-.list.list-hover .list-item.list-neutral:hover {
-  background-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-neutral);
-}
 .list-light {
   background-color: var(--list-light-color);
   color: var(--list-text-on-light);
@@ -901,10 +866,6 @@
 }
 .list-light .list-item {
   border-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark)) !important;
-}
-.list.list-hover .list-item.list-light:hover {
-  background-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-light);
 }
 .list-dark {
   background-color: var(--list-dark-color);
@@ -914,10 +875,6 @@
 .list-dark .list-item {
   border-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark)) !important;
 }
-.list.list-hover .list-item.list-dark:hover {
-  background-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-dark);
-}
 .list-white {
   background-color: var(--list-white-color);
   color: var(--list-text-on-white);
@@ -925,10 +882,6 @@
 }
 .list-white .list-item {
   border-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark)) !important;
-}
-.list.list-hover .list-item.list-white:hover {
-  background-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark));
-  color: var(--list-text-on-white);
 }
 .list-black {
   background-color: var(--list-black-color);
@@ -938,7 +891,316 @@
 .list-black .list-item {
   border-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark)) !important;
 }
-.list.list-hover .list-item.list-black:hover {
+
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-primary .list-item:hover,
+.list-sm.list-hover.list-primary .list-item:hover,
+.list-md.list-hover.list-primary .list-item:hover,
+.list-lg.list-hover.list-primary .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-primary);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-primary:hover,
+.list-sm.list-hover .list-item.list-primary:hover,
+.list-md.list-hover .list-item.list-primary:hover,
+.list-lg.list-hover .list-item.list-primary:hover {
+  background-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-primary);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-secondary .list-item:hover,
+.list-sm.list-hover.list-secondary .list-item:hover,
+.list-md.list-hover.list-secondary .list-item:hover,
+.list-lg.list-hover.list-secondary .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-secondary);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-secondary:hover,
+.list-sm.list-hover .list-item.list-secondary:hover,
+.list-md.list-hover .list-item.list-secondary:hover,
+.list-lg.list-hover .list-item.list-secondary:hover {
+  background-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-secondary);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-tertiary .list-item:hover,
+.list-sm.list-hover.list-tertiary .list-item:hover,
+.list-md.list-hover.list-tertiary .list-item:hover,
+.list-lg.list-hover.list-tertiary .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-tertiary);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-tertiary:hover,
+.list-sm.list-hover .list-item.list-tertiary:hover,
+.list-md.list-hover .list-item.list-tertiary:hover,
+.list-lg.list-hover .list-item.list-tertiary:hover {
+  background-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-tertiary);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-success .list-item:hover,
+.list-sm.list-hover.list-success .list-item:hover,
+.list-md.list-hover.list-success .list-item:hover,
+.list-lg.list-hover.list-success .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-success);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-success:hover,
+.list-sm.list-hover .list-item.list-success:hover,
+.list-md.list-hover .list-item.list-success:hover,
+.list-lg.list-hover .list-item.list-success:hover {
+  background-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-success);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-info .list-item:hover,
+.list-sm.list-hover.list-info .list-item:hover,
+.list-md.list-hover.list-info .list-item:hover,
+.list-lg.list-hover.list-info .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-info);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-info:hover,
+.list-sm.list-hover .list-item.list-info:hover,
+.list-md.list-hover .list-item.list-info:hover,
+.list-lg.list-hover .list-item.list-info:hover {
+  background-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-info);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-warning .list-item:hover,
+.list-sm.list-hover.list-warning .list-item:hover,
+.list-md.list-hover.list-warning .list-item:hover,
+.list-lg.list-hover.list-warning .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-warning);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-warning:hover,
+.list-sm.list-hover .list-item.list-warning:hover,
+.list-md.list-hover .list-item.list-warning:hover,
+.list-lg.list-hover .list-item.list-warning:hover {
+  background-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-warning);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-danger .list-item:hover,
+.list-sm.list-hover.list-danger .list-item:hover,
+.list-md.list-hover.list-danger .list-item:hover,
+.list-lg.list-hover.list-danger .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-danger);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-danger:hover,
+.list-sm.list-hover .list-item.list-danger:hover,
+.list-md.list-hover .list-item.list-danger:hover,
+.list-lg.list-hover .list-item.list-danger:hover {
+  background-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-danger);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-neutral .list-item:hover,
+.list-sm.list-hover.list-neutral .list-item:hover,
+.list-md.list-hover.list-neutral .list-item:hover,
+.list-lg.list-hover.list-neutral .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-neutral);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-neutral:hover,
+.list-sm.list-hover .list-item.list-neutral:hover,
+.list-md.list-hover .list-item.list-neutral:hover,
+.list-lg.list-hover .list-item.list-neutral:hover {
+  background-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-neutral);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-light .list-item:hover,
+.list-sm.list-hover.list-light .list-item:hover,
+.list-md.list-hover.list-light .list-item:hover,
+.list-lg.list-hover.list-light .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-light);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-light:hover,
+.list-sm.list-hover .list-item.list-light:hover,
+.list-md.list-hover .list-item.list-light:hover,
+.list-lg.list-hover .list-item.list-light:hover {
+  background-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-light);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-dark .list-item:hover,
+.list-sm.list-hover.list-dark .list-item:hover,
+.list-md.list-hover.list-dark .list-item:hover,
+.list-lg.list-hover.list-dark .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-dark);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-dark:hover,
+.list-sm.list-hover .list-item.list-dark:hover,
+.list-md.list-hover .list-item.list-dark:hover,
+.list-lg.list-hover .list-item.list-dark:hover {
+  background-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-dark);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-white .list-item:hover,
+.list-sm.list-hover.list-white .list-item:hover,
+.list-md.list-hover.list-white .list-item:hover,
+.list-lg.list-hover.list-white .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-white);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-white:hover,
+.list-sm.list-hover .list-item.list-white:hover,
+.list-md.list-hover .list-item.list-white:hover,
+.list-lg.list-hover .list-item.list-white:hover {
+  background-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-white);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the LIST’s color */
+}
+.list.list-hover.list-black .list-item:hover,
+.list-sm.list-hover.list-black .list-item:hover,
+.list-md.list-hover.list-black .list-item:hover,
+.list-lg.list-hover.list-black .list-item:hover {
+  background-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-black);
+}
+.list.list-hover,
+.list-sm.list-hover,
+.list-md.list-hover,
+.list-lg.list-hover {
+  /* list-hover — hover depending on the ITEM’s color  */
+}
+.list.list-hover .list-item.list-black:hover,
+.list-sm.list-hover .list-item.list-black:hover,
+.list-md.list-hover .list-item.list-black:hover,
+.list-lg.list-hover .list-item.list-black:hover {
   background-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark));
   color: var(--list-text-on-black);
 }

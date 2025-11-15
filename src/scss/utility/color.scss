@@ -137,25 +137,32 @@ $list-colors: (
 }
 
 /* List */
-.list.list-hover {
-  .list-item:hover {
-    background-color: var(--list-item-hover-bg-color);
-  }
-}
 .list {
   @each $name, $value in $list-colors {
-
     &-#{$name} {
       background-color: #{$value};
       color: var(--list-text-on-#{$name});
       border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
-      .list-item{
+
+      .list-item {
         border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
       }
     }
+  }
+}
 
-
-    &.list-hover {
+.list,
+.list-sm,
+.list-md,
+.list-lg {
+  &.list-hover {
+    @each $name, $value in $list-colors {
+      /* list-hover — hover depending on the LIST’s color */
+      &.list-#{$name} .list-item:hover {
+        background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
+        color: var(--list-text-on-#{$name});
+      }
+      /* list-hover — hover depending on the ITEM’s color  */
       .list-item.list-#{$name}:hover {
         background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
         color: var(--list-text-on-#{$name});
@@ -163,6 +170,7 @@ $list-colors: (
     }
   }
 }
+
 
 
 

@@ -6,8 +6,9 @@
   border-color: var(--list-border-color);
   background-color: var(--list-bg-color);
 }
-.list.list-hover .list-item, .list-hover.list-lg .list-item, .list-hover.list-md .list-item, .list-hover.list-sm .list-item {
+.list.list-hover .list-item:hover, .list-hover.list-lg .list-item:hover, .list-hover.list-md .list-item:hover, .list-hover.list-sm .list-item:hover {
   cursor: pointer;
+  background-color: var(--list-item-hover-bg-color);
 }
 .list > *:not(:last-child), .list-lg > *:not(:last-child), .list-md > *:not(:last-child), .list-sm > *:not(:last-child) {
   border-bottom-width: var(--list-item-border-width);

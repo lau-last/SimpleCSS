@@ -1110,102 +1110,186 @@ input[type=checkbox].input-lg {
   height: var(--input-height-lg);
 }
 
-/* Switch */
-.wrapper-switch, .wrapper-switch-lg, .wrapper-switch-md, .wrapper-switch-sm {
-  margin-block: 0.5rem;
-  align-content: center;
+.switch {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: fit-content;
+}
+.switch.form-inline {
+  max-width: 100%;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--gap-form-inline);
+}
+.switch .slide {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
   height: var(--input-height);
 }
-.wrapper-switch .switch, .wrapper-switch-lg .switch, .wrapper-switch-md .switch, .wrapper-switch-sm .switch {
-  width: 3rem;
-  height: 1.5rem;
+.switch input {
+  appearance: none;
+  width: calc(var(--switch-size) * 2);
+  height: var(--switch-size);
+  background: #ccc;
+  border-radius: 1rem;
   position: relative;
-  display: inline-block;
-}
-.wrapper-switch .switch input, .wrapper-switch-lg .switch input, .wrapper-switch-md .switch input, .wrapper-switch-sm .switch input {
-  display: none;
-}
-.wrapper-switch .switch .slider, .wrapper-switch-lg .switch .slider, .wrapper-switch-md .switch .slider, .wrapper-switch-sm .switch .slider {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   cursor: pointer;
   transition: 0.3s;
-  position: absolute;
-  -webkit-transition: 0.3s;
-  background-color: var(--switch-bg-color);
-  border: 0.1rem solid var(--switch-border-color);
 }
-.wrapper-switch .switch .slider:before, .wrapper-switch-lg .switch .slider:before, .wrapper-switch-md .switch .slider:before, .wrapper-switch-sm .switch .slider:before {
+.switch input::before {
   content: "";
-  left: 0.1rem;
-  width: 1.1rem;
-  bottom: 0.1rem;
-  height: 1.1rem;
-  transition: 0.3s;
   position: absolute;
-  -webkit-transition: 0.3s;
-  background-color: var(--switch-btn-color);
-}
-.wrapper-switch .switch .slider.rounded-pill, .wrapper-switch-lg .switch .slider.rounded-pill, .wrapper-switch-md .switch .slider.rounded-pill, .wrapper-switch-sm .switch .slider.rounded-pill {
-  border-radius: 10rem;
-}
-.wrapper-switch .switch .slider.rounded-pill:before, .wrapper-switch-lg .switch .slider.rounded-pill:before, .wrapper-switch-md .switch .slider.rounded-pill:before, .wrapper-switch-sm .switch .slider.rounded-pill:before {
+  width: calc(var(--switch-size) - 0.4rem);
+  height: calc(var(--switch-size) - 0.4rem);
   border-radius: 50%;
+  background: white;
+  left: 0.2rem;
+  top: 0.2rem;
+  transition: 0.3s;
 }
-.wrapper-switch .switch input:checked + .slider:before, .wrapper-switch-lg .switch input:checked + .slider:before, .wrapper-switch-md .switch input:checked + .slider:before, .wrapper-switch-sm .switch input:checked + .slider:before {
-  -ms-transform: translateX(1.5rem);
-  transform: translateX(1.5rem);
+.switch input:checked {
+  background: var(--primary-color);
 }
-.wrapper-switch .switch input:checked + .slider, .wrapper-switch-lg .switch input:checked + .slider, .wrapper-switch-md .switch input:checked + .slider, .wrapper-switch-sm .switch input:checked + .slider {
-  background-color: var(--primary-color);
+.switch input:checked::before {
+  left: calc(var(--switch-size) + 0.2rem);
 }
 
-.wrapper-switch-sm {
+.switch-sm {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: fit-content;
+}
+.switch-sm.form-inline {
+  max-width: 100%;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--gap-form-inline);
+}
+.switch-sm .slide {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
   height: var(--input-height-sm);
 }
-.wrapper-switch-sm .switch {
+.switch-sm input {
+  appearance: none;
   width: calc(var(--switch-size-sm) * 2);
   height: var(--switch-size-sm);
+  background: #ccc;
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.wrapper-switch-sm .switch .slider:before {
+.switch-sm input::before {
+  content: "";
+  position: absolute;
   width: calc(var(--switch-size-sm) - 0.4rem);
   height: calc(var(--switch-size-sm) - 0.4rem);
+  border-radius: 50%;
+  background: white;
+  left: 0.2rem;
+  top: 0.2rem;
+  transition: 0.3s;
 }
-.wrapper-switch-sm .switch input:checked + .slider:before {
-  -ms-transform: translateX(var(--switch-size-sm));
-  transform: translateX(var(--switch-size-sm));
+.switch-sm input:checked {
+  background: var(--primary-color);
+}
+.switch-sm input:checked::before {
+  left: calc(var(--switch-size-sm) + 0.2rem);
 }
 
-.wrapper-switch-md {
+.switch-md {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: fit-content;
+}
+.switch-md.form-inline {
+  max-width: 100%;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--gap-form-inline);
+}
+.switch-md .slide {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
   height: var(--input-height-md);
 }
-.wrapper-switch-md .switch {
+.switch-md input {
+  appearance: none;
   width: calc(var(--switch-size-md) * 2);
   height: var(--switch-size-md);
+  background: #ccc;
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.wrapper-switch-md .switch .slider:before {
+.switch-md input::before {
+  content: "";
+  position: absolute;
   width: calc(var(--switch-size-md) - 0.4rem);
   height: calc(var(--switch-size-md) - 0.4rem);
+  border-radius: 50%;
+  background: white;
+  left: 0.2rem;
+  top: 0.2rem;
+  transition: 0.3s;
 }
-.wrapper-switch-md .switch input:checked + .slider:before {
-  -ms-transform: translateX(var(--switch-size-md));
-  transform: translateX(var(--switch-size-md));
+.switch-md input:checked {
+  background: var(--primary-color);
+}
+.switch-md input:checked::before {
+  left: calc(var(--switch-size-md) + 0.2rem);
 }
 
-.wrapper-switch-lg {
+.switch-lg {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: fit-content;
+}
+.switch-lg.form-inline {
+  max-width: 100%;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--gap-form-inline);
+}
+.switch-lg .slide {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
   height: var(--input-height-lg);
 }
-.wrapper-switch-lg .switch {
+.switch-lg input {
+  appearance: none;
   width: calc(var(--switch-size-lg) * 2);
   height: var(--switch-size-lg);
+  background: #ccc;
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.wrapper-switch-lg .switch .slider:before {
+.switch-lg input::before {
+  content: "";
+  position: absolute;
   width: calc(var(--switch-size-lg) - 0.4rem);
   height: calc(var(--switch-size-lg) - 0.4rem);
+  border-radius: 50%;
+  background: white;
+  left: 0.2rem;
+  top: 0.2rem;
+  transition: 0.3s;
 }
-.wrapper-switch-lg .switch input:checked + .slider:before {
-  -ms-transform: translateX(var(--switch-size-lg));
-  transform: translateX(var(--switch-size-lg));
+.switch-lg input:checked {
+  background: var(--primary-color);
+}
+.switch-lg input:checked::before {
+  left: calc(var(--switch-size-lg) + 0.2rem);
 }

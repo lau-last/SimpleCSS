@@ -330,6 +330,7 @@ input[type="checkbox"] {
     width: var(--input-size);
     height: var(--input-height);
   }
+
   &.input-sm {
     @include input-base;
     @include accent-color;
@@ -337,6 +338,7 @@ input[type="checkbox"] {
     width: var(--input-size-sm);
     height: var(--input-height-sm);
   }
+
   &.input-md {
     @include input-base;
     @include accent-color;
@@ -344,6 +346,7 @@ input[type="checkbox"] {
     width: var(--input-size-md);
     height: var(--input-height-md);
   }
+
   &.input-lg {
     @include input-base;
     @include accent-color;
@@ -354,130 +357,68 @@ input[type="checkbox"] {
 }
 
 
-/* Switch */
-.wrapper-switch {
-  margin-block: .5rem;
-  align-content: center;
-  height: var(--input-height);
 
-  .switch {
-    width: 3rem;
-    height: 1.5rem;
+@mixin switch-size($input-height, $switch-size) {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: fit-content;
+
+  &.form-inline{
+    max-width: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gap-form-inline);
+  }
+
+  .slide {
+    margin: .5rem 0;
+    display: flex;
+    align-items: center;
+    height: $input-height;
+  }
+
+  input {
+    appearance: none;
+    width: calc(#{$switch-size} * 2);
+    height: $switch-size;
+    background: #ccc;
+    border-radius: 1rem;
     position: relative;
-    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
 
-    input {
-      display: none;
-    }
-
-    .slider {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      cursor: pointer;
-      transition: .3s;
+    &::before {
+      content: "";
       position: absolute;
-      -webkit-transition: .3s;
-      background-color: var(--switch-bg-color);
-      border: .1rem solid var(--switch-border-color);
-
-      &:before {
-        content: "";
-        left: .1rem;
-        width: 1.1rem;
-        bottom: .1rem;
-        height: 1.1rem;
-        transition: .3s;
-        position: absolute;
-        -webkit-transition: .3s;
-        background-color: var(--switch-btn-color);
-      }
-
-      &.rounded-pill {
-        border-radius: 10rem;
-
-        &:before {
-          border-radius: 50%;
-        }
-      }
+      width: calc(#{$switch-size} - .4rem);
+      height: calc(#{$switch-size} - .4rem);
+      border-radius: 50%;
+      background: white;
+      left: 0.2rem;
+      top: 0.2rem;
+      transition: 0.3s;
     }
 
-    input:checked + .slider:before {
-      -ms-transform: translateX(1.5rem);
-      transform: translateX(1.5rem);
+    &:checked {
+      background: var(--primary-color);
     }
 
-    input:checked + .slider {
-      background-color: var(--primary-color);
+    &:checked::before {
+      left: calc(#{$switch-size} + .2rem);
     }
   }
 }
 
-// size of switch
-.wrapper-switch-sm {
-  @extend .wrapper-switch;
-  height: var(--input-height-sm);
-
-  .switch {
-    width: calc(var(--switch-size-sm) * 2);
-    height: var(--switch-size-sm);
-
-    .slider:before {
-      width: calc(var(--switch-size-sm) - .4rem);
-      height: calc(var(--switch-size-sm) - .4rem);
-    }
-
-    input:checked + .slider:before {
-      -ms-transform: translateX(var(--switch-size-sm));
-      transform: translateX(var(--switch-size-sm));
-    }
-  }
+.switch {
+  @include switch-size(var(--input-height), var(--switch-size));
 }
-
-.wrapper-switch-md {
-  @extend .wrapper-switch;
-  height: var(--input-height-md);
-
-  .switch {
-    width: calc(var(--switch-size-md) * 2);
-    height: var(--switch-size-md);
-
-    .slider:before {
-      width: calc(var(--switch-size-md) - .4rem);
-      height: calc(var(--switch-size-md) - .4rem);
-    }
-
-    input:checked + .slider:before {
-      -ms-transform: translateX(var(--switch-size-md));
-      transform: translateX(var(--switch-size-md));
-    }
-  }
+.switch-sm {
+  @include switch-size(var(--input-height-sm), var(--switch-size-sm));
 }
-
-.wrapper-switch-lg {
-  @extend .wrapper-switch;
-  height: var(--input-height-lg);
-
-  .switch {
-    width: calc(var(--switch-size-lg) * 2);
-    height: var(--switch-size-lg);
-
-    .slider:before {
-      width: calc(var(--switch-size-lg) - .4rem);
-      height: calc(var(--switch-size-lg) - .4rem);
-    }
-
-    input:checked + .slider:before {
-      -ms-transform: translateX(var(--switch-size-lg));
-      transform: translateX(var(--switch-size-lg));
-    }
-  }
+.switch-md {
+  @include switch-size(var(--input-height-md), var(--switch-size-md));
 }
-
-
-
-
-
-
-
+.switch-lg {
+  @include switch-size(var(--input-height-lg), var(--switch-size-lg));
+}

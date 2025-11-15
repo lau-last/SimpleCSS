@@ -7,8 +7,9 @@
   background-color: var(--list-bg-color);
 
   &.list-hover{
-    .list-item{
+    .list-item:hover{
       cursor: pointer;
+      background-color: var(--list-item-hover-bg-color);
     }
   }
 

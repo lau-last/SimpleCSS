@@ -10,31 +10,50 @@
   background-color: var(--collapse-bg-color);
 }
 .collapse .collapse-btn {
+  padding: var(--collapse-button-padding);
+}
+.collapse .collapse-btn-sm {
+  padding: var(--collapse-button-padding-sm);
+}
+.collapse .collapse-btn-md {
+  padding: var(--collapse-button-padding-md);
+}
+.collapse .collapse-btn-lg {
+  padding: var(--collapse-button-padding-lg);
+}
+.collapse .collapse-btn,
+.collapse .collapse-btn-sm,
+.collapse .collapse-btn-md,
+.collapse .collapse-btn-lg {
   width: 100%;
   cursor: pointer;
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--collapse-button-padding);
   border-radius: calc(var(--collapse-border-radius) - var(--collapse-border-width));
 }
-.collapse .collapse-btn:after {
+.collapse .collapse-btn:after,
+.collapse .collapse-btn-sm:after,
+.collapse .collapse-btn-md:after,
+.collapse .collapse-btn-lg:after {
   content: "﹢";
   margin-left: 0.5rem;
 }
-.collapse:has(.collapse-body.show) > .collapse-btn {
+.collapse:has(.collapse-body.show) > .collapse-btn, .collapse:has(.collapse-body.show) > .collapse-btn-sm, .collapse:has(.collapse-body.show) > .collapse-btn-md, .collapse:has(.collapse-body.show) > .collapse-btn-lg {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.collapse:has(.collapse-body.show) > .collapse-btn:after {
+.collapse:has(.collapse-body.show) > .collapse-btn:after, .collapse:has(.collapse-body.show) > .collapse-btn-sm:after, .collapse:has(.collapse-body.show) > .collapse-btn-md:after, .collapse:has(.collapse-body.show) > .collapse-btn-lg:after {
   content: "﹣";
 }
-.collapse .collapse-body .nav-list {
+.collapse .collapse-body .list {
   border: none;
 }
 
 .collapse-body {
+  margin: 0 !important;
+  padding: 0 !important;
   height: 0;
   overflow: hidden;
 }

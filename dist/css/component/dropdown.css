@@ -15,13 +15,11 @@
   display: none;
   transform: scale(0.5);
   transform-origin: top;
-  pointer-events: none;
   transition: opacity 0.1s ease, transform 0.1s ease;
 }
 .dropdown-menu.show {
   opacity: 1;
   transform: scale(1);
-  pointer-events: auto;
 }
 .dropdown-menu.left {
   left: 0;

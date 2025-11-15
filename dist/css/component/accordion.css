@@ -12,39 +12,73 @@
 .accordion .accordion-item {
   border: none;
 }
-.accordion .accordion-item:first-child .accordion-btn {
+.accordion .accordion-item .accordion-btn {
+  padding: var(--accordion-button-padding);
+}
+.accordion .accordion-item .accordion-btn-sm {
+  padding: var(--accordion-button-padding-sm);
+}
+.accordion .accordion-item .accordion-btn-md {
+  padding: var(--accordion-button-padding-md);
+}
+.accordion .accordion-item .accordion-btn-lg {
+  padding: var(--accordion-button-padding-lg);
+}
+.accordion .accordion-item:first-child .accordion-btn,
+.accordion .accordion-item:first-child .accordion-btn-sm,
+.accordion .accordion-item:first-child .accordion-btn-md,
+.accordion .accordion-item:first-child .accordion-btn-lg {
   border-top-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
   border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
 }
-.accordion .accordion-item:last-child .accordion-btn {
+.accordion .accordion-item:last-child .accordion-btn,
+.accordion .accordion-item:last-child .accordion-btn-sm,
+.accordion .accordion-item:last-child .accordion-btn-md,
+.accordion .accordion-item:last-child .accordion-btn-lg {
   border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
   border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
   border-bottom: none;
 }
-.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn {
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn,
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-sm,
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-md,
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-lg {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.accordion .accordion-item .accordion-btn {
+.accordion .accordion-item .accordion-btn,
+.accordion .accordion-item .accordion-btn-sm,
+.accordion .accordion-item .accordion-btn-md,
+.accordion .accordion-item .accordion-btn-lg {
   cursor: pointer;
   width: 100%;
-  padding: var(--accordion-button-padding);
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
 }
-.accordion .accordion-item .accordion-btn:after {
+.accordion .accordion-item .accordion-btn:after,
+.accordion .accordion-item .accordion-btn-sm:after,
+.accordion .accordion-item .accordion-btn-md:after,
+.accordion .accordion-item .accordion-btn-lg:after {
   content: "﹢";
   margin-left: 0.5rem;
 }
-.accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after {
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after,
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn-sm:after,
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn-md:after,
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn-lg:after {
   content: "﹣";
 }
 .accordion .accordion-item .accordion-body {
+  padding: 0 !important;
+  margin: 0 !important;
   height: 0;
   overflow: hidden;
+}
+.accordion .accordion-item .accordion-body .list {
+  border: none;
 }
 .accordion .accordion-item .accordion-body.show {
   height: auto;

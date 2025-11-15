@@ -1,50 +1,59 @@
-.nav-list {
+.list {
   list-style: none;
-  border-radius: var(--nav-list-border-radius);
-  border: var(--nav-list-border);
-  background-color: var(--nav-list-bg-color);
+  border-radius: var(--list-border-radius);
+  border-width: var(--list-border-width);
+  border-style: var(--list-border-style);
+  border-color: var(--list-border-color);
+  background-color: var(--list-bg-color);
 
-  > li {
+  &.list-hover{
+    .list-item{
+      cursor: pointer;
+    }
+  }
+
+
+  > * {
     &:not(:last-child) {
-      border-bottom: var(--nav-list-li-border-bottom);
+      border-bottom-width:  var(--list-item-border-width);
+      border-bottom-style: var(--list-item-border-style);
+      border-bottom-color: var(--list-item-border-color);
     }
   }
 
-  .nav-item {
-    line-height: var(--nav-item-height);
-    color: var(--nav-item-text-color);
-    padding: var(--nav-item-padding);
-    height: var(--nav-item-height);
+  .list-item {
+    line-height: var(--list-item-height);
+    padding: var(--list-item-padding);
+    height: var(--list-item-height);
     display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
     width: 100%;
-
-    &:hover {
-      background: var(--nav-item-hover-bg-color);
-    }
-
   }
-
-  .nav-item-sm {
-    @extend .nav-item;
-    height: var(--nav-item-height-sm);
-    padding: var(--nav-item-padding-sm);
-    line-height: var(--nav-item-height-sm);
-  }
-
-  .nav-item-md {
-    @extend .nav-item;
-    height: var(--nav-item-height-md);
-    padding: var(--nav-item-padding-md);
-    line-height: var(--nav-item-height-md);
-  }
-
-  .nav-item-lg {
-    @extend .nav-item;
-    height: var(--nav-item-height-lg);
-    padding: var(--nav-item-padding-lg);
-    line-height: var(--nav-item-height-lg);
-  }
-
 }
+
+.list-sm{
+  @extend .list;
+  .list-item{
+    height: var(--list-item-height-sm);
+    padding: var(--list-item-padding-sm);
+    line-height: var(--list-item-height-sm);
+  }
+}
+
+.list-md{
+  @extend .list;
+  .list-item{
+    height: var(--list-item-height-md);
+    padding: var(--list-item-padding-md);
+    line-height: var(--list-item-height-md);
+  }
+}
+
+.list-lg{
+  @extend .list;
+  .list-item{
+    height: var(--list-item-height-lg);
+    padding: var(--list-item-padding-lg);
+    line-height: var(--list-item-height-lg);
+  }
+}
+

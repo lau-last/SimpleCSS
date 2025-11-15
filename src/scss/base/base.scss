@@ -29,6 +29,12 @@ body {
 
   button, a {font-family: var(--font-family-text), sans-serif;}
 
+  /* Links */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
 
   /* Text selection */
   ::selection {

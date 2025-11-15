@@ -127,6 +127,9 @@
   --accordion-border-style: solid;
   --accordion-border-width: .1rem;
   --accordion-button-padding: 1rem;
+  --accordion-button-padding-sm: .5rem 1rem;
+  --accordion-button-padding-md: 1rem;
+  --accordion-button-padding-lg: 1.5rem;
   /* Alert */
   --alert-body-padding: 1rem;
   --alert-footer-padding: .5rem 1rem;
@@ -168,6 +171,9 @@
   --collapse-border-style: solid;
   --collapse-border-width: .1rem;
   --collapse-button-padding: 1rem;
+  --collapse-button-padding-sm: .5rem 1rem;
+  --collapse-button-padding-md: 1rem;
+  --collapse-button-padding-lg: 1.5rem;
   /* Dialog */
   --dialog-body-padding: 1rem;
   --dialog-header-padding: 1rem;
@@ -218,22 +224,49 @@
   --img-thumbnail-border: .1rem solid rgba(0, 0, 0, .125);
   --img-thumbnail-padding: .25rem;
   /* List */
+  --list-bg-color: var(--bg-color);
+  --list-border-width: .1rem;
+  --list-border-style: solid;
+  --list-border-color: var(--gray-150);
+  --list-border-radius: var(--border-radius);
   --list-column-gap: 2rem;
   --list-inline-gap: 2rem;
-  --nav-item-height: 3rem;
-  --nav-item-height-sm: 2rem;
-  --nav-item-height-md: 3rem;
-  --nav-item-height-lg: 5rem;
-  --nav-item-hover-bg-color: var(--gray-100);
-  --nav-item-padding: 0 1rem;
-  --nav-item-padding-sm: 0 0.5rem;
-  --nav-item-padding-md: 0 1rem;
-  --nav-item-padding-lg: 0 2rem;
-  --nav-item-text-color: var(--text-color);
-  --nav-list-bg-color: var(--bg-color);
-  --nav-list-border: .1rem solid var(--gray-150);
-  --nav-list-border-radius: var(--border-radius);
-  --nav-list-li-border-bottom: 1px solid var(--gray-150);
+  --list-item-height: 3rem;
+  --list-item-height-sm: 2rem;
+  --list-item-height-md: 3rem;
+  --list-item-height-lg: 5rem;
+  --list-item-hover-bg-color: rgba(0, 0, 0, 0.1);
+  --list-item-padding: 0 1rem;
+  --list-item-padding-sm: 0 0.5rem;
+  --list-item-padding-md: 0 1rem;
+  --list-item-padding-lg: 0 2rem;
+  --list-item-border-width: .1rem;
+  --list-item-border-style: solid;
+  --list-item-border-color: var(--gray-150);
+  --list-primary-color: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
+  --list-secondary-color: color-mix(in srgb, var(--secondary-color) 50%, var(--color-mix-light));
+  --list-tertiary-color: color-mix(in srgb, var(--tertiary-color) 50%, var(--color-mix-light));
+  --list-black-color: color-mix(in srgb, var(--black-color) 50%, var(--color-mix-dark));
+  --list-danger-color: color-mix(in srgb, var(--danger-color) 50%, var(--color-mix-light));
+  --list-dark-color: color-mix(in srgb, var(--dark-color) 50%, var(--color-mix-light));
+  --list-info-color: color-mix(in srgb, var(--info-color) 50%, var(--color-mix-light));
+  --list-light-color: color-mix(in srgb, var(--light-color) 50%, var(--color-mix-light));
+  --list-neutral-color: color-mix(in srgb, var(--neutral-color) 50%, var(--color-mix-light));
+  --list-success-color: color-mix(in srgb, var(--success-color) 50%, var(--color-mix-light));
+  --list-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
+  --list-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-dark));
+  --list-text-on-primary: var(--black-color);
+  --list-text-on-secondary: var(--black-color);
+  --list-text-on-tertiary: var(--black-color);
+  --list-text-on-black: var(--white-color);
+  --list-text-on-danger: var(--black-color);
+  --list-text-on-dark: var(--white-color);
+  --list-text-on-info: var(--black-color);
+  --list-text-on-light: var(--black-color);
+  --list-text-on-neutral: var(--black-color);
+  --list-text-on-success: var(--black-color);
+  --list-text-on-warning: var(--black-color);
+  --list-text-on-white: var(--black-color);
   /* Nav */
   --nav-border: .1rem solid var(--border-color);
   --nav-border-radius: var(--border-radius);
@@ -352,6 +385,13 @@ body h6 {
 }
 body button, body a {
   font-family: var(--font-family-text), sans-serif;
+}
+body {
+  /* Links */
+}
+body a {
+  color: inherit;
+  text-decoration: none;
 }
 body {
   /* Text selection */
@@ -3528,39 +3568,73 @@ body ::selection {
 .accordion .accordion-item {
   border: none;
 }
-.accordion .accordion-item:first-child .accordion-btn {
+.accordion .accordion-item .accordion-btn {
+  padding: var(--accordion-button-padding);
+}
+.accordion .accordion-item .accordion-btn-sm {
+  padding: var(--accordion-button-padding-sm);
+}
+.accordion .accordion-item .accordion-btn-md {
+  padding: var(--accordion-button-padding-md);
+}
+.accordion .accordion-item .accordion-btn-lg {
+  padding: var(--accordion-button-padding-lg);
+}
+.accordion .accordion-item:first-child .accordion-btn,
+.accordion .accordion-item:first-child .accordion-btn-sm,
+.accordion .accordion-item:first-child .accordion-btn-md,
+.accordion .accordion-item:first-child .accordion-btn-lg {
   border-top-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
   border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
 }
-.accordion .accordion-item:last-child .accordion-btn {
+.accordion .accordion-item:last-child .accordion-btn,
+.accordion .accordion-item:last-child .accordion-btn-sm,
+.accordion .accordion-item:last-child .accordion-btn-md,
+.accordion .accordion-item:last-child .accordion-btn-lg {
   border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
   border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
   border-bottom: none;
 }
-.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn {
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn,
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-sm,
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-md,
+.accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-lg {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.accordion .accordion-item .accordion-btn {
+.accordion .accordion-item .accordion-btn,
+.accordion .accordion-item .accordion-btn-sm,
+.accordion .accordion-item .accordion-btn-md,
+.accordion .accordion-item .accordion-btn-lg {
   cursor: pointer;
   width: 100%;
-  padding: var(--accordion-button-padding);
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
 }
-.accordion .accordion-item .accordion-btn:after {
+.accordion .accordion-item .accordion-btn:after,
+.accordion .accordion-item .accordion-btn-sm:after,
+.accordion .accordion-item .accordion-btn-md:after,
+.accordion .accordion-item .accordion-btn-lg:after {
   content: "﹢";
   margin-left: 0.5rem;
 }
-.accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after {
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after,
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn-sm:after,
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn-md:after,
+.accordion .accordion-item:has(.accordion-body.show) .accordion-btn-lg:after {
   content: "﹣";
 }
 .accordion .accordion-item .accordion-body {
+  padding: 0 !important;
+  margin: 0 !important;
   height: 0;
   overflow: hidden;
+}
+.accordion .accordion-item .accordion-body .list {
+  border: none;
 }
 .accordion .accordion-item .accordion-body.show {
   height: auto;
@@ -3714,31 +3788,50 @@ body ::selection {
   background-color: var(--collapse-bg-color);
 }
 .collapse .collapse-btn {
+  padding: var(--collapse-button-padding);
+}
+.collapse .collapse-btn-sm {
+  padding: var(--collapse-button-padding-sm);
+}
+.collapse .collapse-btn-md {
+  padding: var(--collapse-button-padding-md);
+}
+.collapse .collapse-btn-lg {
+  padding: var(--collapse-button-padding-lg);
+}
+.collapse .collapse-btn,
+.collapse .collapse-btn-sm,
+.collapse .collapse-btn-md,
+.collapse .collapse-btn-lg {
   width: 100%;
   cursor: pointer;
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--collapse-button-padding);
   border-radius: calc(var(--collapse-border-radius) - var(--collapse-border-width));
 }
-.collapse .collapse-btn:after {
+.collapse .collapse-btn:after,
+.collapse .collapse-btn-sm:after,
+.collapse .collapse-btn-md:after,
+.collapse .collapse-btn-lg:after {
   content: "﹢";
   margin-left: 0.5rem;
 }
-.collapse:has(.collapse-body.show) > .collapse-btn {
+.collapse:has(.collapse-body.show) > .collapse-btn, .collapse:has(.collapse-body.show) > .collapse-btn-sm, .collapse:has(.collapse-body.show) > .collapse-btn-md, .collapse:has(.collapse-body.show) > .collapse-btn-lg {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.collapse:has(.collapse-body.show) > .collapse-btn:after {
+.collapse:has(.collapse-body.show) > .collapse-btn:after, .collapse:has(.collapse-body.show) > .collapse-btn-sm:after, .collapse:has(.collapse-body.show) > .collapse-btn-md:after, .collapse:has(.collapse-body.show) > .collapse-btn-lg:after {
   content: "﹣";
 }
-.collapse .collapse-body .nav-list {
+.collapse .collapse-body .list {
   border: none;
 }
 
 .collapse-body {
+  margin: 0 !important;
+  padding: 0 !important;
   height: 0;
   overflow: hidden;
 }
@@ -3797,13 +3890,11 @@ body ::selection {
   display: none;
   transform: scale(0.5);
   transform-origin: top;
-  pointer-events: none;
   transition: opacity 0.1s ease, transform 0.1s ease;
 }
 .dropdown-menu.show {
   opacity: 1;
   transform: scale(1);
-  pointer-events: auto;
 }
 .dropdown-menu.left {
   left: 0;
@@ -5062,42 +5153,46 @@ input[type=checkbox].input-lg {
   transform: translateX(var(--switch-size-lg));
 }
 
-.nav-list {
+.list, .list-lg, .list-md, .list-sm {
   list-style: none;
-  border-radius: var(--nav-list-border-radius);
-  border: var(--nav-list-border);
-  background-color: var(--nav-list-bg-color);
+  border-radius: var(--list-border-radius);
+  border-width: var(--list-border-width);
+  border-style: var(--list-border-style);
+  border-color: var(--list-border-color);
+  background-color: var(--list-bg-color);
 }
-.nav-list > li:not(:last-child) {
-  border-bottom: var(--nav-list-li-border-bottom);
-}
-.nav-list .nav-item, .nav-list .nav-item-lg, .nav-list .nav-item-md, .nav-list .nav-item-sm {
-  line-height: var(--nav-item-height);
-  color: var(--nav-item-text-color);
-  padding: var(--nav-item-padding);
-  height: var(--nav-item-height);
-  display: inline-block;
-  text-decoration: none;
+.list.list-hover .list-item, .list-hover.list-lg .list-item, .list-hover.list-md .list-item, .list-hover.list-sm .list-item {
   cursor: pointer;
+}
+.list > *:not(:last-child), .list-lg > *:not(:last-child), .list-md > *:not(:last-child), .list-sm > *:not(:last-child) {
+  border-bottom-width: var(--list-item-border-width);
+  border-bottom-style: var(--list-item-border-style);
+  border-bottom-color: var(--list-item-border-color);
+}
+.list .list-item, .list-lg .list-item, .list-md .list-item, .list-sm .list-item {
+  line-height: var(--list-item-height);
+  padding: var(--list-item-padding);
+  height: var(--list-item-height);
+  display: inline-block;
   width: 100%;
 }
-.nav-list .nav-item:hover, .nav-list .nav-item-lg:hover, .nav-list .nav-item-md:hover, .nav-list .nav-item-sm:hover {
-  background: var(--nav-item-hover-bg-color);
+
+.list-sm .list-item {
+  height: var(--list-item-height-sm);
+  padding: var(--list-item-padding-sm);
+  line-height: var(--list-item-height-sm);
 }
-.nav-list .nav-item-sm {
-  height: var(--nav-item-height-sm);
-  padding: var(--nav-item-padding-sm);
-  line-height: var(--nav-item-height-sm);
+
+.list-md .list-item {
+  height: var(--list-item-height-md);
+  padding: var(--list-item-padding-md);
+  line-height: var(--list-item-height-md);
 }
-.nav-list .nav-item-md {
-  height: var(--nav-item-height-md);
-  padding: var(--nav-item-padding-md);
-  line-height: var(--nav-item-height-md);
-}
-.nav-list .nav-item-lg {
-  height: var(--nav-item-height-lg);
-  padding: var(--nav-item-padding-lg);
-  line-height: var(--nav-item-height-lg);
+
+.list-lg .list-item {
+  height: var(--list-item-height-lg);
+  padding: var(--list-item-padding-lg);
+  line-height: var(--list-item-height-lg);
 }
 
 .nav-side,
@@ -6321,6 +6416,156 @@ table.table-lg tfoot tr td {
   color: var(--text-on-black);
 }
 
+/* List */
+.list.list-hover .list-item:hover {
+  background-color: var(--list-item-hover-bg-color);
+}
+
+.list-primary {
+  background-color: var(--list-primary-color);
+  color: var(--list-text-on-primary);
+  border-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-primary .list-item {
+  border-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-primary:hover {
+  background-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-primary);
+}
+.list-secondary {
+  background-color: var(--list-secondary-color);
+  color: var(--list-text-on-secondary);
+  border-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-secondary .list-item {
+  border-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-secondary:hover {
+  background-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-secondary);
+}
+.list-tertiary {
+  background-color: var(--list-tertiary-color);
+  color: var(--list-text-on-tertiary);
+  border-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-tertiary .list-item {
+  border-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-tertiary:hover {
+  background-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-tertiary);
+}
+.list-success {
+  background-color: var(--list-success-color);
+  color: var(--list-text-on-success);
+  border-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-success .list-item {
+  border-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-success:hover {
+  background-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-success);
+}
+.list-info {
+  background-color: var(--list-info-color);
+  color: var(--list-text-on-info);
+  border-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-info .list-item {
+  border-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-info:hover {
+  background-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-info);
+}
+.list-warning {
+  background-color: var(--list-warning-color);
+  color: var(--list-text-on-warning);
+  border-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-warning .list-item {
+  border-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-warning:hover {
+  background-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-warning);
+}
+.list-danger {
+  background-color: var(--list-danger-color);
+  color: var(--list-text-on-danger);
+  border-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-danger .list-item {
+  border-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-danger:hover {
+  background-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-danger);
+}
+.list-neutral {
+  background-color: var(--list-neutral-color);
+  color: var(--list-text-on-neutral);
+  border-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-neutral .list-item {
+  border-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-neutral:hover {
+  background-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-neutral);
+}
+.list-light {
+  background-color: var(--list-light-color);
+  color: var(--list-text-on-light);
+  border-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-light .list-item {
+  border-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-light:hover {
+  background-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-light);
+}
+.list-dark {
+  background-color: var(--list-dark-color);
+  color: var(--list-text-on-dark);
+  border-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-dark .list-item {
+  border-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-dark:hover {
+  background-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-dark);
+}
+.list-white {
+  background-color: var(--list-white-color);
+  color: var(--list-text-on-white);
+  border-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-white .list-item {
+  border-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-white:hover {
+  background-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-white);
+}
+.list-black {
+  background-color: var(--list-black-color);
+  color: var(--list-text-on-black);
+  border-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-black .list-item {
+  border-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-black:hover {
+  background-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-black);
+}
+
 /* Tables */
 table.table-primary {
   background-color: var(--table-primary-color);
@@ -6470,75 +6715,123 @@ table .table-black * {
 /* Links */
 .link-primary {
   color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
 }
 .link-primary:hover {
   color: color-mix(in srgb, var(--primary-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--primary-color) 75%, var(--color-mix-dark));
 }
 .link-secondary {
   color: var(--secondary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
 }
 .link-secondary:hover {
   color: color-mix(in srgb, var(--secondary-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--secondary-color) 75%, var(--color-mix-dark));
 }
 .link-tertiary {
   color: var(--tertiary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--tertiary-color);
 }
 .link-tertiary:hover {
   color: color-mix(in srgb, var(--tertiary-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--tertiary-color) 75%, var(--color-mix-dark));
 }
 .link-success {
   color: var(--success-color);
+  text-decoration: underline;
+  text-decoration-color: var(--success-color);
 }
 .link-success:hover {
   color: color-mix(in srgb, var(--success-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--success-color) 75%, var(--color-mix-dark));
 }
 .link-info {
   color: var(--info-color);
+  text-decoration: underline;
+  text-decoration-color: var(--info-color);
 }
 .link-info:hover {
   color: color-mix(in srgb, var(--info-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--info-color) 75%, var(--color-mix-dark));
 }
 .link-warning {
   color: var(--warning-color);
+  text-decoration: underline;
+  text-decoration-color: var(--warning-color);
 }
 .link-warning:hover {
   color: color-mix(in srgb, var(--warning-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--warning-color) 75%, var(--color-mix-dark));
 }
 .link-danger {
   color: var(--danger-color);
+  text-decoration: underline;
+  text-decoration-color: var(--danger-color);
 }
 .link-danger:hover {
   color: color-mix(in srgb, var(--danger-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--danger-color) 75%, var(--color-mix-dark));
 }
 .link-neutral {
   color: var(--neutral-color);
+  text-decoration: underline;
+  text-decoration-color: var(--neutral-color);
 }
 .link-neutral:hover {
   color: color-mix(in srgb, var(--neutral-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--neutral-color) 75%, var(--color-mix-dark));
 }
 .link-light {
   color: var(--light-color);
+  text-decoration: underline;
+  text-decoration-color: var(--light-color);
 }
 .link-light:hover {
   color: color-mix(in srgb, var(--light-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--light-color) 75%, var(--color-mix-dark));
 }
 .link-dark {
   color: var(--dark-color);
+  text-decoration: underline;
+  text-decoration-color: var(--dark-color);
 }
 .link-dark:hover {
   color: color-mix(in srgb, var(--dark-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--dark-color) 75%, var(--color-mix-dark));
 }
 .link-white {
   color: var(--white-color);
+  text-decoration: underline;
+  text-decoration-color: var(--white-color);
 }
 .link-white:hover {
   color: color-mix(in srgb, var(--white-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--white-color) 75%, var(--color-mix-dark));
 }
 .link-black {
   color: var(--black-color);
+  text-decoration: underline;
+  text-decoration-color: var(--black-color);
 }
 .link-black:hover {
   color: color-mix(in srgb, var(--black-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--black-color) 75%, var(--color-mix-dark));
 }
 
 /* Alerts */

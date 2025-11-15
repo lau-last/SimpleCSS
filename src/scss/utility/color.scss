@@ -45,6 +45,21 @@ $table-colors: (
         "black": var(--table-black-color)
 );
 
+$list-colors: (
+        "primary": var(--list-primary-color),
+        "secondary": var(--list-secondary-color),
+        "tertiary": var(--list-tertiary-color),
+        "success": var(--list-success-color),
+        "info": var(--list-info-color),
+        "warning": var(--list-warning-color),
+        "danger": var(--list-danger-color),
+        "neutral": var(--list-neutral-color),
+        "light": var(--list-light-color),
+        "dark": var(--list-dark-color),
+        "white": var(--list-white-color),
+        "black": var(--list-black-color)
+);
+
 /* Background */
 .bg {
   @each $name, $value in $colors {
@@ -121,6 +136,36 @@ $table-colors: (
   }
 }
 
+/* List */
+.list.list-hover {
+  .list-item:hover {
+    background-color: var(--list-item-hover-bg-color);
+  }
+}
+.list {
+  @each $name, $value in $list-colors {
+
+    &-#{$name} {
+      background-color: #{$value};
+      color: var(--list-text-on-#{$name});
+      border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
+      .list-item{
+        border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
+      }
+    }
+
+
+    &.list-hover {
+      .list-item.list-#{$name}:hover {
+        background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
+        color: var(--list-text-on-#{$name});
+      }
+    }
+  }
+}
+
+
+
 /* Tables */
 table {
   &.table {
@@ -151,8 +196,12 @@ table {
   @each $name, $value in $colors {
     &-#{$name} {
       color: #{$value};
+      text-decoration: underline;
+      text-decoration-color: #{$value};
       &:hover {
         color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+        text-decoration: underline;
+        text-decoration-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
       }
     }
   }

@@ -15,14 +15,12 @@
   display: none;
   transform: scale(0.5);
   transform-origin: top;
-  pointer-events: none;
   transition: opacity 0.1s ease, transform 0.1s ease;
 
 
   &.show {
     opacity: 1;
     transform: scale(1);
-    pointer-events: auto;
   }
 
 

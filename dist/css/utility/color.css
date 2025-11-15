@@ -793,6 +793,156 @@
   color: var(--text-on-black);
 }
 
+/* List */
+.list.list-hover .list-item:hover {
+  background-color: var(--list-item-hover-bg-color);
+}
+
+.list-primary {
+  background-color: var(--list-primary-color);
+  color: var(--list-text-on-primary);
+  border-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-primary .list-item {
+  border-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-primary:hover {
+  background-color: color-mix(in srgb, var(--list-primary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-primary);
+}
+.list-secondary {
+  background-color: var(--list-secondary-color);
+  color: var(--list-text-on-secondary);
+  border-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-secondary .list-item {
+  border-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-secondary:hover {
+  background-color: color-mix(in srgb, var(--list-secondary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-secondary);
+}
+.list-tertiary {
+  background-color: var(--list-tertiary-color);
+  color: var(--list-text-on-tertiary);
+  border-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-tertiary .list-item {
+  border-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-tertiary:hover {
+  background-color: color-mix(in srgb, var(--list-tertiary-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-tertiary);
+}
+.list-success {
+  background-color: var(--list-success-color);
+  color: var(--list-text-on-success);
+  border-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-success .list-item {
+  border-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-success:hover {
+  background-color: color-mix(in srgb, var(--list-success-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-success);
+}
+.list-info {
+  background-color: var(--list-info-color);
+  color: var(--list-text-on-info);
+  border-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-info .list-item {
+  border-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-info:hover {
+  background-color: color-mix(in srgb, var(--list-info-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-info);
+}
+.list-warning {
+  background-color: var(--list-warning-color);
+  color: var(--list-text-on-warning);
+  border-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-warning .list-item {
+  border-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-warning:hover {
+  background-color: color-mix(in srgb, var(--list-warning-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-warning);
+}
+.list-danger {
+  background-color: var(--list-danger-color);
+  color: var(--list-text-on-danger);
+  border-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-danger .list-item {
+  border-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-danger:hover {
+  background-color: color-mix(in srgb, var(--list-danger-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-danger);
+}
+.list-neutral {
+  background-color: var(--list-neutral-color);
+  color: var(--list-text-on-neutral);
+  border-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-neutral .list-item {
+  border-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-neutral:hover {
+  background-color: color-mix(in srgb, var(--list-neutral-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-neutral);
+}
+.list-light {
+  background-color: var(--list-light-color);
+  color: var(--list-text-on-light);
+  border-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-light .list-item {
+  border-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-light:hover {
+  background-color: color-mix(in srgb, var(--list-light-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-light);
+}
+.list-dark {
+  background-color: var(--list-dark-color);
+  color: var(--list-text-on-dark);
+  border-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-dark .list-item {
+  border-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-dark:hover {
+  background-color: color-mix(in srgb, var(--list-dark-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-dark);
+}
+.list-white {
+  background-color: var(--list-white-color);
+  color: var(--list-text-on-white);
+  border-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-white .list-item {
+  border-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-white:hover {
+  background-color: color-mix(in srgb, var(--list-white-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-white);
+}
+.list-black {
+  background-color: var(--list-black-color);
+  color: var(--list-text-on-black);
+  border-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark)) !important;
+}
+.list-black .list-item {
+  border-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark)) !important;
+}
+.list.list-hover .list-item.list-black:hover {
+  background-color: color-mix(in srgb, var(--list-black-color) 90%, var(--color-mix-dark));
+  color: var(--list-text-on-black);
+}
+
 /* Tables */
 table.table-primary {
   background-color: var(--table-primary-color);
@@ -942,75 +1092,123 @@ table .table-black * {
 /* Links */
 .link-primary {
   color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
 }
 .link-primary:hover {
   color: color-mix(in srgb, var(--primary-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--primary-color) 75%, var(--color-mix-dark));
 }
 .link-secondary {
   color: var(--secondary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
 }
 .link-secondary:hover {
   color: color-mix(in srgb, var(--secondary-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--secondary-color) 75%, var(--color-mix-dark));
 }
 .link-tertiary {
   color: var(--tertiary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--tertiary-color);
 }
 .link-tertiary:hover {
   color: color-mix(in srgb, var(--tertiary-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--tertiary-color) 75%, var(--color-mix-dark));
 }
 .link-success {
   color: var(--success-color);
+  text-decoration: underline;
+  text-decoration-color: var(--success-color);
 }
 .link-success:hover {
   color: color-mix(in srgb, var(--success-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--success-color) 75%, var(--color-mix-dark));
 }
 .link-info {
   color: var(--info-color);
+  text-decoration: underline;
+  text-decoration-color: var(--info-color);
 }
 .link-info:hover {
   color: color-mix(in srgb, var(--info-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--info-color) 75%, var(--color-mix-dark));
 }
 .link-warning {
   color: var(--warning-color);
+  text-decoration: underline;
+  text-decoration-color: var(--warning-color);
 }
 .link-warning:hover {
   color: color-mix(in srgb, var(--warning-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--warning-color) 75%, var(--color-mix-dark));
 }
 .link-danger {
   color: var(--danger-color);
+  text-decoration: underline;
+  text-decoration-color: var(--danger-color);
 }
 .link-danger:hover {
   color: color-mix(in srgb, var(--danger-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--danger-color) 75%, var(--color-mix-dark));
 }
 .link-neutral {
   color: var(--neutral-color);
+  text-decoration: underline;
+  text-decoration-color: var(--neutral-color);
 }
 .link-neutral:hover {
   color: color-mix(in srgb, var(--neutral-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--neutral-color) 75%, var(--color-mix-dark));
 }
 .link-light {
   color: var(--light-color);
+  text-decoration: underline;
+  text-decoration-color: var(--light-color);
 }
 .link-light:hover {
   color: color-mix(in srgb, var(--light-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--light-color) 75%, var(--color-mix-dark));
 }
 .link-dark {
   color: var(--dark-color);
+  text-decoration: underline;
+  text-decoration-color: var(--dark-color);
 }
 .link-dark:hover {
   color: color-mix(in srgb, var(--dark-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--dark-color) 75%, var(--color-mix-dark));
 }
 .link-white {
   color: var(--white-color);
+  text-decoration: underline;
+  text-decoration-color: var(--white-color);
 }
 .link-white:hover {
   color: color-mix(in srgb, var(--white-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--white-color) 75%, var(--color-mix-dark));
 }
 .link-black {
   color: var(--black-color);
+  text-decoration: underline;
+  text-decoration-color: var(--black-color);
 }
 .link-black:hover {
   color: color-mix(in srgb, var(--black-color) 75%, var(--color-mix-dark));
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--black-color) 75%, var(--color-mix-dark));
 }
 
 /* Alerts */

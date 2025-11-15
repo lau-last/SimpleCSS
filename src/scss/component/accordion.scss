@@ -11,16 +11,27 @@
   .accordion-item {
     border: none;
 
+    .accordion-btn{padding: var(--accordion-button-padding);}
+    .accordion-btn-sm{padding: var(--accordion-button-padding-sm);}
+    .accordion-btn-md{padding: var(--accordion-button-padding-md);}
+    .accordion-btn-lg{padding: var(--accordion-button-padding-lg);}
+
 
     &:first-child {
-      .accordion-btn {
+      .accordion-btn,
+      .accordion-btn-sm,
+      .accordion-btn-md,
+      .accordion-btn-lg {
         border-top-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
         border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
       }
     }
     
     &:last-child {
-      .accordion-btn {
+      .accordion-btn,
+      .accordion-btn-sm,
+      .accordion-btn-md,
+      .accordion-btn-lg {
         border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
         border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
         border-bottom: none; 
@@ -28,7 +39,10 @@
 
 
       &:has(.accordion-body.show) {
-        .accordion-btn {
+        .accordion-btn,
+        .accordion-btn-sm,
+        .accordion-btn-md,
+        .accordion-btn-lg {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
@@ -36,10 +50,12 @@
     }
 
 
-    .accordion-btn {
+    .accordion-btn,
+    .accordion-btn-sm,
+    .accordion-btn-md,
+    .accordion-btn-lg {
       cursor: pointer;
       width: 100%;
-      padding: var(--accordion-button-padding);
       border: none;
       display: flex;
       justify-content: space-between;
@@ -54,7 +70,10 @@
 
  
     &:has(.accordion-body.show) {
-      .accordion-btn {
+      .accordion-btn,
+      .accordion-btn-sm,
+      .accordion-btn-md,
+      .accordion-btn-lg{
         &:after {
           content: '\FE63'; 
         }
@@ -62,8 +81,13 @@
     }
     
     .accordion-body {
+      padding: 0 !important;
+      margin: 0 !important;
       height: 0;
       overflow: hidden;
+      .list{
+        border: none;
+      }
 
       &.show {
         height: auto;

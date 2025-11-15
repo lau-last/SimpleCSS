@@ -14,8 +14,7 @@ label.required::after {
   color: var(--danger-color);
 }
 
-/* Base text controls: select */
-select.select, select.select-lg, select.select-md, select.select-sm {
+select.select, select.select-sm, select.select-md, select.select-lg {
   border: var(--input-border);
   border-radius: var(--input-border-radius);
   background-color: var(--input-bg-color);
@@ -23,21 +22,29 @@ select.select, select.select-lg, select.select-md, select.select-sm {
   margin: var(--input-margin);
   /* Placeholder */
 }
-select.select::placeholder, select.select-lg::placeholder, select.select-md::placeholder, select.select-sm::placeholder {
+select.select::placeholder, select.select-sm::placeholder, select.select-md::placeholder, select.select-lg::placeholder {
   color: var(--input-placeholder-color);
 }
-select.select, select.select-lg, select.select-md, select.select-sm {
+select.select, select.select-sm, select.select-md, select.select-lg {
   /* Focus ring */
 }
-select.select:focus, select.select-lg:focus, select.select-md:focus, select.select-sm:focus {
+select.select:focus, select.select-sm:focus, select.select-md:focus, select.select-lg:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: var(--input-box-shadow-focus);
 }
-select.select, select.select-lg, select.select-md, select.select-sm {
+select.select, select.select-sm, select.select-md, select.select-lg {
   width: 100%;
-  height: var(--input-height);
   padding: var(--select-padding);
+}
+select.select option[disabled], select.select-sm option[disabled], select.select-md option[disabled], select.select-lg option[disabled] {
+  color: var(--input-placeholder-color);
+}
+select.select:has(option[disabled]:checked), select.select-sm:has(option[disabled]:checked), select.select-md:has(option[disabled]:checked), select.select-lg:has(option[disabled]:checked) {
+  color: var(--input-placeholder-color);
+}
+select.select {
+  height: var(--input-height);
 }
 select.select-sm {
   height: var(--input-height-sm);
@@ -1136,7 +1143,7 @@ input[type=checkbox].input-lg {
   border-radius: 1rem;
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch input::before {
   content: "";
@@ -1147,7 +1154,7 @@ input[type=checkbox].input-lg {
   background: white;
   left: 0.2rem;
   top: 0.2rem;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch input:checked {
   background: var(--primary-color);
@@ -1182,7 +1189,7 @@ input[type=checkbox].input-lg {
   border-radius: 1rem;
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch-sm input::before {
   content: "";
@@ -1193,7 +1200,7 @@ input[type=checkbox].input-lg {
   background: white;
   left: 0.2rem;
   top: 0.2rem;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch-sm input:checked {
   background: var(--primary-color);
@@ -1228,7 +1235,7 @@ input[type=checkbox].input-lg {
   border-radius: 1rem;
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch-md input::before {
   content: "";
@@ -1239,7 +1246,7 @@ input[type=checkbox].input-lg {
   background: white;
   left: 0.2rem;
   top: 0.2rem;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch-md input:checked {
   background: var(--primary-color);
@@ -1274,7 +1281,7 @@ input[type=checkbox].input-lg {
   border-radius: 1rem;
   position: relative;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch-lg input::before {
   content: "";
@@ -1285,7 +1292,7 @@ input[type=checkbox].input-lg {
   background: white;
   left: 0.2rem;
   top: 0.2rem;
-  transition: 0.3s;
+  transition: 0.15s;
 }
 .switch-lg input:checked {
   background: var(--primary-color);

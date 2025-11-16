@@ -1523,6 +1523,56 @@ table .table-black * {
   color: var(--text-on-black);
 }
 
+/* Alerts */
+.navbar-primary {
+  background: var(--primary-color);
+  color: var(--text-on-primary);
+}
+.navbar-secondary {
+  background: var(--secondary-color);
+  color: var(--text-on-secondary);
+}
+.navbar-tertiary {
+  background: var(--tertiary-color);
+  color: var(--text-on-tertiary);
+}
+.navbar-success {
+  background: var(--success-color);
+  color: var(--text-on-success);
+}
+.navbar-info {
+  background: var(--info-color);
+  color: var(--text-on-info);
+}
+.navbar-warning {
+  background: var(--warning-color);
+  color: var(--text-on-warning);
+}
+.navbar-danger {
+  background: var(--danger-color);
+  color: var(--text-on-danger);
+}
+.navbar-neutral {
+  background: var(--neutral-color);
+  color: var(--text-on-neutral);
+}
+.navbar-light {
+  background: var(--light-color);
+  color: var(--text-on-light);
+}
+.navbar-dark {
+  background: var(--dark-color);
+  color: var(--text-on-dark);
+}
+.navbar-white {
+  background: var(--white-color);
+  color: var(--text-on-white);
+}
+.navbar-black {
+  background: var(--black-color);
+  color: var(--text-on-black);
+}
+
 /* Text */
 .text-primary {
   color: var(--primary-color);

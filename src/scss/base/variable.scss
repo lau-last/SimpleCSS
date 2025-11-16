@@ -297,9 +297,17 @@
 
 
   /* Nav */
+  --navbar-padding: 1rem;
+  --navbar-collapse-gap: 2rem;
+  --navbar-nav-gap: 2rem;
+  --navbar-border: none;
+  --navbar-border-radius: 0;
+  --navbar-nav-margin: var(--navbar-nav-gap) 0 0 0;
+
   --nav-border: .1rem solid var(--border-color);
   --nav-border-radius: var(--border-radius);
   --nav-side-width: 30rem;
+
 
   /* Tab */
   --tab-border: .1rem solid var(--border-color);

@@ -71,21 +71,6 @@ export default class Collapse {
     }
 
 
-    // private static open(collapse: HTMLElement): void {
-    //     collapse.dataset.animating = 'true';
-    //     collapse.classList.add('show');
-    //
-    //     const height = collapse.scrollHeight;
-    //     Collapse.prepareOpenStyles(collapse);
-    //
-    //     const animation = Collapse.playOpenAnimation(collapse, height);
-    //     animation.onfinish = () => {
-    //         collapse.style.height = 'auto';
-    //         collapse.style.overflow = 'visible';
-    //         delete collapse.dataset.animating;
-    //     };
-    //     console.log(height)
-    // }
     private static open(collapse: HTMLElement): void {
         collapse.dataset.animating = 'true';
         collapse.classList.add('show');
@@ -100,6 +85,7 @@ export default class Collapse {
             collapse.style.height = 'auto';
             collapse.style.overflow = 'visible';
             delete collapse.dataset.animating;
+            Collapse.cleanAnimationStyles(collapse);
         };
     }
 
@@ -115,6 +101,8 @@ export default class Collapse {
             collapse.style.height = '0px';
             collapse.classList.remove('show');
             delete collapse.dataset.animating;
+            Collapse.cleanAnimationStyles(collapse);
+
         };
     }
 
@@ -140,6 +128,12 @@ export default class Collapse {
             [{height: `${height}px`}, {height: '0px'}],
             {duration: 300, easing: 'ease'}
         );
+    }
+
+    private static cleanAnimationStyles(collapse: HTMLElement): void {
+        collapse.style.removeProperty('height');
+        collapse.style.removeProperty('overflow');
+        delete collapse.dataset.animating;
     }
 
 }

@@ -32,12 +32,10 @@ export default class Aside {
 
     private static handleClose(target: HTMLElement): void {
         if (!target.matches('.close')) return;
-            const aside = target.closest('aside') as HTMLElement | null;
-            if (!aside) return;
-            if (!Aside.isOpen(aside)) return;
-            Aside.hide(aside);
-            return;
-
+        const aside = target.closest('aside, .sidebar-left, .sidebar-right') as HTMLElement | null;
+        if (!aside) return;
+        if (!Aside.isOpen(aside)) return;
+        Aside.hide(aside);
     }
 
 

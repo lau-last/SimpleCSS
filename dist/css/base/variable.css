@@ -257,20 +257,26 @@
   --list-text-on-warning: var(--black-color);
   --list-text-on-white: var(--black-color);
   /* Nav */
-  --navbar-padding: 1rem;
-  --navbar-collapse-gap: 2rem;
-  --navbar-nav-gap: 2rem;
   --navbar-border: none;
   --navbar-border-radius: 0;
+  --navbar-collapse-gap: 2rem;
+  --navbar-nav-gap: 2rem;
   --navbar-nav-margin: var(--navbar-nav-gap) 0 0 0;
-  --nav-border: .1rem solid var(--border-color);
-  --nav-border-radius: var(--border-radius);
-  --nav-side-width: 30rem;
+  --navbar-padding: 1rem;
+  /* Sidebar */
+  --sidebar-border: .1rem solid var(--border-color);
+  --sidebar-border-radius: var(--border-radius);
+  --sidebar-padding: 1rem;
+  --sidebar-width: 30rem;
   /* Tab */
-  --tab-border: .1rem solid var(--border-color);
-  --tab-border-radius: var(--border-radius);
-  --tab-gap: .1rem;
-  --tab-padding: 1rem;
+  --tab-content-border: .1rem solid var(--border-color);
+  --tab-content-padding: 1rem;
+  --tab-content-border-radius: var(--border-radius);
+  --tab-button-radius: var(--border-radius);
+  --tab-button-padding: .5rem 1rem;
+  --tab-button-padding-sm: .5rem 1rem;
+  --tab-button-padding-md: .75rem 1.5rem;
+  --tab-button-padding-lg: 1rem 2rem;
   /* Table */
   --table-border-color: var(--gray-100);
   --table-border-divider-color: var(--gray-1000);

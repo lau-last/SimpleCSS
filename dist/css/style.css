@@ -265,20 +265,26 @@
   --list-text-on-warning: var(--black-color);
   --list-text-on-white: var(--black-color);
   /* Nav */
-  --navbar-padding: 1rem;
-  --navbar-collapse-gap: 2rem;
-  --navbar-nav-gap: 2rem;
   --navbar-border: none;
   --navbar-border-radius: 0;
+  --navbar-collapse-gap: 2rem;
+  --navbar-nav-gap: 2rem;
   --navbar-nav-margin: var(--navbar-nav-gap) 0 0 0;
-  --nav-border: .1rem solid var(--border-color);
-  --nav-border-radius: var(--border-radius);
-  --nav-side-width: 30rem;
+  --navbar-padding: 1rem;
+  /* Sidebar */
+  --sidebar-border: .1rem solid var(--border-color);
+  --sidebar-border-radius: var(--border-radius);
+  --sidebar-padding: 1rem;
+  --sidebar-width: 30rem;
   /* Tab */
-  --tab-border: .1rem solid var(--border-color);
-  --tab-border-radius: var(--border-radius);
-  --tab-gap: .1rem;
-  --tab-padding: 1rem;
+  --tab-content-border: .1rem solid var(--border-color);
+  --tab-content-padding: 1rem;
+  --tab-content-border-radius: var(--border-radius);
+  --tab-button-radius: var(--border-radius);
+  --tab-button-padding: .5rem 1rem;
+  --tab-button-padding-sm: .5rem 1rem;
+  --tab-button-padding-md: .75rem 1.5rem;
+  --tab-button-padding-lg: 1rem 2rem;
   /* Table */
   --table-border-color: var(--gray-100);
   --table-border-divider-color: var(--gray-1000);
@@ -3624,6 +3630,13 @@ body ::selection {
   content: "﹢";
   margin-left: 0.5rem;
 }
+.accordion .accordion-item .accordion-btn:focus,
+.accordion .accordion-item .accordion-btn-sm:focus,
+.accordion .accordion-item .accordion-btn-md:focus,
+.accordion .accordion-item .accordion-btn-lg:focus {
+  outline: none;
+  box-shadow: none;
+}
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after,
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn-sm:after,
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn-md:after,
@@ -3820,6 +3833,19 @@ body ::selection {
 .collapse .collapse-btn-lg:after {
   content: "﹢";
   margin-left: 0.5rem;
+}
+.collapse .collapse-btn:not([class*=outline-]),
+.collapse .collapse-btn-sm:not([class*=outline-]),
+.collapse .collapse-btn-md:not([class*=outline-]),
+.collapse .collapse-btn-lg:not([class*=outline-]) {
+  border: none;
+}
+.collapse .collapse-btn:focus,
+.collapse .collapse-btn-sm:focus,
+.collapse .collapse-btn-md:focus,
+.collapse .collapse-btn-lg:focus {
+  outline: none;
+  box-shadow: none;
 }
 .collapse:has(.collapse-body.show) > .collapse-btn, .collapse:has(.collapse-body.show) > .collapse-btn-sm, .collapse:has(.collapse-body.show) > .collapse-btn-md, .collapse:has(.collapse-body.show) > .collapse-btn-lg {
   border-bottom-right-radius: 0;
@@ -5308,6 +5334,8 @@ input[type=checkbox].input-lg {
   width: 100%;
   flex-direction: row;
   gap: var(--navbar-collapse-gap);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .navbar .navbar-collapse.nav-start, .navbar .navbar-collapse.nav-left,
 .navbar .navbar-collapse.show.nav-start,
@@ -5346,6 +5374,8 @@ input[type=checkbox].input-lg {
     display: flex;
     flex-direction: column;
     gap: var(--navbar-collapse-gap);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .navbar .navbar-collapse.show.nav-start-sm, .navbar .navbar-collapse.show.nav-left-sm {
     justify-content: flex-start;
@@ -5382,6 +5412,8 @@ input[type=checkbox].input-lg {
   width: 100%;
   flex-direction: row;
   gap: var(--navbar-collapse-gap);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .navbar-xs .navbar-collapse.nav-start, .navbar-xs .navbar-collapse.nav-left,
 .navbar-xs .navbar-collapse.show.nav-start,
@@ -5420,6 +5452,8 @@ input[type=checkbox].input-lg {
     display: flex;
     flex-direction: column;
     gap: var(--navbar-collapse-gap);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .navbar-xs .navbar-collapse.show.nav-start-sm, .navbar-xs .navbar-collapse.show.nav-left-sm {
     justify-content: flex-start;
@@ -5456,6 +5490,8 @@ input[type=checkbox].input-lg {
   width: 100%;
   flex-direction: row;
   gap: var(--navbar-collapse-gap);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .navbar-sm .navbar-collapse.nav-start, .navbar-sm .navbar-collapse.nav-left,
 .navbar-sm .navbar-collapse.show.nav-start,
@@ -5494,6 +5530,8 @@ input[type=checkbox].input-lg {
     display: flex;
     flex-direction: column;
     gap: var(--navbar-collapse-gap);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .navbar-sm .navbar-collapse.show.nav-start-sm, .navbar-sm .navbar-collapse.show.nav-left-sm {
     justify-content: flex-start;
@@ -5530,6 +5568,8 @@ input[type=checkbox].input-lg {
   width: 100%;
   flex-direction: row;
   gap: var(--navbar-collapse-gap);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .navbar-md .navbar-collapse.nav-start, .navbar-md .navbar-collapse.nav-left,
 .navbar-md .navbar-collapse.show.nav-start,
@@ -5568,6 +5608,8 @@ input[type=checkbox].input-lg {
     display: flex;
     flex-direction: column;
     gap: var(--navbar-collapse-gap);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .navbar-md .navbar-collapse.show.nav-start-sm, .navbar-md .navbar-collapse.show.nav-left-sm {
     justify-content: flex-start;
@@ -5604,6 +5646,8 @@ input[type=checkbox].input-lg {
   width: 100%;
   flex-direction: row;
   gap: var(--navbar-collapse-gap);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .navbar-lg .navbar-collapse.nav-start, .navbar-lg .navbar-collapse.nav-left,
 .navbar-lg .navbar-collapse.show.nav-start,
@@ -5642,6 +5686,8 @@ input[type=checkbox].input-lg {
     display: flex;
     flex-direction: column;
     gap: var(--navbar-collapse-gap);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .navbar-lg .navbar-collapse.show.nav-start-sm, .navbar-lg .navbar-collapse.show.nav-left-sm {
     justify-content: flex-start;
@@ -5678,6 +5724,8 @@ input[type=checkbox].input-lg {
   width: 100%;
   flex-direction: row;
   gap: var(--navbar-collapse-gap);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .navbar-xl .navbar-collapse.nav-start, .navbar-xl .navbar-collapse.nav-left,
 .navbar-xl .navbar-collapse.show.nav-start,
@@ -5716,6 +5764,8 @@ input[type=checkbox].input-lg {
     display: flex;
     flex-direction: column;
     gap: var(--navbar-collapse-gap);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .navbar-xl .navbar-collapse.show.nav-start-sm, .navbar-xl .navbar-collapse.show.nav-left-sm {
     justify-content: flex-start;
@@ -5752,6 +5802,8 @@ input[type=checkbox].input-lg {
   width: 100%;
   flex-direction: row;
   gap: var(--navbar-collapse-gap);
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .navbar-xxl .navbar-collapse.nav-start, .navbar-xxl .navbar-collapse.nav-left,
 .navbar-xxl .navbar-collapse.show.nav-start,
@@ -5790,6 +5842,8 @@ input[type=checkbox].input-lg {
     display: flex;
     flex-direction: column;
     gap: var(--navbar-collapse-gap);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .navbar-xxl .navbar-collapse.show.nav-start-sm, .navbar-xxl .navbar-collapse.show.nav-left-sm {
     justify-content: flex-start;
@@ -5809,8 +5863,7 @@ input[type=checkbox].input-lg {
   }
 }
 
-.nav-side,
-.nav-side-left {
+.sidebar-left {
   top: 0;
   bottom: 0;
   z-index: 20;
@@ -5819,20 +5872,22 @@ input[type=checkbox].input-lg {
   overflow-x: hidden;
   transition: width 0.25s ease, transform 0.25s ease;
   background: var(--bg-color);
-  width: var(--nav-side-width);
+  width: var(--sidebar-width);
+  padding: var(--sidebar-padding);
+}
+.sidebar-left.show {
+  width: var(--sidebar-width);
+  transform: translateX(0);
+}
+.sidebar-left {
   left: 0;
   transform: translateX(-100%);
-  border-right: 0.1rem solid var(--border-color);
-  border-top-right-radius: var(--nav-border-radius);
-  border-bottom-right-radius: var(--nav-border-radius);
-}
-.nav-side.show,
-.nav-side-left.show {
-  width: var(--nav-side-width);
-  transform: translateX(0);
+  border-right: var(--sidebar-border);
+  border-top-right-radius: var(--sidebar-border-radius);
+  border-bottom-right-radius: var(--sidebar-border-radius);
 }
 
-.nav-side-right {
+.sidebar-right {
   top: 0;
   bottom: 0;
   z-index: 20;
@@ -5841,29 +5896,79 @@ input[type=checkbox].input-lg {
   overflow-x: hidden;
   transition: width 0.25s ease, transform 0.25s ease;
   background: var(--bg-color);
-  width: var(--nav-side-width);
+  width: var(--sidebar-width);
+  padding: var(--sidebar-padding);
+}
+.sidebar-right.show {
+  width: var(--sidebar-width);
+  transform: translateX(0);
+}
+.sidebar-right {
+  left: auto;
   right: 0;
   transform: translateX(100%);
-  border-left: 0.1rem solid var(--border-color);
-  border-top-left-radius: var(--nav-border-radius);
-  border-bottom-left-radius: var(--nav-border-radius);
-}
-.nav-side-right.show {
-  width: var(--nav-side-width);
-  transform: translateX(0);
+  border-left: var(--sidebar-border);
+  border-top-left-radius: var(--sidebar-border-radius);
+  border-bottom-left-radius: var(--sidebar-border-radius);
 }
 
 .tab {
   display: flex;
   overflow-x: auto;
-  gap: var(--tab-gap);
+}
+.tab .tab-btn {
+  padding: var(--tab-button-padding);
+}
+.tab .tab-btn-sm {
+  padding: var(--tab-button-padding-sm);
+}
+.tab .tab-btn-md {
+  padding: var(--tab-button-padding-md);
+}
+.tab .tab-btn-lg {
+  padding: var(--tab-button-padding-lg);
+}
+.tab .tab-btn,
+.tab .tab-btn-sm,
+.tab .tab-btn-md,
+.tab .tab-btn-lg {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.tab .tab-btn:not([class*=outline-]),
+.tab .tab-btn-sm:not([class*=outline-]),
+.tab .tab-btn-md:not([class*=outline-]),
+.tab .tab-btn-lg:not([class*=outline-]) {
+  border: none;
+}
+.tab .tab-btn:focus,
+.tab .tab-btn-sm:focus,
+.tab .tab-btn-md:focus,
+.tab .tab-btn-lg:focus {
+  outline: none;
+  box-shadow: none;
+}
+.tab .tab-btn:first-child,
+.tab .tab-btn-sm:first-child,
+.tab .tab-btn-md:first-child,
+.tab .tab-btn-lg:first-child {
+  border-top-left-radius: var(--tab-button-radius);
+  border-bottom-left-radius: var(--tab-button-radius);
+}
+.tab .tab-btn:last-child,
+.tab .tab-btn-sm:last-child,
+.tab .tab-btn-md:last-child,
+.tab .tab-btn-lg:last-child {
+  border-top-right-radius: var(--tab-button-radius);
+  border-bottom-right-radius: var(--tab-button-radius);
 }
 
 .tab-content {
   display: none;
-  border: var(--tab-border);
-  padding: var(--tab-padding);
-  border-radius: var(--tab-border-radius);
+  border: var(--tab-content-border);
+  padding: var(--tab-content-padding);
+  border-radius: var(--tab-content-border-radius);
 }
 .tab-content.show {
   display: block;
@@ -6792,240 +6897,672 @@ table.table-lg tfoot tr td {
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--primary-color);
 }
 .btn.outline-primary:hover,
 .btn-sm.outline-primary:hover,
 .btn-md.outline-primary:hover,
-.btn-lg.outline-primary:hover {
+.btn-lg.outline-primary:hover,
+.accordion-btn.outline-primary:hover,
+.accordion-btn-sm.outline-primary:hover,
+.accordion-btn-md.outline-primary:hover,
+.accordion-btn-lg.outline-primary:hover,
+.collapse-btn.outline-primary:hover,
+.collapse-btn-sm.outline-primary:hover,
+.collapse-btn-md.outline-primary:hover,
+.collapse-btn-lg.outline-primary:hover,
+.tab-btn.outline-primary:hover,
+.tab-btn-sm.outline-primary:hover,
+.tab-btn-md.outline-primary:hover,
+.tab-btn-lg.outline-primary:hover {
   background-color: var(--primary-color);
   color: var(--text-on-primary);
 }
 .btn.outline-primary.active,
 .btn-sm.outline-primary.active,
 .btn-md.outline-primary.active,
-.btn-lg.outline-primary.active {
+.btn-lg.outline-primary.active,
+.accordion-btn.outline-primary.active,
+.accordion-btn-sm.outline-primary.active,
+.accordion-btn-md.outline-primary.active,
+.accordion-btn-lg.outline-primary.active,
+.collapse-btn.outline-primary.active,
+.collapse-btn-sm.outline-primary.active,
+.collapse-btn-md.outline-primary.active,
+.collapse-btn-lg.outline-primary.active,
+.tab-btn.outline-primary.active,
+.tab-btn-sm.outline-primary.active,
+.tab-btn-md.outline-primary.active,
+.tab-btn-lg.outline-primary.active {
   background-color: var(--primary-color);
   color: var(--text-on-primary);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--secondary-color);
 }
 .btn.outline-secondary:hover,
 .btn-sm.outline-secondary:hover,
 .btn-md.outline-secondary:hover,
-.btn-lg.outline-secondary:hover {
+.btn-lg.outline-secondary:hover,
+.accordion-btn.outline-secondary:hover,
+.accordion-btn-sm.outline-secondary:hover,
+.accordion-btn-md.outline-secondary:hover,
+.accordion-btn-lg.outline-secondary:hover,
+.collapse-btn.outline-secondary:hover,
+.collapse-btn-sm.outline-secondary:hover,
+.collapse-btn-md.outline-secondary:hover,
+.collapse-btn-lg.outline-secondary:hover,
+.tab-btn.outline-secondary:hover,
+.tab-btn-sm.outline-secondary:hover,
+.tab-btn-md.outline-secondary:hover,
+.tab-btn-lg.outline-secondary:hover {
   background-color: var(--secondary-color);
   color: var(--text-on-secondary);
 }
 .btn.outline-secondary.active,
 .btn-sm.outline-secondary.active,
 .btn-md.outline-secondary.active,
-.btn-lg.outline-secondary.active {
+.btn-lg.outline-secondary.active,
+.accordion-btn.outline-secondary.active,
+.accordion-btn-sm.outline-secondary.active,
+.accordion-btn-md.outline-secondary.active,
+.accordion-btn-lg.outline-secondary.active,
+.collapse-btn.outline-secondary.active,
+.collapse-btn-sm.outline-secondary.active,
+.collapse-btn-md.outline-secondary.active,
+.collapse-btn-lg.outline-secondary.active,
+.tab-btn.outline-secondary.active,
+.tab-btn-sm.outline-secondary.active,
+.tab-btn-md.outline-secondary.active,
+.tab-btn-lg.outline-secondary.active {
   background-color: var(--secondary-color);
   color: var(--text-on-secondary);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--tertiary-color);
 }
 .btn.outline-tertiary:hover,
 .btn-sm.outline-tertiary:hover,
 .btn-md.outline-tertiary:hover,
-.btn-lg.outline-tertiary:hover {
+.btn-lg.outline-tertiary:hover,
+.accordion-btn.outline-tertiary:hover,
+.accordion-btn-sm.outline-tertiary:hover,
+.accordion-btn-md.outline-tertiary:hover,
+.accordion-btn-lg.outline-tertiary:hover,
+.collapse-btn.outline-tertiary:hover,
+.collapse-btn-sm.outline-tertiary:hover,
+.collapse-btn-md.outline-tertiary:hover,
+.collapse-btn-lg.outline-tertiary:hover,
+.tab-btn.outline-tertiary:hover,
+.tab-btn-sm.outline-tertiary:hover,
+.tab-btn-md.outline-tertiary:hover,
+.tab-btn-lg.outline-tertiary:hover {
   background-color: var(--tertiary-color);
   color: var(--text-on-tertiary);
 }
 .btn.outline-tertiary.active,
 .btn-sm.outline-tertiary.active,
 .btn-md.outline-tertiary.active,
-.btn-lg.outline-tertiary.active {
+.btn-lg.outline-tertiary.active,
+.accordion-btn.outline-tertiary.active,
+.accordion-btn-sm.outline-tertiary.active,
+.accordion-btn-md.outline-tertiary.active,
+.accordion-btn-lg.outline-tertiary.active,
+.collapse-btn.outline-tertiary.active,
+.collapse-btn-sm.outline-tertiary.active,
+.collapse-btn-md.outline-tertiary.active,
+.collapse-btn-lg.outline-tertiary.active,
+.tab-btn.outline-tertiary.active,
+.tab-btn-sm.outline-tertiary.active,
+.tab-btn-md.outline-tertiary.active,
+.tab-btn-lg.outline-tertiary.active {
   background-color: var(--tertiary-color);
   color: var(--text-on-tertiary);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--success-color);
 }
 .btn.outline-success:hover,
 .btn-sm.outline-success:hover,
 .btn-md.outline-success:hover,
-.btn-lg.outline-success:hover {
+.btn-lg.outline-success:hover,
+.accordion-btn.outline-success:hover,
+.accordion-btn-sm.outline-success:hover,
+.accordion-btn-md.outline-success:hover,
+.accordion-btn-lg.outline-success:hover,
+.collapse-btn.outline-success:hover,
+.collapse-btn-sm.outline-success:hover,
+.collapse-btn-md.outline-success:hover,
+.collapse-btn-lg.outline-success:hover,
+.tab-btn.outline-success:hover,
+.tab-btn-sm.outline-success:hover,
+.tab-btn-md.outline-success:hover,
+.tab-btn-lg.outline-success:hover {
   background-color: var(--success-color);
   color: var(--text-on-success);
 }
 .btn.outline-success.active,
 .btn-sm.outline-success.active,
 .btn-md.outline-success.active,
-.btn-lg.outline-success.active {
+.btn-lg.outline-success.active,
+.accordion-btn.outline-success.active,
+.accordion-btn-sm.outline-success.active,
+.accordion-btn-md.outline-success.active,
+.accordion-btn-lg.outline-success.active,
+.collapse-btn.outline-success.active,
+.collapse-btn-sm.outline-success.active,
+.collapse-btn-md.outline-success.active,
+.collapse-btn-lg.outline-success.active,
+.tab-btn.outline-success.active,
+.tab-btn-sm.outline-success.active,
+.tab-btn-md.outline-success.active,
+.tab-btn-lg.outline-success.active {
   background-color: var(--success-color);
   color: var(--text-on-success);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--info-color);
 }
 .btn.outline-info:hover,
 .btn-sm.outline-info:hover,
 .btn-md.outline-info:hover,
-.btn-lg.outline-info:hover {
+.btn-lg.outline-info:hover,
+.accordion-btn.outline-info:hover,
+.accordion-btn-sm.outline-info:hover,
+.accordion-btn-md.outline-info:hover,
+.accordion-btn-lg.outline-info:hover,
+.collapse-btn.outline-info:hover,
+.collapse-btn-sm.outline-info:hover,
+.collapse-btn-md.outline-info:hover,
+.collapse-btn-lg.outline-info:hover,
+.tab-btn.outline-info:hover,
+.tab-btn-sm.outline-info:hover,
+.tab-btn-md.outline-info:hover,
+.tab-btn-lg.outline-info:hover {
   background-color: var(--info-color);
   color: var(--text-on-info);
 }
 .btn.outline-info.active,
 .btn-sm.outline-info.active,
 .btn-md.outline-info.active,
-.btn-lg.outline-info.active {
+.btn-lg.outline-info.active,
+.accordion-btn.outline-info.active,
+.accordion-btn-sm.outline-info.active,
+.accordion-btn-md.outline-info.active,
+.accordion-btn-lg.outline-info.active,
+.collapse-btn.outline-info.active,
+.collapse-btn-sm.outline-info.active,
+.collapse-btn-md.outline-info.active,
+.collapse-btn-lg.outline-info.active,
+.tab-btn.outline-info.active,
+.tab-btn-sm.outline-info.active,
+.tab-btn-md.outline-info.active,
+.tab-btn-lg.outline-info.active {
   background-color: var(--info-color);
   color: var(--text-on-info);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--warning-color);
 }
 .btn.outline-warning:hover,
 .btn-sm.outline-warning:hover,
 .btn-md.outline-warning:hover,
-.btn-lg.outline-warning:hover {
+.btn-lg.outline-warning:hover,
+.accordion-btn.outline-warning:hover,
+.accordion-btn-sm.outline-warning:hover,
+.accordion-btn-md.outline-warning:hover,
+.accordion-btn-lg.outline-warning:hover,
+.collapse-btn.outline-warning:hover,
+.collapse-btn-sm.outline-warning:hover,
+.collapse-btn-md.outline-warning:hover,
+.collapse-btn-lg.outline-warning:hover,
+.tab-btn.outline-warning:hover,
+.tab-btn-sm.outline-warning:hover,
+.tab-btn-md.outline-warning:hover,
+.tab-btn-lg.outline-warning:hover {
   background-color: var(--warning-color);
   color: var(--text-on-warning);
 }
 .btn.outline-warning.active,
 .btn-sm.outline-warning.active,
 .btn-md.outline-warning.active,
-.btn-lg.outline-warning.active {
+.btn-lg.outline-warning.active,
+.accordion-btn.outline-warning.active,
+.accordion-btn-sm.outline-warning.active,
+.accordion-btn-md.outline-warning.active,
+.accordion-btn-lg.outline-warning.active,
+.collapse-btn.outline-warning.active,
+.collapse-btn-sm.outline-warning.active,
+.collapse-btn-md.outline-warning.active,
+.collapse-btn-lg.outline-warning.active,
+.tab-btn.outline-warning.active,
+.tab-btn-sm.outline-warning.active,
+.tab-btn-md.outline-warning.active,
+.tab-btn-lg.outline-warning.active {
   background-color: var(--warning-color);
   color: var(--text-on-warning);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--danger-color);
 }
 .btn.outline-danger:hover,
 .btn-sm.outline-danger:hover,
 .btn-md.outline-danger:hover,
-.btn-lg.outline-danger:hover {
+.btn-lg.outline-danger:hover,
+.accordion-btn.outline-danger:hover,
+.accordion-btn-sm.outline-danger:hover,
+.accordion-btn-md.outline-danger:hover,
+.accordion-btn-lg.outline-danger:hover,
+.collapse-btn.outline-danger:hover,
+.collapse-btn-sm.outline-danger:hover,
+.collapse-btn-md.outline-danger:hover,
+.collapse-btn-lg.outline-danger:hover,
+.tab-btn.outline-danger:hover,
+.tab-btn-sm.outline-danger:hover,
+.tab-btn-md.outline-danger:hover,
+.tab-btn-lg.outline-danger:hover {
   background-color: var(--danger-color);
   color: var(--text-on-danger);
 }
 .btn.outline-danger.active,
 .btn-sm.outline-danger.active,
 .btn-md.outline-danger.active,
-.btn-lg.outline-danger.active {
+.btn-lg.outline-danger.active,
+.accordion-btn.outline-danger.active,
+.accordion-btn-sm.outline-danger.active,
+.accordion-btn-md.outline-danger.active,
+.accordion-btn-lg.outline-danger.active,
+.collapse-btn.outline-danger.active,
+.collapse-btn-sm.outline-danger.active,
+.collapse-btn-md.outline-danger.active,
+.collapse-btn-lg.outline-danger.active,
+.tab-btn.outline-danger.active,
+.tab-btn-sm.outline-danger.active,
+.tab-btn-md.outline-danger.active,
+.tab-btn-lg.outline-danger.active {
   background-color: var(--danger-color);
   color: var(--text-on-danger);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--neutral-color);
 }
 .btn.outline-neutral:hover,
 .btn-sm.outline-neutral:hover,
 .btn-md.outline-neutral:hover,
-.btn-lg.outline-neutral:hover {
+.btn-lg.outline-neutral:hover,
+.accordion-btn.outline-neutral:hover,
+.accordion-btn-sm.outline-neutral:hover,
+.accordion-btn-md.outline-neutral:hover,
+.accordion-btn-lg.outline-neutral:hover,
+.collapse-btn.outline-neutral:hover,
+.collapse-btn-sm.outline-neutral:hover,
+.collapse-btn-md.outline-neutral:hover,
+.collapse-btn-lg.outline-neutral:hover,
+.tab-btn.outline-neutral:hover,
+.tab-btn-sm.outline-neutral:hover,
+.tab-btn-md.outline-neutral:hover,
+.tab-btn-lg.outline-neutral:hover {
   background-color: var(--neutral-color);
   color: var(--text-on-neutral);
 }
 .btn.outline-neutral.active,
 .btn-sm.outline-neutral.active,
 .btn-md.outline-neutral.active,
-.btn-lg.outline-neutral.active {
+.btn-lg.outline-neutral.active,
+.accordion-btn.outline-neutral.active,
+.accordion-btn-sm.outline-neutral.active,
+.accordion-btn-md.outline-neutral.active,
+.accordion-btn-lg.outline-neutral.active,
+.collapse-btn.outline-neutral.active,
+.collapse-btn-sm.outline-neutral.active,
+.collapse-btn-md.outline-neutral.active,
+.collapse-btn-lg.outline-neutral.active,
+.tab-btn.outline-neutral.active,
+.tab-btn-sm.outline-neutral.active,
+.tab-btn-md.outline-neutral.active,
+.tab-btn-lg.outline-neutral.active {
   background-color: var(--neutral-color);
   color: var(--text-on-neutral);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--light-color);
 }
 .btn.outline-light:hover,
 .btn-sm.outline-light:hover,
 .btn-md.outline-light:hover,
-.btn-lg.outline-light:hover {
+.btn-lg.outline-light:hover,
+.accordion-btn.outline-light:hover,
+.accordion-btn-sm.outline-light:hover,
+.accordion-btn-md.outline-light:hover,
+.accordion-btn-lg.outline-light:hover,
+.collapse-btn.outline-light:hover,
+.collapse-btn-sm.outline-light:hover,
+.collapse-btn-md.outline-light:hover,
+.collapse-btn-lg.outline-light:hover,
+.tab-btn.outline-light:hover,
+.tab-btn-sm.outline-light:hover,
+.tab-btn-md.outline-light:hover,
+.tab-btn-lg.outline-light:hover {
   background-color: var(--light-color);
   color: var(--text-on-light);
 }
 .btn.outline-light.active,
 .btn-sm.outline-light.active,
 .btn-md.outline-light.active,
-.btn-lg.outline-light.active {
+.btn-lg.outline-light.active,
+.accordion-btn.outline-light.active,
+.accordion-btn-sm.outline-light.active,
+.accordion-btn-md.outline-light.active,
+.accordion-btn-lg.outline-light.active,
+.collapse-btn.outline-light.active,
+.collapse-btn-sm.outline-light.active,
+.collapse-btn-md.outline-light.active,
+.collapse-btn-lg.outline-light.active,
+.tab-btn.outline-light.active,
+.tab-btn-sm.outline-light.active,
+.tab-btn-md.outline-light.active,
+.tab-btn-lg.outline-light.active {
   background-color: var(--light-color);
   color: var(--text-on-light);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--dark-color);
 }
 .btn.outline-dark:hover,
 .btn-sm.outline-dark:hover,
 .btn-md.outline-dark:hover,
-.btn-lg.outline-dark:hover {
+.btn-lg.outline-dark:hover,
+.accordion-btn.outline-dark:hover,
+.accordion-btn-sm.outline-dark:hover,
+.accordion-btn-md.outline-dark:hover,
+.accordion-btn-lg.outline-dark:hover,
+.collapse-btn.outline-dark:hover,
+.collapse-btn-sm.outline-dark:hover,
+.collapse-btn-md.outline-dark:hover,
+.collapse-btn-lg.outline-dark:hover,
+.tab-btn.outline-dark:hover,
+.tab-btn-sm.outline-dark:hover,
+.tab-btn-md.outline-dark:hover,
+.tab-btn-lg.outline-dark:hover {
   background-color: var(--dark-color);
   color: var(--text-on-dark);
 }
 .btn.outline-dark.active,
 .btn-sm.outline-dark.active,
 .btn-md.outline-dark.active,
-.btn-lg.outline-dark.active {
+.btn-lg.outline-dark.active,
+.accordion-btn.outline-dark.active,
+.accordion-btn-sm.outline-dark.active,
+.accordion-btn-md.outline-dark.active,
+.accordion-btn-lg.outline-dark.active,
+.collapse-btn.outline-dark.active,
+.collapse-btn-sm.outline-dark.active,
+.collapse-btn-md.outline-dark.active,
+.collapse-btn-lg.outline-dark.active,
+.tab-btn.outline-dark.active,
+.tab-btn-sm.outline-dark.active,
+.tab-btn-md.outline-dark.active,
+.tab-btn-lg.outline-dark.active {
   background-color: var(--dark-color);
   color: var(--text-on-dark);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--white-color);
 }
 .btn.outline-white:hover,
 .btn-sm.outline-white:hover,
 .btn-md.outline-white:hover,
-.btn-lg.outline-white:hover {
+.btn-lg.outline-white:hover,
+.accordion-btn.outline-white:hover,
+.accordion-btn-sm.outline-white:hover,
+.accordion-btn-md.outline-white:hover,
+.accordion-btn-lg.outline-white:hover,
+.collapse-btn.outline-white:hover,
+.collapse-btn-sm.outline-white:hover,
+.collapse-btn-md.outline-white:hover,
+.collapse-btn-lg.outline-white:hover,
+.tab-btn.outline-white:hover,
+.tab-btn-sm.outline-white:hover,
+.tab-btn-md.outline-white:hover,
+.tab-btn-lg.outline-white:hover {
   background-color: var(--white-color);
   color: var(--text-on-white);
 }
 .btn.outline-white.active,
 .btn-sm.outline-white.active,
 .btn-md.outline-white.active,
-.btn-lg.outline-white.active {
+.btn-lg.outline-white.active,
+.accordion-btn.outline-white.active,
+.accordion-btn-sm.outline-white.active,
+.accordion-btn-md.outline-white.active,
+.accordion-btn-lg.outline-white.active,
+.collapse-btn.outline-white.active,
+.collapse-btn-sm.outline-white.active,
+.collapse-btn-md.outline-white.active,
+.collapse-btn-lg.outline-white.active,
+.tab-btn.outline-white.active,
+.tab-btn-sm.outline-white.active,
+.tab-btn-md.outline-white.active,
+.tab-btn-lg.outline-white.active {
   background-color: var(--white-color);
   color: var(--text-on-white);
 }
 .btn.outline,
 .btn-sm.outline,
 .btn-md.outline,
-.btn-lg.outline {
+.btn-lg.outline,
+.accordion-btn.outline,
+.accordion-btn-sm.outline,
+.accordion-btn-md.outline,
+.accordion-btn-lg.outline,
+.collapse-btn.outline,
+.collapse-btn-sm.outline,
+.collapse-btn-md.outline,
+.collapse-btn-lg.outline,
+.tab-btn.outline,
+.tab-btn-sm.outline,
+.tab-btn-md.outline,
+.tab-btn-lg.outline {
   border: 0.1rem solid var(--black-color);
 }
 .btn.outline-black:hover,
 .btn-sm.outline-black:hover,
 .btn-md.outline-black:hover,
-.btn-lg.outline-black:hover {
+.btn-lg.outline-black:hover,
+.accordion-btn.outline-black:hover,
+.accordion-btn-sm.outline-black:hover,
+.accordion-btn-md.outline-black:hover,
+.accordion-btn-lg.outline-black:hover,
+.collapse-btn.outline-black:hover,
+.collapse-btn-sm.outline-black:hover,
+.collapse-btn-md.outline-black:hover,
+.collapse-btn-lg.outline-black:hover,
+.tab-btn.outline-black:hover,
+.tab-btn-sm.outline-black:hover,
+.tab-btn-md.outline-black:hover,
+.tab-btn-lg.outline-black:hover {
   background-color: var(--black-color);
   color: var(--text-on-black);
 }
 .btn.outline-black.active,
 .btn-sm.outline-black.active,
 .btn-md.outline-black.active,
-.btn-lg.outline-black.active {
+.btn-lg.outline-black.active,
+.accordion-btn.outline-black.active,
+.accordion-btn-sm.outline-black.active,
+.accordion-btn-md.outline-black.active,
+.accordion-btn-lg.outline-black.active,
+.collapse-btn.outline-black.active,
+.collapse-btn-sm.outline-black.active,
+.collapse-btn-md.outline-black.active,
+.collapse-btn-lg.outline-black.active,
+.tab-btn.outline-black.active,
+.tab-btn-sm.outline-black.active,
+.tab-btn-md.outline-black.active,
+.tab-btn-lg.outline-black.active {
   background-color: var(--black-color);
   color: var(--text-on-black);
 }

@@ -1,14 +1,60 @@
 .tab {
   display: flex;
   overflow-x: auto;
-  gap: var(--tab-gap);
+}
+.tab .tab-btn {
+  padding: var(--tab-button-padding);
+}
+.tab .tab-btn-sm {
+  padding: var(--tab-button-padding-sm);
+}
+.tab .tab-btn-md {
+  padding: var(--tab-button-padding-md);
+}
+.tab .tab-btn-lg {
+  padding: var(--tab-button-padding-lg);
+}
+.tab .tab-btn,
+.tab .tab-btn-sm,
+.tab .tab-btn-md,
+.tab .tab-btn-lg {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.tab .tab-btn:not([class*=outline-]),
+.tab .tab-btn-sm:not([class*=outline-]),
+.tab .tab-btn-md:not([class*=outline-]),
+.tab .tab-btn-lg:not([class*=outline-]) {
+  border: none;
+}
+.tab .tab-btn:focus,
+.tab .tab-btn-sm:focus,
+.tab .tab-btn-md:focus,
+.tab .tab-btn-lg:focus {
+  outline: none;
+  box-shadow: none;
+}
+.tab .tab-btn:first-child,
+.tab .tab-btn-sm:first-child,
+.tab .tab-btn-md:first-child,
+.tab .tab-btn-lg:first-child {
+  border-top-left-radius: var(--tab-button-radius);
+  border-bottom-left-radius: var(--tab-button-radius);
+}
+.tab .tab-btn:last-child,
+.tab .tab-btn-sm:last-child,
+.tab .tab-btn-md:last-child,
+.tab .tab-btn-lg:last-child {
+  border-top-right-radius: var(--tab-button-radius);
+  border-bottom-right-radius: var(--tab-button-radius);
 }
 
 .tab-content {
   display: none;
-  border: var(--tab-border);
-  padding: var(--tab-padding);
-  border-radius: var(--tab-border-radius);
+  border: var(--tab-content-border);
+  padding: var(--tab-content-padding);
+  border-radius: var(--tab-content-border-radius);
 }
 .tab-content.show {
   display: block;

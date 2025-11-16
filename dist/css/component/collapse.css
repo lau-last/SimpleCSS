@@ -40,6 +40,19 @@
   content: "﹢";
   margin-left: 0.5rem;
 }
+.collapse .collapse-btn:not([class*=outline-]),
+.collapse .collapse-btn-sm:not([class*=outline-]),
+.collapse .collapse-btn-md:not([class*=outline-]),
+.collapse .collapse-btn-lg:not([class*=outline-]) {
+  border: none;
+}
+.collapse .collapse-btn:focus,
+.collapse .collapse-btn-sm:focus,
+.collapse .collapse-btn-md:focus,
+.collapse .collapse-btn-lg:focus {
+  outline: none;
+  box-shadow: none;
+}
 .collapse:has(.collapse-body.show) > .collapse-btn, .collapse:has(.collapse-body.show) > .collapse-btn-sm, .collapse:has(.collapse-body.show) > .collapse-btn-md, .collapse:has(.collapse-body.show) > .collapse-btn-lg {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;

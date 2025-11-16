@@ -1,0 +1,39 @@
+// Nav side base
+@mixin sidebar-base {
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width .25s ease, transform .25s ease;
+  background: var(--bg-color);
+  width: var(--sidebar-width);
+  padding:  var(--sidebar-padding);
+
+  &.show {
+    width: var(--sidebar-width);
+    transform: translateX(0);
+  }
+}
+
+// Sidebar left
+.sidebar-left {
+  @include sidebar-base;
+  left: 0;
+  transform: translateX(-100%);
+  border-right: var(--sidebar-border);
+  border-top-right-radius: var(--sidebar-border-radius);
+  border-bottom-right-radius: var(--sidebar-border-radius);
+}
+
+// Sidebar right
+.sidebar-right {
+  @include sidebar-base;
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+  border-left: var(--sidebar-border);
+  border-top-left-radius: var(--sidebar-border-radius);
+  border-bottom-left-radius: var(--sidebar-border-radius);
+}

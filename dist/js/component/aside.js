@@ -29,13 +29,12 @@ export default class Aside {
     static handleClose(target) {
         if (!target.matches('.close'))
             return;
-        const aside = target.closest('aside');
+        const aside = target.closest('aside, .sidebar-left, .sidebar-right');
         if (!aside)
             return;
         if (!Aside.isOpen(aside))
             return;
         Aside.hide(aside);
-        return;
     }
     static isOpen(aside) {
         return aside.classList.contains('show');

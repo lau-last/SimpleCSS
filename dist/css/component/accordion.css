@@ -65,6 +65,13 @@
   content: "﹢";
   margin-left: 0.5rem;
 }
+.accordion .accordion-item .accordion-btn:focus,
+.accordion .accordion-item .accordion-btn-sm:focus,
+.accordion .accordion-item .accordion-btn-md:focus,
+.accordion .accordion-item .accordion-btn-lg:focus {
+  outline: none;
+  box-shadow: none;
+}
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn:after,
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn-sm:after,
 .accordion .accordion-item:has(.accordion-body.show) .accordion-btn-md:after,

@@ -120,7 +120,19 @@ $list-colors: (
 .btn,
 .btn-sm,
 .btn-md,
-.btn-lg {
+.btn-lg,
+.accordion-btn,
+.accordion-btn-sm,
+.accordion-btn-md,
+.accordion-btn-lg,
+.collapse-btn,
+.collapse-btn-sm,
+.collapse-btn-md,
+.collapse-btn-lg,
+.tab-btn,
+.tab-btn-sm,
+.tab-btn-md,
+.tab-btn-lg{
   &.outline {
     @each $name, $value in $colors {
       border: .1rem solid #{$value};

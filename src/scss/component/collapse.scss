@@ -24,9 +24,17 @@
     justify-content: space-between;
     align-items: center;
     border-radius: calc(var(--collapse-border-radius) - var(--collapse-border-width));
+
     &:after {
       content: '\FE62';
       margin-left: .5rem;
+    }
+    &:not([class*="outline-"]) {
+      border: none;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
   }
 

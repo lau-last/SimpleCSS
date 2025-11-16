@@ -8,6 +8,7 @@
   .tab-btn-md{padding: var(--tab-button-padding-md);}
   .tab-btn-lg{padding: var(--tab-button-padding-lg);}
 
+
   .tab-btn,
   .tab-btn-sm,
   .tab-btn-md,
@@ -18,6 +19,10 @@
 
     &:not([class*="outline-"]) {
       border: none;
+    }
+
+    &:not(:first-child)[class*="outline-"]  {
+      border-left: none;
     }
 
     &:focus {

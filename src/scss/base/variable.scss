@@ -311,14 +311,14 @@
   --sidebar-width: 30rem;
 
   /* Tab */
-  --tab-content-border: .1rem solid var(--border-color);
-  --tab-content-padding: 1rem;
-  --tab-content-border-radius: var(--border-radius);
-  --tab-button-radius: var(--border-radius);
   --tab-button-padding: .5rem 1rem;
   --tab-button-padding-sm: .5rem 1rem;
   --tab-button-padding-md: .75rem 1.5rem;
   --tab-button-padding-lg: 1rem 2rem;
+  --tab-button-radius: var(--border-radius);
+  --tab-content-border: .1rem solid var(--border-color);
+  --tab-content-border-radius: var(--border-radius);
+  --tab-content-padding: 1rem;
 
   /* Table */
   --table-border-color: var(--gray-100);

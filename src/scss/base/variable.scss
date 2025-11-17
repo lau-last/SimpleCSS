@@ -209,33 +209,58 @@
   --dropdown-menu-spacing-margin: .5rem;
 
   /* Form */
-  --gap-form-inline: 1rem;
-  --input-bg-color: var(--gray-100);
-  --input-border: .1rem solid var(--gray-300);
+  --input-border-color: var(--gray-300);
+  --input-border-style: solid;
+  --input-border-width: .1rem;
   --input-border-radius: var(--border-radius);
+
+  --form-control-gap: 1rem;
   --input-box-shadow-focus: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--primary-color) 50%, transparent);
-  --input-height: 3rem;
-  --input-height-sm: 2.5rem;
-  --input-height-md: 3rem;
-  --input-height-lg: 3.5rem;
-  --input-margin: .5rem 0;
   --input-padding: 0 1.5rem;
-  --input-placeholder-color: var(--gray-400);
-  --input-size: 1.4rem;
-  --input-size-sm: 1.2rem;
-  --input-size-md: 1.4rem;
-  --input-size-lg: 1.6rem;
-  --input-text-color: var(--gray-900);
-  --range-size: .6rem;
-  --range-size-sm: .5rem;
-  --range-size-md: .6rem;
-  --range-size-lg: .7rem;
-  --select-padding: 0 1.5rem;
-  --switch-size: 1.4rem;
-  --switch-size-sm: 1.2rem;
-  --switch-size-md: 1.4rem;
-  --switch-size-lg: 1.6rem;
-  --textarea-padding: 1rem;
+  --textarea-padding: .5rem 1.5rem;
+
+
+  --form-control-height: 7.5rem;
+
+  --input-height: 3.5rem;
+
+  --input-radio-size: 1.2rem;
+
+  --input-checbox-size: 1.2rem;
+
+  --input-range-bar-height: .4rem;
+  --input-range-button-size: 1.25rem;
+
+
+
+
+
+  //--gap-form-inline: 1rem;
+  //--input-bg-color: var(--gray-100);
+  //--input-border: .1rem solid var(--gray-300);
+  //
+  //
+  //--input-height-sm: 2.5rem;
+  //--input-height-md: 3rem;
+  //--input-height-lg: 3.5rem;
+  //--input-margin: .5rem 0;
+  //
+  //--input-placeholder-color: var(--gray-400);
+  //--input-size: 1.4rem;
+  //--input-size-sm: 1.2rem;
+  //--input-size-md: 1.4rem;
+  //--input-size-lg: 1.6rem;
+  //--input-text-color: var(--gray-900);
+  //--range-size: .6rem;
+  //--range-size-sm: .5rem;
+  //--range-size-md: .6rem;
+  //--range-size-lg: .7rem;
+  //--select-padding: 0 1.5rem;
+  //--switch-size: 1.4rem;
+  //--switch-size-sm: 1.2rem;
+  //--switch-size-md: 1.4rem;
+  //--switch-size-lg: 1.6rem;
+  //--textarea-padding: 1rem;
 
   /* Image */
   --img-border-radius: var(--border-radius);
@@ -258,7 +283,7 @@
   --list-item-height-md: 3rem;
   --list-item-height-lg: 4rem;
   --list-item-hover-bg-color: rgba(0, 0, 0, 0.1);
-  --list-item-padding:  0 1rem;
+  --list-item-padding: 0 1rem;
   --list-item-padding-sm: 0 0.5rem;
   --list-item-padding-md: 0 1rem;
   --list-item-padding-lg: 0 2rem;
@@ -293,7 +318,6 @@
   --list-text-on-success: var(--black-color);
   --list-text-on-warning: var(--black-color);
   --list-text-on-white: var(--black-color);
-
 
 
   /* Nav */

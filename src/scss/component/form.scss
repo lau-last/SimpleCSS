@@ -1,435 +1,602 @@
-//.input[type="image"]
-//.input[type="hidden"]
-//.input[type="submit"]
-//.input[type="reset"]
-//.input[type="button"]
-@mixin input-base {
-  border: var(--input-border);
-  border-radius: var(--input-border-radius);
-  background-color: var(--input-bg-color);
-  color: var(--input-text-color);
-  margin: var(--input-margin);
-
-  /* Placeholder */
-  &::placeholder {
-    color: var(--input-placeholder-color);
-  }
-
-  /* Focus ring */
-  &:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: var(--input-box-shadow-focus);
-  }
-}
-
-@mixin input-color-base {
-  @include input-base;
-  padding: 0;
-  display: block;
-  cursor: pointer;
-
-  &::-webkit-color-swatch {
-    border: none;
-    border-radius: var(--input-border-radius);
-  }
-
-  &::-webkit-color-swatch-wrapper {
-    padding: .4rem;
-  }
-}
-
-@mixin input-range-base {
-  @include input-base;
-  @include accent-color;
-  padding: 0;
-  width: 100%;
-  border: none;
-  appearance: none;
-  background: transparent;
-  -webkit-appearance: none;
-  height: var(--input-height);
-  /* Pour Chrome, Safari, Opera, Edge */
-  &::-webkit-slider-runnable-track {
-    width: 100%;
-    cursor: pointer;
-    height: var(--range-size);
-    background: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
-    border-radius: var(--input-border-radius);
-  }
-
-  /* Pour Firefox */
-  &::-moz-range-track {
-    width: 100%;
-    cursor: pointer;
-    height: var(--range-size);
-    border-radius: var(--input-border-radius);
-    background: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
-  }
-
-  /* Pour Chrome, Safari, Opera, Edge */
-  &::-webkit-slider-thumb {
-    cursor: pointer;
-    border-radius: 50%;
-    -webkit-appearance: none;
-    background: var(--primary-color);
-    width: calc(var(--range-size) * 2);
-    height: calc(var(--range-size) * 2);
-    margin-top: calc((var(--range-size) - (var(--range-size) * 2)) / 2);
-  }
-
-  /* Pour Firefox */
-  &::-moz-range-thumb {
-    cursor: pointer;
-    border-radius: 50%;
-    background: var(--primary-color);
-    width: calc(var(--range-size) * 2);
-    height: calc(var(--range-size) * 2);
-    margin-top: calc((var(--range-size) - (var(--range-size) * 2)) / 2);
-  }
-}
-
-@mixin accent-color {
-  accent-color: var(--primary-color);
-  /* Remove focus outline artifacts on range */
-  &:focus {
-    box-shadow: none;
-    border-color: transparent;
-  }
-}
-
-.form-inline {
+.form-control,
+.form-control-sm,
+.form-control-md,
+.form-control-lg {
   display: flex;
-  max-width: 100%;
   align-items: center;
-  gap: var(--gap-form-inline);
+  text-wrap: nowrap;
+  border: .1px solid var(--border-color);
+  gap: var(--form-control-gap);
 
-  label {
-    text-wrap: nowrap;
+  &.form-column {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--form-control-gap);
   }
-}
 
-/* Required field marker */
-label.required::after {
-  content: ' *';
-  color: var(--danger-color);
-}
+  input[type="button"],
+  input[type="checkbox"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="file"],
+  input[type="hidden"],
+  input[type="image"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="radio"],
+  input[type="range"],
+  input[type="reset"],
+  input[type="search"],
+  input[type="submit"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea {
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: var(--input-box-shadow-focus);
+    }
+  }
 
 
-select {
-
-  &.select,
-  &.select-sm,
-  &.select-md,
-  &.select-lg {
-    @include input-base;
+  //input[type="button"],
+  //input[type="checkbox"],
+  //input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="file"],
+    //input[type="hidden"],
+    //input[type="image"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+    //input[type="radio"],
+  input[type="range"],
+    //input[type="reset"],
+  input[type="search"],
+    //input[type="submit"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea {
     width: 100%;
-    padding: var(--select-padding);
-
-    option[disabled] {
-      color: var(--input-placeholder-color);
-    }
-    &:has(option[disabled]:checked){
-      color: var(--input-placeholder-color);
-    }
   }
 
-  &.select {
-    height: var(--input-height);
-  }
 
-  &.select-sm {
-    height: var(--input-height-sm);
-  }
-
-  &.select-md {
-    height: var(--input-height-md);
-  }
-
-  &.select-lg {
-    height: var(--input-height-lg);
-  }
-}
-
-
-/* Base text controls: textarea */
-textarea.textarea {
-  @include input-base;
-  padding: var(--textarea-padding);
-  width: 100%;
-}
-
-/* Base text controls: input*/
-input[type="datetime"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="search"],
-input[type="text"],
-input[type="password"],
-input[type="file"] {
-  &.input {
-    @include input-base;
-    height: var(--input-height);
+  input[type="button"],
+    //input[type="checkbox"],
+    //input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="file"],
+  input[type="hidden"],
+  input[type="image"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+    //input[type="radio"],
+    //input[type="range"],
+  input[type="reset"],
+  input[type="search"],
+  input[type="submit"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea {
     padding: var(--input-padding);
-    width: 100%;
+    border-radius: var(--input-border-radius);
+    border-color: var(--input-border-color);
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
   }
 
-  &.input-sm {
-    @include input-base;
-    padding: var(--input-padding);
-    height: var(--input-height-sm);
-    width: 100%;
+  textarea {
+    height: auto;
+    resize: vertical;
+    padding: var(--textarea-padding);
   }
 
-  &.input-md {
-    @include input-base;
-    padding: var(--input-padding);
-    height: var(--input-height-md);
-    width: 100%;
-  }
 
-  &.input-lg {
-    @include input-base;
-    padding: var(--input-padding);
-    height: var(--input-height-lg);
-    width: 100%;
-  }
-}
-
-/* File input (native button styling)*/
-input[type="file"] {
-  &.input,
-  &.input-sm,
-  &.input-md,
-  &.input-lg {
-    padding-left: 0;
-
-    &::-webkit-file-upload-button,
-    &::file-selector-button {
-      border: none;
-      height: 100%;
-      cursor: pointer;
-      margin-right: 1rem;
-      align-items: self-start;
-      color: var(--text-on-primary);
-      border-radius: var(--input-border-radius);
-      background-color: var(--primary-color);
-    }
-  }
-}
-
-/* Color input */
-input[type="color"] {
-  &.input {
-    @include input-color-base;
-    height: var(--input-height);
-  }
-
-  &.input-sm {
-    @include input-color-base;
-    height: var(--input-height-sm);
-  }
-
-  &.input-md {
-    @include input-color-base;
-    height: var(--input-height-md);
-  }
-
-  &.input-lg {
-    @include input-color-base;
-    height: var(--input-height-lg);
-  }
-}
-
-
-/* Range input */
-input[type="range"] {
-  &.input {
-    @include input-range-base;
-
-    &-sm {
-      @include input-range-base;
-      height: var(--input-height-sm);
-
-      &::-webkit-slider-runnable-track {
-        height: var(--range-size-sm);
-      }
-
-      &::-moz-range-track {
-        height: var(--range-size-sm);
-      }
-
-      &::-webkit-slider-thumb {
-        height: calc(var(--range-size-sm) * 2);
-        width: calc(var(--range-size-sm) * 2);
-        margin-top: calc((var(--range-size-sm) - (var(--range-size-sm) * 2)) / 2);
-      }
-
-      &::-moz-range-thumb {
-        height: calc(var(--range-size-sm) * 2);
-        width: calc(var(--range-size-sm) * 2);
-        margin-top: calc((var(--range-size-sm) - (var(--range-size-sm) * 2)) / 2);
-      }
-    }
-
-    &-md {
-      @include input-range-base;
-      height: var(--input-height-md);
-
-      &::-webkit-slider-runnable-track {
-        height: var(--range-size-md);
-      }
-
-      &::-moz-range-track {
-        height: var(--range-size-md);
-      }
-
-      &::-webkit-slider-thumb {
-        height: calc(var(--range-size-md) * 2);
-        width: calc(var(--range-size-md) * 2);
-        margin-top: calc((var(--range-size-md) - (var(--range-size-md) * 2)) / 2);
-      }
-
-      &::-moz-range-thumb {
-        height: calc(var(--range-size-md) * 2);
-        width: calc(var(--range-size-md) * 2);
-        margin-top: calc((var(--range-size-md) - (var(--range-size-md) * 2)) / 2);
-      }
-    }
-
-    &-lg {
-      @include input-range-base;
-      height: var(--input-height-lg);
-
-      &::-webkit-slider-runnable-track {
-        height: var(--range-size-lg);
-      }
-
-      &::-moz-range-track {
-        height: var(--range-size-lg);
-      }
-
-      &::-webkit-slider-thumb {
-        height: calc(var(--range-size-lg) * 2);
-        width: calc(var(--range-size-lg) * 2);
-        margin-top: calc((var(--range-size-lg) - (var(--range-size-lg) * 2)) / 2);
-      }
-
-      &::-moz-range-thumb {
-        height: calc(var(--range-size-lg) * 2);
-        width: calc(var(--range-size-lg) * 2);
-        margin-top: calc((var(--range-size-lg) - (var(--range-size-lg) * 2)) / 2);
-      }
-    }
-  }
-}
-
-/* Radio and Checkbox */
-input[type="radio"],
-input[type="checkbox"] {
-  &.input {
-    @include input-base;
-    @include accent-color;
-    display: block;
-    width: var(--input-size);
-    height: var(--input-height);
-  }
-
-  &.input-sm {
-    @include input-base;
-    @include accent-color;
-    display: block;
-    width: var(--input-size-sm);
-    height: var(--input-height-sm);
-  }
-
-  &.input-md {
-    @include input-base;
-    @include accent-color;
-    display: block;
-    width: var(--input-size-md);
-    height: var(--input-height-md);
-  }
-
-  &.input-lg {
-    @include input-base;
-    @include accent-color;
-    display: block;
-    width: var(--input-size-lg);
-    height: var(--input-height-lg);
-  }
-}
-
-
-
-@mixin switch-size($input-height, $switch-size) {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  width: fit-content;
-
-  &.form-inline{
-    max-width: 100%;
-    align-items: center;
-    flex-direction: row;
-    gap: var(--gap-form-inline);
-  }
-
-  .slide {
-    margin: .5rem 0;
-    display: flex;
-    align-items: center;
-    height: $input-height;
-  }
-
-  input {
-    appearance: none;
-    width: calc(#{$switch-size} * 2);
-    height: $switch-size;
-    background: #ccc;
-    border-radius: 1rem;
-    position: relative;
+  input[type="color"] {
+    -webkit-appearance: none;
     cursor: pointer;
-    transition: 0.15s;
+    border-radius: var(--input-border-radius);
+    border-color: var(--input-border-color);
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: calc(#{$switch-size} - .4rem);
-      height: calc(#{$switch-size} - .4rem);
-      border-radius: 50%;
-      background: white;
-      left: 0.2rem;
-      top: 0.2rem;
-      transition: 0.15s;
+    &::-webkit-color-swatch-wrapper {
+      padding: .3rem;
+      border-radius: var(--input-border-radius);
     }
+
+    &::-webkit-color-swatch {
+      border-color: var(--input-border-color);
+      border-style: var(--input-border-style);
+      border-width: var(--input-border-width);
+      border-radius: var(--input-border-radius);
+    }
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    border-color: var(--input-border-color);
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
+    position: relative;
+
+    &:checked {
+      background: radial-gradient(
+                      circle,
+                      var(--primary-color) 0%,
+                      var(--primary-color) 50%,
+                      var(--bg-color) 51%
+      )
+    }
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-color: var(--input-border-color);
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+    background: var(--bg-color);
+    display: inline-block;
+    position: relative;
 
     &:checked {
       background: var(--primary-color);
-    }
 
-    &:checked::before {
-      left: calc(#{$switch-size} + .2rem);
+      &::after {
+        content: "✓";
+        position: absolute;
+        color: var(--text-on-primary);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    &::-webkit-slider-runnable-track {
+      background: var(--primary-color);
+      border-radius: var(--input-border-radius);
+    }
+
+    &::-moz-range-track {
+      background: var(--primary-color);
+      border-radius: var(--input-border-radius);
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border-radius: 50%;
+      background: var(--bg-color);
+      border-color: var(--primary-color);
+      border-style: var(--input-border-style);
+      border-width: var(--input-border-width);
+    }
+
+    &::-moz-range-thumb {
+      border-radius: 50%;
+      background: var(--bg-color);
+      border-color: var(--input-border-color);
+      border-style: var(--input-border-style);
+      border-width: var(--input-border-width);
+
+    }
+
+    /* Pour Firefox (track derrière) */
+    &::-moz-range-progress {
+      background: var(--primary-color);
+      border-radius: var(--input-border-radius);
+    }
+
+  }
+
+  input[type="file"] {
+    padding-left: 0;
+    border-color: var(--input-border-color);
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
+    border-radius: var(--input-border-radius);
+    background: var(--bg-color);
+    cursor: pointer;
+
+    /* Le BOUTON natif (Chrome/Safari/Edge) */
+    &::file-selector-button {
+      border: none;
+      cursor: pointer;
+      margin-right: 1rem;
+      border-bottom-left-radius: calc(var(--input-border-radius) - var(--input-border-width));
+      border-top-left-radius: calc(var(--input-border-radius) - var(--input-border-width));
+      color: var(--text-on-primary);
+      background: var(--primary-color);
+    }
+
+    /* Hover */
+    &::file-selector-button:hover {
+      background: color-mix(in srgb, var(--primary-color), black 15%);
+    }
+  }
+
 }
 
-.switch {
-  @include switch-size(var(--input-height), var(--switch-size));
+
+.form-control {
+  height: var(--form-control-height);
+  &:has(textarea) {
+    height: auto !important;
+  }
+
+  input[type="button"],
+    //input[type="checkbox"],
+    //input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="file"],
+  input[type="hidden"],
+  input[type="image"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+    //input[type="radio"],
+    //input[type="range"],
+  input[type="reset"],
+  input[type="search"],
+  input[type="submit"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+    //textarea,
+  {
+    height: var(--input-height);
+  }
+
+  input[type="color"] {
+    height: var(--input-height);
+  }
+
+  input[type="radio"] {
+    width: var(--input-radio-size);
+    height: var(--input-radio-size);
+  }
+
+  input[type="checkbox"] {
+    width: var(--input-checbox-size);
+    height: var(--input-checbox-size);
+  }
+
+  input[type="range"] {
+
+    &::-webkit-slider-runnable-track {
+      height: var(--input-range-bar-height); /* épaisseur de la barre */
+    }
+
+    &::-moz-range-track {
+      height: var(--input-range-bar-height);
+    }
+
+    &::-webkit-slider-thumb {
+      width: var(--input-range-button-size);
+      height: var(--input-range-button-size);
+      margin-top: calc(
+              (var(--input-range-bar-height) - var(--input-range-button-size)) / 2
+      );
+    }
+
+    &::-moz-range-thumb {
+      width: var(--input-range-button-size);
+      height: var(--input-range-button-size);
+    }
+
+    /* Pour Firefox (track derrière) */
+    &::-moz-range-progress {
+      height: var(--input-range-bar-height);
+    }
+
+  }
+
+  input[type="file"] {
+    /* Le BOUTON natif (Chrome/Safari/Edge) */
+    &::file-selector-button {
+      height: calc(var(--input-height) - (var(--input-border-width) * 2));
+    }
+  }
+
 }
-.switch-sm {
-  @include switch-size(var(--input-height-sm), var(--switch-size-sm));
+
+.form-control-sm {
+  height: var(--form-control-height-sm);
+  &:has(textarea) {
+    height: auto !important;
+  }
+
+  input[type="button"],
+    //input[type="checkbox"],
+    //input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="file"],
+  input[type="hidden"],
+  input[type="image"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+    //input[type="radio"],
+    //input[type="range"],
+  input[type="reset"],
+  input[type="search"],
+  input[type="submit"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+    //textarea
+  {
+    height: var(--input-height-sm);
+  }
+
+
+  input[type="color"] {
+    height: var(--input-height-sm);
+  }
+
+  input[type="radio"] {
+    width: var(--input-radio-size-sm);
+    height: var(--input-radio-size-sm);
+  }
+
+  input[type="checkbox"] {
+    width: var(--input-checbox-size-sm);
+    height: var(--input-checbox-size-sm);
+  }
+
+  input[type="range"] {
+
+    &::-webkit-slider-runnable-track {
+      height: var(--input-range-bar-height-sm); /* épaisseur de la barre */
+    }
+
+    &::-moz-range-track {
+      height: var(--input-range-bar-height-sm);
+    }
+
+    &::-webkit-slider-thumb {
+      width: var(--input-range-button-size-sm);
+      height: var(--input-range-button-size-sm);
+      margin-top: calc(
+              (var(--input-range-bar-height-sm) - var(--input-range-button-size-sm)) / 2
+      );
+    }
+
+    &::-moz-range-thumb {
+      width: var(--input-range-button-size-sm);
+      height: var(--input-range-button-size-sm);
+    }
+
+    /* Pour Firefox (track derrière) */
+    &::-moz-range-progress {
+      height: var(--input-range-bar-height-sm);
+    }
+
+  }
+
+  input[type="file"] {
+    /* Le BOUTON natif (Chrome/Safari/Edge) */
+    &::file-selector-button {
+      height: calc(var(--input-height-sm) - (var(--input-border-width-sm) * 2));
+    }
+  }
+
 }
-.switch-md {
-  @include switch-size(var(--input-height-md), var(--switch-size-md));
+
+.form-control-md {
+  height: var(--form-control-height-md);
+  &:has(textarea) {
+    height: auto !important;
+  }
+  input[type="button"],
+    //input[type="checkbox"],
+    //input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="file"],
+  input[type="hidden"],
+  input[type="image"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+    //input[type="radio"],
+    //input[type="range"],
+  input[type="reset"],
+  input[type="search"],
+  input[type="submit"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+    //textarea
+  {
+    height: var(--input-height-md);
+  }
+
+
+  input[type="color"] {
+    height: var(--input-height-md);
+  }
+
+  input[type="radio"] {
+    width: var(--input-radio-size-md);
+    height: var(--input-radio-size-md);
+  }
+
+  input[type="checkbox"] {
+    width: var(--input-checbox-size-md);
+    height: var(--input-checbox-size-md);
+  }
+
+  input[type="range"] {
+
+    &::-webkit-slider-runnable-track {
+      height: var(--input-range-bar-height-md); /* épaisseur de la barre */
+    }
+
+    &::-moz-range-track {
+      height: var(--input-range-bar-height-md);
+    }
+
+    &::-webkit-slider-thumb {
+      width: var(--input-range-button-size-md);
+      height: var(--input-range-button-size-md);
+      margin-top: calc(
+              (var(--input-range-bar-height-md) - var(--input-range-button-size-md)) / 2
+      );
+    }
+
+    &::-moz-range-thumb {
+      width: var(--input-range-button-size-md);
+      height: var(--input-range-button-size-md);
+    }
+
+    /* Pour Firefox (track derrière) */
+    &::-moz-range-progress {
+      height: var(--input-range-bar-height-md);
+    }
+
+  }
+
+  input[type="file"] {
+    /* Le BOUTON natif (Chrome/Safari/Edge) */
+    &::file-selector-button {
+      height: calc(var(--input-height-md) - (var(--input-border-width-md) * 2));
+    }
+  }
+
 }
-.switch-lg {
-  @include switch-size(var(--input-height-lg), var(--switch-size-lg));
+
+.form-control-lg {
+  height: var(--form-control-height-lg);
+  &:has(textarea) {
+    height: auto !important;
+  }
+  input[type="button"],
+    //input[type="checkbox"],
+    //input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="file"],
+  input[type="hidden"],
+  input[type="image"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+    //input[type="radio"],
+    //input[type="range"],
+  input[type="reset"],
+  input[type="search"],
+  input[type="submit"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+    //textarea
+  {
+    height: var(--input-height-lg);
+  }
+
+
+  input[type="color"] {
+    height: var(--input-height-lg);
+  }
+
+  input[type="radio"] {
+    width: var(--input-radio-size-lg);
+    height: var(--input-radio-size-lg);
+  }
+
+  input[type="checkbox"] {
+    width: var(--input-checbox-size-lg);
+    height: var(--input-checbox-size-lg);
+  }
+
+  input[type="range"] {
+
+    &::-webkit-slider-runnable-track {
+      height: var(--input-range-bar-height-lg); /* épaisseur de la barre */
+    }
+
+    &::-moz-range-track {
+      height: var(--input-range-bar-height-lg);
+    }
+
+    &::-webkit-slider-thumb {
+      width: var(--input-range-button-size-lg);
+      height: var(--input-range-button-size-lg);
+      margin-top: calc(
+              (var(--input-range-bar-height-lg) - var(--input-range-button-size-lg)) / 2
+      );
+    }
+
+    &::-moz-range-thumb {
+      width: var(--input-range-button-size-lg);
+      height: var(--input-range-button-size-lg);
+    }
+
+    /* Pour Firefox (track derrière) */
+    &::-moz-range-progress {
+      height: var(--input-range-bar-height-lg);
+    }
+
+  }
+
+  input[type="file"] {
+    /* Le BOUTON natif (Chrome/Safari/Edge) */
+    &::file-selector-button {
+      height: calc(var(--input-height-lg) - (var(--input-border-width-lg) * 2));
+    }
+  }
+
 }
+
+
+

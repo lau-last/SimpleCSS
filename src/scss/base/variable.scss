@@ -7,6 +7,7 @@
   ***
   */
 
+
   /* Color palette */
   --gray-0: #ffffff;
   --gray-50: #fafafa;
@@ -30,9 +31,11 @@
   --gray-950: #0b0b0b;
   --gray-1000: #000000;
 
+
   --primary-color: #6E5FAF;
   --secondary-color: #C07A2D;
   --tertiary-color: #4F7C9E;
+
 
   --black-color: #000000;
   --dark-color: #383737;
@@ -45,10 +48,13 @@
   --white-color: #ffffff;
 
 
+
+
   /* Text contrast tokens */
   --text-on-primary: var(--white-color);
   --text-on-secondary: var(--white-color);
   --text-on-tertiary: var(--white-color);
+
 
   --text-on-black: var(--white-color);
   --text-on-dark: var(--white-color);
@@ -60,18 +66,22 @@
   --text-on-warning: var(--white-color);
   --text-on-white: var(--black-color);
 
+
   /* Derived color helpers */
   --color-mix-dark: var(--black-color);
   --color-mix-light: var(--white-color);
+
 
   /* Global surfaces & borders */
   --bg-color: var(--gray-0);
   --border-color: var(--gray-300);
   --text-color: #262626;
 
+
   /* Typography */
   --font-family-text: "Open Sans", sans-serif;
   --font-family-title: "Montserrat", sans-serif;
+
 
   --font-weight: 200;
   --font-weight-lighter: 100;
@@ -83,6 +93,7 @@
   --font-weight-bold: 700;
   --font-weight-bolder: 800;
 
+
   --font-size: 1.2rem;
   --font-size-xs: 0.8rem;
   --font-size-sm: 1rem;
@@ -90,6 +101,7 @@
   --font-size-lg: 1.4rem;
   --font-size-xl: 1.6rem;
   --font-size-xxl: 1.8rem;
+
 
   /* Headings */
   --font-size-h1: 4rem;
@@ -99,17 +111,20 @@
   --font-size-h5: 2rem;
   --font-size-h6: 1.5rem;
 
+
   /* Leading & tracking */
   --letter-spacing: 0;
   --letter-spacing-tight: -0.05em;
   --letter-spacing-wide: 0.05em;
   --letter-spacing-wider: 0.1em;
 
+
   --line-height: 1;
   --line-height-sm: 1.25;
   --line-height-md: 1.5;
   --line-height-lg: 1.75;
   --line-height-xl: 2;
+
 
   /* Radius */
   --border-radius: .3rem;
@@ -119,8 +134,10 @@
   --border-radius-pill: 10rem;
   --border-radius-circle: 50%;
 
+
   /* Shadow */
   --box-shadow: 0 .05rem 1.5rem rgba(0, 0, 0, .08);
+
 
   /*
   ***
@@ -129,6 +146,7 @@
   ******
   ***
   */
+
 
   /* Accordion */
   --accordion-bg-color: var(--bg-color);
@@ -141,10 +159,12 @@
   --accordion-button-padding-md: 1rem;
   --accordion-button-padding-lg: 1.5rem;
 
+
   /* Alert */
   --alert-body-padding: 1rem;
   --alert-footer-padding: .5rem 1rem;
   --alert-header-padding: .5rem 1rem;
+
 
   --alert-animation: alert-in-and-out 5s ease forwards;
   --alert-border: .1rem solid var(--border-color);
@@ -155,6 +175,7 @@
   --alert-padding: 1rem;
   --alert-width: 100%;
 
+
   /* Badge */
   --badge-border-radius: var(--border-radius);
   --badge-group-gap: .5rem;
@@ -162,6 +183,7 @@
   --badge-padding-sm: .3rem .9rem;
   --badge-padding-md: .4rem 1.2rem;
   --badge-padding-lg: .5rem 1.5rem;
+
 
   /* Button */
   --button-border-radius: var(--border-radius);
@@ -171,15 +193,18 @@
   --button-padding-md: .75rem 1.5rem;
   --button-padding-lg: 1rem 2rem;
 
+
   /* Card */
   --card-body-padding: 1rem;
   --card-footer-padding: .5rem 1rem;
   --card-header-padding: .5rem 1rem;
 
+
   --card-border: .1rem solid var(--gray-100);
   --card-border-radius: var(--border-radius);
   --card-box-shadow: var(--box-shadow);
   --card-group-gap: 1rem;
+
 
   /* Collapse */
   --collapse-bg-color: var(--bg-color);
@@ -192,10 +217,12 @@
   --collapse-button-padding-md: 1rem;
   --collapse-button-padding-lg: 1.5rem;
 
+
   /* Dialog */
   --dialog-body-padding: 1rem;
   --dialog-header-padding: 1rem;
   --dialog-footer-padding: 1rem;
+
 
   --dialog-backdrop-color: rgba(0, 0, 0, 0.8);
   --dialog-border: .1rem solid var(--border-color);
@@ -203,10 +230,12 @@
   --dialog-padding: 0;
   --dialog-width: 50%;
 
+
   /* Dropdown */
   --dropdown-menu-box-shadow: var(--box-shadow);
   --dropdown-menu-min-width: 10rem;
   --dropdown-menu-spacing-margin: .5rem;
+
 
   /* Form */
   --input-border-color: var(--gray-300);
@@ -214,59 +243,58 @@
   --input-border-width: .1rem;
   --input-border-radius: var(--border-radius);
 
+
   --form-control-gap: 1rem;
   --input-box-shadow-focus: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--primary-color) 50%, transparent);
+  --input-box-shadow-invalid: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--danger-color) 50%, transparent);
+  --input-border-color-invalid: var(--danger-color);
+  --input-box-shadow-valid: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--success-color) 50%, transparent);
+  --input-border-color-valid: var(--success-color);
   --input-padding: 0 1.5rem;
   --textarea-padding: .5rem 1.5rem;
 
-
   --form-control-height: 7.5rem;
+  --form-control-height-sm: 7rem;
+  --form-control-height-md: 7.5rem;
+  --form-control-height-lg: 8rem;
 
   --input-height: 3.5rem;
+  --input-height-sm: 2.5rem;
+  --input-height-md: 3.5rem;
+  --input-height-lg: 4rem;
 
-  --input-radio-size: 1.2rem;
+  --input-radio-size: 1.4rem;
+  --input-radio-size-sm: 1.2rem;
+  --input-radio-size-md: 1.4rem;
+  --input-radio-size-lg: 1.6rem;
 
-  --input-checbox-size: 1.2rem;
+  --input-checbox-size: 1.4rem;
+  --input-checbox-size-sm: 1.2rem;
+  --input-checbox-size-md: 1.4rem;
+  --input-checbox-size-lg: 1.6rem;
 
   --input-range-bar-height: .4rem;
+  --input-range-bar-height-sm: .3rem;
+  --input-range-bar-height-md: .4rem;
+  --input-range-bar-height-lg: .5rem;
+
   --input-range-button-size: 1.25rem;
+  --input-range-button-size-sm: 1rem;
+  --input-range-button-size-md: 1.25rem;
+  --input-range-button-size-lg: 1.5rem;
 
-
-
-
-
-  //--gap-form-inline: 1rem;
-  //--input-bg-color: var(--gray-100);
-  //--input-border: .1rem solid var(--gray-300);
-  //
-  //
-  //--input-height-sm: 2.5rem;
-  //--input-height-md: 3rem;
-  //--input-height-lg: 3.5rem;
-  //--input-margin: .5rem 0;
-  //
-  //--input-placeholder-color: var(--gray-400);
-  //--input-size: 1.4rem;
-  //--input-size-sm: 1.2rem;
-  //--input-size-md: 1.4rem;
-  //--input-size-lg: 1.6rem;
-  //--input-text-color: var(--gray-900);
-  //--range-size: .6rem;
-  //--range-size-sm: .5rem;
-  //--range-size-md: .6rem;
-  //--range-size-lg: .7rem;
-  //--select-padding: 0 1.5rem;
-  //--switch-size: 1.4rem;
-  //--switch-size-sm: 1.2rem;
-  //--switch-size-md: 1.4rem;
-  //--switch-size-lg: 1.6rem;
-  //--textarea-padding: 1rem;
+  --input-switch-bg-color: var(--gray-300);
+  --input-switch-height: 1.5rem;
+  --input-switch-height-sm: 1.2rem;
+  --input-switch-height-md: 1.5rem;
+  --input-switch-height-lg: 1.8rem;
 
   /* Image */
   --img-border-radius: var(--border-radius);
   --img-thumbnail-bg-color: var(--bg-color);
   --img-thumbnail-border: .1rem solid rgba(0, 0, 0, .125);
   --img-thumbnail-padding: .25rem;
+
 
   /* List */
   --list-bg-color: var(--bg-color);
@@ -275,8 +303,10 @@
   --list-border-color: var(--gray-150);
   --list-border-radius: var(--border-radius);
 
+
   --list-column-gap: 2rem;
   --list-inline-gap: 2rem;
+
 
   --list-item-height: 3rem;
   --list-item-height-sm: 2rem;
@@ -291,9 +321,11 @@
   --list-item-border-style: solid;
   --list-item-border-color: var(--gray-150);
 
+
   --list-primary-color: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
   --list-secondary-color: color-mix(in srgb, var(--secondary-color) 50%, var(--color-mix-light));
   --list-tertiary-color: color-mix(in srgb, var(--tertiary-color) 50%, var(--color-mix-light));
+
 
   --list-black-color: color-mix(in srgb, var(--black-color) 50%, var(--color-mix-dark));
   --list-danger-color: color-mix(in srgb, var(--danger-color) 50%, var(--color-mix-light));
@@ -305,9 +337,11 @@
   --list-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
   --list-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-dark));
 
+
   --list-text-on-primary: var(--black-color);
   --list-text-on-secondary: var(--black-color);
   --list-text-on-tertiary: var(--black-color);
+
 
   --list-text-on-black: var(--white-color);
   --list-text-on-danger: var(--black-color);
@@ -320,6 +354,8 @@
   --list-text-on-white: var(--black-color);
 
 
+
+
   /* Nav */
   --navbar-border: none;
   --navbar-border-radius: 0;
@@ -328,11 +364,13 @@
   --navbar-nav-margin: var(--navbar-nav-gap) 0 0 0;
   --navbar-padding: 1rem;
 
+
   /* Sidebar */
   --sidebar-border: .1rem solid var(--border-color);
   --sidebar-border-radius: var(--border-radius);
   --sidebar-padding: 1rem;
   --sidebar-width: 30rem;
+
 
   /* Tab */
   --tab-button-padding: .5rem 1rem;
@@ -344,15 +382,18 @@
   --tab-content-border-radius: var(--border-radius);
   --tab-content-padding: 1rem;
 
+
   /* Table */
   --table-border-color: var(--gray-100);
   --table-border-divider-color: var(--gray-1000);
   --table-hover-bg-color: rgba(0, 0, 0, 0.2);
   --table-striped-bg-color: rgba(128, 128, 128, 0.2);
 
+
   --table-primary-color: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
   --table-secondary-color: color-mix(in srgb, var(--secondary-color) 50%, var(--color-mix-light));
   --table-tertiary-color: color-mix(in srgb, var(--tertiary-color) 50%, var(--color-mix-light));
+
 
   --table-black-color: color-mix(in srgb, var(--black-color) 50%, var(--color-mix-light));
   --table-danger-color: color-mix(in srgb, var(--danger-color) 50%, var(--color-mix-light));
@@ -364,9 +405,11 @@
   --table-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
   --table-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-dark));
 
+
   --table-text-on-primary: var(--black-color);
   --table-text-on-secondary: var(--black-color);
   --table-text-on-tertiary: var(--black-color);
+
 
   --table-text-on-black: var(--white-color);
   --table-text-on-danger: var(--black-color);
@@ -378,10 +421,12 @@
   --table-text-on-warning: var(--black-color);
   --table-text-on-white: var(--black-color);
 
+
   --table-padding: .8rem;
   --table-padding-sm: .6rem;
   --table-padding-md: .8rem;
   --table-padding-lg: 1rem;
+
 
   /*
   ***
@@ -391,9 +436,11 @@
   ***
   */
 
+
   /* Col & grid spacing */
   --col-padding: .5rem 1rem;
   --g-col-padding: .5rem 1rem;
+
 
   /* Containers */
   --container-fluid-padding: 1rem;
@@ -407,6 +454,7 @@
   --container-width-lg: 140rem;
   --container-padding: 1rem;
 
+
   /* Grid gaps */
   --gap-grid: 0.2rem;
   --gap-grid-xs: 0.1rem;
@@ -417,6 +465,7 @@
   --gap-grid-xxl: 0.6rem;
 }
 
+
 /* Breakpoints cannot be variable with @media queries */
 /* Change manually in the code in (grid, col, display, flex, spacing, typography, text) */
 //--breakpoint-xs: 42.5rem;
@@ -425,3 +474,4 @@
 //--breakpoint-lg: 99.2rem;
 //--breakpoint-xl: 120rem;
 //--breakpoint-xxl: 140rem;
+

@@ -1,6 +1,7 @@
 /* Gray shades */
 $grays: (0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000);
 
+
 /* Gray classes */
 @each $shade in $grays {
   .bg-gray-#{$shade} {
@@ -13,6 +14,7 @@ $grays: (0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700,
     color: var(--gray-#{$shade});
   }
 }
+
 
 /* Main colors */
 $colors: (
@@ -30,6 +32,7 @@ $colors: (
         "black": var(--black-color)
 );
 
+
 $table-colors: (
         "primary": var(--table-primary-color),
         "secondary": var(--table-secondary-color),
@@ -44,6 +47,7 @@ $table-colors: (
         "white": var(--table-white-color),
         "black": var(--table-black-color)
 );
+
 
 $list-colors: (
         "primary": var(--list-primary-color),
@@ -60,6 +64,7 @@ $list-colors: (
         "black": var(--list-black-color)
 );
 
+
 /* Background */
 .bg {
   @each $name, $value in $colors {
@@ -70,6 +75,7 @@ $list-colors: (
   }
 }
 
+
 /* Borders */
 .border {
   @each $name, $value in $colors {
@@ -78,6 +84,7 @@ $list-colors: (
     }
   }
 }
+
 
 /* Badges and buttons */
 .badge, .btn {
@@ -88,6 +95,7 @@ $list-colors: (
     }
   }
 }
+
 
 /* Outline versions */
 .outline {
@@ -100,20 +108,35 @@ $list-colors: (
   }
 }
 
+
 /* Button hover */
 
+
 .btn {
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+  }
   @each $name, $value in $colors {
     &-#{$name}:hover {
-      background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+      @if ($name == 'dark' or $name == 'black') {
+        background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-light));
+      } @else {
+        background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+      }
       color: var(--text-on-#{$name});
     }
     &-#{$name}.active {
-      background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+      @if ($name == 'dark' or $name == 'black') {
+        background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-light));
+      } @else {
+        background-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+      }
       color: var(--text-on-#{$name});
     }
   }
 }
+
+
 
 
 /* Outline hover */
@@ -148,6 +171,7 @@ $list-colors: (
   }
 }
 
+
 /* List */
 .list {
   @each $name, $value in $list-colors {
@@ -156,12 +180,14 @@ $list-colors: (
       color: var(--list-text-on-#{$name});
       border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
 
+
       .list-item {
         border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
       }
     }
   }
 }
+
 
 .list,
 .list-sm,
@@ -171,17 +197,29 @@ $list-colors: (
     @each $name, $value in $list-colors {
       /* list-hover — hover depending on the LIST’s color */
       &.list-#{$name} .list-item:hover {
-        background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
+        @if ($name == 'dark' or $name == 'black') {
+          background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-light));
+        } @else {
+          background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
+        }
         color: var(--list-text-on-#{$name});
       }
       /* list-hover — hover depending on the ITEM’s color  */
       .list-item.list-#{$name}:hover {
-        background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
+        @if ($name == 'dark' or $name == 'black') {
+          background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-light));
+        } @else {
+          background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
+        }
         color: var(--list-text-on-#{$name});
       }
     }
   }
 }
+
+
+
+
 
 
 
@@ -199,6 +237,7 @@ table {
     }
   }
 
+
   .table {
     @each $name, $value in $table-colors {
       &-#{$name} {
@@ -211,21 +250,30 @@ table {
   }
 }
 
+
 /* Links */
 .link {
   @each $name, $value in $colors {
     &-#{$name} {
-      color: #{$value};
+      background-color: transparent;
       text-decoration: underline;
+      color: #{$value};
       text-decoration-color: #{$value};
       &:hover {
-        color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+        background-color: transparent;
         text-decoration: underline;
-        text-decoration-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+        @if ($name == 'dark' or $name == 'black') {
+          color: color-mix(in srgb, #{$value} 75%, var(--color-mix-light));
+          text-decoration-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-light));
+        } @else {
+          color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+          text-decoration-color: color-mix(in srgb, #{$value} 75%, var(--color-mix-dark));
+        }
       }
     }
   }
 }
+
 
 /* Alerts */
 .alert {
@@ -237,6 +285,7 @@ table {
   }
 }
 
+
 /* Alerts */
 .navbar {
   @each $name, $value in $colors {
@@ -247,6 +296,7 @@ table {
   }
 }
 
+
 /* Text */
 .text {
   @each $name, $value in $colors {
@@ -255,3 +305,4 @@ table {
     }
   }
 }
+

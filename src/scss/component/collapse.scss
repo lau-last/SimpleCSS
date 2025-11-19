@@ -1,4 +1,5 @@
-.collapse {
+.collapse,
+.collapse-native{
   display: inline-block;
   position: relative;
   width: 100%;
@@ -38,6 +39,14 @@
     }
   }
 
+  .collapse-body{
+    .list{
+      border: none;
+    }
+  }
+}
+
+.collapse {
   &:has(.collapse-body.show) > .collapse-btn,
   &:has(.collapse-body.show) > .collapse-btn-sm,
   &:has(.collapse-body.show) > .collapse-btn-md,
@@ -50,21 +59,23 @@
   }
 
   .collapse-body{
-    .list{
-      border: none;
+    display: none;
+
+    &.show {
+      display: block;
     }
   }
-
 }
 
-.collapse-body{
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 0;
-  overflow: hidden;
-
-  &.show {
-    height: auto;
-    overflow: visible;
+.collapse-native {
+  &[open] > .collapse-btn,
+  &[open] > .collapse-btn-sm,
+  &[open] > .collapse-btn-md,
+  &[open] > .collapse-btn-lg {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    &:after {
+      content: '\FE63';
+    }
   }
 }

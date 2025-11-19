@@ -2,7 +2,9 @@ table.table,
 table.table-sm,
 table.table-md,
 table.table-lg {
-  border: 0.1rem solid var(--table-border-color);
+  border-width: var(--table-border-width);
+  border-style: var(--table-border-style);
+  border-color: var(--table-border-color);
   border-collapse: collapse;
   width: 100%;
 }
@@ -13,7 +15,7 @@ table.table-md thead tr th,
 table.table-md thead tr td,
 table.table-lg thead tr th,
 table.table-lg thead tr td {
-  border-top: 0.1rem solid var(--table-border-color);
+  border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
   padding: var(--table-padding);
   text-wrap: nowrap;
 }
@@ -24,7 +26,7 @@ table.table-md tbody tr th,
 table.table-md tbody tr td,
 table.table-lg tbody tr th,
 table.table-lg tbody tr td {
-  border-top: 0.1rem solid var(--table-border-color);
+  border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
   padding: var(--table-padding);
   text-wrap: nowrap;
 }
@@ -35,7 +37,7 @@ table.table-md tfoot tr th,
 table.table-md tfoot tr td,
 table.table-lg tfoot tr th,
 table.table-lg tfoot tr td {
-  border-top: 0.1rem solid var(--table-border-color);
+  border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
   padding: var(--table-padding);
   text-wrap: nowrap;
 }
@@ -127,10 +129,7 @@ table.table-lg.table-bordered tbody tr th,
 table.table-lg.table-bordered tbody tr td,
 table.table-lg.table-bordered tfoot tr th,
 table.table-lg.table-bordered tfoot tr td {
-  border-top: 0.1rem solid var(--table-border-color);
-  border-bottom: 0.1rem solid var(--table-border-color);
-  border-left: 0.1rem solid var(--table-border-color);
-  border-right: 0.1rem solid var(--table-border-color);
+  border: var(--table-border-width) var(--table-border-style) var(--table-border-color);
 }
 table.table.table-hover tbody tr:hover,
 table.table-sm.table-hover tbody tr:hover,
@@ -146,7 +145,7 @@ table.table-md.table-hover tbody tr:hover th:first-child,
 table.table-md.table-hover tbody tr:hover td:first-child,
 table.table-lg.table-hover tbody tr:hover th:first-child,
 table.table-lg.table-hover tbody tr:hover td:first-child {
-  border-left: 0.1rem solid var(--table-border-color);
+  border-left: var(--table-border-width) var(--table-border-style) var(--table-border-color);
 }
 table.table.table-hover tbody tr:hover th:last-child, table.table.table-hover tbody tr:hover td:last-child,
 table.table-sm.table-hover tbody tr:hover th:last-child,
@@ -155,7 +154,7 @@ table.table-md.table-hover tbody tr:hover th:last-child,
 table.table-md.table-hover tbody tr:hover td:last-child,
 table.table-lg.table-hover tbody tr:hover th:last-child,
 table.table-lg.table-hover tbody tr:hover td:last-child {
-  border-right: 0.1rem solid var(--table-border-color);
+  border-right: var(--table-border-width) var(--table-border-style) var(--table-border-color);
 }
 table.table.table-hover tbody tr:hover th, table.table.table-hover tbody tr:hover td,
 table.table-sm.table-hover tbody tr:hover th,
@@ -164,8 +163,8 @@ table.table-md.table-hover tbody tr:hover th,
 table.table-md.table-hover tbody tr:hover td,
 table.table-lg.table-hover tbody tr:hover th,
 table.table-lg.table-hover tbody tr:hover td {
-  border-top: 0.1rem solid var(--table-border-color);
-  border-bottom: 0.1rem solid var(--table-border-color);
+  border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
+  border-bottom: var(--table-border-width) var(--table-border-style) var(--table-border-color);
 }
 table.table.table-striped tbody tr:nth-child(odd),
 table.table-sm.table-striped tbody tr:nth-child(odd),
@@ -247,7 +246,7 @@ table.table-lg tfoot tr td {
 }
 
 .table-group-divider > tr:first-child {
-  border-top: 0.2rem solid var(--table-border-divider-color);
+  border-top: var(--table-border-divider-width) var(--table-border-divider-style) var(--table-border-divider-color);
 }
 
 .table-responsive {

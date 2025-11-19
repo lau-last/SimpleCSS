@@ -48,8 +48,6 @@
   --white-color: #ffffff;
 
 
-
-
   /* Text contrast tokens */
   --text-on-primary: var(--white-color);
   --text-on-secondary: var(--white-color);
@@ -253,41 +251,49 @@
   --input-padding: 0 1.5rem;
   --textarea-padding: .5rem 1.5rem;
 
+
   --form-control-height: 7.5rem;
   --form-control-height-sm: 7rem;
   --form-control-height-md: 7.5rem;
   --form-control-height-lg: 8rem;
+
 
   --input-height: 3.5rem;
   --input-height-sm: 2.5rem;
   --input-height-md: 3.5rem;
   --input-height-lg: 4rem;
 
+
   --input-radio-size: 1.4rem;
   --input-radio-size-sm: 1.2rem;
   --input-radio-size-md: 1.4rem;
   --input-radio-size-lg: 1.6rem;
+
 
   --input-checbox-size: 1.4rem;
   --input-checbox-size-sm: 1.2rem;
   --input-checbox-size-md: 1.4rem;
   --input-checbox-size-lg: 1.6rem;
 
+
   --input-range-bar-height: .4rem;
   --input-range-bar-height-sm: .3rem;
   --input-range-bar-height-md: .4rem;
   --input-range-bar-height-lg: .5rem;
+
 
   --input-range-button-size: 1.25rem;
   --input-range-button-size-sm: 1rem;
   --input-range-button-size-md: 1.25rem;
   --input-range-button-size-lg: 1.5rem;
 
+
   --input-switch-bg-color: var(--gray-300);
   --input-switch-height: 1.5rem;
   --input-switch-height-sm: 1.2rem;
   --input-switch-height-md: 1.5rem;
   --input-switch-height-lg: 1.8rem;
+
 
   /* Image */
   --img-border-radius: var(--border-radius);
@@ -354,8 +360,6 @@
   --list-text-on-white: var(--black-color);
 
 
-
-
   /* Nav */
   --navbar-border: none;
   --navbar-border-radius: 0;
@@ -373,7 +377,7 @@
 
 
   /* Tab */
-  --tab-button-padding: .5rem 1rem;
+  --tab-button-padding: .75rem 1.5rem;
   --tab-button-padding-sm: .5rem 1rem;
   --tab-button-padding-md: .75rem 1.5rem;
   --tab-button-padding-lg: 1rem 2rem;
@@ -385,8 +389,12 @@
 
   /* Table */
   --table-border-color: var(--gray-100);
+  --table-border-style: solid;
+  --table-border-width: .1rem;
   --table-border-divider-color: var(--gray-1000);
-  --table-hover-bg-color: rgba(0, 0, 0, 0.2);
+  --table-border-divider-width: .2rem;
+  --table-border-divider-style: solid;
+  --table-hover-bg-color: rgba(0, 0, 0, 0.15);
   --table-striped-bg-color: rgba(128, 128, 128, 0.2);
 
 
@@ -474,4 +482,8 @@
 //--breakpoint-lg: 99.2rem;
 //--breakpoint-xl: 120rem;
 //--breakpoint-xxl: 140rem;
+
+
+
+
 

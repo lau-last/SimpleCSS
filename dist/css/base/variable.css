@@ -283,7 +283,7 @@
   --sidebar-padding: 1rem;
   --sidebar-width: 30rem;
   /* Tab */
-  --tab-button-padding: .5rem 1rem;
+  --tab-button-padding: .75rem 1.5rem;
   --tab-button-padding-sm: .5rem 1rem;
   --tab-button-padding-md: .75rem 1.5rem;
   --tab-button-padding-lg: 1rem 2rem;
@@ -293,8 +293,12 @@
   --tab-content-padding: 1rem;
   /* Table */
   --table-border-color: var(--gray-100);
+  --table-border-style: solid;
+  --table-border-width: .1rem;
   --table-border-divider-color: var(--gray-1000);
-  --table-hover-bg-color: rgba(0, 0, 0, 0.2);
+  --table-border-divider-width: .2rem;
+  --table-border-divider-style: solid;
+  --table-hover-bg-color: rgba(0, 0, 0, 0.15);
   --table-striped-bg-color: rgba(128, 128, 128, 0.2);
   --table-primary-color: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
   --table-secondary-color: color-mix(in srgb, var(--secondary-color) 50%, var(--color-mix-light));

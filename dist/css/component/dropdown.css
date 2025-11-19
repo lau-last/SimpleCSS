@@ -1,9 +1,10 @@
-.dropdown {
+.dropdown,
+.dropdown-native {
   position: relative;
   display: inline-block;
 }
-
-.dropdown-menu {
+.dropdown .dropdown-menu,
+.dropdown-native .dropdown-menu {
   min-width: var(--dropdown-menu-min-width);
   box-shadow: var(--dropdown-menu-box-shadow);
   margin-top: var(--dropdown-menu-spacing-margin);
@@ -11,45 +12,43 @@
   list-style: none;
   position: absolute;
   z-index: 1000;
-  opacity: 0;
-  display: none;
-  transform: scale(0.5);
-  transform-origin: top;
-  transition: opacity 0.1s ease, transform 0.1s ease;
 }
-.dropdown-menu.show {
-  opacity: 1;
-  transform: scale(1);
-}
-.dropdown-menu.left {
+.dropdown .dropdown-menu.left,
+.dropdown-native .dropdown-menu.left {
   left: 0;
   right: auto;
 }
-.dropdown-menu.right {
+.dropdown .dropdown-menu.right,
+.dropdown-native .dropdown-menu.right {
   left: auto;
   right: 0;
 }
-.dropdown-menu.center {
+.dropdown .dropdown-menu.center,
+.dropdown-native .dropdown-menu.center {
   left: 50%;
-  transform: translateX(-50%) scale(0.5);
+  transform: translateX(-50%);
 }
-.dropdown-menu.center.show {
-  transform: translateX(-50%) scale(1);
+.dropdown .dropdown-menu.center.show,
+.dropdown-native .dropdown-menu.center.show {
+  transform: translateX(-50%);
 }
-.dropdown-menu.top {
+.dropdown .dropdown-menu.top,
+.dropdown-native .dropdown-menu.top {
   bottom: 100%;
   top: auto;
   margin-top: 0;
   transform-origin: bottom;
   margin-bottom: var(--dropdown-menu-spacing-margin);
 }
-.dropdown-menu.bottom {
+.dropdown .dropdown-menu.bottom,
+.dropdown-native .dropdown-menu.bottom {
   top: 100%;
   bottom: auto;
   transform-origin: top;
   margin-top: var(--dropdown-menu-spacing-margin);
 }
-.dropdown-menu.side-left {
+.dropdown .dropdown-menu.side-left,
+.dropdown-native .dropdown-menu.side-left {
   right: 100%;
   left: auto;
   top: 0;
@@ -57,11 +56,31 @@
   transform-origin: right;
   margin-right: var(--dropdown-menu-spacing-margin);
 }
-.dropdown-menu.side-right {
+.dropdown .dropdown-menu.side-right,
+.dropdown-native .dropdown-menu.side-right {
   left: 100%;
   right: auto;
   top: 0;
   margin-top: 0;
   transform-origin: left;
   margin-left: var(--dropdown-menu-spacing-margin);
+}
+
+.dropdown .dropdown-menu {
+  opacity: 0;
+  display: none;
+  transform: scale(0.5);
+  transform-origin: top;
+  transition: opacity 0.1s ease, transform 0.1s ease;
+}
+.dropdown .dropdown-menu.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.dropdown .dropdown-menu.center {
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+}
+.dropdown .dropdown-menu.center.show {
+  transform: translateX(-50%) scale(1);
 }

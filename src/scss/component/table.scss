@@ -3,14 +3,16 @@ table.table,
 table.table-sm,
 table.table-md,
 table.table-lg {
-    border: .1rem solid var(--table-border-color);
+    border-width: var(--table-border-width);
+    border-style: var(--table-border-style);
+    border-color:  var(--table-border-color);
     border-collapse: collapse;
     width: 100%;
 
     thead {
         tr {
             th, td {
-                border-top: .1rem solid var(--table-border-color);
+                border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
                 padding: var(--table-padding);
                 text-wrap: nowrap;
             }
@@ -20,7 +22,7 @@ table.table-lg {
     tbody {
         tr {
             th, td {
-                border-top: .1rem solid var(--table-border-color);
+                border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
                 padding: var(--table-padding);
                 text-wrap: nowrap;
             }
@@ -30,7 +32,7 @@ table.table-lg {
     tfoot {
         tr {
             th, td {
-                border-top: .1rem solid var(--table-border-color);
+                border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
                 padding: var(--table-padding);
                 text-wrap: nowrap;
             }
@@ -78,10 +80,7 @@ table.table-lg {
         tfoot {
             tr {
                 th, td {
-                    border-top: .1rem solid var(--table-border-color) ;
-                    border-bottom: .1rem solid var(--table-border-color) ;
-                    border-left: .1rem solid var(--table-border-color) ;
-                    border-right: .1rem solid var(--table-border-color) ;
+                    border: var(--table-border-width) var(--table-border-style) var(--table-border-color);
                 }
             }
         }
@@ -94,16 +93,16 @@ table.table-lg {
                 background-color: var(--table-hover-bg-color) !important;
 
                 th:first-child, td:first-child {
-                    border-left: .1rem solid var(--table-border-color) ;
+                    border-left: var(--table-border-width) var(--table-border-style) var(--table-border-color);
                 }
 
                 th:last-child, td:last-child {
-                    border-right: .1rem solid var(--table-border-color) ;
+                    border-right: var(--table-border-width) var(--table-border-style) var(--table-border-color);
                 }
 
                 th, td {
-                    border-top: .1rem solid var(--table-border-color) ;
-                    border-bottom: .1rem solid var(--table-border-color) ;
+                    border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
+                    border-bottom: var(--table-border-width) var(--table-border-style) var(--table-border-color);
                 }
             }
         }
@@ -181,7 +180,7 @@ table.table-lg {
 
 // Table group divider
 .table-group-divider > tr:first-child {
-    border-top: .2rem solid var(--table-border-divider-color);
+    border-top: var(--table-border-divider-width) var(--table-border-divider-style) var(--table-border-divider-color);
 }
 
 // Table responsive

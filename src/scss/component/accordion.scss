@@ -1,4 +1,5 @@
-.accordion {
+.accordion,
+.accordion-native {
   display: inline-block;
   position: relative;
   width: 100%;
@@ -11,10 +12,21 @@
   .accordion-item {
     border: none;
 
-    .accordion-btn{padding: var(--accordion-button-padding);}
-    .accordion-btn-sm{padding: var(--accordion-button-padding-sm);}
-    .accordion-btn-md{padding: var(--accordion-button-padding-md);}
-    .accordion-btn-lg{padding: var(--accordion-button-padding-lg);}
+    .accordion-btn {
+      padding: var(--accordion-button-padding);
+    }
+
+    .accordion-btn-sm {
+      padding: var(--accordion-button-padding-sm);
+    }
+
+    .accordion-btn-md {
+      padding: var(--accordion-button-padding-md);
+    }
+
+    .accordion-btn-lg {
+      padding: var(--accordion-button-padding-lg);
+    }
 
 
     &:first-child {
@@ -26,7 +38,7 @@
         border-top-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
       }
     }
-    
+
     &:last-child {
       .accordion-btn,
       .accordion-btn-sm,
@@ -34,18 +46,7 @@
       .accordion-btn-lg {
         border-bottom-left-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
         border-bottom-right-radius: calc(var(--accordion-border-radius) - var(--accordion-border-width));
-        border-bottom: none; 
-      }
-
-
-      &:has(.accordion-body.show) {
-        .accordion-btn,
-        .accordion-btn-sm,
-        .accordion-btn-md,
-        .accordion-btn-lg {
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-        }
+        border-bottom: none;
       }
     }
 
@@ -63,7 +64,7 @@
       border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
 
       &:after {
-        content: '\FE62'; 
+        content: '\FE62';
         margin-left: .5rem;
       }
 
@@ -73,34 +74,50 @@
       }
     }
 
- 
+
+    .accordion-body {
+      .list {
+        border: none;
+      }
+    }
+  }
+}
+
+
+.accordion {
+  .accordion-item {
+    &:last-child {
+      &:has(.accordion-body.show) {
+        .accordion-btn,
+        .accordion-btn-sm,
+        .accordion-btn-md,
+        .accordion-btn-lg {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
     &:has(.accordion-body.show) {
       .accordion-btn,
       .accordion-btn-sm,
       .accordion-btn-md,
-      .accordion-btn-lg{
+      .accordion-btn-lg {
         &:after {
-          content: '\FE63'; 
+          content: '\FE63';
         }
       }
     }
-    
+
     .accordion-body {
-      padding: 0 !important;
-      margin: 0 !important;
-      height: 0;
-      overflow: hidden;
-      .list{
-        border: none;
-      }
+      display: none;
 
       &.show {
-        height: auto;
-        overflow: visible;
+        display: block;
         border-bottom: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
       }
     }
-    
+
     &:last-child {
       .accordion-body.show {
         border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
@@ -110,3 +127,37 @@
   }
 }
 
+
+.accordion-native {
+  .accordion-item {
+    &:last-child {
+      &[open] {
+        .accordion-btn,
+        .accordion-btn-sm,
+        .accordion-btn-md,
+        .accordion-btn-lg {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    &[open] {
+      .accordion-btn,
+      .accordion-btn-sm,
+      .accordion-btn-md,
+      .accordion-btn-lg {
+        &:after {
+          content: '\FE63';
+        }
+      }
+    }
+
+    &:last-child[open] {
+      .accordion-body {
+        border-top: var(--accordion-border-width) var(--accordion-border-style) var(--accordion-border-color);
+        border-bottom: none;
+      }
+    }
+  }
+}

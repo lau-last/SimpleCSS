@@ -164,16 +164,6 @@
   bottom: 0;
 }
 
-.sticky-left {
-  position: sticky;
-  left: 0;
-}
-
-.sticky-right {
-  position: sticky;
-  right: 0;
-}
-
 /* Fixed viewport shortcuts */
 .fixed-top {
   position: fixed;
@@ -201,10 +191,4 @@
   top: 0;
   bottom: 0;
   right: 0;
-}
-
-/* Full coverage (fill parent or viewport) */
-.position-fill {
-  position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
 }

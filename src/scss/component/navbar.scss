@@ -1,20 +1,17 @@
 @use "sass:map";
 /* Breakpoints */
-$breakpoints: (
-        "xs": 42.5rem,
-        "sm": 57.6rem,
-        "md": 76.8rem,
-        "lg": 99.2rem,
-        "xl": 120rem,
-        "xxl": 140rem
-);
+@use "../breakpoint" as bp;
+$breakpoints: bp.$breakpoints;
 
 @mixin navbar($max-width) {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  //border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 
   .navbar-btn {

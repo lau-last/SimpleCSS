@@ -1,48 +1,51 @@
 // Container
-.container {
+@mixin container-base {
     width: 100%;
     margin-inline: auto;
     box-sizing: border-box;
-    max-width: var(--container-width);
     padding: var(--container-padding);
-
-
-    &-sm {
-        @extend .container;
-        max-width: var(--container-width-sm);
-    }
-
-    &-md {
-        @extend .container;
-        max-width: var(--container-width-md);
-    }
-
-    &-lg {
-        @extend .container;
-        max-width: var(--container-width-lg);
-    }
 }
 
 // Container fluid
-.container-fluid {
+@mixin container-fluid-base {
     max-width: 100%;
     margin-inline: auto;
     box-sizing: border-box;
-    width: var(--container-fluid-width);
     padding: var(--container-fluid-padding);
+}
 
-    &-sm {
-        @extend .container-fluid;
-        width: var(--container-fluid-width-sm);
-    }
+/* Container */
+.container {
+    @include container-base;
+    max-width: var(--container-width);
+}
+.container-sm {
+    @include container-base;
+    max-width: var(--container-width-sm);
+}
+.container-md {
+    @include container-base;
+    max-width: var(--container-width-md);
+}
+.container-lg {
+    @include container-base;
+    max-width: var(--container-width-lg);
+}
 
-    &-md {
-        @extend .container-fluid;
-        width: var(--container-fluid-width-md);
-    }
 
-    &-lg {
-        @extend .container-fluid;
-        width: var(--container-fluid-width-lg);
-    }
+.container-fluid {
+    @include container-fluid-base;
+    width: var(--container-fluid-width);
+}
+.container-fluid-sm {
+    @include container-fluid-base;
+    width: var(--container-fluid-width-sm);
+}
+.container-fluid-md {
+    @include container-fluid-base;
+    width: var(--container-fluid-width-md);
+}
+.container-fluid-lg {
+    @include container-fluid-base;
+    width: var(--container-fluid-width-lg);
 }

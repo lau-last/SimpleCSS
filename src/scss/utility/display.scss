@@ -1,12 +1,6 @@
 /* Breakpoints */
-$breakpoints: (
-        "xs": 42.5rem,
-        "sm": 57.6rem,
-        "md": 76.8rem,
-        "lg": 99.2rem,
-        "xl": 120rem,
-        "xxl": 140rem
-);
+@use "../breakpoint" as bp;
+$breakpoints: bp.$breakpoints;
 
 
 /* Base (no breakpoint) */

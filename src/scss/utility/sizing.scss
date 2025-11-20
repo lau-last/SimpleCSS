@@ -1,5 +1,9 @@
+/* Breakpoints */
+@use "../breakpoint" as bp;
+$breakpoints: bp.$breakpoints;
+
 /* Percent sizes */
-$sizes: (
+$sizesPercent: (
         0: 0,
         10: 10%,
         20: 20%,
@@ -8,7 +12,6 @@ $sizes: (
         50: 50%,
         60: 60%,
         70: 70%,
-        75: 75%,
         80: 80%,
         90: 90%,
         100: 100%,
@@ -16,18 +19,31 @@ $sizes: (
 );
 
 /* Width & Height */
-@each $key, $val in $sizes {
+@each $key, $val in $sizesPercent {
   .w-#{$key}  { width: $val; }
   .h-#{$key}  { height: $val; }
-}
-
-/* Min / Max sizes */
-@each $key, $val in $sizes {
   @if $key != "auto" {
     .min-w-#{$key} { min-width: $val; }
     .max-w-#{$key} { max-width: $val; }
     .min-h-#{$key} { min-height: $val; }
     .max-h-#{$key} { max-height: $val; }
+  }
+}
+
+
+/* Responsive per breakpoint */
+@each $bp, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    @each $key, $val in $sizesPercent {
+      .w-#{$key}-#{$bp}  { width: $val; }
+      .h-#{$key}-#{$bp}  { height: $val; }
+      @if $key != "auto" {
+        .min-w-#{$key}-#{$bp} { min-width: $val; }
+        .max-w-#{$key}-#{$bp} { max-width: $val; }
+        .min-h-#{$key}-#{$bp} { min-height: $val; }
+        .max-h-#{$key}-#{$bp} { max-height: $val; }
+      }
+    }
   }
 }
 
@@ -53,6 +69,16 @@ $vh-sizes: (
   .max-vh-#{$key} { max-height: $val; }
 }
 
+@each $bp, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    @each $key, $val in $vh-sizes {
+      .vh-#{$key}-#{$bp}     { height: $val; }
+      .min-vh-#{$key}-#{$bp} { min-height: $val; }
+      .max-vh-#{$key}-#{$bp} { max-height: $val; }
+    }
+  }
+}
+
 /* Viewport width (vw) */
 $vw-sizes: (
         0: 0,
@@ -75,24 +101,13 @@ $vw-sizes: (
   .max-vw-#{$key} { max-width: $val; }
 }
 
-/* Breakpoints */
-$breakpoints: (
-        "xs": 42.5rem,
-        "sm": 57.6rem,
-        "md": 76.8rem,
-        "lg": 99.2rem,
-        "xl": 120rem,
-        "xxl": 140rem
-);
-
-.fit-height { height: fit-content; }
-.fit-width { width: fit-content; }
-.fit-size { width: fit-content; height: fit-content; }
-
-/* Responsive per breakpoint */
-@each $key, $val in $breakpoints {
-  .fit-width-#{$key} { width: $val; }
-  .fit-height-#{$key} { height: $val; }
-  .fit-size-#{$key} { width: $val; height: $val; }
+@each $bp, $size in $breakpoints {
+  @media (min-width: #{$size}) {
+    @each $key, $val in $vw-sizes {
+      .vw-#{$key}-#{$bp}     { width: $val; }
+      .min-vw-#{$key}-#{$bp} { min-width: $val; }
+      .max-vw-#{$key}-#{$bp} { max-width: $val; }
+    }
+  }
 }
 

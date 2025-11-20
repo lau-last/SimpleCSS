@@ -5,21 +5,30 @@
   gap: var(--badge-group-gap);
 }
 
-.badge, .badge-lg, .badge-md, .badge-sm {
-  padding: var(--badge-padding);
+.badge {
   border-radius: var(--badge-border-radius);
   white-space: nowrap;
   display: inline-block;
+  padding: var(--badge-padding);
 }
 
 .badge-sm {
+  border-radius: var(--badge-border-radius);
+  white-space: nowrap;
+  display: inline-block;
   padding: var(--badge-padding-sm);
 }
 
 .badge-md {
+  border-radius: var(--badge-border-radius);
+  white-space: nowrap;
+  display: inline-block;
   padding: var(--badge-padding-md);
 }
 
 .badge-lg {
+  border-radius: var(--badge-border-radius);
+  white-space: nowrap;
+  display: inline-block;
   padding: var(--badge-padding-lg);
 }

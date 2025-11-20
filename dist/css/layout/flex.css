@@ -1,4 +1,5 @@
 /* Breakpoints */
+/* Breakpoints */
 /* Direction */
 .fd-row {
   flex-direction: row;
@@ -23,6 +24,10 @@
 
 .fw-nowrap {
   flex-wrap: nowrap;
+}
+
+.fw-wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 /* Justify */
@@ -67,6 +72,10 @@
   align-items: baseline;
 }
 
+.ai-stretch {
+  align-items: stretch;
+}
+
 /* Align content */
 .ac-start {
   align-content: flex-start;
@@ -105,6 +114,14 @@
   align-self: flex-end;
 }
 
+.as-stretch {
+  align-self: stretch;
+}
+
+.as-baseline {
+  align-self: baseline;
+}
+
 /* Flex */
 .flex-1-1-auto {
   flex: 1 1 auto;
@@ -131,6 +148,9 @@
   }
   .fw-nowrap-xs {
     flex-wrap: nowrap;
+  }
+  .fw-wrap-reverse-xs {
+    flex-wrap: wrap-reverse;
   }
   /* Justify */
   .jc-start-xs {
@@ -164,6 +184,9 @@
   .ai-baseline-xs {
     align-items: baseline;
   }
+  .ai-stretch-xs {
+    align-items: stretch;
+  }
   /* Align content */
   .ac-start-xs {
     align-content: flex-start;
@@ -193,6 +216,12 @@
   .as-end-xs {
     align-self: flex-end;
   }
+  .as-stretch-xs {
+    align-self: stretch;
+  }
+  .as-baseline-xs {
+    align-self: baseline;
+  }
   /* Flex */
   .flex-1-1-auto-xs {
     flex: 1 1 auto;
@@ -218,6 +247,9 @@
   }
   .fw-nowrap-sm {
     flex-wrap: nowrap;
+  }
+  .fw-wrap-reverse-sm {
+    flex-wrap: wrap-reverse;
   }
   /* Justify */
   .jc-start-sm {
@@ -251,6 +283,9 @@
   .ai-baseline-sm {
     align-items: baseline;
   }
+  .ai-stretch-sm {
+    align-items: stretch;
+  }
   /* Align content */
   .ac-start-sm {
     align-content: flex-start;
@@ -280,6 +315,12 @@
   .as-end-sm {
     align-self: flex-end;
   }
+  .as-stretch-sm {
+    align-self: stretch;
+  }
+  .as-baseline-sm {
+    align-self: baseline;
+  }
   /* Flex */
   .flex-1-1-auto-sm {
     flex: 1 1 auto;
@@ -305,6 +346,9 @@
   }
   .fw-nowrap-md {
     flex-wrap: nowrap;
+  }
+  .fw-wrap-reverse-md {
+    flex-wrap: wrap-reverse;
   }
   /* Justify */
   .jc-start-md {
@@ -338,6 +382,9 @@
   .ai-baseline-md {
     align-items: baseline;
   }
+  .ai-stretch-md {
+    align-items: stretch;
+  }
   /* Align content */
   .ac-start-md {
     align-content: flex-start;
@@ -367,6 +414,12 @@
   .as-end-md {
     align-self: flex-end;
   }
+  .as-stretch-md {
+    align-self: stretch;
+  }
+  .as-baseline-md {
+    align-self: baseline;
+  }
   /* Flex */
   .flex-1-1-auto-md {
     flex: 1 1 auto;
@@ -392,6 +445,9 @@
   }
   .fw-nowrap-lg {
     flex-wrap: nowrap;
+  }
+  .fw-wrap-reverse-lg {
+    flex-wrap: wrap-reverse;
   }
   /* Justify */
   .jc-start-lg {
@@ -425,6 +481,9 @@
   .ai-baseline-lg {
     align-items: baseline;
   }
+  .ai-stretch-lg {
+    align-items: stretch;
+  }
   /* Align content */
   .ac-start-lg {
     align-content: flex-start;
@@ -454,6 +513,12 @@
   .as-end-lg {
     align-self: flex-end;
   }
+  .as-stretch-lg {
+    align-self: stretch;
+  }
+  .as-baseline-lg {
+    align-self: baseline;
+  }
   /* Flex */
   .flex-1-1-auto-lg {
     flex: 1 1 auto;
@@ -479,6 +544,9 @@
   }
   .fw-nowrap-xl {
     flex-wrap: nowrap;
+  }
+  .fw-wrap-reverse-xl {
+    flex-wrap: wrap-reverse;
   }
   /* Justify */
   .jc-start-xl {
@@ -512,6 +580,9 @@
   .ai-baseline-xl {
     align-items: baseline;
   }
+  .ai-stretch-xl {
+    align-items: stretch;
+  }
   /* Align content */
   .ac-start-xl {
     align-content: flex-start;
@@ -541,6 +612,12 @@
   .as-end-xl {
     align-self: flex-end;
   }
+  .as-stretch-xl {
+    align-self: stretch;
+  }
+  .as-baseline-xl {
+    align-self: baseline;
+  }
   /* Flex */
   .flex-1-1-auto-xl {
     flex: 1 1 auto;
@@ -566,6 +643,9 @@
   }
   .fw-nowrap-xxl {
     flex-wrap: nowrap;
+  }
+  .fw-wrap-reverse-xxl {
+    flex-wrap: wrap-reverse;
   }
   /* Justify */
   .jc-start-xxl {
@@ -599,6 +679,9 @@
   .ai-baseline-xxl {
     align-items: baseline;
   }
+  .ai-stretch-xxl {
+    align-items: stretch;
+  }
   /* Align content */
   .ac-start-xxl {
     align-content: flex-start;
@@ -627,6 +710,12 @@
   }
   .as-end-xxl {
     align-self: flex-end;
+  }
+  .as-stretch-xxl {
+    align-self: stretch;
+  }
+  .as-baseline-xxl {
+    align-self: baseline;
   }
   /* Flex */
   .flex-1-1-auto-xxl {

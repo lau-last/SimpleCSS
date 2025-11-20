@@ -1,38 +1,44 @@
-.list {
-  list-style: none;
-  border-radius: var(--list-border-radius);
-  border-width: var(--list-border-width);
-  border-style: var(--list-border-style);
-  border-color: var(--list-border-color);
-  background-color: var(--list-bg-color);
+@mixin list-base{
+    list-style: none;
+    border-radius: var(--list-border-radius);
+    border-width: var(--list-border-width);
+    border-style: var(--list-border-style);
+    border-color: var(--list-border-color);
+    background-color: var(--list-bg-color);
 
-  &.list-hover{
-    .list-item:hover{
-      cursor: pointer;
-      background-color: var(--list-item-hover-bg-color);
+    &.list-hover{
+      .list-item:hover{
+        cursor: pointer;
+        background-color: var(--list-item-hover-bg-color);
+      }
     }
-  }
 
 
-  > * {
-    &:not(:last-child) {
-      border-bottom-width:  var(--list-item-border-width);
-      border-bottom-style: var(--list-item-border-style);
-      border-bottom-color: var(--list-item-border-color);
+    > * {
+      &:not(:last-child) {
+        border-bottom-width:  var(--list-item-border-width);
+        border-bottom-style: var(--list-item-border-style);
+        border-bottom-color: var(--list-item-border-color);
+      }
     }
-  }
 
-  .list-item {
+    .list-item {
+      display: inline-block;
+      width: 100%;
+    }
+}
+
+.list{
+  @include list-base;
+  .list-item{
     line-height: var(--list-item-height);
     padding: var(--list-item-padding);
     height: var(--list-item-height);
-    display: inline-block;
-    width: 100%;
   }
 }
 
 .list-sm{
-  @extend .list;
+  @include list-base;
   .list-item{
     height: var(--list-item-height-sm);
     padding: var(--list-item-padding-sm);
@@ -41,7 +47,7 @@
 }
 
 .list-md{
-  @extend .list;
+  @include list-base;
   .list-item{
     height: var(--list-item-height-md);
     padding: var(--list-item-padding-md);
@@ -50,7 +56,7 @@
 }
 
 .list-lg{
-  @extend .list;
+  @include list-base;
   .list-item{
     height: var(--list-item-height-lg);
     padding: var(--list-item-padding-lg);

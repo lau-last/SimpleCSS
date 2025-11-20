@@ -9,7 +9,9 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: var(--card-border-radius);
-  border: var(--card-border);
+  border-color: var(--card-border-color);
+  border-style: var(--card-border-style);
+  border-width: var(--card-border-width);
   box-shadow: var(--card-box-shadow);
 }
 .card .card-header {

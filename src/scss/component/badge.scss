@@ -7,25 +7,25 @@
 }
 
 // Badge
-.badge {
-  padding: var(--badge-padding);
+@mixin badge-base{
   border-radius: var(--badge-border-radius);
   white-space: nowrap;
   display: inline-block;
-
 }
 
+.badge{
+  @include badge-base;
+  padding: var(--badge-padding);
+}
 .badge-sm {
-  @extend .badge;
+  @include badge-base;
   padding: var(--badge-padding-sm);
 }
-
 .badge-md {
-  @extend .badge;
+  @include badge-base;
   padding: var(--badge-padding-md);
 }
-
 .badge-lg {
-  @extend .badge;
+  @include badge-base;
   padding: var(--badge-padding-lg);
 }

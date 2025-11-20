@@ -1,4 +1,4 @@
-.list, .list-lg, .list-md, .list-sm {
+.list {
   list-style: none;
   border-radius: var(--list-border-radius);
   border-width: var(--list-border-width);
@@ -6,35 +6,100 @@
   border-color: var(--list-border-color);
   background-color: var(--list-bg-color);
 }
-.list.list-hover .list-item:hover, .list-hover.list-lg .list-item:hover, .list-hover.list-md .list-item:hover, .list-hover.list-sm .list-item:hover {
+.list.list-hover .list-item:hover {
   cursor: pointer;
   background-color: var(--list-item-hover-bg-color);
 }
-.list > *:not(:last-child), .list-lg > *:not(:last-child), .list-md > *:not(:last-child), .list-sm > *:not(:last-child) {
+.list > *:not(:last-child) {
   border-bottom-width: var(--list-item-border-width);
   border-bottom-style: var(--list-item-border-style);
   border-bottom-color: var(--list-item-border-color);
 }
-.list .list-item, .list-lg .list-item, .list-md .list-item, .list-sm .list-item {
-  line-height: var(--list-item-height);
-  padding: var(--list-item-padding);
-  height: var(--list-item-height);
+.list .list-item {
   display: inline-block;
   width: 100%;
 }
+.list .list-item {
+  line-height: var(--list-item-height);
+  padding: var(--list-item-padding);
+  height: var(--list-item-height);
+}
 
+.list-sm {
+  list-style: none;
+  border-radius: var(--list-border-radius);
+  border-width: var(--list-border-width);
+  border-style: var(--list-border-style);
+  border-color: var(--list-border-color);
+  background-color: var(--list-bg-color);
+}
+.list-sm.list-hover .list-item:hover {
+  cursor: pointer;
+  background-color: var(--list-item-hover-bg-color);
+}
+.list-sm > *:not(:last-child) {
+  border-bottom-width: var(--list-item-border-width);
+  border-bottom-style: var(--list-item-border-style);
+  border-bottom-color: var(--list-item-border-color);
+}
+.list-sm .list-item {
+  display: inline-block;
+  width: 100%;
+}
 .list-sm .list-item {
   height: var(--list-item-height-sm);
   padding: var(--list-item-padding-sm);
   line-height: var(--list-item-height-sm);
 }
 
+.list-md {
+  list-style: none;
+  border-radius: var(--list-border-radius);
+  border-width: var(--list-border-width);
+  border-style: var(--list-border-style);
+  border-color: var(--list-border-color);
+  background-color: var(--list-bg-color);
+}
+.list-md.list-hover .list-item:hover {
+  cursor: pointer;
+  background-color: var(--list-item-hover-bg-color);
+}
+.list-md > *:not(:last-child) {
+  border-bottom-width: var(--list-item-border-width);
+  border-bottom-style: var(--list-item-border-style);
+  border-bottom-color: var(--list-item-border-color);
+}
+.list-md .list-item {
+  display: inline-block;
+  width: 100%;
+}
 .list-md .list-item {
   height: var(--list-item-height-md);
   padding: var(--list-item-padding-md);
   line-height: var(--list-item-height-md);
 }
 
+.list-lg {
+  list-style: none;
+  border-radius: var(--list-border-radius);
+  border-width: var(--list-border-width);
+  border-style: var(--list-border-style);
+  border-color: var(--list-border-color);
+  background-color: var(--list-bg-color);
+}
+.list-lg.list-hover .list-item:hover {
+  cursor: pointer;
+  background-color: var(--list-item-hover-bg-color);
+}
+.list-lg > *:not(:last-child) {
+  border-bottom-width: var(--list-item-border-width);
+  border-bottom-style: var(--list-item-border-style);
+  border-bottom-color: var(--list-item-border-color);
+}
+.list-lg .list-item {
+  display: inline-block;
+  width: 100%;
+}
 .list-lg .list-item {
   height: var(--list-item-height-lg);
   padding: var(--list-item-padding-lg);

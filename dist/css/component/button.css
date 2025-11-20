@@ -5,29 +5,70 @@
   gap: var(--button-group-gap);
 }
 
-.btn, .btn-lg, .btn-md, .btn-sm {
+.btn {
   border-radius: var(--button-border-radius);
-  padding: var(--button-padding);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
 }
-.btn:not([class*=outline-]), .btn-lg:not([class*=outline-]), .btn-md:not([class*=outline-]), .btn-sm:not([class*=outline-]) {
+.btn:not([class*=outline-]) {
   border: none;
 }
-.btn:focus, .btn-lg:focus, .btn-md:focus, .btn-sm:focus {
+.btn:focus {
   outline: none;
   box-shadow: none;
 }
+.btn {
+  padding: var(--button-padding);
+}
 
+.btn-sm {
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-sm:not([class*=outline-]) {
+  border: none;
+}
+.btn-sm:focus {
+  outline: none;
+  box-shadow: none;
+}
 .btn-sm {
   padding: var(--button-padding-sm);
 }
 
 .btn-md {
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-md:not([class*=outline-]) {
+  border: none;
+}
+.btn-md:focus {
+  outline: none;
+  box-shadow: none;
+}
+.btn-md {
   padding: var(--button-padding-md);
 }
 
+.btn-lg {
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-lg:not([class*=outline-]) {
+  border: none;
+}
+.btn-lg:focus {
+  outline: none;
+  box-shadow: none;
+}
 .btn-lg {
   padding: var(--button-padding-lg);
 }

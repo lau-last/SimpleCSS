@@ -17,7 +17,7 @@
 .sidebar-left {
   left: 0;
   transform: translateX(-100%);
-  border-right: var(--sidebar-border);
+  border-right: var(--sidebar-border-color) var(--sidebar-border-style) var(--sidebar-border-width);
   border-top-right-radius: var(--sidebar-border-radius);
   border-bottom-right-radius: var(--sidebar-border-radius);
 }
@@ -42,7 +42,7 @@
   left: auto;
   right: 0;
   transform: translateX(100%);
-  border-left: var(--sidebar-border);
+  border-left: var(--sidebar-border-color) var(--sidebar-border-style) var(--sidebar-border-width);
   border-top-left-radius: var(--sidebar-border-radius);
   border-bottom-left-radius: var(--sidebar-border-radius);
 }

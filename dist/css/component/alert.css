@@ -34,7 +34,9 @@
   padding: var(--alert-padding);
   margin: var(--alert-margin);
   border-radius: var(--alert-border-radius);
-  border: var(--alert-border);
+  border-color: var(--alert-border-color);
+  border-style: var(--alert-border-style);
+  border-width: var(--alert-border-width);
   background: var(--bg-color);
   width: var(--alert-width);
   box-shadow: var(--alert-box-shadow);

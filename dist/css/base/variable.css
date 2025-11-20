@@ -59,6 +59,8 @@
   /* Global surfaces & borders */
   --bg-color: var(--gray-0);
   --border-color: var(--gray-300);
+  --border-style: solid;
+  --border-width: .1rem;
   --text-color: #262626;
   /* Typography */
   --font-family-text: "Open Sans", sans-serif;
@@ -98,9 +100,6 @@
   --line-height-xl: 2;
   /* Radius */
   --border-radius: .3rem;
-  --border-radius-sm: 0.2rem;
-  --border-radius-md: 0.4rem;
-  --border-radius-lg: 0.6rem;
   --border-radius-pill: 10rem;
   --border-radius-circle: 50%;
   /* Shadow */
@@ -127,7 +126,9 @@
   --alert-footer-padding: .5rem 1rem;
   --alert-header-padding: .5rem 1rem;
   --alert-animation: alert-in-and-out 5s ease forwards;
-  --alert-border: .1rem solid var(--border-color);
+  --alert-border-color: var(--border-color);
+  --alert-border-style: solid;
+  --alert-border-width: .1rem;
   --alert-border-radius: var(--border-radius);
   --alert-box-shadow: var(--box-shadow);
   --alert-container-padding-inline: 1rem;
@@ -152,7 +153,9 @@
   --card-body-padding: 1rem;
   --card-footer-padding: .5rem 1rem;
   --card-header-padding: .5rem 1rem;
-  --card-border: .1rem solid var(--gray-100);
+  --card-border-color: var(--gray-100);
+  --card-border-style: solid;
+  --card-border-width: .1rem;
   --card-border-radius: var(--border-radius);
   --card-box-shadow: var(--box-shadow);
   --card-group-gap: 1rem;
@@ -171,7 +174,9 @@
   --dialog-header-padding: 1rem;
   --dialog-footer-padding: 1rem;
   --dialog-backdrop-color: rgba(0, 0, 0, 0.8);
-  --dialog-border: .1rem solid var(--border-color);
+  --dialog-border-color: var(--border-color);
+  --dialog-border-style: solid;
+  --dialog-border-width: .1rem;
   --dialog-border-radius: var(--border-radius);
   --dialog-padding: 0;
   --dialog-width: 50%;
@@ -271,14 +276,18 @@
   --list-text-on-warning: var(--black-color);
   --list-text-on-white: var(--black-color);
   /* Nav */
-  --navbar-border: none;
+  --navbar-border-color: var(--border-color);
+  --navbar-border-style: solid;
+  --navbar-border-width: 0;
   --navbar-border-radius: 0;
   --navbar-collapse-gap: 2rem;
   --navbar-nav-gap: 2rem;
   --navbar-nav-margin: var(--navbar-nav-gap) 0 0 0;
   --navbar-padding: 1rem;
   /* Sidebar */
-  --sidebar-border: .1rem solid var(--border-color);
+  --sidebar-border-color: var(--border-color);
+  --sidebar-border-style: solid;
+  --sidebar-border-width: .1rem;
   --sidebar-border-radius: var(--border-radius);
   --sidebar-padding: 1rem;
   --sidebar-width: 30rem;
@@ -338,6 +347,7 @@
   /* Col & grid spacing */
   --col-padding: .5rem 1rem;
   --g-col-padding: .5rem 1rem;
+  --gap-grid: 0.2rem;
   /* Containers */
   --container-fluid-padding: 1rem;
   --container-fluid-width: 80%;
@@ -349,14 +359,6 @@
   --container-width-md: 120rem;
   --container-width-lg: 140rem;
   --container-padding: 1rem;
-  /* Grid gaps */
-  --gap-grid: 0.2rem;
-  --gap-grid-xs: 0.1rem;
-  --gap-grid-sm: 0.2rem;
-  --gap-grid-md: 0.9rem;
-  --gap-grid-lg: 0.4rem;
-  --gap-grid-xl: 0.5rem;
-  --gap-grid-xxl: 0.6rem;
 }
 
 /* Breakpoints cannot be variable with @media queries */

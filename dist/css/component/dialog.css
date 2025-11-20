@@ -3,7 +3,9 @@
   left: 50%;
   opacity: 0;
   position: fixed;
-  border: var(--dialog-border);
+  border-color: var(--dialog-border-color);
+  border-style: var(--dialog-border-style);
+  border-width: var(--dialog-border-width);
   width: var(--dialog-width);
   padding: var(--dialog-padding);
   border-radius: var(--dialog-border-radius);

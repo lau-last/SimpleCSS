@@ -1,103 +1,91 @@
 /* Border sides */
 .border-top {
-  border-top: 0.1rem solid var(--border-color);
+  border-top: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-bottom {
-  border-bottom: 0.1rem solid var(--border-color);
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-left {
-  border-left: 0.1rem solid var(--border-color);
+  border-left: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-right {
-  border-right: 0.1rem solid var(--border-color);
+  border-right: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-y {
-  border-top: 0.1rem solid var(--border-color);
-  border-bottom: 0.1rem solid var(--border-color);
+  border-top: var(--border-width) var(--border-style) var(--border-color);
+  border-bottom: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-x {
-  border-left: 0.1rem solid var(--border-color);
-  border-right: 0.1rem solid var(--border-color);
+  border-left: var(--border-width) var(--border-style) var(--border-color);
+  border-right: var(--border-width) var(--border-style) var(--border-color);
 }
 
 .border-all {
-  border: 0.1rem solid var(--border-color);
+  border: var(--border-width) var(--border-style) var(--border-color);
 }
 
 /* Border style */
 .border-solid {
-  border-style: solid;
+  border-style: solid !important;
 }
 
 .border-dashed {
-  border-style: dashed;
+  border-style: dashed !important;
 }
 
 .border-dotted {
-  border-style: dotted;
+  border-style: dotted !important;
 }
 
 .border-double {
-  border-style: double;
+  border-style: double !important;
 }
 
 .border-none {
-  border-style: none;
+  border-style: none !important;
 }
 
 /* Border width */
 .border-0 {
-  border-width: 0;
+  border-width: 0 !important;
 }
 
 .border-1 {
-  border-width: 0.1rem;
+  border-width: 0.1rem !important;
 }
 
 .border-2 {
-  border-width: 0.2rem;
+  border-width: 0.2rem !important;
 }
 
 .border-3 {
-  border-width: 0.3rem;
+  border-width: 0.3rem !important;
 }
 
 .border-4 {
-  border-width: 0.4rem;
+  border-width: 0.4rem !important;
 }
 
 .border-5 {
-  border-width: 0.5rem;
+  border-width: 0.5rem !important;
 }
 
 /* Border radius */
+.rounded-0 {
+  border-radius: 0;
+}
+
 .border-radius {
   border-radius: var(--border-radius);
 }
 
 .rounded {
   border-radius: var(--border-radius);
-}
-
-.rounded-0 {
-  border-radius: 0;
-}
-
-.rounded-sm {
-  border-radius: var(--border-radius-sm);
-}
-
-.rounded-md {
-  border-radius: var(--border-radius-md);
-}
-
-.rounded-lg {
-  border-radius: var(--border-radius-lg);
 }
 
 .rounded-pill {

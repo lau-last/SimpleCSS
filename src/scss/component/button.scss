@@ -7,9 +7,8 @@
 }
 
 // Button
-.btn {
+@mixin button-base {
   border-radius: var(--button-border-radius);
-  padding: var(--button-padding);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
@@ -24,17 +23,19 @@
   }
 }
 
+.btn{
+  @include button-base;
+  padding: var(--button-padding);
+}
 .btn-sm {
-  @extend .btn;
+  @include button-base;
   padding: var(--button-padding-sm);
 }
-
 .btn-md {
-  @extend .btn;
+  @include button-base;
   padding: var(--button-padding-md);
 }
-
 .btn-lg {
-  @extend .btn;
+  @include button-base;
   padding: var(--button-padding-lg);
 }

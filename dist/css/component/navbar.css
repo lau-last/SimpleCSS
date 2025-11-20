@@ -1,10 +1,13 @@
 /* Breakpoints */
+/* Breakpoints */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 }
 .navbar .navbar-btn {
@@ -82,7 +85,9 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 }
 .navbar-xs .navbar-btn {
@@ -160,7 +165,9 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 }
 .navbar-sm .navbar-btn {
@@ -238,7 +245,9 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 }
 .navbar-md .navbar-btn {
@@ -316,7 +325,9 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 }
 .navbar-lg .navbar-btn {
@@ -394,7 +405,9 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 }
 .navbar-xl .navbar-btn {
@@ -472,7 +485,9 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--navbar-padding);
-  border: var(--navbar-border);
+  border-color: var(--navbar-border-color);
+  border-style: var(--navbar-border-style);
+  border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
 }
 .navbar-xxl .navbar-btn {

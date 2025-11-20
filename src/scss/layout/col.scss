@@ -1,3 +1,16 @@
+@use "sass:math";
+/* Breakpoints */
+@use "../breakpoint" as bp;
+$breakpoints: bp.$breakpoints;
+
+@mixin generate-cols-size($bp) {
+  @for $i from 1 through 12 {
+    $width: math.div(100% * $i, 12);
+    $multiple: math.div(12 - $i, 12);
+      .col-#{$i}-#{$bp} {flex: 0 0 #{$width}; max-width: #{$width};}
+  }
+}
+
 /* Row container */
 .row {
   display: flex;
@@ -17,113 +30,16 @@
   }
 
   /* Fixed column widths (12-grid) */
-  .col-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-  .col-2  { flex: 0 0 16.6666%; max-width: 16.6666%; }
-  .col-3  { flex: 0 0 25%;      max-width: 25%;      }
-  .col-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-  .col-5  { flex: 0 0 41.6666%; max-width: 41.6666%; }
-  .col-6  { flex: 0 0 50%;      max-width: 50%;      }
-  .col-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-  .col-8  { flex: 0 0 66.6666%; max-width: 66.6666%; }
-  .col-9  { flex: 0 0 75%;      max-width: 75%;      }
-  .col-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-  .col-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
-  .col-12 { flex: 0 0 100%;     max-width: 100%;     }
-
-  /* Extra small (≥425px) */
-  @media (min-width: 42.5rem) {
-    .col-xs-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-    .col-xs-2  { flex: 0 0 16.6666%; max-width: 16.6666%; }
-    .col-xs-3  { flex: 0 0 25%;      max-width: 25%;      }
-    .col-xs-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-    .col-xs-5  { flex: 0 0 41.6666%; max-width: 41.6666%; }
-    .col-xs-6  { flex: 0 0 50%;      max-width: 50%;      }
-    .col-xs-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-    .col-xs-8  { flex: 0 0 66.6666%; max-width: 66.6666%; }
-    .col-xs-9  { flex: 0 0 75%;      max-width: 75%;      }
-    .col-xs-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-    .col-xs-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
-    .col-xs-12 { flex: 0 0 100%;     max-width: 100%;     }
+  @for $i from 1 through 12 {
+    $width: math.div(100% * $i, 12);
+    $multiple: math.div(12 - $i, 12);
+    .col-#{$i} {flex: 0 0 #{$width}; max-width: #{$width};}
   }
 
-
-  /* Small (≥576px) */
-  @media (min-width: 57.6rem) {
-    .col-sm-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-    .col-sm-2  { flex: 0 0 16.6666%; max-width: 16.6666%; }
-    .col-sm-3  { flex: 0 0 25%;      max-width: 25%;      }
-    .col-sm-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-    .col-sm-5  { flex: 0 0 41.6666%; max-width: 41.6666%; }
-    .col-sm-6  { flex: 0 0 50%;      max-width: 50%;      }
-    .col-sm-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-    .col-sm-8  { flex: 0 0 66.6666%; max-width: 66.6666%; }
-    .col-sm-9  { flex: 0 0 75%;      max-width: 75%;      }
-    .col-sm-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-    .col-sm-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
-    .col-sm-12 { flex: 0 0 100%;     max-width: 100%;     }
-  }
-
-  /* Medium (≥768px) */
-  @media (min-width: 76.8rem) {
-    .col-md-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-    .col-md-2  { flex: 0 0 16.6666%; max-width: 16.6666%; }
-    .col-md-3  { flex: 0 0 25%;      max-width: 25%;      }
-    .col-md-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-    .col-md-5  { flex: 0 0 41.6666%; max-width: 41.6666%; }
-    .col-md-6  { flex: 0 0 50%;      max-width: 50%;      }
-    .col-md-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-    .col-md-8  { flex: 0 0 66.6666%; max-width: 66.6666%; }
-    .col-md-9  { flex: 0 0 75%;      max-width: 75%;      }
-    .col-md-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-    .col-md-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
-    .col-md-12 { flex: 0 0 100%;     max-width: 100%;     }
-  }
-
-  /* Large (≥992px) */
-  @media (min-width: 99.2rem) {
-    .col-lg-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-    .col-lg-2  { flex: 0 0 16.6666%; max-width: 16.6666%; }
-    .col-lg-3  { flex: 0 0 25%;      max-width: 25%;      }
-    .col-lg-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-    .col-lg-5  { flex: 0 0 41.6666%; max-width: 41.6666%; }
-    .col-lg-6  { flex: 0 0 50%;      max-width: 50%;      }
-    .col-lg-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-    .col-lg-8  { flex: 0 0 66.6666%; max-width: 66.6666%; }
-    .col-lg-9  { flex: 0 0 75%;      max-width: 75%;      }
-    .col-lg-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-    .col-lg-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
-    .col-lg-12 { flex: 0 0 100%;     max-width: 100%;     }
-  }
-
-  /* Extra large (≥1200px) */
-  @media (min-width: 120rem) {
-    .col-xl-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-    .col-xl-2  { flex: 0 0 16.6666%; max-width: 16.6666%; }
-    .col-xl-3  { flex: 0 0 25%;      max-width: 25%;      }
-    .col-xl-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-    .col-xl-5  { flex: 0 0 41.6666%; max-width: 41.6666%; }
-    .col-xl-6  { flex: 0 0 50%;      max-width: 50%;      }
-    .col-xl-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-    .col-xl-8  { flex: 0 0 66.6666%; max-width: 66.6666%; }
-    .col-xl-9  { flex: 0 0 75%;      max-width: 75%;      }
-    .col-xl-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-    .col-xl-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
-    .col-xl-12 { flex: 0 0 100%;     max-width: 100%;     }
-  }
-
-  /* Extra extra large (≥1400px) */
-  @media (min-width: 140rem) {
-    .col-xxl-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-    .col-xxl-2  { flex: 0 0 16.6666%; max-width: 16.6666%; }
-    .col-xxl-3  { flex: 0 0 25%;      max-width: 25%;      }
-    .col-xxl-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-    .col-xxl-5  { flex: 0 0 41.6666%; max-width: 41.6666%; }
-    .col-xxl-6  { flex: 0 0 50%;      max-width: 50%;      }
-    .col-xxl-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-    .col-xxl-8  { flex: 0 0 66.6666%; max-width: 66.6666%; }
-    .col-xxl-9  { flex: 0 0 75%;      max-width: 75%;      }
-    .col-xxl-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-    .col-xxl-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
-    .col-xxl-12 { flex: 0 0 100%;     max-width: 100%;     }
+  /* Responsive column widths */
+  @each $bp, $size in $breakpoints {
+    @media (min-width: #{$size}) {
+      @include generate-cols-size($bp);
+    }
   }
 }

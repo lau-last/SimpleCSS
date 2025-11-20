@@ -1,5 +1,5 @@
 @import 'base/reset.css';
-@import 'base/variables.css';
+@import 'base/variable.css';
 @import 'base/base.css';
 
 @import 'layout/col.css';
@@ -7,29 +7,32 @@
 @import 'layout/flex.css';
 @import 'layout/grid.css';
 
-@import 'components/accordion.css';
-@import 'components/alert.css';
-@import 'components/badge.css';
-@import 'components/button.css';
-@import 'components/card.css';
-@import 'components/dialog.css';
-@import 'components/dropdown.css';
-@import 'components/form.css';
-@import 'components/list.css';
-@import 'components/nav.css';
-@import 'components/tab.css';
-@import 'components/table.css';
+@import 'component/accordion.css';
+@import 'component/alert.css';
+@import 'component/badge.css';
+@import 'component/button.css';
+@import 'component/card.css';
+@import 'component/collapse.css';
+@import 'component/dialog.css';
+@import 'component/dropdown.css';
+@import 'component/form.css';
+@import 'component/list.css';
+@import 'component/navbar.css';
+@import 'component/sidebar.css';
+@import 'component/tab.css';
+@import 'component/table.css';
 
-@import 'utilities/border.css';
-@import 'utilities/color.css';
-@import 'utilities/display.css';
-@import 'utilities/image.css';
-@import 'utilities/position.css';
-@import 'utilities/sizing.css';
-@import 'utilities/spacing.css';
-@import 'utilities/text.css';
-@import 'utilities/typography.css';
-@import 'utilities/visibility.css';
+@import 'utility/border.css';
+@import 'utility/color.css';
+@import 'utility/display.css';
+@import 'utility/helper.css';
+@import 'utility/image.css';
+@import 'utility/position.css';
+@import 'utility/sizing.css';
+@import 'utility/spacing.css';
+@import 'utility/text.css';
+@import 'utility/typography.css';
+@import 'utility/visibility.css';
 
 @import 'abstract/animation.css';
 @import 'abstract/keyframe.css';

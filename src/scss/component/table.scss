@@ -17,6 +17,13 @@ table.table-lg {
                 text-wrap: nowrap;
             }
         }
+        &.table-hover {
+          tr:hover {
+              cursor: pointer;
+              background-color: var(--table-hover-bg-color) !important;
+          }
+        }
+
     }
 
     tbody {
@@ -27,6 +34,12 @@ table.table-lg {
                 text-wrap: nowrap;
             }
         }
+      &.table-hover {
+        tr:hover {
+          cursor: pointer;
+          background-color: var(--table-hover-bg-color) !important;
+        }
+      }
     }
 
     tfoot {
@@ -37,6 +50,12 @@ table.table-lg {
                 text-wrap: nowrap;
             }
         }
+      &.table-hover {
+        tr:hover {
+          cursor: pointer;
+          background-color: var(--table-hover-bg-color) !important;
+        }
+      }
     }
 
     &.table-borderless {
@@ -48,27 +67,6 @@ table.table-lg {
             tr {
                 th, td {
                     border: none ;
-                }
-            }
-        }
-
-        &.table-hover {
-            tbody {
-                tr:hover {
-                    cursor: pointer;
-                    background-color: var(--table-hover-bg-color) ;
-
-                    th:first-child, td:first-child {
-                        border: none ;
-                    }
-
-                    th:last-child, td:last-child {
-                        border: none ;
-                    }
-
-                    th, td {
-                        border: none ;
-                    }
                 }
             }
         }
@@ -87,23 +85,12 @@ table.table-lg {
     }
 
     &.table-hover {
-        tbody {
+        thead,
+        tbody,
+        tfoot {
             tr:hover {
                 cursor: pointer;
                 background-color: var(--table-hover-bg-color) !important;
-
-                th:first-child, td:first-child {
-                    border-left: var(--table-border-width) var(--table-border-style) var(--table-border-color);
-                }
-
-                th:last-child, td:last-child {
-                    border-right: var(--table-border-width) var(--table-border-style) var(--table-border-color);
-                }
-
-                th, td {
-                    border-top: var(--table-border-width) var(--table-border-style) var(--table-border-color);
-                    border-bottom: var(--table-border-width) var(--table-border-style) var(--table-border-color);
-                }
             }
         }
     }

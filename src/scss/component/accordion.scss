@@ -9,8 +9,14 @@
   border-radius: var(--accordion-border-radius);
   background-color: var(--accordion-bg-color);
 
+
   .accordion-item {
     border: none;
+
+    .accordion-header {
+      padding: 0;
+      margin: 0;
+    }
 
     .accordion-btn {
       padding: var(--accordion-button-padding);

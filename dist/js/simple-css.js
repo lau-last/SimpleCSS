@@ -379,44 +379,46 @@
       if (!(event instanceof MouseEvent)) return;
       const target = event.target;
       if (!target) return;
-      const trigger = target.closest('[data-js="collapse"][data-target]');
-      if (!trigger) return;
-      _Collapse.handleToggle(trigger);
+      const button = target.closest('[data-js="collapse"][data-target]');
+      if (!button) return;
+      _Collapse.handleToggle(button);
     }
-    static handleToggle(trigger) {
-      const selector = trigger.getAttribute("data-target");
+    static handleToggle(button) {
+      const selector = button.getAttribute("data-target");
       if (!selector) return;
       const collapse = document.querySelector(selector);
       if (!collapse) return;
-      _Collapse.toggle(collapse);
+      _Collapse.toggle(collapse, button);
     }
-    static toggle(collapse) {
+    static toggle(collapse, button) {
       if (_Collapse.isAnimating(collapse)) return;
       const accordion = collapse.closest(".accordion");
       if (accordion) {
-        _Collapse.handleTypeAccordion(accordion, collapse);
+        _Collapse.handleTypeAccordion(accordion, collapse, button);
       }
       const isOpen = collapse.classList.contains("show");
-      isOpen ? _Collapse.close(collapse) : _Collapse.open(collapse);
+      isOpen ? _Collapse.close(collapse, button) : _Collapse.open(collapse, button);
     }
-    static handleTypeAccordion(accordion, collapse) {
+    static handleTypeAccordion(accordion, collapse, button) {
       if (!accordion) return;
       const type = accordion.getAttribute("data-type");
       if (type !== "multiple") {
-        _Collapse.closeAllCollapses(accordion, collapse);
+        _Collapse.closeAllCollapses(accordion, collapse, button);
       }
     }
-    static closeAllCollapses(accordion, except) {
+    static closeAllCollapses(accordion, except, button) {
       const collapses = accordion.querySelectorAll(".accordion-body.show");
       collapses.forEach((panel) => {
         if (panel === except) return;
-        _Collapse.close(panel);
+        _Collapse.close(panel, button);
       });
     }
     static isAnimating(collapse) {
       return collapse.dataset.animating === "true";
     }
-    static open(collapse) {
+    static open(collapse, button) {
+      collapse.hidden = false;
+      button.setAttribute("aria-expanded", "true");
       collapse.dataset.animating = "true";
       collapse.classList.add("show");
       _Collapse.prepareOpenStyles(collapse);
@@ -430,7 +432,7 @@
         _Collapse.cleanAnimationStyles(collapse);
       };
     }
-    static close(collapse) {
+    static close(collapse, button) {
       collapse.dataset.animating = "true";
       const height = collapse.scrollHeight;
       _Collapse.prepareCloseStyles(collapse, height);
@@ -438,6 +440,8 @@
       animation.onfinish = () => {
         collapse.style.height = "0px";
         collapse.classList.remove("show");
+        collapse.hidden = true;
+        button.setAttribute("aria-expanded", "false");
         delete collapse.dataset.animating;
         _Collapse.cleanAnimationStyles(collapse);
       };
@@ -466,6 +470,9 @@
       collapse.style.removeProperty("height");
       collapse.style.removeProperty("overflow");
       delete collapse.dataset.animating;
+      if (!collapse.style.cssText.trim()) {
+        collapse.removeAttribute("style");
+      }
     }
   };
 

@@ -1,4 +1,4 @@
-import EventManager from './event-manager';
+import EventManager from './event-manager.js';
 
 export default class Collapse {
 
@@ -16,52 +16,52 @@ export default class Collapse {
         const target = event.target as HTMLElement | null;
         if (!target) return;
 
-        const trigger = target.closest<HTMLElement>('[data-js="collapse"][data-target]');
-        if (!trigger) return;
+        const button = target.closest<HTMLElement>('[data-js="collapse"][data-target]');
+        if (!button) return;
 
-        Collapse.handleToggle(trigger);
+        Collapse.handleToggle(button);
     }
 
-    private static handleToggle(trigger: HTMLElement): void {
-        const selector = trigger.getAttribute('data-target');
+    private static handleToggle(button: HTMLElement): void {
+        const selector = button.getAttribute('data-target');
         if (!selector) return;
 
         const collapse = document.querySelector<HTMLElement>(selector);
         if (!collapse) return;
 
-        Collapse.toggle(collapse);
+        Collapse.toggle(collapse, button);
     }
 
 
-    private static toggle(collapse: HTMLElement): void {
+    private static toggle(collapse: HTMLElement, button: HTMLElement): void {
         if (Collapse.isAnimating(collapse)) return;
 
         const accordion = collapse.closest<HTMLElement>('.accordion');
 
         if (accordion) {
-            Collapse.handleTypeAccordion(accordion, collapse);
+            Collapse.handleTypeAccordion(accordion, collapse, button);
         }
 
         const isOpen = collapse.classList.contains('show');
-        isOpen ? Collapse.close(collapse) : Collapse.open(collapse);
+        isOpen ? Collapse.close(collapse, button) : Collapse.open(collapse, button);
     }
 
-    private static handleTypeAccordion(accordion: HTMLElement | null, collapse: HTMLElement): void {
+    private static handleTypeAccordion(accordion: HTMLElement | null, collapse: HTMLElement, button: HTMLElement): void {
         if (!accordion) return;
 
         const type = accordion.getAttribute('data-type');
 
         if (type !== 'multiple') {
-            Collapse.closeAllCollapses(accordion, collapse);
+            Collapse.closeAllCollapses(accordion, collapse, button);
         }
     }
 
-    private static closeAllCollapses(accordion: HTMLElement, except: HTMLElement): void {
+    private static closeAllCollapses(accordion: HTMLElement, except: HTMLElement, button: HTMLElement): void {
         const collapses = accordion.querySelectorAll<HTMLElement>('.accordion-body.show');
 
         collapses.forEach((panel) => {
             if (panel === except) return;
-            Collapse.close(panel);
+            Collapse.close(panel, button);
         });
     }
 
@@ -71,7 +71,10 @@ export default class Collapse {
     }
 
 
-    private static open(collapse: HTMLElement): void {
+    private static open(collapse: HTMLElement, button: HTMLElement): void {
+        collapse.hidden = false;
+        button.setAttribute('aria-expanded', 'true');
+
         collapse.dataset.animating = 'true';
         collapse.classList.add('show');
 
@@ -90,7 +93,7 @@ export default class Collapse {
     }
 
 
-    private static close(collapse: HTMLElement): void {
+    private static close(collapse: HTMLElement, button: HTMLElement): void {
         collapse.dataset.animating = 'true';
 
         const height = collapse.scrollHeight;
@@ -100,11 +103,13 @@ export default class Collapse {
         animation.onfinish = () => {
             collapse.style.height = '0px';
             collapse.classList.remove('show');
+            collapse.hidden = true;
+            button.setAttribute('aria-expanded', 'false');
             delete collapse.dataset.animating;
             Collapse.cleanAnimationStyles(collapse);
-
         };
     }
+
 
     private static prepareOpenStyles(collapse: HTMLElement): void {
         collapse.style.overflow = 'hidden';
@@ -134,6 +139,9 @@ export default class Collapse {
         collapse.style.removeProperty('height');
         collapse.style.removeProperty('overflow');
         delete collapse.dataset.animating;
+        if (!collapse.style.cssText.trim()) {
+            collapse.removeAttribute('style');
+        }
     }
 
 }

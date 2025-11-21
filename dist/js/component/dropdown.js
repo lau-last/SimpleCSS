@@ -1,4 +1,4 @@
-import EventManager from './event_manager.js';
+import EventManager from './event-manager';
 export default class Dropdown {
     constructor() {
         Dropdown.init();

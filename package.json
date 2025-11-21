@@ -1,9 +1,24 @@
 {
-  "name": "framework",
+  "name": "simplecss",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc && sass src/scss:dist/css --no-source-map",
-    "watch": "tsc --watch & sass --watch src/scss:dist/css --no-source-map"
+    "build:ts:tree": "tsc",
+    "build:ts:bundle": "npx esbuild src/ts/simple-css.ts --bundle --outfile=dist/js/simple-css.js --platform=browser --format=iife",
+    "build:ts:bundle:min": "npx esbuild src/ts/simple-css.ts --bundle --minify --outfile=dist/js/simple-css.min.js --platform=browser --format=iife",
+    "build:ts:import": "npx esbuild src/ts/simple-css.ts --outfile=dist/js/simple-css.import.js --platform=browser --format=esm",
+    "build:ts": "npm run build:ts:tree && npm run build:ts:bundle && npm run build:ts:bundle:min && npm run build:ts:import",
+
+    "build:css:normal": "sass src/scss/_simple-css.scss dist/css/simple-css.css --style=expanded --no-source-map",
+    "build:css:min": "sass src/scss/_simple-css.scss dist/css/simple-css.min.css --style=compressed --no-source-map",
+    "build:css:tree": "sass src/scss:dist/css --style=expanded --no-source-map",
+    "build:css:imports": "node scripts/generate-css-import-file.js",
+    "build:css": "npm run build:css:normal && npm run build:css:min && npm run build:css:tree && npm run build:css:imports",
+
+    "build": "npm run build:ts && npm run build:css",
+
+    "watch:ts": "tsc --watch",
+    "watch:css": "sass --watch src/scss/_simple-css.scss:dist/css/simple-css.css --style=expanded --no-source-map",
+    "watch": "npm run watch:ts & npm run watch:css"
   },
   "devDependencies": {
     "esbuild": "^0.25.12",

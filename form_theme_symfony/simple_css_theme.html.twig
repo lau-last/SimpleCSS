@@ -1,0 +1,25 @@
+{% block form_start %}
+
+    {% set classes = attr.class|default('') %}
+
+    {% if form.vars.submitted and 'validated' not in classes %}
+        {% set classes = (classes ~ ' validated')|trim %}
+    {% endif %}
+
+    {% set attr = attr|merge({
+        class: classes
+    }) %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block form_widget %}
+
+    {% if form.vars.submitted %}
+        {% set attr = attr|merge({
+            'aria-invalid': (not form.vars.valid ? 'true' : 'false')
+        }) %}
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}

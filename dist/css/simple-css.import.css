@@ -1,12 +1,10 @@
 @import 'base/reset.css';
 @import 'base/variable.css';
 @import 'base/base.css';
-
 @import 'layout/col.css';
 @import 'layout/container.css';
 @import 'layout/flex.css';
 @import 'layout/grid.css';
-
 @import 'component/accordion.css';
 @import 'component/alert.css';
 @import 'component/badge.css';
@@ -21,7 +19,6 @@
 @import 'component/sidebar.css';
 @import 'component/tab.css';
 @import 'component/table.css';
-
 @import 'utility/border.css';
 @import 'utility/color.css';
 @import 'utility/display.css';
@@ -33,7 +30,5 @@
 @import 'utility/text.css';
 @import 'utility/typography.css';
 @import 'utility/visibility.css';
-
 @import 'abstract/animation.css';
 @import 'abstract/keyframe.css';
-

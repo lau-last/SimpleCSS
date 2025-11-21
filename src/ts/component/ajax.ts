@@ -1,4 +1,4 @@
-import EventManager from './event_manager.js';
+import EventManager from './event-manager';
 
 interface AjaxContext {
     element: HTMLElement;

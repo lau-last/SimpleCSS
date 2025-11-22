@@ -1,13 +1,18 @@
 // Dialog
-.dialog {
+.dialog,
+.dialog-sm,
+.dialog-md,
+.dialog-lg {
   top: 50%;
   left: 50%;
   opacity: 0;
   position: fixed;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow: auto;
   border-color: var(--dialog-border-color);
   border-style: var(--dialog-border-style);
   border-width: var(--dialog-border-width);
-  width: var(--dialog-width);
   padding:  var(--dialog-padding);
   border-radius: var(--dialog-border-radius);
   transform: translate(-50%, -50%) scale(0);
@@ -32,6 +37,23 @@
   }
 
   &.show::backdrop {background: var(--dialog-backdrop-color);}
+}
+
+
+.dialog {
+  width: min(95vw, var(--dialog-width));
+}
+
+.dialog-sm {
+  width: min(95vw, var(--dialog-width-sm));
+}
+
+.dialog-md {
+  width: min(95vw, var(--dialog-width-md));
+}
+
+.dialog-lg {
+  width: min(95vw, var(--dialog-width-lg));
 }
 
 

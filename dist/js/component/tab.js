@@ -31,23 +31,28 @@ export default class Tab {
         const selector = button.getAttribute('data-target');
         if (!selector)
             return null;
-        const el = document.querySelector(selector);
-        return el instanceof HTMLElement ? el : null;
+        const element = document.querySelector(selector);
+        return element instanceof HTMLElement ? element : null;
     }
     static hideAll(container) {
         const buttons = container.querySelectorAll('[data-js="tab"][data-target]');
         buttons.forEach(button => {
             const content = Tab.resolveContent(button);
-            if (content)
-                content.classList.remove('show');
+            if (!content)
+                return;
+            content.classList.remove('show');
         });
     }
     static clearActive(container) {
         const buttons = container.querySelectorAll('[data-js="tab"][data-target]');
-        buttons.forEach(button => button.classList.remove('active'));
+        buttons.forEach(button => {
+            button.classList.remove('active');
+            button.setAttribute('aria-selected', 'false');
+        });
     }
     static showOne(button, content) {
         button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
         content.classList.add('show');
     }
 }

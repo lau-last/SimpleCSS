@@ -62,15 +62,15 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar .navbar-collapse.show.nav-start-sm, .navbar .navbar-collapse.show.nav-left-sm {
+  .navbar .navbar-collapse.show.nav-left-collapse, .navbar .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar .navbar-collapse.show.nav-center-sm {
+  .navbar .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar .navbar-collapse.show.nav-end-sm, .navbar .navbar-collapse.show.nav-right-sm {
+  .navbar .navbar-collapse.show.nav-end-collapse, .navbar .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -142,15 +142,15 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xs .navbar-collapse.show.nav-start-sm, .navbar-xs .navbar-collapse.show.nav-left-sm {
+  .navbar-xs .navbar-collapse.show.nav-left-collapse, .navbar-xs .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xs .navbar-collapse.show.nav-center-sm {
+  .navbar-xs .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-xs .navbar-collapse.show.nav-end-sm, .navbar-xs .navbar-collapse.show.nav-right-sm {
+  .navbar-xs .navbar-collapse.show.nav-end-collapse, .navbar-xs .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -222,15 +222,15 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-sm .navbar-collapse.show.nav-start-sm, .navbar-sm .navbar-collapse.show.nav-left-sm {
+  .navbar-sm .navbar-collapse.show.nav-left-collapse, .navbar-sm .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-sm .navbar-collapse.show.nav-center-sm {
+  .navbar-sm .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-sm .navbar-collapse.show.nav-end-sm, .navbar-sm .navbar-collapse.show.nav-right-sm {
+  .navbar-sm .navbar-collapse.show.nav-end-collapse, .navbar-sm .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -302,15 +302,15 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-md .navbar-collapse.show.nav-start-sm, .navbar-md .navbar-collapse.show.nav-left-sm {
+  .navbar-md .navbar-collapse.show.nav-left-collapse, .navbar-md .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-md .navbar-collapse.show.nav-center-sm {
+  .navbar-md .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-md .navbar-collapse.show.nav-end-sm, .navbar-md .navbar-collapse.show.nav-right-sm {
+  .navbar-md .navbar-collapse.show.nav-end-collapse, .navbar-md .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -382,15 +382,15 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-lg .navbar-collapse.show.nav-start-sm, .navbar-lg .navbar-collapse.show.nav-left-sm {
+  .navbar-lg .navbar-collapse.show.nav-left-collapse, .navbar-lg .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-lg .navbar-collapse.show.nav-center-sm {
+  .navbar-lg .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-lg .navbar-collapse.show.nav-end-sm, .navbar-lg .navbar-collapse.show.nav-right-sm {
+  .navbar-lg .navbar-collapse.show.nav-end-collapse, .navbar-lg .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -462,15 +462,15 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xl .navbar-collapse.show.nav-start-sm, .navbar-xl .navbar-collapse.show.nav-left-sm {
+  .navbar-xl .navbar-collapse.show.nav-left-collapse, .navbar-xl .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xl .navbar-collapse.show.nav-center-sm {
+  .navbar-xl .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-xl .navbar-collapse.show.nav-end-sm, .navbar-xl .navbar-collapse.show.nav-right-sm {
+  .navbar-xl .navbar-collapse.show.nav-end-collapse, .navbar-xl .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -542,15 +542,15 @@
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xxl .navbar-collapse.show.nav-start-sm, .navbar-xxl .navbar-collapse.show.nav-left-sm {
+  .navbar-xxl .navbar-collapse.show.nav-left-collapse, .navbar-xxl .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xxl .navbar-collapse.show.nav-center-sm {
+  .navbar-xxl .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-xxl .navbar-collapse.show.nav-end-sm, .navbar-xxl .navbar-collapse.show.nav-right-sm {
+  .navbar-xxl .navbar-collapse.show.nav-end-collapse, .navbar-xxl .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }

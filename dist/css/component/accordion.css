@@ -14,11 +14,6 @@
 .accordion-native .accordion-item {
   border: none;
 }
-.accordion .accordion-item .accordion-header,
-.accordion-native .accordion-item .accordion-header {
-  padding: 0;
-  margin: 0;
-}
 .accordion .accordion-item .accordion-btn,
 .accordion-native .accordion-item .accordion-btn {
   padding: var(--accordion-button-padding);

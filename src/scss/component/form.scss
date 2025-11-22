@@ -104,7 +104,7 @@
   input[type="email"],
   input[type="file"],
   input[type="hidden"],
-  input[type="image"],
+  //input[type="image"],
   input[type="month"],
   input[type="number"],
   input[type="password"],
@@ -126,6 +126,14 @@
     border-style: var(--input-border-style);
     border-width: var(--input-border-width);
   }
+
+  input[type="image"]{
+    border-radius: var(--input-border-radius);
+    border-color: var(--input-border-color);
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
+  }
+
 
 
   textarea {

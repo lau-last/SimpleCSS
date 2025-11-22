@@ -36,25 +36,31 @@ export default class Tab {
         const selector = button.getAttribute('data-target');
         if (!selector) return null;
 
-        const el = document.querySelector(selector);
-        return el instanceof HTMLElement ? el : null;
+        const element = document.querySelector(selector);
+        return element instanceof HTMLElement ? element : null;
     }
 
     private static hideAll(container: HTMLElement): void {
         const buttons = container.querySelectorAll<HTMLElement>('[data-js="tab"][data-target]');
         buttons.forEach(button => {
             const content = Tab.resolveContent(button);
-            if (content) content.classList.remove('show');
+            if (!content) return;
+            content.classList.remove('show');
         });
     }
 
     private static clearActive(container: HTMLElement): void {
         const buttons = container.querySelectorAll<HTMLElement>('[data-js="tab"][data-target]');
-        buttons.forEach(button => button.classList.remove('active'));
+        buttons.forEach(button => {
+                button.classList.remove('active');
+                button.setAttribute('aria-selected', 'false');
+            }
+        );
     }
 
     private static showOne(button: HTMLElement, content: HTMLElement): void {
         button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
         content.classList.add('show');
     }
 }

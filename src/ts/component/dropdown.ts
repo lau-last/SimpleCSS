@@ -18,14 +18,15 @@ export default class Dropdown {
         if (!target) return;
 
         if (target.matches('[data-js="dropdown"][data-target]')) {
-            const selector = target.getAttribute('data-target');
+            const button = target;
+            const selector = button.getAttribute('data-target');
             if (!selector) return;
 
             const dropdown = document.querySelector(selector) as HTMLElement;
             if (!dropdown) return;
 
             Dropdown.closeAllDropdownsExcept(dropdown);
-            Dropdown.toggleDropdown(dropdown);
+            Dropdown.toggleDropdown(dropdown, button);
             return;
         }
 
@@ -36,24 +37,26 @@ export default class Dropdown {
         Dropdown.closeAllDropdowns();
     }
 
-    private static toggleDropdown(dropdown: HTMLElement): void {
-        Dropdown.isOpen(dropdown) ? Dropdown.closeDropdown(dropdown) : Dropdown.openDropdown(dropdown);
+    private static toggleDropdown(dropdown: HTMLElement, button: HTMLElement): void {
+        Dropdown.isOpen(dropdown) ? Dropdown.closeDropdown(dropdown, button) : Dropdown.openDropdown(dropdown, button);
     }
 
     private static isOpen(dropdown: HTMLElement): boolean {
         return dropdown.classList.contains('show');
     }
 
-    private static openDropdown(dropdown: HTMLElement): void {
+    private static openDropdown(dropdown: HTMLElement, button: HTMLElement): void {
         if (Dropdown.isOpen(dropdown)) return;
         dropdown.style.display = 'block';
         dropdown.offsetHeight;
         dropdown.classList.add('show');
+        button.setAttribute('aria-expanded', 'true');
     }
 
-    private static closeDropdown(dropdown: HTMLElement): void {
+    private static closeDropdown(dropdown: HTMLElement, button: HTMLElement): void {
         if (!Dropdown.isOpen(dropdown)) return;
         dropdown.classList.remove('show');
+        button.setAttribute('aria-expanded', 'false');
 
         const onTransitionEnd = (event: TransitionEvent) => {
             if (event.propertyName !== 'opacity') return;
@@ -62,7 +65,6 @@ export default class Dropdown {
         };
 
         dropdown.addEventListener('transitionend', onTransitionEnd, { once: true });
-        dropdown.classList.remove('show');
     }
 
     private static closeAllDropdownsExcept(exception: HTMLElement): void {
@@ -70,16 +72,29 @@ export default class Dropdown {
 
         dropdowns.forEach(dropdown => {
             if (dropdown !== exception) {
-                Dropdown.closeDropdown(dropdown);
+                const button = Dropdown.getButtonForDropdown(dropdown);
+                if (!button) return;
+                Dropdown.closeDropdown(dropdown, button);
             }
         });
     }
 
-
-
     private static closeAllDropdowns(): void {
         const dropdowns = document.querySelectorAll<HTMLElement>('.dropdown-menu.show');
-        dropdowns.forEach(dropdown => Dropdown.closeDropdown(dropdown));
+        dropdowns.forEach(dropdown => {
+            const button = Dropdown.getButtonForDropdown(dropdown);
+            if (!button) return;
+            Dropdown.closeDropdown(dropdown, button);
+        });
+    }
+
+    private static getButtonForDropdown(dropdown: HTMLElement): HTMLElement | null {
+        const id = dropdown.id;
+        if (!id) return null;
+
+        return document.querySelector<HTMLElement>(
+            `[data-js="dropdown"][data-target="#${id}"]`
+        );
     }
 
 }

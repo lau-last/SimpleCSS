@@ -72,7 +72,6 @@ export default class Collapse {
 
 
     private static open(collapse: HTMLElement, button: HTMLElement): void {
-        collapse.hidden = false;
         button.setAttribute('aria-expanded', 'true');
 
         collapse.dataset.animating = 'true';
@@ -103,7 +102,6 @@ export default class Collapse {
         animation.onfinish = () => {
             collapse.style.height = '0px';
             collapse.classList.remove('show');
-            collapse.hidden = true;
             button.setAttribute('aria-expanded', 'false');
             delete collapse.dataset.animating;
             Collapse.cleanAnimationStyles(collapse);

@@ -204,6 +204,7 @@
   --card-border-radius: var(--border-radius);
   --card-box-shadow: var(--box-shadow);
   --card-group-gap: 1rem;
+  --card-min-width: 220px;
 
 
   /* Collapse */
@@ -422,7 +423,7 @@
   --table-neutral-color: color-mix(in srgb, var(--neutral-color) 50%, var(--color-mix-light));
   --table-success-color: color-mix(in srgb, var(--success-color) 50%, var(--color-mix-light));
   --table-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
-  --table-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-dark));
+  --table-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-light));
 
 
   --table-text-on-primary: var(--black-color);

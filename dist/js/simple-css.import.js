@@ -1,4 +1,3 @@
-import EventManager from "./component/event-manager";
 import Ajax from "./component/ajax.js";
 import Alert from "./component/alert.js";
 import Aside from "./component/aside.js";
@@ -16,5 +15,4 @@ document.addEventListener("DOMContentLoaded", () => {
   new Dropdown();
   new FormValidate();
   new Tab();
-  console.log(EventManager.listeners);
 });

@@ -71,19 +71,19 @@ $breakpoints: bp.$breakpoints;
 
 
 
-        &.nav-start-sm,
-        &.nav-left-sm {
+        &.nav-left-collapse,
+        &.nav-start-collapse {
           justify-content: flex-start;
           align-items: flex-start;
         }
 
-        &.nav-center-sm {
+        &.nav-center-collapse {
           justify-content: center;
           align-items: center;
         }
 
-        &.nav-end-sm,
-        &.nav-right-sm {
+        &.nav-end-collapse,
+        &.nav-right-collapse {
           justify-content: flex-end;
           align-items: flex-end;
         }

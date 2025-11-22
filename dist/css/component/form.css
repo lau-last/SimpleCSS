@@ -209,7 +209,6 @@
 .form-control input[type=email],
 .form-control input[type=file],
 .form-control input[type=hidden],
-.form-control input[type=image],
 .form-control input[type=month],
 .form-control input[type=number],
 .form-control input[type=password],
@@ -229,7 +228,6 @@
 .form-control-sm input[type=email],
 .form-control-sm input[type=file],
 .form-control-sm input[type=hidden],
-.form-control-sm input[type=image],
 .form-control-sm input[type=month],
 .form-control-sm input[type=number],
 .form-control-sm input[type=password],
@@ -249,7 +247,6 @@
 .form-control-md input[type=email],
 .form-control-md input[type=file],
 .form-control-md input[type=hidden],
-.form-control-md input[type=image],
 .form-control-md input[type=month],
 .form-control-md input[type=number],
 .form-control-md input[type=password],
@@ -269,7 +266,6 @@
 .form-control-lg input[type=email],
 .form-control-lg input[type=file],
 .form-control-lg input[type=hidden],
-.form-control-lg input[type=image],
 .form-control-lg input[type=month],
 .form-control-lg input[type=number],
 .form-control-lg input[type=password],
@@ -284,6 +280,15 @@
 .form-control-lg select,
 .form-control-lg textarea {
   padding: var(--input-padding);
+  border-radius: var(--input-border-radius);
+  border-color: var(--input-border-color);
+  border-style: var(--input-border-style);
+  border-width: var(--input-border-width);
+}
+.form-control input[type=image],
+.form-control-sm input[type=image],
+.form-control-md input[type=image],
+.form-control-lg input[type=image] {
   border-radius: var(--input-border-radius);
   border-color: var(--input-border-color);
   border-style: var(--input-border-style);

@@ -167,6 +167,7 @@
   --card-border-radius: var(--border-radius);
   --card-box-shadow: var(--box-shadow);
   --card-group-gap: 1rem;
+  --card-min-width: 220px;
   /* Collapse */
   --collapse-bg-color: var(--bg-color);
   --collapse-border-radius: var(--border-radius);
@@ -331,7 +332,7 @@
   --table-neutral-color: color-mix(in srgb, var(--neutral-color) 50%, var(--color-mix-light));
   --table-success-color: color-mix(in srgb, var(--success-color) 50%, var(--color-mix-light));
   --table-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
-  --table-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-dark));
+  --table-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-light));
   --table-text-on-primary: var(--black-color);
   --table-text-on-secondary: var(--black-color);
   --table-text-on-tertiary: var(--black-color);
@@ -1897,11 +1898,6 @@ body ::selection {
 .accordion-native .accordion-item {
   border: none;
 }
-.accordion .accordion-item .accordion-header,
-.accordion-native .accordion-item .accordion-header {
-  padding: 0;
-  margin: 0;
-}
 .accordion .accordion-item .accordion-btn,
 .accordion-native .accordion-item .accordion-btn {
   padding: var(--accordion-button-padding);
@@ -2187,8 +2183,8 @@ body ::selection {
 }
 
 .card-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
   gap: var(--card-group-gap);
 }
 
@@ -2646,7 +2642,6 @@ body ::selection {
 .form-control input[type=email],
 .form-control input[type=file],
 .form-control input[type=hidden],
-.form-control input[type=image],
 .form-control input[type=month],
 .form-control input[type=number],
 .form-control input[type=password],
@@ -2666,7 +2661,6 @@ body ::selection {
 .form-control-sm input[type=email],
 .form-control-sm input[type=file],
 .form-control-sm input[type=hidden],
-.form-control-sm input[type=image],
 .form-control-sm input[type=month],
 .form-control-sm input[type=number],
 .form-control-sm input[type=password],
@@ -2686,7 +2680,6 @@ body ::selection {
 .form-control-md input[type=email],
 .form-control-md input[type=file],
 .form-control-md input[type=hidden],
-.form-control-md input[type=image],
 .form-control-md input[type=month],
 .form-control-md input[type=number],
 .form-control-md input[type=password],
@@ -2706,7 +2699,6 @@ body ::selection {
 .form-control-lg input[type=email],
 .form-control-lg input[type=file],
 .form-control-lg input[type=hidden],
-.form-control-lg input[type=image],
 .form-control-lg input[type=month],
 .form-control-lg input[type=number],
 .form-control-lg input[type=password],
@@ -2721,6 +2713,15 @@ body ::selection {
 .form-control-lg select,
 .form-control-lg textarea {
   padding: var(--input-padding);
+  border-radius: var(--input-border-radius);
+  border-color: var(--input-border-color);
+  border-style: var(--input-border-style);
+  border-width: var(--input-border-width);
+}
+.form-control input[type=image],
+.form-control-sm input[type=image],
+.form-control-md input[type=image],
+.form-control-lg input[type=image] {
   border-radius: var(--input-border-radius);
   border-color: var(--input-border-color);
   border-style: var(--input-border-style);
@@ -4690,15 +4691,15 @@ body ::selection {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar .navbar-collapse.show.nav-start-sm, .navbar .navbar-collapse.show.nav-left-sm {
+  .navbar .navbar-collapse.show.nav-left-collapse, .navbar .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar .navbar-collapse.show.nav-center-sm {
+  .navbar .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar .navbar-collapse.show.nav-end-sm, .navbar .navbar-collapse.show.nav-right-sm {
+  .navbar .navbar-collapse.show.nav-end-collapse, .navbar .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -4770,15 +4771,15 @@ body ::selection {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xs .navbar-collapse.show.nav-start-sm, .navbar-xs .navbar-collapse.show.nav-left-sm {
+  .navbar-xs .navbar-collapse.show.nav-left-collapse, .navbar-xs .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xs .navbar-collapse.show.nav-center-sm {
+  .navbar-xs .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-xs .navbar-collapse.show.nav-end-sm, .navbar-xs .navbar-collapse.show.nav-right-sm {
+  .navbar-xs .navbar-collapse.show.nav-end-collapse, .navbar-xs .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -4850,15 +4851,15 @@ body ::selection {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-sm .navbar-collapse.show.nav-start-sm, .navbar-sm .navbar-collapse.show.nav-left-sm {
+  .navbar-sm .navbar-collapse.show.nav-left-collapse, .navbar-sm .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-sm .navbar-collapse.show.nav-center-sm {
+  .navbar-sm .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-sm .navbar-collapse.show.nav-end-sm, .navbar-sm .navbar-collapse.show.nav-right-sm {
+  .navbar-sm .navbar-collapse.show.nav-end-collapse, .navbar-sm .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -4930,15 +4931,15 @@ body ::selection {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-md .navbar-collapse.show.nav-start-sm, .navbar-md .navbar-collapse.show.nav-left-sm {
+  .navbar-md .navbar-collapse.show.nav-left-collapse, .navbar-md .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-md .navbar-collapse.show.nav-center-sm {
+  .navbar-md .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-md .navbar-collapse.show.nav-end-sm, .navbar-md .navbar-collapse.show.nav-right-sm {
+  .navbar-md .navbar-collapse.show.nav-end-collapse, .navbar-md .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -5010,15 +5011,15 @@ body ::selection {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-lg .navbar-collapse.show.nav-start-sm, .navbar-lg .navbar-collapse.show.nav-left-sm {
+  .navbar-lg .navbar-collapse.show.nav-left-collapse, .navbar-lg .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-lg .navbar-collapse.show.nav-center-sm {
+  .navbar-lg .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-lg .navbar-collapse.show.nav-end-sm, .navbar-lg .navbar-collapse.show.nav-right-sm {
+  .navbar-lg .navbar-collapse.show.nav-end-collapse, .navbar-lg .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -5090,15 +5091,15 @@ body ::selection {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xl .navbar-collapse.show.nav-start-sm, .navbar-xl .navbar-collapse.show.nav-left-sm {
+  .navbar-xl .navbar-collapse.show.nav-left-collapse, .navbar-xl .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xl .navbar-collapse.show.nav-center-sm {
+  .navbar-xl .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-xl .navbar-collapse.show.nav-end-sm, .navbar-xl .navbar-collapse.show.nav-right-sm {
+  .navbar-xl .navbar-collapse.show.nav-end-collapse, .navbar-xl .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }
@@ -5170,15 +5171,15 @@ body ::selection {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xxl .navbar-collapse.show.nav-start-sm, .navbar-xxl .navbar-collapse.show.nav-left-sm {
+  .navbar-xxl .navbar-collapse.show.nav-left-collapse, .navbar-xxl .navbar-collapse.show.nav-start-collapse {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .navbar-xxl .navbar-collapse.show.nav-center-sm {
+  .navbar-xxl .navbar-collapse.show.nav-center-collapse {
     justify-content: center;
     align-items: center;
   }
-  .navbar-xxl .navbar-collapse.show.nav-end-sm, .navbar-xxl .navbar-collapse.show.nav-right-sm {
+  .navbar-xxl .navbar-collapse.show.nav-end-collapse, .navbar-xxl .navbar-collapse.show.nav-right-collapse {
     justify-content: flex-end;
     align-items: flex-end;
   }

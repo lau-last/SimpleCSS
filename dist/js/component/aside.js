@@ -41,8 +41,22 @@ export default class Aside {
     }
     static show(aside) {
         aside.classList.add('show');
+        const button = Aside.getButtonForAside(aside);
+        if (!button)
+            return;
+        button.setAttribute('aria-expanded', 'true');
     }
     static hide(aside) {
         aside.classList.remove('show');
+        const button = Aside.getButtonForAside(aside);
+        if (!button)
+            return;
+        button.setAttribute('aria-expanded', 'false');
+    }
+    static getButtonForAside(aside) {
+        const id = aside.id;
+        if (!id)
+            return null;
+        return document.querySelector(`[data-js="aside"][data-target="#${id}"]`);
     }
 }

@@ -361,9 +361,22 @@
     }
     static show(aside) {
       aside.classList.add("show");
+      const button = _Aside.getButtonForAside(aside);
+      if (!button) return;
+      button.setAttribute("aria-expanded", "true");
     }
     static hide(aside) {
       aside.classList.remove("show");
+      const button = _Aside.getButtonForAside(aside);
+      if (!button) return;
+      button.setAttribute("aria-expanded", "false");
+    }
+    static getButtonForAside(aside) {
+      const id = aside.id;
+      if (!id) return null;
+      return document.querySelector(
+        `[data-js="aside"][data-target="#${id}"]`
+      );
     }
   };
 
@@ -417,7 +430,6 @@
       return collapse.dataset.animating === "true";
     }
     static open(collapse, button) {
-      collapse.hidden = false;
       button.setAttribute("aria-expanded", "true");
       collapse.dataset.animating = "true";
       collapse.classList.add("show");
@@ -440,7 +452,6 @@
       animation.onfinish = () => {
         collapse.style.height = "0px";
         collapse.classList.remove("show");
-        collapse.hidden = true;
         button.setAttribute("aria-expanded", "false");
         delete collapse.dataset.animating;
         _Collapse.cleanAnimationStyles(collapse);
@@ -578,12 +589,13 @@
       const target = event.target;
       if (!target) return;
       if (target.matches('[data-js="dropdown"][data-target]')) {
-        const selector = target.getAttribute("data-target");
+        const button = target;
+        const selector = button.getAttribute("data-target");
         if (!selector) return;
         const dropdown = document.querySelector(selector);
         if (!dropdown) return;
         _Dropdown.closeAllDropdownsExcept(dropdown);
-        _Dropdown.toggleDropdown(dropdown);
+        _Dropdown.toggleDropdown(dropdown, button);
         return;
       }
       if (target.closest(".dropdown-menu.show")) {
@@ -591,40 +603,54 @@
       }
       _Dropdown.closeAllDropdowns();
     }
-    static toggleDropdown(dropdown) {
-      _Dropdown.isOpen(dropdown) ? _Dropdown.closeDropdown(dropdown) : _Dropdown.openDropdown(dropdown);
+    static toggleDropdown(dropdown, button) {
+      _Dropdown.isOpen(dropdown) ? _Dropdown.closeDropdown(dropdown, button) : _Dropdown.openDropdown(dropdown, button);
     }
     static isOpen(dropdown) {
       return dropdown.classList.contains("show");
     }
-    static openDropdown(dropdown) {
+    static openDropdown(dropdown, button) {
       if (_Dropdown.isOpen(dropdown)) return;
       dropdown.style.display = "block";
       dropdown.offsetHeight;
       dropdown.classList.add("show");
+      button.setAttribute("aria-expanded", "true");
     }
-    static closeDropdown(dropdown) {
+    static closeDropdown(dropdown, button) {
       if (!_Dropdown.isOpen(dropdown)) return;
       dropdown.classList.remove("show");
+      button.setAttribute("aria-expanded", "false");
       const onTransitionEnd = (event) => {
         if (event.propertyName !== "opacity") return;
         dropdown.style.display = "none";
         dropdown.removeEventListener("transitionend", onTransitionEnd);
       };
       dropdown.addEventListener("transitionend", onTransitionEnd, { once: true });
-      dropdown.classList.remove("show");
     }
     static closeAllDropdownsExcept(exception) {
       const dropdowns = document.querySelectorAll(".dropdown-menu.show");
       dropdowns.forEach((dropdown) => {
         if (dropdown !== exception) {
-          _Dropdown.closeDropdown(dropdown);
+          const button = _Dropdown.getButtonForDropdown(dropdown);
+          if (!button) return;
+          _Dropdown.closeDropdown(dropdown, button);
         }
       });
     }
     static closeAllDropdowns() {
       const dropdowns = document.querySelectorAll(".dropdown-menu.show");
-      dropdowns.forEach((dropdown) => _Dropdown.closeDropdown(dropdown));
+      dropdowns.forEach((dropdown) => {
+        const button = _Dropdown.getButtonForDropdown(dropdown);
+        if (!button) return;
+        _Dropdown.closeDropdown(dropdown, button);
+      });
+    }
+    static getButtonForDropdown(dropdown) {
+      const id = dropdown.id;
+      if (!id) return null;
+      return document.querySelector(
+        `[data-js="dropdown"][data-target="#${id}"]`
+      );
     }
   };
 
@@ -677,22 +703,29 @@
     static resolveContent(button) {
       const selector = button.getAttribute("data-target");
       if (!selector) return null;
-      const el = document.querySelector(selector);
-      return el instanceof HTMLElement ? el : null;
+      const element = document.querySelector(selector);
+      return element instanceof HTMLElement ? element : null;
     }
     static hideAll(container) {
       const buttons = container.querySelectorAll('[data-js="tab"][data-target]');
       buttons.forEach((button) => {
         const content = _Tab.resolveContent(button);
-        if (content) content.classList.remove("show");
+        if (!content) return;
+        content.classList.remove("show");
       });
     }
     static clearActive(container) {
       const buttons = container.querySelectorAll('[data-js="tab"][data-target]');
-      buttons.forEach((button) => button.classList.remove("active"));
+      buttons.forEach(
+        (button) => {
+          button.classList.remove("active");
+          button.setAttribute("aria-selected", "false");
+        }
+      );
     }
     static showOne(button, content) {
       button.classList.add("active");
+      button.setAttribute("aria-selected", "true");
       content.classList.add("show");
     }
   };
@@ -707,6 +740,5 @@
     new Dropdown();
     new FormValidate();
     new Tab();
-    console.log(EventManager.listeners);
   });
 })();

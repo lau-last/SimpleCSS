@@ -22,12 +22,12 @@ $breakpoints: bp.$breakpoints;
 .fs-5   { font-size: var(--font-size-h5); }
 .fs-6   { font-size: var(--font-size-h6); }
 
-.fs-tiny   { font-size: var(--font-size-xs); }
-.fs-small  { font-size: var(--font-size-sm); }
-.fs-medium { font-size: var(--font-size-md); }
-.fs-large  { font-size: var(--font-size-lg); }
-.fs-xlarge { font-size: var(--font-size-xl); }
-.fs-xxlarge{ font-size: var(--font-size-xxl); }
+.fs-xs   { font-size: var(--font-size-xs); }
+.fs-sm  { font-size: var(--font-size-sm); }
+.fs-md { font-size: var(--font-size-md); }
+.fs-lg  { font-size: var(--font-size-lg); }
+.fs-xl { font-size: var(--font-size-xl); }
+.fs-xxl{ font-size: var(--font-size-xxl); }
 
 /* ==== Responsive variants ==== */
 @each $bp, $size in $breakpoints {
@@ -53,11 +53,11 @@ $breakpoints: bp.$breakpoints;
     .fs-6-#{$bp} { font-size: var(--font-size-h6); }
 
     /* Font sizes */
-    .fs-tiny-#{$bp}   { font-size: var(--font-size-xs); }
-    .fs-small-#{$bp}  { font-size: var(--font-size-sm); }
-    .fs-medium-#{$bp}{ font-size: var(--font-size-md); }
-    .fs-large-#{$bp}  { font-size: var(--font-size-lg); }
-    .fs-xlarge-#{$bp}{ font-size: var(--font-size-xl); }
-    .fs-xxlarge-#{$bp}{ font-size: var(--font-size-xxl); }
+    .fs-xs-#{$bp}   { font-size: var(--font-size-xs); }
+    .fs-sm-#{$bp}  { font-size: var(--font-size-sm); }
+    .fs-md-#{$bp}{ font-size: var(--font-size-md); }
+    .fs-lg-#{$bp}  { font-size: var(--font-size-lg); }
+    .fs-xl-#{$bp}{ font-size: var(--font-size-xl); }
+    .fs-xxl-#{$bp}{ font-size: var(--font-size-xxl); }
   }
 }

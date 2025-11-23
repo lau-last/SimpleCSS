@@ -62,27 +62,27 @@
   font-size: var(--font-size-h6);
 }
 
-.fs-tiny {
+.fs-xs {
   font-size: var(--font-size-xs);
 }
 
-.fs-small {
+.fs-sm {
   font-size: var(--font-size-sm);
 }
 
-.fs-medium {
+.fs-md {
   font-size: var(--font-size-md);
 }
 
-.fs-large {
+.fs-lg {
   font-size: var(--font-size-lg);
 }
 
-.fs-xlarge {
+.fs-xl {
   font-size: var(--font-size-xl);
 }
 
-.fs-xxlarge {
+.fs-xxl {
   font-size: var(--font-size-xxl);
 }
 
@@ -136,22 +136,22 @@
     font-size: var(--font-size-h6);
   }
   /* Font sizes */
-  .fs-tiny-xs {
+  .fs-xs-xs {
     font-size: var(--font-size-xs);
   }
-  .fs-small-xs {
+  .fs-sm-xs {
     font-size: var(--font-size-sm);
   }
-  .fs-medium-xs {
+  .fs-md-xs {
     font-size: var(--font-size-md);
   }
-  .fs-large-xs {
+  .fs-lg-xs {
     font-size: var(--font-size-lg);
   }
-  .fs-xlarge-xs {
+  .fs-xl-xs {
     font-size: var(--font-size-xl);
   }
-  .fs-xxlarge-xs {
+  .fs-xxl-xs {
     font-size: var(--font-size-xxl);
   }
 }
@@ -204,22 +204,22 @@
     font-size: var(--font-size-h6);
   }
   /* Font sizes */
-  .fs-tiny-sm {
+  .fs-xs-sm {
     font-size: var(--font-size-xs);
   }
-  .fs-small-sm {
+  .fs-sm-sm {
     font-size: var(--font-size-sm);
   }
-  .fs-medium-sm {
+  .fs-md-sm {
     font-size: var(--font-size-md);
   }
-  .fs-large-sm {
+  .fs-lg-sm {
     font-size: var(--font-size-lg);
   }
-  .fs-xlarge-sm {
+  .fs-xl-sm {
     font-size: var(--font-size-xl);
   }
-  .fs-xxlarge-sm {
+  .fs-xxl-sm {
     font-size: var(--font-size-xxl);
   }
 }
@@ -272,22 +272,22 @@
     font-size: var(--font-size-h6);
   }
   /* Font sizes */
-  .fs-tiny-md {
+  .fs-xs-md {
     font-size: var(--font-size-xs);
   }
-  .fs-small-md {
+  .fs-sm-md {
     font-size: var(--font-size-sm);
   }
-  .fs-medium-md {
+  .fs-md-md {
     font-size: var(--font-size-md);
   }
-  .fs-large-md {
+  .fs-lg-md {
     font-size: var(--font-size-lg);
   }
-  .fs-xlarge-md {
+  .fs-xl-md {
     font-size: var(--font-size-xl);
   }
-  .fs-xxlarge-md {
+  .fs-xxl-md {
     font-size: var(--font-size-xxl);
   }
 }
@@ -340,22 +340,22 @@
     font-size: var(--font-size-h6);
   }
   /* Font sizes */
-  .fs-tiny-lg {
+  .fs-xs-lg {
     font-size: var(--font-size-xs);
   }
-  .fs-small-lg {
+  .fs-sm-lg {
     font-size: var(--font-size-sm);
   }
-  .fs-medium-lg {
+  .fs-md-lg {
     font-size: var(--font-size-md);
   }
-  .fs-large-lg {
+  .fs-lg-lg {
     font-size: var(--font-size-lg);
   }
-  .fs-xlarge-lg {
+  .fs-xl-lg {
     font-size: var(--font-size-xl);
   }
-  .fs-xxlarge-lg {
+  .fs-xxl-lg {
     font-size: var(--font-size-xxl);
   }
 }
@@ -408,22 +408,22 @@
     font-size: var(--font-size-h6);
   }
   /* Font sizes */
-  .fs-tiny-xl {
+  .fs-xs-xl {
     font-size: var(--font-size-xs);
   }
-  .fs-small-xl {
+  .fs-sm-xl {
     font-size: var(--font-size-sm);
   }
-  .fs-medium-xl {
+  .fs-md-xl {
     font-size: var(--font-size-md);
   }
-  .fs-large-xl {
+  .fs-lg-xl {
     font-size: var(--font-size-lg);
   }
-  .fs-xlarge-xl {
+  .fs-xl-xl {
     font-size: var(--font-size-xl);
   }
-  .fs-xxlarge-xl {
+  .fs-xxl-xl {
     font-size: var(--font-size-xxl);
   }
 }
@@ -476,22 +476,22 @@
     font-size: var(--font-size-h6);
   }
   /* Font sizes */
-  .fs-tiny-xxl {
+  .fs-xs-xxl {
     font-size: var(--font-size-xs);
   }
-  .fs-small-xxl {
+  .fs-sm-xxl {
     font-size: var(--font-size-sm);
   }
-  .fs-medium-xxl {
+  .fs-md-xxl {
     font-size: var(--font-size-md);
   }
-  .fs-large-xxl {
+  .fs-lg-xxl {
     font-size: var(--font-size-lg);
   }
-  .fs-xlarge-xxl {
+  .fs-xl-xxl {
     font-size: var(--font-size-xl);
   }
-  .fs-xxlarge-xxl {
+  .fs-xxl-xxl {
     font-size: var(--font-size-xxl);
   }
 }

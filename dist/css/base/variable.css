@@ -89,15 +89,12 @@
   --font-size-h5: 2rem;
   --font-size-h6: 1.5rem;
   /* Leading & tracking */
-  --letter-spacing: 0;
-  --letter-spacing-tight: -0.05em;
-  --letter-spacing-wide: 0.05em;
-  --letter-spacing-wider: 0.1em;
-  --line-height: 1;
+  --letter-spacing-sm: -0.05em;
+  --letter-spacing-md: 0.05em;
+  --letter-spacing-lg: 0.1em;
   --line-height-sm: 1.25;
   --line-height-md: 1.5;
   --line-height-lg: 1.75;
-  --line-height-xl: 2;
   /* Radius */
   --border-radius: .3rem;
   --border-radius-pill: 10rem;

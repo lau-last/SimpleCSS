@@ -27,7 +27,22 @@ body {
   h5 { font-size: var(--font-size-h5); }
   h6 { font-size: var(--font-size-h6); }
 
-  button, a {font-family: var(--font-family-text), sans-serif;}
+
+button,
+input,
+textarea,
+select,
+option,
+optgroup,
+label,
+fieldset,
+legend {
+    font-family: var(--font-family-text), sans-serif;
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+  }
+
+
 
   /* Links */
   a {

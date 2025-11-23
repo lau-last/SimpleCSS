@@ -39,8 +39,18 @@ body h5 {
 body h6 {
   font-size: var(--font-size-h6);
 }
-body button, body a {
+body button,
+body input,
+body textarea,
+body select,
+body option,
+body optgroup,
+body label,
+body fieldset,
+body legend {
   font-family: var(--font-family-text), sans-serif;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
 }
 body {
   /* Links */

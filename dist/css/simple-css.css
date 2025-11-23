@@ -7919,7 +7919,13 @@ table .table-black * {
 .no-underline {
   text-decoration: none;
 }
+.no-underline:hover {
+  text-decoration: none;
+}
 .no-underline a {
+  text-decoration: none;
+}
+.no-underline a:hover {
   text-decoration: none;
 }
 

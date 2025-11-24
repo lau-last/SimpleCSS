@@ -1,12 +1,15 @@
 .badge-group {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
   gap: var(--badge-group-gap);
 }
 
 .badge {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding);
@@ -14,6 +17,9 @@
 
 .badge-sm {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding-sm);
@@ -21,6 +27,9 @@
 
 .badge-md {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding-md);
@@ -28,6 +37,9 @@
 
 .badge-lg {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding-lg);

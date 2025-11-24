@@ -407,22 +407,24 @@
       if (_Collapse.isAnimating(collapse)) return;
       const accordion = collapse.closest(".accordion");
       if (accordion) {
-        _Collapse.handleTypeAccordion(accordion, collapse, button);
+        _Collapse.handleTypeAccordion(accordion, collapse);
       }
       const isOpen = collapse.classList.contains("show");
       isOpen ? _Collapse.close(collapse, button) : _Collapse.open(collapse, button);
     }
-    static handleTypeAccordion(accordion, collapse, button) {
+    static handleTypeAccordion(accordion, collapse) {
       if (!accordion) return;
       const type = accordion.getAttribute("data-type");
       if (type !== "multiple") {
-        _Collapse.closeAllCollapses(accordion, collapse, button);
+        _Collapse.closeAllCollapses(accordion, collapse);
       }
     }
-    static closeAllCollapses(accordion, except, button) {
+    static closeAllCollapses(accordion, except) {
       const collapses = accordion.querySelectorAll(".accordion-body.show");
       collapses.forEach((panel) => {
         if (panel === except) return;
+        const button = _Collapse.getButton(accordion, panel);
+        if (!button) return;
         _Collapse.close(panel, button);
       });
     }
@@ -436,11 +438,14 @@
       _Collapse.prepareOpenStyles(collapse);
       const height = collapse.scrollHeight;
       collapse.style.height = "0px";
+      void collapse.offsetHeight;
       const animation = _Collapse.playOpenAnimation(collapse, height);
       animation.onfinish = () => {
         collapse.style.height = "auto";
         collapse.style.overflow = "visible";
-        delete collapse.dataset.animating;
+        _Collapse.cleanAnimationStyles(collapse);
+      };
+      animation.oncancel = () => {
         _Collapse.cleanAnimationStyles(collapse);
       };
     }
@@ -453,7 +458,9 @@
         collapse.style.height = "0px";
         collapse.classList.remove("show");
         button.setAttribute("aria-expanded", "false");
-        delete collapse.dataset.animating;
+        _Collapse.cleanAnimationStyles(collapse);
+      };
+      animation.oncancel = () => {
         _Collapse.cleanAnimationStyles(collapse);
       };
     }
@@ -478,12 +485,19 @@
       );
     }
     static cleanAnimationStyles(collapse) {
-      collapse.style.removeProperty("height");
-      collapse.style.removeProperty("overflow");
-      delete collapse.dataset.animating;
-      if (!collapse.style.cssText.trim()) {
+      const propsToClean = ["height", "overflow"];
+      propsToClean.forEach((prop) => collapse.style.removeProperty(prop));
+      if (collapse.style.length === 0) {
         collapse.removeAttribute("style");
       }
+      delete collapse.dataset.animating;
+    }
+    static getButton(accordion, panel) {
+      const id = panel.id;
+      if (!id) return null;
+      return accordion.querySelector(
+        `[data-js="collapse"][data-target="#${id}"]`
+      );
     }
   };
 

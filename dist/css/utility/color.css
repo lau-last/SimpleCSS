@@ -572,7 +572,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--primary-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--primary-color);
 }
 .btn.outline-primary:hover,
 .btn-sm.outline-primary:hover,
@@ -628,7 +628,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--secondary-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--secondary-color);
 }
 .btn.outline-secondary:hover,
 .btn-sm.outline-secondary:hover,
@@ -684,7 +684,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--tertiary-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--tertiary-color);
 }
 .btn.outline-tertiary:hover,
 .btn-sm.outline-tertiary:hover,
@@ -740,7 +740,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--success-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--success-color);
 }
 .btn.outline-success:hover,
 .btn-sm.outline-success:hover,
@@ -796,7 +796,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--info-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--info-color);
 }
 .btn.outline-info:hover,
 .btn-sm.outline-info:hover,
@@ -852,7 +852,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--warning-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--warning-color);
 }
 .btn.outline-warning:hover,
 .btn-sm.outline-warning:hover,
@@ -908,7 +908,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--danger-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--danger-color);
 }
 .btn.outline-danger:hover,
 .btn-sm.outline-danger:hover,
@@ -964,7 +964,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--neutral-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--neutral-color);
 }
 .btn.outline-neutral:hover,
 .btn-sm.outline-neutral:hover,
@@ -1020,7 +1020,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--light-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--light-color);
 }
 .btn.outline-light:hover,
 .btn-sm.outline-light:hover,
@@ -1076,7 +1076,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--dark-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--dark-color);
 }
 .btn.outline-dark:hover,
 .btn-sm.outline-dark:hover,
@@ -1132,7 +1132,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--white-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--white-color);
 }
 .btn.outline-white:hover,
 .btn-sm.outline-white:hover,
@@ -1188,7 +1188,7 @@
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--black-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--black-color);
 }
 .btn.outline-black:hover,
 .btn-sm.outline-black:hover,

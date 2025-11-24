@@ -61,6 +61,8 @@
   --border-color: var(--gray-300);
   --border-style: solid;
   --border-width: .1rem;
+  --border-width-outline: .1rem;
+  --border-style-outline: solid;
   --text-color: #262626;
   /* Typography */
   --font-family-text: "Open Sans", sans-serif;
@@ -112,8 +114,8 @@
   --accordion-bg-color: var(--bg-color);
   --accordion-border-color: var(--border-color);
   --accordion-border-radius: var(--border-radius);
-  --accordion-border-style: solid;
-  --accordion-border-width: .1rem;
+  --accordion-border-style: var(--border-style);
+  --accordion-border-width: var(--border-width);
   --accordion-button-padding: 1rem;
   --accordion-button-padding-sm: .5rem 1rem;
   --accordion-button-padding-md: 1rem;
@@ -123,9 +125,10 @@
   --alert-footer-padding: .5rem 1rem;
   --alert-header-padding: .5rem 1rem;
   --alert-animation: alert-in-and-out 5s ease forwards;
+  --alert-bg-color: var(--bg-color);
   --alert-border-color: var(--border-color);
-  --alert-border-style: solid;
-  --alert-border-width: .1rem;
+  --alert-border-style: var(--border-style);
+  --alert-border-width: var(--border-width);
   --alert-border-radius: var(--border-radius);
   --alert-box-shadow: var(--box-shadow);
   --alert-container-padding-inline: 1rem;
@@ -134,6 +137,9 @@
   --alert-width: 100%;
   /* Badge */
   --badge-border-radius: var(--border-radius);
+  --badge-border-color: var(--border-color);
+  --badge-border-style: var(--border-style);
+  --badge-border-width: 0;
   --badge-group-gap: .5rem;
   --badge-padding: .4rem 1.2rem;
   --badge-padding-sm: .3rem .9rem;
@@ -141,6 +147,9 @@
   --badge-padding-lg: .5rem 1.5rem;
   /* Button */
   --button-border-radius: var(--border-radius);
+  --button-border-color: var(--border-color);
+  --button-border-style: var(--border-style);
+  --button-border-width: 0;
   --button-group-gap: .5rem;
   --button-padding: .5rem 1rem;
   --button-padding-sm: .5rem 1rem;
@@ -151,8 +160,8 @@
   --card-footer-padding: .5rem 1rem;
   --card-header-padding: .5rem 1rem;
   --card-border-color: var(--gray-100);
-  --card-border-style: solid;
-  --card-border-width: .1rem;
+  --card-border-style: var(--border-style);
+  --card-border-width: var(--border-width);
   --card-border-radius: var(--border-radius);
   --card-box-shadow: var(--box-shadow);
   --card-group-gap: 1rem;
@@ -160,9 +169,9 @@
   /* Collapse */
   --collapse-bg-color: var(--bg-color);
   --collapse-border-radius: var(--border-radius);
-  --collapse-border-color: var(--gray-150);
-  --collapse-border-style: solid;
-  --collapse-border-width: .1rem;
+  --collapse-border-color: var(--border-color);
+  --collapse-border-style: var(--border-style);
+  --collapse-border-width: var(--border-width);
   --collapse-button-padding: 1rem;
   --collapse-button-padding-sm: .5rem 1rem;
   --collapse-button-padding-md: 1rem;
@@ -173,8 +182,8 @@
   --dialog-footer-padding: 1rem;
   --dialog-backdrop-color: rgba(0, 0, 0, 0.8);
   --dialog-border-color: var(--border-color);
-  --dialog-border-style: solid;
-  --dialog-border-width: .1rem;
+  --dialog-border-style: var(--border-style);
+  --dialog-border-width: var(--border-width);
   --dialog-border-radius: var(--border-radius);
   --dialog-padding: 0;
   --dialog-width: 75rem;

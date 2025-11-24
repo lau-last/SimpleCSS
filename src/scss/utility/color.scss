@@ -158,7 +158,7 @@ $list-colors: (
 .tab-btn-lg{
   &.outline {
     @each $name, $value in $colors {
-      border: .1rem solid #{$value};
+      border: var(--border-width-outline) var(--border-style-outline) #{$value};
       &-#{$name}:hover {
         background-color: #{$value};
         color: var(--text-on-#{$name});

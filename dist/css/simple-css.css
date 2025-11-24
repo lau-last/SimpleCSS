@@ -69,6 +69,8 @@
   --border-color: var(--gray-300);
   --border-style: solid;
   --border-width: .1rem;
+  --border-width-outline: .1rem;
+  --border-style-outline: solid;
   --text-color: #262626;
   /* Typography */
   --font-family-text: "Open Sans", sans-serif;
@@ -120,8 +122,8 @@
   --accordion-bg-color: var(--bg-color);
   --accordion-border-color: var(--border-color);
   --accordion-border-radius: var(--border-radius);
-  --accordion-border-style: solid;
-  --accordion-border-width: .1rem;
+  --accordion-border-style: var(--border-style);
+  --accordion-border-width: var(--border-width);
   --accordion-button-padding: 1rem;
   --accordion-button-padding-sm: .5rem 1rem;
   --accordion-button-padding-md: 1rem;
@@ -131,9 +133,10 @@
   --alert-footer-padding: .5rem 1rem;
   --alert-header-padding: .5rem 1rem;
   --alert-animation: alert-in-and-out 5s ease forwards;
+  --alert-bg-color: var(--bg-color);
   --alert-border-color: var(--border-color);
-  --alert-border-style: solid;
-  --alert-border-width: .1rem;
+  --alert-border-style: var(--border-style);
+  --alert-border-width: var(--border-width);
   --alert-border-radius: var(--border-radius);
   --alert-box-shadow: var(--box-shadow);
   --alert-container-padding-inline: 1rem;
@@ -142,6 +145,9 @@
   --alert-width: 100%;
   /* Badge */
   --badge-border-radius: var(--border-radius);
+  --badge-border-color: var(--border-color);
+  --badge-border-style: var(--border-style);
+  --badge-border-width: 0;
   --badge-group-gap: .5rem;
   --badge-padding: .4rem 1.2rem;
   --badge-padding-sm: .3rem .9rem;
@@ -149,6 +155,9 @@
   --badge-padding-lg: .5rem 1.5rem;
   /* Button */
   --button-border-radius: var(--border-radius);
+  --button-border-color: var(--border-color);
+  --button-border-style: var(--border-style);
+  --button-border-width: 0;
   --button-group-gap: .5rem;
   --button-padding: .5rem 1rem;
   --button-padding-sm: .5rem 1rem;
@@ -159,8 +168,8 @@
   --card-footer-padding: .5rem 1rem;
   --card-header-padding: .5rem 1rem;
   --card-border-color: var(--gray-100);
-  --card-border-style: solid;
-  --card-border-width: .1rem;
+  --card-border-style: var(--border-style);
+  --card-border-width: var(--border-width);
   --card-border-radius: var(--border-radius);
   --card-box-shadow: var(--box-shadow);
   --card-group-gap: 1rem;
@@ -168,9 +177,9 @@
   /* Collapse */
   --collapse-bg-color: var(--bg-color);
   --collapse-border-radius: var(--border-radius);
-  --collapse-border-color: var(--gray-150);
-  --collapse-border-style: solid;
-  --collapse-border-width: .1rem;
+  --collapse-border-color: var(--border-color);
+  --collapse-border-style: var(--border-style);
+  --collapse-border-width: var(--border-width);
   --collapse-button-padding: 1rem;
   --collapse-button-padding-sm: .5rem 1rem;
   --collapse-button-padding-md: 1rem;
@@ -181,8 +190,8 @@
   --dialog-footer-padding: 1rem;
   --dialog-backdrop-color: rgba(0, 0, 0, 0.8);
   --dialog-border-color: var(--border-color);
-  --dialog-border-style: solid;
-  --dialog-border-width: .1rem;
+  --dialog-border-style: var(--border-style);
+  --dialog-border-width: var(--border-width);
   --dialog-border-radius: var(--border-radius);
   --dialog-padding: 0;
   --dialog-width: 75rem;
@@ -2072,7 +2081,7 @@ body ::selection {
   border-color: var(--alert-border-color);
   border-style: var(--alert-border-style);
   border-width: var(--alert-border-width);
-  background: var(--bg-color);
+  background-color: var(--alert-bg-color);
   width: var(--alert-width);
   box-shadow: var(--alert-box-shadow);
   animation: var(--alert-animation);
@@ -2085,12 +2094,15 @@ body ::selection {
 .badge-group {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
   gap: var(--badge-group-gap);
 }
 
 .badge {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding);
@@ -2098,6 +2110,9 @@ body ::selection {
 
 .badge-sm {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding-sm);
@@ -2105,6 +2120,9 @@ body ::selection {
 
 .badge-md {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding-md);
@@ -2112,6 +2130,9 @@ body ::selection {
 
 .badge-lg {
   border-radius: var(--badge-border-radius);
+  border-width: var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
   padding: var(--badge-padding-lg);
@@ -2120,18 +2141,22 @@ body ::selection {
 .btn-group {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
   gap: var(--button-group-gap);
 }
 
 .btn {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn:not([class*=outline-]) {
-  border: none;
+.btn:active {
+  transform: scale(0.95);
 }
 .btn:focus {
   outline: none;
@@ -2143,12 +2168,16 @@ body ::selection {
 
 .btn-sm {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn-sm:not([class*=outline-]) {
-  border: none;
+.btn-sm:active {
+  transform: scale(0.95);
 }
 .btn-sm:focus {
   outline: none;
@@ -2160,12 +2189,16 @@ body ::selection {
 
 .btn-md {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn-md:not([class*=outline-]) {
-  border: none;
+.btn-md:active {
+  transform: scale(0.95);
 }
 .btn-md:focus {
   outline: none;
@@ -2177,12 +2210,16 @@ body ::selection {
 
 .btn-lg {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn-lg:not([class*=outline-]) {
-  border: none;
+.btn-lg:active {
+  transform: scale(0.95);
 }
 .btn-lg:focus {
   outline: none;
@@ -2272,16 +2309,6 @@ body ::selection {
   content: "﹢";
   margin-left: 0.5rem;
 }
-.collapse .collapse-btn:not([class*=outline-]),
-.collapse .collapse-btn-sm:not([class*=outline-]),
-.collapse .collapse-btn-md:not([class*=outline-]),
-.collapse .collapse-btn-lg:not([class*=outline-]),
-.collapse-native .collapse-btn:not([class*=outline-]),
-.collapse-native .collapse-btn-sm:not([class*=outline-]),
-.collapse-native .collapse-btn-md:not([class*=outline-]),
-.collapse-native .collapse-btn-lg:not([class*=outline-]) {
-  border: none;
-}
 .collapse .collapse-btn:focus,
 .collapse .collapse-btn-sm:focus,
 .collapse .collapse-btn-md:focus,
@@ -2334,8 +2361,8 @@ body ::selection {
   border-color: var(--dialog-border-color);
   border-style: var(--dialog-border-style);
   border-width: var(--dialog-border-width);
-  padding: var(--dialog-padding);
   border-radius: var(--dialog-border-radius);
+  padding: var(--dialog-padding);
   transform: translate(-50%, -50%) scale(0);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
@@ -6248,7 +6275,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--primary-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--primary-color);
 }
 .btn.outline-primary:hover,
 .btn-sm.outline-primary:hover,
@@ -6304,7 +6331,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--secondary-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--secondary-color);
 }
 .btn.outline-secondary:hover,
 .btn-sm.outline-secondary:hover,
@@ -6360,7 +6387,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--tertiary-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--tertiary-color);
 }
 .btn.outline-tertiary:hover,
 .btn-sm.outline-tertiary:hover,
@@ -6416,7 +6443,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--success-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--success-color);
 }
 .btn.outline-success:hover,
 .btn-sm.outline-success:hover,
@@ -6472,7 +6499,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--info-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--info-color);
 }
 .btn.outline-info:hover,
 .btn-sm.outline-info:hover,
@@ -6528,7 +6555,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--warning-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--warning-color);
 }
 .btn.outline-warning:hover,
 .btn-sm.outline-warning:hover,
@@ -6584,7 +6611,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--danger-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--danger-color);
 }
 .btn.outline-danger:hover,
 .btn-sm.outline-danger:hover,
@@ -6640,7 +6667,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--neutral-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--neutral-color);
 }
 .btn.outline-neutral:hover,
 .btn-sm.outline-neutral:hover,
@@ -6696,7 +6723,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--light-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--light-color);
 }
 .btn.outline-light:hover,
 .btn-sm.outline-light:hover,
@@ -6752,7 +6779,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--dark-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--dark-color);
 }
 .btn.outline-dark:hover,
 .btn-sm.outline-dark:hover,
@@ -6808,7 +6835,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--white-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--white-color);
 }
 .btn.outline-white:hover,
 .btn-sm.outline-white:hover,
@@ -6864,7 +6891,7 @@ table.table-lg tfoot tr td {
 .tab-btn-sm.outline,
 .tab-btn-md.outline,
 .tab-btn-lg.outline {
-  border: 0.1rem solid var(--black-color);
+  border: var(--border-width-outline) var(--border-style-outline) var(--black-color);
 }
 .btn.outline-black:hover,
 .btn-sm.outline-black:hover,

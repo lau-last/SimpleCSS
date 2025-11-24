@@ -2,6 +2,10 @@
 .dropdown-native {
   position: relative;
   display: inline-block;
+  //border-color: var(--dropdown-border-color);
+  //border-style: var(--dropdown-border-style);
+  //border-width: var(--dropdown-border-width);
+  //border-radius: var(--dropdown-border-radius);
 
   .dropdown-menu {
     min-width: var(--dropdown-menu-min-width);

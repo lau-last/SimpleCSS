@@ -1,18 +1,22 @@
 .btn-group {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
   gap: var(--button-group-gap);
 }
 
 .btn {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn:not([class*=outline-]) {
-  border: none;
+.btn:active {
+  transform: scale(0.95);
 }
 .btn:focus {
   outline: none;
@@ -24,12 +28,16 @@
 
 .btn-sm {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn-sm:not([class*=outline-]) {
-  border: none;
+.btn-sm:active {
+  transform: scale(0.95);
 }
 .btn-sm:focus {
   outline: none;
@@ -41,12 +49,16 @@
 
 .btn-md {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn-md:not([class*=outline-]) {
-  border: none;
+.btn-md:active {
+  transform: scale(0.95);
 }
 .btn-md:focus {
   outline: none;
@@ -58,12 +70,16 @@
 
 .btn-lg {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 }
-.btn-lg:not([class*=outline-]) {
-  border: none;
+.btn-lg:active {
+  transform: scale(0.95);
 }
 .btn-lg:focus {
   outline: none;

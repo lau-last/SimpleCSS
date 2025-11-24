@@ -12,55 +12,46 @@ export default class Collapse {
 
     private static onClick(event: Event): void {
         if (!(event instanceof MouseEvent)) return;
-
         const target = event.target as HTMLElement | null;
         if (!target) return;
-
         const button = target.closest<HTMLElement>('[data-js="collapse"][data-target]');
         if (!button) return;
-
         Collapse.handleToggle(button);
     }
 
     private static handleToggle(button: HTMLElement): void {
         const selector = button.getAttribute('data-target');
         if (!selector) return;
-
         const collapse = document.querySelector<HTMLElement>(selector);
         if (!collapse) return;
-
         Collapse.toggle(collapse, button);
     }
 
 
     private static toggle(collapse: HTMLElement, button: HTMLElement): void {
         if (Collapse.isAnimating(collapse)) return;
-
         const accordion = collapse.closest<HTMLElement>('.accordion');
-
         if (accordion) {
-            Collapse.handleTypeAccordion(accordion, collapse, button);
+            Collapse.handleTypeAccordion(accordion, collapse);
         }
-
         const isOpen = collapse.classList.contains('show');
         isOpen ? Collapse.close(collapse, button) : Collapse.open(collapse, button);
     }
 
-    private static handleTypeAccordion(accordion: HTMLElement | null, collapse: HTMLElement, button: HTMLElement): void {
+    private static handleTypeAccordion(accordion: HTMLElement | null, collapse: HTMLElement): void {
         if (!accordion) return;
-
         const type = accordion.getAttribute('data-type');
-
         if (type !== 'multiple') {
-            Collapse.closeAllCollapses(accordion, collapse, button);
+            Collapse.closeAllCollapses(accordion, collapse);
         }
     }
 
-    private static closeAllCollapses(accordion: HTMLElement, except: HTMLElement, button: HTMLElement): void {
+    private static closeAllCollapses(accordion: HTMLElement, except: HTMLElement): void {
         const collapses = accordion.querySelectorAll<HTMLElement>('.accordion-body.show');
-
         collapses.forEach((panel) => {
             if (panel === except) return;
+            const button = Collapse.getButton(accordion, panel);
+            if (!button) return;
             Collapse.close(panel, button);
         });
     }
@@ -73,20 +64,19 @@ export default class Collapse {
 
     private static open(collapse: HTMLElement, button: HTMLElement): void {
         button.setAttribute('aria-expanded', 'true');
-
         collapse.dataset.animating = 'true';
         collapse.classList.add('show');
-
         Collapse.prepareOpenStyles(collapse);
-
         const height = collapse.scrollHeight;
         collapse.style.height = '0px';
-
+        void collapse.offsetHeight;
         const animation = Collapse.playOpenAnimation(collapse, height);
         animation.onfinish = () => {
             collapse.style.height = 'auto';
             collapse.style.overflow = 'visible';
-            delete collapse.dataset.animating;
+            Collapse.cleanAnimationStyles(collapse);
+        };
+        animation.oncancel = () => {
             Collapse.cleanAnimationStyles(collapse);
         };
     }
@@ -94,16 +84,16 @@ export default class Collapse {
 
     private static close(collapse: HTMLElement, button: HTMLElement): void {
         collapse.dataset.animating = 'true';
-
         const height = collapse.scrollHeight;
         Collapse.prepareCloseStyles(collapse, height);
-
         const animation = Collapse.playCloseAnimation(collapse, height);
         animation.onfinish = () => {
             collapse.style.height = '0px';
             collapse.classList.remove('show');
             button.setAttribute('aria-expanded', 'false');
-            delete collapse.dataset.animating;
+            Collapse.cleanAnimationStyles(collapse);
+        };
+        animation.oncancel = () => {
             Collapse.cleanAnimationStyles(collapse);
         };
     }
@@ -134,12 +124,20 @@ export default class Collapse {
     }
 
     private static cleanAnimationStyles(collapse: HTMLElement): void {
-        collapse.style.removeProperty('height');
-        collapse.style.removeProperty('overflow');
-        delete collapse.dataset.animating;
-        if (!collapse.style.cssText.trim()) {
+        const propsToClean = ['height', 'overflow'];
+        propsToClean.forEach(prop => collapse.style.removeProperty(prop));
+        if (collapse.style.length === 0) {
             collapse.removeAttribute('style');
         }
+        delete collapse.dataset.animating;
+    }
+
+    private static getButton(accordion: HTMLElement, panel: HTMLElement): HTMLElement | null {
+        const id = panel.id;
+        if (!id) return null;
+        return accordion.querySelector<HTMLElement>(
+            `[data-js="collapse"][data-target="#${id}"]`
+        );
     }
 
 }

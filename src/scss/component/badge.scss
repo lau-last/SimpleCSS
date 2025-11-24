@@ -2,13 +2,16 @@
 .badge-group{
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
   gap: var(--badge-group-gap);
 }
 
 // Badge
 @mixin badge-base{
   border-radius: var(--badge-border-radius);
+  border-width:  var(--badge-border-width);
+  border-style: var(--badge-border-style);
+  border-color: var(--badge-border-color);
   white-space: nowrap;
   display: inline-block;
 }

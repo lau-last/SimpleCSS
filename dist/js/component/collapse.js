@@ -31,23 +31,26 @@ export default class Collapse {
             return;
         const accordion = collapse.closest('.accordion');
         if (accordion) {
-            Collapse.handleTypeAccordion(accordion, collapse, button);
+            Collapse.handleTypeAccordion(accordion, collapse);
         }
         const isOpen = collapse.classList.contains('show');
         isOpen ? Collapse.close(collapse, button) : Collapse.open(collapse, button);
     }
-    static handleTypeAccordion(accordion, collapse, button) {
+    static handleTypeAccordion(accordion, collapse) {
         if (!accordion)
             return;
         const type = accordion.getAttribute('data-type');
         if (type !== 'multiple') {
-            Collapse.closeAllCollapses(accordion, collapse, button);
+            Collapse.closeAllCollapses(accordion, collapse);
         }
     }
-    static closeAllCollapses(accordion, except, button) {
+    static closeAllCollapses(accordion, except) {
         const collapses = accordion.querySelectorAll('.accordion-body.show');
         collapses.forEach((panel) => {
             if (panel === except)
+                return;
+            const button = Collapse.getButton(accordion, panel);
+            if (!button)
                 return;
             Collapse.close(panel, button);
         });
@@ -62,11 +65,14 @@ export default class Collapse {
         Collapse.prepareOpenStyles(collapse);
         const height = collapse.scrollHeight;
         collapse.style.height = '0px';
+        void collapse.offsetHeight;
         const animation = Collapse.playOpenAnimation(collapse, height);
         animation.onfinish = () => {
             collapse.style.height = 'auto';
             collapse.style.overflow = 'visible';
-            delete collapse.dataset.animating;
+            Collapse.cleanAnimationStyles(collapse);
+        };
+        animation.oncancel = () => {
             Collapse.cleanAnimationStyles(collapse);
         };
     }
@@ -79,7 +85,9 @@ export default class Collapse {
             collapse.style.height = '0px';
             collapse.classList.remove('show');
             button.setAttribute('aria-expanded', 'false');
-            delete collapse.dataset.animating;
+            Collapse.cleanAnimationStyles(collapse);
+        };
+        animation.oncancel = () => {
             Collapse.cleanAnimationStyles(collapse);
         };
     }
@@ -98,11 +106,17 @@ export default class Collapse {
         return collapse.animate([{ height: `${height}px` }, { height: '0px' }], { duration: 300, easing: 'ease' });
     }
     static cleanAnimationStyles(collapse) {
-        collapse.style.removeProperty('height');
-        collapse.style.removeProperty('overflow');
-        delete collapse.dataset.animating;
-        if (!collapse.style.cssText.trim()) {
+        const propsToClean = ['height', 'overflow'];
+        propsToClean.forEach(prop => collapse.style.removeProperty(prop));
+        if (collapse.style.length === 0) {
             collapse.removeAttribute('style');
         }
+        delete collapse.dataset.animating;
+    }
+    static getButton(accordion, panel) {
+        const id = panel.id;
+        if (!id)
+            return null;
+        return accordion.querySelector(`[data-js="collapse"][data-target="#${id}"]`);
     }
 }

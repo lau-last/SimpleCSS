@@ -30,9 +30,7 @@
       content: '\FE62';
       margin-left: .5rem;
     }
-    &:not([class*="outline-"]) {
-      border: none;
-    }
+
     &:focus {
       outline: none;
       box-shadow: none;

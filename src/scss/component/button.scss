@@ -2,19 +2,23 @@
 .btn-group {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: center;
   gap: var(--button-group-gap);
 }
 
 // Button
 @mixin button-base {
   border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: transform 0.1s ease;
 
-  &:not([class*="outline-"]) {
-    border: none;
+  &:active{
+    transform: scale(0.95);
   }
 
   &:focus {

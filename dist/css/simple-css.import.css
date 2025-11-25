@@ -1,5 +1,7 @@
 @import 'base/reset.css';
 @import 'base/variable.css';
+@import 'base/variable-color-theme-dark.css';
+@import 'base/variable-color-theme-light.css';
 @import 'base/base.css';
 @import 'layout/col.css';
 @import 'layout/container.css';

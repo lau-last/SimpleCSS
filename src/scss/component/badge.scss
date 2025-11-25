@@ -1,4 +1,3 @@
-// Badge group
 .badge-group{
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +5,6 @@
   gap: var(--badge-group-gap);
 }
 
-// Badge
 @mixin badge-base{
   border-radius: var(--badge-border-radius);
   border-width:  var(--badge-border-width);

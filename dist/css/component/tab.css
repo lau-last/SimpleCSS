@@ -56,12 +56,14 @@
   border-bottom-right-radius: var(--tab-button-radius);
 }
 
-.tab-content {
+.tab-body {
   display: none;
-  border: var(--tab-content-border);
-  padding: var(--tab-content-padding);
-  border-radius: var(--tab-content-border-radius);
+  border-width: var(--tab-body-border-width);
+  border-style: var(--tab-body-border-style);
+  border-color: var(--tab-body-border-color);
+  border-radius: var(--tab-body-border-radius);
+  padding: var(--tab-body-padding);
 }
-.tab-content.show {
+.tab-body.show {
   display: block;
 }

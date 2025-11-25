@@ -1,0 +1,488 @@
+//:root {
+//
+//  /*
+//  ***
+//  ******
+//  FOUNDATIONS
+//  ******
+//  ***
+//  */
+//
+//  /* Color palette */
+//  --gray-0: #ffffff;
+//  --gray-50: #fafafa;
+//  --gray-100: #f5f5f5;
+//  --gray-150: #efefef;
+//  --gray-200: #e5e5e5;
+//  --gray-250: #d9d9d9;
+//  --gray-300: #d4d4d4;
+//  --gray-350: #bbbbbb;
+//  --gray-400: #a3a3a3;
+//  --gray-450: #8b8b8b;
+//  --gray-500: #737373;
+//  --gray-550: #636363;
+//  --gray-600: #525252;
+//  --gray-650: #494949;
+//  --gray-700: #404040;
+//  --gray-750: #333333;
+//  --gray-800: #262626;
+//  --gray-850: #1e1e1e;
+//  --gray-900: #171717;
+//  --gray-950: #0b0b0b;
+//  --gray-1000: #000000;
+//
+//
+//  --primary-color: #6E5FAF;
+//  --secondary-color: #C07A2D;
+//  --tertiary-color: #4F7C9E;
+//
+//
+//  --black-color: #000000;
+//  --dark-color: #383737;
+//  --danger-color: #c96a6a;
+//  --info-color: #6baacd;
+//  --light-color: #dddddd;
+//  --neutral-color: #bbbbbb;
+//  --success-color: #7bae7f;
+//  --warning-color: #d9b74a;
+//  --white-color: #ffffff;
+//
+//
+//  /* Text contrast tokens */
+//  --text-on-primary: var(--white-color);
+//  --text-on-secondary: var(--white-color);
+//  --text-on-tertiary: var(--white-color);
+//
+//
+//  --text-on-black: var(--white-color);
+//  --text-on-dark: var(--white-color);
+//  --text-on-danger: var(--black-color);
+//  --text-on-info: var(--black-color);
+//  --text-on-light: var(--black-color);
+//  --text-on-neutral: var(--white-color);
+//  --text-on-success: var(--white-color);
+//  --text-on-warning: var(--white-color);
+//  --text-on-white: var(--black-color);
+//
+//
+//  /* Derived color helpers */
+//  --color-mix-dark: var(--black-color);
+//  --color-mix-light: var(--white-color);
+//
+//
+//  /* Global surfaces & borders */
+//  --bg-color: var(--gray-0);
+//  --border-color: var(--gray-300);
+//  --border-style: solid;
+//  --border-width: .1rem;
+//  --border-width-outline: .1rem;
+//  --border-style-outline: solid;
+//  --text-color: #262626;
+//
+//
+//  /* Typography */
+//  --font-family-text: "Open Sans", sans-serif;
+//  --font-family-title: "Montserrat", sans-serif;
+//
+//
+//  --font-weight: 200;
+//  --font-weight-lighter: 100;
+//  --font-weight-lightest: 200;
+//  --font-weight-light: 300;
+//  --font-weight-regular: 400;
+//  --font-weight-medium: 500;
+//  --font-weight-semibold: 600;
+//  --font-weight-bold: 700;
+//  --font-weight-bolder: 800;
+//
+//
+//  --font-size: 1.2rem;
+//  --font-size-xs: 0.8rem;
+//  --font-size-sm: 1rem;
+//  --font-size-md: 1.2rem;
+//  --font-size-lg: 1.4rem;
+//  --font-size-xl: 1.6rem;
+//  --font-size-xxl: 1.8rem;
+//
+//
+//  /* Headings */
+//  --font-size-h1: 4rem;
+//  --font-size-h2: 3.5rem;
+//  --font-size-h3: 3rem;
+//  --font-size-h4: 2.5rem;
+//  --font-size-h5: 2rem;
+//  --font-size-h6: 1.5rem;
+//
+//
+//  /* Leading & tracking */
+//  --letter-spacing-sm: -0.05em;
+//  --letter-spacing-md: 0.05em;
+//  --letter-spacing-lg: 0.1em;
+//
+//
+//  --line-height-sm: 1.25;
+//  --line-height-md: 1.5;
+//  --line-height-lg: 1.75;
+//
+//
+//  /* Radius */
+//  --border-radius: .3rem;
+//  --border-radius-pill: 10rem;
+//  --border-radius-circle: 50%;
+//
+//
+//  /* Shadow */
+//  --box-shadow: 0 .05rem 1.5rem rgba(0, 0, 0, .08);
+//
+//
+//  /*
+//  ***
+//  ******
+//  COMPONENTS
+//  ******
+//  ***
+//  */
+//
+//
+//  /* Accordion */
+//  --accordion-bg-color: var(--bg-color);
+//  --accordion-border-color: var(--border-color);
+//  --accordion-border-radius: var(--border-radius);
+//  --accordion-border-style: var(--border-style);
+//  --accordion-border-width: var(--border-width);
+//  --accordion-button-padding: 1rem;
+//  --accordion-button-padding-sm: .5rem 1rem;
+//  --accordion-button-padding-md: 1rem;
+//  --accordion-button-padding-lg: 1.5rem;
+//
+//
+//  /* Alert */
+//  --alert-header-padding: .5rem 1rem;
+//  --alert-body-padding: 1rem;
+//  --alert-footer-padding: .5rem 1rem;
+//
+//  --alert-animation: alert-in-and-out 5s ease forwards;
+//  --alert-bg-color: var(--bg-color);
+//  --alert-border-color: var(--border-color);
+//  --alert-border-style: var(--border-style);
+//  --alert-border-width: var(--border-width);
+//  --alert-border-radius: var(--border-radius);
+//  --alert-box-shadow: var(--box-shadow);
+//  --alert-container-padding-inline: 1rem;
+//  --alert-gap: 1rem;
+//  --alert-margin: .25rem 0;
+//  --alert-width: 100%;
+//
+//
+//  /* Badge */
+//  --badge-border-radius: var(--border-radius);
+//  --badge-border-color: var(--border-color);
+//  --badge-border-style: var(--border-style);
+//  --badge-border-width: 0;
+//  --badge-group-gap: .5rem;
+//  --badge-padding: .4rem 1.2rem;
+//  --badge-padding-sm: .3rem .9rem;
+//  --badge-padding-md: .4rem 1.2rem;
+//  --badge-padding-lg: .5rem 1.5rem;
+//
+//
+//  /* Button */
+//  --button-border-radius: var(--border-radius);
+//  --button-border-color: var(--border-color);
+//  --button-border-style: var(--border-style);
+//  --button-border-width: 0;
+//  --button-group-gap: .5rem;
+//  --button-padding: .5rem 1rem;
+//  --button-padding-sm: .5rem 1rem;
+//  --button-padding-md: .75rem 1.5rem;
+//  --button-padding-lg: 1rem 2rem;
+//
+//
+//  /* Card */
+//  --card-body-padding: 1rem;
+//  --card-footer-padding: .5rem 1rem;
+//  --card-header-padding: .5rem 1rem;
+//
+//  --card-border-color: var(--gray-100);
+//  --card-border-style: var(--border-style);
+//  --card-border-width: var(--border-width);
+//  --card-border-radius: var(--border-radius);
+//  --card-box-shadow: var(--box-shadow);
+//  --card-group-gap: 1rem;
+//  --card-min-width: 220px;
+//
+//
+//  /* Collapse */
+//  --collapse-bg-color: var(--bg-color);
+//  --collapse-border-radius: var(--border-radius);
+//  --collapse-border-color: var(--border-color);
+//  --collapse-border-style: var(--border-style);
+//  --collapse-border-width: var(--border-width);
+//  --collapse-button-padding: 1rem;
+//  --collapse-button-padding-sm: .5rem 1rem;
+//  --collapse-button-padding-md: 1rem;
+//  --collapse-button-padding-lg: 1.5rem;
+//
+//
+//  /* Dialog */
+//  --dialog-body-padding: 1rem;
+//  --dialog-header-padding: 1rem;
+//  --dialog-footer-padding: 1rem;
+//
+//
+//  --dialog-backdrop-color: rgba(0, 0, 0, 0.8);
+//  --dialog-border-color: var(--border-color);
+//  --dialog-border-style: var(--border-style);
+//  --dialog-border-width: var(--border-width);
+//  --dialog-border-radius: var(--border-radius);
+//  --dialog-padding: 0;
+//  --dialog-width: 75rem;
+//  --dialog-width-sm: 60rem;
+//  --dialog-width-md: 75rem;
+//  --dialog-width-lg: 100rem;
+//
+//
+//  /* Dropdown */
+//  --dropdown-body-box-shadow: var(--box-shadow);
+//  --dropdown-body-min-width: 10rem;
+//  --dropdown-body-spacing-margin: .5rem;
+//
+//
+//  /* Form */
+//  --input-border-color: var(--border-color);
+//  --input-border-style: var(--border-style);
+//  --input-border-width: var(--border-width);
+//  --input-border-radius: var(--border-radius);
+//
+//
+//  --form-control-gap: 1rem;
+//  --input-box-shadow-focus: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--primary-color) 50%, transparent);
+//  --input-box-shadow-invalid: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--danger-color) 50%, transparent);
+//  --input-box-shadow-valid: 0 0 0.2rem 0.1rem color-mix(in srgb, var(--success-color) 50%, transparent);
+//  --input-border-color-invalid: var(--danger-color);
+//  --input-border-color-valid: var(--success-color);
+//  --input-bg-color: var(--bg-color);
+//  --input-icon-invalid-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='red'%3E%3Cpath d='M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z'/%3E%3C/svg%3E");
+//  --input-icon-valid-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='green'%3E%3Cpath d='M20.3 5.3a1 1 0 0 0-1.4 0L9 15.2l-3.9-3.9a1 1 0 1 0-1.4 1.4l4.6 4.6a1 1 0 0 0 1.4 0l10-10a1 1 0 0 0 0-1.4z'/%3E%3C/svg%3E");
+//  --input-icon-select-arrow-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='black' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+//  --input-padding: 0 1.5rem;
+//  --textarea-padding: .5rem 1.5rem;
+//
+//
+//  --form-control-height: 7.5rem;
+//  --form-control-height-sm: 7rem;
+//  --form-control-height-md: 7.5rem;
+//  --form-control-height-lg: 8rem;
+//
+//
+//  --input-height: 3.5rem;
+//  --input-height-sm: 2.5rem;
+//  --input-height-md: 3.5rem;
+//  --input-height-lg: 4rem;
+//
+//
+//  --input-radio-size: 1.4rem;
+//  --input-radio-size-sm: 1.2rem;
+//  --input-radio-size-md: 1.4rem;
+//  --input-radio-size-lg: 1.6rem;
+//
+//
+//  --input-checbox-size: 1.4rem;
+//  --input-checbox-size-sm: 1.2rem;
+//  --input-checbox-size-md: 1.4rem;
+//  --input-checbox-size-lg: 1.6rem;
+//
+//
+//  --input-range-bar-height: .4rem;
+//  --input-range-bar-height-sm: .3rem;
+//  --input-range-bar-height-md: .4rem;
+//  --input-range-bar-height-lg: .5rem;
+//
+//
+//  --input-range-button-size: 1.25rem;
+//  --input-range-button-size-sm: 1rem;
+//  --input-range-button-size-md: 1.25rem;
+//  --input-range-button-size-lg: 1.5rem;
+//
+//
+//  --input-switch-bg-color: var(--gray-300);
+//  --input-switch-height: 1.5rem;
+//  --input-switch-height-sm: 1.2rem;
+//  --input-switch-height-md: 1.5rem;
+//  --input-switch-height-lg: 1.8rem;
+//
+//
+//  /* Image */
+//  --img-border-radius: var(--border-radius);
+//  --img-thumbnail-bg-color: var(--bg-color);
+//  --img-thumbnail-border-color: var(--border-color);
+//  --img-thumbnail-border-style: var(--border-style);
+//  --img-thumbnail-border-width: var(--border-width);
+//  --img-thumbnail-padding: .25rem;
+//
+//
+//  /* List */
+//  --list-bg-color: var(--bg-color);
+//  --list-border-width: var(--border-width);
+//  --list-border-style: var(--border-style);
+//  --list-border-color: var(--border-color);
+//  --list-border-radius: var(--border-radius);
+//
+//
+//  --list-column-gap: 2rem;
+//  --list-inline-gap: 2rem;
+//
+//
+//  --list-item-height: 3rem;
+//  --list-item-height-sm: 2rem;
+//  --list-item-height-md: 3rem;
+//  --list-item-height-lg: 4rem;
+//  --list-item-hover-bg-color: rgba(0, 0, 0, 0.1);
+//  --list-item-padding: 0 1rem;
+//  --list-item-padding-sm: 0 0.5rem;
+//  --list-item-padding-md: 0 1rem;
+//  --list-item-padding-lg: 0 2rem;
+//  --list-item-border-width: var(--list-border-width);
+//  --list-item-border-style: var(--list-border-style);
+//  --list-item-border-color: var(--list-border-color);
+//
+//
+//  --list-primary-color: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
+//  --list-secondary-color: color-mix(in srgb, var(--secondary-color) 50%, var(--color-mix-light));
+//  --list-tertiary-color: color-mix(in srgb, var(--tertiary-color) 50%, var(--color-mix-light));
+//  --list-black-color: color-mix(in srgb, var(--black-color) 50%, var(--color-mix-dark));
+//  --list-danger-color: color-mix(in srgb, var(--danger-color) 50%, var(--color-mix-light));
+//  --list-dark-color: color-mix(in srgb, var(--dark-color) 50%, var(--color-mix-light));
+//  --list-info-color: color-mix(in srgb, var(--info-color) 50%, var(--color-mix-light));
+//  --list-light-color: color-mix(in srgb, var(--light-color) 50%, var(--color-mix-light));
+//  --list-neutral-color: color-mix(in srgb, var(--neutral-color) 50%, var(--color-mix-light));
+//  --list-success-color: color-mix(in srgb, var(--success-color) 50%, var(--color-mix-light));
+//  --list-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
+//  --list-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-dark));
+//
+//
+//  --list-text-on-primary: var(--black-color);
+//  --list-text-on-secondary: var(--black-color);
+//  --list-text-on-tertiary: var(--black-color);
+//  --list-text-on-black: var(--white-color);
+//  --list-text-on-danger: var(--black-color);
+//  --list-text-on-dark: var(--white-color);
+//  --list-text-on-info: var(--black-color);
+//  --list-text-on-light: var(--black-color);
+//  --list-text-on-neutral: var(--black-color);
+//  --list-text-on-success: var(--black-color);
+//  --list-text-on-warning: var(--black-color);
+//  --list-text-on-white: var(--black-color);
+//
+//
+//  /* Nav */
+//  --navbar-border-color: var(--border-color);
+//  --navbar-border-style: var(--border-style);
+//  --navbar-border-width: 0;
+//  --navbar-border-radius: 0;
+//  --navbar-body-gap: 2rem;
+//  --navbar-nav-gap: 2rem;
+//  --navbar-nav-margin: var(--navbar-nav-gap) 0 0 0;
+//  --navbar-padding: 1rem;
+//
+//
+//  /* Sidebar */
+//  --sidebar-bg-color: var(--bg-color);
+//  --sidebar-border-color: var(--border-color);
+//  --sidebar-border-style: var(--border-style);
+//  --sidebar-border-width: var(--border-width);
+//  --sidebar-border-radius: var(--border-radius);
+//  --sidebar-padding: 1rem;
+//  --sidebar-width: 30rem;
+//
+//
+//  /* Tab */
+//  --tab-button-padding: .75rem 1.5rem;
+//  --tab-button-padding-sm: .5rem 1rem;
+//  --tab-button-padding-md: .75rem 1.5rem;
+//  --tab-button-padding-lg: 1rem 2rem;
+//  --tab-button-radius: var(--border-radius);
+//  --tab-body-border-width: var(--border-width);
+//  --tab-body-border-style: var(--border-style);
+//  --tab-body-border-color: var(--border-color);
+//  --tab-body-border-radius: var(--border-radius);
+//  --tab-body-padding: 1rem;
+//
+//
+//  /* Table */
+//  --table-border-color: var(--border-color);
+//  --table-border-style: var(--border-style);
+//  --table-border-width: var(--border-width);
+//  --table-border-divider-color: var(--gray-1000);
+//  --table-border-divider-width: .2rem;
+//  --table-border-divider-style: var(--border-style);
+//  --table-hover-bg-color: rgba(0, 0, 0, 0.15);
+//  --table-striped-bg-color: rgba(128, 128, 128, 0.2);
+//
+//
+//  --table-primary-color: color-mix(in srgb, var(--primary-color) 50%, var(--color-mix-light));
+//  --table-secondary-color: color-mix(in srgb, var(--secondary-color) 50%, var(--color-mix-light));
+//  --table-tertiary-color: color-mix(in srgb, var(--tertiary-color) 50%, var(--color-mix-light));
+//  --table-black-color: color-mix(in srgb, var(--black-color) 50%, var(--color-mix-light));
+//  --table-danger-color: color-mix(in srgb, var(--danger-color) 50%, var(--color-mix-light));
+//  --table-dark-color: color-mix(in srgb, var(--dark-color) 50%, var(--color-mix-light));
+//  --table-info-color: color-mix(in srgb, var(--info-color) 50%, var(--color-mix-light));
+//  --table-light-color: color-mix(in srgb, var(--light-color) 50%, var(--color-mix-light));
+//  --table-neutral-color: color-mix(in srgb, var(--neutral-color) 50%, var(--color-mix-light));
+//  --table-success-color: color-mix(in srgb, var(--success-color) 50%, var(--color-mix-light));
+//  --table-warning-color: color-mix(in srgb, var(--warning-color) 50%, var(--color-mix-light));
+//  --table-white-color: color-mix(in srgb, var(--white-color) 50%, var(--color-mix-light));
+//
+//
+//  --table-text-on-primary: var(--black-color);
+//  --table-text-on-secondary: var(--black-color);
+//  --table-text-on-tertiary: var(--black-color);
+//  --table-text-on-black: var(--white-color);
+//  --table-text-on-danger: var(--black-color);
+//  --table-text-on-dark: var(--white-color);
+//  --table-text-on-info: var(--black-color);
+//  --table-text-on-light: var(--black-color);
+//  --table-text-on-neutral: var(--black-color);
+//  --table-text-on-success: var(--black-color);
+//  --table-text-on-warning: var(--black-color);
+//  --table-text-on-white: var(--black-color);
+//
+//
+//  --table-padding: .8rem;
+//  --table-padding-sm: .6rem;
+//  --table-padding-md: .8rem;
+//  --table-padding-lg: 1rem;
+//
+//
+//  /*
+//  ***
+//  ******
+//  LAYOUT
+//  ******
+//  ***
+//  */
+//
+//
+//  /* Col & grid spacing */
+//  --col-padding: .5rem 1rem;
+//  --g-col-padding: .5rem 1rem;
+//  --gap-grid: 0.2rem;
+//
+//
+//  /* Containers */
+//  --container-fluid-padding: 1rem;
+//  --container-fluid-width: 80%;
+//  --container-fluid-width-sm: 70%;
+//  --container-fluid-width-md: 80%;
+//  --container-fluid-width-lg: 90%;
+//  --container-width: 120rem;
+//  --container-width-sm: 100rem;
+//  --container-width-md: 120rem;
+//  --container-width-lg: 140rem;
+//  --container-padding: 1rem;
+//}
+//
+//
+//
+//
+//

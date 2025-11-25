@@ -4,7 +4,7 @@ export default class EventManager {
     public static listeners = new Map<string, Set<EventListener>>();
 
     // Adds an event listener to the document
-    static addEventToDocument(type: string, handler: (event: Event) => void): void {
+    public static addEventToDocument(type: string, handler: (event: Event) => void): void {
         if (this.verifyListener(type, handler)) return;
 
         if (!this.listeners.has(type)) {

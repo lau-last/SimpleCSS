@@ -9,17 +9,25 @@
   gap: var(--form-control-gap);
 
 
-  &.form-inline {
-    flex-direction: row;
-    align-items: center;
-  }
-
-
-  label:has(input) {
+  label:has(input),
+  label:has(select),
+  label:has(textarea){
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: var(--form-control-gap);
+  }
+
+  &.form-inline {
+    flex-direction: row;
+    align-items: center;
+
+    label:has(input),
+    label:has(select),
+    label:has(textarea){
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
 
@@ -47,6 +55,7 @@
   input[type="week"],
   select,
   textarea {
+    background-color: var(--input-bg-color);
     &:focus {
       outline: none;
       border-color: var(--primary-color);
@@ -183,8 +192,8 @@
                       circle,
                       var(--primary-color) 0%,
                       var(--primary-color) 40%,
-                      var(--bg-color) 55%,
-                      var(--bg-color) 100%
+                      var(--input-bg-color) 55%,
+                      var(--input-bg-color) 100%
       )
     }
   }
@@ -198,7 +207,6 @@
     border-style: var(--input-border-style);
     border-width: var(--input-border-width);
     border-radius: var(--input-border-radius);
-    background: var(--bg-color);
     display: inline-block;
     position: relative;
 
@@ -226,7 +234,7 @@
     background: var(--input-switch-bg-color);
     border-radius: 50rem;
     position: relative;
-    transition: background 0.3s;
+    transition: background 0.1s;
     outline: none;
 
 
@@ -239,7 +247,7 @@
       top: 50%;
       left: .2rem;
       transform: translate(0, -50%);
-      transition: left 0.15s ease-out;
+      transition: left 0.1s ease-out;
     }
 
 
@@ -269,7 +277,7 @@
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       border-radius: 50%;
-      background: var(--bg-color);
+      background: var(--input-bg-color);
       border-color: var(--primary-color);
       border-style: var(--input-border-style);
       border-width: var(--input-border-width);
@@ -278,7 +286,7 @@
 
     &::-moz-range-thumb {
       border-radius: 50%;
-      background: var(--bg-color);
+      background: var(--input-bg-color);
       border-color: var(--input-border-color);
       border-style: var(--input-border-style);
       border-width: var(--input-border-width);
@@ -301,9 +309,7 @@
     border-style: var(--input-border-style);
     border-width: var(--input-border-width);
     border-radius: var(--input-border-radius);
-    background: var(--bg-color);
     cursor: pointer;
-
 
     /* Le BOUTON natif (Chrome/Safari/Edge) */
     &::file-selector-button {
@@ -315,7 +321,6 @@
       color: var(--text-on-primary);
       background: var(--primary-color);
     }
-
 
     /* Hover */
     &::file-selector-button:hover {
@@ -445,7 +450,7 @@
   input[type="file"] {
     /* Le BOUTON natif (Chrome/Safari/Edge) */
     &::file-selector-button {
-      height: calc(var(--input-height));
+      height: var(--input-height);
     }
   }
 
@@ -573,7 +578,7 @@
   input[type="file"] {
     /* Le BOUTON natif (Chrome/Safari/Edge) */
     &::file-selector-button {
-      height: calc(var(--input-height-sm));
+      height: var(--input-height-sm);
     }
   }
 
@@ -701,7 +706,7 @@
   input[type="file"] {
     /* Le BOUTON natif (Chrome/Safari/Edge) */
     &::file-selector-button {
-      height: calc(var(--input-height-md));
+      height: var(--input-height-md);
     }
   }
 
@@ -829,7 +834,7 @@
   input[type="file"] {
     /* Le BOUTON natif (Chrome/Safari/Edge) */
     &::file-selector-button {
-      height: calc(var(--input-height-lg));
+      height: var(--input-height-lg);
     }
   }
 }
@@ -997,8 +1002,8 @@
                           circle,
                           var(--success-color) 0%,
                           var(--success-color) 40%,
-                          var(--bg-color) 55%,
-                          var(--bg-color) 100%
+                          var(--input-bg-color) 55%,
+                          var(--input-bg-color) 100%
           ) !important;
         }
       }
@@ -1010,8 +1015,8 @@
                           circle,
                           var(--danger-color) 0%,
                           var(--danger-color) 40%,
-                          var(--bg-color) 55%,
-                          var(--bg-color) 100%
+                          var(--input-bg-color) 55%,
+                          var(--input-bg-color) 100%
           ) !important;
         }
       }

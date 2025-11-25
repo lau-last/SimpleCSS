@@ -9,6 +9,23 @@
   text-wrap: nowrap;
   gap: var(--form-control-gap);
 }
+.form-control label:has(input),
+.form-control label:has(select),
+.form-control label:has(textarea),
+.form-control-sm label:has(input),
+.form-control-sm label:has(select),
+.form-control-sm label:has(textarea),
+.form-control-md label:has(input),
+.form-control-md label:has(select),
+.form-control-md label:has(textarea),
+.form-control-lg label:has(input),
+.form-control-lg label:has(select),
+.form-control-lg label:has(textarea) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--form-control-gap);
+}
 .form-control.form-inline,
 .form-control-sm.form-inline,
 .form-control-md.form-inline,
@@ -16,14 +33,118 @@
   flex-direction: row;
   align-items: center;
 }
-.form-control label:has(input),
-.form-control-sm label:has(input),
-.form-control-md label:has(input),
-.form-control-lg label:has(input) {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: var(--form-control-gap);
+.form-control.form-inline label:has(input),
+.form-control.form-inline label:has(select),
+.form-control.form-inline label:has(textarea),
+.form-control-sm.form-inline label:has(input),
+.form-control-sm.form-inline label:has(select),
+.form-control-sm.form-inline label:has(textarea),
+.form-control-md.form-inline label:has(input),
+.form-control-md.form-inline label:has(select),
+.form-control-md.form-inline label:has(textarea),
+.form-control-lg.form-inline label:has(input),
+.form-control-lg.form-inline label:has(select),
+.form-control-lg.form-inline label:has(textarea) {
+  flex-direction: row;
+  align-items: center;
+}
+.form-control input[type=button],
+.form-control input[type=checkbox],
+.form-control input[type=color],
+.form-control input[type=date],
+.form-control input[type=datetime-local],
+.form-control input[type=email],
+.form-control input[type=file],
+.form-control input[type=hidden],
+.form-control input[type=image],
+.form-control input[type=month],
+.form-control input[type=number],
+.form-control input[type=password],
+.form-control input[type=radio],
+.form-control input[type=range],
+.form-control input[type=reset],
+.form-control input[type=search],
+.form-control input[type=submit],
+.form-control input[type=tel],
+.form-control input[type=text],
+.form-control input[type=time],
+.form-control input[type=url],
+.form-control input[type=week],
+.form-control select,
+.form-control textarea,
+.form-control-sm input[type=button],
+.form-control-sm input[type=checkbox],
+.form-control-sm input[type=color],
+.form-control-sm input[type=date],
+.form-control-sm input[type=datetime-local],
+.form-control-sm input[type=email],
+.form-control-sm input[type=file],
+.form-control-sm input[type=hidden],
+.form-control-sm input[type=image],
+.form-control-sm input[type=month],
+.form-control-sm input[type=number],
+.form-control-sm input[type=password],
+.form-control-sm input[type=radio],
+.form-control-sm input[type=range],
+.form-control-sm input[type=reset],
+.form-control-sm input[type=search],
+.form-control-sm input[type=submit],
+.form-control-sm input[type=tel],
+.form-control-sm input[type=text],
+.form-control-sm input[type=time],
+.form-control-sm input[type=url],
+.form-control-sm input[type=week],
+.form-control-sm select,
+.form-control-sm textarea,
+.form-control-md input[type=button],
+.form-control-md input[type=checkbox],
+.form-control-md input[type=color],
+.form-control-md input[type=date],
+.form-control-md input[type=datetime-local],
+.form-control-md input[type=email],
+.form-control-md input[type=file],
+.form-control-md input[type=hidden],
+.form-control-md input[type=image],
+.form-control-md input[type=month],
+.form-control-md input[type=number],
+.form-control-md input[type=password],
+.form-control-md input[type=radio],
+.form-control-md input[type=range],
+.form-control-md input[type=reset],
+.form-control-md input[type=search],
+.form-control-md input[type=submit],
+.form-control-md input[type=tel],
+.form-control-md input[type=text],
+.form-control-md input[type=time],
+.form-control-md input[type=url],
+.form-control-md input[type=week],
+.form-control-md select,
+.form-control-md textarea,
+.form-control-lg input[type=button],
+.form-control-lg input[type=checkbox],
+.form-control-lg input[type=color],
+.form-control-lg input[type=date],
+.form-control-lg input[type=datetime-local],
+.form-control-lg input[type=email],
+.form-control-lg input[type=file],
+.form-control-lg input[type=hidden],
+.form-control-lg input[type=image],
+.form-control-lg input[type=month],
+.form-control-lg input[type=number],
+.form-control-lg input[type=password],
+.form-control-lg input[type=radio],
+.form-control-lg input[type=range],
+.form-control-lg input[type=reset],
+.form-control-lg input[type=search],
+.form-control-lg input[type=submit],
+.form-control-lg input[type=tel],
+.form-control-lg input[type=text],
+.form-control-lg input[type=time],
+.form-control-lg input[type=url],
+.form-control-lg input[type=week],
+.form-control-lg select,
+.form-control-lg textarea {
+  background-color: var(--input-bg-color);
 }
 .form-control input[type=button]:focus,
 .form-control input[type=checkbox]:focus,
@@ -346,7 +467,7 @@
 .form-control-sm input[type=radio]:checked,
 .form-control-md input[type=radio]:checked,
 .form-control-lg input[type=radio]:checked {
-  background: radial-gradient(circle, var(--primary-color) 0%, var(--primary-color) 40%, var(--bg-color) 55%, var(--bg-color) 100%);
+  background: radial-gradient(circle, var(--primary-color) 0%, var(--primary-color) 40%, var(--input-bg-color) 55%, var(--input-bg-color) 100%);
 }
 .form-control input[type=checkbox]:not([role=switch]),
 .form-control-sm input[type=checkbox]:not([role=switch]),
@@ -359,7 +480,6 @@
   border-style: var(--input-border-style);
   border-width: var(--input-border-width);
   border-radius: var(--input-border-radius);
-  background: var(--bg-color);
   display: inline-block;
   position: relative;
 }
@@ -390,7 +510,7 @@
   background: var(--input-switch-bg-color);
   border-radius: 50rem;
   position: relative;
-  transition: background 0.3s;
+  transition: background 0.1s;
   outline: none;
   /* Le "bouton" rond */
 }
@@ -405,7 +525,7 @@
   top: 50%;
   left: 0.2rem;
   transform: translate(0, -50%);
-  transition: left 0.15s ease-out;
+  transition: left 0.1s ease-out;
 }
 .form-control input[type=checkbox][role=switch]:checked,
 .form-control-sm input[type=checkbox][role=switch]:checked,
@@ -440,7 +560,7 @@
 .form-control-lg input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border-radius: 50%;
-  background: var(--bg-color);
+  background: var(--input-bg-color);
   border-color: var(--primary-color);
   border-style: var(--input-border-style);
   border-width: var(--input-border-width);
@@ -450,7 +570,7 @@
 .form-control-md input[type=range]::-moz-range-thumb,
 .form-control-lg input[type=range]::-moz-range-thumb {
   border-radius: 50%;
-  background: var(--bg-color);
+  background: var(--input-bg-color);
   border-color: var(--input-border-color);
   border-style: var(--input-border-style);
   border-width: var(--input-border-width);
@@ -477,7 +597,6 @@
   border-style: var(--input-border-style);
   border-width: var(--input-border-width);
   border-radius: var(--input-border-radius);
-  background: var(--bg-color);
   cursor: pointer;
   /* Le BOUTON natif (Chrome/Safari/Edge) */
 }
@@ -581,7 +700,7 @@
   /* Le BOUTON natif (Chrome/Safari/Edge) */
 }
 .form-control input[type=file]::file-selector-button {
-  height: calc(var(--input-height));
+  height: var(--input-height);
 }
 
 .form-control-sm:has(textarea) {
@@ -659,7 +778,7 @@
   /* Le BOUTON natif (Chrome/Safari/Edge) */
 }
 .form-control-sm input[type=file]::file-selector-button {
-  height: calc(var(--input-height-sm));
+  height: var(--input-height-sm);
 }
 
 .form-control-md:has(textarea) {
@@ -737,7 +856,7 @@
   /* Le BOUTON natif (Chrome/Safari/Edge) */
 }
 .form-control-md input[type=file]::file-selector-button {
-  height: calc(var(--input-height-md));
+  height: var(--input-height-md);
 }
 
 .form-control-lg:has(textarea) {
@@ -815,7 +934,7 @@
   /* Le BOUTON natif (Chrome/Safari/Edge) */
 }
 .form-control-lg input[type=file]::file-selector-button {
-  height: calc(var(--input-height-lg));
+  height: var(--input-height-lg);
 }
 
 .validated .form-control input[type=button][aria-invalid=true], .validated .form-control input[type=button]:invalid,
@@ -1937,7 +2056,7 @@
 .validated .form-control-md input[type=radio]:valid:checked,
 .validated .form-control-lg input[type=radio][aria-invalid=false]:checked,
 .validated .form-control-lg input[type=radio]:valid:checked {
-  background: radial-gradient(circle, var(--success-color) 0%, var(--success-color) 40%, var(--bg-color) 55%, var(--bg-color) 100%) !important;
+  background: radial-gradient(circle, var(--success-color) 0%, var(--success-color) 40%, var(--input-bg-color) 55%, var(--input-bg-color) 100%) !important;
 }
 .validated .form-control input[type=radio][aria-invalid=true]:checked, .validated .form-control input[type=radio]:invalid:checked,
 .validated .form-control-sm input[type=radio][aria-invalid=true]:checked,
@@ -1946,7 +2065,7 @@
 .validated .form-control-md input[type=radio]:invalid:checked,
 .validated .form-control-lg input[type=radio][aria-invalid=true]:checked,
 .validated .form-control-lg input[type=radio]:invalid:checked {
-  background: radial-gradient(circle, var(--danger-color) 0%, var(--danger-color) 40%, var(--bg-color) 55%, var(--bg-color) 100%) !important;
+  background: radial-gradient(circle, var(--danger-color) 0%, var(--danger-color) 40%, var(--input-bg-color) 55%, var(--input-bg-color) 100%) !important;
 }
 .validated .form-control input[type=checkbox]:not([role=switch])[aria-invalid=false]:checked, .validated .form-control input[type=checkbox]:not([role=switch]):valid:checked,
 .validated .form-control-sm input[type=checkbox]:not([role=switch])[aria-invalid=false]:checked,

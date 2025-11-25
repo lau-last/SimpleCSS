@@ -28,19 +28,26 @@
 
 .alert {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   position: relative;
-  padding: var(--alert-padding);
-  margin: var(--alert-margin);
   border-radius: var(--alert-border-radius);
   border-color: var(--alert-border-color);
   border-style: var(--alert-border-style);
   border-width: var(--alert-border-width);
   background-color: var(--alert-bg-color);
+  margin: var(--alert-margin);
   width: var(--alert-width);
   box-shadow: var(--alert-box-shadow);
   animation: var(--alert-animation);
+}
+.alert .alert-header {
+  padding: var(--alert-header-padding);
+}
+.alert .alert-body {
+  padding: var(--alert-body-padding);
+}
+.alert .alert-footer {
+  padding: var(--alert-footer-padding);
 }
 .alert .close {
   align-self: start;

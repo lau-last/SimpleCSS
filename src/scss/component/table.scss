@@ -17,12 +17,12 @@ table.table-lg {
                 text-wrap: nowrap;
             }
         }
-        &.table-hover {
-          tr:hover {
-              cursor: pointer;
-              background-color: var(--table-hover-bg-color) !important;
-          }
-        }
+        //&.table-hover {
+        //  tr:hover {
+        //      cursor: pointer;
+        //      background-color: var(--table-hover-bg-color) !important;
+        //  }
+        //}
 
     }
 
@@ -34,12 +34,12 @@ table.table-lg {
                 text-wrap: nowrap;
             }
         }
-      &.table-hover {
-        tr:hover {
-          cursor: pointer;
-          background-color: var(--table-hover-bg-color) !important;
-        }
-      }
+      //&.table-hover {
+      //  tr:hover {
+      //    cursor: pointer;
+      //    background-color: var(--table-hover-bg-color) !important;
+      //  }
+      //}
     }
 
     tfoot {
@@ -50,12 +50,12 @@ table.table-lg {
                 text-wrap: nowrap;
             }
         }
-      &.table-hover {
-        tr:hover {
-          cursor: pointer;
-          background-color: var(--table-hover-bg-color) !important;
-        }
-      }
+      //&.table-hover {
+      //  tr:hover {
+      //    cursor: pointer;
+      //    background-color: var(--table-hover-bg-color) !important;
+      //  }
+      //}
     }
 
     &.table-borderless {
@@ -84,16 +84,16 @@ table.table-lg {
         }
     }
 
-    &.table-hover {
-        thead,
-        tbody,
-        tfoot {
-            tr:hover {
-                cursor: pointer;
-                background-color: var(--table-hover-bg-color) !important;
-            }
-        }
-    }
+    //&.table-hover {
+    //    thead,
+    //    tbody,
+    //    tfoot {
+    //        tr:hover {
+    //            cursor: pointer;
+    //            background-color: var(--table-hover-bg-color) !important;
+    //        }
+    //    }
+    //}
 
     &.table-striped {
         tbody {

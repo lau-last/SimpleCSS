@@ -31,19 +31,40 @@
   --gray-950: #0b0b0b;
   --gray-1000: #000000;
 
+  --white-color: var(--gray-0);
+  --black-color: var(--gray-1000);
 
-  --primary-color-base: #6E5FAF;
-  --secondary-color-base: #C07A2D;
-  --tertiary-color-base: #4F7C9E;
-  --black-color-base: #000000;
-  --dark-color-base: #383737;
-  --danger-color-base: #c96a6a;
-  --info-color-base: #6baacd;
-  --light-color-base: #dddddd;
-  --neutral-color-base: #bbbbbb;
-  --success-color-base: #7bae7f;
-  --warning-color-base: #d9b74a;
-  --white-color-base: #ffffff;
+  /* color base */
+  --primary-color: #6E5FAF;
+  --secondary-color: #C07A2D;
+  --tertiary-color: #4F7C9E;
+  --dark-color: #383737;
+  --danger-color: #c96a6a;
+  --info-color: #6baacd;
+  --light-color: #dddddd;
+  --neutral-color: #bbbbbb;
+  --success-color: #7bae7f;
+  --warning-color: #d9b74a;
+
+
+  /* Text contrast tokens */
+  --text-on-primary: var(--white-color);
+  --text-on-secondary: var(--white-color);
+  --text-on-tertiary: var(--white-color);
+  --text-on-black: var(--white-color);
+  --text-on-dark: var(--white-color);
+  --text-on-danger: var(--black-color);
+  --text-on-info: var(--black-color);
+  --text-on-light: var(--black-color);
+  --text-on-neutral: var(--white-color);
+  --text-on-success: var(--white-color);
+  --text-on-warning: var(--white-color);
+  --text-on-white: var(--black-color);
+
+
+  /* Derived color helpers */
+  --color-mix-dark: var(--black-color);
+  --color-mix-light: var(--white-color);
 
 
   /* Global surfaces & borders */

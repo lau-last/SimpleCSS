@@ -111,9 +111,10 @@ $list-colors: (
 
 /* Button hover */
 .btn {
-  &:hover{
+  &:hover {
     background-color: rgba(0, 0, 0, 0.2);
   }
+
   @each $name, $value in $colors {
     &-#{$name}:hover {
       @if ($name == 'dark' or $name == 'black') {
@@ -135,8 +136,6 @@ $list-colors: (
 }
 
 
-
-
 /* Outline hover */
 .btn,
 .btn-sm,
@@ -145,7 +144,7 @@ $list-colors: (
 .tab-btn,
 .tab-btn-sm,
 .tab-btn-md,
-.tab-btn-lg{
+.tab-btn-lg {
   &.outline {
     @each $name, $value in $colors {
       border: var(--border-width-outline) var(--border-style-outline) #{$value};
@@ -169,6 +168,7 @@ $list-colors: (
       background-color: #{$value};
       color: var(--list-text-on-#{$name});
       border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
+
       .list-item {
         border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark)) !important;
       }
@@ -208,24 +208,58 @@ $list-colors: (
 
 /* Tables */
 table {
-  &.table {
-    @each $name, $value in $table-colors {
-      &-#{$name} {
-        background-color: #{$value};
+  @each $name, $value in $colors {
+    &.table-#{$name},
+    .table-#{$name} {
+      background-color: #{$value};
+      & * {
+        color: var(--text-on-#{$name});
+      }
+    }
+  }
+}
+
+@mixin table-hover-scope($scope) {
+  #{$scope} {
+    tr:hover {
+      cursor: pointer;
+      background-color: var(--table-hover-bg-color);
+    }
+
+    @each $name, $value in $colors {
+      tr.table-#{$name}:hover {
+        background-color: color-mix(in srgb, #{$value} 90%, var(--black-color));
         & * {
-          color: var(--table-text-on-#{$name});
+          color: var(--text-on-#{$name});
         }
       }
     }
   }
+}
 
+// 1) .table-hover sur <table>
+@include table-hover-scope('table.table-hover thead');
+@include table-hover-scope('table.table-hover tbody');
+@include table-hover-scope('table.table-hover tfoot');
 
-  .table {
-    @each $name, $value in $table-colors {
-      &-#{$name} {
-        background-color: #{$value};
+// 2) .table-hover sur thead / tbody / tfoot
+@include table-hover-scope('table thead.table-hover');
+@include table-hover-scope('table tbody.table-hover');
+@include table-hover-scope('table tfoot.table-hover');
+
+// Hover au niveau de la ligne : <tr class="table-hover"> ou <tr class="table-hover table-primary">
+table {
+  tr.table-hover {
+    &:hover {
+      cursor: pointer;
+      background-color: var(--table-hover-bg-color);
+    }
+
+    @each $name, $value in $colors {
+      &.table-#{$name}:hover {
+        background-color: color-mix(in srgb, #{$value} 90%, var(--black-color) 10%);
         & * {
-          color: var(--table-text-on-#{$name});
+          color: var(--text-on-#{$name});
         }
       }
     }
@@ -241,6 +275,7 @@ table {
       text-decoration: underline;
       color: #{$value};
       text-decoration-color: #{$value};
+
       &:hover {
         background-color: transparent;
         text-decoration: underline;

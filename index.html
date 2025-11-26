@@ -16,14 +16,495 @@
     <title>Framework</title>
 </head>
 <body>
-<button class="btn btn-success" onclick="handleSwitchTheme()">theme</button>
-<script>
-    function handleSwitchTheme() {
-        const theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
-        document.documentElement.setAttribute('data-theme', theme);
-    }
-</script>
+<div class="container-sm">
+    <div class="d-flex fd-column gap-5">
+
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>📊 Tables</h2>
+            </div>
+        </div>
+
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>💠 Examples</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-primary">
+                        <tr>
+                            <th>Person</th>
+                            <th>Most interest in</th>
+                            <th>Age</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table-secondary table-hover">
+                            <th>Chris</th>
+                            <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor
+                                sit.
+                            </td>
+                            <td>22</td>
+                        </tr>
+                        <tr class="table-tertiary table-hover">
+                            <th>Dennis</th>
+                            <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor
+                                sit.
+                            </td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <th>Sarah</th>
+                            <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor
+                                sit.
+                            </td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <th>Karen</th>
+                            <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor
+                                sit.
+                            </td>
+                            <td>36</td>
+                        </tr>
+                        <tr>
+                            <th>Karen</th>
+                            <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor
+                                sit.
+                            </td>
+                            <td>36</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Average age</th>
+                            <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum dolor
+                                sit.
+                            </td>
+                            <td>36</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>💻 HTML Code</h2>
+            </div>
+            <div class="card-body">
+                <div class="position-relative">
+                    <button class="btn btn-primary position-top-right z-1 mt-1 mr-1" onclick="copyCode('code-table', this);">Copy
+                    </button>
+                    <div data-js="code" id="code-table" class="container-code overflow-auto"><pre><code><span class="highlight-tag">&lt;</span><span class="highlight-tag-name">table</span> <span class="highlight-attribute-name">class</span><span class="highlight-equal-sign">=</span><span class="highlight-attribute-value">"table table-primary table-hover"</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">thead</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Person</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Most interest in</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Age</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">thead</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tbody</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Chris</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
+            dolor sit.
+        </span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">22</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Dennis</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
+            dolor sit.
+        </span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">45</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Sarah</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
+            dolor sit.
+        </span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">29</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Karen</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
+            dolor sit.
+        </span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">36</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Karen</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
+            dolor sit.
+        </span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">36</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tbody</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tfoot</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Average age</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">th</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
+            dolor sit.
+        </span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+        <span class="highlight-tag">&lt;</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span><span class="highlight-text">36</span><span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">td</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tr</span><span class="highlight-tag">&gt;</span>
+    <span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">tfoot</span><span class="highlight-tag">&gt;</span>
+<span class="highlight-tag">&lt;/</span><span class="highlight-tag-name">table</span><span class="highlight-tag">&gt;</span></code></pre></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>🎨 Color</h2>
+            </div>
+            <div class="card-body">
+
+                <p class="p-1">
+                    Use <code class="text-bold text-primary">.table-{color}</code> to set both the background and
+                    the matching text color, based on your theme variables.
+                </p>
+
+                <div class="row">
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-primary">
+                            <code class="text-bold">.table-primary</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-secondary">
+                            <code class="text-bold">.table-secondary</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-tertiary">
+                            <code class="text-bold">.table-tertiary</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-success">
+                            <code class="text-bold">.table-success</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-danger">
+                            <code class="text-bold">.table-danger</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-warning">
+                            <code class="text-bold">.table-warning</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-info">
+                            <code class="text-bold">.table-info</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-light">
+                            <code class="text-bold">.table-light</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-dark">
+                            <code class="text-bold">.table-dark</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-white">
+                            <code class="text-bold">.table-white</code>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2 table-black">
+                            <code class="text-bold">.table-black</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>⚙️ Options</h2>
+            </div>
+            <div class="card-body">
+                <p class="p-1">
+                    Add these optional classes on <code class="text-bold text-primary">.table</code> to change
+                    borders, spacing or striping.
+                </p>
+
+                <div class="row mt-2">
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-sm</code>
+                            <p class="text-sm mt-1">Smaller cell padding.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-md</code>
+                            <p class="text-sm mt-1">Medium padding (custom value).</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-lg</code>
+                            <p class="text-sm mt-1">Larger, more spacious rows.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-borderless</code>
+                            <p class="text-sm mt-1">Removes all cell borders.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-bordered</code>
+                            <p class="text-sm mt-1">Full grid borders on all cells.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-hover</code>
+                            <p class="text-sm mt-1">Highlights a row on hover.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-striped</code>
+                            <p class="text-sm mt-1">Stripes odd rows in <code>tbody</code>.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-striped-even</code>
+                            <p class="text-sm mt-1">Stripes even rows in <code>tbody</code>.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-striped-columns</code>
+                            <p class="text-sm mt-1">Stripes odd columns (head, body, foot).</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-striped-columns-even</code>
+                            <p class="text-sm mt-1">Stripes even columns.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-group-divider</code>
+                            <p class="text-sm mt-1">
+                                Adds a strong divider above the first row in a group (apply on <code>tbody</code>).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-4-xs">
+                        <div class="card p-2">
+                            <code class="text-bold text-primary">.table-responsive</code>
+                            <p class="text-sm mt-1">
+                                Wraps the table to enable horizontal scroll on small screens.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-2">
+            <div class="card-header">
+                <h2>⚙️ CSS Variables</h2>
+            </div>
+
+            <div class="card-body">
+                <p class="p-1">
+                    These variables control borders, padding, hover effects, striping, and table colors.
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-sm text-left">
+                        <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-color</code></td>
+                            <td>Main border color for table cells.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-style</code></td>
+                            <td>Common border style (solid, dashed, etc.).</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-width</code></td>
+                            <td>Default border thickness for cells.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-divider-color</code></td>
+                            <td>Color of group dividers.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-divider-width</code></td>
+                            <td>Thickness of group dividers.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-border-divider-style</code></td>
+                            <td>Style of group dividers.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-hover-bg-color</code></td>
+                            <td>Background used when hovering a row.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-striped-bg-color</code></td>
+                            <td>Background color for striped rows/columns.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-primary-color</code></td>
+                            <td>Primary background mix for themed tables.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-secondary-color</code></td>
+                            <td>Secondary background mix.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-tertiary-color</code></td>
+                            <td>Tertiary background mix.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-black-color</code></td>
+                            <td>Black variant background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-danger-color</code></td>
+                            <td>Danger / error background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-dark-color</code></td>
+                            <td>Dark variant background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-info-color</code></td>
+                            <td>Info background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-light-color</code></td>
+                            <td>Light background variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-neutral-color</code></td>
+                            <td>Neutral gray background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-success-color</code></td>
+                            <td>Success / confirmation background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-warning-color</code></td>
+                            <td>Warning background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-white-color</code></td>
+                            <td>White variant background.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-primary</code></td>
+                            <td>Text color on primary background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-secondary</code></td>
+                            <td>Text color on secondary background.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-tertiary</code></td>
+                            <td>Text color on tertiary background.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-black</code></td>
+                            <td>Text color on black variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-danger</code></td>
+                            <td>Text color on danger variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-dark</code></td>
+                            <td>Text color on dark variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-info</code></td>
+                            <td>Text color on info variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-light</code></td>
+                            <td>Text color on light variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-neutral</code></td>
+                            <td>Text color on neutral variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-success</code></td>
+                            <td>Text color on success variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-warning</code></td>
+                            <td>Text color on warning variant.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-text-on-white</code></td>
+                            <td>Text color on white variant.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding</code></td>
+                            <td>Default cell padding.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding-sm</code></td>
+                            <td>Padding for <code>.table-sm</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding-md</code></td>
+                            <td>Padding for <code>.table-md</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code class="text-bold text-primary">--table-padding-lg</code></td>
+                            <td>Padding for <code>.table-lg</code>.</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>
 

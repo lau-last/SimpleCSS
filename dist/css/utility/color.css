@@ -1354,148 +1354,148 @@
 
 /* Tables */
 table.table-primary {
-  background-color: var(--table-primary-color);
+  background-color: var(--primary-color);
 }
 table.table-primary * {
-  color: var(--table-text-on-primary);
+  color: var(--text-on-primary);
 }
 table.table-secondary {
-  background-color: var(--table-secondary-color);
+  background-color: var(--secondary-color);
 }
 table.table-secondary * {
-  color: var(--table-text-on-secondary);
+  color: var(--text-on-secondary);
 }
 table.table-tertiary {
-  background-color: var(--table-tertiary-color);
+  background-color: var(--tertiary-color);
 }
 table.table-tertiary * {
-  color: var(--table-text-on-tertiary);
+  color: var(--text-on-tertiary);
 }
 table.table-success {
-  background-color: var(--table-success-color);
+  background-color: var(--success-color);
 }
 table.table-success * {
-  color: var(--table-text-on-success);
+  color: var(--text-on-success);
 }
 table.table-info {
-  background-color: var(--table-info-color);
+  background-color: var(--info-color);
 }
 table.table-info * {
-  color: var(--table-text-on-info);
+  color: var(--text-on-info);
 }
 table.table-warning {
-  background-color: var(--table-warning-color);
+  background-color: var(--warning-color);
 }
 table.table-warning * {
-  color: var(--table-text-on-warning);
+  color: var(--text-on-warning);
 }
 table.table-danger {
-  background-color: var(--table-danger-color);
+  background-color: var(--danger-color);
 }
 table.table-danger * {
-  color: var(--table-text-on-danger);
+  color: var(--text-on-danger);
 }
 table.table-neutral {
-  background-color: var(--table-neutral-color);
+  background-color: var(--neutral-color);
 }
 table.table-neutral * {
-  color: var(--table-text-on-neutral);
+  color: var(--text-on-neutral);
 }
 table.table-light {
-  background-color: var(--table-light-color);
+  background-color: var(--light-color);
 }
 table.table-light * {
-  color: var(--table-text-on-light);
+  color: var(--text-on-light);
 }
 table.table-dark {
-  background-color: var(--table-dark-color);
+  background-color: var(--dark-color);
 }
 table.table-dark * {
-  color: var(--table-text-on-dark);
+  color: var(--text-on-dark);
 }
 table.table-white {
-  background-color: var(--table-white-color);
+  background-color: var(--white-color);
 }
 table.table-white * {
-  color: var(--table-text-on-white);
+  color: var(--text-on-white);
 }
 table.table-black {
-  background-color: var(--table-black-color);
+  background-color: var(--black-color);
 }
 table.table-black * {
-  color: var(--table-text-on-black);
+  color: var(--text-on-black);
 }
 table .table-primary {
-  background-color: var(--table-primary-color);
+  background-color: var(--primary-color);
 }
 table .table-primary * {
-  color: var(--table-text-on-primary);
+  color: var(-text-on-primary);
 }
 table .table-secondary {
-  background-color: var(--table-secondary-color);
+  background-color: var(--secondary-color);
 }
 table .table-secondary * {
-  color: var(--table-text-on-secondary);
+  color: var(-text-on-secondary);
 }
 table .table-tertiary {
-  background-color: var(--table-tertiary-color);
+  background-color: var(--tertiary-color);
 }
 table .table-tertiary * {
-  color: var(--table-text-on-tertiary);
+  color: var(-text-on-tertiary);
 }
 table .table-success {
-  background-color: var(--table-success-color);
+  background-color: var(--success-color);
 }
 table .table-success * {
-  color: var(--table-text-on-success);
+  color: var(-text-on-success);
 }
 table .table-info {
-  background-color: var(--table-info-color);
+  background-color: var(--info-color);
 }
 table .table-info * {
-  color: var(--table-text-on-info);
+  color: var(-text-on-info);
 }
 table .table-warning {
-  background-color: var(--table-warning-color);
+  background-color: var(--warning-color);
 }
 table .table-warning * {
-  color: var(--table-text-on-warning);
+  color: var(-text-on-warning);
 }
 table .table-danger {
-  background-color: var(--table-danger-color);
+  background-color: var(--danger-color);
 }
 table .table-danger * {
-  color: var(--table-text-on-danger);
+  color: var(-text-on-danger);
 }
 table .table-neutral {
-  background-color: var(--table-neutral-color);
+  background-color: var(--neutral-color);
 }
 table .table-neutral * {
-  color: var(--table-text-on-neutral);
+  color: var(-text-on-neutral);
 }
 table .table-light {
-  background-color: var(--table-light-color);
+  background-color: var(--light-color);
 }
 table .table-light * {
-  color: var(--table-text-on-light);
+  color: var(-text-on-light);
 }
 table .table-dark {
-  background-color: var(--table-dark-color);
+  background-color: var(--dark-color);
 }
 table .table-dark * {
-  color: var(--table-text-on-dark);
+  color: var(-text-on-dark);
 }
 table .table-white {
-  background-color: var(--table-white-color);
+  background-color: var(--white-color);
 }
 table .table-white * {
-  color: var(--table-text-on-white);
+  color: var(-text-on-white);
 }
 table .table-black {
-  background-color: var(--table-black-color);
+  background-color: var(--black-color);
 }
 table .table-black * {
-  color: var(--table-text-on-black);
+  color: var(-text-on-black);
 }
 
 /* Links */

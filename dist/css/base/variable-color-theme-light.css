@@ -1,34 +1,6 @@
 :root,
 :root[data-theme=light] {
   color-scheme: light;
-  --primary-color: var(--primary-color-base);
-  --secondary-color: var(--secondary-color-base);
-  --tertiary-color: var(--tertiary-color-base);
-  --black-color: var(--black-color-base);
-  --dark-color: var(--dark-color-base);
-  --danger-color: var(--danger-color-base);
-  --info-color: var(--info-color-base);
-  --light-color: var(--light-color-base);
-  --neutral-color: var(--neutral-color-base);
-  --success-color: var(--success-color-base);
-  --warning-color: var(--warning-color-base);
-  --white-color: var(--white-color-base);
-  /* Text contrast tokens */
-  --text-on-primary: var(--white-color);
-  --text-on-secondary: var(--white-color);
-  --text-on-tertiary: var(--white-color);
-  --text-on-black: var(--white-color);
-  --text-on-dark: var(--white-color);
-  --text-on-danger: var(--black-color);
-  --text-on-info: var(--black-color);
-  --text-on-light: var(--black-color);
-  --text-on-neutral: var(--white-color);
-  --text-on-success: var(--white-color);
-  --text-on-warning: var(--white-color);
-  --text-on-white: var(--black-color);
-  /* Derived color helpers */
-  --color-mix-dark: var(--black-color);
-  --color-mix-light: var(--white-color);
   /* Global surfaces & borders */
   --bg-color: var(--gray-0);
   --border-color: var(--gray-300);

@@ -260,6 +260,7 @@
   --list-border-width: var(--border-width);
   --list-border-style: var(--border-style);
   --list-border-radius: var(--border-radius);
+  --list-border-width-inside-hover: .4rem;
   --list-column-gap: 2rem;
   --list-inline-gap: 2rem;
   --list-item-height: 3rem;

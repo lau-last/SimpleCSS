@@ -268,6 +268,7 @@
   --list-border-width: var(--border-width);
   --list-border-style: var(--border-style);
   --list-border-radius: var(--border-radius);
+  --list-border-width-inside-hover: .5rem;
   --list-column-gap: 2rem;
   --list-inline-gap: 2rem;
   --list-item-height: 3rem;
@@ -9442,1708 +9443,1708 @@ table.table-lg tfoot tr td {
 .list-md.list-hover .list-item:hover,
 .list-lg.list-hover .list-item:hover {
   background-color: var(--list-item-hover-bg-color);
-  box-shadow: inset 0.5rem 0 0 0 var(--list-item-hover-bg-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--list-item-hover-bg-color);
 }
 .list.list-hover .list-item:hover:active,
 .list-sm.list-hover .list-item:hover:active,
 .list-md.list-hover .list-item:hover:active,
 .list-lg.list-hover .list-item:hover:active {
   background-color: var(--list-item-active-bg-color);
-  box-shadow: inset 0.5rem 0 0 0 var(--list-item-active-bg-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--list-item-active-bg-color);
 }
 .list.list-hover.list-primary .list-item:hover,
 .list-sm.list-hover.list-primary .list-item:hover,
 .list-md.list-hover.list-primary .list-item:hover,
 .list-lg.list-hover.list-primary .list-item:hover {
   background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list.list-hover.list-primary .list-item:hover:active,
 .list-sm.list-hover.list-primary .list-item:hover:active,
 .list-md.list-hover.list-primary .list-item:hover:active,
 .list-lg.list-hover.list-primary .list-item:hover:active {
   background-color: color-mix(in srgb, var(--primary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list.list-hover .list-item.list-primary:hover,
 .list-sm.list-hover .list-item.list-primary:hover,
 .list-md.list-hover .list-item.list-primary:hover,
 .list-lg.list-hover .list-item.list-primary:hover {
   background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list.list-hover .list-item.list-primary:hover:active,
 .list-sm.list-hover .list-item.list-primary:hover:active,
 .list-md.list-hover .list-item.list-primary:hover:active,
 .list-lg.list-hover .list-item.list-primary:hover:active {
   background-color: color-mix(in srgb, var(--primary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list.list-hover.list-secondary .list-item:hover,
 .list-sm.list-hover.list-secondary .list-item:hover,
 .list-md.list-hover.list-secondary .list-item:hover,
 .list-lg.list-hover.list-secondary .list-item:hover {
   background-color: color-mix(in srgb, var(--secondary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list.list-hover.list-secondary .list-item:hover:active,
 .list-sm.list-hover.list-secondary .list-item:hover:active,
 .list-md.list-hover.list-secondary .list-item:hover:active,
 .list-lg.list-hover.list-secondary .list-item:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list.list-hover .list-item.list-secondary:hover,
 .list-sm.list-hover .list-item.list-secondary:hover,
 .list-md.list-hover .list-item.list-secondary:hover,
 .list-lg.list-hover .list-item.list-secondary:hover {
   background-color: color-mix(in srgb, var(--secondary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list.list-hover .list-item.list-secondary:hover:active,
 .list-sm.list-hover .list-item.list-secondary:hover:active,
 .list-md.list-hover .list-item.list-secondary:hover:active,
 .list-lg.list-hover .list-item.list-secondary:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list.list-hover.list-tertiary .list-item:hover,
 .list-sm.list-hover.list-tertiary .list-item:hover,
 .list-md.list-hover.list-tertiary .list-item:hover,
 .list-lg.list-hover.list-tertiary .list-item:hover {
   background-color: color-mix(in srgb, var(--tertiary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list.list-hover.list-tertiary .list-item:hover:active,
 .list-sm.list-hover.list-tertiary .list-item:hover:active,
 .list-md.list-hover.list-tertiary .list-item:hover:active,
 .list-lg.list-hover.list-tertiary .list-item:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list.list-hover .list-item.list-tertiary:hover,
 .list-sm.list-hover .list-item.list-tertiary:hover,
 .list-md.list-hover .list-item.list-tertiary:hover,
 .list-lg.list-hover .list-item.list-tertiary:hover {
   background-color: color-mix(in srgb, var(--tertiary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list.list-hover .list-item.list-tertiary:hover:active,
 .list-sm.list-hover .list-item.list-tertiary:hover:active,
 .list-md.list-hover .list-item.list-tertiary:hover:active,
 .list-lg.list-hover .list-item.list-tertiary:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list.list-hover.list-success .list-item:hover,
 .list-sm.list-hover.list-success .list-item:hover,
 .list-md.list-hover.list-success .list-item:hover,
 .list-lg.list-hover.list-success .list-item:hover {
   background-color: color-mix(in srgb, var(--success-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list.list-hover.list-success .list-item:hover:active,
 .list-sm.list-hover.list-success .list-item:hover:active,
 .list-md.list-hover.list-success .list-item:hover:active,
 .list-lg.list-hover.list-success .list-item:hover:active {
   background-color: color-mix(in srgb, var(--success-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list.list-hover .list-item.list-success:hover,
 .list-sm.list-hover .list-item.list-success:hover,
 .list-md.list-hover .list-item.list-success:hover,
 .list-lg.list-hover .list-item.list-success:hover {
   background-color: color-mix(in srgb, var(--success-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list.list-hover .list-item.list-success:hover:active,
 .list-sm.list-hover .list-item.list-success:hover:active,
 .list-md.list-hover .list-item.list-success:hover:active,
 .list-lg.list-hover .list-item.list-success:hover:active {
   background-color: color-mix(in srgb, var(--success-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list.list-hover.list-info .list-item:hover,
 .list-sm.list-hover.list-info .list-item:hover,
 .list-md.list-hover.list-info .list-item:hover,
 .list-lg.list-hover.list-info .list-item:hover {
   background-color: color-mix(in srgb, var(--info-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list.list-hover.list-info .list-item:hover:active,
 .list-sm.list-hover.list-info .list-item:hover:active,
 .list-md.list-hover.list-info .list-item:hover:active,
 .list-lg.list-hover.list-info .list-item:hover:active {
   background-color: color-mix(in srgb, var(--info-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list.list-hover .list-item.list-info:hover,
 .list-sm.list-hover .list-item.list-info:hover,
 .list-md.list-hover .list-item.list-info:hover,
 .list-lg.list-hover .list-item.list-info:hover {
   background-color: color-mix(in srgb, var(--info-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list.list-hover .list-item.list-info:hover:active,
 .list-sm.list-hover .list-item.list-info:hover:active,
 .list-md.list-hover .list-item.list-info:hover:active,
 .list-lg.list-hover .list-item.list-info:hover:active {
   background-color: color-mix(in srgb, var(--info-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list.list-hover.list-warning .list-item:hover,
 .list-sm.list-hover.list-warning .list-item:hover,
 .list-md.list-hover.list-warning .list-item:hover,
 .list-lg.list-hover.list-warning .list-item:hover {
   background-color: color-mix(in srgb, var(--warning-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list.list-hover.list-warning .list-item:hover:active,
 .list-sm.list-hover.list-warning .list-item:hover:active,
 .list-md.list-hover.list-warning .list-item:hover:active,
 .list-lg.list-hover.list-warning .list-item:hover:active {
   background-color: color-mix(in srgb, var(--warning-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list.list-hover .list-item.list-warning:hover,
 .list-sm.list-hover .list-item.list-warning:hover,
 .list-md.list-hover .list-item.list-warning:hover,
 .list-lg.list-hover .list-item.list-warning:hover {
   background-color: color-mix(in srgb, var(--warning-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list.list-hover .list-item.list-warning:hover:active,
 .list-sm.list-hover .list-item.list-warning:hover:active,
 .list-md.list-hover .list-item.list-warning:hover:active,
 .list-lg.list-hover .list-item.list-warning:hover:active {
   background-color: color-mix(in srgb, var(--warning-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list.list-hover.list-danger .list-item:hover,
 .list-sm.list-hover.list-danger .list-item:hover,
 .list-md.list-hover.list-danger .list-item:hover,
 .list-lg.list-hover.list-danger .list-item:hover {
   background-color: color-mix(in srgb, var(--danger-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list.list-hover.list-danger .list-item:hover:active,
 .list-sm.list-hover.list-danger .list-item:hover:active,
 .list-md.list-hover.list-danger .list-item:hover:active,
 .list-lg.list-hover.list-danger .list-item:hover:active {
   background-color: color-mix(in srgb, var(--danger-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list.list-hover .list-item.list-danger:hover,
 .list-sm.list-hover .list-item.list-danger:hover,
 .list-md.list-hover .list-item.list-danger:hover,
 .list-lg.list-hover .list-item.list-danger:hover {
   background-color: color-mix(in srgb, var(--danger-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list.list-hover .list-item.list-danger:hover:active,
 .list-sm.list-hover .list-item.list-danger:hover:active,
 .list-md.list-hover .list-item.list-danger:hover:active,
 .list-lg.list-hover .list-item.list-danger:hover:active {
   background-color: color-mix(in srgb, var(--danger-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list.list-hover.list-neutral .list-item:hover,
 .list-sm.list-hover.list-neutral .list-item:hover,
 .list-md.list-hover.list-neutral .list-item:hover,
 .list-lg.list-hover.list-neutral .list-item:hover {
   background-color: color-mix(in srgb, var(--neutral-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list.list-hover.list-neutral .list-item:hover:active,
 .list-sm.list-hover.list-neutral .list-item:hover:active,
 .list-md.list-hover.list-neutral .list-item:hover:active,
 .list-lg.list-hover.list-neutral .list-item:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list.list-hover .list-item.list-neutral:hover,
 .list-sm.list-hover .list-item.list-neutral:hover,
 .list-md.list-hover .list-item.list-neutral:hover,
 .list-lg.list-hover .list-item.list-neutral:hover {
   background-color: color-mix(in srgb, var(--neutral-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list.list-hover .list-item.list-neutral:hover:active,
 .list-sm.list-hover .list-item.list-neutral:hover:active,
 .list-md.list-hover .list-item.list-neutral:hover:active,
 .list-lg.list-hover .list-item.list-neutral:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list.list-hover.list-light .list-item:hover,
 .list-sm.list-hover.list-light .list-item:hover,
 .list-md.list-hover.list-light .list-item:hover,
 .list-lg.list-hover.list-light .list-item:hover {
   background-color: color-mix(in srgb, var(--light-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list.list-hover.list-light .list-item:hover:active,
 .list-sm.list-hover.list-light .list-item:hover:active,
 .list-md.list-hover.list-light .list-item:hover:active,
 .list-lg.list-hover.list-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--light-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list.list-hover .list-item.list-light:hover,
 .list-sm.list-hover .list-item.list-light:hover,
 .list-md.list-hover .list-item.list-light:hover,
 .list-lg.list-hover .list-item.list-light:hover {
   background-color: color-mix(in srgb, var(--light-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list.list-hover .list-item.list-light:hover:active,
 .list-sm.list-hover .list-item.list-light:hover:active,
 .list-md.list-hover .list-item.list-light:hover:active,
 .list-lg.list-hover .list-item.list-light:hover:active {
   background-color: color-mix(in srgb, var(--light-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list.list-hover.list-dark .list-item:hover,
 .list-sm.list-hover.list-dark .list-item:hover,
 .list-md.list-hover.list-dark .list-item:hover,
 .list-lg.list-hover.list-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--dark-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list.list-hover.list-dark .list-item:hover:active,
 .list-sm.list-hover.list-dark .list-item:hover:active,
 .list-md.list-hover.list-dark .list-item:hover:active,
 .list-lg.list-hover.list-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--dark-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list.list-hover .list-item.list-dark:hover,
 .list-sm.list-hover .list-item.list-dark:hover,
 .list-md.list-hover .list-item.list-dark:hover,
 .list-lg.list-hover .list-item.list-dark:hover {
   background-color: color-mix(in srgb, var(--dark-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list.list-hover .list-item.list-dark:hover:active,
 .list-sm.list-hover .list-item.list-dark:hover:active,
 .list-md.list-hover .list-item.list-dark:hover:active,
 .list-lg.list-hover .list-item.list-dark:hover:active {
   background-color: color-mix(in srgb, var(--dark-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list.list-hover.list-primary-light .list-item:hover,
 .list-sm.list-hover.list-primary-light .list-item:hover,
 .list-md.list-hover.list-primary-light .list-item:hover,
 .list-lg.list-hover.list-primary-light .list-item:hover {
   background-color: color-mix(in srgb, var(--primary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list.list-hover.list-primary-light .list-item:hover:active,
 .list-sm.list-hover.list-primary-light .list-item:hover:active,
 .list-md.list-hover.list-primary-light .list-item:hover:active,
 .list-lg.list-hover.list-primary-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list.list-hover .list-item.list-primary-light:hover,
 .list-sm.list-hover .list-item.list-primary-light:hover,
 .list-md.list-hover .list-item.list-primary-light:hover,
 .list-lg.list-hover .list-item.list-primary-light:hover {
   background-color: color-mix(in srgb, var(--primary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list.list-hover .list-item.list-primary-light:hover:active,
 .list-sm.list-hover .list-item.list-primary-light:hover:active,
 .list-md.list-hover .list-item.list-primary-light:hover:active,
 .list-lg.list-hover .list-item.list-primary-light:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list.list-hover.list-secondary-light .list-item:hover,
 .list-sm.list-hover.list-secondary-light .list-item:hover,
 .list-md.list-hover.list-secondary-light .list-item:hover,
 .list-lg.list-hover.list-secondary-light .list-item:hover {
   background-color: color-mix(in srgb, var(--secondary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list.list-hover.list-secondary-light .list-item:hover:active,
 .list-sm.list-hover.list-secondary-light .list-item:hover:active,
 .list-md.list-hover.list-secondary-light .list-item:hover:active,
 .list-lg.list-hover.list-secondary-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list.list-hover .list-item.list-secondary-light:hover,
 .list-sm.list-hover .list-item.list-secondary-light:hover,
 .list-md.list-hover .list-item.list-secondary-light:hover,
 .list-lg.list-hover .list-item.list-secondary-light:hover {
   background-color: color-mix(in srgb, var(--secondary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list.list-hover .list-item.list-secondary-light:hover:active,
 .list-sm.list-hover .list-item.list-secondary-light:hover:active,
 .list-md.list-hover .list-item.list-secondary-light:hover:active,
 .list-lg.list-hover .list-item.list-secondary-light:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list.list-hover.list-tertiary-light .list-item:hover,
 .list-sm.list-hover.list-tertiary-light .list-item:hover,
 .list-md.list-hover.list-tertiary-light .list-item:hover,
 .list-lg.list-hover.list-tertiary-light .list-item:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list.list-hover.list-tertiary-light .list-item:hover:active,
 .list-sm.list-hover.list-tertiary-light .list-item:hover:active,
 .list-md.list-hover.list-tertiary-light .list-item:hover:active,
 .list-lg.list-hover.list-tertiary-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list.list-hover .list-item.list-tertiary-light:hover,
 .list-sm.list-hover .list-item.list-tertiary-light:hover,
 .list-md.list-hover .list-item.list-tertiary-light:hover,
 .list-lg.list-hover .list-item.list-tertiary-light:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list.list-hover .list-item.list-tertiary-light:hover:active,
 .list-sm.list-hover .list-item.list-tertiary-light:hover:active,
 .list-md.list-hover .list-item.list-tertiary-light:hover:active,
 .list-lg.list-hover .list-item.list-tertiary-light:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list.list-hover.list-success-light .list-item:hover,
 .list-sm.list-hover.list-success-light .list-item:hover,
 .list-md.list-hover.list-success-light .list-item:hover,
 .list-lg.list-hover.list-success-light .list-item:hover {
   background-color: color-mix(in srgb, var(--success-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list.list-hover.list-success-light .list-item:hover:active,
 .list-sm.list-hover.list-success-light .list-item:hover:active,
 .list-md.list-hover.list-success-light .list-item:hover:active,
 .list-lg.list-hover.list-success-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--success-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list.list-hover .list-item.list-success-light:hover,
 .list-sm.list-hover .list-item.list-success-light:hover,
 .list-md.list-hover .list-item.list-success-light:hover,
 .list-lg.list-hover .list-item.list-success-light:hover {
   background-color: color-mix(in srgb, var(--success-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list.list-hover .list-item.list-success-light:hover:active,
 .list-sm.list-hover .list-item.list-success-light:hover:active,
 .list-md.list-hover .list-item.list-success-light:hover:active,
 .list-lg.list-hover .list-item.list-success-light:hover:active {
   background-color: color-mix(in srgb, var(--success-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list.list-hover.list-info-light .list-item:hover,
 .list-sm.list-hover.list-info-light .list-item:hover,
 .list-md.list-hover.list-info-light .list-item:hover,
 .list-lg.list-hover.list-info-light .list-item:hover {
   background-color: color-mix(in srgb, var(--info-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list.list-hover.list-info-light .list-item:hover:active,
 .list-sm.list-hover.list-info-light .list-item:hover:active,
 .list-md.list-hover.list-info-light .list-item:hover:active,
 .list-lg.list-hover.list-info-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--info-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list.list-hover .list-item.list-info-light:hover,
 .list-sm.list-hover .list-item.list-info-light:hover,
 .list-md.list-hover .list-item.list-info-light:hover,
 .list-lg.list-hover .list-item.list-info-light:hover {
   background-color: color-mix(in srgb, var(--info-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list.list-hover .list-item.list-info-light:hover:active,
 .list-sm.list-hover .list-item.list-info-light:hover:active,
 .list-md.list-hover .list-item.list-info-light:hover:active,
 .list-lg.list-hover .list-item.list-info-light:hover:active {
   background-color: color-mix(in srgb, var(--info-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list.list-hover.list-warning-light .list-item:hover,
 .list-sm.list-hover.list-warning-light .list-item:hover,
 .list-md.list-hover.list-warning-light .list-item:hover,
 .list-lg.list-hover.list-warning-light .list-item:hover {
   background-color: color-mix(in srgb, var(--warning-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list.list-hover.list-warning-light .list-item:hover:active,
 .list-sm.list-hover.list-warning-light .list-item:hover:active,
 .list-md.list-hover.list-warning-light .list-item:hover:active,
 .list-lg.list-hover.list-warning-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list.list-hover .list-item.list-warning-light:hover,
 .list-sm.list-hover .list-item.list-warning-light:hover,
 .list-md.list-hover .list-item.list-warning-light:hover,
 .list-lg.list-hover .list-item.list-warning-light:hover {
   background-color: color-mix(in srgb, var(--warning-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list.list-hover .list-item.list-warning-light:hover:active,
 .list-sm.list-hover .list-item.list-warning-light:hover:active,
 .list-md.list-hover .list-item.list-warning-light:hover:active,
 .list-lg.list-hover .list-item.list-warning-light:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list.list-hover.list-danger-light .list-item:hover,
 .list-sm.list-hover.list-danger-light .list-item:hover,
 .list-md.list-hover.list-danger-light .list-item:hover,
 .list-lg.list-hover.list-danger-light .list-item:hover {
   background-color: color-mix(in srgb, var(--danger-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list.list-hover.list-danger-light .list-item:hover:active,
 .list-sm.list-hover.list-danger-light .list-item:hover:active,
 .list-md.list-hover.list-danger-light .list-item:hover:active,
 .list-lg.list-hover.list-danger-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list.list-hover .list-item.list-danger-light:hover,
 .list-sm.list-hover .list-item.list-danger-light:hover,
 .list-md.list-hover .list-item.list-danger-light:hover,
 .list-lg.list-hover .list-item.list-danger-light:hover {
   background-color: color-mix(in srgb, var(--danger-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list.list-hover .list-item.list-danger-light:hover:active,
 .list-sm.list-hover .list-item.list-danger-light:hover:active,
 .list-md.list-hover .list-item.list-danger-light:hover:active,
 .list-lg.list-hover .list-item.list-danger-light:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list.list-hover.list-neutral-light .list-item:hover,
 .list-sm.list-hover.list-neutral-light .list-item:hover,
 .list-md.list-hover.list-neutral-light .list-item:hover,
 .list-lg.list-hover.list-neutral-light .list-item:hover {
   background-color: color-mix(in srgb, var(--neutral-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list.list-hover.list-neutral-light .list-item:hover:active,
 .list-sm.list-hover.list-neutral-light .list-item:hover:active,
 .list-md.list-hover.list-neutral-light .list-item:hover:active,
 .list-lg.list-hover.list-neutral-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list.list-hover .list-item.list-neutral-light:hover,
 .list-sm.list-hover .list-item.list-neutral-light:hover,
 .list-md.list-hover .list-item.list-neutral-light:hover,
 .list-lg.list-hover .list-item.list-neutral-light:hover {
   background-color: color-mix(in srgb, var(--neutral-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list.list-hover .list-item.list-neutral-light:hover:active,
 .list-sm.list-hover .list-item.list-neutral-light:hover:active,
 .list-md.list-hover .list-item.list-neutral-light:hover:active,
 .list-lg.list-hover .list-item.list-neutral-light:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list.list-hover.list-light-light .list-item:hover,
 .list-sm.list-hover.list-light-light .list-item:hover,
 .list-md.list-hover.list-light-light .list-item:hover,
 .list-lg.list-hover.list-light-light .list-item:hover {
   background-color: color-mix(in srgb, var(--light-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list.list-hover.list-light-light .list-item:hover:active,
 .list-sm.list-hover.list-light-light .list-item:hover:active,
 .list-md.list-hover.list-light-light .list-item:hover:active,
 .list-lg.list-hover.list-light-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--light-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list.list-hover .list-item.list-light-light:hover,
 .list-sm.list-hover .list-item.list-light-light:hover,
 .list-md.list-hover .list-item.list-light-light:hover,
 .list-lg.list-hover .list-item.list-light-light:hover {
   background-color: color-mix(in srgb, var(--light-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list.list-hover .list-item.list-light-light:hover:active,
 .list-sm.list-hover .list-item.list-light-light:hover:active,
 .list-md.list-hover .list-item.list-light-light:hover:active,
 .list-lg.list-hover .list-item.list-light-light:hover:active {
   background-color: color-mix(in srgb, var(--light-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list.list-hover.list-dark-light .list-item:hover,
 .list-sm.list-hover.list-dark-light .list-item:hover,
 .list-md.list-hover.list-dark-light .list-item:hover,
 .list-lg.list-hover.list-dark-light .list-item:hover {
   background-color: color-mix(in srgb, var(--dark-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list.list-hover.list-dark-light .list-item:hover:active,
 .list-sm.list-hover.list-dark-light .list-item:hover:active,
 .list-md.list-hover.list-dark-light .list-item:hover:active,
 .list-lg.list-hover.list-dark-light .list-item:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list.list-hover .list-item.list-dark-light:hover,
 .list-sm.list-hover .list-item.list-dark-light:hover,
 .list-md.list-hover .list-item.list-dark-light:hover,
 .list-lg.list-hover .list-item.list-dark-light:hover {
   background-color: color-mix(in srgb, var(--dark-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list.list-hover .list-item.list-dark-light:hover:active,
 .list-sm.list-hover .list-item.list-dark-light:hover:active,
 .list-md.list-hover .list-item.list-dark-light:hover:active,
 .list-lg.list-hover .list-item.list-dark-light:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list.list-hover.list-primary-dark .list-item:hover,
 .list-sm.list-hover.list-primary-dark .list-item:hover,
 .list-md.list-hover.list-primary-dark .list-item:hover,
 .list-lg.list-hover.list-primary-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--primary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list.list-hover.list-primary-dark .list-item:hover:active,
 .list-sm.list-hover.list-primary-dark .list-item:hover:active,
 .list-md.list-hover.list-primary-dark .list-item:hover:active,
 .list-lg.list-hover.list-primary-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list.list-hover .list-item.list-primary-dark:hover,
 .list-sm.list-hover .list-item.list-primary-dark:hover,
 .list-md.list-hover .list-item.list-primary-dark:hover,
 .list-lg.list-hover .list-item.list-primary-dark:hover {
   background-color: color-mix(in srgb, var(--primary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list.list-hover .list-item.list-primary-dark:hover:active,
 .list-sm.list-hover .list-item.list-primary-dark:hover:active,
 .list-md.list-hover .list-item.list-primary-dark:hover:active,
 .list-lg.list-hover .list-item.list-primary-dark:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list.list-hover.list-secondary-dark .list-item:hover,
 .list-sm.list-hover.list-secondary-dark .list-item:hover,
 .list-md.list-hover.list-secondary-dark .list-item:hover,
 .list-lg.list-hover.list-secondary-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list.list-hover.list-secondary-dark .list-item:hover:active,
 .list-sm.list-hover.list-secondary-dark .list-item:hover:active,
 .list-md.list-hover.list-secondary-dark .list-item:hover:active,
 .list-lg.list-hover.list-secondary-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list.list-hover .list-item.list-secondary-dark:hover,
 .list-sm.list-hover .list-item.list-secondary-dark:hover,
 .list-md.list-hover .list-item.list-secondary-dark:hover,
 .list-lg.list-hover .list-item.list-secondary-dark:hover {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list.list-hover .list-item.list-secondary-dark:hover:active,
 .list-sm.list-hover .list-item.list-secondary-dark:hover:active,
 .list-md.list-hover .list-item.list-secondary-dark:hover:active,
 .list-lg.list-hover .list-item.list-secondary-dark:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list.list-hover.list-tertiary-dark .list-item:hover,
 .list-sm.list-hover.list-tertiary-dark .list-item:hover,
 .list-md.list-hover.list-tertiary-dark .list-item:hover,
 .list-lg.list-hover.list-tertiary-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list.list-hover.list-tertiary-dark .list-item:hover:active,
 .list-sm.list-hover.list-tertiary-dark .list-item:hover:active,
 .list-md.list-hover.list-tertiary-dark .list-item:hover:active,
 .list-lg.list-hover.list-tertiary-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list.list-hover .list-item.list-tertiary-dark:hover,
 .list-sm.list-hover .list-item.list-tertiary-dark:hover,
 .list-md.list-hover .list-item.list-tertiary-dark:hover,
 .list-lg.list-hover .list-item.list-tertiary-dark:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list.list-hover .list-item.list-tertiary-dark:hover:active,
 .list-sm.list-hover .list-item.list-tertiary-dark:hover:active,
 .list-md.list-hover .list-item.list-tertiary-dark:hover:active,
 .list-lg.list-hover .list-item.list-tertiary-dark:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list.list-hover.list-success-dark .list-item:hover,
 .list-sm.list-hover.list-success-dark .list-item:hover,
 .list-md.list-hover.list-success-dark .list-item:hover,
 .list-lg.list-hover.list-success-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--success-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list.list-hover.list-success-dark .list-item:hover:active,
 .list-sm.list-hover.list-success-dark .list-item:hover:active,
 .list-md.list-hover.list-success-dark .list-item:hover:active,
 .list-lg.list-hover.list-success-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--success-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list.list-hover .list-item.list-success-dark:hover,
 .list-sm.list-hover .list-item.list-success-dark:hover,
 .list-md.list-hover .list-item.list-success-dark:hover,
 .list-lg.list-hover .list-item.list-success-dark:hover {
   background-color: color-mix(in srgb, var(--success-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list.list-hover .list-item.list-success-dark:hover:active,
 .list-sm.list-hover .list-item.list-success-dark:hover:active,
 .list-md.list-hover .list-item.list-success-dark:hover:active,
 .list-lg.list-hover .list-item.list-success-dark:hover:active {
   background-color: color-mix(in srgb, var(--success-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list.list-hover.list-info-dark .list-item:hover,
 .list-sm.list-hover.list-info-dark .list-item:hover,
 .list-md.list-hover.list-info-dark .list-item:hover,
 .list-lg.list-hover.list-info-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--info-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list.list-hover.list-info-dark .list-item:hover:active,
 .list-sm.list-hover.list-info-dark .list-item:hover:active,
 .list-md.list-hover.list-info-dark .list-item:hover:active,
 .list-lg.list-hover.list-info-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--info-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list.list-hover .list-item.list-info-dark:hover,
 .list-sm.list-hover .list-item.list-info-dark:hover,
 .list-md.list-hover .list-item.list-info-dark:hover,
 .list-lg.list-hover .list-item.list-info-dark:hover {
   background-color: color-mix(in srgb, var(--info-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list.list-hover .list-item.list-info-dark:hover:active,
 .list-sm.list-hover .list-item.list-info-dark:hover:active,
 .list-md.list-hover .list-item.list-info-dark:hover:active,
 .list-lg.list-hover .list-item.list-info-dark:hover:active {
   background-color: color-mix(in srgb, var(--info-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list.list-hover.list-warning-dark .list-item:hover,
 .list-sm.list-hover.list-warning-dark .list-item:hover,
 .list-md.list-hover.list-warning-dark .list-item:hover,
 .list-lg.list-hover.list-warning-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--warning-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list.list-hover.list-warning-dark .list-item:hover:active,
 .list-sm.list-hover.list-warning-dark .list-item:hover:active,
 .list-md.list-hover.list-warning-dark .list-item:hover:active,
 .list-lg.list-hover.list-warning-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list.list-hover .list-item.list-warning-dark:hover,
 .list-sm.list-hover .list-item.list-warning-dark:hover,
 .list-md.list-hover .list-item.list-warning-dark:hover,
 .list-lg.list-hover .list-item.list-warning-dark:hover {
   background-color: color-mix(in srgb, var(--warning-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list.list-hover .list-item.list-warning-dark:hover:active,
 .list-sm.list-hover .list-item.list-warning-dark:hover:active,
 .list-md.list-hover .list-item.list-warning-dark:hover:active,
 .list-lg.list-hover .list-item.list-warning-dark:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list.list-hover.list-danger-dark .list-item:hover,
 .list-sm.list-hover.list-danger-dark .list-item:hover,
 .list-md.list-hover.list-danger-dark .list-item:hover,
 .list-lg.list-hover.list-danger-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--danger-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list.list-hover.list-danger-dark .list-item:hover:active,
 .list-sm.list-hover.list-danger-dark .list-item:hover:active,
 .list-md.list-hover.list-danger-dark .list-item:hover:active,
 .list-lg.list-hover.list-danger-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list.list-hover .list-item.list-danger-dark:hover,
 .list-sm.list-hover .list-item.list-danger-dark:hover,
 .list-md.list-hover .list-item.list-danger-dark:hover,
 .list-lg.list-hover .list-item.list-danger-dark:hover {
   background-color: color-mix(in srgb, var(--danger-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list.list-hover .list-item.list-danger-dark:hover:active,
 .list-sm.list-hover .list-item.list-danger-dark:hover:active,
 .list-md.list-hover .list-item.list-danger-dark:hover:active,
 .list-lg.list-hover .list-item.list-danger-dark:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list.list-hover.list-neutral-dark .list-item:hover,
 .list-sm.list-hover.list-neutral-dark .list-item:hover,
 .list-md.list-hover.list-neutral-dark .list-item:hover,
 .list-lg.list-hover.list-neutral-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list.list-hover.list-neutral-dark .list-item:hover:active,
 .list-sm.list-hover.list-neutral-dark .list-item:hover:active,
 .list-md.list-hover.list-neutral-dark .list-item:hover:active,
 .list-lg.list-hover.list-neutral-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list.list-hover .list-item.list-neutral-dark:hover,
 .list-sm.list-hover .list-item.list-neutral-dark:hover,
 .list-md.list-hover .list-item.list-neutral-dark:hover,
 .list-lg.list-hover .list-item.list-neutral-dark:hover {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list.list-hover .list-item.list-neutral-dark:hover:active,
 .list-sm.list-hover .list-item.list-neutral-dark:hover:active,
 .list-md.list-hover .list-item.list-neutral-dark:hover:active,
 .list-lg.list-hover .list-item.list-neutral-dark:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list.list-hover.list-light-dark .list-item:hover,
 .list-sm.list-hover.list-light-dark .list-item:hover,
 .list-md.list-hover.list-light-dark .list-item:hover,
 .list-lg.list-hover.list-light-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--light-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list.list-hover.list-light-dark .list-item:hover:active,
 .list-sm.list-hover.list-light-dark .list-item:hover:active,
 .list-md.list-hover.list-light-dark .list-item:hover:active,
 .list-lg.list-hover.list-light-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--light-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list.list-hover .list-item.list-light-dark:hover,
 .list-sm.list-hover .list-item.list-light-dark:hover,
 .list-md.list-hover .list-item.list-light-dark:hover,
 .list-lg.list-hover .list-item.list-light-dark:hover {
   background-color: color-mix(in srgb, var(--light-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list.list-hover .list-item.list-light-dark:hover:active,
 .list-sm.list-hover .list-item.list-light-dark:hover:active,
 .list-md.list-hover .list-item.list-light-dark:hover:active,
 .list-lg.list-hover .list-item.list-light-dark:hover:active {
   background-color: color-mix(in srgb, var(--light-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list.list-hover.list-dark-dark .list-item:hover,
 .list-sm.list-hover.list-dark-dark .list-item:hover,
 .list-md.list-hover.list-dark-dark .list-item:hover,
 .list-lg.list-hover.list-dark-dark .list-item:hover {
   background-color: color-mix(in srgb, var(--dark-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 .list.list-hover.list-dark-dark .list-item:hover:active,
 .list-sm.list-hover.list-dark-dark .list-item:hover:active,
 .list-md.list-hover.list-dark-dark .list-item:hover:active,
 .list-lg.list-hover.list-dark-dark .list-item:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 .list.list-hover .list-item.list-dark-dark:hover,
 .list-sm.list-hover .list-item.list-dark-dark:hover,
 .list-md.list-hover .list-item.list-dark-dark:hover,
 .list-lg.list-hover .list-item.list-dark-dark:hover {
   background-color: color-mix(in srgb, var(--dark-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 .list.list-hover .list-item.list-dark-dark:hover:active,
 .list-sm.list-hover .list-item.list-dark-dark:hover:active,
 .list-md.list-hover .list-item.list-dark-dark:hover:active,
 .list-lg.list-hover .list-item.list-dark-dark:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 .list .list-hover.list-item:hover,
 .list-sm .list-hover.list-item:hover,
 .list-md .list-hover.list-item:hover,
 .list-lg .list-hover.list-item:hover {
   background-color: var(--list-item-hover-bg-color);
-  box-shadow: inset 0.5rem 0 0 0 var(--list-item-hover-bg-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--list-item-hover-bg-color);
 }
 .list .list-hover.list-item:hover:active,
 .list-sm .list-hover.list-item:hover:active,
 .list-md .list-hover.list-item:hover:active,
 .list-lg .list-hover.list-item:hover:active {
   background-color: var(--list-item-active-bg-color);
-  box-shadow: inset 0.5rem 0 0 0 var(--list-item-active-bg-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--list-item-active-bg-color);
 }
 .list.list-primary .list-item.list-hover:hover,
 .list-sm.list-primary .list-item.list-hover:hover,
 .list-md.list-primary .list-item.list-hover:hover,
 .list-lg.list-primary .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list.list-primary .list-item.list-hover:hover:active,
 .list-sm.list-primary .list-item.list-hover:hover:active,
 .list-md.list-primary .list-item.list-hover:hover:active,
 .list-lg.list-primary .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--primary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list .list-item.list-primary.list-hover:hover,
 .list-sm .list-item.list-primary.list-hover:hover,
 .list-md .list-item.list-primary.list-hover:hover,
 .list-lg .list-item.list-primary.list-hover:hover {
   background-color: color-mix(in srgb, var(--primary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list .list-item.list-primary.list-hover:hover:active,
 .list-sm .list-item.list-primary.list-hover:hover:active,
 .list-md .list-item.list-primary.list-hover:hover:active,
 .list-lg .list-item.list-primary.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--primary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color);
 }
 .list.list-secondary .list-item.list-hover:hover,
 .list-sm.list-secondary .list-item.list-hover:hover,
 .list-md.list-secondary .list-item.list-hover:hover,
 .list-lg.list-secondary .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--secondary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list.list-secondary .list-item.list-hover:hover:active,
 .list-sm.list-secondary .list-item.list-hover:hover:active,
 .list-md.list-secondary .list-item.list-hover:hover:active,
 .list-lg.list-secondary .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list .list-item.list-secondary.list-hover:hover,
 .list-sm .list-item.list-secondary.list-hover:hover,
 .list-md .list-item.list-secondary.list-hover:hover,
 .list-lg .list-item.list-secondary.list-hover:hover {
   background-color: color-mix(in srgb, var(--secondary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list .list-item.list-secondary.list-hover:hover:active,
 .list-sm .list-item.list-secondary.list-hover:hover:active,
 .list-md .list-item.list-secondary.list-hover:hover:active,
 .list-lg .list-item.list-secondary.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color);
 }
 .list.list-tertiary .list-item.list-hover:hover,
 .list-sm.list-tertiary .list-item.list-hover:hover,
 .list-md.list-tertiary .list-item.list-hover:hover,
 .list-lg.list-tertiary .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--tertiary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list.list-tertiary .list-item.list-hover:hover:active,
 .list-sm.list-tertiary .list-item.list-hover:hover:active,
 .list-md.list-tertiary .list-item.list-hover:hover:active,
 .list-lg.list-tertiary .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list .list-item.list-tertiary.list-hover:hover,
 .list-sm .list-item.list-tertiary.list-hover:hover,
 .list-md .list-item.list-tertiary.list-hover:hover,
 .list-lg .list-item.list-tertiary.list-hover:hover {
   background-color: color-mix(in srgb, var(--tertiary-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list .list-item.list-tertiary.list-hover:hover:active,
 .list-sm .list-item.list-tertiary.list-hover:hover:active,
 .list-md .list-item.list-tertiary.list-hover:hover:active,
 .list-lg .list-item.list-tertiary.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color);
 }
 .list.list-success .list-item.list-hover:hover,
 .list-sm.list-success .list-item.list-hover:hover,
 .list-md.list-success .list-item.list-hover:hover,
 .list-lg.list-success .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--success-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list.list-success .list-item.list-hover:hover:active,
 .list-sm.list-success .list-item.list-hover:hover:active,
 .list-md.list-success .list-item.list-hover:hover:active,
 .list-lg.list-success .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--success-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list .list-item.list-success.list-hover:hover,
 .list-sm .list-item.list-success.list-hover:hover,
 .list-md .list-item.list-success.list-hover:hover,
 .list-lg .list-item.list-success.list-hover:hover {
   background-color: color-mix(in srgb, var(--success-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list .list-item.list-success.list-hover:hover:active,
 .list-sm .list-item.list-success.list-hover:hover:active,
 .list-md .list-item.list-success.list-hover:hover:active,
 .list-lg .list-item.list-success.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--success-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color);
 }
 .list.list-info .list-item.list-hover:hover,
 .list-sm.list-info .list-item.list-hover:hover,
 .list-md.list-info .list-item.list-hover:hover,
 .list-lg.list-info .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--info-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list.list-info .list-item.list-hover:hover:active,
 .list-sm.list-info .list-item.list-hover:hover:active,
 .list-md.list-info .list-item.list-hover:hover:active,
 .list-lg.list-info .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--info-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list .list-item.list-info.list-hover:hover,
 .list-sm .list-item.list-info.list-hover:hover,
 .list-md .list-item.list-info.list-hover:hover,
 .list-lg .list-item.list-info.list-hover:hover {
   background-color: color-mix(in srgb, var(--info-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list .list-item.list-info.list-hover:hover:active,
 .list-sm .list-item.list-info.list-hover:hover:active,
 .list-md .list-item.list-info.list-hover:hover:active,
 .list-lg .list-item.list-info.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--info-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color);
 }
 .list.list-warning .list-item.list-hover:hover,
 .list-sm.list-warning .list-item.list-hover:hover,
 .list-md.list-warning .list-item.list-hover:hover,
 .list-lg.list-warning .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--warning-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list.list-warning .list-item.list-hover:hover:active,
 .list-sm.list-warning .list-item.list-hover:hover:active,
 .list-md.list-warning .list-item.list-hover:hover:active,
 .list-lg.list-warning .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--warning-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list .list-item.list-warning.list-hover:hover,
 .list-sm .list-item.list-warning.list-hover:hover,
 .list-md .list-item.list-warning.list-hover:hover,
 .list-lg .list-item.list-warning.list-hover:hover {
   background-color: color-mix(in srgb, var(--warning-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list .list-item.list-warning.list-hover:hover:active,
 .list-sm .list-item.list-warning.list-hover:hover:active,
 .list-md .list-item.list-warning.list-hover:hover:active,
 .list-lg .list-item.list-warning.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--warning-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color);
 }
 .list.list-danger .list-item.list-hover:hover,
 .list-sm.list-danger .list-item.list-hover:hover,
 .list-md.list-danger .list-item.list-hover:hover,
 .list-lg.list-danger .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--danger-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list.list-danger .list-item.list-hover:hover:active,
 .list-sm.list-danger .list-item.list-hover:hover:active,
 .list-md.list-danger .list-item.list-hover:hover:active,
 .list-lg.list-danger .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--danger-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list .list-item.list-danger.list-hover:hover,
 .list-sm .list-item.list-danger.list-hover:hover,
 .list-md .list-item.list-danger.list-hover:hover,
 .list-lg .list-item.list-danger.list-hover:hover {
   background-color: color-mix(in srgb, var(--danger-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list .list-item.list-danger.list-hover:hover:active,
 .list-sm .list-item.list-danger.list-hover:hover:active,
 .list-md .list-item.list-danger.list-hover:hover:active,
 .list-lg .list-item.list-danger.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--danger-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color);
 }
 .list.list-neutral .list-item.list-hover:hover,
 .list-sm.list-neutral .list-item.list-hover:hover,
 .list-md.list-neutral .list-item.list-hover:hover,
 .list-lg.list-neutral .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--neutral-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list.list-neutral .list-item.list-hover:hover:active,
 .list-sm.list-neutral .list-item.list-hover:hover:active,
 .list-md.list-neutral .list-item.list-hover:hover:active,
 .list-lg.list-neutral .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list .list-item.list-neutral.list-hover:hover,
 .list-sm .list-item.list-neutral.list-hover:hover,
 .list-md .list-item.list-neutral.list-hover:hover,
 .list-lg .list-item.list-neutral.list-hover:hover {
   background-color: color-mix(in srgb, var(--neutral-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list .list-item.list-neutral.list-hover:hover:active,
 .list-sm .list-item.list-neutral.list-hover:hover:active,
 .list-md .list-item.list-neutral.list-hover:hover:active,
 .list-lg .list-item.list-neutral.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color);
 }
 .list.list-light .list-item.list-hover:hover,
 .list-sm.list-light .list-item.list-hover:hover,
 .list-md.list-light .list-item.list-hover:hover,
 .list-lg.list-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--light-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list.list-light .list-item.list-hover:hover:active,
 .list-sm.list-light .list-item.list-hover:hover:active,
 .list-md.list-light .list-item.list-hover:hover:active,
 .list-lg.list-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--light-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list .list-item.list-light.list-hover:hover,
 .list-sm .list-item.list-light.list-hover:hover,
 .list-md .list-item.list-light.list-hover:hover,
 .list-lg .list-item.list-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--light-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list .list-item.list-light.list-hover:hover:active,
 .list-sm .list-item.list-light.list-hover:hover:active,
 .list-md .list-item.list-light.list-hover:hover:active,
 .list-lg .list-item.list-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--light-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color);
 }
 .list.list-dark .list-item.list-hover:hover,
 .list-sm.list-dark .list-item.list-hover:hover,
 .list-md.list-dark .list-item.list-hover:hover,
 .list-lg.list-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--dark-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list.list-dark .list-item.list-hover:hover:active,
 .list-sm.list-dark .list-item.list-hover:hover:active,
 .list-md.list-dark .list-item.list-hover:hover:active,
 .list-lg.list-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--dark-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list .list-item.list-dark.list-hover:hover,
 .list-sm .list-item.list-dark.list-hover:hover,
 .list-md .list-item.list-dark.list-hover:hover,
 .list-lg .list-item.list-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--dark-color) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list .list-item.list-dark.list-hover:hover:active,
 .list-sm .list-item.list-dark.list-hover:hover:active,
 .list-md .list-item.list-dark.list-hover:hover:active,
 .list-lg .list-item.list-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--dark-color) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color);
 }
 .list.list-primary-light .list-item.list-hover:hover,
 .list-sm.list-primary-light .list-item.list-hover:hover,
 .list-md.list-primary-light .list-item.list-hover:hover,
 .list-lg.list-primary-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--primary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list.list-primary-light .list-item.list-hover:hover:active,
 .list-sm.list-primary-light .list-item.list-hover:hover:active,
 .list-md.list-primary-light .list-item.list-hover:hover:active,
 .list-lg.list-primary-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list .list-item.list-primary-light.list-hover:hover,
 .list-sm .list-item.list-primary-light.list-hover:hover,
 .list-md .list-item.list-primary-light.list-hover:hover,
 .list-lg .list-item.list-primary-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--primary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list .list-item.list-primary-light.list-hover:hover:active,
 .list-sm .list-item.list-primary-light.list-hover:hover:active,
 .list-md .list-item.list-primary-light.list-hover:hover:active,
 .list-lg .list-item.list-primary-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-light);
 }
 .list.list-secondary-light .list-item.list-hover:hover,
 .list-sm.list-secondary-light .list-item.list-hover:hover,
 .list-md.list-secondary-light .list-item.list-hover:hover,
 .list-lg.list-secondary-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--secondary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list.list-secondary-light .list-item.list-hover:hover:active,
 .list-sm.list-secondary-light .list-item.list-hover:hover:active,
 .list-md.list-secondary-light .list-item.list-hover:hover:active,
 .list-lg.list-secondary-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list .list-item.list-secondary-light.list-hover:hover,
 .list-sm .list-item.list-secondary-light.list-hover:hover,
 .list-md .list-item.list-secondary-light.list-hover:hover,
 .list-lg .list-item.list-secondary-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--secondary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list .list-item.list-secondary-light.list-hover:hover:active,
 .list-sm .list-item.list-secondary-light.list-hover:hover:active,
 .list-md .list-item.list-secondary-light.list-hover:hover:active,
 .list-lg .list-item.list-secondary-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-light);
 }
 .list.list-tertiary-light .list-item.list-hover:hover,
 .list-sm.list-tertiary-light .list-item.list-hover:hover,
 .list-md.list-tertiary-light .list-item.list-hover:hover,
 .list-lg.list-tertiary-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list.list-tertiary-light .list-item.list-hover:hover:active,
 .list-sm.list-tertiary-light .list-item.list-hover:hover:active,
 .list-md.list-tertiary-light .list-item.list-hover:hover:active,
 .list-lg.list-tertiary-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list .list-item.list-tertiary-light.list-hover:hover,
 .list-sm .list-item.list-tertiary-light.list-hover:hover,
 .list-md .list-item.list-tertiary-light.list-hover:hover,
 .list-lg .list-item.list-tertiary-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list .list-item.list-tertiary-light.list-hover:hover:active,
 .list-sm .list-item.list-tertiary-light.list-hover:hover:active,
 .list-md .list-item.list-tertiary-light.list-hover:hover:active,
 .list-lg .list-item.list-tertiary-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-light);
 }
 .list.list-success-light .list-item.list-hover:hover,
 .list-sm.list-success-light .list-item.list-hover:hover,
 .list-md.list-success-light .list-item.list-hover:hover,
 .list-lg.list-success-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--success-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list.list-success-light .list-item.list-hover:hover:active,
 .list-sm.list-success-light .list-item.list-hover:hover:active,
 .list-md.list-success-light .list-item.list-hover:hover:active,
 .list-lg.list-success-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--success-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list .list-item.list-success-light.list-hover:hover,
 .list-sm .list-item.list-success-light.list-hover:hover,
 .list-md .list-item.list-success-light.list-hover:hover,
 .list-lg .list-item.list-success-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--success-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list .list-item.list-success-light.list-hover:hover:active,
 .list-sm .list-item.list-success-light.list-hover:hover:active,
 .list-md .list-item.list-success-light.list-hover:hover:active,
 .list-lg .list-item.list-success-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--success-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-light);
 }
 .list.list-info-light .list-item.list-hover:hover,
 .list-sm.list-info-light .list-item.list-hover:hover,
 .list-md.list-info-light .list-item.list-hover:hover,
 .list-lg.list-info-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--info-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list.list-info-light .list-item.list-hover:hover:active,
 .list-sm.list-info-light .list-item.list-hover:hover:active,
 .list-md.list-info-light .list-item.list-hover:hover:active,
 .list-lg.list-info-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--info-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list .list-item.list-info-light.list-hover:hover,
 .list-sm .list-item.list-info-light.list-hover:hover,
 .list-md .list-item.list-info-light.list-hover:hover,
 .list-lg .list-item.list-info-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--info-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list .list-item.list-info-light.list-hover:hover:active,
 .list-sm .list-item.list-info-light.list-hover:hover:active,
 .list-md .list-item.list-info-light.list-hover:hover:active,
 .list-lg .list-item.list-info-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--info-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-light);
 }
 .list.list-warning-light .list-item.list-hover:hover,
 .list-sm.list-warning-light .list-item.list-hover:hover,
 .list-md.list-warning-light .list-item.list-hover:hover,
 .list-lg.list-warning-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--warning-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list.list-warning-light .list-item.list-hover:hover:active,
 .list-sm.list-warning-light .list-item.list-hover:hover:active,
 .list-md.list-warning-light .list-item.list-hover:hover:active,
 .list-lg.list-warning-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list .list-item.list-warning-light.list-hover:hover,
 .list-sm .list-item.list-warning-light.list-hover:hover,
 .list-md .list-item.list-warning-light.list-hover:hover,
 .list-lg .list-item.list-warning-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--warning-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list .list-item.list-warning-light.list-hover:hover:active,
 .list-sm .list-item.list-warning-light.list-hover:hover:active,
 .list-md .list-item.list-warning-light.list-hover:hover:active,
 .list-lg .list-item.list-warning-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-light);
 }
 .list.list-danger-light .list-item.list-hover:hover,
 .list-sm.list-danger-light .list-item.list-hover:hover,
 .list-md.list-danger-light .list-item.list-hover:hover,
 .list-lg.list-danger-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--danger-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list.list-danger-light .list-item.list-hover:hover:active,
 .list-sm.list-danger-light .list-item.list-hover:hover:active,
 .list-md.list-danger-light .list-item.list-hover:hover:active,
 .list-lg.list-danger-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list .list-item.list-danger-light.list-hover:hover,
 .list-sm .list-item.list-danger-light.list-hover:hover,
 .list-md .list-item.list-danger-light.list-hover:hover,
 .list-lg .list-item.list-danger-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--danger-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list .list-item.list-danger-light.list-hover:hover:active,
 .list-sm .list-item.list-danger-light.list-hover:hover:active,
 .list-md .list-item.list-danger-light.list-hover:hover:active,
 .list-lg .list-item.list-danger-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-light);
 }
 .list.list-neutral-light .list-item.list-hover:hover,
 .list-sm.list-neutral-light .list-item.list-hover:hover,
 .list-md.list-neutral-light .list-item.list-hover:hover,
 .list-lg.list-neutral-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--neutral-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list.list-neutral-light .list-item.list-hover:hover:active,
 .list-sm.list-neutral-light .list-item.list-hover:hover:active,
 .list-md.list-neutral-light .list-item.list-hover:hover:active,
 .list-lg.list-neutral-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list .list-item.list-neutral-light.list-hover:hover,
 .list-sm .list-item.list-neutral-light.list-hover:hover,
 .list-md .list-item.list-neutral-light.list-hover:hover,
 .list-lg .list-item.list-neutral-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--neutral-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list .list-item.list-neutral-light.list-hover:hover:active,
 .list-sm .list-item.list-neutral-light.list-hover:hover:active,
 .list-md .list-item.list-neutral-light.list-hover:hover:active,
 .list-lg .list-item.list-neutral-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-light);
 }
 .list.list-light-light .list-item.list-hover:hover,
 .list-sm.list-light-light .list-item.list-hover:hover,
 .list-md.list-light-light .list-item.list-hover:hover,
 .list-lg.list-light-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--light-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list.list-light-light .list-item.list-hover:hover:active,
 .list-sm.list-light-light .list-item.list-hover:hover:active,
 .list-md.list-light-light .list-item.list-hover:hover:active,
 .list-lg.list-light-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--light-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list .list-item.list-light-light.list-hover:hover,
 .list-sm .list-item.list-light-light.list-hover:hover,
 .list-md .list-item.list-light-light.list-hover:hover,
 .list-lg .list-item.list-light-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--light-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list .list-item.list-light-light.list-hover:hover:active,
 .list-sm .list-item.list-light-light.list-hover:hover:active,
 .list-md .list-item.list-light-light.list-hover:hover:active,
 .list-lg .list-item.list-light-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--light-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-light);
 }
 .list.list-dark-light .list-item.list-hover:hover,
 .list-sm.list-dark-light .list-item.list-hover:hover,
 .list-md.list-dark-light .list-item.list-hover:hover,
 .list-lg.list-dark-light .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--dark-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list.list-dark-light .list-item.list-hover:hover:active,
 .list-sm.list-dark-light .list-item.list-hover:hover:active,
 .list-md.list-dark-light .list-item.list-hover:hover:active,
 .list-lg.list-dark-light .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list .list-item.list-dark-light.list-hover:hover,
 .list-sm .list-item.list-dark-light.list-hover:hover,
 .list-md .list-item.list-dark-light.list-hover:hover,
 .list-lg .list-item.list-dark-light.list-hover:hover {
   background-color: color-mix(in srgb, var(--dark-color-light) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list .list-item.list-dark-light.list-hover:hover:active,
 .list-sm .list-item.list-dark-light.list-hover:hover:active,
 .list-md .list-item.list-dark-light.list-hover:hover:active,
 .list-lg .list-item.list-dark-light.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-light) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-light);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-light);
 }
 .list.list-primary-dark .list-item.list-hover:hover,
 .list-sm.list-primary-dark .list-item.list-hover:hover,
 .list-md.list-primary-dark .list-item.list-hover:hover,
 .list-lg.list-primary-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--primary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list.list-primary-dark .list-item.list-hover:hover:active,
 .list-sm.list-primary-dark .list-item.list-hover:hover:active,
 .list-md.list-primary-dark .list-item.list-hover:hover:active,
 .list-lg.list-primary-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list .list-item.list-primary-dark.list-hover:hover,
 .list-sm .list-item.list-primary-dark.list-hover:hover,
 .list-md .list-item.list-primary-dark.list-hover:hover,
 .list-lg .list-item.list-primary-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--primary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list .list-item.list-primary-dark.list-hover:hover:active,
 .list-sm .list-item.list-primary-dark.list-hover:hover:active,
 .list-md .list-item.list-primary-dark.list-hover:hover:active,
 .list-lg .list-item.list-primary-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--primary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--primary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-dark);
 }
 .list.list-secondary-dark .list-item.list-hover:hover,
 .list-sm.list-secondary-dark .list-item.list-hover:hover,
 .list-md.list-secondary-dark .list-item.list-hover:hover,
 .list-lg.list-secondary-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list.list-secondary-dark .list-item.list-hover:hover:active,
 .list-sm.list-secondary-dark .list-item.list-hover:hover:active,
 .list-md.list-secondary-dark .list-item.list-hover:hover:active,
 .list-lg.list-secondary-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list .list-item.list-secondary-dark.list-hover:hover,
 .list-sm .list-item.list-secondary-dark.list-hover:hover,
 .list-md .list-item.list-secondary-dark.list-hover:hover,
 .list-lg .list-item.list-secondary-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list .list-item.list-secondary-dark.list-hover:hover:active,
 .list-sm .list-item.list-secondary-dark.list-hover:hover:active,
 .list-md .list-item.list-secondary-dark.list-hover:hover:active,
 .list-lg .list-item.list-secondary-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--secondary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--secondary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-dark);
 }
 .list.list-tertiary-dark .list-item.list-hover:hover,
 .list-sm.list-tertiary-dark .list-item.list-hover:hover,
 .list-md.list-tertiary-dark .list-item.list-hover:hover,
 .list-lg.list-tertiary-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list.list-tertiary-dark .list-item.list-hover:hover:active,
 .list-sm.list-tertiary-dark .list-item.list-hover:hover:active,
 .list-md.list-tertiary-dark .list-item.list-hover:hover:active,
 .list-lg.list-tertiary-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list .list-item.list-tertiary-dark.list-hover:hover,
 .list-sm .list-item.list-tertiary-dark.list-hover:hover,
 .list-md .list-item.list-tertiary-dark.list-hover:hover,
 .list-lg .list-item.list-tertiary-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list .list-item.list-tertiary-dark.list-hover:hover:active,
 .list-sm .list-item.list-tertiary-dark.list-hover:hover:active,
 .list-md .list-item.list-tertiary-dark.list-hover:hover:active,
 .list-lg .list-item.list-tertiary-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--tertiary-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--tertiary-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-dark);
 }
 .list.list-success-dark .list-item.list-hover:hover,
 .list-sm.list-success-dark .list-item.list-hover:hover,
 .list-md.list-success-dark .list-item.list-hover:hover,
 .list-lg.list-success-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--success-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list.list-success-dark .list-item.list-hover:hover:active,
 .list-sm.list-success-dark .list-item.list-hover:hover:active,
 .list-md.list-success-dark .list-item.list-hover:hover:active,
 .list-lg.list-success-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--success-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list .list-item.list-success-dark.list-hover:hover,
 .list-sm .list-item.list-success-dark.list-hover:hover,
 .list-md .list-item.list-success-dark.list-hover:hover,
 .list-lg .list-item.list-success-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--success-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list .list-item.list-success-dark.list-hover:hover:active,
 .list-sm .list-item.list-success-dark.list-hover:hover:active,
 .list-md .list-item.list-success-dark.list-hover:hover:active,
 .list-lg .list-item.list-success-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--success-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--success-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-dark);
 }
 .list.list-info-dark .list-item.list-hover:hover,
 .list-sm.list-info-dark .list-item.list-hover:hover,
 .list-md.list-info-dark .list-item.list-hover:hover,
 .list-lg.list-info-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--info-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list.list-info-dark .list-item.list-hover:hover:active,
 .list-sm.list-info-dark .list-item.list-hover:hover:active,
 .list-md.list-info-dark .list-item.list-hover:hover:active,
 .list-lg.list-info-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--info-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list .list-item.list-info-dark.list-hover:hover,
 .list-sm .list-item.list-info-dark.list-hover:hover,
 .list-md .list-item.list-info-dark.list-hover:hover,
 .list-lg .list-item.list-info-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--info-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list .list-item.list-info-dark.list-hover:hover:active,
 .list-sm .list-item.list-info-dark.list-hover:hover:active,
 .list-md .list-item.list-info-dark.list-hover:hover:active,
 .list-lg .list-item.list-info-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--info-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--info-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-dark);
 }
 .list.list-warning-dark .list-item.list-hover:hover,
 .list-sm.list-warning-dark .list-item.list-hover:hover,
 .list-md.list-warning-dark .list-item.list-hover:hover,
 .list-lg.list-warning-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--warning-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list.list-warning-dark .list-item.list-hover:hover:active,
 .list-sm.list-warning-dark .list-item.list-hover:hover:active,
 .list-md.list-warning-dark .list-item.list-hover:hover:active,
 .list-lg.list-warning-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list .list-item.list-warning-dark.list-hover:hover,
 .list-sm .list-item.list-warning-dark.list-hover:hover,
 .list-md .list-item.list-warning-dark.list-hover:hover,
 .list-lg .list-item.list-warning-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--warning-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list .list-item.list-warning-dark.list-hover:hover:active,
 .list-sm .list-item.list-warning-dark.list-hover:hover:active,
 .list-md .list-item.list-warning-dark.list-hover:hover:active,
 .list-lg .list-item.list-warning-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--warning-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--warning-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-dark);
 }
 .list.list-danger-dark .list-item.list-hover:hover,
 .list-sm.list-danger-dark .list-item.list-hover:hover,
 .list-md.list-danger-dark .list-item.list-hover:hover,
 .list-lg.list-danger-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--danger-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list.list-danger-dark .list-item.list-hover:hover:active,
 .list-sm.list-danger-dark .list-item.list-hover:hover:active,
 .list-md.list-danger-dark .list-item.list-hover:hover:active,
 .list-lg.list-danger-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list .list-item.list-danger-dark.list-hover:hover,
 .list-sm .list-item.list-danger-dark.list-hover:hover,
 .list-md .list-item.list-danger-dark.list-hover:hover,
 .list-lg .list-item.list-danger-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--danger-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list .list-item.list-danger-dark.list-hover:hover:active,
 .list-sm .list-item.list-danger-dark.list-hover:hover:active,
 .list-md .list-item.list-danger-dark.list-hover:hover:active,
 .list-lg .list-item.list-danger-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--danger-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--danger-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-dark);
 }
 .list.list-neutral-dark .list-item.list-hover:hover,
 .list-sm.list-neutral-dark .list-item.list-hover:hover,
 .list-md.list-neutral-dark .list-item.list-hover:hover,
 .list-lg.list-neutral-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list.list-neutral-dark .list-item.list-hover:hover:active,
 .list-sm.list-neutral-dark .list-item.list-hover:hover:active,
 .list-md.list-neutral-dark .list-item.list-hover:hover:active,
 .list-lg.list-neutral-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list .list-item.list-neutral-dark.list-hover:hover,
 .list-sm .list-item.list-neutral-dark.list-hover:hover,
 .list-md .list-item.list-neutral-dark.list-hover:hover,
 .list-lg .list-item.list-neutral-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list .list-item.list-neutral-dark.list-hover:hover:active,
 .list-sm .list-item.list-neutral-dark.list-hover:hover:active,
 .list-md .list-item.list-neutral-dark.list-hover:hover:active,
 .list-lg .list-item.list-neutral-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--neutral-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--neutral-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-dark);
 }
 .list.list-light-dark .list-item.list-hover:hover,
 .list-sm.list-light-dark .list-item.list-hover:hover,
 .list-md.list-light-dark .list-item.list-hover:hover,
 .list-lg.list-light-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--light-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list.list-light-dark .list-item.list-hover:hover:active,
 .list-sm.list-light-dark .list-item.list-hover:hover:active,
 .list-md.list-light-dark .list-item.list-hover:hover:active,
 .list-lg.list-light-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--light-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list .list-item.list-light-dark.list-hover:hover,
 .list-sm .list-item.list-light-dark.list-hover:hover,
 .list-md .list-item.list-light-dark.list-hover:hover,
 .list-lg .list-item.list-light-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--light-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list .list-item.list-light-dark.list-hover:hover:active,
 .list-sm .list-item.list-light-dark.list-hover:hover:active,
 .list-md .list-item.list-light-dark.list-hover:hover:active,
 .list-lg .list-item.list-light-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--light-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--light-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-dark);
 }
 .list.list-dark-dark .list-item.list-hover:hover,
 .list-sm.list-dark-dark .list-item.list-hover:hover,
 .list-md.list-dark-dark .list-item.list-hover:hover,
 .list-lg.list-dark-dark .list-item.list-hover:hover {
   background-color: color-mix(in srgb, var(--dark-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 .list.list-dark-dark .list-item.list-hover:hover:active,
 .list-sm.list-dark-dark .list-item.list-hover:hover:active,
 .list-md.list-dark-dark .list-item.list-hover:hover:active,
 .list-lg.list-dark-dark .list-item.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 .list .list-item.list-dark-dark.list-hover:hover,
 .list-sm .list-item.list-dark-dark.list-hover:hover,
 .list-md .list-item.list-dark-dark.list-hover:hover,
 .list-lg .list-item.list-dark-dark.list-hover:hover {
   background-color: color-mix(in srgb, var(--dark-color-dark) 15%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 .list .list-item.list-dark-dark.list-hover:hover:active,
 .list-sm .list-item.list-dark-dark.list-hover:hover:active,
 .list-md .list-item.list-dark-dark.list-hover:hover:active,
 .list-lg .list-item.list-dark-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-dark) 30%, transparent);
-  box-shadow: inset 0.5rem 0 0 0 var(--dark-color-dark);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-dark);
 }
 
 /* Tables */

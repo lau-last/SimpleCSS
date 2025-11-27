@@ -11,6 +11,8 @@
 
   /* Shadow */
   --box-shadow: 0 .05rem 1.5rem rgba(0, 0, 0, .08);
+  --box-shadow-hover: 0 0 11px rgba(0,0,0,.2);
+
 
   /* Accordion */
   --accordion-bg-color: var(--bg-color);
@@ -33,6 +35,7 @@
   /* Card */
   --card-border-color: var(--gray-100);
   --card-box-shadow: var(--box-shadow);
+  --card-box-shadow-hover: var(--box-shadow-hover);
 
   /* Collapse */
   --collapse-bg-color: var(--bg-color);

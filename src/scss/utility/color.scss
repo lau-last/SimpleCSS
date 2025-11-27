@@ -52,6 +52,13 @@ $colors: (
         "dark-dark": var(--dark-color-dark),
 );
 
+
+/* Box shadow */
+.box-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+
 /* Accordion */
 @each $name, $value in $colors {
   .accordion-#{$name} {
@@ -65,10 +72,40 @@ $colors: (
   }
 }
 
-
-.box-shadow {
-  box-shadow: var(--box-shadow);
+/* Alerts */
+@each $name, $value in $colors {
+  .alert-#{$name} {
+    border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark) 10%);
+    background: #{$value};
+    color: var(--text-on-#{$name});
+  }
 }
+
+/* Badges  */
+@each $name, $value in $colors {
+  .badge-#{$name}{
+    background-color: #{$value};
+    color: var(--text-on-#{$name});
+  }
+}
+
+/* Buttons */
+@each $name, $value in $colors {
+  .btn-#{$name} {
+    background-color: #{$value};
+    color: var(--text-on-#{$name});
+  }
+}
+
+/* Card */
+@each $name, $value in $colors {
+  .card-#{$name} {
+    background-color: #{$value};
+    border-color: #{$value};
+    color: var(--text-on-#{$name});
+  }
+}
+
 
 /* Background */
 @each $name, $value in $colors {
@@ -86,15 +123,6 @@ $colors: (
   }
 }
 
-
-/* Badges and buttons */
-@each $name, $value in $colors {
-  .badge-#{$name},
-  .btn-#{$name} {
-    background-color: #{$value};
-    color: var(--text-on-#{$name});
-  }
-}
 
 
 /* Button hover */
@@ -370,15 +398,6 @@ table {
   }
 }
 
-
-/* Alerts */
-@each $name, $value in $colors {
-  .alert-#{$name} {
-    border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark) 10%);
-    background: #{$value};
-    color: var(--text-on-#{$name});
-  }
-}
 
 
 /* Navbar */

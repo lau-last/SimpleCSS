@@ -1,22 +1,40 @@
 .card-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
-    gap: var(--card-group-gap);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+  gap: var(--card-group-gap);
 }
 
 // Card
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: var(--card-border-radius);
-    border-color: var(--card-border-color);
-    border-style: var(--card-border-style);
-    border-width: var(--card-border-width);
-    box-shadow: var(--card-box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--card-border-radius);
+  border-color: var(--card-border-color);
+  border-style: var(--card-border-style);
+  border-width: var(--card-border-width);
+  box-shadow: var(--card-box-shadow);
+  transition: box-shadow .1s ease-in-out;
+
+  .card-hover:hover {
+    cursor: pointer;
+    box-shadow: var(--card-box-shadow-hover);
+  }
 
 
-    .card-header {padding: var(--card-header-padding);}
-    .card-body {padding: var(--card-body-padding);}
-    .card-footer {padding: var(--card-footer-padding);}
+  .card-header {
+    padding: var(--card-header-padding);
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+  }
+
+  .card-body {
+    padding: var(--card-body-padding);
+  }
+
+  .card-footer {
+    padding: var(--card-footer-padding);
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
+  }
 }

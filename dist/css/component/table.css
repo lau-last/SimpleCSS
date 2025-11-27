@@ -5,6 +5,8 @@ table.table-lg {
   border-width: var(--table-border-width);
   border-style: var(--table-border-style);
   border-color: var(--table-border-color);
+  background-color: var(--table-bg-color);
+  color: var(--table-text-color);
   border-collapse: collapse;
   width: 100%;
 }
@@ -24,7 +26,6 @@ table.table-sm thead.table-hover tr:hover,
 table.table-md thead.table-hover tr:hover,
 table.table-lg thead.table-hover tr:hover {
   cursor: pointer;
-  background-color: var(--table-hover-bg-color) !important;
 }
 table.table tbody tr th, table.table tbody tr td,
 table.table-sm tbody tr th,
@@ -42,7 +43,6 @@ table.table-sm tbody.table-hover tr:hover,
 table.table-md tbody.table-hover tr:hover,
 table.table-lg tbody.table-hover tr:hover {
   cursor: pointer;
-  background-color: var(--table-hover-bg-color) !important;
 }
 table.table tfoot tr th, table.table tfoot tr td,
 table.table-sm tfoot tr th,
@@ -60,7 +60,21 @@ table.table-sm tfoot.table-hover tr:hover,
 table.table-md tfoot.table-hover tr:hover,
 table.table-lg tfoot.table-hover tr:hover {
   cursor: pointer;
-  background-color: var(--table-hover-bg-color) !important;
+}
+table.table tr.table-hover,
+table.table-sm tr.table-hover,
+table.table-md tr.table-hover,
+table.table-lg tr.table-hover {
+  cursor: pointer;
+}
+table.table th.table-hover, table.table td.table-hover,
+table.table-sm th.table-hover,
+table.table-sm td.table-hover,
+table.table-md th.table-hover,
+table.table-md td.table-hover,
+table.table-lg th.table-hover,
+table.table-lg td.table-hover {
+  cursor: pointer;
 }
 table.table.table-borderless,
 table.table-sm.table-borderless,
@@ -131,61 +145,6 @@ table.table-lg.table-hover thead tr:hover,
 table.table-lg.table-hover tbody tr:hover,
 table.table-lg.table-hover tfoot tr:hover {
   cursor: pointer;
-  background-color: var(--table-hover-bg-color) !important;
-}
-table.table.table-striped tbody tr:nth-child(odd),
-table.table-sm.table-striped tbody tr:nth-child(odd),
-table.table-md.table-striped tbody tr:nth-child(odd),
-table.table-lg.table-striped tbody tr:nth-child(odd) {
-  background-color: var(--table-striped-bg-color);
-}
-table.table.table-striped-even tbody tr:nth-child(even),
-table.table-sm.table-striped-even tbody tr:nth-child(even),
-table.table-md.table-striped-even tbody tr:nth-child(even),
-table.table-lg.table-striped-even tbody tr:nth-child(even) {
-  background-color: var(--table-striped-bg-color);
-}
-table.table.table-striped-columns thead tr th:nth-child(odd), table.table.table-striped-columns thead tr td:nth-child(odd), table.table.table-striped-columns tbody tr th:nth-child(odd), table.table.table-striped-columns tbody tr td:nth-child(odd), table.table.table-striped-columns tfoot tr th:nth-child(odd), table.table.table-striped-columns tfoot tr td:nth-child(odd),
-table.table-sm.table-striped-columns thead tr th:nth-child(odd),
-table.table-sm.table-striped-columns thead tr td:nth-child(odd),
-table.table-sm.table-striped-columns tbody tr th:nth-child(odd),
-table.table-sm.table-striped-columns tbody tr td:nth-child(odd),
-table.table-sm.table-striped-columns tfoot tr th:nth-child(odd),
-table.table-sm.table-striped-columns tfoot tr td:nth-child(odd),
-table.table-md.table-striped-columns thead tr th:nth-child(odd),
-table.table-md.table-striped-columns thead tr td:nth-child(odd),
-table.table-md.table-striped-columns tbody tr th:nth-child(odd),
-table.table-md.table-striped-columns tbody tr td:nth-child(odd),
-table.table-md.table-striped-columns tfoot tr th:nth-child(odd),
-table.table-md.table-striped-columns tfoot tr td:nth-child(odd),
-table.table-lg.table-striped-columns thead tr th:nth-child(odd),
-table.table-lg.table-striped-columns thead tr td:nth-child(odd),
-table.table-lg.table-striped-columns tbody tr th:nth-child(odd),
-table.table-lg.table-striped-columns tbody tr td:nth-child(odd),
-table.table-lg.table-striped-columns tfoot tr th:nth-child(odd),
-table.table-lg.table-striped-columns tfoot tr td:nth-child(odd) {
-  background-color: var(--table-striped-bg-color);
-}
-table.table.table-striped-columns-even thead tr th:nth-child(even), table.table.table-striped-columns-even thead tr td:nth-child(even), table.table.table-striped-columns-even tbody tr th:nth-child(even), table.table.table-striped-columns-even tbody tr td:nth-child(even), table.table.table-striped-columns-even tfoot tr th:nth-child(even), table.table.table-striped-columns-even tfoot tr td:nth-child(even),
-table.table-sm.table-striped-columns-even thead tr th:nth-child(even),
-table.table-sm.table-striped-columns-even thead tr td:nth-child(even),
-table.table-sm.table-striped-columns-even tbody tr th:nth-child(even),
-table.table-sm.table-striped-columns-even tbody tr td:nth-child(even),
-table.table-sm.table-striped-columns-even tfoot tr th:nth-child(even),
-table.table-sm.table-striped-columns-even tfoot tr td:nth-child(even),
-table.table-md.table-striped-columns-even thead tr th:nth-child(even),
-table.table-md.table-striped-columns-even thead tr td:nth-child(even),
-table.table-md.table-striped-columns-even tbody tr th:nth-child(even),
-table.table-md.table-striped-columns-even tbody tr td:nth-child(even),
-table.table-md.table-striped-columns-even tfoot tr th:nth-child(even),
-table.table-md.table-striped-columns-even tfoot tr td:nth-child(even),
-table.table-lg.table-striped-columns-even thead tr th:nth-child(even),
-table.table-lg.table-striped-columns-even thead tr td:nth-child(even),
-table.table-lg.table-striped-columns-even tbody tr th:nth-child(even),
-table.table-lg.table-striped-columns-even tbody tr td:nth-child(even),
-table.table-lg.table-striped-columns-even tfoot tr th:nth-child(even),
-table.table-lg.table-striped-columns-even tfoot tr td:nth-child(even) {
-  background-color: var(--table-striped-bg-color);
 }
 
 table.table-sm thead tr th, table.table-sm thead tr td,

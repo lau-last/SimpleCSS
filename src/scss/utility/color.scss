@@ -201,14 +201,19 @@ $colors: (
 /* List */
 @mixin list-hover-default {
   background-color: var(--list-item-hover-bg-color);
+  box-shadow: inset .5rem 0 0 0 var(--list-item-hover-bg-color);
+
   &:active {
     background-color: var(--list-item-active-bg-color);
+    box-shadow: inset .5rem 0 0 0 var(--list-item-active-bg-color);
   }
 }
 @mixin list-hover-color($name, $value) {
   background-color: color-mix(in srgb, #{$value} 15%, transparent);
+  box-shadow: inset .5rem 0 0 0 #{$value};
   &:active{
     background-color: color-mix(in srgb, #{$value} 30%, transparent);
+    box-shadow: inset .5rem 0 0 0 #{$value};
   }
 }
 @each $name, $value in $colors {

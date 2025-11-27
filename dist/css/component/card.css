@@ -13,13 +13,22 @@
   border-style: var(--card-border-style);
   border-width: var(--card-border-width);
   box-shadow: var(--card-box-shadow);
+  transition: box-shadow 0.1s ease-in-out;
+}
+.card .card-hover:hover {
+  cursor: pointer;
+  box-shadow: var(--card-box-shadow-hover);
 }
 .card .card-header {
   padding: var(--card-header-padding);
+  border-top-left-radius: var(--card-border-radius);
+  border-top-right-radius: var(--card-border-radius);
 }
 .card .card-body {
   padding: var(--card-body-padding);
 }
 .card .card-footer {
   padding: var(--card-footer-padding);
+  border-bottom-left-radius: var(--card-border-radius);
+  border-bottom-right-radius: var(--card-border-radius);
 }

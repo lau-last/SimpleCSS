@@ -23,6 +23,8 @@
 
   /* Button */
   --button-border-color: var(--border-color);
+  --button-hover-bg-color: rgba(225, 225, 225, 0.3);
+  --button-active-bg-color: rgba(225, 225, 225, 0.2);
 
   /* Card */
   --card-border-color: var(--gray-700);
@@ -59,35 +61,10 @@
   /* List */
   --list-bg-color: var(--bg-color);
   --list-border-color: var(--border-color);
-
-  --list-item-hover-bg-color: rgba(0, 0, 0, 0.2);
+  --list-text-color: var(--text-color);
+  --list-item-hover-bg-color: rgba(225, 225, 225, 0.2);
+  --list-item-active-bg-color: rgba(225, 225, 225, 0.4);
   --list-item-border-color: var(--list-border-color);
-
-  --list-primary-color: var(--primary-color);
-  --list-secondary-color: var(--secondary-color);
-  --list-tertiary-color: var(--tertiary-color);
-  --list-black-color: var(--black-color);
-  --list-danger-color: var(--danger-color);
-  --list-dark-color: var(--dark-color);
-  --list-info-color: var(--info-color);
-  --list-light-color: var(--light-color);
-  --list-neutral-color: var(--neutral-color);
-  --list-success-color: var(--success-color);
-  --list-warning-color: var(--warning-color);
-  --list-white-color: var(--white-color);
-
-  --list-text-on-primary: var(--black-color);
-  --list-text-on-secondary: var(--black-color);
-  --list-text-on-tertiary: var(--black-color);
-  --list-text-on-black: var(--white-color);
-  --list-text-on-danger: var(--black-color);
-  --list-text-on-dark: var(--white-color);
-  --list-text-on-info: var(--black-color);
-  --list-text-on-light: var(--black-color);
-  --list-text-on-neutral: var(--black-color);
-  --list-text-on-success: var(--black-color);
-  --list-text-on-warning: var(--black-color);
-  --list-text-on-white: var(--black-color);
 
   /* Nav */
   --navbar-border-color: var(--border-color);
@@ -101,37 +78,11 @@
 
   /* Table */
   --table-border-color: var(--border-color);
+  --table-bg-color: var(--bg-color);
   --table-border-divider-color: var(--gray-1000);
-  --table-hover-bg-color: rgba(0, 0, 0, 0.2);
-  --table-striped-bg-color: rgba(0, 0, 0, 0.1);
-
-  --table-primary-color: var(--primary-color);
-  --table-secondary-color: var(--secondary-color);
-  --table-tertiary-color: var(--tertiary-color);
-  --table-black-color: var(--black-color);
-  --table-danger-color: var(--danger-color);
-  --table-dark-color: var(--dark-color);
-  --table-info-color: var(--info-color);
-  --table-light-color: var(--light-color);
-  --table-neutral-color: var(--neutral-color);
-  --table-success-color: var(--success-color);
-  --table-warning-color: var(--warning-color);
-  --table-white-color: var(--white-color);
-
-
-  --table-text-on-primary: var(--black-color);
-  --table-text-on-secondary: var(--black-color);
-  --table-text-on-tertiary: var(--black-color);
-  --table-text-on-black: var(--white-color);
-  --table-text-on-danger: var(--black-color);
-  --table-text-on-dark: var(--white-color);
-  --table-text-on-info: var(--black-color);
-  --table-text-on-light: var(--black-color);
-  --table-text-on-neutral: var(--black-color);
-  --table-text-on-success: var(--black-color);
-  --table-text-on-warning: var(--black-color);
-  --table-text-on-white: var(--black-color);
-
+  --table-hover-bg-color: rgba(225, 225, 225, 0.2);
+  --table-active-bg-color: rgba(225, 225, 225, 0.4);
+  --table-text-color: var(--text-color);
 
 }
 

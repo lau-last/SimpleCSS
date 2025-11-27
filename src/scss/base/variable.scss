@@ -35,31 +35,71 @@
   --black-color: var(--gray-1000);
 
   /* color base */
-  --primary-color: #6E5FAF;
-  --secondary-color: #C07A2D;
-  --tertiary-color: #4F7C9E;
-  --dark-color: #383737;
-  --danger-color: #c96a6a;
-  --info-color: #6baacd;
-  --light-color: #dddddd;
-  --neutral-color: #bbbbbb;
-  --success-color: #7bae7f;
-  --warning-color: #d9b74a;
-
-
-  /* Text contrast tokens */
+  --primary-color: #6658E8;
+  --secondary-color: #24C87A;
+  --tertiary-color: #FF5878;
+  --dark-color: #2F2F2F;
+  --danger-color: #E25555;
+  --info-color: #3EB4E8;
+  --light-color: #DDDDDD;
+  --neutral-color: #C7C7C7;
+  --success-color: #4EBE79;
+  --warning-color: #E6AE2A;
   --text-on-primary: var(--white-color);
-  --text-on-secondary: var(--white-color);
-  --text-on-tertiary: var(--white-color);
-  --text-on-black: var(--white-color);
+  --text-on-secondary: var(--black-color);
+  --text-on-tertiary: var(--black-color);
   --text-on-dark: var(--white-color);
   --text-on-danger: var(--black-color);
   --text-on-info: var(--black-color);
   --text-on-light: var(--black-color);
-  --text-on-neutral: var(--white-color);
-  --text-on-success: var(--white-color);
-  --text-on-warning: var(--white-color);
-  --text-on-white: var(--black-color);
+  --text-on-neutral: var(--black-color);
+  --text-on-success: var(--black-color);
+  --text-on-warning: var(--black-color);
+
+  /* Light variants (based on color-mix-light) */
+  --primary-color-light: color-mix(in srgb, var(--primary-color) 75%, var(--color-mix-light));
+  --secondary-color-light: color-mix(in srgb, var(--secondary-color) 75%, var(--color-mix-light));
+  --tertiary-color-light: color-mix(in srgb, var(--tertiary-color) 75%, var(--color-mix-light));
+  --dark-color-light: color-mix(in srgb, var(--dark-color) 75%, var(--color-mix-light));
+  --danger-color-light: color-mix(in srgb, var(--danger-color) 75%, var(--color-mix-light));
+  --info-color-light: color-mix(in srgb, var(--info-color) 75%, var(--color-mix-light));
+  --light-color-light: color-mix(in srgb, var(--light-color) 75%, var(--color-mix-light));
+  --neutral-color-light: color-mix(in srgb, var(--neutral-color) 75%, var(--color-mix-light));
+  --success-color-light: color-mix(in srgb, var(--success-color) 75%, var(--color-mix-light));
+  --warning-color-light: color-mix(in srgb, var(--warning-color) 75%, var(--color-mix-light));
+  --text-on-primary-light: var(--black-color);
+  --text-on-secondary-light: var(--black-color);
+  --text-on-tertiary-light: var(--black-color);
+  --text-on-dark-light: var(--white-color);
+  --text-on-danger-light: var(--black-color);
+  --text-on-info-light: var(--black-color);
+  --text-on-light-light: var(--black-color);
+  --text-on-neutral-light: var(--black-color);
+  --text-on-success-light: var(--black-color);
+  --text-on-warning-light: var(--black-color);
+
+
+  /* Dark variants (based on color-mix-dark) */
+  --primary-color-dark: color-mix(in srgb, var(--primary-color) 75%, var(--color-mix-dark));
+  --secondary-color-dark: color-mix(in srgb, var(--secondary-color) 75%, var(--color-mix-dark));
+  --tertiary-color-dark: color-mix(in srgb, var(--tertiary-color) 75%, var(--color-mix-dark));
+  --dark-color-dark: color-mix(in srgb, var(--dark-color) 75%, var(--color-mix-dark));
+  --danger-color-dark: color-mix(in srgb, var(--danger-color) 75%, var(--color-mix-dark));
+  --info-color-dark: color-mix(in srgb, var(--info-color) 75%, var(--color-mix-dark));
+  --light-color-dark: color-mix(in srgb, var(--light-color) 75%, var(--color-mix-dark));
+  --neutral-color-dark: color-mix(in srgb, var(--neutral-color) 75%, var(--color-mix-dark));
+  --success-color-dark: color-mix(in srgb, var(--success-color) 75%, var(--color-mix-dark));
+  --warning-color-dark: color-mix(in srgb, var(--warning-color) 75%, var(--color-mix-dark));
+  --text-on-primary-dark: var(--white-color);
+  --text-on-secondary-dark: var(--white-color);
+  --text-on-tertiary-dark: var(--white-color);
+  --text-on-dark-dark: var(--white-color);
+  --text-on-danger-dark: var(--white-color);
+  --text-on-info-dark: var(--white-color);
+  --text-on-light-dark: var(--black-color);
+  --text-on-neutral-dark: var(--white-color);
+  --text-on-success-dark: var(--white-color);
+  --text-on-warning-dark: var(--black-color);
 
 
   /* Derived color helpers */
@@ -123,9 +163,6 @@
   --border-radius: .3rem;
   --border-radius-pill: 10rem;
   --border-radius-circle: 50%;
-
-
-
 
 
   /*

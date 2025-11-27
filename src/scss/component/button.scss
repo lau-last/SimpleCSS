@@ -17,10 +17,6 @@
   display: inline-block;
   transition: transform 0.1s ease;
 
-  &:active{
-    transform: scale(0.95);
-  }
-
   &:focus {
     outline: none;
     box-shadow: none;

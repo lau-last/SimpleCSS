@@ -1,63 +1,89 @@
-@mixin list-base{
-    list-style: none;
-    border-radius: var(--list-border-radius);
-    border-width: var(--list-border-width);
-    border-style: var(--list-border-style);
-    border-color: var(--list-border-color);
-    background-color: var(--list-bg-color);
+@mixin list-base {
+  list-style: none;
+  border-radius: var(--list-border-radius);
+  border-style: var(--list-border-style);
+  border-color: var(--list-border-color);
+  background-color: var(--list-bg-color);
+  border-width: var(--list-border-width);
+  color: var(--list-text-color);
 
-    &.list-hover{
-      .list-item:hover{
-        cursor: pointer;
-        background-color: var(--list-item-hover-bg-color);
-      }
+  > * {
+    &:not(:last-child) {
+      border-bottom-width: 0;
+      border-bottom-style: var(--list-item-border-style);
+      border-bottom-color: var(--list-item-border-color);
     }
+  }
 
+  .list-item {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &.list-bordered {
+    border-width: var(--list-border-width);
 
     > * {
       &:not(:last-child) {
-        border-bottom-width:  var(--list-item-border-width);
-        border-bottom-style: var(--list-item-border-style);
-        border-bottom-color: var(--list-item-border-color);
+        border-bottom-width: var(--list-item-border-width);
       }
     }
+  }
 
-    .list-item {
-      display: inline-block;
-      width: 100%;
+  &.list-borderless {
+    border-width: 0;
+
+    > * {
+      &:not(:last-child) {
+        border-bottom-width: 0;
+      }
     }
+  }
+
+  &.list-hover {
+    .list-item:hover {
+      cursor: pointer;
+    }
+  }
+  .list-item.list-hover:hover {
+    cursor: pointer;
+  }
 }
 
-.list{
+.list {
   @include list-base;
-  .list-item{
+
+  .list-item {
     line-height: var(--list-item-height);
     padding: var(--list-item-padding);
     height: var(--list-item-height);
   }
 }
 
-.list-sm{
+.list-sm {
   @include list-base;
-  .list-item{
+
+  .list-item {
     height: var(--list-item-height-sm);
     padding: var(--list-item-padding-sm);
     line-height: var(--list-item-height-sm);
   }
 }
 
-.list-md{
+.list-md {
   @include list-base;
-  .list-item{
+
+  .list-item {
     height: var(--list-item-height-md);
     padding: var(--list-item-padding-md);
     line-height: var(--list-item-height-md);
   }
 }
 
-.list-lg{
+.list-lg {
   @include list-base;
-  .list-item{
+
+  .list-item {
     height: var(--list-item-height-lg);
     padding: var(--list-item-padding-lg);
     line-height: var(--list-item-height-lg);

@@ -74,6 +74,17 @@ $colors: (
         "neutral-night": var(--neutral-color-night),
         "light-night": var(--light-color-night),
         "dark-night": var(--dark-color-night),
+        // Ghost light
+        "primary-ghost-light": var(--primary-color-ghost-light),
+        "secondary-ghost-light": var(--secondary-color-ghost-light),
+        "tertiary-ghost-light": var(--tertiary-color-ghost-light),
+        "success-ghost-light": var(--success-color-ghost-light),
+        "info-ghost-light": var(--info-color-ghost-light),
+        "warning-ghost-light": var(--warning-color-ghost-light),
+        "danger-ghost-light": var(--danger-color-ghost-light),
+        "neutral-ghost-light": var(--neutral-color-ghost-light),
+        "light-ghost-light": var(--light-color-ghost-light),
+        "dark-ghost-light": var(--dark-color-ghost-light),
         // Ghost
         "primary-ghost": var(--primary-color-ghost),
         "secondary-ghost": var(--secondary-color-ghost),
@@ -85,6 +96,17 @@ $colors: (
         "neutral-ghost": var(--neutral-color-ghost),
         "light-ghost": var(--light-color-ghost),
         "dark-ghost": var(--dark-color-ghost),
+        // Ghost dark
+        "primary-ghost-dark": var(--primary-color-ghost-dark),
+        "secondary-ghost-dark": var(--secondary-color-ghost-dark),
+        "tertiary-ghost-dark": var(--tertiary-color-ghost-dark),
+        "success-ghost-dark": var(--success-color-ghost-dark),
+        "info-ghost-dark": var(--info-color-ghost-dark),
+        "warning-ghost-dark": var(--warning-color-ghost-dark),
+        "danger-ghost-dark": var(--danger-color-ghost-dark),
+        "neutral-ghost-dark": var(--neutral-color-ghost-dark),
+        "light-ghost-dark": var(--light-color-ghost-dark),
+        "dark-ghost-dark": var(--dark-color-ghost-dark),
 );
 
 

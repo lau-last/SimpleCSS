@@ -16,40 +16,49 @@
     <title>Framework</title>
 </head>
 <body>
-<header class="bg-primary p-2 d-flex jc-between ai-center">
-    <a href="/" class="fw-400 no-underline text-white">SimpleCSS</a>
-    <div class="d-flex gap-1 gap-2-xs">
-        <div class="dropdown">
-            <button class="btn btn-primary-dark"
-                    data-js="dropdown"
-                    data-target="#dropdown-bottom-left"
-                    aria-controls="dropdown-bottom-left"
-                    aria-expanded="false">
-                Themes
-            </button>
-            <div class="dropdown-body bottom right" id="dropdown-bottom-left">
-                <ul class="list list-hover list-borderless">
-                    <li class="list-item list-warning text-base" onclick="themeLight()">☀️<span class="ms-1">Light</span></li>
-                    <li class="list-item list-dark-light text-base" onclick="themeDark()">🌙<span class="ms-1">Dark</span></li>
-                    <li class="list-item list-primary text-base" onclick="themeSystem()">💻<span class="ms-1">System</span></li>
-                </ul>
-            </div>
-        </div>
-        <a href="https://github.com/lau-last/SimpleCSS/archive/refs/heads/main.zip" class="btn btn-primary-dark"
-           target="_blank">
-            Download
-        </a>
-        <button class="btn btn-primary-dark d-none-md" data-js="aside" data-target="#aside">Menu</button>
+
+<div class="dropdown">
+    <button class="btn btn-primary-dark" data-js="dropdown" data-target="#dropdown-bottom-left" aria-controls="dropdown-bottom-left" aria-expanded="false">
+        Themes
+    </button>
+    <div class="dropdown-body side-right" id="dropdown-bottom-left">
+        <ul class="list list-hover list-borderless">
+            <li class="list-item list-warning text-base" onclick="themeLight()">☀️<span class="ms-1">Light</span></li>
+            <li class="list-item list-dark-light text-base" onclick="themeDark()">🌙<span class="ms-1">Dark</span></li>
+            <li class="list-item list-primary text-base" onclick="themeSystem()">💻<span class="ms-1">System</span></li>
+        </ul>
     </div>
-</header>
+</div>
+
+
+<div class="card p-2">
+    <div class="card-header">
+        <h2>💠 Examples</h2>
+    </div>
+    <div class="card-body d-flex fd-column gap-1">
+        <div class="btn-group">
+            <button class="btn-lg btn-primary-ghost">Button</button>
+            <button class="btn-lg btn-secondary-ghost">Button</button>
+            <button class="btn-lg btn-tertiary-ghost">Button</button>
+            <button class="btn-lg btn-success-ghost">Button</button>
+            <button class="btn-lg btn-info-ghost">Button</button>
+            <button class="btn-lg btn-warning-ghost">Button</button>
+            <button class="btn-lg btn-danger-ghost">Button</button>
+            <button class="btn-lg btn-neutral-ghost">Button</button>
+            <button class="btn-lg btn-light-ghost">Button</button>
+            <button class="btn-lg btn-dark-ghost">Button</button>
+        </div>
+    </div>
+</div>
+
 <div class="tab">
-    <button class="tab-btn outline-neutral active" type="button" data-js="tab" data-target="#tab-demo-1" role="tab" aria-selected="true" aria-controls="tab-demo-1">
+    <button class="tab-btn active" type="button" data-js="tab" data-target="#tab-demo-1" role="tab" aria-selected="true" aria-controls="tab-demo-1">
         Tab 1
     </button>
-    <button class="tab-btn outline-neutral" type="button" data-js="tab" data-target="#tab-demo-2" role="tab" aria-selected="false" aria-controls="tab-demo-2">
+    <button class="tab-btn" type="button" data-js="tab" data-target="#tab-demo-2" role="tab" aria-selected="false" aria-controls="tab-demo-2">
         Tab 2
     </button>
-    <button class="tab-btn outline-neutral" type="button" data-js="tab" data-target="#tab-demo-3" role="tab" aria-selected="false" aria-controls="tab-demo-3">
+    <button class="tab-btn" type="button" data-js="tab" data-target="#tab-demo-3" role="tab" aria-selected="false" aria-controls="tab-demo-3">
         Tab 3
     </button>
 </div>
@@ -66,189 +75,7 @@
     <h3>Tab 3</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, facere.</p>
 </div>
-<table class="table table-hover border-primary">
-    <thead class="table-hover table-light">
-    <tr>
-        <th>Person</th>
-        <th>Most interest in</th>
-        <th>Age</th>
-    </tr>
-    </thead>
-    <tbody class="table-hover">
-    <tr class="table-primary-pastel">
-        <th>Chris</th>
-        <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
-            dolor sit.
-        </td>
-        <td>22</td>
-    </tr>
-    <tr class="table-primary-light">
-        <th>Dennis</th>
-        <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
-            dolor sit.
-        </td>
-        <td>45</td>
-    </tr>
-    <tr class="table-primary">
-        <th>Sarah</th>
-        <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
-            dolor sit.
-        </td>
-        <td>29</td>
-    </tr>
-    <tr class="table-primary-dark">
-        <th>Karen</th>
-        <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
-            dolor sit.
-        </td>
-        <td>36</td>
-    </tr>
-    <tr class="table-primary-night">
-        <th>Karen</th>
-        <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
-            dolor sit.
-        </td>
-        <td>36</td>
-    </tr>
-    </tbody>
-    <tfoot class="table-hover table-dark">
-    <tr>
-        <th>Average age</th>
-        <td>Lorem ipsum dolor sit Lorem ipsum dolor sit. orem ipsum dolor sit Lorem ipsum
-            dolor sit.
-        </td>
-        <td>36</td>
-    </tr>
-    </tfoot>
-</table>
 
-<!--<div class="dropdown">-->
-<!--    <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom" aria-controls="dropdown-bottom" aria-expanded="false">-->
-<!--        bottom left-->
-<!--    </button>-->
-<!--    <div class="dropdown-body bottom left" id="dropdown-bottom">-->
-<!--        <ul class="list list-hover">-->
-<!--            <li><a class="list-item" href="#">Dropdown bottom left menu</a></li>-->
-<!--            <li><a class="list-item" href="#">Dropdown bottom left menu</a></li>-->
-<!--            <li><a class="list-item" href="#">Dropdown bottom left menu</a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<div class="card p-2">-->
-<!--    <div class="card-header d-flex ai-baseline">-->
-<!--        <h2>💠 Example</h2>-->
-<!--        <span class="ml-1">(Single)</span>-->
-<!--    </div>-->
-<!--    <div class="card-body">-->
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <div class="accordion">-->
-<!--                    <div class="accordion-item">-->
-<!--                        <button class="accordion-btn btn-tertiary-pastel" data-js="collapse" data-target="#single-2" aria-expanded="false" aria-controls="single-2">-->
-<!--                            Single-->
-<!--                        </button>-->
-<!--                        <div class="accordion-body" id="single-2">-->
-<!--                            <p class="p-1">-->
-<!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem-->
-<!--                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio-->
-<!--                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus-->
-<!--                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque-->
-<!--                                possimus voluptate! Architecto deserunt itaque sequi sint. Alias-->
-<!--                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?-->
-<!--                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis-->
-<!--                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,-->
-<!--                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit-->
-<!--                                inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis-->
-<!--                                pariatur ratione recusandae!-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="accordion-item">-->
-<!--                        <button class="accordion-btn btn-tertiary-light" data-js="collapse" data-target="#single-3" aria-expanded="false" aria-controls="single-3">-->
-<!--                            Single-->
-<!--                        </button>-->
-<!--                        <div class="accordion-body" id="single-3">-->
-<!--                            <p class="p-1">-->
-<!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem-->
-<!--                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio-->
-<!--                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus-->
-<!--                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque-->
-<!--                                possimus voluptate! Architecto deserunt itaque sequi sint. Alias-->
-<!--                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?-->
-<!--                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis-->
-<!--                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,-->
-<!--                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit-->
-<!--                                inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis-->
-<!--                                pariatur ratione recusandae!-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="accordion-item">-->
-<!--                        <button class="accordion-btn btn-tertiary" data-js="collapse" data-target="#single-4" aria-expanded="false" aria-controls="single-4">-->
-<!--                            Single-->
-<!--                        </button>-->
-<!--                        <div class="accordion-body" id="single-4">-->
-<!--                            <p class="p-1">-->
-<!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem-->
-<!--                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio-->
-<!--                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus-->
-<!--                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque-->
-<!--                                possimus voluptate! Architecto deserunt itaque sequi sint. Alias-->
-<!--                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?-->
-<!--                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis-->
-<!--                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,-->
-<!--                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit-->
-<!--                                inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis-->
-<!--                                pariatur ratione recusandae!-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="accordion-item">-->
-<!--                        <button class="accordion-btn btn-tertiary-dark" data-js="collapse" data-target="#single-5" aria-expanded="false" aria-controls="single-5">-->
-<!--                            Single-->
-<!--                        </button>-->
-<!--                        <div class="accordion-body" id="single-5">-->
-<!--                            <p class="p-1">-->
-<!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem-->
-<!--                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio-->
-<!--                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus-->
-<!--                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque-->
-<!--                                possimus voluptate! Architecto deserunt itaque sequi sint. Alias-->
-<!--                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?-->
-<!--                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis-->
-<!--                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,-->
-<!--                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit-->
-<!--                                inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis-->
-<!--                                pariatur ratione recusandae!-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="accordion-item">-->
-<!--                        <button class="accordion-btn btn-tertiary-night" data-js="collapse" data-target="#single-6" aria-expanded="false" aria-controls="single-6">-->
-<!--                            Single-->
-<!--                        </button>-->
-<!--                        <div class="accordion-body" id="single-6">-->
-<!--                            <p class="p-1">-->
-<!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem-->
-<!--                                doloremque hic ipsam ipsum modi voluptatibus? Amet aperiam fuga minus optio-->
-<!--                                velit. Labore mollitia, voluptatibus! Fuga iste natus sit tempora temporibus-->
-<!--                                vero! Adipisci delectus distinctio esse fuga maiores necessitatibus neque-->
-<!--                                possimus voluptate! Architecto deserunt itaque sequi sint. Alias-->
-<!--                                consequuntur culpa ea eligendi fugiat magni porro, quis soluta veniam vero?-->
-<!--                                Aut corporis dolores eum eveniet nostrum perferendis quae quaerat qui quis-->
-<!--                                rem! Aperiam culpa cupiditate libero minima neque nesciunt optio possimus,-->
-<!--                                quae qui tempore. Consequuntur dignissimos doloremque error facilis fugit-->
-<!--                                inventore, labore molestiae necessitatibus nemo, nesciunt officia omnis-->
-<!--                                pariatur ratione recusandae!-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 <script>
     function themeLight() {
         document.documentElement.setAttribute('data-theme', 'light');

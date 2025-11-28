@@ -17,7 +17,7 @@ $grays: (0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700,
 
 /* Main colors */
 $colors: (
-  // Regular
+        // Regular
         "primary": var(--primary-color),
         "secondary": var(--secondary-color),
         "tertiary": var(--tertiary-color),
@@ -30,29 +30,7 @@ $colors: (
         "dark": var(--dark-color),
         "black": var(--black-color),
         "white": var(--white-color),
-  // Light
-        "primary-light": var(--primary-color-light),
-        "secondary-light": var(--secondary-color-light),
-        "tertiary-light": var(--tertiary-color-light),
-        "success-light": var(--success-color-light),
-        "info-light": var(--info-color-light),
-        "warning-light": var(--warning-color-light),
-        "danger-light": var(--danger-color-light),
-        "neutral-light": var(--neutral-color-light),
-        "light-light": var(--light-color-light),
-        "dark-light": var(--dark-color-light),
-  // Dark
-        "primary-dark": var(--primary-color-dark),
-        "secondary-dark": var(--secondary-color-dark),
-        "tertiary-dark": var(--tertiary-color-dark),
-        "success-dark": var(--success-color-dark),
-        "info-dark": var(--info-color-dark),
-        "warning-dark": var(--warning-color-dark),
-        "danger-dark": var(--danger-color-dark),
-        "neutral-dark": var(--neutral-color-dark),
-        "light-dark": var(--light-color-dark),
-        "dark-dark": var(--dark-color-dark),
-  // Pastel
+        // Pastel
         "primary-pastel": var(--primary-color-pastel),
         "secondary-pastel": var(--secondary-color-pastel),
         "tertiary-pastel": var(--tertiary-color-pastel),
@@ -63,7 +41,29 @@ $colors: (
         "neutral-pastel": var(--neutral-color-pastel),
         "light-pastel": var(--light-color-pastel),
         "dark-pastel": var(--dark-color-pastel),
-  // Night
+        // Light
+        "primary-light": var(--primary-color-light),
+        "secondary-light": var(--secondary-color-light),
+        "tertiary-light": var(--tertiary-color-light),
+        "success-light": var(--success-color-light),
+        "info-light": var(--info-color-light),
+        "warning-light": var(--warning-color-light),
+        "danger-light": var(--danger-color-light),
+        "neutral-light": var(--neutral-color-light),
+        "light-light": var(--light-color-light),
+        "dark-light": var(--dark-color-light),
+        // Dark
+        "primary-dark": var(--primary-color-dark),
+        "secondary-dark": var(--secondary-color-dark),
+        "tertiary-dark": var(--tertiary-color-dark),
+        "success-dark": var(--success-color-dark),
+        "info-dark": var(--info-color-dark),
+        "warning-dark": var(--warning-color-dark),
+        "danger-dark": var(--danger-color-dark),
+        "neutral-dark": var(--neutral-color-dark),
+        "light-dark": var(--light-color-dark),
+        "dark-dark": var(--dark-color-dark),
+        // Night
         "primary-night": var(--primary-color-night),
         "secondary-night": var(--secondary-color-night),
         "tertiary-night": var(--tertiary-color-night),
@@ -74,6 +74,17 @@ $colors: (
         "neutral-night": var(--neutral-color-night),
         "light-night": var(--light-color-night),
         "dark-night": var(--dark-color-night),
+        // Ghost
+        "primary-ghost": var(--primary-color-ghost),
+        "secondary-ghost": var(--secondary-color-ghost),
+        "tertiary-ghost": var(--tertiary-color-ghost),
+        "success-ghost": var(--success-color-ghost),
+        "info-ghost": var(--info-color-ghost),
+        "warning-ghost": var(--warning-color-ghost),
+        "danger-ghost": var(--danger-color-ghost),
+        "neutral-ghost": var(--neutral-color-ghost),
+        "light-ghost": var(--light-color-ghost),
+        "dark-ghost": var(--dark-color-ghost),
 );
 
 
@@ -97,51 +108,139 @@ $colors: (
   }
 }
 
-/* Alerts */
-@each $name, $value in $colors {
-  .alert-#{$name} {
-    border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark) 10%);
-    background: #{$value};
-    color: var(--text-on-#{$name});
+.alert,
+.alert-sm,
+.alert-md,
+.alert-lg {
+  /* Alerts */
+  @each $name, $value in $colors {
+    .alert-#{$name} {
+      border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark) 10%);
+      background: #{$value};
+      color: var(--text-on-#{$name});
+    }
   }
 }
 
-/* Badges  */
-@each $name, $value in $colors {
-  .badge-#{$name} {
-    background-color: #{$value};
-    color: var(--text-on-#{$name});
+
+.badge,
+.badge-sm,
+.badge-md,
+.badge-lg {
+  /* Badges  */
+  @each $name, $value in $colors {
+    &.badge-#{$name} {
+      background-color: #{$value};
+      color: var(--text-on-#{$name});
+    }
+    &.outline-#{$name} {
+      background-color: transparent;
+      color: #{$value};
+      border-color: #{$value};
+      border-style: var(--border-style-outline);
+      border-width: var(--border-width-outline);
+    }
   }
 }
 
-/* Buttons */
-@each $name, $value in $colors {
-  .btn-#{$name} {
-    background-color: #{$value};
-    color: var(--text-on-#{$name});
+
+.btn,
+.btn-sm,
+.btn-md,
+.btn-lg,
+.tab-btn,
+.tab-btn-sm,
+.tab-btn-md,
+.tab-btn-lg,
+.collapse-btn,
+.collapse-btn-sm,
+.collapse-btn-md,
+.collapse-btn-lg,
+.accordion-btn,
+.accordion-btn-sm,
+.accordion-btn-md,
+.accordion-btn-lg {
+  /* Buttons  */
+  &:hover {
+    background-color: var(--button-hover-bg-color);
+
+    &:active {
+      background-color: var(--button-active-bg-color);
+    }
+  }
+
+  &.active {
+    background-color: var(--button-hover-bg-color);
+  }
+
+  @each $name, $value in $colors {
+    &.btn-#{$name} {
+      background-color: #{$value};
+      color: var(--text-on-#{$name});
+
+      &:hover {
+        background-color: var(--hover-on-#{$name});
+
+        &:active {
+          background-color: var(--active-on-#{$name});
+        }
+      }
+
+      &.active {
+        background-color: var(--hover-on-#{$name});
+      }
+    }
+    &.outline-#{$name} {
+      background-color: transparent;
+      color: #{$value};
+      border-color: #{$value};
+      border-style: var(--border-style-outline);
+      border-width: var(--border-width-outline);
+
+      &:hover {
+        background-color: #{$value};
+        color: var(--text-on-#{$name});
+
+        &:active {
+          background-color: var(--active-on-#{$name});
+          color: var(--text-on-#{$name});
+        }
+      }
+
+      &.active {
+        background-color: #{$value};
+        color: var(--text-on-#{$name});
+      }
+    }
   }
 }
 
-/* Card */
-@each $name, $value in $colors {
-  .card-#{$name} {
-    background-color: #{$value};
-    border-color: #{$value};
-    color: var(--text-on-#{$name});
+
+.card {
+  /* Card */
+  @each $name, $value in $colors {
+    &.card-#{$name} {
+      background-color: #{$value};
+      border-color: #{$value};
+      color: var(--text-on-#{$name});
+    }
   }
 }
 
-/* Collapse */
-@each $name, $value in $colors {
-  .collapse-#{$name} {
-    border-color: #{$value};
+.collapse {
+  /* Collapse */
+  @each $name, $value in $colors {
+    &.collapse-#{$name} {
+      border-color: #{$value};
+    }
   }
 }
 
 /* Background */
 .bg-base {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
+
 @each $name, $value in $colors {
   .bg-#{$name} {
     background-color: #{$value};
@@ -158,62 +257,6 @@ $colors: (
 }
 
 
-.btn,
-.btn-sm,
-.btn-md,
-.btn-lg {
-  &:hover {
-    background-color: var(--button-hover-bg-color);
-
-    &:active {
-      background-color: var(--button-active-bg-color);
-    }
-  }
-}
-
-@each $name, $value in $colors {
-  .btn-#{$name}:hover {
-    background-color: var(--hover-on-#{$name});
-
-    &:active,
-    &.active {
-      background-color: var(--active-on-#{$name});
-      color: var(--text-on-#{$name});
-    }
-  }
-}
-
-
-.btn,
-.btn-sm,
-.btn-md,
-.btn-lg,
-.tab-btn,
-.tab-btn-sm,
-.tab-btn-md,
-.tab-btn-lg {
-  @each $name, $value in $colors {
-    &.outline-#{$name} {
-      background-color: transparent;
-      color: #{$value};
-      border-color: #{$value};
-      border-style: var(--border-style-outline);
-      border-width: var(--border-width-outline);
-    }
-    &.outline-#{$name}:hover,
-    &.outline-#{$name}.active {
-      background-color: #{$value};
-      color: var(--text-on-#{$name});
-
-      &:active {
-        background-color: var(--active-on-#{$name});
-        color: var(--text-on-#{$name});
-      }
-    }
-  }
-}
-
-
 /* List */
 @mixin list-hover-default {
   background-color: var(--list-item-hover-bg-color);
@@ -224,6 +267,7 @@ $colors: (
     box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--list-item-active-bg-color);
   }
 }
+
 @mixin list-hover-color($name, $value) {
   background-color: color-mix(in srgb, #{$value} 15%, transparent);
   box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 #{$value};
@@ -232,6 +276,7 @@ $colors: (
     box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 #{$value};
   }
 }
+
 @each $name, $value in $colors {
   .list-#{$name} {
     border-color: color-mix(in srgb, #{$value} 50%, transparent);
@@ -242,6 +287,7 @@ $colors: (
     }
   }
 }
+
 .list,
 .list-sm,
 .list-md,
@@ -276,7 +322,6 @@ $colors: (
 }
 
 
-
 /* Generic hover behavior */
 @mixin table-hover-default {
   background-color: var(--table-hover-bg-color);
@@ -285,6 +330,7 @@ $colors: (
     background-color: var(--table-active-bg-color);
   }
 }
+
 /* Hover behavior for colored variants */
 @mixin table-hover-and-active-color($name, $value) {
   background-color: var(--hover-on-#{$name});
@@ -352,9 +398,6 @@ table.table {
 }
 
 
-
-
-
 /* Links */
 @each $name, $value in $colors {
   .link-#{$name} {
@@ -363,14 +406,18 @@ table.table {
     color: #{$value};
     text-decoration-color: #{$value};
 
+    &.active{
+      background-color: transparent;
+      color: var(--hover-on-#{$name});
+      text-decoration-color: var(--active-on-#{$name});
+    }
+
     &:hover {
       background-color: transparent;
-      text-decoration: underline;
       color: var(--hover-on-#{$name});
       text-decoration-color: var(--hover-on-#{$name});
 
-      &:active,
-      &.active {
+      &:active{
         background-color: transparent;
         color: var(--active-on-#{$name});
         text-decoration-color: var(--active-on-#{$name});
@@ -379,12 +426,16 @@ table.table {
   }
 }
 
-
-/* Navbar */
-@each $name, $value in $colors {
-  .navbar-#{$name} {
-    background: #{$value};
-    color: var(--text-on-#{$name});
+.navbar,
+.navbar-sm,
+.navbar-md,
+.navbar-lg {
+  /* Navbar */
+  @each $name, $value in $colors {
+    &.navbar-#{$name} {
+      background: #{$value};
+      color: var(--text-on-#{$name});
+    }
   }
 }
 
@@ -393,6 +444,7 @@ table.table {
 .text-base {
   color: var(--text-color);
 }
+
 @each $name, $value in $colors {
   .text-#{$name} {
     color: #{$value};

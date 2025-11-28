@@ -46,6 +46,16 @@
   padding: var(--list-item-padding);
   height: var(--list-item-height);
 }
+.list .list-item > .list-link {
+  display: block;
+  width: 100%;
+  padding: var(--list-item-padding);
+  line-height: var(--list-item-height);
+  height: var(--list-item-height);
+}
+.list .list-item:has(.list-link) {
+  padding: 0;
+}
 
 .list-sm {
   list-style: none;
@@ -94,6 +104,16 @@
   height: var(--list-item-height-sm);
   padding: var(--list-item-padding-sm);
   line-height: var(--list-item-height-sm);
+}
+.list-sm .list-item > .list-link {
+  display: block;
+  width: 100%;
+  padding: var(--list-item-padding-sm);
+  line-height: var(--list-item-height-sm);
+  height: var(--list-item-height-sm);
+}
+.list-sm .list-item:has(.list-link) {
+  padding: 0;
 }
 
 .list-md {
@@ -144,6 +164,16 @@
   padding: var(--list-item-padding-md);
   line-height: var(--list-item-height-md);
 }
+.list-md .list-item > .list-link {
+  display: block;
+  width: 100%;
+  padding: var(--list-item-padding-md);
+  line-height: var(--list-item-height-md);
+  height: var(--list-item-height-md);
+}
+.list-md .list-item:has(.list-link) {
+  padding: 0;
+}
 
 .list-lg {
   list-style: none;
@@ -192,4 +222,14 @@
   height: var(--list-item-height-lg);
   padding: var(--list-item-padding-lg);
   line-height: var(--list-item-height-lg);
+}
+.list-lg .list-item > .list-link {
+  display: block;
+  width: 100%;
+  padding: var(--list-item-padding-lg);
+  line-height: var(--list-item-height-lg);
+  height: var(--list-item-height-lg);
+}
+.list-lg .list-item:has(.list-link) {
+  padding: 0;
 }

@@ -24,7 +24,7 @@ export default class Dropdown {
             Dropdown.toggleDropdown(dropdown, button);
             return;
         }
-        if (target.closest('.dropdown-menu.show')) {
+        if (target.closest('.dropdown-body.show')) {
             return;
         }
         Dropdown.closeAllDropdowns();
@@ -57,7 +57,7 @@ export default class Dropdown {
         dropdown.addEventListener('transitionend', onTransitionEnd, { once: true });
     }
     static closeAllDropdownsExcept(exception) {
-        const dropdowns = document.querySelectorAll('.dropdown-menu.show');
+        const dropdowns = document.querySelectorAll('.dropdown-body.show');
         dropdowns.forEach(dropdown => {
             if (dropdown !== exception) {
                 const button = Dropdown.getButtonForDropdown(dropdown);
@@ -68,7 +68,7 @@ export default class Dropdown {
         });
     }
     static closeAllDropdowns() {
-        const dropdowns = document.querySelectorAll('.dropdown-menu.show');
+        const dropdowns = document.querySelectorAll('.dropdown-body.show');
         dropdowns.forEach(dropdown => {
             const button = Dropdown.getButtonForDropdown(dropdown);
             if (!button)

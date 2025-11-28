@@ -14,12 +14,6 @@ $spacings: (
         "auto": auto
 );
 
-/* Gap helpers (no auto) */
-@each $key, $value in $spacings {
-    @if $key != "auto" {
-        .gap-#{$key} { gap: $value; }
-    }
-}
 
 /* Utility mixin: generate spacing classes
    $allow-auto: set to false to skip "auto" (e.g., for padding) */
@@ -37,6 +31,9 @@ $spacings: (
             .#{$prefix}x-#{$key} { #{$property}-left: $value; #{$property}-right: $value; }
             .#{$prefix}y-#{$key} { #{$property}-top: $value;  #{$property}-bottom: $value; }
         }
+        @if $key != "auto" {
+            .gap-#{$key} { gap: $value; }
+        }
     }
 
     // Responsive
@@ -53,6 +50,9 @@ $spacings: (
                     .#{$prefix}e-#{$key}-#{$bp} { #{$property}-right: $value; }
                     .#{$prefix}x-#{$key}-#{$bp} { #{$property}-left: $value; #{$property}-right: $value; }
                     .#{$prefix}y-#{$key}-#{$bp} { #{$property}-top: $value;  #{$property}-bottom: $value; }
+                }
+                @if $key != "auto" {
+                    .gap-#{$key}-#{$bp} { gap: $value; }
                 }
             }
         }

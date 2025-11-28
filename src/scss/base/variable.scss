@@ -55,6 +55,70 @@
   --text-on-neutral: var(--black-color);
   --text-on-success: var(--black-color);
   --text-on-warning: var(--black-color);
+  --hover-on-primary:   color-mix(in srgb, var(--primary-color)   90%, var(--color-mix-dark) 10%);
+  --hover-on-secondary:  color-mix(in srgb, var(--secondary-color) 90%, var(--color-mix-dark) 10%);
+  --hover-on-tertiary:  color-mix(in srgb, var(--tertiary-color) 90%, var(--color-mix-dark) 10%);
+  --hover-on-dark:   color-mix(in srgb, var(--dark-color)   90%, var(--color-mix-light) 10%);
+  --hover-on-danger:   color-mix(in srgb, var(--danger-color)   90%, var(--color-mix-dark) 10%);
+  --hover-on-info:   color-mix(in srgb, var(--info-color)   90%, var(--color-mix-dark) 10%);
+  --hover-on-light:   color-mix(in srgb, var(--light-color)   90%, var(--color-mix-dark) 10%);
+  --hover-on-neutral:   color-mix(in srgb, var(--neutral-color)   90%, var(--color-mix-dark) 10%);
+  --hover-on-success:   color-mix(in srgb, var(--success-color)   90%, var(--color-mix-dark) 10%);
+  --hover-on-warning:   color-mix(in srgb, var(--warning-color)   90%, var(--color-mix-dark) 10%);
+  --active-on-primary:  color-mix(in srgb, var(--primary-color)   80%, var(--color-mix-dark) 20%);
+  --active-on-secondary: color-mix(in srgb, var(--secondary-color) 80%, var(--color-mix-dark) 20%);
+  --active-on-tertiary: color-mix(in srgb, var(--tertiary-color) 80%, var(--color-mix-dark) 20%);
+  --active-on-dark:  color-mix(in srgb, var(--dark-color)   80%, var(--color-mix-light) 20%);
+  --active-on-danger:  color-mix(in srgb, var(--danger-color)   80%, var(--color-mix-dark) 20%);
+  --active-on-info:  color-mix(in srgb, var(--info-color)   80%, var(--color-mix-dark) 20%);
+  --active-on-light:  color-mix(in srgb, var(--light-color)   80%, var(--color-mix-dark) 20%);
+  --active-on-neutral:  color-mix(in srgb, var(--neutral-color)   80%, var(--color-mix-dark) 20%);
+  --active-on-success:  color-mix(in srgb, var(--success-color)   80%, var(--color-mix-dark) 20%);
+  --active-on-warning:  color-mix(in srgb, var(--warning-color)   80%, var(--color-mix-dark) 20%);
+
+
+  /* Pastel variants (based on color-mix-light) */
+  --primary-color-pastel: color-mix(in srgb, var(--primary-color) 35%, var(--color-mix-light));
+  --secondary-color-pastel: color-mix(in srgb, var(--secondary-color) 35%, var(--color-mix-light));
+  --tertiary-color-pastel: color-mix(in srgb, var(--tertiary-color) 35%, var(--color-mix-light));
+  --dark-color-pastel: color-mix(in srgb, var(--dark-color) 35%, var(--color-mix-light));
+  --danger-color-pastel: color-mix(in srgb, var(--danger-color) 35%, var(--color-mix-light));
+  --info-color-pastel: color-mix(in srgb, var(--info-color) 35%, var(--color-mix-light));
+  --light-color-pastel: color-mix(in srgb, var(--light-color) 35%, var(--color-mix-light));
+  --neutral-color-pastel: color-mix(in srgb, var(--neutral-color) 35%, var(--color-mix-light));
+  --success-color-pastel: color-mix(in srgb, var(--success-color) 35%, var(--color-mix-light));
+  --warning-color-pastel: color-mix(in srgb, var(--warning-color) 35%, var(--color-mix-light));
+  --text-on-primary-pastel: var(--black-color);
+  --text-on-secondary-pastel: var(--black-color);
+  --text-on-tertiary-pastel: var(--black-color);
+  --text-on-dark-pastel: var(--black-color);
+  --text-on-danger-pastel: var(--black-color);
+  --text-on-info-pastel: var(--black-color);
+  --text-on-light-pastel: var(--black-color);
+  --text-on-neutral-pastel: var(--black-color);
+  --text-on-success-pastel: var(--black-color);
+  --text-on-warning-pastel: var(--black-color);
+  --hover-on-primary-pastel:   color-mix(in srgb, var(--primary-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-secondary-pastel:   color-mix(in srgb, var(--secondary-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-tertiary-pastel:   color-mix(in srgb, var(--tertiary-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-dark-pastel:   color-mix(in srgb, var(--dark-color-pastel)   90%, var(--color-mix-light) 10%);
+  --hover-on-danger-pastel:   color-mix(in srgb, var(--danger-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-info-pastel:   color-mix(in srgb, var(--info-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-light-pastel:   color-mix(in srgb, var(--light-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-neutral-pastel:   color-mix(in srgb, var(--neutral-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-success-pastel:   color-mix(in srgb, var(--success-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --hover-on-warning-pastel:   color-mix(in srgb, var(--warning-color-pastel)   90%, var(--color-mix-dark) 10%);
+  --active-on-primary-pastel:  color-mix(in srgb, var(--primary-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-secondary-pastel:  color-mix(in srgb, var(--secondary-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-tertiary-pastel:  color-mix(in srgb, var(--tertiary-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-dark-pastel:  color-mix(in srgb, var(--dark-color-pastel)   80%, var(--color-mix-light) 20%);
+  --active-on-danger-pastel:  color-mix(in srgb, var(--danger-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-info-pastel:  color-mix(in srgb, var(--info-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-light-pastel:  color-mix(in srgb, var(--light-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-neutral-pastel:  color-mix(in srgb, var(--neutral-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-success-pastel:  color-mix(in srgb, var(--success-color-pastel)   80%, var(--color-mix-dark) 20%);
+  --active-on-warning-pastel:  color-mix(in srgb, var(--warning-color-pastel)   80%, var(--color-mix-dark) 20%);
+
 
   /* Light variants (based on color-mix-light) */
   --primary-color-light: color-mix(in srgb, var(--primary-color) 75%, var(--color-mix-light));
@@ -77,6 +141,27 @@
   --text-on-neutral-light: var(--black-color);
   --text-on-success-light: var(--black-color);
   --text-on-warning-light: var(--black-color);
+  --hover-on-primary-light:   color-mix(in srgb, var(--primary-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-secondary-light:   color-mix(in srgb, var(--secondary-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-tertiary-light:   color-mix(in srgb, var(--tertiary-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-dark-light:   color-mix(in srgb, var(--dark-color-light)   90%, var(--color-mix-light) 10%);
+  --hover-on-danger-light:   color-mix(in srgb, var(--danger-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-info-light:   color-mix(in srgb, var(--info-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-light-light:   color-mix(in srgb, var(--light-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-neutral-light:   color-mix(in srgb, var(--neutral-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-success-light:   color-mix(in srgb, var(--success-color-light)   90%, var(--color-mix-dark) 10%);
+  --hover-on-warning-light:   color-mix(in srgb, var(--warning-color-light)   90%, var(--color-mix-dark) 10%);
+  --active-on-primary-light:  color-mix(in srgb, var(--primary-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-secondary-light:  color-mix(in srgb, var(--secondary-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-tertiary-light:  color-mix(in srgb, var(--tertiary-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-dark-light:  color-mix(in srgb, var(--dark-color-light)   80%, var(--color-mix-light) 20%);
+  --active-on-danger-light:  color-mix(in srgb, var(--danger-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-info-light:  color-mix(in srgb, var(--info-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-light-light:  color-mix(in srgb, var(--light-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-neutral-light:  color-mix(in srgb, var(--neutral-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-success-light:  color-mix(in srgb, var(--success-color-light)   80%, var(--color-mix-dark) 20%);
+  --active-on-warning-light:  color-mix(in srgb, var(--warning-color-light)   80%, var(--color-mix-dark) 20%);
+
 
 
   /* Dark variants (based on color-mix-dark) */
@@ -99,7 +184,72 @@
   --text-on-light-dark: var(--black-color);
   --text-on-neutral-dark: var(--white-color);
   --text-on-success-dark: var(--white-color);
-  --text-on-warning-dark: var(--black-color);
+  --text-on-warning-dark: var(--white-color);
+  --hover-on-primary-dark:   color-mix(in srgb, var(--primary-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-secondary-dark:   color-mix(in srgb, var(--secondary-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-tertiary-dark:   color-mix(in srgb, var(--tertiary-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-dark-dark:   color-mix(in srgb, var(--dark-color-dark)   90%, var(--color-mix-light) 10%);
+  --hover-on-danger-dark:   color-mix(in srgb, var(--danger-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-info-dark:   color-mix(in srgb, var(--info-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-light-dark:   color-mix(in srgb, var(--light-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-neutral-dark:   color-mix(in srgb, var(--neutral-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-success-dark:   color-mix(in srgb, var(--success-color-dark)   90%, var(--color-mix-dark) 10%);
+  --hover-on-warning-dark:   color-mix(in srgb, var(--warning-color-dark)   90%, var(--color-mix-dark) 10%);
+  --active-on-primary-dark:  color-mix(in srgb, var(--primary-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-secondary-dark:  color-mix(in srgb, var(--secondary-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-tertiary-dark:  color-mix(in srgb, var(--tertiary-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-dark-dark:  color-mix(in srgb, var(--dark-color-dark)   80%, var(--color-mix-light) 20%);
+  --active-on-danger-dark:  color-mix(in srgb, var(--danger-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-info-dark:  color-mix(in srgb, var(--info-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-light-dark:  color-mix(in srgb, var(--light-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-neutral-dark:  color-mix(in srgb, var(--neutral-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-success-dark:  color-mix(in srgb, var(--success-color-dark)   80%, var(--color-mix-dark) 20%);
+  --active-on-warning-dark:  color-mix(in srgb, var(--warning-color-dark)   80%, var(--color-mix-dark) 20%);
+
+
+  /* Night variants (based on color-mix-dark) */
+  --primary-color-night: color-mix(in srgb, var(--primary-color) 25%, var(--color-mix-dark));
+  --secondary-color-night: color-mix(in srgb, var(--secondary-color) 25%, var(--color-mix-dark));
+  --tertiary-color-night: color-mix(in srgb, var(--tertiary-color) 25%, var(--color-mix-dark));
+  --dark-color-night: color-mix(in srgb, var(--dark-color) 25%, var(--color-mix-dark));
+  --danger-color-night: color-mix(in srgb, var(--danger-color) 25%, var(--color-mix-dark));
+  --info-color-night: color-mix(in srgb, var(--info-color) 25%, var(--color-mix-dark));
+  --light-color-night: color-mix(in srgb, var(--light-color) 25%, var(--color-mix-dark));
+  --neutral-color-night: color-mix(in srgb, var(--neutral-color) 25%, var(--color-mix-dark));
+  --success-color-night: color-mix(in srgb, var(--success-color) 25%, var(--color-mix-dark));
+  --warning-color-night: color-mix(in srgb, var(--warning-color) 25%, var(--color-mix-dark));
+  --text-on-primary-night: var(--white-color);
+  --text-on-secondary-night: var(--white-color);
+  --text-on-tertiary-night: var(--white-color);
+  --text-on-dark-night: var(--white-color);
+  --text-on-danger-night: var(--white-color);
+  --text-on-info-night: var(--white-color);
+  --text-on-light-night: var(--white-color);
+  --text-on-neutral-night: var(--white-color);
+  --text-on-success-night: var(--white-color);
+  --text-on-warning-night: var(--white-color);
+  --hover-on-primary-night:   color-mix(in srgb, var(--primary-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-secondary-night:   color-mix(in srgb, var(--secondary-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-tertiary-night:   color-mix(in srgb, var(--tertiary-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-dark-night:   color-mix(in srgb, var(--dark-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-danger-night:   color-mix(in srgb, var(--danger-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-info-night:   color-mix(in srgb, var(--info-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-light-night:   color-mix(in srgb, var(--light-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-neutral-night:   color-mix(in srgb, var(--neutral-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-success-night:   color-mix(in srgb, var(--success-color-night)   90%, var(--color-mix-light) 10%);
+  --hover-on-warning-night:   color-mix(in srgb, var(--warning-color-night)   90%, var(--color-mix-light) 10%);
+  --active-on-primary-night:  color-mix(in srgb, var(--primary-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-secondary-night:  color-mix(in srgb, var(--secondary-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-tertiary-night:  color-mix(in srgb, var(--tertiary-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-dark-night:  color-mix(in srgb, var(--dark-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-danger-night:  color-mix(in srgb, var(--danger-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-info-night:  color-mix(in srgb, var(--info-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-light-night:  color-mix(in srgb, var(--light-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-neutral-night:  color-mix(in srgb, var(--neutral-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-success-night:  color-mix(in srgb, var(--success-color-night)   80%, var(--color-mix-light) 20%);
+  --active-on-warning-night:  color-mix(in srgb, var(--warning-color-night)   80%, var(--color-mix-light) 20%);
+
+
 
 
   /* Derived color helpers */
@@ -258,7 +408,7 @@
 
   /* Dropdown */
   --dropdown-body-box-shadow: var(--box-shadow);
-  --dropdown-body-min-width: 10rem;
+  --dropdown-body-min-width: 15rem;
   --dropdown-body-spacing-margin: .5rem;
 
 
@@ -341,8 +491,8 @@
   --list-item-height-md: 3rem;
   --list-item-height-lg: 4rem;
   --list-item-padding: 0 1.5rem;
-  --list-item-padding-sm: 0 0.5rem;
-  --list-item-padding-md: 0 1rem;
+  --list-item-padding-sm: 0 1rem;
+  --list-item-padding-md: 0 1.5rem;
   --list-item-padding-lg: 0 2rem;
   --list-item-border-width: var(--list-border-width);
   --list-item-border-style: var(--list-border-style);

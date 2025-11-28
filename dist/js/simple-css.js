@@ -612,7 +612,7 @@
         _Dropdown.toggleDropdown(dropdown, button);
         return;
       }
-      if (target.closest(".dropdown-menu.show")) {
+      if (target.closest(".dropdown-body.show")) {
         return;
       }
       _Dropdown.closeAllDropdowns();
@@ -642,7 +642,7 @@
       dropdown.addEventListener("transitionend", onTransitionEnd, { once: true });
     }
     static closeAllDropdownsExcept(exception) {
-      const dropdowns = document.querySelectorAll(".dropdown-menu.show");
+      const dropdowns = document.querySelectorAll(".dropdown-body.show");
       dropdowns.forEach((dropdown) => {
         if (dropdown !== exception) {
           const button = _Dropdown.getButtonForDropdown(dropdown);
@@ -652,7 +652,7 @@
       });
     }
     static closeAllDropdowns() {
-      const dropdowns = document.querySelectorAll(".dropdown-menu.show");
+      const dropdowns = document.querySelectorAll(".dropdown-body.show");
       dropdowns.forEach((dropdown) => {
         const button = _Dropdown.getButtonForDropdown(dropdown);
         if (!button) return;

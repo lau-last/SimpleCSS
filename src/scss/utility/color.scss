@@ -28,6 +28,8 @@ $colors: (
         "neutral": var(--neutral-color),
         "light": var(--light-color),
         "dark": var(--dark-color),
+        "black": var(--black-color),
+        "white": var(--white-color),
   // Light
         "primary-light": var(--primary-color-light),
         "secondary-light": var(--secondary-color-light),
@@ -50,6 +52,28 @@ $colors: (
         "neutral-dark": var(--neutral-color-dark),
         "light-dark": var(--light-color-dark),
         "dark-dark": var(--dark-color-dark),
+  // Pastel
+        "primary-pastel": var(--primary-color-pastel),
+        "secondary-pastel": var(--secondary-color-pastel),
+        "tertiary-pastel": var(--tertiary-color-pastel),
+        "success-pastel": var(--success-color-pastel),
+        "info-pastel": var(--info-color-pastel),
+        "warning-pastel": var(--warning-color-pastel),
+        "danger-pastel": var(--danger-color-pastel),
+        "neutral-pastel": var(--neutral-color-pastel),
+        "light-pastel": var(--light-color-pastel),
+        "dark-pastel": var(--dark-color-pastel),
+  // Night
+        "primary-night": var(--primary-color-night),
+        "secondary-night": var(--secondary-color-night),
+        "tertiary-night": var(--tertiary-color-night),
+        "success-night": var(--success-color-night),
+        "info-night": var(--info-color-night),
+        "warning-night": var(--warning-color-night),
+        "danger-night": var(--danger-color-night),
+        "neutral-night": var(--neutral-color-night),
+        "light-night": var(--light-color-night),
+        "dark-night": var(--dark-color-night),
 );
 
 
@@ -63,10 +87,11 @@ $colors: (
 @each $name, $value in $colors {
   .accordion-#{$name} {
     border-color: #{$value};
+
     .accordion-btn,
     .accordion-btn-sm,
     .accordion-btn-md,
-    .accordion-btn-lg{
+    .accordion-btn-lg {
       --accordion-border-color: #{$value};
     }
   }
@@ -83,7 +108,7 @@ $colors: (
 
 /* Badges  */
 @each $name, $value in $colors {
-  .badge-#{$name}{
+  .badge-#{$name} {
     background-color: #{$value};
     color: var(--text-on-#{$name});
   }
@@ -106,8 +131,17 @@ $colors: (
   }
 }
 
+/* Collapse */
+@each $name, $value in $colors {
+  .collapse-#{$name} {
+    border-color: #{$value};
+  }
+}
 
 /* Background */
+.bg-base {
+    background-color: var(--bg-color);
+}
 @each $name, $value in $colors {
   .bg-#{$name} {
     background-color: #{$value};
@@ -124,24 +158,6 @@ $colors: (
 }
 
 
-
-/* Button hover */
-@function button-hover($name, $value) {
-  @if ($name == 'dark' or $name == 'dark-light' or $name == 'dark-dark') {
-    @return color-mix(in srgb, #{$value} 90%, var(--color-mix-light) 10%);
-  } @else {
-    @return color-mix(in srgb, #{$value} 90%, var(--color-mix-dark) 10%);
-  }
-}
-
-@function button-active($name, $value) {
-  @if ($name == 'dark' or $name == 'dark-light' or $name == 'dark-dark') {
-    @return color-mix(in srgb, #{$value} 80%, var(--color-mix-light) 20%);
-  } @else {
-    @return color-mix(in srgb, #{$value} 80%, var(--color-mix-dark) 20%);
-  }
-}
-
 .btn,
 .btn-sm,
 .btn-md,
@@ -157,11 +173,11 @@ $colors: (
 
 @each $name, $value in $colors {
   .btn-#{$name}:hover {
-    background-color: button-hover($name, $value);
+    background-color: var(--hover-on-#{$name});
 
     &:active,
     &.active {
-      background-color: button-active($name, $value);
+      background-color: var(--active-on-#{$name});
       color: var(--text-on-#{$name});
     }
   }
@@ -190,7 +206,7 @@ $colors: (
       color: var(--text-on-#{$name});
 
       &:active {
-        background-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark));
+        background-color: var(--active-on-#{$name});
         color: var(--text-on-#{$name});
       }
     }
@@ -211,9 +227,9 @@ $colors: (
 @mixin list-hover-color($name, $value) {
   background-color: color-mix(in srgb, #{$value} 15%, transparent);
   box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 #{$value};
-  &:active{
+  &:active {
     background-color: color-mix(in srgb, #{$value} 30%, transparent);
-    box-shadow: inset var(--list-border-width-inside-hover)0 0 0 #{$value};
+    box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 #{$value};
   }
 }
 @each $name, $value in $colors {
@@ -226,7 +242,6 @@ $colors: (
     }
   }
 }
-
 .list,
 .list-sm,
 .list-md,
@@ -237,8 +252,8 @@ $colors: (
     }
 
     @each $name, $value in $colors {
-      &.list-#{$name} .list-item:hover {
-       @include list-hover-color($name, $value);
+      &.list-#{$name} .list-item:not(.list-hover):hover {
+        @include list-hover-color($name, $value);
       }
       .list-item.list-#{$name}:hover {
         @include list-hover-color($name, $value);
@@ -251,35 +266,37 @@ $colors: (
   }
 
   @each $name, $value in $colors {
-    &.list-#{$name} .list-item.list-hover:hover {
+    &.list-#{$name} .list-item:not(.list-hover):hover {
       @include list-hover-color($name, $value);
     }
     .list-item.list-#{$name}.list-hover:hover {
       @include list-hover-color($name, $value);
     }
   }
-
 }
 
 
-/* Tables */
-@function table-hover-bg($name, $value) {
-  @if ($name == 'dark' or $name == 'dark-light' or $name == 'dark-dark') {
-    @return color-mix(in srgb, #{$value} 90%, var(--color-mix-light) 10%);
-  } @else {
-    @return color-mix(in srgb, #{$value} 80%, var(--color-mix-dark) 20%);
+
+/* Generic hover behavior */
+@mixin table-hover-default {
+  background-color: var(--table-hover-bg-color);
+  &:active,
+  &.active {
+    background-color: var(--table-active-bg-color);
+  }
+}
+/* Hover behavior for colored variants */
+@mixin table-hover-and-active-color($name, $value) {
+  background-color: var(--hover-on-#{$name});
+
+  &:active,
+  &.active {
+    background-color: var(--active-on-#{$name});
   }
 }
 
-@function table-active-bg($name, $value) {
-  @if ($name == 'dark' or $name == 'dark-light' or $name == 'dark-dark') {
-    @return color-mix(in srgb, #{$value} 80%, var(--color-mix-light) 20%);
-  } @else {
-    @return color-mix(in srgb, #{$value} 70%, var(--color-mix-dark) 30%);
-  }
-}
-
-table {
+table.table {
+  /* Base table-hover behavior (no color variant) */
   &.table-hover tr:hover,
   thead.table-hover tr:hover,
   tbody.table-hover tr:hover,
@@ -287,99 +304,58 @@ table {
   tr.table-hover:hover,
   td.table-hover:hover,
   th.table-hover:hover {
-    background-color: var(--table-hover-bg-color);
-
-    &:active,
-    &.active {
-      background-color: var(--table-active-bg-color);
-    }
+    @include table-hover-default;
   }
 
   @each $name, $value in $colors {
+    $text-color: var(--text-on-#{$name});
 
-    &.table-#{$name} {
-      background-color: #{$value};
-      color: var(--text-on-#{$name});
-
-      &.table-hover {
-        tr:not([class*="table-"]):hover {
-          background-color: table-hover-bg($name, $value);
-
-          &:active,
-          &.active {
-            background-color: table-active-bg($name, $value);
-          }
-        }
-      }
-    }
-
+    /* Base styles for colored variants */
+    &.table-#{$name},
     thead.table-#{$name},
     tbody.table-#{$name},
-    tfoot.table-#{$name} {
-      background-color: #{$value};
-      color: var(--text-on-#{$name});
-
-      &.table-hover {
-        tr:not([class*="table-"]):hover {
-          background-color: table-hover-bg($name, $value);
-
-          &:active,
-          &.active {
-            background-color: table-active-bg($name, $value);
-          }
-        }
-      }
-    }
-
-    tr.table-#{$name} {
-      background-color: #{$value};
-      color: var(--text-on-#{$name});
-
-      &.table-hover:hover {
-        background-color: table-hover-bg($name, $value);
-
-        &:active,
-        &.active {
-          background-color: table-active-bg($name, $value);
-        }
-      }
-    }
-
+    tfoot.table-#{$name},
+    tr.table-#{$name},
     td.table-#{$name},
     th.table-#{$name} {
-      background-color: #{$value};
-      color: var(--text-on-#{$name});
+      background-color: $value;
+      color: $text-color;
+    }
 
-      &.table-hover:hover {
-        background-color: table-hover-bg($name, $value);
+    /* Hover on colored rows */
+    &.table-hover tr.table-#{$name}:hover,
+    thead.table-hover tr.table-#{$name}:hover,
+    tbody.table-hover tr.table-#{$name}:hover,
+    tfoot.table-hover tr.table-#{$name}:hover,
+    tr.table-#{$name}.table-hover:hover {
+      @include table-hover-and-active-color($name, $value);
+    }
 
-        &:active,
-        &.active {
-          background-color: table-active-bg($name, $value);
-        }
-      }
+    /* Hover inside colored table or section */
+    &.table-#{$name}.table-hover tbody tr:not(.table-hover):hover,
+    &.table-#{$name}.table-hover thead tr:not(.table-hover):hover,
+    &.table-#{$name}.table-hover tfoot tr:not(.table-hover):hover,
+    thead.table-#{$name}.table-hover tr:not(.table-hover):hover,
+    tbody.table-#{$name}.table-hover tr:not(.table-hover):hover,
+    tfoot.table-#{$name}.table-hover tr:not(.table-hover):hover {
+      @include table-hover-and-active-color($name, $value);
+    }
+
+    /* Hover on colored cells when row is hovered */
+    tr.table-hover:hover td.table-#{$name},
+    tr.table-hover:hover th.table-#{$name},
+    td.table-#{$name}.table-hover:hover,
+    th.table-#{$name}.table-hover:hover {
+      @include table-hover-and-active-color($name, $value);
     }
   }
 }
+
+
+
 
 
 /* Links */
-@function link-hover($name, $value) {
-  @if ($name == 'dark' or $name == 'dark-light' or $name == 'dark-dark') {
-    @return color-mix(in srgb, #{$value} 90%, var(--color-mix-light) 10%);
-  } @else {
-    @return color-mix(in srgb, #{$value} 90%, var(--color-mix-dark) 10%);
-  }
-}
-
-@function link-active($name, $value) {
-  @if ($name == 'dark' or $name == 'dark-light' or $name == 'dark-dark') {
-    @return color-mix(in srgb, #{$value} 80%, var(--color-mix-light) 20%);
-  } @else {
-    @return color-mix(in srgb, #{$value} 80%, var(--color-mix-dark) 20%);
-  }
-}
-
 @each $name, $value in $colors {
   .link-#{$name} {
     background-color: transparent;
@@ -390,19 +366,18 @@ table {
     &:hover {
       background-color: transparent;
       text-decoration: underline;
-      color: link-hover($name, $value);
-      text-decoration-color: link-hover($name, $value);
+      color: var(--hover-on-#{$name});
+      text-decoration-color: var(--hover-on-#{$name});
 
       &:active,
       &.active {
         background-color: transparent;
-        color: link-active($name, $value);
-        text-decoration-color: link-active($name, $value);
+        color: var(--active-on-#{$name});
+        text-decoration-color: var(--active-on-#{$name});
       }
     }
   }
 }
-
 
 
 /* Navbar */
@@ -415,6 +390,9 @@ table {
 
 
 /* Text */
+.text-base {
+  color: var(--text-color);
+}
 @each $name, $value in $colors {
   .text-#{$name} {
     color: #{$value};

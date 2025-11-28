@@ -21,14 +21,14 @@
 }
 .card .card-header {
   padding: var(--card-header-padding);
-  border-top-left-radius: var(--card-border-radius);
-  border-top-right-radius: var(--card-border-radius);
+  border-top-left-radius: calc(var(--card-border-radius) - var(--card-border-width));
+  border-top-right-radius: calc(var(--card-border-radius) - var(--card-border-width));
 }
 .card .card-body {
   padding: var(--card-body-padding);
 }
 .card .card-footer {
   padding: var(--card-footer-padding);
-  border-bottom-left-radius: var(--card-border-radius);
-  border-bottom-right-radius: var(--card-border-radius);
+  border-bottom-left-radius: calc(var(--card-border-radius) - var(--card-border-width));
+  border-bottom-right-radius: calc(var(--card-border-radius) - var(--card-border-width));
 }

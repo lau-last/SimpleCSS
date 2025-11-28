@@ -8,6 +8,7 @@
   min-width: var(--dropdown-body-min-width);
   box-shadow: var(--dropdown-body-box-shadow);
   margin-top: var(--dropdown-body-spacing-margin);
+  border-radius: var(--border-radius);
   width: max-content;
   position: absolute;
   z-index: 1000;
@@ -66,6 +67,7 @@
 }
 
 .dropdown .dropdown-body {
+  border-radius: var(--border-radius);
   opacity: 0;
   display: none;
   transform: scale(0.5);

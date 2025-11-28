@@ -30,7 +30,7 @@ export default class Dropdown {
             return;
         }
 
-        if (target.closest('.dropdown-menu.show')) {
+        if (target.closest('.dropdown-body.show')) {
             return;
         }
 
@@ -68,7 +68,7 @@ export default class Dropdown {
     }
 
     private static closeAllDropdownsExcept(exception: HTMLElement): void {
-        const dropdowns = document.querySelectorAll<HTMLElement>('.dropdown-menu.show');
+        const dropdowns = document.querySelectorAll<HTMLElement>('.dropdown-body.show');
 
         dropdowns.forEach(dropdown => {
             if (dropdown !== exception) {
@@ -80,7 +80,7 @@ export default class Dropdown {
     }
 
     private static closeAllDropdowns(): void {
-        const dropdowns = document.querySelectorAll<HTMLElement>('.dropdown-menu.show');
+        const dropdowns = document.querySelectorAll<HTMLElement>('.dropdown-body.show');
         dropdowns.forEach(dropdown => {
             const button = Dropdown.getButtonForDropdown(dropdown);
             if (!button) return;

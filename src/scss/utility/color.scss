@@ -136,7 +136,7 @@ $colors: (
 .alert-lg {
   /* Alerts */
   @each $name, $value in $colors {
-    .alert-#{$name} {
+    &.alert-#{$name} {
       border-color: color-mix(in srgb, #{$value} 90%, var(--color-mix-dark) 10%);
       background: #{$value};
       color: var(--text-on-#{$name});

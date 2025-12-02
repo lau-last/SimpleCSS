@@ -1,5 +1,46 @@
 :root[data-theme=dark] {
   color-scheme: dark;
+  /* color base */
+  --primary-color-theme: var(--primary-color-dark);
+  --secondary-color-theme: var(--secondary-color-dark);
+  --tertiary-color-theme: var(--tertiary-color-dark);
+  --dark-color-theme: var(--dark-color-dark);
+  --danger-color-theme: var(--danger-color-dark);
+  --info-color-theme: var(--info-color-dark);
+  --light-color-theme: var(--light-color-dark);
+  --neutral-color-theme: var(--neutral-color-dark);
+  --success-color-theme: var(--success-color-dark);
+  --warning-color-theme: var(--warning-color-dark);
+  --text-on-primary-theme: var(--text-on-primary-dark);
+  --text-on-secondary-theme: var(--text-on-secondary-dark);
+  --text-on-tertiary-theme: var(--text-on-tertiary-dark);
+  --text-on-dark-theme: var(--text-on-dark-dark);
+  --text-on-danger-theme: var(--text-on-danger-dark);
+  --text-on-info-theme: var(--text-on-info-dark);
+  --text-on-light-theme: var(--text-on-light-dark);
+  --text-on-neutral-theme: var(--text-on-neutral-dark);
+  --text-on-success-theme: var(--text-on-success-dark);
+  --text-on-warning-theme: var(--text-on-warning-dark);
+  --hover-on-primary-theme: var(--hover-on-primary-dark);
+  --hover-on-secondary-theme: var(--hover-on-secondary-dark);
+  --hover-on-tertiary-theme: var(--hover-on-tertiary-dark);
+  --hover-on-dark-theme: var(--hover-on-dark-dark);
+  --hover-on-danger-theme: var(--hover-on-danger-dark);
+  --hover-on-info-theme: var(--hover-on-info-dark);
+  --hover-on-light-theme: var(--hover-on-light-dark);
+  --hover-on-neutral-theme: var(--hover-on-neutral-dark);
+  --hover-on-success-theme: var(--hover-on-success-dark);
+  --hover-on-warning-theme: var(--hover-on-warning-dark);
+  --active-on-primary-theme: var(--active-on-primary-dark);
+  --active-on-secondary-theme: var(--active-on-secondary-dark);
+  --active-on-tertiary-theme: var(--active-on-tertiary-dark);
+  --active-on-dark-theme: var(--active-on-dark-dark);
+  --active-on-danger-theme: var(--active-on-danger-dark);
+  --active-on-info-theme: var(--active-on-info-dark);
+  --active-on-light-theme: var(--active-on-light-dark);
+  --active-on-neutral-theme: var(--active-on-neutral-dark);
+  --active-on-success-theme: var(--active-on-success-dark);
+  --active-on-warning-theme: var(--active-on-warning-dark);
   /* Global surfaces & borders */
   --bg-color: var(--gray-800);
   --border-color: var(--gray-700);

@@ -604,6 +604,47 @@
 
 :root[data-theme=dark] {
   color-scheme: dark;
+  /* color base */
+  --primary-color-theme: var(--primary-color-dark);
+  --secondary-color-theme: var(--secondary-color-dark);
+  --tertiary-color-theme: var(--tertiary-color-dark);
+  --dark-color-theme: var(--dark-color-dark);
+  --danger-color-theme: var(--danger-color-dark);
+  --info-color-theme: var(--info-color-dark);
+  --light-color-theme: var(--light-color-dark);
+  --neutral-color-theme: var(--neutral-color-dark);
+  --success-color-theme: var(--success-color-dark);
+  --warning-color-theme: var(--warning-color-dark);
+  --text-on-primary-theme: var(--text-on-primary-dark);
+  --text-on-secondary-theme: var(--text-on-secondary-dark);
+  --text-on-tertiary-theme: var(--text-on-tertiary-dark);
+  --text-on-dark-theme: var(--text-on-dark-dark);
+  --text-on-danger-theme: var(--text-on-danger-dark);
+  --text-on-info-theme: var(--text-on-info-dark);
+  --text-on-light-theme: var(--text-on-light-dark);
+  --text-on-neutral-theme: var(--text-on-neutral-dark);
+  --text-on-success-theme: var(--text-on-success-dark);
+  --text-on-warning-theme: var(--text-on-warning-dark);
+  --hover-on-primary-theme: var(--hover-on-primary-dark);
+  --hover-on-secondary-theme: var(--hover-on-secondary-dark);
+  --hover-on-tertiary-theme: var(--hover-on-tertiary-dark);
+  --hover-on-dark-theme: var(--hover-on-dark-dark);
+  --hover-on-danger-theme: var(--hover-on-danger-dark);
+  --hover-on-info-theme: var(--hover-on-info-dark);
+  --hover-on-light-theme: var(--hover-on-light-dark);
+  --hover-on-neutral-theme: var(--hover-on-neutral-dark);
+  --hover-on-success-theme: var(--hover-on-success-dark);
+  --hover-on-warning-theme: var(--hover-on-warning-dark);
+  --active-on-primary-theme: var(--active-on-primary-dark);
+  --active-on-secondary-theme: var(--active-on-secondary-dark);
+  --active-on-tertiary-theme: var(--active-on-tertiary-dark);
+  --active-on-dark-theme: var(--active-on-dark-dark);
+  --active-on-danger-theme: var(--active-on-danger-dark);
+  --active-on-info-theme: var(--active-on-info-dark);
+  --active-on-light-theme: var(--active-on-light-dark);
+  --active-on-neutral-theme: var(--active-on-neutral-dark);
+  --active-on-success-theme: var(--active-on-success-dark);
+  --active-on-warning-theme: var(--active-on-warning-dark);
   /* Global surfaces & borders */
   --bg-color: var(--gray-800);
   --border-color: var(--gray-700);
@@ -677,6 +718,47 @@
 :root,
 :root[data-theme=light] {
   color-scheme: light;
+  /* color base */
+  --primary-color-theme: var(--primary-color-light);
+  --secondary-color-theme: var(--secondary-color-light);
+  --tertiary-color-theme: var(--tertiary-color-light);
+  --dark-color-theme: var(--dark-color-light);
+  --danger-color-theme: var(--danger-color-light);
+  --info-color-theme: var(--info-color-light);
+  --light-color-theme: var(--light-color-light);
+  --neutral-color-theme: var(--neutral-color-light);
+  --success-color-theme: var(--success-color-light);
+  --warning-color-theme: var(--warning-color-light);
+  --text-on-primary-theme: var(--text-on-primary-light);
+  --text-on-secondary-theme: var(--text-on-secondary-light);
+  --text-on-tertiary-theme: var(--text-on-tertiary-light);
+  --text-on-dark-theme: var(--text-on-dark-light);
+  --text-on-danger-theme: var(--text-on-danger-light);
+  --text-on-info-theme: var(--text-on-info-light);
+  --text-on-light-theme: var(--text-on-light-light);
+  --text-on-neutral-theme: var(--text-on-neutral-light);
+  --text-on-success-theme: var(--text-on-success-light);
+  --text-on-warning-theme: var(--text-on-warning-light);
+  --hover-on-primary-theme: var(--hover-on-primary-light);
+  --hover-on-secondary-theme: var(--hover-on-secondary-light);
+  --hover-on-tertiary-theme: var(--hover-on-tertiary-light);
+  --hover-on-dark-theme: var(--hover-on-dark-light);
+  --hover-on-danger-theme: var(--hover-on-danger-light);
+  --hover-on-info-theme: var(--hover-on-info-light);
+  --hover-on-light-theme: var(--hover-on-light-light);
+  --hover-on-neutral-theme: var(--hover-on-neutral-light);
+  --hover-on-success-theme: var(--hover-on-success-light);
+  --hover-on-warning-theme: var(--hover-on-warning-light);
+  --active-on-primary-theme: var(--active-on-primary-light);
+  --active-on-secondary-theme: var(--active-on-secondary-light);
+  --active-on-tertiary-theme: var(--active-on-tertiary-light);
+  --active-on-dark-theme: var(--active-on-dark-light);
+  --active-on-danger-theme: var(--active-on-danger-light);
+  --active-on-info-theme: var(--active-on-info-light);
+  --active-on-light-theme: var(--active-on-light-light);
+  --active-on-neutral-theme: var(--active-on-neutral-light);
+  --active-on-success-theme: var(--active-on-success-light);
+  --active-on-warning-theme: var(--active-on-warning-light);
   /* Global surfaces & borders */
   --bg-color: var(--gray-0);
   --border-color: var(--gray-300);
@@ -7360,6 +7442,106 @@ table.table-lg tfoot tr td {
   --accordion-border-color: var(--dark-color-ghost-dark);
 }
 
+.accordion-primary-theme {
+  border-color: var(--primary-color-theme);
+}
+.accordion-primary-theme .accordion-btn,
+.accordion-primary-theme .accordion-btn-sm,
+.accordion-primary-theme .accordion-btn-md,
+.accordion-primary-theme .accordion-btn-lg {
+  --accordion-border-color: var(--primary-color-theme);
+}
+
+.accordion-secondary-theme {
+  border-color: var(--secondary-color-theme);
+}
+.accordion-secondary-theme .accordion-btn,
+.accordion-secondary-theme .accordion-btn-sm,
+.accordion-secondary-theme .accordion-btn-md,
+.accordion-secondary-theme .accordion-btn-lg {
+  --accordion-border-color: var(--secondary-color-theme);
+}
+
+.accordion-tertiary-theme {
+  border-color: var(--tertiary-color-theme);
+}
+.accordion-tertiary-theme .accordion-btn,
+.accordion-tertiary-theme .accordion-btn-sm,
+.accordion-tertiary-theme .accordion-btn-md,
+.accordion-tertiary-theme .accordion-btn-lg {
+  --accordion-border-color: var(--tertiary-color-theme);
+}
+
+.accordion-success-theme {
+  border-color: var(--success-color-theme);
+}
+.accordion-success-theme .accordion-btn,
+.accordion-success-theme .accordion-btn-sm,
+.accordion-success-theme .accordion-btn-md,
+.accordion-success-theme .accordion-btn-lg {
+  --accordion-border-color: var(--success-color-theme);
+}
+
+.accordion-info-theme {
+  border-color: var(--info-color-theme);
+}
+.accordion-info-theme .accordion-btn,
+.accordion-info-theme .accordion-btn-sm,
+.accordion-info-theme .accordion-btn-md,
+.accordion-info-theme .accordion-btn-lg {
+  --accordion-border-color: var(--info-color-theme);
+}
+
+.accordion-warning-theme {
+  border-color: var(--warning-color-theme);
+}
+.accordion-warning-theme .accordion-btn,
+.accordion-warning-theme .accordion-btn-sm,
+.accordion-warning-theme .accordion-btn-md,
+.accordion-warning-theme .accordion-btn-lg {
+  --accordion-border-color: var(--warning-color-theme);
+}
+
+.accordion-danger-theme {
+  border-color: var(--danger-color-theme);
+}
+.accordion-danger-theme .accordion-btn,
+.accordion-danger-theme .accordion-btn-sm,
+.accordion-danger-theme .accordion-btn-md,
+.accordion-danger-theme .accordion-btn-lg {
+  --accordion-border-color: var(--danger-color-theme);
+}
+
+.accordion-neutral-theme {
+  border-color: var(--neutral-color-theme);
+}
+.accordion-neutral-theme .accordion-btn,
+.accordion-neutral-theme .accordion-btn-sm,
+.accordion-neutral-theme .accordion-btn-md,
+.accordion-neutral-theme .accordion-btn-lg {
+  --accordion-border-color: var(--neutral-color-theme);
+}
+
+.accordion-light-theme {
+  border-color: var(--light-color-theme);
+}
+.accordion-light-theme .accordion-btn,
+.accordion-light-theme .accordion-btn-sm,
+.accordion-light-theme .accordion-btn-md,
+.accordion-light-theme .accordion-btn-lg {
+  --accordion-border-color: var(--light-color-theme);
+}
+
+.accordion-dark-theme {
+  border-color: var(--dark-color-theme);
+}
+.accordion-dark-theme .accordion-btn,
+.accordion-dark-theme .accordion-btn-sm,
+.accordion-dark-theme .accordion-btn-md,
+.accordion-dark-theme .accordion-btn-lg {
+  --accordion-border-color: var(--dark-color-theme);
+}
+
 .alert,
 .alert-sm,
 .alert-md,
@@ -8021,6 +8203,86 @@ table.table-lg tfoot tr td {
   border-color: color-mix(in srgb, var(--dark-color-ghost-dark) 90%, var(--color-mix-dark) 10%);
   background: var(--dark-color-ghost-dark);
   color: var(--text-on-dark-ghost-dark);
+}
+.alert.alert-primary-theme,
+.alert-sm.alert-primary-theme,
+.alert-md.alert-primary-theme,
+.alert-lg.alert-primary-theme {
+  border-color: color-mix(in srgb, var(--primary-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+.alert.alert-secondary-theme,
+.alert-sm.alert-secondary-theme,
+.alert-md.alert-secondary-theme,
+.alert-lg.alert-secondary-theme {
+  border-color: color-mix(in srgb, var(--secondary-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+.alert.alert-tertiary-theme,
+.alert-sm.alert-tertiary-theme,
+.alert-md.alert-tertiary-theme,
+.alert-lg.alert-tertiary-theme {
+  border-color: color-mix(in srgb, var(--tertiary-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.alert.alert-success-theme,
+.alert-sm.alert-success-theme,
+.alert-md.alert-success-theme,
+.alert-lg.alert-success-theme {
+  border-color: color-mix(in srgb, var(--success-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+.alert.alert-info-theme,
+.alert-sm.alert-info-theme,
+.alert-md.alert-info-theme,
+.alert-lg.alert-info-theme {
+  border-color: color-mix(in srgb, var(--info-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+.alert.alert-warning-theme,
+.alert-sm.alert-warning-theme,
+.alert-md.alert-warning-theme,
+.alert-lg.alert-warning-theme {
+  border-color: color-mix(in srgb, var(--warning-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+.alert.alert-danger-theme,
+.alert-sm.alert-danger-theme,
+.alert-md.alert-danger-theme,
+.alert-lg.alert-danger-theme {
+  border-color: color-mix(in srgb, var(--danger-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+.alert.alert-neutral-theme,
+.alert-sm.alert-neutral-theme,
+.alert-md.alert-neutral-theme,
+.alert-lg.alert-neutral-theme {
+  border-color: color-mix(in srgb, var(--neutral-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+.alert.alert-light-theme,
+.alert-sm.alert-light-theme,
+.alert-md.alert-light-theme,
+.alert-lg.alert-light-theme {
+  border-color: color-mix(in srgb, var(--light-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+.alert.alert-dark-theme,
+.alert-sm.alert-dark-theme,
+.alert-md.alert-dark-theme,
+.alert-lg.alert-dark-theme {
+  border-color: color-mix(in srgb, var(--dark-color-theme) 90%, var(--color-mix-dark) 10%);
+  background: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
 }
 
 .badge,
@@ -9420,6 +9682,176 @@ table.table-lg tfoot tr td {
   background-color: transparent;
   color: var(--dark-color-ghost-dark);
   border-color: var(--dark-color-ghost-dark);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-primary-theme,
+.badge-sm.badge-primary-theme,
+.badge-md.badge-primary-theme,
+.badge-lg.badge-primary-theme {
+  background-color: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+.badge.outline-primary-theme,
+.badge-sm.outline-primary-theme,
+.badge-md.outline-primary-theme,
+.badge-lg.outline-primary-theme {
+  background-color: transparent;
+  color: var(--primary-color-theme);
+  border-color: var(--primary-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-secondary-theme,
+.badge-sm.badge-secondary-theme,
+.badge-md.badge-secondary-theme,
+.badge-lg.badge-secondary-theme {
+  background-color: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+.badge.outline-secondary-theme,
+.badge-sm.outline-secondary-theme,
+.badge-md.outline-secondary-theme,
+.badge-lg.outline-secondary-theme {
+  background-color: transparent;
+  color: var(--secondary-color-theme);
+  border-color: var(--secondary-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-tertiary-theme,
+.badge-sm.badge-tertiary-theme,
+.badge-md.badge-tertiary-theme,
+.badge-lg.badge-tertiary-theme {
+  background-color: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.badge.outline-tertiary-theme,
+.badge-sm.outline-tertiary-theme,
+.badge-md.outline-tertiary-theme,
+.badge-lg.outline-tertiary-theme {
+  background-color: transparent;
+  color: var(--tertiary-color-theme);
+  border-color: var(--tertiary-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-success-theme,
+.badge-sm.badge-success-theme,
+.badge-md.badge-success-theme,
+.badge-lg.badge-success-theme {
+  background-color: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+.badge.outline-success-theme,
+.badge-sm.outline-success-theme,
+.badge-md.outline-success-theme,
+.badge-lg.outline-success-theme {
+  background-color: transparent;
+  color: var(--success-color-theme);
+  border-color: var(--success-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-info-theme,
+.badge-sm.badge-info-theme,
+.badge-md.badge-info-theme,
+.badge-lg.badge-info-theme {
+  background-color: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+.badge.outline-info-theme,
+.badge-sm.outline-info-theme,
+.badge-md.outline-info-theme,
+.badge-lg.outline-info-theme {
+  background-color: transparent;
+  color: var(--info-color-theme);
+  border-color: var(--info-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-warning-theme,
+.badge-sm.badge-warning-theme,
+.badge-md.badge-warning-theme,
+.badge-lg.badge-warning-theme {
+  background-color: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+.badge.outline-warning-theme,
+.badge-sm.outline-warning-theme,
+.badge-md.outline-warning-theme,
+.badge-lg.outline-warning-theme {
+  background-color: transparent;
+  color: var(--warning-color-theme);
+  border-color: var(--warning-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-danger-theme,
+.badge-sm.badge-danger-theme,
+.badge-md.badge-danger-theme,
+.badge-lg.badge-danger-theme {
+  background-color: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+.badge.outline-danger-theme,
+.badge-sm.outline-danger-theme,
+.badge-md.outline-danger-theme,
+.badge-lg.outline-danger-theme {
+  background-color: transparent;
+  color: var(--danger-color-theme);
+  border-color: var(--danger-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-neutral-theme,
+.badge-sm.badge-neutral-theme,
+.badge-md.badge-neutral-theme,
+.badge-lg.badge-neutral-theme {
+  background-color: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+.badge.outline-neutral-theme,
+.badge-sm.outline-neutral-theme,
+.badge-md.outline-neutral-theme,
+.badge-lg.outline-neutral-theme {
+  background-color: transparent;
+  color: var(--neutral-color-theme);
+  border-color: var(--neutral-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-light-theme,
+.badge-sm.badge-light-theme,
+.badge-md.badge-light-theme,
+.badge-lg.badge-light-theme {
+  background-color: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+.badge.outline-light-theme,
+.badge-sm.outline-light-theme,
+.badge-md.outline-light-theme,
+.badge-lg.outline-light-theme {
+  background-color: transparent;
+  color: var(--light-color-theme);
+  border-color: var(--light-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.badge.badge-dark-theme,
+.badge-sm.badge-dark-theme,
+.badge-md.badge-dark-theme,
+.badge-lg.badge-dark-theme {
+  background-color: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
+.badge.outline-dark-theme,
+.badge-sm.outline-dark-theme,
+.badge-md.outline-dark-theme,
+.badge-lg.outline-dark-theme {
+  background-color: transparent;
+  color: var(--dark-color-theme);
+  border-color: var(--dark-color-theme);
   border-style: var(--border-style-outline);
   border-width: var(--border-width-outline);
 }
@@ -21960,6 +22392,1526 @@ table.table-lg tfoot tr td {
   background-color: var(--dark-color-ghost-dark);
   color: var(--text-on-dark-ghost-dark);
 }
+.btn.btn-primary-theme,
+.btn-sm.btn-primary-theme,
+.btn-md.btn-primary-theme,
+.btn-lg.btn-primary-theme,
+.tab-btn.btn-primary-theme,
+.tab-btn-sm.btn-primary-theme,
+.tab-btn-md.btn-primary-theme,
+.tab-btn-lg.btn-primary-theme,
+.collapse-btn.btn-primary-theme,
+.collapse-btn-sm.btn-primary-theme,
+.collapse-btn-md.btn-primary-theme,
+.collapse-btn-lg.btn-primary-theme,
+.accordion-btn.btn-primary-theme,
+.accordion-btn-sm.btn-primary-theme,
+.accordion-btn-md.btn-primary-theme,
+.accordion-btn-lg.btn-primary-theme {
+  background-color: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+.btn.btn-primary-theme:hover,
+.btn-sm.btn-primary-theme:hover,
+.btn-md.btn-primary-theme:hover,
+.btn-lg.btn-primary-theme:hover,
+.tab-btn.btn-primary-theme:hover,
+.tab-btn-sm.btn-primary-theme:hover,
+.tab-btn-md.btn-primary-theme:hover,
+.tab-btn-lg.btn-primary-theme:hover,
+.collapse-btn.btn-primary-theme:hover,
+.collapse-btn-sm.btn-primary-theme:hover,
+.collapse-btn-md.btn-primary-theme:hover,
+.collapse-btn-lg.btn-primary-theme:hover,
+.accordion-btn.btn-primary-theme:hover,
+.accordion-btn-sm.btn-primary-theme:hover,
+.accordion-btn-md.btn-primary-theme:hover,
+.accordion-btn-lg.btn-primary-theme:hover {
+  background-color: var(--hover-on-primary-theme);
+}
+.btn.btn-primary-theme:hover:active,
+.btn-sm.btn-primary-theme:hover:active,
+.btn-md.btn-primary-theme:hover:active,
+.btn-lg.btn-primary-theme:hover:active,
+.tab-btn.btn-primary-theme:hover:active,
+.tab-btn-sm.btn-primary-theme:hover:active,
+.tab-btn-md.btn-primary-theme:hover:active,
+.tab-btn-lg.btn-primary-theme:hover:active,
+.collapse-btn.btn-primary-theme:hover:active,
+.collapse-btn-sm.btn-primary-theme:hover:active,
+.collapse-btn-md.btn-primary-theme:hover:active,
+.collapse-btn-lg.btn-primary-theme:hover:active,
+.accordion-btn.btn-primary-theme:hover:active,
+.accordion-btn-sm.btn-primary-theme:hover:active,
+.accordion-btn-md.btn-primary-theme:hover:active,
+.accordion-btn-lg.btn-primary-theme:hover:active {
+  background-color: var(--active-on-primary-theme);
+}
+.btn.btn-primary-theme.active,
+.btn-sm.btn-primary-theme.active,
+.btn-md.btn-primary-theme.active,
+.btn-lg.btn-primary-theme.active,
+.tab-btn.btn-primary-theme.active,
+.tab-btn-sm.btn-primary-theme.active,
+.tab-btn-md.btn-primary-theme.active,
+.tab-btn-lg.btn-primary-theme.active,
+.collapse-btn.btn-primary-theme.active,
+.collapse-btn-sm.btn-primary-theme.active,
+.collapse-btn-md.btn-primary-theme.active,
+.collapse-btn-lg.btn-primary-theme.active,
+.accordion-btn.btn-primary-theme.active,
+.accordion-btn-sm.btn-primary-theme.active,
+.accordion-btn-md.btn-primary-theme.active,
+.accordion-btn-lg.btn-primary-theme.active {
+  background-color: var(--hover-on-primary-theme);
+}
+.btn.outline-primary-theme,
+.btn-sm.outline-primary-theme,
+.btn-md.outline-primary-theme,
+.btn-lg.outline-primary-theme,
+.tab-btn.outline-primary-theme,
+.tab-btn-sm.outline-primary-theme,
+.tab-btn-md.outline-primary-theme,
+.tab-btn-lg.outline-primary-theme,
+.collapse-btn.outline-primary-theme,
+.collapse-btn-sm.outline-primary-theme,
+.collapse-btn-md.outline-primary-theme,
+.collapse-btn-lg.outline-primary-theme,
+.accordion-btn.outline-primary-theme,
+.accordion-btn-sm.outline-primary-theme,
+.accordion-btn-md.outline-primary-theme,
+.accordion-btn-lg.outline-primary-theme {
+  background-color: transparent;
+  color: var(--primary-color-theme);
+  border-color: var(--primary-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-primary-theme:hover,
+.btn-sm.outline-primary-theme:hover,
+.btn-md.outline-primary-theme:hover,
+.btn-lg.outline-primary-theme:hover,
+.tab-btn.outline-primary-theme:hover,
+.tab-btn-sm.outline-primary-theme:hover,
+.tab-btn-md.outline-primary-theme:hover,
+.tab-btn-lg.outline-primary-theme:hover,
+.collapse-btn.outline-primary-theme:hover,
+.collapse-btn-sm.outline-primary-theme:hover,
+.collapse-btn-md.outline-primary-theme:hover,
+.collapse-btn-lg.outline-primary-theme:hover,
+.accordion-btn.outline-primary-theme:hover,
+.accordion-btn-sm.outline-primary-theme:hover,
+.accordion-btn-md.outline-primary-theme:hover,
+.accordion-btn-lg.outline-primary-theme:hover {
+  background-color: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+.btn.outline-primary-theme:hover:active,
+.btn-sm.outline-primary-theme:hover:active,
+.btn-md.outline-primary-theme:hover:active,
+.btn-lg.outline-primary-theme:hover:active,
+.tab-btn.outline-primary-theme:hover:active,
+.tab-btn-sm.outline-primary-theme:hover:active,
+.tab-btn-md.outline-primary-theme:hover:active,
+.tab-btn-lg.outline-primary-theme:hover:active,
+.collapse-btn.outline-primary-theme:hover:active,
+.collapse-btn-sm.outline-primary-theme:hover:active,
+.collapse-btn-md.outline-primary-theme:hover:active,
+.collapse-btn-lg.outline-primary-theme:hover:active,
+.accordion-btn.outline-primary-theme:hover:active,
+.accordion-btn-sm.outline-primary-theme:hover:active,
+.accordion-btn-md.outline-primary-theme:hover:active,
+.accordion-btn-lg.outline-primary-theme:hover:active {
+  background-color: var(--active-on-primary-theme);
+  color: var(--text-on-primary-theme);
+}
+.btn.outline-primary-theme.active,
+.btn-sm.outline-primary-theme.active,
+.btn-md.outline-primary-theme.active,
+.btn-lg.outline-primary-theme.active,
+.tab-btn.outline-primary-theme.active,
+.tab-btn-sm.outline-primary-theme.active,
+.tab-btn-md.outline-primary-theme.active,
+.tab-btn-lg.outline-primary-theme.active,
+.collapse-btn.outline-primary-theme.active,
+.collapse-btn-sm.outline-primary-theme.active,
+.collapse-btn-md.outline-primary-theme.active,
+.collapse-btn-lg.outline-primary-theme.active,
+.accordion-btn.outline-primary-theme.active,
+.accordion-btn-sm.outline-primary-theme.active,
+.accordion-btn-md.outline-primary-theme.active,
+.accordion-btn-lg.outline-primary-theme.active {
+  background-color: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+.btn.btn-secondary-theme,
+.btn-sm.btn-secondary-theme,
+.btn-md.btn-secondary-theme,
+.btn-lg.btn-secondary-theme,
+.tab-btn.btn-secondary-theme,
+.tab-btn-sm.btn-secondary-theme,
+.tab-btn-md.btn-secondary-theme,
+.tab-btn-lg.btn-secondary-theme,
+.collapse-btn.btn-secondary-theme,
+.collapse-btn-sm.btn-secondary-theme,
+.collapse-btn-md.btn-secondary-theme,
+.collapse-btn-lg.btn-secondary-theme,
+.accordion-btn.btn-secondary-theme,
+.accordion-btn-sm.btn-secondary-theme,
+.accordion-btn-md.btn-secondary-theme,
+.accordion-btn-lg.btn-secondary-theme {
+  background-color: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+.btn.btn-secondary-theme:hover,
+.btn-sm.btn-secondary-theme:hover,
+.btn-md.btn-secondary-theme:hover,
+.btn-lg.btn-secondary-theme:hover,
+.tab-btn.btn-secondary-theme:hover,
+.tab-btn-sm.btn-secondary-theme:hover,
+.tab-btn-md.btn-secondary-theme:hover,
+.tab-btn-lg.btn-secondary-theme:hover,
+.collapse-btn.btn-secondary-theme:hover,
+.collapse-btn-sm.btn-secondary-theme:hover,
+.collapse-btn-md.btn-secondary-theme:hover,
+.collapse-btn-lg.btn-secondary-theme:hover,
+.accordion-btn.btn-secondary-theme:hover,
+.accordion-btn-sm.btn-secondary-theme:hover,
+.accordion-btn-md.btn-secondary-theme:hover,
+.accordion-btn-lg.btn-secondary-theme:hover {
+  background-color: var(--hover-on-secondary-theme);
+}
+.btn.btn-secondary-theme:hover:active,
+.btn-sm.btn-secondary-theme:hover:active,
+.btn-md.btn-secondary-theme:hover:active,
+.btn-lg.btn-secondary-theme:hover:active,
+.tab-btn.btn-secondary-theme:hover:active,
+.tab-btn-sm.btn-secondary-theme:hover:active,
+.tab-btn-md.btn-secondary-theme:hover:active,
+.tab-btn-lg.btn-secondary-theme:hover:active,
+.collapse-btn.btn-secondary-theme:hover:active,
+.collapse-btn-sm.btn-secondary-theme:hover:active,
+.collapse-btn-md.btn-secondary-theme:hover:active,
+.collapse-btn-lg.btn-secondary-theme:hover:active,
+.accordion-btn.btn-secondary-theme:hover:active,
+.accordion-btn-sm.btn-secondary-theme:hover:active,
+.accordion-btn-md.btn-secondary-theme:hover:active,
+.accordion-btn-lg.btn-secondary-theme:hover:active {
+  background-color: var(--active-on-secondary-theme);
+}
+.btn.btn-secondary-theme.active,
+.btn-sm.btn-secondary-theme.active,
+.btn-md.btn-secondary-theme.active,
+.btn-lg.btn-secondary-theme.active,
+.tab-btn.btn-secondary-theme.active,
+.tab-btn-sm.btn-secondary-theme.active,
+.tab-btn-md.btn-secondary-theme.active,
+.tab-btn-lg.btn-secondary-theme.active,
+.collapse-btn.btn-secondary-theme.active,
+.collapse-btn-sm.btn-secondary-theme.active,
+.collapse-btn-md.btn-secondary-theme.active,
+.collapse-btn-lg.btn-secondary-theme.active,
+.accordion-btn.btn-secondary-theme.active,
+.accordion-btn-sm.btn-secondary-theme.active,
+.accordion-btn-md.btn-secondary-theme.active,
+.accordion-btn-lg.btn-secondary-theme.active {
+  background-color: var(--hover-on-secondary-theme);
+}
+.btn.outline-secondary-theme,
+.btn-sm.outline-secondary-theme,
+.btn-md.outline-secondary-theme,
+.btn-lg.outline-secondary-theme,
+.tab-btn.outline-secondary-theme,
+.tab-btn-sm.outline-secondary-theme,
+.tab-btn-md.outline-secondary-theme,
+.tab-btn-lg.outline-secondary-theme,
+.collapse-btn.outline-secondary-theme,
+.collapse-btn-sm.outline-secondary-theme,
+.collapse-btn-md.outline-secondary-theme,
+.collapse-btn-lg.outline-secondary-theme,
+.accordion-btn.outline-secondary-theme,
+.accordion-btn-sm.outline-secondary-theme,
+.accordion-btn-md.outline-secondary-theme,
+.accordion-btn-lg.outline-secondary-theme {
+  background-color: transparent;
+  color: var(--secondary-color-theme);
+  border-color: var(--secondary-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-secondary-theme:hover,
+.btn-sm.outline-secondary-theme:hover,
+.btn-md.outline-secondary-theme:hover,
+.btn-lg.outline-secondary-theme:hover,
+.tab-btn.outline-secondary-theme:hover,
+.tab-btn-sm.outline-secondary-theme:hover,
+.tab-btn-md.outline-secondary-theme:hover,
+.tab-btn-lg.outline-secondary-theme:hover,
+.collapse-btn.outline-secondary-theme:hover,
+.collapse-btn-sm.outline-secondary-theme:hover,
+.collapse-btn-md.outline-secondary-theme:hover,
+.collapse-btn-lg.outline-secondary-theme:hover,
+.accordion-btn.outline-secondary-theme:hover,
+.accordion-btn-sm.outline-secondary-theme:hover,
+.accordion-btn-md.outline-secondary-theme:hover,
+.accordion-btn-lg.outline-secondary-theme:hover {
+  background-color: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+.btn.outline-secondary-theme:hover:active,
+.btn-sm.outline-secondary-theme:hover:active,
+.btn-md.outline-secondary-theme:hover:active,
+.btn-lg.outline-secondary-theme:hover:active,
+.tab-btn.outline-secondary-theme:hover:active,
+.tab-btn-sm.outline-secondary-theme:hover:active,
+.tab-btn-md.outline-secondary-theme:hover:active,
+.tab-btn-lg.outline-secondary-theme:hover:active,
+.collapse-btn.outline-secondary-theme:hover:active,
+.collapse-btn-sm.outline-secondary-theme:hover:active,
+.collapse-btn-md.outline-secondary-theme:hover:active,
+.collapse-btn-lg.outline-secondary-theme:hover:active,
+.accordion-btn.outline-secondary-theme:hover:active,
+.accordion-btn-sm.outline-secondary-theme:hover:active,
+.accordion-btn-md.outline-secondary-theme:hover:active,
+.accordion-btn-lg.outline-secondary-theme:hover:active {
+  background-color: var(--active-on-secondary-theme);
+  color: var(--text-on-secondary-theme);
+}
+.btn.outline-secondary-theme.active,
+.btn-sm.outline-secondary-theme.active,
+.btn-md.outline-secondary-theme.active,
+.btn-lg.outline-secondary-theme.active,
+.tab-btn.outline-secondary-theme.active,
+.tab-btn-sm.outline-secondary-theme.active,
+.tab-btn-md.outline-secondary-theme.active,
+.tab-btn-lg.outline-secondary-theme.active,
+.collapse-btn.outline-secondary-theme.active,
+.collapse-btn-sm.outline-secondary-theme.active,
+.collapse-btn-md.outline-secondary-theme.active,
+.collapse-btn-lg.outline-secondary-theme.active,
+.accordion-btn.outline-secondary-theme.active,
+.accordion-btn-sm.outline-secondary-theme.active,
+.accordion-btn-md.outline-secondary-theme.active,
+.accordion-btn-lg.outline-secondary-theme.active {
+  background-color: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+.btn.btn-tertiary-theme,
+.btn-sm.btn-tertiary-theme,
+.btn-md.btn-tertiary-theme,
+.btn-lg.btn-tertiary-theme,
+.tab-btn.btn-tertiary-theme,
+.tab-btn-sm.btn-tertiary-theme,
+.tab-btn-md.btn-tertiary-theme,
+.tab-btn-lg.btn-tertiary-theme,
+.collapse-btn.btn-tertiary-theme,
+.collapse-btn-sm.btn-tertiary-theme,
+.collapse-btn-md.btn-tertiary-theme,
+.collapse-btn-lg.btn-tertiary-theme,
+.accordion-btn.btn-tertiary-theme,
+.accordion-btn-sm.btn-tertiary-theme,
+.accordion-btn-md.btn-tertiary-theme,
+.accordion-btn-lg.btn-tertiary-theme {
+  background-color: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.btn.btn-tertiary-theme:hover,
+.btn-sm.btn-tertiary-theme:hover,
+.btn-md.btn-tertiary-theme:hover,
+.btn-lg.btn-tertiary-theme:hover,
+.tab-btn.btn-tertiary-theme:hover,
+.tab-btn-sm.btn-tertiary-theme:hover,
+.tab-btn-md.btn-tertiary-theme:hover,
+.tab-btn-lg.btn-tertiary-theme:hover,
+.collapse-btn.btn-tertiary-theme:hover,
+.collapse-btn-sm.btn-tertiary-theme:hover,
+.collapse-btn-md.btn-tertiary-theme:hover,
+.collapse-btn-lg.btn-tertiary-theme:hover,
+.accordion-btn.btn-tertiary-theme:hover,
+.accordion-btn-sm.btn-tertiary-theme:hover,
+.accordion-btn-md.btn-tertiary-theme:hover,
+.accordion-btn-lg.btn-tertiary-theme:hover {
+  background-color: var(--hover-on-tertiary-theme);
+}
+.btn.btn-tertiary-theme:hover:active,
+.btn-sm.btn-tertiary-theme:hover:active,
+.btn-md.btn-tertiary-theme:hover:active,
+.btn-lg.btn-tertiary-theme:hover:active,
+.tab-btn.btn-tertiary-theme:hover:active,
+.tab-btn-sm.btn-tertiary-theme:hover:active,
+.tab-btn-md.btn-tertiary-theme:hover:active,
+.tab-btn-lg.btn-tertiary-theme:hover:active,
+.collapse-btn.btn-tertiary-theme:hover:active,
+.collapse-btn-sm.btn-tertiary-theme:hover:active,
+.collapse-btn-md.btn-tertiary-theme:hover:active,
+.collapse-btn-lg.btn-tertiary-theme:hover:active,
+.accordion-btn.btn-tertiary-theme:hover:active,
+.accordion-btn-sm.btn-tertiary-theme:hover:active,
+.accordion-btn-md.btn-tertiary-theme:hover:active,
+.accordion-btn-lg.btn-tertiary-theme:hover:active {
+  background-color: var(--active-on-tertiary-theme);
+}
+.btn.btn-tertiary-theme.active,
+.btn-sm.btn-tertiary-theme.active,
+.btn-md.btn-tertiary-theme.active,
+.btn-lg.btn-tertiary-theme.active,
+.tab-btn.btn-tertiary-theme.active,
+.tab-btn-sm.btn-tertiary-theme.active,
+.tab-btn-md.btn-tertiary-theme.active,
+.tab-btn-lg.btn-tertiary-theme.active,
+.collapse-btn.btn-tertiary-theme.active,
+.collapse-btn-sm.btn-tertiary-theme.active,
+.collapse-btn-md.btn-tertiary-theme.active,
+.collapse-btn-lg.btn-tertiary-theme.active,
+.accordion-btn.btn-tertiary-theme.active,
+.accordion-btn-sm.btn-tertiary-theme.active,
+.accordion-btn-md.btn-tertiary-theme.active,
+.accordion-btn-lg.btn-tertiary-theme.active {
+  background-color: var(--hover-on-tertiary-theme);
+}
+.btn.outline-tertiary-theme,
+.btn-sm.outline-tertiary-theme,
+.btn-md.outline-tertiary-theme,
+.btn-lg.outline-tertiary-theme,
+.tab-btn.outline-tertiary-theme,
+.tab-btn-sm.outline-tertiary-theme,
+.tab-btn-md.outline-tertiary-theme,
+.tab-btn-lg.outline-tertiary-theme,
+.collapse-btn.outline-tertiary-theme,
+.collapse-btn-sm.outline-tertiary-theme,
+.collapse-btn-md.outline-tertiary-theme,
+.collapse-btn-lg.outline-tertiary-theme,
+.accordion-btn.outline-tertiary-theme,
+.accordion-btn-sm.outline-tertiary-theme,
+.accordion-btn-md.outline-tertiary-theme,
+.accordion-btn-lg.outline-tertiary-theme {
+  background-color: transparent;
+  color: var(--tertiary-color-theme);
+  border-color: var(--tertiary-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-tertiary-theme:hover,
+.btn-sm.outline-tertiary-theme:hover,
+.btn-md.outline-tertiary-theme:hover,
+.btn-lg.outline-tertiary-theme:hover,
+.tab-btn.outline-tertiary-theme:hover,
+.tab-btn-sm.outline-tertiary-theme:hover,
+.tab-btn-md.outline-tertiary-theme:hover,
+.tab-btn-lg.outline-tertiary-theme:hover,
+.collapse-btn.outline-tertiary-theme:hover,
+.collapse-btn-sm.outline-tertiary-theme:hover,
+.collapse-btn-md.outline-tertiary-theme:hover,
+.collapse-btn-lg.outline-tertiary-theme:hover,
+.accordion-btn.outline-tertiary-theme:hover,
+.accordion-btn-sm.outline-tertiary-theme:hover,
+.accordion-btn-md.outline-tertiary-theme:hover,
+.accordion-btn-lg.outline-tertiary-theme:hover {
+  background-color: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.btn.outline-tertiary-theme:hover:active,
+.btn-sm.outline-tertiary-theme:hover:active,
+.btn-md.outline-tertiary-theme:hover:active,
+.btn-lg.outline-tertiary-theme:hover:active,
+.tab-btn.outline-tertiary-theme:hover:active,
+.tab-btn-sm.outline-tertiary-theme:hover:active,
+.tab-btn-md.outline-tertiary-theme:hover:active,
+.tab-btn-lg.outline-tertiary-theme:hover:active,
+.collapse-btn.outline-tertiary-theme:hover:active,
+.collapse-btn-sm.outline-tertiary-theme:hover:active,
+.collapse-btn-md.outline-tertiary-theme:hover:active,
+.collapse-btn-lg.outline-tertiary-theme:hover:active,
+.accordion-btn.outline-tertiary-theme:hover:active,
+.accordion-btn-sm.outline-tertiary-theme:hover:active,
+.accordion-btn-md.outline-tertiary-theme:hover:active,
+.accordion-btn-lg.outline-tertiary-theme:hover:active {
+  background-color: var(--active-on-tertiary-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.btn.outline-tertiary-theme.active,
+.btn-sm.outline-tertiary-theme.active,
+.btn-md.outline-tertiary-theme.active,
+.btn-lg.outline-tertiary-theme.active,
+.tab-btn.outline-tertiary-theme.active,
+.tab-btn-sm.outline-tertiary-theme.active,
+.tab-btn-md.outline-tertiary-theme.active,
+.tab-btn-lg.outline-tertiary-theme.active,
+.collapse-btn.outline-tertiary-theme.active,
+.collapse-btn-sm.outline-tertiary-theme.active,
+.collapse-btn-md.outline-tertiary-theme.active,
+.collapse-btn-lg.outline-tertiary-theme.active,
+.accordion-btn.outline-tertiary-theme.active,
+.accordion-btn-sm.outline-tertiary-theme.active,
+.accordion-btn-md.outline-tertiary-theme.active,
+.accordion-btn-lg.outline-tertiary-theme.active {
+  background-color: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.btn.btn-success-theme,
+.btn-sm.btn-success-theme,
+.btn-md.btn-success-theme,
+.btn-lg.btn-success-theme,
+.tab-btn.btn-success-theme,
+.tab-btn-sm.btn-success-theme,
+.tab-btn-md.btn-success-theme,
+.tab-btn-lg.btn-success-theme,
+.collapse-btn.btn-success-theme,
+.collapse-btn-sm.btn-success-theme,
+.collapse-btn-md.btn-success-theme,
+.collapse-btn-lg.btn-success-theme,
+.accordion-btn.btn-success-theme,
+.accordion-btn-sm.btn-success-theme,
+.accordion-btn-md.btn-success-theme,
+.accordion-btn-lg.btn-success-theme {
+  background-color: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+.btn.btn-success-theme:hover,
+.btn-sm.btn-success-theme:hover,
+.btn-md.btn-success-theme:hover,
+.btn-lg.btn-success-theme:hover,
+.tab-btn.btn-success-theme:hover,
+.tab-btn-sm.btn-success-theme:hover,
+.tab-btn-md.btn-success-theme:hover,
+.tab-btn-lg.btn-success-theme:hover,
+.collapse-btn.btn-success-theme:hover,
+.collapse-btn-sm.btn-success-theme:hover,
+.collapse-btn-md.btn-success-theme:hover,
+.collapse-btn-lg.btn-success-theme:hover,
+.accordion-btn.btn-success-theme:hover,
+.accordion-btn-sm.btn-success-theme:hover,
+.accordion-btn-md.btn-success-theme:hover,
+.accordion-btn-lg.btn-success-theme:hover {
+  background-color: var(--hover-on-success-theme);
+}
+.btn.btn-success-theme:hover:active,
+.btn-sm.btn-success-theme:hover:active,
+.btn-md.btn-success-theme:hover:active,
+.btn-lg.btn-success-theme:hover:active,
+.tab-btn.btn-success-theme:hover:active,
+.tab-btn-sm.btn-success-theme:hover:active,
+.tab-btn-md.btn-success-theme:hover:active,
+.tab-btn-lg.btn-success-theme:hover:active,
+.collapse-btn.btn-success-theme:hover:active,
+.collapse-btn-sm.btn-success-theme:hover:active,
+.collapse-btn-md.btn-success-theme:hover:active,
+.collapse-btn-lg.btn-success-theme:hover:active,
+.accordion-btn.btn-success-theme:hover:active,
+.accordion-btn-sm.btn-success-theme:hover:active,
+.accordion-btn-md.btn-success-theme:hover:active,
+.accordion-btn-lg.btn-success-theme:hover:active {
+  background-color: var(--active-on-success-theme);
+}
+.btn.btn-success-theme.active,
+.btn-sm.btn-success-theme.active,
+.btn-md.btn-success-theme.active,
+.btn-lg.btn-success-theme.active,
+.tab-btn.btn-success-theme.active,
+.tab-btn-sm.btn-success-theme.active,
+.tab-btn-md.btn-success-theme.active,
+.tab-btn-lg.btn-success-theme.active,
+.collapse-btn.btn-success-theme.active,
+.collapse-btn-sm.btn-success-theme.active,
+.collapse-btn-md.btn-success-theme.active,
+.collapse-btn-lg.btn-success-theme.active,
+.accordion-btn.btn-success-theme.active,
+.accordion-btn-sm.btn-success-theme.active,
+.accordion-btn-md.btn-success-theme.active,
+.accordion-btn-lg.btn-success-theme.active {
+  background-color: var(--hover-on-success-theme);
+}
+.btn.outline-success-theme,
+.btn-sm.outline-success-theme,
+.btn-md.outline-success-theme,
+.btn-lg.outline-success-theme,
+.tab-btn.outline-success-theme,
+.tab-btn-sm.outline-success-theme,
+.tab-btn-md.outline-success-theme,
+.tab-btn-lg.outline-success-theme,
+.collapse-btn.outline-success-theme,
+.collapse-btn-sm.outline-success-theme,
+.collapse-btn-md.outline-success-theme,
+.collapse-btn-lg.outline-success-theme,
+.accordion-btn.outline-success-theme,
+.accordion-btn-sm.outline-success-theme,
+.accordion-btn-md.outline-success-theme,
+.accordion-btn-lg.outline-success-theme {
+  background-color: transparent;
+  color: var(--success-color-theme);
+  border-color: var(--success-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-success-theme:hover,
+.btn-sm.outline-success-theme:hover,
+.btn-md.outline-success-theme:hover,
+.btn-lg.outline-success-theme:hover,
+.tab-btn.outline-success-theme:hover,
+.tab-btn-sm.outline-success-theme:hover,
+.tab-btn-md.outline-success-theme:hover,
+.tab-btn-lg.outline-success-theme:hover,
+.collapse-btn.outline-success-theme:hover,
+.collapse-btn-sm.outline-success-theme:hover,
+.collapse-btn-md.outline-success-theme:hover,
+.collapse-btn-lg.outline-success-theme:hover,
+.accordion-btn.outline-success-theme:hover,
+.accordion-btn-sm.outline-success-theme:hover,
+.accordion-btn-md.outline-success-theme:hover,
+.accordion-btn-lg.outline-success-theme:hover {
+  background-color: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+.btn.outline-success-theme:hover:active,
+.btn-sm.outline-success-theme:hover:active,
+.btn-md.outline-success-theme:hover:active,
+.btn-lg.outline-success-theme:hover:active,
+.tab-btn.outline-success-theme:hover:active,
+.tab-btn-sm.outline-success-theme:hover:active,
+.tab-btn-md.outline-success-theme:hover:active,
+.tab-btn-lg.outline-success-theme:hover:active,
+.collapse-btn.outline-success-theme:hover:active,
+.collapse-btn-sm.outline-success-theme:hover:active,
+.collapse-btn-md.outline-success-theme:hover:active,
+.collapse-btn-lg.outline-success-theme:hover:active,
+.accordion-btn.outline-success-theme:hover:active,
+.accordion-btn-sm.outline-success-theme:hover:active,
+.accordion-btn-md.outline-success-theme:hover:active,
+.accordion-btn-lg.outline-success-theme:hover:active {
+  background-color: var(--active-on-success-theme);
+  color: var(--text-on-success-theme);
+}
+.btn.outline-success-theme.active,
+.btn-sm.outline-success-theme.active,
+.btn-md.outline-success-theme.active,
+.btn-lg.outline-success-theme.active,
+.tab-btn.outline-success-theme.active,
+.tab-btn-sm.outline-success-theme.active,
+.tab-btn-md.outline-success-theme.active,
+.tab-btn-lg.outline-success-theme.active,
+.collapse-btn.outline-success-theme.active,
+.collapse-btn-sm.outline-success-theme.active,
+.collapse-btn-md.outline-success-theme.active,
+.collapse-btn-lg.outline-success-theme.active,
+.accordion-btn.outline-success-theme.active,
+.accordion-btn-sm.outline-success-theme.active,
+.accordion-btn-md.outline-success-theme.active,
+.accordion-btn-lg.outline-success-theme.active {
+  background-color: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+.btn.btn-info-theme,
+.btn-sm.btn-info-theme,
+.btn-md.btn-info-theme,
+.btn-lg.btn-info-theme,
+.tab-btn.btn-info-theme,
+.tab-btn-sm.btn-info-theme,
+.tab-btn-md.btn-info-theme,
+.tab-btn-lg.btn-info-theme,
+.collapse-btn.btn-info-theme,
+.collapse-btn-sm.btn-info-theme,
+.collapse-btn-md.btn-info-theme,
+.collapse-btn-lg.btn-info-theme,
+.accordion-btn.btn-info-theme,
+.accordion-btn-sm.btn-info-theme,
+.accordion-btn-md.btn-info-theme,
+.accordion-btn-lg.btn-info-theme {
+  background-color: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+.btn.btn-info-theme:hover,
+.btn-sm.btn-info-theme:hover,
+.btn-md.btn-info-theme:hover,
+.btn-lg.btn-info-theme:hover,
+.tab-btn.btn-info-theme:hover,
+.tab-btn-sm.btn-info-theme:hover,
+.tab-btn-md.btn-info-theme:hover,
+.tab-btn-lg.btn-info-theme:hover,
+.collapse-btn.btn-info-theme:hover,
+.collapse-btn-sm.btn-info-theme:hover,
+.collapse-btn-md.btn-info-theme:hover,
+.collapse-btn-lg.btn-info-theme:hover,
+.accordion-btn.btn-info-theme:hover,
+.accordion-btn-sm.btn-info-theme:hover,
+.accordion-btn-md.btn-info-theme:hover,
+.accordion-btn-lg.btn-info-theme:hover {
+  background-color: var(--hover-on-info-theme);
+}
+.btn.btn-info-theme:hover:active,
+.btn-sm.btn-info-theme:hover:active,
+.btn-md.btn-info-theme:hover:active,
+.btn-lg.btn-info-theme:hover:active,
+.tab-btn.btn-info-theme:hover:active,
+.tab-btn-sm.btn-info-theme:hover:active,
+.tab-btn-md.btn-info-theme:hover:active,
+.tab-btn-lg.btn-info-theme:hover:active,
+.collapse-btn.btn-info-theme:hover:active,
+.collapse-btn-sm.btn-info-theme:hover:active,
+.collapse-btn-md.btn-info-theme:hover:active,
+.collapse-btn-lg.btn-info-theme:hover:active,
+.accordion-btn.btn-info-theme:hover:active,
+.accordion-btn-sm.btn-info-theme:hover:active,
+.accordion-btn-md.btn-info-theme:hover:active,
+.accordion-btn-lg.btn-info-theme:hover:active {
+  background-color: var(--active-on-info-theme);
+}
+.btn.btn-info-theme.active,
+.btn-sm.btn-info-theme.active,
+.btn-md.btn-info-theme.active,
+.btn-lg.btn-info-theme.active,
+.tab-btn.btn-info-theme.active,
+.tab-btn-sm.btn-info-theme.active,
+.tab-btn-md.btn-info-theme.active,
+.tab-btn-lg.btn-info-theme.active,
+.collapse-btn.btn-info-theme.active,
+.collapse-btn-sm.btn-info-theme.active,
+.collapse-btn-md.btn-info-theme.active,
+.collapse-btn-lg.btn-info-theme.active,
+.accordion-btn.btn-info-theme.active,
+.accordion-btn-sm.btn-info-theme.active,
+.accordion-btn-md.btn-info-theme.active,
+.accordion-btn-lg.btn-info-theme.active {
+  background-color: var(--hover-on-info-theme);
+}
+.btn.outline-info-theme,
+.btn-sm.outline-info-theme,
+.btn-md.outline-info-theme,
+.btn-lg.outline-info-theme,
+.tab-btn.outline-info-theme,
+.tab-btn-sm.outline-info-theme,
+.tab-btn-md.outline-info-theme,
+.tab-btn-lg.outline-info-theme,
+.collapse-btn.outline-info-theme,
+.collapse-btn-sm.outline-info-theme,
+.collapse-btn-md.outline-info-theme,
+.collapse-btn-lg.outline-info-theme,
+.accordion-btn.outline-info-theme,
+.accordion-btn-sm.outline-info-theme,
+.accordion-btn-md.outline-info-theme,
+.accordion-btn-lg.outline-info-theme {
+  background-color: transparent;
+  color: var(--info-color-theme);
+  border-color: var(--info-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-info-theme:hover,
+.btn-sm.outline-info-theme:hover,
+.btn-md.outline-info-theme:hover,
+.btn-lg.outline-info-theme:hover,
+.tab-btn.outline-info-theme:hover,
+.tab-btn-sm.outline-info-theme:hover,
+.tab-btn-md.outline-info-theme:hover,
+.tab-btn-lg.outline-info-theme:hover,
+.collapse-btn.outline-info-theme:hover,
+.collapse-btn-sm.outline-info-theme:hover,
+.collapse-btn-md.outline-info-theme:hover,
+.collapse-btn-lg.outline-info-theme:hover,
+.accordion-btn.outline-info-theme:hover,
+.accordion-btn-sm.outline-info-theme:hover,
+.accordion-btn-md.outline-info-theme:hover,
+.accordion-btn-lg.outline-info-theme:hover {
+  background-color: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+.btn.outline-info-theme:hover:active,
+.btn-sm.outline-info-theme:hover:active,
+.btn-md.outline-info-theme:hover:active,
+.btn-lg.outline-info-theme:hover:active,
+.tab-btn.outline-info-theme:hover:active,
+.tab-btn-sm.outline-info-theme:hover:active,
+.tab-btn-md.outline-info-theme:hover:active,
+.tab-btn-lg.outline-info-theme:hover:active,
+.collapse-btn.outline-info-theme:hover:active,
+.collapse-btn-sm.outline-info-theme:hover:active,
+.collapse-btn-md.outline-info-theme:hover:active,
+.collapse-btn-lg.outline-info-theme:hover:active,
+.accordion-btn.outline-info-theme:hover:active,
+.accordion-btn-sm.outline-info-theme:hover:active,
+.accordion-btn-md.outline-info-theme:hover:active,
+.accordion-btn-lg.outline-info-theme:hover:active {
+  background-color: var(--active-on-info-theme);
+  color: var(--text-on-info-theme);
+}
+.btn.outline-info-theme.active,
+.btn-sm.outline-info-theme.active,
+.btn-md.outline-info-theme.active,
+.btn-lg.outline-info-theme.active,
+.tab-btn.outline-info-theme.active,
+.tab-btn-sm.outline-info-theme.active,
+.tab-btn-md.outline-info-theme.active,
+.tab-btn-lg.outline-info-theme.active,
+.collapse-btn.outline-info-theme.active,
+.collapse-btn-sm.outline-info-theme.active,
+.collapse-btn-md.outline-info-theme.active,
+.collapse-btn-lg.outline-info-theme.active,
+.accordion-btn.outline-info-theme.active,
+.accordion-btn-sm.outline-info-theme.active,
+.accordion-btn-md.outline-info-theme.active,
+.accordion-btn-lg.outline-info-theme.active {
+  background-color: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+.btn.btn-warning-theme,
+.btn-sm.btn-warning-theme,
+.btn-md.btn-warning-theme,
+.btn-lg.btn-warning-theme,
+.tab-btn.btn-warning-theme,
+.tab-btn-sm.btn-warning-theme,
+.tab-btn-md.btn-warning-theme,
+.tab-btn-lg.btn-warning-theme,
+.collapse-btn.btn-warning-theme,
+.collapse-btn-sm.btn-warning-theme,
+.collapse-btn-md.btn-warning-theme,
+.collapse-btn-lg.btn-warning-theme,
+.accordion-btn.btn-warning-theme,
+.accordion-btn-sm.btn-warning-theme,
+.accordion-btn-md.btn-warning-theme,
+.accordion-btn-lg.btn-warning-theme {
+  background-color: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+.btn.btn-warning-theme:hover,
+.btn-sm.btn-warning-theme:hover,
+.btn-md.btn-warning-theme:hover,
+.btn-lg.btn-warning-theme:hover,
+.tab-btn.btn-warning-theme:hover,
+.tab-btn-sm.btn-warning-theme:hover,
+.tab-btn-md.btn-warning-theme:hover,
+.tab-btn-lg.btn-warning-theme:hover,
+.collapse-btn.btn-warning-theme:hover,
+.collapse-btn-sm.btn-warning-theme:hover,
+.collapse-btn-md.btn-warning-theme:hover,
+.collapse-btn-lg.btn-warning-theme:hover,
+.accordion-btn.btn-warning-theme:hover,
+.accordion-btn-sm.btn-warning-theme:hover,
+.accordion-btn-md.btn-warning-theme:hover,
+.accordion-btn-lg.btn-warning-theme:hover {
+  background-color: var(--hover-on-warning-theme);
+}
+.btn.btn-warning-theme:hover:active,
+.btn-sm.btn-warning-theme:hover:active,
+.btn-md.btn-warning-theme:hover:active,
+.btn-lg.btn-warning-theme:hover:active,
+.tab-btn.btn-warning-theme:hover:active,
+.tab-btn-sm.btn-warning-theme:hover:active,
+.tab-btn-md.btn-warning-theme:hover:active,
+.tab-btn-lg.btn-warning-theme:hover:active,
+.collapse-btn.btn-warning-theme:hover:active,
+.collapse-btn-sm.btn-warning-theme:hover:active,
+.collapse-btn-md.btn-warning-theme:hover:active,
+.collapse-btn-lg.btn-warning-theme:hover:active,
+.accordion-btn.btn-warning-theme:hover:active,
+.accordion-btn-sm.btn-warning-theme:hover:active,
+.accordion-btn-md.btn-warning-theme:hover:active,
+.accordion-btn-lg.btn-warning-theme:hover:active {
+  background-color: var(--active-on-warning-theme);
+}
+.btn.btn-warning-theme.active,
+.btn-sm.btn-warning-theme.active,
+.btn-md.btn-warning-theme.active,
+.btn-lg.btn-warning-theme.active,
+.tab-btn.btn-warning-theme.active,
+.tab-btn-sm.btn-warning-theme.active,
+.tab-btn-md.btn-warning-theme.active,
+.tab-btn-lg.btn-warning-theme.active,
+.collapse-btn.btn-warning-theme.active,
+.collapse-btn-sm.btn-warning-theme.active,
+.collapse-btn-md.btn-warning-theme.active,
+.collapse-btn-lg.btn-warning-theme.active,
+.accordion-btn.btn-warning-theme.active,
+.accordion-btn-sm.btn-warning-theme.active,
+.accordion-btn-md.btn-warning-theme.active,
+.accordion-btn-lg.btn-warning-theme.active {
+  background-color: var(--hover-on-warning-theme);
+}
+.btn.outline-warning-theme,
+.btn-sm.outline-warning-theme,
+.btn-md.outline-warning-theme,
+.btn-lg.outline-warning-theme,
+.tab-btn.outline-warning-theme,
+.tab-btn-sm.outline-warning-theme,
+.tab-btn-md.outline-warning-theme,
+.tab-btn-lg.outline-warning-theme,
+.collapse-btn.outline-warning-theme,
+.collapse-btn-sm.outline-warning-theme,
+.collapse-btn-md.outline-warning-theme,
+.collapse-btn-lg.outline-warning-theme,
+.accordion-btn.outline-warning-theme,
+.accordion-btn-sm.outline-warning-theme,
+.accordion-btn-md.outline-warning-theme,
+.accordion-btn-lg.outline-warning-theme {
+  background-color: transparent;
+  color: var(--warning-color-theme);
+  border-color: var(--warning-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-warning-theme:hover,
+.btn-sm.outline-warning-theme:hover,
+.btn-md.outline-warning-theme:hover,
+.btn-lg.outline-warning-theme:hover,
+.tab-btn.outline-warning-theme:hover,
+.tab-btn-sm.outline-warning-theme:hover,
+.tab-btn-md.outline-warning-theme:hover,
+.tab-btn-lg.outline-warning-theme:hover,
+.collapse-btn.outline-warning-theme:hover,
+.collapse-btn-sm.outline-warning-theme:hover,
+.collapse-btn-md.outline-warning-theme:hover,
+.collapse-btn-lg.outline-warning-theme:hover,
+.accordion-btn.outline-warning-theme:hover,
+.accordion-btn-sm.outline-warning-theme:hover,
+.accordion-btn-md.outline-warning-theme:hover,
+.accordion-btn-lg.outline-warning-theme:hover {
+  background-color: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+.btn.outline-warning-theme:hover:active,
+.btn-sm.outline-warning-theme:hover:active,
+.btn-md.outline-warning-theme:hover:active,
+.btn-lg.outline-warning-theme:hover:active,
+.tab-btn.outline-warning-theme:hover:active,
+.tab-btn-sm.outline-warning-theme:hover:active,
+.tab-btn-md.outline-warning-theme:hover:active,
+.tab-btn-lg.outline-warning-theme:hover:active,
+.collapse-btn.outline-warning-theme:hover:active,
+.collapse-btn-sm.outline-warning-theme:hover:active,
+.collapse-btn-md.outline-warning-theme:hover:active,
+.collapse-btn-lg.outline-warning-theme:hover:active,
+.accordion-btn.outline-warning-theme:hover:active,
+.accordion-btn-sm.outline-warning-theme:hover:active,
+.accordion-btn-md.outline-warning-theme:hover:active,
+.accordion-btn-lg.outline-warning-theme:hover:active {
+  background-color: var(--active-on-warning-theme);
+  color: var(--text-on-warning-theme);
+}
+.btn.outline-warning-theme.active,
+.btn-sm.outline-warning-theme.active,
+.btn-md.outline-warning-theme.active,
+.btn-lg.outline-warning-theme.active,
+.tab-btn.outline-warning-theme.active,
+.tab-btn-sm.outline-warning-theme.active,
+.tab-btn-md.outline-warning-theme.active,
+.tab-btn-lg.outline-warning-theme.active,
+.collapse-btn.outline-warning-theme.active,
+.collapse-btn-sm.outline-warning-theme.active,
+.collapse-btn-md.outline-warning-theme.active,
+.collapse-btn-lg.outline-warning-theme.active,
+.accordion-btn.outline-warning-theme.active,
+.accordion-btn-sm.outline-warning-theme.active,
+.accordion-btn-md.outline-warning-theme.active,
+.accordion-btn-lg.outline-warning-theme.active {
+  background-color: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+.btn.btn-danger-theme,
+.btn-sm.btn-danger-theme,
+.btn-md.btn-danger-theme,
+.btn-lg.btn-danger-theme,
+.tab-btn.btn-danger-theme,
+.tab-btn-sm.btn-danger-theme,
+.tab-btn-md.btn-danger-theme,
+.tab-btn-lg.btn-danger-theme,
+.collapse-btn.btn-danger-theme,
+.collapse-btn-sm.btn-danger-theme,
+.collapse-btn-md.btn-danger-theme,
+.collapse-btn-lg.btn-danger-theme,
+.accordion-btn.btn-danger-theme,
+.accordion-btn-sm.btn-danger-theme,
+.accordion-btn-md.btn-danger-theme,
+.accordion-btn-lg.btn-danger-theme {
+  background-color: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+.btn.btn-danger-theme:hover,
+.btn-sm.btn-danger-theme:hover,
+.btn-md.btn-danger-theme:hover,
+.btn-lg.btn-danger-theme:hover,
+.tab-btn.btn-danger-theme:hover,
+.tab-btn-sm.btn-danger-theme:hover,
+.tab-btn-md.btn-danger-theme:hover,
+.tab-btn-lg.btn-danger-theme:hover,
+.collapse-btn.btn-danger-theme:hover,
+.collapse-btn-sm.btn-danger-theme:hover,
+.collapse-btn-md.btn-danger-theme:hover,
+.collapse-btn-lg.btn-danger-theme:hover,
+.accordion-btn.btn-danger-theme:hover,
+.accordion-btn-sm.btn-danger-theme:hover,
+.accordion-btn-md.btn-danger-theme:hover,
+.accordion-btn-lg.btn-danger-theme:hover {
+  background-color: var(--hover-on-danger-theme);
+}
+.btn.btn-danger-theme:hover:active,
+.btn-sm.btn-danger-theme:hover:active,
+.btn-md.btn-danger-theme:hover:active,
+.btn-lg.btn-danger-theme:hover:active,
+.tab-btn.btn-danger-theme:hover:active,
+.tab-btn-sm.btn-danger-theme:hover:active,
+.tab-btn-md.btn-danger-theme:hover:active,
+.tab-btn-lg.btn-danger-theme:hover:active,
+.collapse-btn.btn-danger-theme:hover:active,
+.collapse-btn-sm.btn-danger-theme:hover:active,
+.collapse-btn-md.btn-danger-theme:hover:active,
+.collapse-btn-lg.btn-danger-theme:hover:active,
+.accordion-btn.btn-danger-theme:hover:active,
+.accordion-btn-sm.btn-danger-theme:hover:active,
+.accordion-btn-md.btn-danger-theme:hover:active,
+.accordion-btn-lg.btn-danger-theme:hover:active {
+  background-color: var(--active-on-danger-theme);
+}
+.btn.btn-danger-theme.active,
+.btn-sm.btn-danger-theme.active,
+.btn-md.btn-danger-theme.active,
+.btn-lg.btn-danger-theme.active,
+.tab-btn.btn-danger-theme.active,
+.tab-btn-sm.btn-danger-theme.active,
+.tab-btn-md.btn-danger-theme.active,
+.tab-btn-lg.btn-danger-theme.active,
+.collapse-btn.btn-danger-theme.active,
+.collapse-btn-sm.btn-danger-theme.active,
+.collapse-btn-md.btn-danger-theme.active,
+.collapse-btn-lg.btn-danger-theme.active,
+.accordion-btn.btn-danger-theme.active,
+.accordion-btn-sm.btn-danger-theme.active,
+.accordion-btn-md.btn-danger-theme.active,
+.accordion-btn-lg.btn-danger-theme.active {
+  background-color: var(--hover-on-danger-theme);
+}
+.btn.outline-danger-theme,
+.btn-sm.outline-danger-theme,
+.btn-md.outline-danger-theme,
+.btn-lg.outline-danger-theme,
+.tab-btn.outline-danger-theme,
+.tab-btn-sm.outline-danger-theme,
+.tab-btn-md.outline-danger-theme,
+.tab-btn-lg.outline-danger-theme,
+.collapse-btn.outline-danger-theme,
+.collapse-btn-sm.outline-danger-theme,
+.collapse-btn-md.outline-danger-theme,
+.collapse-btn-lg.outline-danger-theme,
+.accordion-btn.outline-danger-theme,
+.accordion-btn-sm.outline-danger-theme,
+.accordion-btn-md.outline-danger-theme,
+.accordion-btn-lg.outline-danger-theme {
+  background-color: transparent;
+  color: var(--danger-color-theme);
+  border-color: var(--danger-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-danger-theme:hover,
+.btn-sm.outline-danger-theme:hover,
+.btn-md.outline-danger-theme:hover,
+.btn-lg.outline-danger-theme:hover,
+.tab-btn.outline-danger-theme:hover,
+.tab-btn-sm.outline-danger-theme:hover,
+.tab-btn-md.outline-danger-theme:hover,
+.tab-btn-lg.outline-danger-theme:hover,
+.collapse-btn.outline-danger-theme:hover,
+.collapse-btn-sm.outline-danger-theme:hover,
+.collapse-btn-md.outline-danger-theme:hover,
+.collapse-btn-lg.outline-danger-theme:hover,
+.accordion-btn.outline-danger-theme:hover,
+.accordion-btn-sm.outline-danger-theme:hover,
+.accordion-btn-md.outline-danger-theme:hover,
+.accordion-btn-lg.outline-danger-theme:hover {
+  background-color: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+.btn.outline-danger-theme:hover:active,
+.btn-sm.outline-danger-theme:hover:active,
+.btn-md.outline-danger-theme:hover:active,
+.btn-lg.outline-danger-theme:hover:active,
+.tab-btn.outline-danger-theme:hover:active,
+.tab-btn-sm.outline-danger-theme:hover:active,
+.tab-btn-md.outline-danger-theme:hover:active,
+.tab-btn-lg.outline-danger-theme:hover:active,
+.collapse-btn.outline-danger-theme:hover:active,
+.collapse-btn-sm.outline-danger-theme:hover:active,
+.collapse-btn-md.outline-danger-theme:hover:active,
+.collapse-btn-lg.outline-danger-theme:hover:active,
+.accordion-btn.outline-danger-theme:hover:active,
+.accordion-btn-sm.outline-danger-theme:hover:active,
+.accordion-btn-md.outline-danger-theme:hover:active,
+.accordion-btn-lg.outline-danger-theme:hover:active {
+  background-color: var(--active-on-danger-theme);
+  color: var(--text-on-danger-theme);
+}
+.btn.outline-danger-theme.active,
+.btn-sm.outline-danger-theme.active,
+.btn-md.outline-danger-theme.active,
+.btn-lg.outline-danger-theme.active,
+.tab-btn.outline-danger-theme.active,
+.tab-btn-sm.outline-danger-theme.active,
+.tab-btn-md.outline-danger-theme.active,
+.tab-btn-lg.outline-danger-theme.active,
+.collapse-btn.outline-danger-theme.active,
+.collapse-btn-sm.outline-danger-theme.active,
+.collapse-btn-md.outline-danger-theme.active,
+.collapse-btn-lg.outline-danger-theme.active,
+.accordion-btn.outline-danger-theme.active,
+.accordion-btn-sm.outline-danger-theme.active,
+.accordion-btn-md.outline-danger-theme.active,
+.accordion-btn-lg.outline-danger-theme.active {
+  background-color: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+.btn.btn-neutral-theme,
+.btn-sm.btn-neutral-theme,
+.btn-md.btn-neutral-theme,
+.btn-lg.btn-neutral-theme,
+.tab-btn.btn-neutral-theme,
+.tab-btn-sm.btn-neutral-theme,
+.tab-btn-md.btn-neutral-theme,
+.tab-btn-lg.btn-neutral-theme,
+.collapse-btn.btn-neutral-theme,
+.collapse-btn-sm.btn-neutral-theme,
+.collapse-btn-md.btn-neutral-theme,
+.collapse-btn-lg.btn-neutral-theme,
+.accordion-btn.btn-neutral-theme,
+.accordion-btn-sm.btn-neutral-theme,
+.accordion-btn-md.btn-neutral-theme,
+.accordion-btn-lg.btn-neutral-theme {
+  background-color: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+.btn.btn-neutral-theme:hover,
+.btn-sm.btn-neutral-theme:hover,
+.btn-md.btn-neutral-theme:hover,
+.btn-lg.btn-neutral-theme:hover,
+.tab-btn.btn-neutral-theme:hover,
+.tab-btn-sm.btn-neutral-theme:hover,
+.tab-btn-md.btn-neutral-theme:hover,
+.tab-btn-lg.btn-neutral-theme:hover,
+.collapse-btn.btn-neutral-theme:hover,
+.collapse-btn-sm.btn-neutral-theme:hover,
+.collapse-btn-md.btn-neutral-theme:hover,
+.collapse-btn-lg.btn-neutral-theme:hover,
+.accordion-btn.btn-neutral-theme:hover,
+.accordion-btn-sm.btn-neutral-theme:hover,
+.accordion-btn-md.btn-neutral-theme:hover,
+.accordion-btn-lg.btn-neutral-theme:hover {
+  background-color: var(--hover-on-neutral-theme);
+}
+.btn.btn-neutral-theme:hover:active,
+.btn-sm.btn-neutral-theme:hover:active,
+.btn-md.btn-neutral-theme:hover:active,
+.btn-lg.btn-neutral-theme:hover:active,
+.tab-btn.btn-neutral-theme:hover:active,
+.tab-btn-sm.btn-neutral-theme:hover:active,
+.tab-btn-md.btn-neutral-theme:hover:active,
+.tab-btn-lg.btn-neutral-theme:hover:active,
+.collapse-btn.btn-neutral-theme:hover:active,
+.collapse-btn-sm.btn-neutral-theme:hover:active,
+.collapse-btn-md.btn-neutral-theme:hover:active,
+.collapse-btn-lg.btn-neutral-theme:hover:active,
+.accordion-btn.btn-neutral-theme:hover:active,
+.accordion-btn-sm.btn-neutral-theme:hover:active,
+.accordion-btn-md.btn-neutral-theme:hover:active,
+.accordion-btn-lg.btn-neutral-theme:hover:active {
+  background-color: var(--active-on-neutral-theme);
+}
+.btn.btn-neutral-theme.active,
+.btn-sm.btn-neutral-theme.active,
+.btn-md.btn-neutral-theme.active,
+.btn-lg.btn-neutral-theme.active,
+.tab-btn.btn-neutral-theme.active,
+.tab-btn-sm.btn-neutral-theme.active,
+.tab-btn-md.btn-neutral-theme.active,
+.tab-btn-lg.btn-neutral-theme.active,
+.collapse-btn.btn-neutral-theme.active,
+.collapse-btn-sm.btn-neutral-theme.active,
+.collapse-btn-md.btn-neutral-theme.active,
+.collapse-btn-lg.btn-neutral-theme.active,
+.accordion-btn.btn-neutral-theme.active,
+.accordion-btn-sm.btn-neutral-theme.active,
+.accordion-btn-md.btn-neutral-theme.active,
+.accordion-btn-lg.btn-neutral-theme.active {
+  background-color: var(--hover-on-neutral-theme);
+}
+.btn.outline-neutral-theme,
+.btn-sm.outline-neutral-theme,
+.btn-md.outline-neutral-theme,
+.btn-lg.outline-neutral-theme,
+.tab-btn.outline-neutral-theme,
+.tab-btn-sm.outline-neutral-theme,
+.tab-btn-md.outline-neutral-theme,
+.tab-btn-lg.outline-neutral-theme,
+.collapse-btn.outline-neutral-theme,
+.collapse-btn-sm.outline-neutral-theme,
+.collapse-btn-md.outline-neutral-theme,
+.collapse-btn-lg.outline-neutral-theme,
+.accordion-btn.outline-neutral-theme,
+.accordion-btn-sm.outline-neutral-theme,
+.accordion-btn-md.outline-neutral-theme,
+.accordion-btn-lg.outline-neutral-theme {
+  background-color: transparent;
+  color: var(--neutral-color-theme);
+  border-color: var(--neutral-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-neutral-theme:hover,
+.btn-sm.outline-neutral-theme:hover,
+.btn-md.outline-neutral-theme:hover,
+.btn-lg.outline-neutral-theme:hover,
+.tab-btn.outline-neutral-theme:hover,
+.tab-btn-sm.outline-neutral-theme:hover,
+.tab-btn-md.outline-neutral-theme:hover,
+.tab-btn-lg.outline-neutral-theme:hover,
+.collapse-btn.outline-neutral-theme:hover,
+.collapse-btn-sm.outline-neutral-theme:hover,
+.collapse-btn-md.outline-neutral-theme:hover,
+.collapse-btn-lg.outline-neutral-theme:hover,
+.accordion-btn.outline-neutral-theme:hover,
+.accordion-btn-sm.outline-neutral-theme:hover,
+.accordion-btn-md.outline-neutral-theme:hover,
+.accordion-btn-lg.outline-neutral-theme:hover {
+  background-color: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+.btn.outline-neutral-theme:hover:active,
+.btn-sm.outline-neutral-theme:hover:active,
+.btn-md.outline-neutral-theme:hover:active,
+.btn-lg.outline-neutral-theme:hover:active,
+.tab-btn.outline-neutral-theme:hover:active,
+.tab-btn-sm.outline-neutral-theme:hover:active,
+.tab-btn-md.outline-neutral-theme:hover:active,
+.tab-btn-lg.outline-neutral-theme:hover:active,
+.collapse-btn.outline-neutral-theme:hover:active,
+.collapse-btn-sm.outline-neutral-theme:hover:active,
+.collapse-btn-md.outline-neutral-theme:hover:active,
+.collapse-btn-lg.outline-neutral-theme:hover:active,
+.accordion-btn.outline-neutral-theme:hover:active,
+.accordion-btn-sm.outline-neutral-theme:hover:active,
+.accordion-btn-md.outline-neutral-theme:hover:active,
+.accordion-btn-lg.outline-neutral-theme:hover:active {
+  background-color: var(--active-on-neutral-theme);
+  color: var(--text-on-neutral-theme);
+}
+.btn.outline-neutral-theme.active,
+.btn-sm.outline-neutral-theme.active,
+.btn-md.outline-neutral-theme.active,
+.btn-lg.outline-neutral-theme.active,
+.tab-btn.outline-neutral-theme.active,
+.tab-btn-sm.outline-neutral-theme.active,
+.tab-btn-md.outline-neutral-theme.active,
+.tab-btn-lg.outline-neutral-theme.active,
+.collapse-btn.outline-neutral-theme.active,
+.collapse-btn-sm.outline-neutral-theme.active,
+.collapse-btn-md.outline-neutral-theme.active,
+.collapse-btn-lg.outline-neutral-theme.active,
+.accordion-btn.outline-neutral-theme.active,
+.accordion-btn-sm.outline-neutral-theme.active,
+.accordion-btn-md.outline-neutral-theme.active,
+.accordion-btn-lg.outline-neutral-theme.active {
+  background-color: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+.btn.btn-light-theme,
+.btn-sm.btn-light-theme,
+.btn-md.btn-light-theme,
+.btn-lg.btn-light-theme,
+.tab-btn.btn-light-theme,
+.tab-btn-sm.btn-light-theme,
+.tab-btn-md.btn-light-theme,
+.tab-btn-lg.btn-light-theme,
+.collapse-btn.btn-light-theme,
+.collapse-btn-sm.btn-light-theme,
+.collapse-btn-md.btn-light-theme,
+.collapse-btn-lg.btn-light-theme,
+.accordion-btn.btn-light-theme,
+.accordion-btn-sm.btn-light-theme,
+.accordion-btn-md.btn-light-theme,
+.accordion-btn-lg.btn-light-theme {
+  background-color: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+.btn.btn-light-theme:hover,
+.btn-sm.btn-light-theme:hover,
+.btn-md.btn-light-theme:hover,
+.btn-lg.btn-light-theme:hover,
+.tab-btn.btn-light-theme:hover,
+.tab-btn-sm.btn-light-theme:hover,
+.tab-btn-md.btn-light-theme:hover,
+.tab-btn-lg.btn-light-theme:hover,
+.collapse-btn.btn-light-theme:hover,
+.collapse-btn-sm.btn-light-theme:hover,
+.collapse-btn-md.btn-light-theme:hover,
+.collapse-btn-lg.btn-light-theme:hover,
+.accordion-btn.btn-light-theme:hover,
+.accordion-btn-sm.btn-light-theme:hover,
+.accordion-btn-md.btn-light-theme:hover,
+.accordion-btn-lg.btn-light-theme:hover {
+  background-color: var(--hover-on-light-theme);
+}
+.btn.btn-light-theme:hover:active,
+.btn-sm.btn-light-theme:hover:active,
+.btn-md.btn-light-theme:hover:active,
+.btn-lg.btn-light-theme:hover:active,
+.tab-btn.btn-light-theme:hover:active,
+.tab-btn-sm.btn-light-theme:hover:active,
+.tab-btn-md.btn-light-theme:hover:active,
+.tab-btn-lg.btn-light-theme:hover:active,
+.collapse-btn.btn-light-theme:hover:active,
+.collapse-btn-sm.btn-light-theme:hover:active,
+.collapse-btn-md.btn-light-theme:hover:active,
+.collapse-btn-lg.btn-light-theme:hover:active,
+.accordion-btn.btn-light-theme:hover:active,
+.accordion-btn-sm.btn-light-theme:hover:active,
+.accordion-btn-md.btn-light-theme:hover:active,
+.accordion-btn-lg.btn-light-theme:hover:active {
+  background-color: var(--active-on-light-theme);
+}
+.btn.btn-light-theme.active,
+.btn-sm.btn-light-theme.active,
+.btn-md.btn-light-theme.active,
+.btn-lg.btn-light-theme.active,
+.tab-btn.btn-light-theme.active,
+.tab-btn-sm.btn-light-theme.active,
+.tab-btn-md.btn-light-theme.active,
+.tab-btn-lg.btn-light-theme.active,
+.collapse-btn.btn-light-theme.active,
+.collapse-btn-sm.btn-light-theme.active,
+.collapse-btn-md.btn-light-theme.active,
+.collapse-btn-lg.btn-light-theme.active,
+.accordion-btn.btn-light-theme.active,
+.accordion-btn-sm.btn-light-theme.active,
+.accordion-btn-md.btn-light-theme.active,
+.accordion-btn-lg.btn-light-theme.active {
+  background-color: var(--hover-on-light-theme);
+}
+.btn.outline-light-theme,
+.btn-sm.outline-light-theme,
+.btn-md.outline-light-theme,
+.btn-lg.outline-light-theme,
+.tab-btn.outline-light-theme,
+.tab-btn-sm.outline-light-theme,
+.tab-btn-md.outline-light-theme,
+.tab-btn-lg.outline-light-theme,
+.collapse-btn.outline-light-theme,
+.collapse-btn-sm.outline-light-theme,
+.collapse-btn-md.outline-light-theme,
+.collapse-btn-lg.outline-light-theme,
+.accordion-btn.outline-light-theme,
+.accordion-btn-sm.outline-light-theme,
+.accordion-btn-md.outline-light-theme,
+.accordion-btn-lg.outline-light-theme {
+  background-color: transparent;
+  color: var(--light-color-theme);
+  border-color: var(--light-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-light-theme:hover,
+.btn-sm.outline-light-theme:hover,
+.btn-md.outline-light-theme:hover,
+.btn-lg.outline-light-theme:hover,
+.tab-btn.outline-light-theme:hover,
+.tab-btn-sm.outline-light-theme:hover,
+.tab-btn-md.outline-light-theme:hover,
+.tab-btn-lg.outline-light-theme:hover,
+.collapse-btn.outline-light-theme:hover,
+.collapse-btn-sm.outline-light-theme:hover,
+.collapse-btn-md.outline-light-theme:hover,
+.collapse-btn-lg.outline-light-theme:hover,
+.accordion-btn.outline-light-theme:hover,
+.accordion-btn-sm.outline-light-theme:hover,
+.accordion-btn-md.outline-light-theme:hover,
+.accordion-btn-lg.outline-light-theme:hover {
+  background-color: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+.btn.outline-light-theme:hover:active,
+.btn-sm.outline-light-theme:hover:active,
+.btn-md.outline-light-theme:hover:active,
+.btn-lg.outline-light-theme:hover:active,
+.tab-btn.outline-light-theme:hover:active,
+.tab-btn-sm.outline-light-theme:hover:active,
+.tab-btn-md.outline-light-theme:hover:active,
+.tab-btn-lg.outline-light-theme:hover:active,
+.collapse-btn.outline-light-theme:hover:active,
+.collapse-btn-sm.outline-light-theme:hover:active,
+.collapse-btn-md.outline-light-theme:hover:active,
+.collapse-btn-lg.outline-light-theme:hover:active,
+.accordion-btn.outline-light-theme:hover:active,
+.accordion-btn-sm.outline-light-theme:hover:active,
+.accordion-btn-md.outline-light-theme:hover:active,
+.accordion-btn-lg.outline-light-theme:hover:active {
+  background-color: var(--active-on-light-theme);
+  color: var(--text-on-light-theme);
+}
+.btn.outline-light-theme.active,
+.btn-sm.outline-light-theme.active,
+.btn-md.outline-light-theme.active,
+.btn-lg.outline-light-theme.active,
+.tab-btn.outline-light-theme.active,
+.tab-btn-sm.outline-light-theme.active,
+.tab-btn-md.outline-light-theme.active,
+.tab-btn-lg.outline-light-theme.active,
+.collapse-btn.outline-light-theme.active,
+.collapse-btn-sm.outline-light-theme.active,
+.collapse-btn-md.outline-light-theme.active,
+.collapse-btn-lg.outline-light-theme.active,
+.accordion-btn.outline-light-theme.active,
+.accordion-btn-sm.outline-light-theme.active,
+.accordion-btn-md.outline-light-theme.active,
+.accordion-btn-lg.outline-light-theme.active {
+  background-color: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+.btn.btn-dark-theme,
+.btn-sm.btn-dark-theme,
+.btn-md.btn-dark-theme,
+.btn-lg.btn-dark-theme,
+.tab-btn.btn-dark-theme,
+.tab-btn-sm.btn-dark-theme,
+.tab-btn-md.btn-dark-theme,
+.tab-btn-lg.btn-dark-theme,
+.collapse-btn.btn-dark-theme,
+.collapse-btn-sm.btn-dark-theme,
+.collapse-btn-md.btn-dark-theme,
+.collapse-btn-lg.btn-dark-theme,
+.accordion-btn.btn-dark-theme,
+.accordion-btn-sm.btn-dark-theme,
+.accordion-btn-md.btn-dark-theme,
+.accordion-btn-lg.btn-dark-theme {
+  background-color: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
+.btn.btn-dark-theme:hover,
+.btn-sm.btn-dark-theme:hover,
+.btn-md.btn-dark-theme:hover,
+.btn-lg.btn-dark-theme:hover,
+.tab-btn.btn-dark-theme:hover,
+.tab-btn-sm.btn-dark-theme:hover,
+.tab-btn-md.btn-dark-theme:hover,
+.tab-btn-lg.btn-dark-theme:hover,
+.collapse-btn.btn-dark-theme:hover,
+.collapse-btn-sm.btn-dark-theme:hover,
+.collapse-btn-md.btn-dark-theme:hover,
+.collapse-btn-lg.btn-dark-theme:hover,
+.accordion-btn.btn-dark-theme:hover,
+.accordion-btn-sm.btn-dark-theme:hover,
+.accordion-btn-md.btn-dark-theme:hover,
+.accordion-btn-lg.btn-dark-theme:hover {
+  background-color: var(--hover-on-dark-theme);
+}
+.btn.btn-dark-theme:hover:active,
+.btn-sm.btn-dark-theme:hover:active,
+.btn-md.btn-dark-theme:hover:active,
+.btn-lg.btn-dark-theme:hover:active,
+.tab-btn.btn-dark-theme:hover:active,
+.tab-btn-sm.btn-dark-theme:hover:active,
+.tab-btn-md.btn-dark-theme:hover:active,
+.tab-btn-lg.btn-dark-theme:hover:active,
+.collapse-btn.btn-dark-theme:hover:active,
+.collapse-btn-sm.btn-dark-theme:hover:active,
+.collapse-btn-md.btn-dark-theme:hover:active,
+.collapse-btn-lg.btn-dark-theme:hover:active,
+.accordion-btn.btn-dark-theme:hover:active,
+.accordion-btn-sm.btn-dark-theme:hover:active,
+.accordion-btn-md.btn-dark-theme:hover:active,
+.accordion-btn-lg.btn-dark-theme:hover:active {
+  background-color: var(--active-on-dark-theme);
+}
+.btn.btn-dark-theme.active,
+.btn-sm.btn-dark-theme.active,
+.btn-md.btn-dark-theme.active,
+.btn-lg.btn-dark-theme.active,
+.tab-btn.btn-dark-theme.active,
+.tab-btn-sm.btn-dark-theme.active,
+.tab-btn-md.btn-dark-theme.active,
+.tab-btn-lg.btn-dark-theme.active,
+.collapse-btn.btn-dark-theme.active,
+.collapse-btn-sm.btn-dark-theme.active,
+.collapse-btn-md.btn-dark-theme.active,
+.collapse-btn-lg.btn-dark-theme.active,
+.accordion-btn.btn-dark-theme.active,
+.accordion-btn-sm.btn-dark-theme.active,
+.accordion-btn-md.btn-dark-theme.active,
+.accordion-btn-lg.btn-dark-theme.active {
+  background-color: var(--hover-on-dark-theme);
+}
+.btn.outline-dark-theme,
+.btn-sm.outline-dark-theme,
+.btn-md.outline-dark-theme,
+.btn-lg.outline-dark-theme,
+.tab-btn.outline-dark-theme,
+.tab-btn-sm.outline-dark-theme,
+.tab-btn-md.outline-dark-theme,
+.tab-btn-lg.outline-dark-theme,
+.collapse-btn.outline-dark-theme,
+.collapse-btn-sm.outline-dark-theme,
+.collapse-btn-md.outline-dark-theme,
+.collapse-btn-lg.outline-dark-theme,
+.accordion-btn.outline-dark-theme,
+.accordion-btn-sm.outline-dark-theme,
+.accordion-btn-md.outline-dark-theme,
+.accordion-btn-lg.outline-dark-theme {
+  background-color: transparent;
+  color: var(--dark-color-theme);
+  border-color: var(--dark-color-theme);
+  border-style: var(--border-style-outline);
+  border-width: var(--border-width-outline);
+}
+.btn.outline-dark-theme:hover,
+.btn-sm.outline-dark-theme:hover,
+.btn-md.outline-dark-theme:hover,
+.btn-lg.outline-dark-theme:hover,
+.tab-btn.outline-dark-theme:hover,
+.tab-btn-sm.outline-dark-theme:hover,
+.tab-btn-md.outline-dark-theme:hover,
+.tab-btn-lg.outline-dark-theme:hover,
+.collapse-btn.outline-dark-theme:hover,
+.collapse-btn-sm.outline-dark-theme:hover,
+.collapse-btn-md.outline-dark-theme:hover,
+.collapse-btn-lg.outline-dark-theme:hover,
+.accordion-btn.outline-dark-theme:hover,
+.accordion-btn-sm.outline-dark-theme:hover,
+.accordion-btn-md.outline-dark-theme:hover,
+.accordion-btn-lg.outline-dark-theme:hover {
+  background-color: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
+.btn.outline-dark-theme:hover:active,
+.btn-sm.outline-dark-theme:hover:active,
+.btn-md.outline-dark-theme:hover:active,
+.btn-lg.outline-dark-theme:hover:active,
+.tab-btn.outline-dark-theme:hover:active,
+.tab-btn-sm.outline-dark-theme:hover:active,
+.tab-btn-md.outline-dark-theme:hover:active,
+.tab-btn-lg.outline-dark-theme:hover:active,
+.collapse-btn.outline-dark-theme:hover:active,
+.collapse-btn-sm.outline-dark-theme:hover:active,
+.collapse-btn-md.outline-dark-theme:hover:active,
+.collapse-btn-lg.outline-dark-theme:hover:active,
+.accordion-btn.outline-dark-theme:hover:active,
+.accordion-btn-sm.outline-dark-theme:hover:active,
+.accordion-btn-md.outline-dark-theme:hover:active,
+.accordion-btn-lg.outline-dark-theme:hover:active {
+  background-color: var(--active-on-dark-theme);
+  color: var(--text-on-dark-theme);
+}
+.btn.outline-dark-theme.active,
+.btn-sm.outline-dark-theme.active,
+.btn-md.outline-dark-theme.active,
+.btn-lg.outline-dark-theme.active,
+.tab-btn.outline-dark-theme.active,
+.tab-btn-sm.outline-dark-theme.active,
+.tab-btn-md.outline-dark-theme.active,
+.tab-btn-lg.outline-dark-theme.active,
+.collapse-btn.outline-dark-theme.active,
+.collapse-btn-sm.outline-dark-theme.active,
+.collapse-btn-md.outline-dark-theme.active,
+.collapse-btn-lg.outline-dark-theme.active,
+.accordion-btn.outline-dark-theme.active,
+.accordion-btn-sm.outline-dark-theme.active,
+.accordion-btn-md.outline-dark-theme.active,
+.accordion-btn-lg.outline-dark-theme.active {
+  background-color: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
 
 .card {
   /* Card */
@@ -22374,6 +24326,56 @@ table.table-lg tfoot tr td {
   border-color: var(--dark-color-ghost-dark);
   color: var(--text-on-dark-ghost-dark);
 }
+.card.card-primary-theme {
+  background-color: var(--primary-color-theme);
+  border-color: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+.card.card-secondary-theme {
+  background-color: var(--secondary-color-theme);
+  border-color: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+.card.card-tertiary-theme {
+  background-color: var(--tertiary-color-theme);
+  border-color: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.card.card-success-theme {
+  background-color: var(--success-color-theme);
+  border-color: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+.card.card-info-theme {
+  background-color: var(--info-color-theme);
+  border-color: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+.card.card-warning-theme {
+  background-color: var(--warning-color-theme);
+  border-color: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+.card.card-danger-theme {
+  background-color: var(--danger-color-theme);
+  border-color: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+.card.card-neutral-theme {
+  background-color: var(--neutral-color-theme);
+  border-color: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+.card.card-light-theme {
+  background-color: var(--light-color-theme);
+  border-color: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+.card.card-dark-theme {
+  background-color: var(--dark-color-theme);
+  border-color: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
 
 .collapse {
   /* Collapse */
@@ -22623,6 +24625,36 @@ table.table-lg tfoot tr td {
 }
 .collapse.collapse-dark-ghost-dark {
   border-color: var(--dark-color-ghost-dark);
+}
+.collapse.collapse-primary-theme {
+  border-color: var(--primary-color-theme);
+}
+.collapse.collapse-secondary-theme {
+  border-color: var(--secondary-color-theme);
+}
+.collapse.collapse-tertiary-theme {
+  border-color: var(--tertiary-color-theme);
+}
+.collapse.collapse-success-theme {
+  border-color: var(--success-color-theme);
+}
+.collapse.collapse-info-theme {
+  border-color: var(--info-color-theme);
+}
+.collapse.collapse-warning-theme {
+  border-color: var(--warning-color-theme);
+}
+.collapse.collapse-danger-theme {
+  border-color: var(--danger-color-theme);
+}
+.collapse.collapse-neutral-theme {
+  border-color: var(--neutral-color-theme);
+}
+.collapse.collapse-light-theme {
+  border-color: var(--light-color-theme);
+}
+.collapse.collapse-dark-theme {
+  border-color: var(--dark-color-theme);
 }
 
 /* Background */
@@ -23040,6 +25072,56 @@ table.table-lg tfoot tr td {
   color: var(--text-on-dark-ghost-dark);
 }
 
+.bg-primary-theme {
+  background-color: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+
+.bg-secondary-theme {
+  background-color: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+
+.bg-tertiary-theme {
+  background-color: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+
+.bg-success-theme {
+  background-color: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+
+.bg-info-theme {
+  background-color: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+
+.bg-warning-theme {
+  background-color: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+
+.bg-danger-theme {
+  background-color: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+
+.bg-neutral-theme {
+  background-color: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+
+.bg-light-theme {
+  background-color: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+
+.bg-dark-theme {
+  background-color: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
+
 /* Borders */
 .border-primary {
   border-color: var(--primary-color) !important;
@@ -23367,6 +25449,46 @@ table.table-lg tfoot tr td {
 
 .border-dark-ghost-dark {
   border-color: var(--dark-color-ghost-dark) !important;
+}
+
+.border-primary-theme {
+  border-color: var(--primary-color-theme) !important;
+}
+
+.border-secondary-theme {
+  border-color: var(--secondary-color-theme) !important;
+}
+
+.border-tertiary-theme {
+  border-color: var(--tertiary-color-theme) !important;
+}
+
+.border-success-theme {
+  border-color: var(--success-color-theme) !important;
+}
+
+.border-info-theme {
+  border-color: var(--info-color-theme) !important;
+}
+
+.border-warning-theme {
+  border-color: var(--warning-color-theme) !important;
+}
+
+.border-danger-theme {
+  border-color: var(--danger-color-theme) !important;
+}
+
+.border-neutral-theme {
+  border-color: var(--neutral-color-theme) !important;
+}
+
+.border-light-theme {
+  border-color: var(--light-color-theme) !important;
+}
+
+.border-dark-theme {
+  border-color: var(--dark-color-theme) !important;
 }
 
 /* List */
@@ -24024,6 +26146,86 @@ table.table-lg tfoot tr td {
 }
 .list-dark-ghost-dark .list-item {
   border-color: color-mix(in srgb, var(--dark-color-ghost-dark) 50%, transparent);
+}
+
+.list-primary-theme {
+  border-color: color-mix(in srgb, var(--primary-color-theme) 50%, transparent);
+  color: var(--primary-color-theme);
+}
+.list-primary-theme .list-item {
+  border-color: color-mix(in srgb, var(--primary-color-theme) 50%, transparent);
+}
+
+.list-secondary-theme {
+  border-color: color-mix(in srgb, var(--secondary-color-theme) 50%, transparent);
+  color: var(--secondary-color-theme);
+}
+.list-secondary-theme .list-item {
+  border-color: color-mix(in srgb, var(--secondary-color-theme) 50%, transparent);
+}
+
+.list-tertiary-theme {
+  border-color: color-mix(in srgb, var(--tertiary-color-theme) 50%, transparent);
+  color: var(--tertiary-color-theme);
+}
+.list-tertiary-theme .list-item {
+  border-color: color-mix(in srgb, var(--tertiary-color-theme) 50%, transparent);
+}
+
+.list-success-theme {
+  border-color: color-mix(in srgb, var(--success-color-theme) 50%, transparent);
+  color: var(--success-color-theme);
+}
+.list-success-theme .list-item {
+  border-color: color-mix(in srgb, var(--success-color-theme) 50%, transparent);
+}
+
+.list-info-theme {
+  border-color: color-mix(in srgb, var(--info-color-theme) 50%, transparent);
+  color: var(--info-color-theme);
+}
+.list-info-theme .list-item {
+  border-color: color-mix(in srgb, var(--info-color-theme) 50%, transparent);
+}
+
+.list-warning-theme {
+  border-color: color-mix(in srgb, var(--warning-color-theme) 50%, transparent);
+  color: var(--warning-color-theme);
+}
+.list-warning-theme .list-item {
+  border-color: color-mix(in srgb, var(--warning-color-theme) 50%, transparent);
+}
+
+.list-danger-theme {
+  border-color: color-mix(in srgb, var(--danger-color-theme) 50%, transparent);
+  color: var(--danger-color-theme);
+}
+.list-danger-theme .list-item {
+  border-color: color-mix(in srgb, var(--danger-color-theme) 50%, transparent);
+}
+
+.list-neutral-theme {
+  border-color: color-mix(in srgb, var(--neutral-color-theme) 50%, transparent);
+  color: var(--neutral-color-theme);
+}
+.list-neutral-theme .list-item {
+  border-color: color-mix(in srgb, var(--neutral-color-theme) 50%, transparent);
+}
+
+.list-light-theme {
+  border-color: color-mix(in srgb, var(--light-color-theme) 50%, transparent);
+  color: var(--light-color-theme);
+}
+.list-light-theme .list-item {
+  border-color: color-mix(in srgb, var(--light-color-theme) 50%, transparent);
+}
+
+.list-dark-theme {
+  border-color: color-mix(in srgb, var(--dark-color-theme) 50%, transparent);
+  color: var(--dark-color-theme);
+}
+.list-dark-theme .list-item {
+  border-color: color-mix(in srgb, var(--dark-color-theme) 50%, transparent);
 }
 
 .list .list-item.active,
@@ -27498,6 +29700,426 @@ table.table-lg tfoot tr td {
   background-color: color-mix(in srgb, var(--dark-color-ghost-dark) 30%, transparent);
   box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-ghost-dark);
 }
+.list.list-hover.list-primary-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-primary-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-primary-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-primary-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list.list-hover.list-primary-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-primary-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-primary-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-primary-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list.list-hover.list-primary-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-primary-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-primary-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-primary-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list.list-hover .list-item.list-primary-theme.active,
+.list-sm.list-hover .list-item.list-primary-theme.active,
+.list-md.list-hover .list-item.list-primary-theme.active,
+.list-lg.list-hover .list-item.list-primary-theme.active {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list.list-hover .list-item.list-primary-theme:hover,
+.list-sm.list-hover .list-item.list-primary-theme:hover,
+.list-md.list-hover .list-item.list-primary-theme:hover,
+.list-lg.list-hover .list-item.list-primary-theme:hover {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list.list-hover .list-item.list-primary-theme:hover:active,
+.list-sm.list-hover .list-item.list-primary-theme:hover:active,
+.list-md.list-hover .list-item.list-primary-theme:hover:active,
+.list-lg.list-hover .list-item.list-primary-theme:hover:active {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list.list-hover.list-secondary-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-secondary-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-secondary-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-secondary-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list.list-hover.list-secondary-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-secondary-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-secondary-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-secondary-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list.list-hover.list-secondary-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-secondary-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-secondary-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-secondary-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list.list-hover .list-item.list-secondary-theme.active,
+.list-sm.list-hover .list-item.list-secondary-theme.active,
+.list-md.list-hover .list-item.list-secondary-theme.active,
+.list-lg.list-hover .list-item.list-secondary-theme.active {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list.list-hover .list-item.list-secondary-theme:hover,
+.list-sm.list-hover .list-item.list-secondary-theme:hover,
+.list-md.list-hover .list-item.list-secondary-theme:hover,
+.list-lg.list-hover .list-item.list-secondary-theme:hover {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list.list-hover .list-item.list-secondary-theme:hover:active,
+.list-sm.list-hover .list-item.list-secondary-theme:hover:active,
+.list-md.list-hover .list-item.list-secondary-theme:hover:active,
+.list-lg.list-hover .list-item.list-secondary-theme:hover:active {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list.list-hover.list-tertiary-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-tertiary-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-tertiary-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-tertiary-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-tertiary-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list.list-hover .list-item.list-tertiary-theme.active,
+.list-sm.list-hover .list-item.list-tertiary-theme.active,
+.list-md.list-hover .list-item.list-tertiary-theme.active,
+.list-lg.list-hover .list-item.list-tertiary-theme.active {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list.list-hover .list-item.list-tertiary-theme:hover,
+.list-sm.list-hover .list-item.list-tertiary-theme:hover,
+.list-md.list-hover .list-item.list-tertiary-theme:hover,
+.list-lg.list-hover .list-item.list-tertiary-theme:hover {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list.list-hover .list-item.list-tertiary-theme:hover:active,
+.list-sm.list-hover .list-item.list-tertiary-theme:hover:active,
+.list-md.list-hover .list-item.list-tertiary-theme:hover:active,
+.list-lg.list-hover .list-item.list-tertiary-theme:hover:active {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list.list-hover.list-success-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-success-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-success-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-success-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--success-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list.list-hover.list-success-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-success-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-success-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-success-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--success-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list.list-hover.list-success-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-success-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-success-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-success-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--success-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list.list-hover .list-item.list-success-theme.active,
+.list-sm.list-hover .list-item.list-success-theme.active,
+.list-md.list-hover .list-item.list-success-theme.active,
+.list-lg.list-hover .list-item.list-success-theme.active {
+  background-color: color-mix(in srgb, var(--success-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list.list-hover .list-item.list-success-theme:hover,
+.list-sm.list-hover .list-item.list-success-theme:hover,
+.list-md.list-hover .list-item.list-success-theme:hover,
+.list-lg.list-hover .list-item.list-success-theme:hover {
+  background-color: color-mix(in srgb, var(--success-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list.list-hover .list-item.list-success-theme:hover:active,
+.list-sm.list-hover .list-item.list-success-theme:hover:active,
+.list-md.list-hover .list-item.list-success-theme:hover:active,
+.list-lg.list-hover .list-item.list-success-theme:hover:active {
+  background-color: color-mix(in srgb, var(--success-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list.list-hover.list-info-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-info-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-info-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-info-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--info-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list.list-hover.list-info-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-info-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-info-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-info-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--info-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list.list-hover.list-info-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-info-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-info-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-info-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--info-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list.list-hover .list-item.list-info-theme.active,
+.list-sm.list-hover .list-item.list-info-theme.active,
+.list-md.list-hover .list-item.list-info-theme.active,
+.list-lg.list-hover .list-item.list-info-theme.active {
+  background-color: color-mix(in srgb, var(--info-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list.list-hover .list-item.list-info-theme:hover,
+.list-sm.list-hover .list-item.list-info-theme:hover,
+.list-md.list-hover .list-item.list-info-theme:hover,
+.list-lg.list-hover .list-item.list-info-theme:hover {
+  background-color: color-mix(in srgb, var(--info-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list.list-hover .list-item.list-info-theme:hover:active,
+.list-sm.list-hover .list-item.list-info-theme:hover:active,
+.list-md.list-hover .list-item.list-info-theme:hover:active,
+.list-lg.list-hover .list-item.list-info-theme:hover:active {
+  background-color: color-mix(in srgb, var(--info-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list.list-hover.list-warning-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-warning-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-warning-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-warning-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list.list-hover.list-warning-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-warning-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-warning-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-warning-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list.list-hover.list-warning-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-warning-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-warning-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-warning-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list.list-hover .list-item.list-warning-theme.active,
+.list-sm.list-hover .list-item.list-warning-theme.active,
+.list-md.list-hover .list-item.list-warning-theme.active,
+.list-lg.list-hover .list-item.list-warning-theme.active {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list.list-hover .list-item.list-warning-theme:hover,
+.list-sm.list-hover .list-item.list-warning-theme:hover,
+.list-md.list-hover .list-item.list-warning-theme:hover,
+.list-lg.list-hover .list-item.list-warning-theme:hover {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list.list-hover .list-item.list-warning-theme:hover:active,
+.list-sm.list-hover .list-item.list-warning-theme:hover:active,
+.list-md.list-hover .list-item.list-warning-theme:hover:active,
+.list-lg.list-hover .list-item.list-warning-theme:hover:active {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list.list-hover.list-danger-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-danger-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-danger-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-danger-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list.list-hover.list-danger-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-danger-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-danger-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-danger-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list.list-hover.list-danger-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-danger-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-danger-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-danger-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list.list-hover .list-item.list-danger-theme.active,
+.list-sm.list-hover .list-item.list-danger-theme.active,
+.list-md.list-hover .list-item.list-danger-theme.active,
+.list-lg.list-hover .list-item.list-danger-theme.active {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list.list-hover .list-item.list-danger-theme:hover,
+.list-sm.list-hover .list-item.list-danger-theme:hover,
+.list-md.list-hover .list-item.list-danger-theme:hover,
+.list-lg.list-hover .list-item.list-danger-theme:hover {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list.list-hover .list-item.list-danger-theme:hover:active,
+.list-sm.list-hover .list-item.list-danger-theme:hover:active,
+.list-md.list-hover .list-item.list-danger-theme:hover:active,
+.list-lg.list-hover .list-item.list-danger-theme:hover:active {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list.list-hover.list-neutral-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-neutral-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-neutral-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-neutral-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list.list-hover.list-neutral-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-neutral-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-neutral-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-neutral-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list.list-hover.list-neutral-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-neutral-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-neutral-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-neutral-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list.list-hover .list-item.list-neutral-theme.active,
+.list-sm.list-hover .list-item.list-neutral-theme.active,
+.list-md.list-hover .list-item.list-neutral-theme.active,
+.list-lg.list-hover .list-item.list-neutral-theme.active {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list.list-hover .list-item.list-neutral-theme:hover,
+.list-sm.list-hover .list-item.list-neutral-theme:hover,
+.list-md.list-hover .list-item.list-neutral-theme:hover,
+.list-lg.list-hover .list-item.list-neutral-theme:hover {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list.list-hover .list-item.list-neutral-theme:hover:active,
+.list-sm.list-hover .list-item.list-neutral-theme:hover:active,
+.list-md.list-hover .list-item.list-neutral-theme:hover:active,
+.list-lg.list-hover .list-item.list-neutral-theme:hover:active {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list.list-hover.list-light-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-light-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-light-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-light-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--light-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list.list-hover.list-light-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-light-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-light-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-light-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--light-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list.list-hover.list-light-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-light-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-light-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-light-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--light-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list.list-hover .list-item.list-light-theme.active,
+.list-sm.list-hover .list-item.list-light-theme.active,
+.list-md.list-hover .list-item.list-light-theme.active,
+.list-lg.list-hover .list-item.list-light-theme.active {
+  background-color: color-mix(in srgb, var(--light-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list.list-hover .list-item.list-light-theme:hover,
+.list-sm.list-hover .list-item.list-light-theme:hover,
+.list-md.list-hover .list-item.list-light-theme:hover,
+.list-lg.list-hover .list-item.list-light-theme:hover {
+  background-color: color-mix(in srgb, var(--light-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list.list-hover .list-item.list-light-theme:hover:active,
+.list-sm.list-hover .list-item.list-light-theme:hover:active,
+.list-md.list-hover .list-item.list-light-theme:hover:active,
+.list-lg.list-hover .list-item.list-light-theme:hover:active {
+  background-color: color-mix(in srgb, var(--light-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list.list-hover.list-dark-theme .list-item:not(.list-hover).active,
+.list-sm.list-hover.list-dark-theme .list-item:not(.list-hover).active,
+.list-md.list-hover.list-dark-theme .list-item:not(.list-hover).active,
+.list-lg.list-hover.list-dark-theme .list-item:not(.list-hover).active {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
+.list.list-hover.list-dark-theme .list-item:not(.list-hover):hover,
+.list-sm.list-hover.list-dark-theme .list-item:not(.list-hover):hover,
+.list-md.list-hover.list-dark-theme .list-item:not(.list-hover):hover,
+.list-lg.list-hover.list-dark-theme .list-item:not(.list-hover):hover {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
+.list.list-hover.list-dark-theme .list-item:not(.list-hover):hover:active,
+.list-sm.list-hover.list-dark-theme .list-item:not(.list-hover):hover:active,
+.list-md.list-hover.list-dark-theme .list-item:not(.list-hover):hover:active,
+.list-lg.list-hover.list-dark-theme .list-item:not(.list-hover):hover:active {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
+.list.list-hover .list-item.list-dark-theme.active,
+.list-sm.list-hover .list-item.list-dark-theme.active,
+.list-md.list-hover .list-item.list-dark-theme.active,
+.list-lg.list-hover .list-item.list-dark-theme.active {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
+.list.list-hover .list-item.list-dark-theme:hover,
+.list-sm.list-hover .list-item.list-dark-theme:hover,
+.list-md.list-hover .list-item.list-dark-theme:hover,
+.list-lg.list-hover .list-item.list-dark-theme:hover {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
+.list.list-hover .list-item.list-dark-theme:hover:active,
+.list-sm.list-hover .list-item.list-dark-theme:hover:active,
+.list-md.list-hover .list-item.list-dark-theme:hover:active,
+.list-lg.list-hover .list-item.list-dark-theme:hover:active {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
 .list .list-hover.list-item:hover.active,
 .list-sm .list-hover.list-item:hover.active,
 .list-md .list-hover.list-item:hover.active,
@@ -29240,6 +31862,216 @@ table.table-lg tfoot tr td {
 .list-lg .list-item.list-dark-ghost-dark.list-hover:hover:active {
   background-color: color-mix(in srgb, var(--dark-color-ghost-dark) 30%, transparent);
   box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-ghost-dark);
+}
+.list .list-item.list-primary-theme.list-hover.active,
+.list-sm .list-item.list-primary-theme.list-hover.active,
+.list-md .list-item.list-primary-theme.list-hover.active,
+.list-lg .list-item.list-primary-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list .list-item.list-primary-theme.list-hover:hover,
+.list-sm .list-item.list-primary-theme.list-hover:hover,
+.list-md .list-item.list-primary-theme.list-hover:hover,
+.list-lg .list-item.list-primary-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list .list-item.list-primary-theme.list-hover:hover:active,
+.list-sm .list-item.list-primary-theme.list-hover:hover:active,
+.list-md .list-item.list-primary-theme.list-hover:hover:active,
+.list-lg .list-item.list-primary-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--primary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--primary-color-theme);
+}
+.list .list-item.list-secondary-theme.list-hover.active,
+.list-sm .list-item.list-secondary-theme.list-hover.active,
+.list-md .list-item.list-secondary-theme.list-hover.active,
+.list-lg .list-item.list-secondary-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list .list-item.list-secondary-theme.list-hover:hover,
+.list-sm .list-item.list-secondary-theme.list-hover:hover,
+.list-md .list-item.list-secondary-theme.list-hover:hover,
+.list-lg .list-item.list-secondary-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list .list-item.list-secondary-theme.list-hover:hover:active,
+.list-sm .list-item.list-secondary-theme.list-hover:hover:active,
+.list-md .list-item.list-secondary-theme.list-hover:hover:active,
+.list-lg .list-item.list-secondary-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--secondary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--secondary-color-theme);
+}
+.list .list-item.list-tertiary-theme.list-hover.active,
+.list-sm .list-item.list-tertiary-theme.list-hover.active,
+.list-md .list-item.list-tertiary-theme.list-hover.active,
+.list-lg .list-item.list-tertiary-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list .list-item.list-tertiary-theme.list-hover:hover,
+.list-sm .list-item.list-tertiary-theme.list-hover:hover,
+.list-md .list-item.list-tertiary-theme.list-hover:hover,
+.list-lg .list-item.list-tertiary-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list .list-item.list-tertiary-theme.list-hover:hover:active,
+.list-sm .list-item.list-tertiary-theme.list-hover:hover:active,
+.list-md .list-item.list-tertiary-theme.list-hover:hover:active,
+.list-lg .list-item.list-tertiary-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--tertiary-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--tertiary-color-theme);
+}
+.list .list-item.list-success-theme.list-hover.active,
+.list-sm .list-item.list-success-theme.list-hover.active,
+.list-md .list-item.list-success-theme.list-hover.active,
+.list-lg .list-item.list-success-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--success-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list .list-item.list-success-theme.list-hover:hover,
+.list-sm .list-item.list-success-theme.list-hover:hover,
+.list-md .list-item.list-success-theme.list-hover:hover,
+.list-lg .list-item.list-success-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--success-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list .list-item.list-success-theme.list-hover:hover:active,
+.list-sm .list-item.list-success-theme.list-hover:hover:active,
+.list-md .list-item.list-success-theme.list-hover:hover:active,
+.list-lg .list-item.list-success-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--success-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--success-color-theme);
+}
+.list .list-item.list-info-theme.list-hover.active,
+.list-sm .list-item.list-info-theme.list-hover.active,
+.list-md .list-item.list-info-theme.list-hover.active,
+.list-lg .list-item.list-info-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--info-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list .list-item.list-info-theme.list-hover:hover,
+.list-sm .list-item.list-info-theme.list-hover:hover,
+.list-md .list-item.list-info-theme.list-hover:hover,
+.list-lg .list-item.list-info-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--info-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list .list-item.list-info-theme.list-hover:hover:active,
+.list-sm .list-item.list-info-theme.list-hover:hover:active,
+.list-md .list-item.list-info-theme.list-hover:hover:active,
+.list-lg .list-item.list-info-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--info-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--info-color-theme);
+}
+.list .list-item.list-warning-theme.list-hover.active,
+.list-sm .list-item.list-warning-theme.list-hover.active,
+.list-md .list-item.list-warning-theme.list-hover.active,
+.list-lg .list-item.list-warning-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list .list-item.list-warning-theme.list-hover:hover,
+.list-sm .list-item.list-warning-theme.list-hover:hover,
+.list-md .list-item.list-warning-theme.list-hover:hover,
+.list-lg .list-item.list-warning-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list .list-item.list-warning-theme.list-hover:hover:active,
+.list-sm .list-item.list-warning-theme.list-hover:hover:active,
+.list-md .list-item.list-warning-theme.list-hover:hover:active,
+.list-lg .list-item.list-warning-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--warning-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--warning-color-theme);
+}
+.list .list-item.list-danger-theme.list-hover.active,
+.list-sm .list-item.list-danger-theme.list-hover.active,
+.list-md .list-item.list-danger-theme.list-hover.active,
+.list-lg .list-item.list-danger-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list .list-item.list-danger-theme.list-hover:hover,
+.list-sm .list-item.list-danger-theme.list-hover:hover,
+.list-md .list-item.list-danger-theme.list-hover:hover,
+.list-lg .list-item.list-danger-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list .list-item.list-danger-theme.list-hover:hover:active,
+.list-sm .list-item.list-danger-theme.list-hover:hover:active,
+.list-md .list-item.list-danger-theme.list-hover:hover:active,
+.list-lg .list-item.list-danger-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--danger-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--danger-color-theme);
+}
+.list .list-item.list-neutral-theme.list-hover.active,
+.list-sm .list-item.list-neutral-theme.list-hover.active,
+.list-md .list-item.list-neutral-theme.list-hover.active,
+.list-lg .list-item.list-neutral-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list .list-item.list-neutral-theme.list-hover:hover,
+.list-sm .list-item.list-neutral-theme.list-hover:hover,
+.list-md .list-item.list-neutral-theme.list-hover:hover,
+.list-lg .list-item.list-neutral-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list .list-item.list-neutral-theme.list-hover:hover:active,
+.list-sm .list-item.list-neutral-theme.list-hover:hover:active,
+.list-md .list-item.list-neutral-theme.list-hover:hover:active,
+.list-lg .list-item.list-neutral-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--neutral-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--neutral-color-theme);
+}
+.list .list-item.list-light-theme.list-hover.active,
+.list-sm .list-item.list-light-theme.list-hover.active,
+.list-md .list-item.list-light-theme.list-hover.active,
+.list-lg .list-item.list-light-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--light-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list .list-item.list-light-theme.list-hover:hover,
+.list-sm .list-item.list-light-theme.list-hover:hover,
+.list-md .list-item.list-light-theme.list-hover:hover,
+.list-lg .list-item.list-light-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--light-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list .list-item.list-light-theme.list-hover:hover:active,
+.list-sm .list-item.list-light-theme.list-hover:hover:active,
+.list-md .list-item.list-light-theme.list-hover:hover:active,
+.list-lg .list-item.list-light-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--light-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--light-color-theme);
+}
+.list .list-item.list-dark-theme.list-hover.active,
+.list-sm .list-item.list-dark-theme.list-hover.active,
+.list-md .list-item.list-dark-theme.list-hover.active,
+.list-lg .list-item.list-dark-theme.list-hover.active {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
+.list .list-item.list-dark-theme.list-hover:hover,
+.list-sm .list-item.list-dark-theme.list-hover:hover,
+.list-md .list-item.list-dark-theme.list-hover:hover,
+.list-lg .list-item.list-dark-theme.list-hover:hover {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 15%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
+}
+.list .list-item.list-dark-theme.list-hover:hover:active,
+.list-sm .list-item.list-dark-theme.list-hover:hover:active,
+.list-md .list-item.list-dark-theme.list-hover:hover:active,
+.list-lg .list-item.list-dark-theme.list-hover:hover:active {
+  background-color: color-mix(in srgb, var(--dark-color-theme) 30%, transparent);
+  box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--dark-color-theme);
 }
 
 /* Generic hover behavior */
@@ -35011,6 +37843,706 @@ table.table th.table-dark-ghost-dark.table-hover:hover:active,
 table.table th.table-dark-ghost-dark.table-hover:hover.active {
   background-color: var(--active-on-dark-ghost-dark);
 }
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-primary-theme,
+table.table thead.table-primary-theme,
+table.table tbody.table-primary-theme,
+table.table tfoot.table-primary-theme,
+table.table tr.table-primary-theme,
+table.table td.table-primary-theme,
+table.table th.table-primary-theme {
+  background-color: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-primary-theme:hover,
+table.table thead.table-hover tr.table-primary-theme:hover,
+table.table tbody.table-hover tr.table-primary-theme:hover,
+table.table tfoot.table-hover tr.table-primary-theme:hover,
+table.table tr.table-primary-theme.table-hover:hover {
+  background-color: var(--hover-on-primary-theme);
+}
+table.table.table-hover tr.table-primary-theme:hover:active, table.table.table-hover tr.table-primary-theme:hover.active,
+table.table thead.table-hover tr.table-primary-theme:hover:active,
+table.table thead.table-hover tr.table-primary-theme:hover.active,
+table.table tbody.table-hover tr.table-primary-theme:hover:active,
+table.table tbody.table-hover tr.table-primary-theme:hover.active,
+table.table tfoot.table-hover tr.table-primary-theme:hover:active,
+table.table tfoot.table-hover tr.table-primary-theme:hover.active,
+table.table tr.table-primary-theme.table-hover:hover:active,
+table.table tr.table-primary-theme.table-hover:hover.active {
+  background-color: var(--active-on-primary-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-primary-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-primary-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-primary-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-primary-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-primary-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-primary-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-primary-theme);
+}
+table.table.table-primary-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-primary-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-primary-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-primary-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-primary-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-primary-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-primary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-primary-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-primary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-primary-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-primary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-primary-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-primary-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-primary-theme,
+table.table tr.table-hover:hover th.table-primary-theme,
+table.table td.table-primary-theme.table-hover:hover,
+table.table th.table-primary-theme.table-hover:hover {
+  background-color: var(--hover-on-primary-theme);
+}
+table.table tr.table-hover:hover td.table-primary-theme:active, table.table tr.table-hover:hover td.table-primary-theme.active,
+table.table tr.table-hover:hover th.table-primary-theme:active,
+table.table tr.table-hover:hover th.table-primary-theme.active,
+table.table td.table-primary-theme.table-hover:hover:active,
+table.table td.table-primary-theme.table-hover:hover.active,
+table.table th.table-primary-theme.table-hover:hover:active,
+table.table th.table-primary-theme.table-hover:hover.active {
+  background-color: var(--active-on-primary-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-secondary-theme,
+table.table thead.table-secondary-theme,
+table.table tbody.table-secondary-theme,
+table.table tfoot.table-secondary-theme,
+table.table tr.table-secondary-theme,
+table.table td.table-secondary-theme,
+table.table th.table-secondary-theme {
+  background-color: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-secondary-theme:hover,
+table.table thead.table-hover tr.table-secondary-theme:hover,
+table.table tbody.table-hover tr.table-secondary-theme:hover,
+table.table tfoot.table-hover tr.table-secondary-theme:hover,
+table.table tr.table-secondary-theme.table-hover:hover {
+  background-color: var(--hover-on-secondary-theme);
+}
+table.table.table-hover tr.table-secondary-theme:hover:active, table.table.table-hover tr.table-secondary-theme:hover.active,
+table.table thead.table-hover tr.table-secondary-theme:hover:active,
+table.table thead.table-hover tr.table-secondary-theme:hover.active,
+table.table tbody.table-hover tr.table-secondary-theme:hover:active,
+table.table tbody.table-hover tr.table-secondary-theme:hover.active,
+table.table tfoot.table-hover tr.table-secondary-theme:hover:active,
+table.table tfoot.table-hover tr.table-secondary-theme:hover.active,
+table.table tr.table-secondary-theme.table-hover:hover:active,
+table.table tr.table-secondary-theme.table-hover:hover.active {
+  background-color: var(--active-on-secondary-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-secondary-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-secondary-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-secondary-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-secondary-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-secondary-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-secondary-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-secondary-theme);
+}
+table.table.table-secondary-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-secondary-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-secondary-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-secondary-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-secondary-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-secondary-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-secondary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-secondary-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-secondary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-secondary-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-secondary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-secondary-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-secondary-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-secondary-theme,
+table.table tr.table-hover:hover th.table-secondary-theme,
+table.table td.table-secondary-theme.table-hover:hover,
+table.table th.table-secondary-theme.table-hover:hover {
+  background-color: var(--hover-on-secondary-theme);
+}
+table.table tr.table-hover:hover td.table-secondary-theme:active, table.table tr.table-hover:hover td.table-secondary-theme.active,
+table.table tr.table-hover:hover th.table-secondary-theme:active,
+table.table tr.table-hover:hover th.table-secondary-theme.active,
+table.table td.table-secondary-theme.table-hover:hover:active,
+table.table td.table-secondary-theme.table-hover:hover.active,
+table.table th.table-secondary-theme.table-hover:hover:active,
+table.table th.table-secondary-theme.table-hover:hover.active {
+  background-color: var(--active-on-secondary-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-tertiary-theme,
+table.table thead.table-tertiary-theme,
+table.table tbody.table-tertiary-theme,
+table.table tfoot.table-tertiary-theme,
+table.table tr.table-tertiary-theme,
+table.table td.table-tertiary-theme,
+table.table th.table-tertiary-theme {
+  background-color: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-tertiary-theme:hover,
+table.table thead.table-hover tr.table-tertiary-theme:hover,
+table.table tbody.table-hover tr.table-tertiary-theme:hover,
+table.table tfoot.table-hover tr.table-tertiary-theme:hover,
+table.table tr.table-tertiary-theme.table-hover:hover {
+  background-color: var(--hover-on-tertiary-theme);
+}
+table.table.table-hover tr.table-tertiary-theme:hover:active, table.table.table-hover tr.table-tertiary-theme:hover.active,
+table.table thead.table-hover tr.table-tertiary-theme:hover:active,
+table.table thead.table-hover tr.table-tertiary-theme:hover.active,
+table.table tbody.table-hover tr.table-tertiary-theme:hover:active,
+table.table tbody.table-hover tr.table-tertiary-theme:hover.active,
+table.table tfoot.table-hover tr.table-tertiary-theme:hover:active,
+table.table tfoot.table-hover tr.table-tertiary-theme:hover.active,
+table.table tr.table-tertiary-theme.table-hover:hover:active,
+table.table tr.table-tertiary-theme.table-hover:hover.active {
+  background-color: var(--active-on-tertiary-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-tertiary-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-tertiary-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-tertiary-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-tertiary-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-tertiary-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-tertiary-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-tertiary-theme);
+}
+table.table.table-tertiary-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-tertiary-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-tertiary-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-tertiary-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-tertiary-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-tertiary-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-tertiary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-tertiary-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-tertiary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-tertiary-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-tertiary-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-tertiary-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-tertiary-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-tertiary-theme,
+table.table tr.table-hover:hover th.table-tertiary-theme,
+table.table td.table-tertiary-theme.table-hover:hover,
+table.table th.table-tertiary-theme.table-hover:hover {
+  background-color: var(--hover-on-tertiary-theme);
+}
+table.table tr.table-hover:hover td.table-tertiary-theme:active, table.table tr.table-hover:hover td.table-tertiary-theme.active,
+table.table tr.table-hover:hover th.table-tertiary-theme:active,
+table.table tr.table-hover:hover th.table-tertiary-theme.active,
+table.table td.table-tertiary-theme.table-hover:hover:active,
+table.table td.table-tertiary-theme.table-hover:hover.active,
+table.table th.table-tertiary-theme.table-hover:hover:active,
+table.table th.table-tertiary-theme.table-hover:hover.active {
+  background-color: var(--active-on-tertiary-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-success-theme,
+table.table thead.table-success-theme,
+table.table tbody.table-success-theme,
+table.table tfoot.table-success-theme,
+table.table tr.table-success-theme,
+table.table td.table-success-theme,
+table.table th.table-success-theme {
+  background-color: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-success-theme:hover,
+table.table thead.table-hover tr.table-success-theme:hover,
+table.table tbody.table-hover tr.table-success-theme:hover,
+table.table tfoot.table-hover tr.table-success-theme:hover,
+table.table tr.table-success-theme.table-hover:hover {
+  background-color: var(--hover-on-success-theme);
+}
+table.table.table-hover tr.table-success-theme:hover:active, table.table.table-hover tr.table-success-theme:hover.active,
+table.table thead.table-hover tr.table-success-theme:hover:active,
+table.table thead.table-hover tr.table-success-theme:hover.active,
+table.table tbody.table-hover tr.table-success-theme:hover:active,
+table.table tbody.table-hover tr.table-success-theme:hover.active,
+table.table tfoot.table-hover tr.table-success-theme:hover:active,
+table.table tfoot.table-hover tr.table-success-theme:hover.active,
+table.table tr.table-success-theme.table-hover:hover:active,
+table.table tr.table-success-theme.table-hover:hover.active {
+  background-color: var(--active-on-success-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-success-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-success-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-success-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-success-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-success-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-success-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-success-theme);
+}
+table.table.table-success-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-success-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-success-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-success-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-success-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-success-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-success-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-success-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-success-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-success-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-success-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-success-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-success-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-success-theme,
+table.table tr.table-hover:hover th.table-success-theme,
+table.table td.table-success-theme.table-hover:hover,
+table.table th.table-success-theme.table-hover:hover {
+  background-color: var(--hover-on-success-theme);
+}
+table.table tr.table-hover:hover td.table-success-theme:active, table.table tr.table-hover:hover td.table-success-theme.active,
+table.table tr.table-hover:hover th.table-success-theme:active,
+table.table tr.table-hover:hover th.table-success-theme.active,
+table.table td.table-success-theme.table-hover:hover:active,
+table.table td.table-success-theme.table-hover:hover.active,
+table.table th.table-success-theme.table-hover:hover:active,
+table.table th.table-success-theme.table-hover:hover.active {
+  background-color: var(--active-on-success-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-info-theme,
+table.table thead.table-info-theme,
+table.table tbody.table-info-theme,
+table.table tfoot.table-info-theme,
+table.table tr.table-info-theme,
+table.table td.table-info-theme,
+table.table th.table-info-theme {
+  background-color: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-info-theme:hover,
+table.table thead.table-hover tr.table-info-theme:hover,
+table.table tbody.table-hover tr.table-info-theme:hover,
+table.table tfoot.table-hover tr.table-info-theme:hover,
+table.table tr.table-info-theme.table-hover:hover {
+  background-color: var(--hover-on-info-theme);
+}
+table.table.table-hover tr.table-info-theme:hover:active, table.table.table-hover tr.table-info-theme:hover.active,
+table.table thead.table-hover tr.table-info-theme:hover:active,
+table.table thead.table-hover tr.table-info-theme:hover.active,
+table.table tbody.table-hover tr.table-info-theme:hover:active,
+table.table tbody.table-hover tr.table-info-theme:hover.active,
+table.table tfoot.table-hover tr.table-info-theme:hover:active,
+table.table tfoot.table-hover tr.table-info-theme:hover.active,
+table.table tr.table-info-theme.table-hover:hover:active,
+table.table tr.table-info-theme.table-hover:hover.active {
+  background-color: var(--active-on-info-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-info-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-info-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-info-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-info-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-info-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-info-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-info-theme);
+}
+table.table.table-info-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-info-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-info-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-info-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-info-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-info-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-info-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-info-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-info-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-info-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-info-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-info-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-info-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-info-theme,
+table.table tr.table-hover:hover th.table-info-theme,
+table.table td.table-info-theme.table-hover:hover,
+table.table th.table-info-theme.table-hover:hover {
+  background-color: var(--hover-on-info-theme);
+}
+table.table tr.table-hover:hover td.table-info-theme:active, table.table tr.table-hover:hover td.table-info-theme.active,
+table.table tr.table-hover:hover th.table-info-theme:active,
+table.table tr.table-hover:hover th.table-info-theme.active,
+table.table td.table-info-theme.table-hover:hover:active,
+table.table td.table-info-theme.table-hover:hover.active,
+table.table th.table-info-theme.table-hover:hover:active,
+table.table th.table-info-theme.table-hover:hover.active {
+  background-color: var(--active-on-info-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-warning-theme,
+table.table thead.table-warning-theme,
+table.table tbody.table-warning-theme,
+table.table tfoot.table-warning-theme,
+table.table tr.table-warning-theme,
+table.table td.table-warning-theme,
+table.table th.table-warning-theme {
+  background-color: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-warning-theme:hover,
+table.table thead.table-hover tr.table-warning-theme:hover,
+table.table tbody.table-hover tr.table-warning-theme:hover,
+table.table tfoot.table-hover tr.table-warning-theme:hover,
+table.table tr.table-warning-theme.table-hover:hover {
+  background-color: var(--hover-on-warning-theme);
+}
+table.table.table-hover tr.table-warning-theme:hover:active, table.table.table-hover tr.table-warning-theme:hover.active,
+table.table thead.table-hover tr.table-warning-theme:hover:active,
+table.table thead.table-hover tr.table-warning-theme:hover.active,
+table.table tbody.table-hover tr.table-warning-theme:hover:active,
+table.table tbody.table-hover tr.table-warning-theme:hover.active,
+table.table tfoot.table-hover tr.table-warning-theme:hover:active,
+table.table tfoot.table-hover tr.table-warning-theme:hover.active,
+table.table tr.table-warning-theme.table-hover:hover:active,
+table.table tr.table-warning-theme.table-hover:hover.active {
+  background-color: var(--active-on-warning-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-warning-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-warning-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-warning-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-warning-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-warning-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-warning-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-warning-theme);
+}
+table.table.table-warning-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-warning-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-warning-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-warning-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-warning-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-warning-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-warning-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-warning-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-warning-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-warning-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-warning-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-warning-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-warning-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-warning-theme,
+table.table tr.table-hover:hover th.table-warning-theme,
+table.table td.table-warning-theme.table-hover:hover,
+table.table th.table-warning-theme.table-hover:hover {
+  background-color: var(--hover-on-warning-theme);
+}
+table.table tr.table-hover:hover td.table-warning-theme:active, table.table tr.table-hover:hover td.table-warning-theme.active,
+table.table tr.table-hover:hover th.table-warning-theme:active,
+table.table tr.table-hover:hover th.table-warning-theme.active,
+table.table td.table-warning-theme.table-hover:hover:active,
+table.table td.table-warning-theme.table-hover:hover.active,
+table.table th.table-warning-theme.table-hover:hover:active,
+table.table th.table-warning-theme.table-hover:hover.active {
+  background-color: var(--active-on-warning-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-danger-theme,
+table.table thead.table-danger-theme,
+table.table tbody.table-danger-theme,
+table.table tfoot.table-danger-theme,
+table.table tr.table-danger-theme,
+table.table td.table-danger-theme,
+table.table th.table-danger-theme {
+  background-color: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-danger-theme:hover,
+table.table thead.table-hover tr.table-danger-theme:hover,
+table.table tbody.table-hover tr.table-danger-theme:hover,
+table.table tfoot.table-hover tr.table-danger-theme:hover,
+table.table tr.table-danger-theme.table-hover:hover {
+  background-color: var(--hover-on-danger-theme);
+}
+table.table.table-hover tr.table-danger-theme:hover:active, table.table.table-hover tr.table-danger-theme:hover.active,
+table.table thead.table-hover tr.table-danger-theme:hover:active,
+table.table thead.table-hover tr.table-danger-theme:hover.active,
+table.table tbody.table-hover tr.table-danger-theme:hover:active,
+table.table tbody.table-hover tr.table-danger-theme:hover.active,
+table.table tfoot.table-hover tr.table-danger-theme:hover:active,
+table.table tfoot.table-hover tr.table-danger-theme:hover.active,
+table.table tr.table-danger-theme.table-hover:hover:active,
+table.table tr.table-danger-theme.table-hover:hover.active {
+  background-color: var(--active-on-danger-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-danger-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-danger-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-danger-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-danger-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-danger-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-danger-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-danger-theme);
+}
+table.table.table-danger-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-danger-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-danger-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-danger-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-danger-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-danger-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-danger-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-danger-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-danger-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-danger-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-danger-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-danger-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-danger-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-danger-theme,
+table.table tr.table-hover:hover th.table-danger-theme,
+table.table td.table-danger-theme.table-hover:hover,
+table.table th.table-danger-theme.table-hover:hover {
+  background-color: var(--hover-on-danger-theme);
+}
+table.table tr.table-hover:hover td.table-danger-theme:active, table.table tr.table-hover:hover td.table-danger-theme.active,
+table.table tr.table-hover:hover th.table-danger-theme:active,
+table.table tr.table-hover:hover th.table-danger-theme.active,
+table.table td.table-danger-theme.table-hover:hover:active,
+table.table td.table-danger-theme.table-hover:hover.active,
+table.table th.table-danger-theme.table-hover:hover:active,
+table.table th.table-danger-theme.table-hover:hover.active {
+  background-color: var(--active-on-danger-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-neutral-theme,
+table.table thead.table-neutral-theme,
+table.table tbody.table-neutral-theme,
+table.table tfoot.table-neutral-theme,
+table.table tr.table-neutral-theme,
+table.table td.table-neutral-theme,
+table.table th.table-neutral-theme {
+  background-color: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-neutral-theme:hover,
+table.table thead.table-hover tr.table-neutral-theme:hover,
+table.table tbody.table-hover tr.table-neutral-theme:hover,
+table.table tfoot.table-hover tr.table-neutral-theme:hover,
+table.table tr.table-neutral-theme.table-hover:hover {
+  background-color: var(--hover-on-neutral-theme);
+}
+table.table.table-hover tr.table-neutral-theme:hover:active, table.table.table-hover tr.table-neutral-theme:hover.active,
+table.table thead.table-hover tr.table-neutral-theme:hover:active,
+table.table thead.table-hover tr.table-neutral-theme:hover.active,
+table.table tbody.table-hover tr.table-neutral-theme:hover:active,
+table.table tbody.table-hover tr.table-neutral-theme:hover.active,
+table.table tfoot.table-hover tr.table-neutral-theme:hover:active,
+table.table tfoot.table-hover tr.table-neutral-theme:hover.active,
+table.table tr.table-neutral-theme.table-hover:hover:active,
+table.table tr.table-neutral-theme.table-hover:hover.active {
+  background-color: var(--active-on-neutral-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-neutral-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-neutral-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-neutral-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-neutral-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-neutral-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-neutral-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-neutral-theme);
+}
+table.table.table-neutral-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-neutral-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-neutral-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-neutral-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-neutral-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-neutral-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-neutral-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-neutral-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-neutral-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-neutral-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-neutral-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-neutral-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-neutral-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-neutral-theme,
+table.table tr.table-hover:hover th.table-neutral-theme,
+table.table td.table-neutral-theme.table-hover:hover,
+table.table th.table-neutral-theme.table-hover:hover {
+  background-color: var(--hover-on-neutral-theme);
+}
+table.table tr.table-hover:hover td.table-neutral-theme:active, table.table tr.table-hover:hover td.table-neutral-theme.active,
+table.table tr.table-hover:hover th.table-neutral-theme:active,
+table.table tr.table-hover:hover th.table-neutral-theme.active,
+table.table td.table-neutral-theme.table-hover:hover:active,
+table.table td.table-neutral-theme.table-hover:hover.active,
+table.table th.table-neutral-theme.table-hover:hover:active,
+table.table th.table-neutral-theme.table-hover:hover.active {
+  background-color: var(--active-on-neutral-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-light-theme,
+table.table thead.table-light-theme,
+table.table tbody.table-light-theme,
+table.table tfoot.table-light-theme,
+table.table tr.table-light-theme,
+table.table td.table-light-theme,
+table.table th.table-light-theme {
+  background-color: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-light-theme:hover,
+table.table thead.table-hover tr.table-light-theme:hover,
+table.table tbody.table-hover tr.table-light-theme:hover,
+table.table tfoot.table-hover tr.table-light-theme:hover,
+table.table tr.table-light-theme.table-hover:hover {
+  background-color: var(--hover-on-light-theme);
+}
+table.table.table-hover tr.table-light-theme:hover:active, table.table.table-hover tr.table-light-theme:hover.active,
+table.table thead.table-hover tr.table-light-theme:hover:active,
+table.table thead.table-hover tr.table-light-theme:hover.active,
+table.table tbody.table-hover tr.table-light-theme:hover:active,
+table.table tbody.table-hover tr.table-light-theme:hover.active,
+table.table tfoot.table-hover tr.table-light-theme:hover:active,
+table.table tfoot.table-hover tr.table-light-theme:hover.active,
+table.table tr.table-light-theme.table-hover:hover:active,
+table.table tr.table-light-theme.table-hover:hover.active {
+  background-color: var(--active-on-light-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-light-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-light-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-light-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-light-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-light-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-light-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-light-theme);
+}
+table.table.table-light-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-light-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-light-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-light-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-light-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-light-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-light-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-light-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-light-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-light-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-light-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-light-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-light-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-light-theme,
+table.table tr.table-hover:hover th.table-light-theme,
+table.table td.table-light-theme.table-hover:hover,
+table.table th.table-light-theme.table-hover:hover {
+  background-color: var(--hover-on-light-theme);
+}
+table.table tr.table-hover:hover td.table-light-theme:active, table.table tr.table-hover:hover td.table-light-theme.active,
+table.table tr.table-hover:hover th.table-light-theme:active,
+table.table tr.table-hover:hover th.table-light-theme.active,
+table.table td.table-light-theme.table-hover:hover:active,
+table.table td.table-light-theme.table-hover:hover.active,
+table.table th.table-light-theme.table-hover:hover:active,
+table.table th.table-light-theme.table-hover:hover.active {
+  background-color: var(--active-on-light-theme);
+}
+table.table {
+  /* Base styles for colored variants */
+}
+table.table.table-dark-theme,
+table.table thead.table-dark-theme,
+table.table tbody.table-dark-theme,
+table.table tfoot.table-dark-theme,
+table.table tr.table-dark-theme,
+table.table td.table-dark-theme,
+table.table th.table-dark-theme {
+  background-color: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
+table.table {
+  /* Hover on colored rows */
+}
+table.table.table-hover tr.table-dark-theme:hover,
+table.table thead.table-hover tr.table-dark-theme:hover,
+table.table tbody.table-hover tr.table-dark-theme:hover,
+table.table tfoot.table-hover tr.table-dark-theme:hover,
+table.table tr.table-dark-theme.table-hover:hover {
+  background-color: var(--hover-on-dark-theme);
+}
+table.table.table-hover tr.table-dark-theme:hover:active, table.table.table-hover tr.table-dark-theme:hover.active,
+table.table thead.table-hover tr.table-dark-theme:hover:active,
+table.table thead.table-hover tr.table-dark-theme:hover.active,
+table.table tbody.table-hover tr.table-dark-theme:hover:active,
+table.table tbody.table-hover tr.table-dark-theme:hover.active,
+table.table tfoot.table-hover tr.table-dark-theme:hover:active,
+table.table tfoot.table-hover tr.table-dark-theme:hover.active,
+table.table tr.table-dark-theme.table-hover:hover:active,
+table.table tr.table-dark-theme.table-hover:hover.active {
+  background-color: var(--active-on-dark-theme);
+}
+table.table {
+  /* Hover inside colored table or section */
+}
+table.table.table-dark-theme.table-hover tbody tr:not(.table-hover):hover, table.table.table-dark-theme.table-hover thead tr:not(.table-hover):hover, table.table.table-dark-theme.table-hover tfoot tr:not(.table-hover):hover,
+table.table thead.table-dark-theme.table-hover tr:not(.table-hover):hover,
+table.table tbody.table-dark-theme.table-hover tr:not(.table-hover):hover,
+table.table tfoot.table-dark-theme.table-hover tr:not(.table-hover):hover {
+  background-color: var(--hover-on-dark-theme);
+}
+table.table.table-dark-theme.table-hover tbody tr:not(.table-hover):hover:active, table.table.table-dark-theme.table-hover tbody tr:not(.table-hover):hover.active, table.table.table-dark-theme.table-hover thead tr:not(.table-hover):hover:active, table.table.table-dark-theme.table-hover thead tr:not(.table-hover):hover.active, table.table.table-dark-theme.table-hover tfoot tr:not(.table-hover):hover:active, table.table.table-dark-theme.table-hover tfoot tr:not(.table-hover):hover.active,
+table.table thead.table-dark-theme.table-hover tr:not(.table-hover):hover:active,
+table.table thead.table-dark-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tbody.table-dark-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tbody.table-dark-theme.table-hover tr:not(.table-hover):hover.active,
+table.table tfoot.table-dark-theme.table-hover tr:not(.table-hover):hover:active,
+table.table tfoot.table-dark-theme.table-hover tr:not(.table-hover):hover.active {
+  background-color: var(--active-on-dark-theme);
+}
+table.table {
+  /* Hover on colored cells when row is hovered */
+}
+table.table tr.table-hover:hover td.table-dark-theme,
+table.table tr.table-hover:hover th.table-dark-theme,
+table.table td.table-dark-theme.table-hover:hover,
+table.table th.table-dark-theme.table-hover:hover {
+  background-color: var(--hover-on-dark-theme);
+}
+table.table tr.table-hover:hover td.table-dark-theme:active, table.table tr.table-hover:hover td.table-dark-theme.active,
+table.table tr.table-hover:hover th.table-dark-theme:active,
+table.table tr.table-hover:hover th.table-dark-theme.active,
+table.table td.table-dark-theme.table-hover:hover:active,
+table.table td.table-dark-theme.table-hover:hover.active,
+table.table th.table-dark-theme.table-hover:hover:active,
+table.table th.table-dark-theme.table-hover:hover.active {
+  background-color: var(--active-on-dark-theme);
+}
 
 /* Links */
 .link-primary {
@@ -36817,6 +40349,226 @@ table.table th.table-dark-ghost-dark.table-hover:hover.active {
   text-decoration-color: var(--active-on-dark-ghost-dark);
 }
 
+.link-primary-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--primary-color-theme);
+  text-decoration-color: var(--primary-color-theme);
+}
+.link-primary-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-primary-theme);
+  text-decoration-color: var(--active-on-primary-theme);
+}
+.link-primary-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-primary-theme);
+  text-decoration-color: var(--hover-on-primary-theme);
+}
+.link-primary-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-primary-theme);
+  text-decoration-color: var(--active-on-primary-theme);
+}
+
+.link-secondary-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--secondary-color-theme);
+  text-decoration-color: var(--secondary-color-theme);
+}
+.link-secondary-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-secondary-theme);
+  text-decoration-color: var(--active-on-secondary-theme);
+}
+.link-secondary-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-secondary-theme);
+  text-decoration-color: var(--hover-on-secondary-theme);
+}
+.link-secondary-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-secondary-theme);
+  text-decoration-color: var(--active-on-secondary-theme);
+}
+
+.link-tertiary-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--tertiary-color-theme);
+  text-decoration-color: var(--tertiary-color-theme);
+}
+.link-tertiary-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-tertiary-theme);
+  text-decoration-color: var(--active-on-tertiary-theme);
+}
+.link-tertiary-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-tertiary-theme);
+  text-decoration-color: var(--hover-on-tertiary-theme);
+}
+.link-tertiary-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-tertiary-theme);
+  text-decoration-color: var(--active-on-tertiary-theme);
+}
+
+.link-success-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--success-color-theme);
+  text-decoration-color: var(--success-color-theme);
+}
+.link-success-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-success-theme);
+  text-decoration-color: var(--active-on-success-theme);
+}
+.link-success-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-success-theme);
+  text-decoration-color: var(--hover-on-success-theme);
+}
+.link-success-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-success-theme);
+  text-decoration-color: var(--active-on-success-theme);
+}
+
+.link-info-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--info-color-theme);
+  text-decoration-color: var(--info-color-theme);
+}
+.link-info-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-info-theme);
+  text-decoration-color: var(--active-on-info-theme);
+}
+.link-info-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-info-theme);
+  text-decoration-color: var(--hover-on-info-theme);
+}
+.link-info-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-info-theme);
+  text-decoration-color: var(--active-on-info-theme);
+}
+
+.link-warning-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--warning-color-theme);
+  text-decoration-color: var(--warning-color-theme);
+}
+.link-warning-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-warning-theme);
+  text-decoration-color: var(--active-on-warning-theme);
+}
+.link-warning-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-warning-theme);
+  text-decoration-color: var(--hover-on-warning-theme);
+}
+.link-warning-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-warning-theme);
+  text-decoration-color: var(--active-on-warning-theme);
+}
+
+.link-danger-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--danger-color-theme);
+  text-decoration-color: var(--danger-color-theme);
+}
+.link-danger-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-danger-theme);
+  text-decoration-color: var(--active-on-danger-theme);
+}
+.link-danger-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-danger-theme);
+  text-decoration-color: var(--hover-on-danger-theme);
+}
+.link-danger-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-danger-theme);
+  text-decoration-color: var(--active-on-danger-theme);
+}
+
+.link-neutral-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--neutral-color-theme);
+  text-decoration-color: var(--neutral-color-theme);
+}
+.link-neutral-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-neutral-theme);
+  text-decoration-color: var(--active-on-neutral-theme);
+}
+.link-neutral-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-neutral-theme);
+  text-decoration-color: var(--hover-on-neutral-theme);
+}
+.link-neutral-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-neutral-theme);
+  text-decoration-color: var(--active-on-neutral-theme);
+}
+
+.link-light-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--light-color-theme);
+  text-decoration-color: var(--light-color-theme);
+}
+.link-light-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-light-theme);
+  text-decoration-color: var(--active-on-light-theme);
+}
+.link-light-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-light-theme);
+  text-decoration-color: var(--hover-on-light-theme);
+}
+.link-light-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-light-theme);
+  text-decoration-color: var(--active-on-light-theme);
+}
+
+.link-dark-theme {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--dark-color-theme);
+  text-decoration-color: var(--dark-color-theme);
+}
+.link-dark-theme.active {
+  background-color: transparent;
+  color: var(--hover-on-dark-theme);
+  text-decoration-color: var(--active-on-dark-theme);
+}
+.link-dark-theme:hover {
+  background-color: transparent;
+  color: var(--hover-on-dark-theme);
+  text-decoration-color: var(--hover-on-dark-theme);
+}
+.link-dark-theme:hover:active {
+  background-color: transparent;
+  color: var(--active-on-dark-theme);
+  text-decoration-color: var(--active-on-dark-theme);
+}
+
 .navbar,
 .navbar-sm,
 .navbar-md,
@@ -37397,6 +41149,76 @@ table.table th.table-dark-ghost-dark.table-hover:hover.active {
   background: var(--dark-color-ghost-dark);
   color: var(--text-on-dark-ghost-dark);
 }
+.navbar.navbar-primary-theme,
+.navbar-sm.navbar-primary-theme,
+.navbar-md.navbar-primary-theme,
+.navbar-lg.navbar-primary-theme {
+  background: var(--primary-color-theme);
+  color: var(--text-on-primary-theme);
+}
+.navbar.navbar-secondary-theme,
+.navbar-sm.navbar-secondary-theme,
+.navbar-md.navbar-secondary-theme,
+.navbar-lg.navbar-secondary-theme {
+  background: var(--secondary-color-theme);
+  color: var(--text-on-secondary-theme);
+}
+.navbar.navbar-tertiary-theme,
+.navbar-sm.navbar-tertiary-theme,
+.navbar-md.navbar-tertiary-theme,
+.navbar-lg.navbar-tertiary-theme {
+  background: var(--tertiary-color-theme);
+  color: var(--text-on-tertiary-theme);
+}
+.navbar.navbar-success-theme,
+.navbar-sm.navbar-success-theme,
+.navbar-md.navbar-success-theme,
+.navbar-lg.navbar-success-theme {
+  background: var(--success-color-theme);
+  color: var(--text-on-success-theme);
+}
+.navbar.navbar-info-theme,
+.navbar-sm.navbar-info-theme,
+.navbar-md.navbar-info-theme,
+.navbar-lg.navbar-info-theme {
+  background: var(--info-color-theme);
+  color: var(--text-on-info-theme);
+}
+.navbar.navbar-warning-theme,
+.navbar-sm.navbar-warning-theme,
+.navbar-md.navbar-warning-theme,
+.navbar-lg.navbar-warning-theme {
+  background: var(--warning-color-theme);
+  color: var(--text-on-warning-theme);
+}
+.navbar.navbar-danger-theme,
+.navbar-sm.navbar-danger-theme,
+.navbar-md.navbar-danger-theme,
+.navbar-lg.navbar-danger-theme {
+  background: var(--danger-color-theme);
+  color: var(--text-on-danger-theme);
+}
+.navbar.navbar-neutral-theme,
+.navbar-sm.navbar-neutral-theme,
+.navbar-md.navbar-neutral-theme,
+.navbar-lg.navbar-neutral-theme {
+  background: var(--neutral-color-theme);
+  color: var(--text-on-neutral-theme);
+}
+.navbar.navbar-light-theme,
+.navbar-sm.navbar-light-theme,
+.navbar-md.navbar-light-theme,
+.navbar-lg.navbar-light-theme {
+  background: var(--light-color-theme);
+  color: var(--text-on-light-theme);
+}
+.navbar.navbar-dark-theme,
+.navbar-sm.navbar-dark-theme,
+.navbar-md.navbar-dark-theme,
+.navbar-lg.navbar-dark-theme {
+  background: var(--dark-color-theme);
+  color: var(--text-on-dark-theme);
+}
 
 /* Text */
 .text-base {
@@ -37729,6 +41551,46 @@ table.table th.table-dark-ghost-dark.table-hover:hover.active {
 
 .text-dark-ghost-dark {
   color: var(--dark-color-ghost-dark);
+}
+
+.text-primary-theme {
+  color: var(--primary-color-theme);
+}
+
+.text-secondary-theme {
+  color: var(--secondary-color-theme);
+}
+
+.text-tertiary-theme {
+  color: var(--tertiary-color-theme);
+}
+
+.text-success-theme {
+  color: var(--success-color-theme);
+}
+
+.text-info-theme {
+  color: var(--info-color-theme);
+}
+
+.text-warning-theme {
+  color: var(--warning-color-theme);
+}
+
+.text-danger-theme {
+  color: var(--danger-color-theme);
+}
+
+.text-neutral-theme {
+  color: var(--neutral-color-theme);
+}
+
+.text-light-theme {
+  color: var(--light-color-theme);
+}
+
+.text-dark-theme {
+  color: var(--dark-color-theme);
 }
 
 /* Breakpoints */

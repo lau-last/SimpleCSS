@@ -2,7 +2,50 @@
 :root[data-theme="light"]{
   color-scheme: light;
 
+  /* color base */
+  --primary-color-theme: var(--primary-color-light);
+  --secondary-color-theme: var(--secondary-color-light);
+  --tertiary-color-theme: var(--tertiary-color-light);
+  --dark-color-theme: var(--dark-color-light);
+  --danger-color-theme: var(--danger-color-light);
+  --info-color-theme: var(--info-color-light);
+  --light-color-theme: var(--light-color-light);
+  --neutral-color-theme: var(--neutral-color-light);
+  --success-color-theme: var(--success-color-light);
+  --warning-color-theme: var(--warning-color-light);
 
+  --text-on-primary-theme: var(--text-on-primary-light);
+  --text-on-secondary-theme: var(--text-on-secondary-light);
+  --text-on-tertiary-theme: var(--text-on-tertiary-light);
+  --text-on-dark-theme: var(--text-on-dark-light);
+  --text-on-danger-theme: var(--text-on-danger-light);
+  --text-on-info-theme: var(--text-on-info-light);
+  --text-on-light-theme: var(--text-on-light-light);
+  --text-on-neutral-theme: var(--text-on-neutral-light);
+  --text-on-success-theme: var(--text-on-success-light);
+  --text-on-warning-theme: var(--text-on-warning-light);
+
+  --hover-on-primary-theme: var(--hover-on-primary-light);
+  --hover-on-secondary-theme: var(--hover-on-secondary-light);
+  --hover-on-tertiary-theme: var(--hover-on-tertiary-light);
+  --hover-on-dark-theme: var(--hover-on-dark-light);
+  --hover-on-danger-theme: var(--hover-on-danger-light);
+  --hover-on-info-theme: var(--hover-on-info-light);
+  --hover-on-light-theme: var(--hover-on-light-light);
+  --hover-on-neutral-theme: var(--hover-on-neutral-light);
+  --hover-on-success-theme: var(--hover-on-success-light);
+  --hover-on-warning-theme: var(--hover-on-warning-light);
+
+  --active-on-primary-theme: var(--active-on-primary-light);
+  --active-on-secondary-theme: var(--active-on-secondary-light);
+  --active-on-tertiary-theme: var(--active-on-tertiary-light);
+  --active-on-dark-theme: var(--active-on-dark-light);
+  --active-on-danger-theme: var(--active-on-danger-light);
+  --active-on-info-theme: var(--active-on-info-light);
+  --active-on-light-theme: var(--active-on-light-light);
+  --active-on-neutral-theme: var(--active-on-neutral-light);
+  --active-on-success-theme: var(--active-on-success-light);
+  --active-on-warning-theme: var(--active-on-warning-light);
 
   /* Global surfaces & borders */
   --bg-color: var(--gray-0);

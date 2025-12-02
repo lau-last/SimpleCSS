@@ -51,13 +51,32 @@
     // Sets up delegation for all existing triggers
     static setupDelegation() {
       _Ajax.registerExistingTriggers();
+      _Ajax.observeNewAjaxTriggers();
     }
     // Scans the DOM for elements with data-ajax-trigger and registers them
     static registerExistingTriggers(root = document) {
+      if (root instanceof HTMLElement && root.hasAttribute("data-ajax-trigger")) {
+        _Ajax.ensureListenersFor(root.getAttribute("data-ajax-trigger"));
+      }
       const nodes = root.querySelectorAll("[data-ajax-trigger]");
       for (const element of nodes) {
         _Ajax.ensureListenersFor(element.getAttribute("data-ajax-trigger"));
       }
+    }
+    // Observes newly added DOM nodes to register data-ajax-trigger events
+    static observeNewAjaxTriggers() {
+      const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          mutation.addedNodes.forEach((node) => {
+            if (!(node instanceof HTMLElement)) return;
+            _Ajax.registerExistingTriggers(node);
+          });
+        }
+      });
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
     }
     // Checks if the event should prevent default browser behavior
     static shouldPreventDefault(type, element) {
@@ -85,10 +104,7 @@
     static performAjax(context) {
       return _Ajax.sendRequest(context.url, context.method, context.formData, context.element);
     }
-    /**
-     * Handler global appelé par EventManager
-     * pour tous les types enregistrés (click, submit, input, etc.)
-     */
+    // Handler global call by EventManager
     static onEvent(event) {
       const target = event.target;
       if (!(target instanceof Element)) return;

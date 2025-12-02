@@ -38,15 +38,35 @@ export default class Ajax {
     // Sets up delegation for all existing triggers
     static setupDelegation(): void {
         Ajax.registerExistingTriggers();
-        // Ajax.observeTriggerAttributeChanges();
+        Ajax.observeNewAjaxTriggers();
     }
 
     // Scans the DOM for elements with data-ajax-trigger and registers them
     static registerExistingTriggers(root: Document | HTMLElement = document): void {
+        if (root instanceof HTMLElement && root.hasAttribute('data-ajax-trigger')) {
+            Ajax.ensureListenersFor(root.getAttribute('data-ajax-trigger'));
+        }
         const nodes = root.querySelectorAll<HTMLElement>('[data-ajax-trigger]');
         for (const element of nodes) {
             Ajax.ensureListenersFor(element.getAttribute('data-ajax-trigger'));
         }
+    }
+
+    // Observes newly added DOM nodes to register data-ajax-trigger events
+    static observeNewAjaxTriggers(): void {
+        const observer = new MutationObserver((mutations) => {
+            for (const mutation of mutations) {
+                mutation.addedNodes.forEach((node) => {
+                    if (!(node instanceof HTMLElement)) return;
+                    Ajax.registerExistingTriggers(node);
+                });
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
     }
 
     // Checks if the event should prevent default browser behavior
@@ -80,10 +100,7 @@ export default class Ajax {
         return Ajax.sendRequest(context.url, context.method, context.formData, context.element);
     }
 
-    /**
-     * Handler global appelé par EventManager
-     * pour tous les types enregistrés (click, submit, input, etc.)
-     */
+    // Handler global call by EventManager
     static onEvent(event: Event): void {
         const target = event.target;
         if (!(target instanceof Element)) return;
@@ -358,35 +375,3 @@ export default class Ajax {
 
 
 
-// static observeNewAjaxTriggers(): void {
-//
-//     const observer = new MutationObserver((mutations) => {
-//         for (const mutation of mutations) {
-//
-//             // On surveille seulement les éléments ajoutés
-//             mutation.addedNodes.forEach((node) => {
-//                 if (!(node instanceof HTMLElement)) return;
-//
-//                 // Si le nouvel élément a data-ajax-trigger
-//                 const direct = node.getAttribute('data-ajax-trigger');
-//                 if (direct) {
-//                     Ajax.ensureListenersFor(direct);
-//                 }
-//
-//                 // Si des descendants ont data-ajax-trigger
-//                 const descendants = node.querySelectorAll('[data-ajax-trigger]');
-//                 descendants.forEach((el) => {
-//                     const trigger = el.getAttribute('data-ajax-trigger');
-//                     if (trigger) {
-//                         Ajax.ensureListenersFor(trigger);
-//                     }
-//                 });
-//             });
-//         }
-//     });
-//
-//     observer.observe(document.body, {
-//         childList: true,
-//         subtree: true
-//     });
-// }

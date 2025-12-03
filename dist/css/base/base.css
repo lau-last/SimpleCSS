@@ -12,6 +12,8 @@ body {
   font-weight: var(--font-weight);
   color: var(--text-color);
   background-color: var(--bg-color);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
   height: 100%;
   /* Headings */
 }
@@ -47,10 +49,13 @@ body option,
 body optgroup,
 body label,
 body fieldset,
-body legend {
+body legend,
+body a {
   font-family: var(--font-family-text), sans-serif;
   font-weight: var(--font-weight);
   font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
 }
 body {
   /* Links */

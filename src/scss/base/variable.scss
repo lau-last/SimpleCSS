@@ -304,7 +304,7 @@
 
   --primary-color-ghost: color-mix(in srgb, var(--primary-color) 50%, transparent 50%);
   --secondary-color-ghost: color-mix(in srgb, var(--secondary-color) 50%, transparent 50%);
-  --tertiary-color-ghost: color-mix(in srgb, var(--tertiary-color)50%, transparent 50%);
+  --tertiary-color-ghost: color-mix(in srgb, var(--tertiary-color) 50%, transparent 50%);
   --dark-color-ghost: color-mix(in srgb, var(--dark-color) 50%, transparent 50%);
   --danger-color-ghost: color-mix(in srgb, var(--danger-color) 50%, transparent 50%);
   --info-color-ghost: color-mix(in srgb, var(--info-color) 50%, transparent 50%);
@@ -405,13 +405,13 @@
   --font-weight: 200;
 
 
-  --font-size: 1.2rem;
-  --font-size-xs: 0.8rem;
-  --font-size-sm: 1rem;
-  --font-size-md: 1.2rem;
-  --font-size-lg: 1.4rem;
-  --font-size-xl: 1.6rem;
-  --font-size-xxl: 1.8rem;
+  --font-size: 1.3rem;
+  --font-size-xs: 1rem;
+  --font-size-sm: 1.2rem;
+  --font-size-md: 1.4rem;
+  --font-size-lg: 1.6rem;
+  --font-size-xl: 1.8rem;
+  --font-size-xxl: 2rem;
 
 
   /* Headings */
@@ -424,11 +424,12 @@
 
 
   /* Leading & tracking */
-  --letter-spacing-sm: -0.05em;
-  --letter-spacing-md: 0.05em;
-  --letter-spacing-lg: 0.1em;
+  --letter-spacing: 0;
+  --letter-spacing-sm: -0.05rem;
+  --letter-spacing-md: 0.05rem;
+  --letter-spacing-lg: 0.1rem;
 
-
+  --line-height: 1.5;
   --line-height-sm: 1.25;
   --line-height-md: 1.5;
   --line-height-lg: 1.75;

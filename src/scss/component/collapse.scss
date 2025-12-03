@@ -40,6 +40,10 @@
   .collapse-body{
     .list{
       border: none;
+      li:first-child {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+      }
     }
   }
 }

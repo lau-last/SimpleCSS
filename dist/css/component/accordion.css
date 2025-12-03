@@ -95,6 +95,11 @@
 .accordion-native .accordion-item .accordion-body .list {
   border: none;
 }
+.accordion .accordion-item .accordion-body .list li:first-child,
+.accordion-native .accordion-item .accordion-body .list li:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn,
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-sm,

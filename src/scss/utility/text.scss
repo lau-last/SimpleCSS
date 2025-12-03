@@ -23,11 +23,13 @@ $breakpoints: bp.$breakpoints;
 .text-oblique  { font-style: oblique; }
 
 /* Line height */
+.lh-base   { line-height: var(--line-height); }
 .lh-sm   { line-height: var(--line-height-sm); }
 .lh-md   { line-height: var(--line-height-md); }
 .lh-lg   { line-height: var(--line-height-lg); }
 
 /* Letter spacing */
+.ls-base   { letter-spacing: var(--letter-spacing); }
 .ls-sm  { letter-spacing: var(--letter-spacing-sm); }
 .ls-md   { letter-spacing: var(--letter-spacing-md); }
 .ls-lg  { letter-spacing: var(--letter-spacing-lg); }
@@ -71,11 +73,13 @@ $breakpoints: bp.$breakpoints;
     .text-oblique-#{$bp}  { font-style: oblique; }
 
     /* Line height */
+    .lh-base-#{$bp}   { line-height: var(--line-height); }
     .lh-sm-#{$bp}   { line-height: var(--line-height-sm); }
     .lh-md-#{$bp}   { line-height: var(--line-height-md); }
     .lh-lg-#{$bp}   { line-height: var(--line-height-lg); }
 
     /* Letter spacing */
+    .ls-base-#{$bp}  { letter-spacing: var(--letter-spacing); }
     .ls-sm-#{$bp}  { letter-spacing: var(--letter-spacing-sm); }
     .ls-md-#{$bp}   { letter-spacing: var(--letter-spacing-md); }
     .ls-lg-#{$bp}  { letter-spacing: var(--letter-spacing-lg); }

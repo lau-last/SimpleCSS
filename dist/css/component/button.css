@@ -13,7 +13,6 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn:focus {
   outline: none;
@@ -31,7 +30,6 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn-sm:focus {
   outline: none;
@@ -49,7 +47,6 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn-md:focus {
   outline: none;
@@ -67,7 +64,6 @@
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn-lg:focus {
   outline: none;

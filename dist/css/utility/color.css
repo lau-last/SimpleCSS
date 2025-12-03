@@ -34858,7 +34858,7 @@ table.table th.table-dark-theme.table-hover:hover.active {
 }
 
 /* Text */
-.text-base {
+.text-color {
   color: var(--text-color);
 }
 

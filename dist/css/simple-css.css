@@ -295,7 +295,7 @@
   --active-on-warning-ghost-light: color-mix(in srgb, var(--warning-color) 50%, transparent 50%);
   --primary-color-ghost: color-mix(in srgb, var(--primary-color) 50%, transparent 50%);
   --secondary-color-ghost: color-mix(in srgb, var(--secondary-color) 50%, transparent 50%);
-  --tertiary-color-ghost: color-mix(in srgb, var(--tertiary-color)50%, transparent 50%);
+  --tertiary-color-ghost: color-mix(in srgb, var(--tertiary-color) 50%, transparent 50%);
   --dark-color-ghost: color-mix(in srgb, var(--dark-color) 50%, transparent 50%);
   --danger-color-ghost: color-mix(in srgb, var(--danger-color) 50%, transparent 50%);
   --info-color-ghost: color-mix(in srgb, var(--info-color) 50%, transparent 50%);
@@ -385,13 +385,13 @@
   --font-family-text: "Open Sans", sans-serif;
   --font-family-title: "Montserrat", sans-serif;
   --font-weight: 200;
-  --font-size: 1.2rem;
-  --font-size-xs: 0.8rem;
-  --font-size-sm: 1rem;
-  --font-size-md: 1.2rem;
-  --font-size-lg: 1.4rem;
-  --font-size-xl: 1.6rem;
-  --font-size-xxl: 1.8rem;
+  --font-size: 1.3rem;
+  --font-size-xs: 1rem;
+  --font-size-sm: 1.2rem;
+  --font-size-md: 1.4rem;
+  --font-size-lg: 1.6rem;
+  --font-size-xl: 1.8rem;
+  --font-size-xxl: 2rem;
   /* Headings */
   --font-size-h1: 4rem;
   --font-size-h2: 3.5rem;
@@ -400,9 +400,11 @@
   --font-size-h5: 2rem;
   --font-size-h6: 1.5rem;
   /* Leading & tracking */
-  --letter-spacing-sm: -0.05em;
-  --letter-spacing-md: 0.05em;
-  --letter-spacing-lg: 0.1em;
+  --letter-spacing: 0;
+  --letter-spacing-sm: -0.05rem;
+  --letter-spacing-md: 0.05rem;
+  --letter-spacing-lg: 0.1rem;
+  --line-height: 1.5;
   --line-height-sm: 1.25;
   --line-height-md: 1.5;
   --line-height-lg: 1.75;
@@ -844,6 +846,8 @@ body {
   font-weight: var(--font-weight);
   color: var(--text-color);
   background-color: var(--bg-color);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
   height: 100%;
   /* Headings */
 }
@@ -879,10 +883,13 @@ body option,
 body optgroup,
 body label,
 body fieldset,
-body legend {
+body legend,
+body a {
   font-family: var(--font-family-text), sans-serif;
   font-weight: var(--font-weight);
   font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
 }
 body {
   /* Links */
@@ -2444,6 +2451,11 @@ body ::selection {
 .accordion-native .accordion-item .accordion-body .list {
   border: none;
 }
+.accordion .accordion-item .accordion-body .list li:first-child,
+.accordion-native .accordion-item .accordion-body .list li:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn,
 .accordion .accordion-item:last-child:has(.accordion-body.show) .accordion-btn-sm,
@@ -2606,7 +2618,6 @@ body ::selection {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn:focus {
   outline: none;
@@ -2624,7 +2635,6 @@ body ::selection {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn-sm:focus {
   outline: none;
@@ -2642,7 +2652,6 @@ body ::selection {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn-md:focus {
   outline: none;
@@ -2660,7 +2669,6 @@ body ::selection {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.1s ease;
 }
 .btn-lg:focus {
   outline: none;
@@ -2773,6 +2781,11 @@ body ::selection {
 .collapse .collapse-body .list,
 .collapse-native .collapse-body .list {
   border: none;
+}
+.collapse .collapse-body .list li:first-child,
+.collapse-native .collapse-body .list li:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .collapse:has(.collapse-body.show) > .collapse-btn, .collapse:has(.collapse-body.show) > .collapse-btn-sm, .collapse:has(.collapse-body.show) > .collapse-btn-md, .collapse:has(.collapse-body.show) > .collapse-btn-lg {
@@ -41221,7 +41234,7 @@ table.table th.table-dark-theme.table-hover:hover.active {
 }
 
 /* Text */
-.text-base {
+.text-color {
   color: var(--text-color);
 }
 
@@ -48726,6 +48739,10 @@ table.table th.table-dark-theme.table-hover:hover.active {
 }
 
 /* Line height */
+.lh-base {
+  line-height: var(--line-height);
+}
+
 .lh-sm {
   line-height: var(--line-height-sm);
 }
@@ -48739,6 +48756,10 @@ table.table th.table-dark-theme.table-hover:hover.active {
 }
 
 /* Letter spacing */
+.ls-base {
+  letter-spacing: var(--letter-spacing);
+}
+
 .ls-sm {
   letter-spacing: var(--letter-spacing-sm);
 }
@@ -48820,6 +48841,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-xs {
+    line-height: var(--line-height);
+  }
   .lh-sm-xs {
     line-height: var(--line-height-sm);
   }
@@ -48830,6 +48854,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-xs {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-xs {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -48902,6 +48929,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-sm {
+    line-height: var(--line-height);
+  }
   .lh-sm-sm {
     line-height: var(--line-height-sm);
   }
@@ -48912,6 +48942,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-sm {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-sm {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -48984,6 +49017,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-md {
+    line-height: var(--line-height);
+  }
   .lh-sm-md {
     line-height: var(--line-height-sm);
   }
@@ -48994,6 +49030,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-md {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-md {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -49066,6 +49105,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-lg {
+    line-height: var(--line-height);
+  }
   .lh-sm-lg {
     line-height: var(--line-height-sm);
   }
@@ -49076,6 +49118,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-lg {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-lg {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -49148,6 +49193,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-xl {
+    line-height: var(--line-height);
+  }
   .lh-sm-xl {
     line-height: var(--line-height-sm);
   }
@@ -49158,6 +49206,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-xl {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-xl {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -49230,6 +49281,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-xxl {
+    line-height: var(--line-height);
+  }
   .lh-sm-xxl {
     line-height: var(--line-height-sm);
   }
@@ -49240,6 +49294,9 @@ table.table th.table-dark-theme.table-hover:hover.active {
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-xxl {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-xxl {
     letter-spacing: var(--letter-spacing-sm);
   }

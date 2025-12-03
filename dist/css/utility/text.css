@@ -50,6 +50,10 @@
 }
 
 /* Line height */
+.lh-base {
+  line-height: var(--line-height);
+}
+
 .lh-sm {
   line-height: var(--line-height-sm);
 }
@@ -63,6 +67,10 @@
 }
 
 /* Letter spacing */
+.ls-base {
+  letter-spacing: var(--letter-spacing);
+}
+
 .ls-sm {
   letter-spacing: var(--letter-spacing-sm);
 }
@@ -144,6 +152,9 @@
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-xs {
+    line-height: var(--line-height);
+  }
   .lh-sm-xs {
     line-height: var(--line-height-sm);
   }
@@ -154,6 +165,9 @@
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-xs {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-xs {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -226,6 +240,9 @@
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-sm {
+    line-height: var(--line-height);
+  }
   .lh-sm-sm {
     line-height: var(--line-height-sm);
   }
@@ -236,6 +253,9 @@
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-sm {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-sm {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -308,6 +328,9 @@
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-md {
+    line-height: var(--line-height);
+  }
   .lh-sm-md {
     line-height: var(--line-height-sm);
   }
@@ -318,6 +341,9 @@
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-md {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-md {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -390,6 +416,9 @@
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-lg {
+    line-height: var(--line-height);
+  }
   .lh-sm-lg {
     line-height: var(--line-height-sm);
   }
@@ -400,6 +429,9 @@
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-lg {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-lg {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -472,6 +504,9 @@
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-xl {
+    line-height: var(--line-height);
+  }
   .lh-sm-xl {
     line-height: var(--line-height-sm);
   }
@@ -482,6 +517,9 @@
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-xl {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-xl {
     letter-spacing: var(--letter-spacing-sm);
   }
@@ -554,6 +592,9 @@
     font-style: oblique;
   }
   /* Line height */
+  .lh-base-xxl {
+    line-height: var(--line-height);
+  }
   .lh-sm-xxl {
     line-height: var(--line-height-sm);
   }
@@ -564,6 +605,9 @@
     line-height: var(--line-height-lg);
   }
   /* Letter spacing */
+  .ls-base-xxl {
+    letter-spacing: var(--letter-spacing);
+  }
   .ls-sm-xxl {
     letter-spacing: var(--letter-spacing-sm);
   }

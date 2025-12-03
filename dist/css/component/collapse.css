@@ -68,6 +68,11 @@
 .collapse-native .collapse-body .list {
   border: none;
 }
+.collapse .collapse-body .list li:first-child,
+.collapse-native .collapse-body .list li:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 
 .collapse:has(.collapse-body.show) > .collapse-btn, .collapse:has(.collapse-body.show) > .collapse-btn-sm, .collapse:has(.collapse-body.show) > .collapse-btn-md, .collapse:has(.collapse-body.show) > .collapse-btn-lg {
   border-bottom-right-radius: 0;

@@ -9,21 +9,22 @@
   top: 0;
   align-items: center;
 }
-.alert-container.top-left, .alert-container.bottom-left {
-  align-items: start;
-}
-.alert-container.top-center, .alert-container.bottom-center {
-  align-items: center;
-}
-.alert-container.top-right, .alert-container.bottom-right {
-  align-items: end;
-}
-.alert-container.top-left, .alert-container.top-center, .alert-container.top-right {
+.alert-container.top {
   top: 0;
+  bottom: auto;
 }
-.alert-container.bottom-left, .alert-container.bottom-center, .alert-container.bottom-right {
+.alert-container.bottom {
   bottom: 0;
   top: auto;
+}
+.alert-container.left {
+  align-items: flex-start;
+}
+.alert-container.center {
+  align-items: center;
+}
+.alert-container.right {
+  align-items: flex-end;
 }
 
 .alert {

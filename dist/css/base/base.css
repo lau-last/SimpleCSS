@@ -49,25 +49,25 @@ body option,
 body optgroup,
 body label,
 body fieldset,
-body legend,
-body a {
+body legend {
   font-family: var(--font-family-text), sans-serif;
   font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
 }
 body {
   /* Links */
 }
 body a {
+  font-family: var(--font-family-text), sans-serif;
+  font-weight: var(--font-weight);
+  letter-spacing: var(--letter-spacing);
   color: inherit;
   text-decoration: none;
 }
 body {
   /* Text selection */
 }
-body ::selection {
+body::selection {
   background-color: var(--primary-color);
   color: var(--text-on-primary);
   -webkit-text-fill-color: var(--text-on-primary);

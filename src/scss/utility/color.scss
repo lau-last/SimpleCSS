@@ -289,6 +289,20 @@ $colors: (
   }
 }
 
+.dialog,
+.dialog-sm,
+.dialog-md,
+.dialog-lg {
+/* Borders */
+  @each $name, $value in $colors {
+    &.dialog-#{$name} {
+      border-color: #{$value};
+      background-color: #{$value};
+      color: var(--text-on-#{$name});
+    }
+  }
+}
+
 
 /* List */
 @mixin list-hover-active-default {

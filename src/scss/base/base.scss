@@ -30,34 +30,33 @@ body {
   h6 { font-size: var(--font-size-h6); }
 
 
-button,
-input,
-textarea,
-select,
-option,
-optgroup,
-label,
-fieldset,
-legend,
-a{
+  button,
+  input,
+  textarea,
+  select,
+  option,
+  optgroup,
+  label,
+  fieldset,
+  legend{
     font-family: var(--font-family-text), sans-serif;
     font-weight: var(--font-weight);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
     letter-spacing: var(--letter-spacing);
   }
 
 
-
   /* Links */
   a {
+    font-family: var(--font-family-text), sans-serif;
+    font-weight: var(--font-weight);
+    letter-spacing: var(--letter-spacing);
     color: inherit;
     text-decoration: none;
   }
 
 
   /* Text selection */
-  ::selection {
+  &::selection {
     background-color: var(--primary-color);
     color: var(--text-on-primary);
     -webkit-text-fill-color: var(--text-on-primary);

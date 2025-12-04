@@ -509,6 +509,7 @@
   cursor: pointer;
   background: var(--input-switch-bg-color);
   border-radius: 50rem;
+  border: var(--input-border-width) var(--input-border-style) var(--input-border-color);
   position: relative;
   transition: background 0.1s;
   outline: none;

@@ -35,22 +35,27 @@
   top: 0;
   align-items: center;
 
-  &.top-left,
-  &.bottom-left { align-items: start; }
+  &.top {
+    top: 0;
+    bottom: auto;
+  }
 
-  &.top-center,
-  &.bottom-center { align-items: center; }
+  &.bottom {
+    bottom: 0;
+    top: auto;
+  }
 
-  &.top-right,
-  &.bottom-right { align-items: end; }
+  &.left {
+    align-items: flex-start;
+  }
 
-  &.top-left,
-  &.top-center,
-  &.top-right { top: 0; }
+  &.center {
+    align-items: center;
+  }
 
-  &.bottom-left,
-  &.bottom-center,
-  &.bottom-right { bottom: 0; top: auto; }
+  &.right {
+    align-items: flex-end;
+  }
 }
 
 // Alert

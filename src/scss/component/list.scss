@@ -65,16 +65,12 @@
   @include list-base;
 
   .list-item {
-    line-height: var(--list-item-height);
     padding: var(--list-item-padding);
-    height: var(--list-item-height);
   }
   .list-item > .list-link {
     display: block;
     width: 100%;
     padding: var(--list-item-padding);
-    line-height: var(--list-item-height);
-    height: var(--list-item-height);
   }
   .list-item:has(.list-link) {
     padding: 0;
@@ -85,16 +81,12 @@
   @include list-base;
 
   .list-item {
-    height: var(--list-item-height-sm);
     padding: var(--list-item-padding-sm);
-    line-height: var(--list-item-height-sm);
   }
   .list-item > .list-link {
     display: block;
     width: 100%;
     padding: var(--list-item-padding-sm);
-    line-height: var(--list-item-height-sm);
-    height: var(--list-item-height-sm);
   }
   .list-item:has(.list-link) {
     padding: 0;
@@ -105,16 +97,12 @@
   @include list-base;
 
   .list-item {
-    height: var(--list-item-height-md);
     padding: var(--list-item-padding-md);
-    line-height: var(--list-item-height-md);
   }
   .list-item > .list-link {
     display: block;
     width: 100%;
     padding: var(--list-item-padding-md);
-    line-height: var(--list-item-height-md);
-    height: var(--list-item-height-md);
   }
   .list-item:has(.list-link) {
     padding: 0;
@@ -125,16 +113,12 @@
   @include list-base;
 
   .list-item {
-    height: var(--list-item-height-lg);
     padding: var(--list-item-padding-lg);
-    line-height: var(--list-item-height-lg);
   }
   .list-item > .list-link {
     display: block;
     width: 100%;
     padding: var(--list-item-padding-lg);
-    line-height: var(--list-item-height-lg);
-    height: var(--list-item-height-lg);
   }
   .list-item:has(.list-link) {
     padding: 0;

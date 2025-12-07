@@ -26,19 +26,19 @@ $breakpoints: bp.$breakpoints;
     justify-content: flex-end;
     align-items: flex-end;
 
-    &.nav-start,
-    &.nav-left {
+    &.left,
+    &.start {
       justify-content: flex-start;
       align-items: flex-start;
     }
 
-    &.nav-center {
+    &.center {
       justify-content: center;
       align-items: center;
     }
 
-    &.nav-end,
-    &.nav-right {
+    &.right,
+    &.end {
       justify-content: flex-end;
       align-items: flex-end;
     }
@@ -48,6 +48,15 @@ $breakpoints: bp.$breakpoints;
     display: flex;
     list-style: none;
     gap: var(--navbar-nav-gap);
+
+    &.list {
+      background-color: transparent;
+
+      .list-item {
+        border-radius:  var(--navbar-nav-list-item-border-radius);
+      }
+    }
+
   }
 
   @media (max-width: $max-width) {
@@ -69,22 +78,21 @@ $breakpoints: bp.$breakpoints;
         align-items: flex-start;
 
 
-
-        &.nav-left-collapse,
-        &.nav-start-collapse {
-          justify-content: flex-start;
-          align-items: flex-start;
-        }
-
-        &.nav-center-collapse {
-          justify-content: center;
-          align-items: center;
-        }
-
-        &.nav-end-collapse,
-        &.nav-right-collapse {
-          justify-content: flex-end;
-          align-items: flex-end;
+        &.navbar-collapse {
+          &.left,
+          &.start {
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+          &.center {
+            justify-content: center;
+            align-items: center;
+          }
+          &.right,
+          &.end {
+            justify-content: flex-end;
+            align-items: flex-end;
+          }
         }
       }
     }

@@ -490,9 +490,12 @@ table.table {
 }
 
 .navbar,
+.navbar-xs,
 .navbar-sm,
 .navbar-md,
-.navbar-lg {
+.navbar-lg,
+.navbar-xl,
+.navbar-xxl {
   /* Navbar */
   @each $name, $value in $colors {
     &.navbar-#{$name} {

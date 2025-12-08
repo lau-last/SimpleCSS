@@ -508,12 +508,12 @@ table.table {
 
 /* Text */
 .text-color {
-  color: var(--text-color);
+  color: var(--text-color) !important;
 }
 
 @each $name, $value in $colors {
   .text-#{$name} {
-    color: #{$value};
+    color: #{$value} !important;
   }
 }
 

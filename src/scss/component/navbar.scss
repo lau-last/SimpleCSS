@@ -1,6 +1,7 @@
 @use "sass:map";
 /* Breakpoints */
 @use "../breakpoint" as bp;
+
 $breakpoints: bp.$breakpoints;
 
 @mixin navbar($max-width) {
@@ -44,16 +45,17 @@ $breakpoints: bp.$breakpoints;
     }
   }
 
-  .navbar-nav {
+  .navbar-collapse {
     display: flex;
     list-style: none;
     gap: var(--navbar-nav-gap);
 
     &.list {
       background-color: transparent;
+      color: inherit;
 
-      .list-item {
-        border-radius:  var(--navbar-nav-list-item-border-radius);
+      > .list-item {
+        border-radius: var(--navbar-nav-list-item-border-radius);
       }
     }
 
@@ -78,26 +80,26 @@ $breakpoints: bp.$breakpoints;
         align-items: flex-start;
 
 
-        &.navbar-collapse {
-          &.left,
-          &.start {
-            justify-content: flex-start;
-            align-items: flex-start;
-          }
-          &.center {
-            justify-content: center;
-            align-items: center;
-          }
-          &.right,
-          &.end {
-            justify-content: flex-end;
-            align-items: flex-end;
-          }
+        &.bp-left,
+        &.bp-start {
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+
+        &.bp-center {
+          justify-content: center;
+          align-items: center;
+        }
+
+        &.bp-right,
+        &.bp-end {
+          justify-content: flex-end;
+          align-items: flex-end;
         }
       }
     }
 
-    .navbar-nav {
+    .navbar-collapse {
       margin: var(--navbar-nav-margin);
       flex-direction: column;
     }

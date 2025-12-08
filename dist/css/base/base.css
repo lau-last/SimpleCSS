@@ -54,6 +54,12 @@ body legend {
   font-weight: var(--font-weight);
   letter-spacing: var(--letter-spacing);
 }
+body button,
+body input,
+body textarea,
+body select {
+  font: inherit;
+}
 body {
   /* Links */
 }

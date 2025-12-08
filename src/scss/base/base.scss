@@ -44,6 +44,13 @@ body {
     letter-spacing: var(--letter-spacing);
   }
 
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
 
   /* Links */
   a {

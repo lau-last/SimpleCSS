@@ -14,7 +14,6 @@
 }
 .list .list-item {
   display: block;
-  align-self: center;
 }
 .list .list-item:first-child {
   border-top-left-radius: calc(var(--list-border-radius) - var(--list-border-width));
@@ -70,7 +69,6 @@
 }
 .list-sm .list-item {
   display: block;
-  align-self: center;
 }
 .list-sm .list-item:first-child {
   border-top-left-radius: calc(var(--list-border-radius) - var(--list-border-width));
@@ -126,7 +124,6 @@
 }
 .list-md .list-item {
   display: block;
-  align-self: center;
 }
 .list-md .list-item:first-child {
   border-top-left-radius: calc(var(--list-border-radius) - var(--list-border-width));
@@ -182,7 +179,6 @@
 }
 .list-lg .list-item {
   display: block;
-  align-self: center;
 }
 .list-lg .list-item:first-child {
   border-top-left-radius: calc(var(--list-border-radius) - var(--list-border-width));

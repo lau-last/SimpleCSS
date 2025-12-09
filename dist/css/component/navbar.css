@@ -41,6 +41,7 @@
 }
 .navbar .navbar-collapse {
   display: flex;
+  align-items: baseline;
   list-style: none;
   gap: var(--navbar-nav-gap);
 }
@@ -128,6 +129,7 @@
 }
 .navbar-xs .navbar-collapse {
   display: flex;
+  align-items: baseline;
   list-style: none;
   gap: var(--navbar-nav-gap);
 }
@@ -215,6 +217,7 @@
 }
 .navbar-sm .navbar-collapse {
   display: flex;
+  align-items: baseline;
   list-style: none;
   gap: var(--navbar-nav-gap);
 }
@@ -302,6 +305,7 @@
 }
 .navbar-md .navbar-collapse {
   display: flex;
+  align-items: baseline;
   list-style: none;
   gap: var(--navbar-nav-gap);
 }
@@ -389,6 +393,7 @@
 }
 .navbar-lg .navbar-collapse {
   display: flex;
+  align-items: baseline;
   list-style: none;
   gap: var(--navbar-nav-gap);
 }
@@ -476,6 +481,7 @@
 }
 .navbar-xl .navbar-collapse {
   display: flex;
+  align-items: baseline;
   list-style: none;
   gap: var(--navbar-nav-gap);
 }
@@ -563,6 +569,7 @@
 }
 .navbar-xxl .navbar-collapse {
   display: flex;
+  align-items: baseline;
   list-style: none;
   gap: var(--navbar-nav-gap);
 }

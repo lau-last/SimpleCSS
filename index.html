@@ -5,49 +5,491 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        })();
-    </script>
-    <link rel="stylesheet" href="dist/css/simple-css.import.css">
+<!--    <script>-->
+<!--        (function () {-->
+<!--            const savedTheme = localStorage.getItem('theme') || 'light';-->
+<!--            document.documentElement.setAttribute('data-theme', savedTheme);-->
+<!--        })();-->
+<!--    </script>-->
+    <link rel="stylesheet" href="dist/css/simple-css.css">
     <script type="module" src="dist/js/simple-css.js"></script>
     <title>Framework</title>
 </head>
 <body>
+<div class="container">
+    <div class="accordion my-5">
+        <div class="accordion-item">
+            <button class="accordion-btn outline-primary" data-js="collapse" data-target="#single-demo-1" aria-expanded="true" aria-controls="single-demo-1">
+                Single
+            </button>
+            <div class="accordion-body show" id="single-demo-1">
+                <p class="p-1">
+                    Some content
+                </p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-btn outline-primary" data-js="collapse" data-target="#single-demo-2" aria-expanded="false" aria-controls="single-demo-2">
+                Single
+            </button>
+            <div class="accordion-body" id="single-demo-2">
+                <p class="p-1">
+                    Some content
+                </p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-btn outline-primary" data-js="collapse" data-target="#single-demo-3" aria-expanded="false" aria-controls="single-demo-3">
+                Single
+            </button>
+            <div class="accordion-body" id="single-demo-3">
+                <p class="p-1">
+                    Some content
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <article class="card p-2">
     <div class="card-header">
         <h2>💠 Example</h2>
     </div>
     <div class="card-body">
-        <!--Navbar-->
-        <nav class="navbar navbar-primary">
-            <!-- Logo -->
+        <!--Navbar 1-->
+        <nav class="my-2 navbar-xs outline-primary">
             <div>Lorem.</div>
-            <!-- Button for drop menu -->
-            <button class="navbar-btn btn btn-white" data-js="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+            <button class="navbar-btn btn btn-white"
+                    data-js="collapse"
+                    data-target="#navbar-1"
+                    aria-controls="navbar-1"
+                    aria-expanded="false">
                 Show menu
             </button>
-            <!-- Collapse for drop menu -->
-            <div class="navbar-body" id="navbar">
-                <!-- Navbar list -->
-                <ul class="navbar-nav list list-hover list-borderless">
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
-                    <li class="list-item"><a href="#" class="list-link">menu</a></li>
+            <div class="navbar-body center bp-left" id="navbar-1">
+                <div class="navbar-collapse">
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <a href="#">menu</a>
+                    <div class="dropdown">
+                        <button class="btn outline-white" data-js="dropdown" data-target="#dropdown-menu1-demo" aria-controls="dropdown-menu1-demo" aria-expanded="false">
+                            Dropdown &#9662
+                        </button>
+                        <div class="dropdown-body side-right side-left-xs" id="dropdown-menu1-demo">
+                            <ul class="list list-hover">
+                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--Navbar 2-->
+        <nav class="my-2 navbar navbar-primary">
+            <div>Lorem.</div>
+            <button class="navbar-btn btn btn-white"
+                    data-js="collapse"
+                    data-target="#navbar-2"
+                    aria-controls="navbar-2"
+                    aria-expanded="false">
+                Show menu
+            </button>
+            <div class="navbar-body bp-center" id="navbar-2">
+                <ul class="navbar-collapse list list-borderless">
+                    <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
+                    <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
+                    <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
+                    <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
+                    <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
+                    <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
+                    <li class="list-item list-hover"><a href="#" class="list-link">menu</a></li>
+                    <li class="list-item dropdown">
+                        <button class="btn outline-white" data-js="dropdown" data-target="#dropdown-menu2-demo" aria-controls="dropdown-menu2-demo" aria-expanded="false">
+                            Dropdown &#9662
+                        </button>
+                        <div class="dropdown-body bottom center top-md right-md" id="dropdown-menu2-demo">
+                            <ul class="list list-hover">
+                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
-
         </nav>
+
     </div>
 </article>
+
+
+
+
+<article class="card p-2">
+    <div class="card-header">
+        <h2>💠 Examples</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-left" aria-controls="dropdown-bottom-left" aria-expanded="false">
+                                bottom left
+                            </button>
+                            <div class="dropdown-body bottom left" id="dropdown-bottom-left" style="display: none;">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-center" aria-controls="dropdown-bottom-center" aria-expanded="false">
+                                bottom center
+                            </button>
+                            <div class="dropdown-body bottom center" id="dropdown-bottom-center" style="display: none;">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom center menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-bottom-right" aria-controls="dropdown-bottom-right" aria-expanded="false">
+                                bottom right
+                            </button>
+                            <div class="dropdown-body bottom right" id="dropdown-bottom-right">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom right menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-left" aria-controls="dropdown-top-left" aria-expanded="false">
+                                top left
+                            </button>
+                            <div class="dropdown-body top left" id="dropdown-top-left">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top left menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-center" aria-controls="dropdown-top-center" aria-expanded="false">
+                                top center
+                            </button>
+                            <div class="dropdown-body top center" id="dropdown-top-center">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top center menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-top-right" aria-controls="dropdown-top-right" aria-expanded="false">
+                                top right
+                            </button>
+                            <div class="dropdown-body top right" id="dropdown-top-right">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top right menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-side-left" aria-controls="dropdown-side-left" aria-expanded="false">
+                                side left
+                            </button>
+                            <div class="dropdown-body side-left" id="dropdown-side-left">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side left menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <div class="dropdown">
+                            <button class="btn btn-primary" data-js="dropdown" data-target="#dropdown-side-right" aria-controls="dropdown-side-right" aria-expanded="false">
+                                side right
+                            </button>
+                            <div class="dropdown-body side-right" id="dropdown-side-right">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side right menu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+<article class="card p-2">
+    <div class="card-header">
+        <h2>💠 Examples</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                bottom left
+                            </summary>
+                            <div class="dropdown-body bottom left">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom left menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                bottom center
+                            </summary>
+                            <div class="dropdown-body bottom center">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom center menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                bottom right
+                            </summary>
+                            <div class="dropdown-body bottom right">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown bottom right menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                top left
+                            </summary>
+                            <div class="dropdown-body top left">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top left menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                top center
+                            </summary>
+                            <div class="dropdown-body top center">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top center menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top center menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                top right
+                            </summary>
+                            <div class="dropdown-body top right">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown top right menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                side left
+                            </summary>
+                            <div class="dropdown-body side-left">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side left menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side left menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-4-md">
+                <article class="card p-2">
+                    <div class="card-body d-flex jc-center ai-center">
+                        <details class="dropdown-native">
+                            <summary class="btn btn-primary">
+                                side right
+                            </summary>
+                            <div class="dropdown-body side-right">
+                                <ul class="list list-hover">
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side right menu</a></li>
+                                    <li class="list-item"><a class="list-link" href="#">Dropdown side right menu</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
 <script>
     function themeLight() {
         document.documentElement.setAttribute('data-theme', 'light');

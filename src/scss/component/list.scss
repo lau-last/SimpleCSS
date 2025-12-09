@@ -19,7 +19,6 @@
 
   .list-item, {
     display: block;
-    align-self: center;
 
     &:first-child {
       border-top-left-radius: calc(var(--list-border-radius) - var(--list-border-width));

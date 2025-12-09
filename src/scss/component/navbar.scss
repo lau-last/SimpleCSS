@@ -47,8 +47,10 @@ $breakpoints: bp.$breakpoints;
 
   .navbar-collapse {
     display: flex;
+    align-items: baseline;
     list-style: none;
     gap: var(--navbar-nav-gap);
+
 
     &.list {
       background-color: transparent;

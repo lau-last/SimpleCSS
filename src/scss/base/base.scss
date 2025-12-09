@@ -51,6 +51,16 @@ body {
     font: inherit;
   }
 
+  button,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
 
   /* Links */
   a {

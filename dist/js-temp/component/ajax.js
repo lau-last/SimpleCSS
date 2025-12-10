@@ -60,7 +60,7 @@ export default class Ajax {
     // Builds the AJAX context: url, method, target, swap, data, and select
     static createContext(element) {
         const urlInfo = Ajax.resolveAjaxUrl(element);
-        if (!urlInfo?.url || !urlInfo?.method)
+        if (!(urlInfo === null || urlInfo === void 0 ? void 0 : urlInfo.url) || !(urlInfo === null || urlInfo === void 0 ? void 0 : urlInfo.method))
             return null;
         const targetSelector = Ajax.resolveAjaxTarget(element);
         const swapMode = Ajax.resolveAjaxSwap(element);
@@ -141,11 +141,13 @@ export default class Ajax {
     }
     // Resolves the POST URL (data-ajax-post)
     static resolveAjaxPost(element) {
-        return element.closest('[data-ajax-post]')?.getAttribute('data-ajax-post') || null;
+        var _a;
+        return ((_a = element.closest('[data-ajax-post]')) === null || _a === void 0 ? void 0 : _a.getAttribute('data-ajax-post')) || null;
     }
     // Resolves the GET URL (data-ajax-get)
     static resolveAjaxGet(element) {
-        return element.closest('[data-ajax-get]')?.getAttribute('data-ajax-get') || null;
+        var _a;
+        return ((_a = element.closest('[data-ajax-get]')) === null || _a === void 0 ? void 0 : _a.getAttribute('data-ajax-get')) || null;
     }
     // Determines the final URL and HTTP method
     static resolveAjaxUrl(element) {
@@ -161,7 +163,8 @@ export default class Ajax {
     }
     // Resolves the target selector (data-ajax-target)
     static resolveAjaxTarget(element) {
-        const selector = element.closest('[data-ajax-target]')?.getAttribute('data-ajax-target');
+        var _a;
+        const selector = (_a = element.closest('[data-ajax-target]')) === null || _a === void 0 ? void 0 : _a.getAttribute('data-ajax-target');
         if (!selector) {
             console.warn('No data-ajax-target defined for:', element);
         }
@@ -169,11 +172,13 @@ export default class Ajax {
     }
     // Resolves the fragment selector (data-ajax-select)
     static resolveAjaxSelect(element) {
-        return element.closest('[data-ajax-select]')?.getAttribute('data-ajax-select') || null;
+        var _a;
+        return ((_a = element.closest('[data-ajax-select]')) === null || _a === void 0 ? void 0 : _a.getAttribute('data-ajax-select')) || null;
     }
     // Resolves the value (data-ajax-value)
     static resolveAjaxValue(element) {
-        return element.closest('[data-ajax-value]')?.getAttribute('data-ajax-value') || null;
+        var _a;
+        return ((_a = element.closest('[data-ajax-value]')) === null || _a === void 0 ? void 0 : _a.getAttribute('data-ajax-value')) || null;
     }
     // Extracts the selected fragment from the returned HTML
     static extractSelectedHtml(html, selector) {
@@ -218,6 +223,7 @@ export default class Ajax {
     }
     // Builds FormData from the element or its closest form
     static buildFormData(element) {
+        var _a;
         const form = (element.tagName === 'FORM' ? element : element.closest('form'));
         if (form) {
             return new FormData(form);
@@ -225,7 +231,7 @@ export default class Ajax {
         const formData = new FormData();
         const named = element;
         if (named.name) {
-            formData.append(named.name, named.value ?? '');
+            formData.append(named.name, (_a = named.value) !== null && _a !== void 0 ? _a : '');
         }
         return formData;
     }
@@ -252,7 +258,7 @@ export default class Ajax {
                     formData.append(key, value);
                 }
             }
-            catch {
+            catch (_a) {
                 /* on ignore si erreur */
             }
         }
@@ -284,9 +290,10 @@ export default class Ajax {
     }
     // Executes inline expressions or functions defined in data-ajax-event-* attributes
     static handleAjaxEvents(element, eventAttrName, context = {}) {
+        var _a;
         const host = element.hasAttribute(eventAttrName)
             ? element
-            : element.closest?.(`[${eventAttrName}]`);
+            : (_a = element.closest) === null || _a === void 0 ? void 0 : _a.call(element, `[${eventAttrName}]`);
         if (!host)
             return;
         const value = host.getAttribute(eventAttrName);

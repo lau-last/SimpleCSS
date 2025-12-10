@@ -24,6 +24,7 @@
       border-top-left-radius: calc(var(--list-border-radius) - var(--list-border-width));
       border-top-right-radius: calc(var(--list-border-radius) - var(--list-border-width));
     }
+
     &:last-child {
       border-bottom-left-radius: calc(var(--list-border-radius) - var(--list-border-width));
       border-bottom-right-radius: calc(var(--list-border-radius) - var(--list-border-width));
@@ -67,61 +68,45 @@
   .list-item {
     padding: var(--list-item-padding);
   }
+
   .list-item > .list-link {
     display: block;
     width: 100%;
     padding: var(--list-item-padding);
   }
+
   .list-item:has(.list-link) {
     padding: 0;
   }
 }
 
-.list-sm {
-  @include list-base;
 
-  .list-item {
-    padding: var(--list-item-padding-sm);
-  }
-  .list-item > .list-link {
-    display: block;
-    width: 100%;
-    padding: var(--list-item-padding-sm);
-  }
-  .list-item:has(.list-link) {
-    padding: 0;
-  }
+
+$list-sizes: (
+        sm: var(--list-item-padding-sm),
+        md: var(--list-item-padding-md),
+        lg: var(--list-item-padding-lg)
+);
+
+@each $name, $value in $list-sizes {
+    .list-#{$name} {
+        @include list-base;
+
+        .list-item {
+            padding: $value;
+        }
+
+        .list-item > .list-link {
+            display: block;
+            width: 100%;
+            padding: $value;
+        }
+
+        .list-item:has(.list-link) {
+            padding: 0;
+        }
+    }
 }
 
-.list-md {
-  @include list-base;
 
-  .list-item {
-    padding: var(--list-item-padding-md);
-  }
-  .list-item > .list-link {
-    display: block;
-    width: 100%;
-    padding: var(--list-item-padding-md);
-  }
-  .list-item:has(.list-link) {
-    padding: 0;
-  }
-}
-
-.list-lg {
-  @include list-base;
-
-  .list-item {
-    padding: var(--list-item-padding-lg);
-  }
-  .list-item > .list-link {
-    display: block;
-    width: 100%;
-    padding: var(--list-item-padding-lg);
-  }
-  .list-item:has(.list-link) {
-    padding: 0;
-  }
-}
 

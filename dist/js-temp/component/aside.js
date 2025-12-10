@@ -29,7 +29,7 @@ export default class Aside {
     static handleClose(target) {
         if (!target.matches('.close'))
             return;
-        const aside = target.closest('aside, .sidebar-left, .sidebar-right');
+        const aside = target.closest('aside, .sidebar');
         if (!aside)
             return;
         if (!Aside.isOpen(aside))

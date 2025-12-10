@@ -9,7 +9,7 @@
   transition: width .25s ease, transform .25s ease;
   background: var(--sidebar-bg-color);
   width: var(--sidebar-width);
-  padding:  var(--sidebar-padding);
+  padding: var(--sidebar-padding);
 
   &.show {
     width: var(--sidebar-width);
@@ -17,8 +17,8 @@
   }
 }
 
-// Sidebar left
-.sidebar-left {
+
+.sidebar.left {
   @include sidebar-base;
   left: 0;
   transform: translateX(-100%);
@@ -27,8 +27,7 @@
   border-bottom-right-radius: var(--sidebar-border-radius);
 }
 
-// Sidebar right
-.sidebar-right {
+.sidebar.right {
   @include sidebar-base;
   left: auto;
   right: 0;

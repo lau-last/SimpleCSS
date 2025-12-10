@@ -13,6 +13,7 @@ $breakpoints: bp.$breakpoints;
   border-style: var(--navbar-border-style);
   border-width: var(--navbar-border-width);
   border-radius: var(--navbar-border-radius);
+  background-color:  var(--navbar-bg-color);
 
   .navbar-btn {
     display: none;

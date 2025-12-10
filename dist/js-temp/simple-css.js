@@ -6,8 +6,6 @@ import Dialog from "./component/dialog";
 import Dropdown from "./component/dropdown";
 import FormValidate from "./component/form-validate";
 import Tab from "./component/tab";
-
-
 document.addEventListener('DOMContentLoaded', () => {
     new Ajax();
     new Alert();

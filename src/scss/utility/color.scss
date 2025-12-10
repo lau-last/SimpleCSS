@@ -223,6 +223,18 @@ $colors: (
         background-color: var(--hover-on-#{$name});
       }
     }
+  }
+}
+
+.btn,
+.btn-sm,
+.btn-md,
+.btn-lg,
+.tab-btn,
+.tab-btn-sm,
+.tab-btn-md,
+.tab-btn-lg{
+  @each $name, $value in $colors {
     &.outline-#{$name} {
       background-color: transparent;
       color: #{$value};
@@ -247,6 +259,7 @@ $colors: (
     }
   }
 }
+
 
 
 .card {
@@ -353,33 +366,44 @@ $colors: (
 .list-md,
 .list-lg {
 
-  .list-item.active {
+  .list-item:not(:has(.dropdown)).active {
     background-color: var(--list-item-hover-bg-color);
     box-shadow: inset var(--list-border-width-inside-hover) 0 0 0 var(--list-item-hover-bg-color);
   }
 
   &.list-hover {
-    .list-item:hover {
+    .list-item:not(:has(.dropdown)):hover {
       @include list-hover-active-default;
     }
 
     @each $name, $value in $colors {
-      &.list-#{$name} .list-item:not(.list-hover) {
+      &.list-#{$name} .list-item:not(.list-hover):not(:has(.dropdown)) {
         @include list-hover-active-color($name, $value);
       }
-      .list-item.list-#{$name} {
+      .list-item.list-#{$name}:not(:has(.dropdown)) {
         @include list-hover-active-color($name, $value);
       }
     }
   }
 
-  .list-hover.list-item:hover {
+  .list-hover.list-item:not(:has(.dropdown)):hover {
     @include list-hover-active-default;
   }
 
   @each $name, $value in $colors {
-    .list-item.list-#{$name}.list-hover {
+    .list-item.list-#{$name}.list-hover:not(:has(.dropdown)) {
       @include list-hover-active-color($name, $value);
+    }
+  }
+}
+
+
+.sidebar {
+  /* Sidebar */
+  @each $name, $value in $colors {
+    &.sidebar-#{$name} {
+      background-color: #{$value};
+      color: var(--text-on-#{$name});
     }
   }
 }

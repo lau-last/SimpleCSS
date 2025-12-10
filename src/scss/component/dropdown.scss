@@ -3,20 +3,6 @@
 
 $breakpoints: bp.$breakpoints;
 
-@mixin reset-x {
-  left: auto;
-  right: auto;
-  translate: 0 0;
-}
-
-@mixin reset-y {
-  top: auto;
-  bottom: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
 /* Animation pour les dropdown non natifs */
 .dropdown {
   .dropdown-body {
@@ -52,31 +38,35 @@ $breakpoints: bp.$breakpoints;
 
     /* ---- Horizontal ---- */
     &.left {
-      @include reset-x;
+      right: auto;
+      translate: 0 0;
       left: 0;
     }
 
     &.right {
-      @include reset-x;
+      left: auto;
+      translate: 0 0;
       right: 0;
     }
 
     &.center {
-      @include reset-x;
+      right: auto;
       left: 50%;
       translate: -50% 0;
     }
 
     /* ---- Vertical ---- */
     &.top {
-      @include reset-y;
+      top: auto;
+      margin-top: 0;
       bottom: 100%;
       transform-origin: bottom;
       margin-bottom: var(--dropdown-body-spacing-margin);
     }
 
     &.bottom {
-      @include reset-y;
+      bottom: auto;
+      margin-bottom: 0;
       top: 100%;
       transform-origin: top;
       margin-top: var(--dropdown-body-spacing-margin);
@@ -84,8 +74,11 @@ $breakpoints: bp.$breakpoints;
 
     /* ---- Latéral ---- */
     &.side-left {
-      @include reset-x;
-      @include reset-y;
+      left: auto;
+      translate: 0 0;
+      bottom: auto;
+      margin-top: 0;
+      margin-bottom: 0;
       right: 100%;
       top: 0;
       transform-origin: right;
@@ -93,8 +86,11 @@ $breakpoints: bp.$breakpoints;
     }
 
     &.side-right {
-      @include reset-x;
-      @include reset-y;
+      right: auto;
+      translate: 0 0;
+      bottom: auto;
+      margin-top: 0;
+      margin-bottom: 0;
       left: 100%;
       top: 0;
       transform-origin: left;
@@ -107,38 +103,45 @@ $breakpoints: bp.$breakpoints;
       @media (min-width: #{$size}) {
 
         &.left-#{$bp} {
-          @include reset-x;
+          right: auto;
+          translate: 0 0;
           left: 0;
         }
 
         &.right-#{$bp} {
-          @include reset-x;
+          left: auto;
+          translate: 0 0;
           right: 0;
         }
 
         &.center-#{$bp} {
-          @include reset-x;
+          right: auto;
           left: 50%;
           translate: -50% 0;
         }
 
         &.top-#{$bp} {
-          @include reset-y;
+          top: auto;
+          margin-top: 0;
           bottom: 100%;
           transform-origin: bottom;
           margin-bottom: var(--dropdown-body-spacing-margin);
         }
 
         &.bottom-#{$bp} {
-          @include reset-y;
+          bottom: auto;
+          margin-bottom: 0;
           top: 100%;
           transform-origin: top;
           margin-top: var(--dropdown-body-spacing-margin);
         }
 
         &.side-left-#{$bp} {
-          @include reset-x;
-          @include reset-y;
+          left: auto;
+          translate: 0 0;
+          bottom: auto;
+          margin-top: 0;
+          margin-bottom: 0;
           right: 100%;
           top: 0;
           transform-origin: right;
@@ -146,8 +149,11 @@ $breakpoints: bp.$breakpoints;
         }
 
         &.side-right-#{$bp} {
-          @include reset-x;
-          @include reset-y;
+          right: auto;
+          translate: 0 0;
+          bottom: auto;
+          margin-top: 0;
+          margin-bottom: 0;
           left: 100%;
           top: 0;
           transform-origin: left;

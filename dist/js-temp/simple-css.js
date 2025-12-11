@@ -1,11 +1,11 @@
-import Ajax from "./component/ajax";
-import Alert from "./component/alert";
-import Aside from "./component/aside";
-import Collapse from "./component/collapse";
-import Dialog from "./component/dialog";
-import Dropdown from "./component/dropdown";
-import FormValidate from "./component/form-validate";
-import Tab from "./component/tab";
+import Ajax from "./component/ajax.js";
+import Alert from "./component/alert.js";
+import Aside from "./component/aside.js";
+import Collapse from "./component/collapse.js";
+import Dialog from "./component/dialog.js";
+import Dropdown from "./component/dropdown.js";
+import FormValidate from "./component/form-validate.js";
+import Tab from "./component/tab.js";
 document.addEventListener('DOMContentLoaded', () => {
     new Ajax();
     new Alert();

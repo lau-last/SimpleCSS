@@ -1,72 +1,81 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script>
-            (function () {
-                const savedTheme = localStorage.getItem('theme') || 'light';
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            })();
-        </script>
     <link rel="stylesheet" href="dist/css/simple-css.css">
-    <script type="module" src="dist/js/simple-css.js"></script>
+    <script type="module" src="dist/js-temp/simple-css.js"></script>
     <title>Framework</title>
 </head>
 <body>
 
-
-<div class="container">
-    <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo" aria-controls="aside-right-demo" aria-expanded="false">
-        Open sidebar right
-    </button>
-
-    <aside class="sidebar left" id="aside-right-demo">
-        <div class="d-flex jc-end my-1">
-            <button class="btn btn-primary close">
-                Close
+<aside class="sidebar shrink-right" id="aside-shrink">
+    <div class="d-flex fd-column jc-between h-100">
+        <div class="d-flex fd-column jc-center gap-2">
+            <button class="btn btn-dark side-item"
+                    data-js="aside"
+                    data-target="#aside-shrink"
+                    aria-controls="aside-shrink"
+                    aria-expanded="false">
+                <span class="side-icon">🔓</span>
+                <span class="side-text">Unlock</span>
             </button>
         </div>
-        <nav>
-            <div class="collapse mb-half">
-                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-aside-demo" aria-controls="collapse-aside-demo" aria-expanded="false">
-                    Menu
-                </button>
-                <div class="collapse-body show" id="collapse-aside-demo">
-                    <ul class="list list-hover">
-                        <li class="list-item">menu</li>
-                        <li class="list-item">menu</li>
-                        <li class="list-item">menu</li>
-                        <li class="list-item">menu</li>
-                        <li class="list-item">menu</li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </aside>
-</div>
+        <div class="d-flex fd-column jc-center gap-2">
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">⚡</span>
+                <span class="side-text">Power</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">⭐</span>
+                <span class="side-text">Star</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">💡</span>
+                <span class="side-text">Idea</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">🚀</span>
+                <span class="side-text">Boost</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">🔒</span>
+                <span class="side-text">Lock</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">📂</span>
+                <span class="side-text">Files</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">🧩</span>
+                <span class="side-text">Puzzle</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">🛠️</span>
+                <span class="side-text">Tools</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">🎛️</span>
+                <span class="side-text">Controls</span>
+            </button>
+        </div>
 
+        <div class="d-flex fd-column jc-center gap-2">
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">👤</span>
+                <span class="side-text">Profile</span>
+            </button>
+            <button class="btn btn-dark side-item">
+                <span class="side-icon">🚪</span>
+                <span class="side-text">Logout</span>
+            </button>
+        </div>
 
-<script>
-    function themeLight() {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }
+    </div>
+</aside>
 
-    function themeDark() {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    }
-
-    function themeSystem() {
-        const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const systemTheme = dark ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', systemTheme);
-        localStorage.setItem('theme', systemTheme);
-    }
-</script>
 </body>
 </html>
 

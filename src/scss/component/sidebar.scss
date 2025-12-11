@@ -6,33 +6,103 @@
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
-  transition: width .25s ease, transform .25s ease;
   background: var(--sidebar-bg-color);
+}
+
+@mixin side-base{
   width: var(--sidebar-width);
   padding: var(--sidebar-padding);
-
+  transition: width .25s ease, transform .25s ease;
   &.show {
-    width: var(--sidebar-width);
     transform: translateX(0);
   }
 }
 
-
-.sidebar.left {
-  @include sidebar-base;
-  left: 0;
-  transform: translateX(-100%);
+@mixin left-base{
   border-right: var(--sidebar-border-color) var(--sidebar-border-style) var(--sidebar-border-width);
   border-top-right-radius: var(--sidebar-border-radius);
   border-bottom-right-radius: var(--sidebar-border-radius);
 }
 
-.sidebar.right {
-  @include sidebar-base;
-  left: auto;
-  right: 0;
-  transform: translateX(100%);
+@mixin right-base{
   border-left: var(--sidebar-border-color) var(--sidebar-border-style) var(--sidebar-border-width);
   border-top-left-radius: var(--sidebar-border-radius);
   border-bottom-left-radius: var(--sidebar-border-radius);
+}
+
+@mixin shrink-base{
+  padding: .5rem;
+  transition: width .25s ease;
+  width: 50px;
+
+  &.show{width: var(--sidebar-width);}
+
+  .side-item {
+    text-align: center;
+
+    &.is-full {
+      text-align: left;
+
+      .side-text {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .side-text {
+    margin-left: 1rem;
+    display: none;
+  }
+
+  .fade-icon {animation: fade-switch-1-0 var(--fade-switch-duration) ease-in-out;}
+  .fade-text-in {animation: fade-in var(--fade-switch-duration) ease;}
+  .fade-text-out {animation: fade-out var(--fade-switch-duration) ease;}
+}
+
+
+.sidebar {
+  @include sidebar-base;
+
+
+  &.side-left {
+    left: 0;
+    transform: translateX(-100%);
+    @include left-base;
+    @include side-base;
+  }
+
+  &.side-right {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+    @include right-base;
+    @include side-base;
+  }
+
+  &.fixed-left {
+    left: 0;
+    padding: var(--sidebar-padding);
+    @include left-base;
+  }
+
+  &.fixed-right {
+    left: auto;
+    right: 0;
+    padding: var(--sidebar-padding);
+    @include right-base;
+  }
+
+  &.shrink-left {
+    left: 0;
+    @include left-base;
+    @include shrink-base;
+  }
+
+  &.shrink-right {
+    left: auto;
+    right: 0;
+    @include right-base;
+    @include shrink-base;
+  }
+
 }

@@ -17,8 +17,8 @@ export default class Dropdown {
         const target = event.target as HTMLElement | null;
         if (!target) return;
 
-        if (target.matches('[data-js="dropdown"][data-target]')) {
-            const button = target;
+        const button = target.closest<HTMLElement>('[data-js="dropdown"][data-target]');
+        if (button) {
             const selector = button.getAttribute('data-target');
             if (!selector) return;
 

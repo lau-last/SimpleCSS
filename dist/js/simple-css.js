@@ -343,9 +343,10 @@ var Alert = class _Alert {
     const target = event.target;
     if (!target)
       return;
-    if (!target.matches('[data-js="alert"]'))
+    const alert = target.closest('[data-js="alert"]');
+    if (!alert)
       return;
-    target.remove();
+    alert.remove();
   }
   static onClick(event) {
     if (!(event instanceof MouseEvent))
@@ -353,9 +354,10 @@ var Alert = class _Alert {
     const target = event.target;
     if (!target)
       return;
-    if (!target.matches(".close"))
+    const closeBtn = target.closest(".close");
+    if (!closeBtn)
       return;
-    const alert = target.closest('[data-js="alert"]');
+    const alert = closeBtn.closest('[data-js="alert"]');
     if (!alert)
       return;
     alert.remove();
@@ -392,9 +394,10 @@ var Aside = class _Aside {
     _Aside.isOpen(aside) ? _Aside.hide(aside) : _Aside.show(aside);
   }
   static handleClose(target) {
-    if (!target.matches(".close"))
+    const closeBtn = target.closest(".close");
+    if (!closeBtn)
       return;
-    const aside = target.closest("aside, .sidebar");
+    const aside = closeBtn.closest("aside, .sidebar");
     if (!aside)
       return;
     if (!_Aside.isOpen(aside))
@@ -430,61 +433,54 @@ var Aside = class _Aside {
   static openTransition(aside) {
     if (!aside.classList.contains("shrink-left") && !aside.classList.contains("shrink-right"))
       return;
+    const items = aside.querySelectorAll(".side-item");
     const onTransitionStart = (event) => {
       if (event.propertyName !== "width")
         return;
-      const duration = _Aside.getAnimationDurationVar("--fade-switch-duration");
-      const half = duration / 2;
-      const items = aside.querySelectorAll(".side-item");
       items.forEach((item) => {
         const element = item;
-        const sideIcon = element.querySelector(".side-icon");
-        const sideText = element.querySelector(".side-text");
-        _Aside.restartAnimation(sideIcon, "fade-icon");
-        if (sideText) {
-          sideText.classList.remove("fade-text-in", "fade-text-out");
-          _Aside.restartAnimation(sideText, "fade-text-in");
-        }
-        setTimeout(() => {
-          element.classList.add("is-full");
-        }, half);
+        element.classList.add("open", "fade-in");
       });
     };
+    const onTransitionEnd = (event) => {
+      _Aside.onWidthTransitionEndRemoveClass(event, items, "fade-in");
+    };
     aside.addEventListener("transitionstart", onTransitionStart, { once: true });
+    aside.addEventListener("transitionend", onTransitionEnd, { once: true });
   }
   // Only for sidebar-shrink
   static closeTransition(aside) {
     if (!aside.classList.contains("shrink-left") && !aside.classList.contains("shrink-right"))
       return;
+    const items = aside.querySelectorAll(".side-item");
     const onTransitionStart = (event) => {
       if (event.propertyName !== "width")
         return;
-      const duration = _Aside.getAnimationDurationVar("--fade-switch-duration");
+      const duration = _Aside.getAnimationDurationVar("--sidebar-transition-time");
       const half = duration / 2;
-      const items = aside.querySelectorAll(".side-item");
       items.forEach((item) => {
         const element = item;
-        const sideIcon = element.querySelector(".side-icon");
-        const sideText = element.querySelector(".side-text");
-        _Aside.restartAnimation(sideIcon, "fade-icon");
-        if (sideText) {
-          sideText.classList.remove("fade-text-in", "fade-text-out");
-          _Aside.restartAnimation(sideText, "fade-text-out");
-        }
+        element.classList.add("fade-out-in");
         setTimeout(() => {
-          element.classList.remove("is-full");
+          element.classList.remove("open");
         }, half);
       });
     };
+    const onTransitionEnd = (event) => {
+      _Aside.onWidthTransitionEndRemoveClass(event, items, "fade-out-in");
+    };
     aside.addEventListener("transitionstart", onTransitionStart, { once: true });
+    aside.addEventListener("transitionend", onTransitionEnd, { once: true });
   }
   // Only for sidebar-shrink
-  static restartAnimation(element, className) {
-    if (!element)
+  static onWidthTransitionEndRemoveClass(event, items, className) {
+    if (event.propertyName !== "width")
       return;
-    element.classList.remove(className);
-    void element.offsetWidth;
-    element.classList.add(className);
+    items.forEach((item) => {
+      const element = item;
+      element.classList.remove(className);
+      void element.offsetWidth;
+    });
   }
   // Only for sidebar-shrink
   static getAnimationDurationVar(name) {
@@ -641,10 +637,10 @@ var Dialog = class _Dialog {
     _Dialog.handleOpen(target);
   }
   static handleSwitch(target) {
-    if (!target.matches('.close[data-js="dialog"][data-target]')) {
+    const trigger = target.closest('.close[data-js="dialog"][data-target]');
+    if (!trigger)
       return false;
-    }
-    const selector = target.getAttribute("data-target");
+    const selector = trigger.getAttribute("data-target");
     if (!selector)
       return true;
     const nextDialog = document.querySelector(selector);
@@ -662,20 +658,22 @@ var Dialog = class _Dialog {
     return true;
   }
   static handleClose(target) {
-    if (!target.matches(".close") || target.matches('[data-js="dialog"]')) {
+    const closeBtn = target.closest(".close");
+    if (!closeBtn || closeBtn.matches('[data-js="dialog"]')) {
       return false;
     }
-    const dialog = target.closest("dialog");
+    const dialog = closeBtn.closest("dialog");
     if (!dialog)
       return true;
     _Dialog.close(dialog);
     return true;
   }
   static handleOpen(target) {
-    if (!target.matches('[data-js="dialog"][data-target]') || target.matches(".close")) {
+    const trigger = target.closest('[data-js="dialog"][data-target]');
+    if (!trigger || trigger.closest(".close")) {
       return false;
     }
-    const selector = target.getAttribute("data-target");
+    const selector = trigger.getAttribute("data-target");
     if (!selector)
       return true;
     const dialog = document.querySelector(selector);
@@ -722,8 +720,8 @@ var Dropdown = class _Dropdown {
     const target = event.target;
     if (!target)
       return;
-    if (target.matches('[data-js="dropdown"][data-target]')) {
-      const button = target;
+    const button = target.closest('[data-js="dropdown"][data-target]');
+    if (button) {
       const selector = button.getAttribute("data-target");
       if (!selector)
         return;
@@ -836,17 +834,18 @@ var Tab = class _Tab {
     _Tab.handleTabClick(target);
   }
   static handleTabClick(target) {
-    if (!target.matches('[data-js="tab"][data-target]'))
+    const button = target.closest('[data-js="tab"][data-target]');
+    if (!button)
       return;
-    const container = target.parentElement;
+    const container = button.parentElement;
     if (!container)
       return;
-    const content = _Tab.resolveContent(target);
+    const content = _Tab.resolveContent(button);
     if (!content)
       return;
     _Tab.hideAll(container);
     _Tab.clearActive(container);
-    _Tab.showOne(target, content);
+    _Tab.showOne(button, content);
   }
   static resolveContent(button) {
     const selector = button.getAttribute("data-target");

@@ -10,72 +10,122 @@
     <title>Framework</title>
 </head>
 <body>
+<div class="p-1">
+    <button class="btn btn-primary" data-js="aside" data-target="#aside-right-demo" aria-controls="aside-right-demo"
+            aria-expanded="false">
+        Open sidebar right
+    </button>
 
-<aside class="sidebar shrink-right" id="aside-shrink">
-    <div class="d-flex fd-column jc-between h-100">
-        <div class="d-flex fd-column jc-center gap-2">
-            <button class="btn btn-dark side-item"
-                    data-js="aside"
-                    data-target="#aside-shrink"
-                    aria-controls="aside-shrink"
-                    aria-expanded="false">
-                <span class="side-icon">🔓</span>
-                <span class="side-text">Unlock</span>
-            </button>
-        </div>
-        <div class="d-flex fd-column jc-center gap-2">
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">⚡</span>
-                <span class="side-text">Power</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">⭐</span>
-                <span class="side-text">Star</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">💡</span>
-                <span class="side-text">Idea</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">🚀</span>
-                <span class="side-text">Boost</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">🔒</span>
-                <span class="side-text">Lock</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">📂</span>
-                <span class="side-text">Files</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">🧩</span>
-                <span class="side-text">Puzzle</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">🛠️</span>
-                <span class="side-text">Tools</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">🎛️</span>
-                <span class="side-text">Controls</span>
-            </button>
-        </div>
+<!--        <aside class="sidebar shrink-left push" id="aside-shrink">-->
+<!--            <nav class="side-shrink">-->
+<!--                <div class="side-header">-->
+<!--                    <button class="btn btn-dark side-item"-->
+<!--                            data-js="aside"-->
+<!--                            data-target="#aside-shrink"-->
+<!--                            aria-controls="aside-shrink"-->
+<!--                            aria-expanded="false">-->
+<!--                        <span class="side-icon">🔓</span>-->
+<!--                        <span class="side-text">Unlock</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <div class="side-body">-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">⚡</span>-->
+<!--                        <span class="side-text">Power</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">⭐</span>-->
+<!--                        <span class="side-text">Star</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">💡</span>-->
+<!--                        <span class="side-text">Idea</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">🚀</span>-->
+<!--                        <span class="side-text">Boost</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">🔒</span>-->
+<!--                        <span class="side-text">Lock</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">📂</span>-->
+<!--                        <span class="side-text">Files</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">🧩</span>-->
+<!--                        <span class="side-text">Puzzle</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">🛠️</span>-->
+<!--                        <span class="side-text">Tools</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn btn-dark side-item">-->
+<!--                        <span class="side-icon">🎛️</span>-->
+<!--                        <span class="side-text">Controls</span>-->
+<!--                    </button>-->
+<!--                </div>-->
 
-        <div class="d-flex fd-column jc-center gap-2">
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">👤</span>
-                <span class="side-text">Profile</span>
-            </button>
-            <button class="btn btn-dark side-item">
-                <span class="side-icon">🚪</span>
-                <span class="side-text">Logout</span>
-            </button>
-        </div>
+<!--                <div class="side-footer">-->
+<!--                    <button class="btn-lg btn-dark side-item">-->
+<!--                        <span class="side-icon">👤</span>-->
+<!--                        <span class="side-text">Profile</span>-->
+<!--                    </button>-->
+<!--                    <button class="btn-lg btn-dark side-item">-->
+<!--                        <span class="side-icon">🚪</span>-->
+<!--                        <span class="side-text">Logout</span>-->
+<!--                    </button>-->
+<!--                </div>-->
 
-    </div>
-</aside>
+<!--            </nav>-->
+<!--        </aside>-->
 
+
+    <aside class="sidebar side-left push" id="aside-right-demo">
+        <nav class="side-body">
+            <div class="d-flex jc-end my-1">
+                <button class="btn btn-primary close">
+                    Close
+                </button>
+            </div>
+            <div class="collapse mb-half">
+                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-aside-demo"
+                        aria-controls="collapse-aside-demo" aria-expanded="false">
+                    Menu
+                </button>
+                <div class="collapse-body show" id="collapse-aside-demo">
+                    <ul class="list list-hover">
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </aside>
+    <aside class="sidebar fixed-right">
+        <nav class="side-body">
+            <div class="collapse mb-half">
+                <button class="collapse-btn btn-primary" data-js="collapse" data-target="#collapse-aside-demo2"
+                        aria-controls="collapse-aside-demo2" aria-expanded="false">
+                    Menu
+                </button>
+                <div class="collapse-body show" id="collapse-aside-demo2">
+                    <ul class="list list-hover">
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                        <li class="list-item">menu</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </aside>
+</div>
 </body>
 </html>
 

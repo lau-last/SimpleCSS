@@ -30,8 +30,9 @@ export default class Aside {
     }
 
     private static handleClose(target: HTMLElement): void {
-        if (!target.matches('.close')) return;
-        const aside = target.closest('aside, .sidebar') as HTMLElement | null;
+        const closeBtn = target.closest('.close') as HTMLElement | null;
+        if (!closeBtn) return;
+        const aside = closeBtn.closest('aside, .sidebar') as HTMLElement | null;
         if (!aside) return;
         if (!Aside.isOpen(aside)) return;
         Aside.hide(aside);
@@ -72,76 +73,68 @@ export default class Aside {
     // Only for sidebar-shrink
     private static openTransition(aside: HTMLElement): void {
         if (!aside.classList.contains('shrink-left') && !aside.classList.contains('shrink-right')) return;
-
+        const items = aside.querySelectorAll('.side-item');
         const onTransitionStart = (event: TransitionEvent) => {
             if (event.propertyName !== 'width') return;
 
-            const duration = Aside.getAnimationDurationVar("--fade-switch-duration");
-            const half = duration / 2;
-
-            const items = aside.querySelectorAll('.side-item');
-
             items.forEach(item => {
                 const element = item as HTMLElement;
-                const sideIcon = element.querySelector('.side-icon') as HTMLElement | null;
-                const sideText = element.querySelector('.side-text') as HTMLElement | null;
-
-                Aside.restartAnimation(sideIcon, 'fade-icon');
-
-                if (sideText) {
-                    sideText.classList.remove('fade-text-in', 'fade-text-out');
-                    Aside.restartAnimation(sideText, 'fade-text-in');
-                }
-
-                setTimeout(() => {
-                    element.classList.add('is-full');
-                }, half);
+                element.classList.add('open', 'fade-in');
             });
         };
 
+        const onTransitionEnd = (event: TransitionEvent) => {
+            Aside.onWidthTransitionEndRemoveClass(event, items, 'fade-in');
+        };
+
         aside.addEventListener('transitionstart', onTransitionStart, {once: true});
+        aside.addEventListener('transitionend', onTransitionEnd, {once: true});
     }
 
     // Only for sidebar-shrink
     private static closeTransition(aside: HTMLElement): void {
         if (!aside.classList.contains('shrink-left') && !aside.classList.contains('shrink-right')) return;
-
+        const items = aside.querySelectorAll('.side-item');
         const onTransitionStart = (event: TransitionEvent) => {
             if (event.propertyName !== 'width') return;
 
-            const duration = Aside.getAnimationDurationVar("--fade-switch-duration");
+            const duration = Aside.getAnimationDurationVar('--sidebar-transition-time');
             const half = duration / 2;
-
-            const items = aside.querySelectorAll('.side-item');
 
             items.forEach(item => {
                 const element = item as HTMLElement;
-                const sideIcon = element.querySelector('.side-icon') as HTMLElement | null;
-                const sideText = element.querySelector('.side-text') as HTMLElement | null;
-
-                Aside.restartAnimation(sideIcon, 'fade-icon');
-
-                if (sideText) {
-                    sideText.classList.remove('fade-text-in', 'fade-text-out');
-                    Aside.restartAnimation(sideText, 'fade-text-out');
-                }
+                element.classList.add('fade-out-in');
 
                 setTimeout(() => {
-                    element.classList.remove('is-full');
+                    element.classList.remove('open');
                 }, half);
             });
         };
 
-        aside.addEventListener('transitionstart', onTransitionStart, {once: true});
+        const onTransitionEnd = (event: TransitionEvent) => {
+            Aside.onWidthTransitionEndRemoveClass(event, items, 'fade-out-in');
+        };
+
+        aside.addEventListener('transitionstart', onTransitionStart, { once: true });
+        aside.addEventListener('transitionend', onTransitionEnd, { once: true });
     }
 
+
     // Only for sidebar-shrink
-    private static restartAnimation(element: HTMLElement | null, className: string): void {
-        if (!element) return;
-        element.classList.remove(className);
-        void element.offsetWidth;
-        element.classList.add(className);
+    private static onWidthTransitionEndRemoveClass(
+        event: TransitionEvent,
+        items: NodeListOf<Element>,
+        className: string
+    ): void {
+        if (event.propertyName !== 'width') return;
+
+        items.forEach(item => {
+            const element = item as HTMLElement;
+            element.classList.remove(className);
+            void element.offsetWidth;
+        });
     }
+
 
     // Only for sidebar-shrink
     private static getAnimationDurationVar(name: string): number {
@@ -152,5 +145,6 @@ export default class Aside {
 
         return 0;
     }
+
 
 }

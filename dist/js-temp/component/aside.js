@@ -28,9 +28,10 @@ export default class Aside {
         Aside.isOpen(aside) ? Aside.hide(aside) : Aside.show(aside);
     }
     static handleClose(target) {
-        if (!target.matches('.close'))
+        const closeBtn = target.closest('.close');
+        if (!closeBtn)
             return;
-        const aside = target.closest('aside, .sidebar');
+        const aside = closeBtn.closest('aside, .sidebar');
         if (!aside)
             return;
         if (!Aside.isOpen(aside))
@@ -66,61 +67,54 @@ export default class Aside {
     static openTransition(aside) {
         if (!aside.classList.contains('shrink-left') && !aside.classList.contains('shrink-right'))
             return;
+        const items = aside.querySelectorAll('.side-item');
         const onTransitionStart = (event) => {
             if (event.propertyName !== 'width')
                 return;
-            const duration = Aside.getAnimationDurationVar("--fade-switch-duration");
-            const half = duration / 2;
-            const items = aside.querySelectorAll('.side-item');
             items.forEach(item => {
                 const element = item;
-                const sideIcon = element.querySelector('.side-icon');
-                const sideText = element.querySelector('.side-text');
-                Aside.restartAnimation(sideIcon, 'fade-icon');
-                if (sideText) {
-                    sideText.classList.remove('fade-text-in', 'fade-text-out');
-                    Aside.restartAnimation(sideText, 'fade-text-in');
-                }
-                setTimeout(() => {
-                    element.classList.add('is-full');
-                }, half);
+                element.classList.add('open', 'fade-in');
             });
         };
+        const onTransitionEnd = (event) => {
+            Aside.onWidthTransitionEndRemoveClass(event, items, 'fade-in');
+        };
         aside.addEventListener('transitionstart', onTransitionStart, { once: true });
+        aside.addEventListener('transitionend', onTransitionEnd, { once: true });
     }
     // Only for sidebar-shrink
     static closeTransition(aside) {
         if (!aside.classList.contains('shrink-left') && !aside.classList.contains('shrink-right'))
             return;
+        const items = aside.querySelectorAll('.side-item');
         const onTransitionStart = (event) => {
             if (event.propertyName !== 'width')
                 return;
-            const duration = Aside.getAnimationDurationVar("--fade-switch-duration");
+            const duration = Aside.getAnimationDurationVar('--sidebar-transition-time');
             const half = duration / 2;
-            const items = aside.querySelectorAll('.side-item');
             items.forEach(item => {
                 const element = item;
-                const sideIcon = element.querySelector('.side-icon');
-                const sideText = element.querySelector('.side-text');
-                Aside.restartAnimation(sideIcon, 'fade-icon');
-                if (sideText) {
-                    sideText.classList.remove('fade-text-in', 'fade-text-out');
-                    Aside.restartAnimation(sideText, 'fade-text-out');
-                }
+                element.classList.add('fade-out-in');
                 setTimeout(() => {
-                    element.classList.remove('is-full');
+                    element.classList.remove('open');
                 }, half);
             });
         };
+        const onTransitionEnd = (event) => {
+            Aside.onWidthTransitionEndRemoveClass(event, items, 'fade-out-in');
+        };
         aside.addEventListener('transitionstart', onTransitionStart, { once: true });
+        aside.addEventListener('transitionend', onTransitionEnd, { once: true });
     }
     // Only for sidebar-shrink
-    static restartAnimation(element, className) {
-        if (!element)
+    static onWidthTransitionEndRemoveClass(event, items, className) {
+        if (event.propertyName !== 'width')
             return;
-        element.classList.remove(className);
-        void element.offsetWidth;
-        element.classList.add(className);
+        items.forEach(item => {
+            const element = item;
+            element.classList.remove(className);
+            void element.offsetWidth;
+        });
     }
     // Only for sidebar-shrink
     static getAnimationDurationVar(name) {

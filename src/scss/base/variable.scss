@@ -491,7 +491,7 @@
   --button-border-style: var(--border-style);
   --button-border-width: 0;
   --button-group-gap: .5rem;
-  --button-padding: .5rem 1rem;
+  --button-padding: .75rem 1.5rem;
   --button-padding-sm: .5rem 1rem;
   --button-padding-md: .75rem 1.5rem;
   --button-padding-lg: 1rem 2rem;
@@ -639,7 +639,14 @@
   --sidebar-padding: 1rem;
   --sidebar-width: 30rem;
 
-  --fade-switch-duration: .25s;
+  --sidebar-shrink-content-gap: 1rem;
+  --sidebar-shrink-item-gap: 1.5rem;
+  --sidebar-shrink-padding: var(--sidebar-padding);
+  --sidebar-shrink-width: var(--sidebar-width);
+  --sidebar-shrink-width-reduce: 6.5rem;
+
+  --sidebar-transition-time: .25s;
+
 
 
   /* Tab */

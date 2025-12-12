@@ -11,9 +11,10 @@ export default class Alert {
         const target = event.target;
         if (!target)
             return;
-        if (!target.matches('[data-js="alert"]'))
+        const alert = target.closest('[data-js="alert"]');
+        if (!alert)
             return;
-        target.remove();
+        alert.remove();
     }
     static onClick(event) {
         if (!(event instanceof MouseEvent))
@@ -21,9 +22,10 @@ export default class Alert {
         const target = event.target;
         if (!target)
             return;
-        if (!target.matches('.close'))
+        const closeBtn = target.closest('.close');
+        if (!closeBtn)
             return;
-        const alert = target.closest('[data-js="alert"]');
+        const alert = closeBtn.closest('[data-js="alert"]');
         if (!alert)
             return;
         alert.remove();

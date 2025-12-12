@@ -15,8 +15,10 @@ export default class Alert {
     private static onAnimationEnd(event: Event): void {
         const target = event.target as HTMLElement | null;
         if (!target) return;
-        if (!target.matches('[data-js="alert"]')) return;
-        target.remove();
+        const alert = target.closest('[data-js="alert"]') as HTMLElement | null;
+        if (!alert) return;
+
+        alert.remove();
     }
 
 
@@ -26,9 +28,12 @@ export default class Alert {
         const target = event.target as HTMLElement | null;
         if (!target) return;
 
-        if (!target.matches('.close')) return;
 
-        const alert = target.closest('[data-js="alert"]') as HTMLElement | null;
+        const closeBtn = target.closest('.close') as HTMLElement | null;
+        if (!closeBtn) return;
+
+
+        const alert = closeBtn.closest('[data-js="alert"]') as HTMLElement | null;
         if (!alert) return;
         alert.remove();
 

@@ -15,17 +15,18 @@ export default class Tab {
         Tab.handleTabClick(target);
     }
     static handleTabClick(target) {
-        if (!target.matches('[data-js="tab"][data-target]'))
+        const button = target.closest('[data-js="tab"][data-target]');
+        if (!button)
             return;
-        const container = target.parentElement;
+        const container = button.parentElement;
         if (!container)
             return;
-        const content = Tab.resolveContent(target);
+        const content = Tab.resolveContent(button);
         if (!content)
             return;
         Tab.hideAll(container);
         Tab.clearActive(container);
-        Tab.showOne(target, content);
+        Tab.showOne(button, content);
     }
     static resolveContent(button) {
         const selector = button.getAttribute('data-target');

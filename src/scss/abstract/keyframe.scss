@@ -248,33 +248,16 @@
 }
 
 
-@keyframes fade-switch-1-0 {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes fade-out-in {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-@keyframes fade-switch-0-1 {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes fade-in-out {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
 }
+
 

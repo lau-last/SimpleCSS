@@ -19,10 +19,10 @@ export default class Dialog {
         Dialog.handleOpen(target);
     }
     static handleSwitch(target) {
-        if (!target.matches('.close[data-js="dialog"][data-target]')) {
+        const trigger = target.closest('.close[data-js="dialog"][data-target]');
+        if (!trigger)
             return false;
-        }
-        const selector = target.getAttribute('data-target');
+        const selector = trigger.getAttribute('data-target');
         if (!selector)
             return true;
         const nextDialog = document.querySelector(selector);
@@ -40,20 +40,22 @@ export default class Dialog {
         return true;
     }
     static handleClose(target) {
-        if (!target.matches('.close') || target.matches('[data-js="dialog"]')) {
+        const closeBtn = target.closest('.close');
+        if (!closeBtn || closeBtn.matches('[data-js="dialog"]')) {
             return false;
         }
-        const dialog = target.closest('dialog');
+        const dialog = closeBtn.closest('dialog');
         if (!dialog)
             return true;
         Dialog.close(dialog);
         return true;
     }
     static handleOpen(target) {
-        if (!target.matches('[data-js="dialog"][data-target]') || target.matches('.close')) {
+        const trigger = target.closest('[data-js="dialog"][data-target]');
+        if (!trigger || trigger.closest('.close')) {
             return false;
         }
-        const selector = target.getAttribute('data-target');
+        const selector = trigger.getAttribute('data-target');
         if (!selector)
             return true;
         const dialog = document.querySelector(selector);

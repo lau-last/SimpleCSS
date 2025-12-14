@@ -404,6 +404,7 @@ $colors: (
     &.sidebar-#{$name} {
       background-color: #{$value};
       color: var(--text-on-#{$name});
+      border-color: #{$value};
     }
   }
 }

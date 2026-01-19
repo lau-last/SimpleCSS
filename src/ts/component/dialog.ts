@@ -100,11 +100,10 @@ export default class Dialog {
             'transitionend',
             () => {
                 dialog.close();
+                Dialog.emitEvent(dialog, 'dialog:afterClose', dialog);
             },
             {once: true}
         );
-
-        Dialog.emitEvent(dialog, 'dialog:afterClose', dialog);
     }
 
 

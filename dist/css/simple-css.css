@@ -920,12 +920,18 @@ body a {
   text-decoration: none;
 }
 body {
-  /* Text selection */
+  /* Text selection – standard */
 }
 body::selection {
   background-color: var(--primary-color);
   color: var(--text-on-primary);
-  -webkit-text-fill-color: var(--text-on-primary);
+}
+body {
+  /* Text selection – Firefox */
+}
+body::-moz-selection {
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
 }
 
 /* Breakpoints */
@@ -2718,7 +2724,7 @@ body::selection {
   box-shadow: var(--card-box-shadow);
   transition: box-shadow 0.1s ease-in-out;
 }
-.card .card-hover:hover {
+.card.card-hover:hover {
   cursor: pointer;
   box-shadow: var(--card-box-shadow-hover);
 }

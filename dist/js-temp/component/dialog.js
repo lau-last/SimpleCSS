@@ -77,8 +77,8 @@ export default class Dialog {
         dialog.classList.remove('show');
         dialog.addEventListener('transitionend', () => {
             dialog.close();
+            Dialog.emitEvent(dialog, 'dialog:afterClose', dialog);
         }, { once: true });
-        Dialog.emitEvent(dialog, 'dialog:afterClose', dialog);
     }
     static emitEvent(target, name, dialog) {
         target.dispatchEvent(new CustomEvent(name, {
